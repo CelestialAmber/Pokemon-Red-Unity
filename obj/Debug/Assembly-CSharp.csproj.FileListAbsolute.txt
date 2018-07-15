@@ -1,0 +1,3 @@
+/Users/thatrs/Desktop/PokeRedProject/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/Users/thatrs/Desktop/PokeRedProject/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/thatrs/Desktop/PokeRedProject/obj/Debug/Assembly-CSharp.dll

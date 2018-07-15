@@ -1,0 +1,1218 @@
+{
+  "entries": [
+    {
+      "pokemon": "Bulbasaur",
+      "evolution": {
+        "Name": "Ivysaur",
+        "Int": 16
+      }
+    },
+    {
+      "pokemon": "Ivysaur",
+      "evolution": {
+        "Name": "Venusaur",
+        "Int": 32
+      }
+    },
+      {
+      "pokemon": "Venusaur",
+      "evolution": {
+         "Name": "",
+          "Int": 0
+      }
+      },
+      {
+      "pokemon": "Charmander",
+      "evolution": {
+       "Name": "Charmeleon",
+          "Int": 16
+          
+      }
+    },
+      {
+      "pokemon": "Charmeleon",
+      "evolution": {
+       "Name": "Charizard",
+          "Int": 36
+          
+      }
+    },
+      {
+      "pokemon": "Charizard",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Squirtle",
+      "evolution": {
+       "Name": "Wartortle",
+          "Int": 16
+          
+      }
+    },
+      {
+      "pokemon": "Wartortle",
+      "evolution": {
+       "Name": "Blastoise",
+          "Int": 36
+          
+      }
+    },
+      {
+      "pokemon": "Blastoise",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Caterpie",
+      "evolution": {
+       "Name": "Metapod",
+          "Int": 7
+          
+      }
+    },
+      {
+      "pokemon": "Metapod",
+      "evolution": {
+       "Name": "Butterfree",
+          "Int": 10
+          
+      }
+    },
+      {
+      "pokemon": "Butterfree",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Weedle",
+      "evolution": {
+       "Name": "Kakuna",
+          "Int": 7
+          
+      }
+    },
+      {
+      "pokemon": "Kakuna",
+      "evolution": {
+       "Name": "Beedrill",
+          "Int": 10
+          
+      }
+    },
+      {
+      "pokemon": "Beedrill",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Pidgey",
+      "evolution": {
+       "Name": "Pidgeotto",
+          "Int": 18
+          
+      }
+      },
+      {
+      "pokemon": "Pidgeotto",
+      "evolution": {
+       "Name": "Pidgeot",
+          "Int": 36
+          
+      }
+    },
+      {
+      "pokemon": "Pidgeot",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Rattata",
+      "evolution": {
+       "Name": "Raticate",
+          "Int": 20
+          
+      }
+    },
+      {
+      "pokemon": "Raticate",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Spearow",
+      "evolution": {
+       "Name": "Fearow",
+          "Int": 20
+          
+      }
+    },
+      {
+      "pokemon": "Fearow",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Ekans",
+      "evolution": {
+       "Name": "Arbok",
+          "Int": 22
+          
+      }
+    },
+      {
+      "pokemon": "Arbok",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Pikachu",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Raichu",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Sandshrew",
+      "evolution": {
+       "Name": "Sandslash",
+          "Int": 22
+          
+      }
+    },
+      {
+      "pokemon": "Sandslash",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Nidoran♀",
+      "evolution": {
+       "Name": "Nidorina",
+          "Int": 16
+          
+      }
+    },
+      {
+      "pokemon": "Nidorina",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Nidoqueen",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Nidoran♂",
+      "evolution": {
+       "Name": "Nidorino",
+          "Int": 16
+          
+      }
+    },
+      {
+      "pokemon": "Nidorino",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Nidoking",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Clefairy",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Clefable",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Vulpix",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Ninetales",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Jigglypuff",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Wigglytuff",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Zubat",
+      "evolution": {
+       "Name": "Golbat",
+          "Int": 22
+          
+      }
+    },
+      {
+      "pokemon": "Golbat",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Oddish",
+      "evolution": {
+       "Name": "Gloom",
+          "Int": 21
+          
+      }
+    },
+      {
+      "pokemon": "Gloom",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Vileplume",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Paras",
+      "evolution": {
+       "Name": "Parasect",
+          "Int": 24
+          
+      }
+    },
+      {
+      "pokemon": "Parasect",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Venonat",
+      "evolution": {
+       "Name": "Venomoth",
+          "Int": 31
+          
+      }
+    },
+      {
+      "pokemon": "Venomoth",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Diglett",
+      "evolution": {
+       "Name": "Dugtrio",
+          "Int": 26
+          
+      }
+    },
+      {
+      "pokemon": "Dugtrio",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Meowth",
+      "evolution": {
+       "Name": "Persian",
+          "Int": 28
+          
+      }
+    },
+      {
+      "pokemon": "Persian",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Psyduck",
+      "evolution": {
+       "Name": "Golduck",
+          "Int": 33
+          
+      }
+    },
+      {
+      "pokemon": "Golduck",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Mankey",
+      "evolution": {
+       "Name": "Primeape",
+          "Int": 28
+          
+      }
+    },
+      {
+      "pokemon": "Primeape",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Growlithe",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Arcanine",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Poliwag",
+      "evolution": {
+       "Name": "Poliwhirl",
+          "Int": 25
+          
+      }
+    },
+      {
+      "pokemon": "Poliwhirl",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Poliwrath",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Abra",
+      "evolution": {
+       "Name": "Kadabra",
+          "Int": 16
+          
+      }
+    },
+      {
+      "pokemon": "Kadabra",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Alakazam",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Machop",
+      "evolution": {
+       "Name": "Machoke",
+          "Int": 28
+          
+      }
+    },
+      {
+      "pokemon": "Machoke",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Machamp",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Bellsprout",
+      "evolution": {
+       "Name": "Weepinbell",
+          "Int": 21
+          
+      }
+    },
+      {
+      "pokemon": "Weepinbell",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Victreebel",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Tentacool",
+      "evolution": {
+       "Name": "Tentacruel",
+          "Int": 30
+          
+      }
+    },
+      {
+      "pokemon": "Tentacruel",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Geodude",
+      "evolution": {
+       "Name": "Graveler",
+          "Int": 25
+          
+      }
+    },
+      {
+      "pokemon": "Graveler",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Golem",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Ponyta",
+      "evolution": {
+       "Name": "Rapidash",
+          "Int": 40
+          
+      }
+    },
+      {
+      "pokemon": "Rapidash",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Slowpoke",
+      "evolution": {
+       "Name": "Slowbro",
+          "Int": 37
+          
+      }
+    },
+      {
+      "pokemon": "Slowbro",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Magnemite",
+      "evolution": {
+       "Name": "Magneton",
+          "Int": 30
+          
+      }
+    },
+      {
+      "pokemon": "Magneton",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Farfetch'd",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Doduo",
+      "evolution": {
+       "Name": "Dodrio",
+          "Int": 31
+          
+      }
+    },
+      {
+      "pokemon": "Dodrio",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Seel",
+      "evolution": {
+       "Name": "Dewgong",
+          "Int": 34
+          
+      }
+    },
+      {
+      "pokemon": "Dewgong",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Grimer",
+      "evolution": {
+       "Name": "Muk",
+          "Int": 38
+          
+      }
+    },
+      {
+      "pokemon": "Muk",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Shellder",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Cloyster",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Gastly",
+      "evolution": {
+       "Name": "Haunter",
+          "Int": 25
+          
+      }
+    },
+      {
+      "pokemon": "Haunter",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Gengar",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Onix",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Drowzee",
+      "evolution": {
+       "Name": "Hypno",
+          "Int": 26
+          
+      }
+    },
+      {
+      "pokemon": "Hypno",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Krabby",
+      "evolution": {
+       "Name": "Kingler",
+          "Int": 28
+          
+      }
+    },
+      {
+      "pokemon": "Kingler",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Voltorb",
+      "evolution": {
+       "Name": "Electrode",
+          "Int": 30
+          
+      }
+    },
+      {
+      "pokemon": "Electrode",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Exeggcute",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Exeggutor",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Cubone",
+      "evolution": {
+       "Name": "Marowak",
+          "Int": 28
+          
+      }
+    },
+      {
+      "pokemon": "Marowak",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Hitmonlee",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Hitmonchan",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Lickitung",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Koffing",
+      "evolution": {
+       "Name": "Weezing",
+          "Int": 35
+          
+      }
+    },
+      {
+      "pokemon": "Weezing",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Rhyhorn",
+      "evolution": {
+       "Name": "Rhydon",
+          "Int": 42
+          
+      }
+    },
+      {
+      "pokemon": "Rhydon",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Chansey",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Tangela",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Kangaskhan",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Horsea",
+      "evolution": {
+       "Name": "Seadra",
+          "Int": 32
+          
+      }
+    },
+      {
+      "pokemon": "Seadra",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Goldeen",
+      "evolution": {
+       "Name": "Seaking",
+          "Int": 33
+          
+      }
+    },
+      {
+      "pokemon": "Seaking",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Staryu",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Starmie",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Mr. Mime",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Scyther",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Jynx",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Electabuzz",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Magmar",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Pinsir",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Tauros",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Magikarp",
+      "evolution": {
+       "Name": "Gyarados",
+          "Int": 20
+          
+      }
+    },
+      {
+      "pokemon": "Gyarados",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Lapras",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Ditto",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Eevee",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Vaporeon",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Jolteon",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Flareon",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Porygon",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Omanyte",
+      "evolution": {
+       "Name": "Omastar",
+          "Int": 40
+          
+      }
+    },
+      {
+      "pokemon": "Omastar",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Kabuto",
+      "evolution": {
+       "Name": "Kabutops",
+          "Int": 40
+          
+      }
+    },
+      {
+      "pokemon": "Kabutops",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Aerodactyl",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Snorlax",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Articuno",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Zapdos",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Moltres",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Dratini",
+      "evolution": {
+       "Name": "Dragonair",
+          "Int": 30
+          
+      }
+    },
+      {
+      "pokemon": "Dragonair",
+      "evolution": {
+       "Name": "Dragonite",
+          "Int": 55
+          
+      }
+    },
+      {
+      "pokemon": "Dragonite",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Mewtwo",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+    },
+      {
+      "pokemon": "Mew",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+          
+      }
+      },
+          {
+      "pokemon": "Linq",
+      "evolution": {
+       "Name": "",
+          "Int": 0
+
+    }
+          }
+      
+  ]
+}
