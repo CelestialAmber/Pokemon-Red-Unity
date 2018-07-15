@@ -121,7 +121,7 @@ public class MapData{
     public int[,] connectionData;
     public int objectDataPointer;
     public int[] tileMap;
-
+  
 
 
     public static MapData[] maps;
@@ -139,6 +139,7 @@ public class MapData{
     }
     public static MapData loadMap(int mapNum, TextAsset rom)
     {
+        Debug.Log("loading map index " + mapNum);
         // First, load the address of the map's header.
         rom.seek(Read.mapHeaderPointersAddress + mapNum* 2);
         long headerAddr = rom.readPointer();
@@ -191,7 +192,7 @@ public class MapData{
         }
         catch (Exception e) 
         {
-            throw new UnityException("Error, error");
+            throw e;
         }
         
         return md;
@@ -325,9 +326,9 @@ ts.blocks = getBlocks(ts.blocksPointer, rom, ts.tiles);
 }
 
 public static class Read{
-    public static long mapHeaderPointersAddress = 0x1ae;
-    public static long mapHeaderBanksAddress = 0xc23d;
-    public static long tilesetHeadersAddress = 0xc7be;
+    public static long mapHeaderPointersAddress = 0x1AE;
+    public static long mapHeaderBanksAddress = 0xC23D;
+    public static long tilesetHeadersAddress = 0xC7BE;
     public static long readIndex;
     public static void seek(this TextAsset rom, long addr){
         readIndex = addr;
@@ -361,7 +362,7 @@ public class MapEditor : MonoBehaviour
     public string MapSaveName;
     public GridTile[,] savedtiles = new GridTile[800, 800];
     public TextAsset romFile;
-
+    public Texture2D[] maptiles;
 
     public static Color[] colors = {
         new Color(1, 1, 1, 1),
