@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{F7ADD402-1F77-A7B8-6FFD-27329284DA84}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Dialogue.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AnimatedTile.cs" Line="9" Column="5" />
+      <File FileName="Assets/Scripts/CameraController.cs" Line="16" Column="26" />
+      <File FileName="Assets/Scripts/Player.cs" Line="327" Column="20" />
+      <File FileName="Assets/Scripts/overworld.cs" Line="5" Column="14" />
+      <File FileName="Assets/Scripts/Dialogue.cs" Line="127" Column="1" />
+      <File FileName="Assets/Scripts/bag.cs" Line="46" Column="28" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MinecraftMapColorCode.cs" Line="33" Column="1" />
+      <File FileName="Assets/Scripts/ITEMTEXTDB.cs" Line="144" Column="48" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

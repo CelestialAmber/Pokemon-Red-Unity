@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2ab941ca906734b5da2f9e12e09a3fa7
+timeCreated: 1502057103
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Pokemon TTF
+  fontNames:
+  - Pokemon TTF
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
