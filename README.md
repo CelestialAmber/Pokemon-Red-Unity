@@ -27,7 +27,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>Pokemon-Red-Unity/Unity.gitignore at 0120b21a15675074c0c46044f15f64297063d9e1 · thatrs/Pokemon-Red-Unity</title>
+  <title>Pokemon-Red-Unity/README.md at 0120b21a15675074c0c46044f15f64297063d9e1 · thatrs/Pokemon-Red-Unity</title>
     <meta name="description" content="GitHub is where people build software. More than 28 million people use GitHub to discover, fork, and contribute to over 85 million projects.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -37,10 +37,10 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/36093934?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="thatrs/Pokemon-Red-Unity" /><meta property="og:url" content="https://github.com/thatrs/Pokemon-Red-Unity" /><meta property="og:description" content="Pokemon-Red-Unity - Recreation of Pokemon Red in Unity" />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6Mjk2Mzk2MTcxOmNiNTdiNThjMWIzZWFiMTA1YjUyOGZkOWJkNjZlNjMzZTY0ZDgzMTk4NDg4MWM2ZTk3N2JjYjFjNTgyNTA3YzE=--e374d179d860f3a1ac742a3874fbe4ee3ebce7fc">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6Mjk2Mzk2MTcxOjc1ZjYzZjk2NzJjYTFjMmUxZTc4ZWVkOTYxMzJkZjU5N2NiOTAxZjhiM2I4OWI3NDgyYWY4OWNiZWU3Nzc2MzE=--97f84c723a470eecef81b7e8c58cdaf015d61f8d">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="C8AB:0E3B:196628:2946B8:5B4CF9CF" data-pjax-transient>
+  <meta name="request-id" content="C8AB:0E3B:195B79:293A44:5B4CF9C9" data-pjax-transient>
 
 
   
@@ -52,7 +52,7 @@
   <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
     <meta name="google-analytics" content="UA-3769691-2">
 
-<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="C8AB:0E3B:196628:2946B8:5B4CF9CF" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="36093934" /><meta name="octolytics-actor-login" content="thatrs" /><meta name="octolytics-actor-hash" content="40fa0fe22b2b9522286be5370026f2d29028ce1c191f27b2ef32d68c2f9c990e" />
+<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="C8AB:0E3B:195B79:293A44:5B4CF9C9" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="36093934" /><meta name="octolytics-actor-login" content="thatrs" /><meta name="octolytics-actor-hash" content="40fa0fe22b2b9522286be5370026f2d29028ce1c191f27b2ef32d68c2f9c990e" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -67,7 +67,7 @@
     <meta name="user-login" content="thatrs">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="ODYwNWQwMTEzMDMwNDVjZDU4OGZjNzI2YzBmOWExNGNmNDI5YzAzMGYzN2ZkODE5NDA5MzIxNWY0NDE4YzM5NHx7InJlbW90ZV9hZGRyZXNzIjoiMjA0LjExMS45Ni4xNyIsInJlcXVlc3RfaWQiOiJDOEFCOjBFM0I6MTk2NjI4OjI5NDZCODo1QjRDRjlDRiIsInRpbWVzdGFtcCI6MTUzMTc3MTM1MSwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+    <meta name="js-proxy-site-detection-payload" content="YTU3ZDVlNmFlZmNmMjk0NjZjODZhYTFiMjVkNDYzMGJkMGZkYzE4Njc1OWVlZWFlZTkxNWQzMTI5MjdjNWNiM3x7InJlbW90ZV9hZGRyZXNzIjoiMjA0LjExMS45Ni4xNyIsInJlcXVlc3RfaWQiOiJDOEFCOjBFM0I6MTk1Qjc5OjI5M0E0NDo1QjRDRjlDOSIsInRpbWVzdGFtcCI6MTUzMTc3MTM0MywiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
 
     <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_SEARCH,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
 
@@ -84,7 +84,7 @@
   <meta name="octolytics-dimension-user_id" content="36093934" /><meta name="octolytics-dimension-user_login" content="thatrs" /><meta name="octolytics-dimension-repository_id" content="136759528" /><meta name="octolytics-dimension-repository_nwo" content="thatrs/Pokemon-Red-Unity" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="136759528" /><meta name="octolytics-dimension-repository_network_root_nwo" content="thatrs/Pokemon-Red-Unity" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="true" />
 
 
-    <link rel="canonical" href="https://github.com/thatrs/Pokemon-Red-Unity/blob/0120b21a15675074c0c46044f15f64297063d9e1/Unity.gitignore" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/thatrs/Pokemon-Red-Unity/blob/0120b21a15675074c0c46044f15f64297063d9e1/README.md" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -153,7 +153,7 @@
           autocapitalize="off"
           aria-autocomplete="list"
           aria-controls="jump-to-results"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=7qAD3+smKuGdI57gzwHAHl2QzqYKbI35o25ni5StBmhAjjANRmKWWqKdH9CIC0regrVaEnzXh3zwrOv4ofuBdw=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=3tM33EJxBDzbEEZUgWtrq3Mjn3s0Zkly1pWXjiB73Sxw/QQO7zW4h+Sux2TGYeFrrAYLz0LdQ/eFVxv9FS1aMw=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -302,7 +302,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Td5Ts934VSVd992RplRoIkhVE+/io7N3DuYSNLxoAobwXrcDplhXJp12hNuj7Llv0Z2u8JGV8h7lk+hHP/3QxQ==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="Oigrii2AftgA9cGpmoXY6cKV144CkKhUuwZ7wrtpOg6HqM86ViB828B0mOOfPQmkW11qkXGm6T1Qc4GxOPzoTQ==" />
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -315,7 +315,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="IXdR+eiUkskFh1PkEgcMhaZ2flOnV46NsFMJbQCX8sSc97VJkzSQysUGCq4Xv93IP77DTNRhz+RbJvMegwIghw==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="D7dbAtUZjQxEmW+Hpuxp4v+dHuCoFGxuREFjzY+n6uyyN7+yrrmPD4QYNs2jVLivZlWj/9siLQevNJm+DDI4rw==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -351,7 +351,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-remote="true" class="js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ScZ1DLELvcL9gix/+XTCjoUf6/TdPOX3DxGF9VXjd+FRltNFuR4waKNmYmB5xU1JQG+YKOwvU0oOdZKQczycDg==" />      <input type="hidden" name="repository_id" id="repository_id" value="136759528" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-remote="true" class="js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TXnSHYO5Q+UZJedoCsiwKyuDuaHVHjxcRrghu87+hjFVKXRUi6zOT0fBqXeKeT/s7vPKfeQNiuFH3Dbe6CFt3g==" />      <input type="hidden" name="repository_id" id="repository_id" value="136759528" class="form-control" />
 
         <div class="select-menu js-menu-container js-select-menu">
           <a href="/thatrs/Pokemon-Red-Unity/subscription"
@@ -431,7 +431,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/thatrs/Pokemon-Red-Unity/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="H+1DsUD7thEykjo7hNDtQJ69tXBZhVfVKbPO9qFAq35YaqPzcghm0+28vLXoQwQukOLGSKML/xqmOZw+N7e6+g==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/thatrs/Pokemon-Red-Unity/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="71Bhr9gl/8Dxr46eMULwLnQDYn8JK2C3Pg9Q1CaiI9qo14Ht6tYvAi6BCBBd0RlAelwRR/OlyHixhQIcsFUyXg==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -446,7 +446,7 @@
           10
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/thatrs/Pokemon-Red-Unity/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="g44C+wOzyztye8uXlBGF4ZJyfphEH7l6jZvwDNjmK0bDeQS9UymehYBWTaivlVIPoiVe5e9BgMiO6kZD+a46NA==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/thatrs/Pokemon-Red-Unity/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="whZ+8LHy+oggfxy3i9Lb9NWUYnRPc5AJXpc2epCuMXyC4Xi24WivNtJSmoiwVgwa5cNCCeQtqbtd5oA1seYgDg==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -542,9 +542,9 @@
   <div class="repository-content ">
 
     
-  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/thatrs/Pokemon-Red-Unity/blob/0120b21a15675074c0c46044f15f64297063d9e1/Unity.gitignore">Permalink</a>
+  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/thatrs/Pokemon-Red-Unity/blob/0120b21a15675074c0c46044f15f64297063d9e1/README.md">Permalink</a>
 
-  <!-- blob contrib key: blob_contributors:v21:3271b40cdf9d6df8b93a6b6d3862dfeb -->
+  <!-- blob contrib key: blob_contributors:v21:561bf9a24b576d7237b58e21edea8ea3 -->
 
   
 
@@ -588,7 +588,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/thatrs/Pokemon-Red-Unity/blob/new/Unity.gitignore"
+               href="/thatrs/Pokemon-Red-Unity/blob/new/README.md"
                data-name="new"
                data-skip-pjax="true"
                rel="nofollow">
@@ -599,7 +599,7 @@
             </a>
         </div>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" action="/thatrs/Pokemon-Red-Unity/branches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="2N7mHiZ8bxStvSEHRKq9xQasFenK/tx+kMjZ7Fo9ORdV4mSwHwZ4lWYQ7i5ls0xOrJGxZp+9RW+on5/NtCO8vg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" action="/thatrs/Pokemon-Red-Unity/branches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="JG5AG07BiTJy8S4EhWCsBPufIPODgO4p8WJNrv7uCiGpUsK1d7ues7lc4S2keV2PUaKEfNbDdzjJNQuPEPCPiA==" />
           <svg class="octicon octicon-git-branch select-menu-item-icon" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
             <div class="select-menu-item-text">
               <span class="select-menu-item-heading">Create branch: <span class="js-new-item-name"></span></span>
@@ -607,7 +607,7 @@
             </div>
             <input type="hidden" name="name" id="name" class="js-new-item-value">
             <input type="hidden" name="branch" id="branch" value="0120b21a15675074c0c46044f15f64297063d9e1">
-            <input type="hidden" name="path" id="path" value="Unity.gitignore">
+            <input type="hidden" name="path" id="path" value="README.md">
 </form>
       </div>
 
@@ -636,12 +636,12 @@
       </clipboard-copy>
     </div>
     <div id="blob-path" class="breadcrumb">
-      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/thatrs/Pokemon-Red-Unity/tree/0120b21a15675074c0c46044f15f64297063d9e1"><span>Pokemon-Red-Unity</span></a></span></span><span class="separator">/</span><strong class="final-path">Unity.gitignore</strong>
+      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/thatrs/Pokemon-Red-Unity/tree/0120b21a15675074c0c46044f15f64297063d9e1"><span>Pokemon-Red-Unity</span></a></span></span><span class="separator">/</span><strong class="final-path">README.md</strong>
     </div>
   </div>
 
 
-  <include-fragment src="/thatrs/Pokemon-Red-Unity/contributors/0120b21a15675074c0c46044f15f64297063d9e1/Unity.gitignore" class="commit-tease commit-loader">
+  <include-fragment src="/thatrs/Pokemon-Red-Unity/contributors/0120b21a15675074c0c46044f15f64297063d9e1/README.md" class="commit-tease commit-loader">
     <div>
       Fetching contributors&hellip;
     </div>
@@ -658,9 +658,9 @@
   <div class="file-actions">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/thatrs/Pokemon-Red-Unity/raw/0120b21a15675074c0c46044f15f64297063d9e1/Unity.gitignore">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/thatrs/Pokemon-Red-Unity/blame/0120b21a15675074c0c46044f15f64297063d9e1/Unity.gitignore">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/thatrs/Pokemon-Red-Unity/commits/0120b21a15675074c0c46044f15f64297063d9e1/Unity.gitignore">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/thatrs/Pokemon-Red-Unity/raw/0120b21a15675074c0c46044f15f64297063d9e1/README.md">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/thatrs/Pokemon-Red-Unity/blame/0120b21a15675074c0c46044f15f64297063d9e1/README.md">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/thatrs/Pokemon-Red-Unity/commits/0120b21a15675074c0c46044f15f64297063d9e1/README.md">History</a>
     </div>
 
         <button class="btn-octicon disabled tooltipped tooltipped-nw"
@@ -681,176 +681,121 @@
   </div>
 
   <div class="file-info">
-      36 lines (31 sloc)
+      94 lines (48 sloc)
       <span class="file-info-divider"></span>
-    464 Bytes
+    2.13 KB
   </div>
 </div>
 
     
-
-  <div itemprop="text" class="blob-wrapper data type-text">
-      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
-      <tr>
-        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
-        <td id="LC1" class="blob-code blob-code-inner js-file-line">[Ll]ibrary/</td>
-      </tr>
-      <tr>
-        <td id="L2" class="blob-num js-line-number" data-line-number="2"></td>
-        <td id="LC2" class="blob-code blob-code-inner js-file-line">[Tt]emp/</td>
-      </tr>
-      <tr>
-        <td id="L3" class="blob-num js-line-number" data-line-number="3"></td>
-        <td id="LC3" class="blob-code blob-code-inner js-file-line">[Oo]bj/</td>
-      </tr>
-      <tr>
-        <td id="L4" class="blob-num js-line-number" data-line-number="4"></td>
-        <td id="LC4" class="blob-code blob-code-inner js-file-line">[Bb]uild/</td>
-      </tr>
-      <tr>
-        <td id="L5" class="blob-num js-line-number" data-line-number="5"></td>
-        <td id="LC5" class="blob-code blob-code-inner js-file-line">[Bb]uilds/</td>
-      </tr>
-      <tr>
-        <td id="L6" class="blob-num js-line-number" data-line-number="6"></td>
-        <td id="LC6" class="blob-code blob-code-inner js-file-line">Assets/AssetStoreTools*</td>
-      </tr>
-      <tr>
-        <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line"></td>
-      </tr>
-      <tr>
-        <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
-        <td id="LC8" class="blob-code blob-code-inner js-file-line"># Visual Studio cache directory</td>
-      </tr>
-      <tr>
-        <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line">.vs/</td>
-      </tr>
-      <tr>
-        <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line"></td>
-      </tr>
-      <tr>
-        <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line"># Autogenerated VS/MD/Consulo solution and project files</td>
-      </tr>
-      <tr>
-        <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line">ExportedObj/</td>
-      </tr>
-      <tr>
-        <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line">.consulo/</td>
-      </tr>
-      <tr>
-        <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line">*.csproj</td>
-      </tr>
-      <tr>
-        <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line">*.unityproj</td>
-      </tr>
-      <tr>
-        <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line">*.sln</td>
-      </tr>
-      <tr>
-        <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
-        <td id="LC17" class="blob-code blob-code-inner js-file-line">*.suo</td>
-      </tr>
-      <tr>
-        <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line">*.tmp</td>
-      </tr>
-      <tr>
-        <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
-        <td id="LC19" class="blob-code blob-code-inner js-file-line">*.user</td>
-      </tr>
-      <tr>
-        <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line">*.userprefs</td>
-      </tr>
-      <tr>
-        <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line">*.pidb</td>
-      </tr>
-      <tr>
-        <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line">*.booproj</td>
-      </tr>
-      <tr>
-        <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line">*.svd</td>
-      </tr>
-      <tr>
-        <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line">*.pdb</td>
-      </tr>
-      <tr>
-        <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line">*.opendb</td>
-      </tr>
-      <tr>
-        <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code blob-code-inner js-file-line"></td>
-      </tr>
-      <tr>
-        <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line"># Unity3D generated meta files</td>
-      </tr>
-      <tr>
-        <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line">*.pidb.meta</td>
-      </tr>
-      <tr>
-        <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line">*.pdb.meta</td>
-      </tr>
-      <tr>
-        <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code blob-code-inner js-file-line"></td>
-      </tr>
-      <tr>
-        <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line"># Unity3D Generated File On Crash Reports</td>
-      </tr>
-      <tr>
-        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code blob-code-inner js-file-line">sysinfo.txt</td>
-      </tr>
-      <tr>
-        <td id="L33" class="blob-num js-line-number" data-line-number="33"></td>
-        <td id="LC33" class="blob-code blob-code-inner js-file-line"></td>
-      </tr>
-      <tr>
-        <td id="L34" class="blob-num js-line-number" data-line-number="34"></td>
-        <td id="LC34" class="blob-code blob-code-inner js-file-line"># Builds</td>
-      </tr>
-      <tr>
-        <td id="L35" class="blob-num js-line-number" data-line-number="35"></td>
-        <td id="LC35" class="blob-code blob-code-inner js-file-line">*.apk</td>
-      </tr>
-      <tr>
-        <td id="L36" class="blob-num js-line-number" data-line-number="36"></td>
-        <td id="LC36" class="blob-code blob-code-inner js-file-line">*.unitypackage</td>
-      </tr>
-</table>
-
-  <div class="BlobToolbar position-absolute js-file-line-actions dropdown js-menu-container js-select-menu d-none" aria-hidden="true">
-    <button class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1 js-menu-target" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Inline file action toolbar" aria-controls="inline-file-actions">
-      <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
-    </button>
-    <div class="dropdown-menu-content js-menu-content" id="inline-file-actions">
-      <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
-        <li><clipboard-copy class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
-        <li><clipboard-copy class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" href="/thatrs/Pokemon-Red-Unity/blame/0120b21a15675074c0c46044f15f64297063d9e1/Unity.gitignore">View git blame</a></li>
-          <li><a class="dropdown-item" id="js-new-issue" href="/thatrs/Pokemon-Red-Unity/issues/new">Open new issue</a></li>
-      </ul>
-    </div>
-  </div>
-
+  <div id="readme" class="readme blob instapaper_body">
+    <article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-pokemon-red-unity" class="anchor" aria-hidden="true" href="#pokemon-red-unity"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pokemon-Red-Unity</h1>
+<p>Recreation of Pokemon Red in Unity</p>
+<p>Main resources/references used:</p>
+<p>Dissassembly: <a href="https://github.com/pret/pokered">https://github.com/pret/pokered</a></p>
+<p>Gameboy Architecture Manual(for the assembly code): <a href="http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf" rel="nofollow">http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf</a></p>
+<p>Assets from MrSquishy's Minecraft version: <a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/maps/2803888-pokemon-red-fully-recreated-without-mods" rel="nofollow">https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/maps/2803888-pokemon-red-fully-recreated-without-mods</a></p>
+<p>Dragonfly Cave(encounter tables): <a href="http://www.dragonflycave.com/" rel="nofollow">http://www.dragonflycave.com/</a></p>
+<p>Game functionality analysis videos(Crystal_): <a href="https://www.youtube.com/user/CrystaL12RG" rel="nofollow">https://www.youtube.com/user/CrystaL12RG</a></p>
+<p>Map Images-</p>
+<p>Overworld: <a href="http://vgmaps.com/Atlas/GB-GBC/Pokemon-Red,Green(J)&amp;BlueVersions-Kanto.png" rel="nofollow">http://vgmaps.com/Atlas/GB-GBC/Pokemon-Red,Green(J)&amp;BlueVersions-Kanto.png</a></p>
+<p>Interior: <a href="https://github.com/huderlem/RBMap">https://github.com/huderlem/RBMap</a></p>
+<p>Music-</p>
+<p>GarageBand</p>
+<p><a href="https://www.nayuki.io/page/transcription-of-pokemon-game-boy-music" rel="nofollow">https://www.nayuki.io/page/transcription-of-pokemon-game-boy-music</a></p>
+<h1><a id="user-content-feature-checklist" class="anchor" aria-hidden="true" href="#feature-checklist"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Feature checklist</h1>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Map - not done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Items - framework done, all items not implemented</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Intro/Credits</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Basic Movement - all done except for surfing</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Main Pokemon framework - 95% done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Encounters - 5%</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Battles - 5%</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Dialogue System</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> NPCS - 30% done, trainer logic, and movement animations not done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Hidden Moves - not done</p>
+</li>
+</ul>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Tiles -</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Collision tiles - done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked=""> Interactables - done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Warps - done except for fadeout, and slight functional variants</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Tall Grass - done except for main functionality</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Water - done except for main functionality</p>
+</li>
+</ul>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Events - not done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> PC - item PC done, Pokemon PC not done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Pokemart - done, variations such as Celadon mall not done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Pokecenter - not done</p>
+</li>
+</ul>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Menu -</li>
+</ul>
+<p>Done: Bag, Options, Pokemon menu, Pokedex,  Badges</p>
+<p>Not done:  Save/Load</p>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Link Cables Features -</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Trading - not done</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Battling - not done</p>
+</li>
+</ul>
+<hr>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox"> Sound - not done (lower priority than all else above)</li>
+</ul>
+</article>
   </div>
 
   </div>
@@ -878,7 +823,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.24183s from unicorn-66984c65d-td2rn">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.25419s from unicorn-1133568440-v35g1">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
