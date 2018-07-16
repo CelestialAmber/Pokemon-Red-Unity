@@ -22,13 +22,13 @@ TagManager:
   - UI
   - 
   - 
-  - EditorLayer
-  - IgnoreInCollision
-  - IgnoreNPC
-  - IgnorePlayer
-  - MapEditor
-  - Interactable
-  - InteractCol
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
