@@ -107,6 +107,7 @@ public class Tile {
     }
 
 }
+[System.Serializable]
 public class MapData{
     public int mapNum;
     public long headerAddr;
@@ -121,236 +122,16 @@ public class MapData{
     public int[,] connectionData;
     public int objectDataPointer;
     public int[] tileMap;
-  
-
-
-    public static MapData[] maps;
-        
-    public MapData()
-    { }
-    public void loadTileMap(TextAsset rom) 
-    {
-        tileMap = new int[width * height];
-        rom.seek(mapPointer%0x4000 + bank*0x4000);
-        for (int i = 0; i<width*height; i++)
-        {
-            tileMap[i] = rom.readByte()&0xff;
-        }
-    }
-    public static MapData loadMap(int mapNum, TextAsset rom)
-    {
-        Debug.Log("loading map index " + mapNum);
-        // First, load the address of the map's header.
-        rom.seek(Read.mapHeaderPointersAddress + mapNum* 2);
-        long headerAddr = rom.readPointer();
-
-    rom.seek(Read.mapHeaderBanksAddress + mapNum);
-        int bank = rom.readByte() & 0xff;
-
-    headerAddr = bank*0x4000 + headerAddr%0x4000;
-        
-        // Proceed to read the header and store the appropriate data located there.
-        MapData md = new MapData();
-        // Surround it all in a try-catch. If an exception occurs, we'll assume
-        // it's an invalid map.
-        try {
-            md.mapNum = mapNum;
-            md.headerAddr = headerAddr;
-            md.bank = bank;
-            rom.seek(headerAddr);
-            md.tilesetNumber = rom.readByte()&0xff;
-            md.height = rom.readByte()&0xff;
-            md.width = rom.readByte()&0xff;
-            md.originalHeight = md.height;
-            md.originalWidth = md.width;
-
-            md.mapPointer = rom.readPointer();
-    md.textPointer = rom.readPointer();
-    md.scriptPointer = rom.readPointer();
-
-    int conn = rom.readByte() & 0xff;
-    md.connection = conn;
-            int numConnections = ((conn >> 3) & 1) + ((conn >> 2) & 1) + ((conn >> 1) & 1) + (conn & 1);
-    md.connectionData = new int[numConnections,11];
-            
-            // load all the connection data
-            for (int i = 0; i<numConnections; i++)
-            {
-                // Connection data is 11 bytes for each direction.
-                byte[] connBytes = new byte[11];
-    rom.read(ref connBytes, 0, 11);
-                // convert byte[] to int[]
-                for (int j = 0; j<connBytes.Length; j++) {
-                    md.connectionData[i,j] = connBytes[j];
-                }
-            }
-
-            md.objectDataPointer = rom.readPointer();
-//md.objectData = ObjectData.loadObjectData(rom, md.objectDataPointer%0x4000 + 0x4000* bank);
-
-            md.loadTileMap(rom);
-        }
-        catch (Exception e) 
-        {
-            throw e;
-        }
-        
-        return md;
-    }
-    public static void init(TextAsset rom)
-    {
-        // Maximum of 256 maps.
-        maps = new MapData[256];
-        for (int i = 0; i<maps.Length; i++)
-        {
-            maps[i] = loadMap(i, rom);
-}
-    }
+ 
 
 }
+[System.Serializable]
 public class Tileset
 {
-
-    public static int TILE_WIDTH = 8;
-    public static int TILE_HEIGHT = 8;
-
-    private static long tilesetHeadersAddress;
-
-    public static Tileset[] tilesets;
-
-    int bank;
-    int blocksPointer;
-    int tilesPointer;
-    int collisionDataPointer;
-    int[] talkingOverTiles = new int[3]; // 0xff if they aren't used; up to three total
-    int grassTile; // 0xff if unused
-    int animationFlag;
-
-    Texture2D[] tiles;
-    Texture2D[] blocks;
-
-    /*
-     * Reads a tile from the ROM and returns an 8x8-pixel Texture2D.
-     */
-    public static Texture2D readTile(byte[] tileBytes)
-    {
-        Texture2D tileImg = new Texture2D(TILE_WIDTH, TILE_HEIGHT);
-        Color[] convertedBytes = new Color[TILE_WIDTH * TILE_HEIGHT];
-        // Perform interlace merge to load the 2-bit per pixel format.
-        for (int i = 0; i < TILE_HEIGHT; i++)
-        {
-            int lo = tileBytes[i * 2];
-            int hi = tileBytes[i * 2 + 1];
-            for (int j = 0; j < 8; j++)
-            {
-                int bit = 7 - j;
-                int colorIndex = (((hi >> bit) & 1) << 1) | ((lo >> bit) & 1);
-                convertedBytes[i * TILE_WIDTH + j] = MapEditor.colors[colorIndex];
-            }
-        }
-
-        tileImg.SetPixels(convertedBytes);
-        return tileImg;
-    }
-    public static Texture2D[] getBlocks(long addr, TextAsset file, Texture2D[] tiles)
-    {
-        Texture2D[] blocks = new Texture2D[256]; // maximum of 256 blocks
-        for (int i = 0; i<blocks.Length; i++)
-        {
-            blocks[i] = createBlock(tiles, addr + i*16, file); // every block is 16 bytes
-        }
-        
-        return blocks;
-    }
-    public static Texture2D createBlock(Texture2D[] tiles, long blockAddr, TextAsset rom)
-    {
-        rom.seek(blockAddr);
-        Texture2D blockImg = new Texture2D(TILE_WIDTH * 4, TILE_HEIGHT * 4);
-    // Blocks are made up of 16 consecutive bytes in the ROM.
-    byte[] blockBytes = new byte[16];
-    rom.read(ref blockBytes, 0, 16);
-        for (int i = 0; i<blockBytes.Length; i++)
-        {
-            blockImg.SetPixels((i % 4) * TILE_WIDTH, (i / 4) * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT, tiles[blockBytes[i] & 0xff].GetPixels());
-
-        }
-        
-        return blockImg;
-    }
-    public static Texture2D[] getTiles(long addr, TextAsset rom) 
-    {
-        Texture2D []tiles = new Texture2D[256]; // maximum of 256 tiles
-        rom.seek(addr);
-        for (int i = 0; i<tiles.Length; i++)
-        {
-            byte[] bytes = new byte[16];
-    rom.read(ref bytes, 0, 16);
-            tiles[i] = readTile(bytes);
-}
-        
-        return tiles;
-    }
-    public static Tileset loadTileset(int tilesetNum, TextAsset rom)
-    {
-        rom.seek(Read.tilesetHeadersAddress + tilesetNum* 12); // 12 bytes per tileset header
-        
-        // read the tileset's headers and create a Tileset object
-        Tileset ts = new Tileset();
-    ts.bank = rom.readByte()&0xff;
-        ts.blocksPointer = rom.readPointer()%0x4000 + ts.bank*0x4000;
-        ts.tilesPointer = rom.readPointer()%0x4000 + ts.bank*0x4000;
-        // TODO: collisionData is probably bugged here...
-        ts.collisionDataPointer = rom.readPointer()%0x4000 + ((int)(tilesetHeadersAddress/0x4000))*0x4000;
-        for (int i = 0; i< 3; i++)
-        {
-            ts.talkingOverTiles[i] = rom.readByte()&0xff;
-        }
-
-ts.grassTile = rom.readByte()&0xff;
-        ts.animationFlag = rom.readByte()&0xff;
-        ts.tiles = getTiles(ts.tilesPointer, rom);
-ts.blocks = getBlocks(ts.blocksPointer, rom, ts.tiles);
-        
-        return ts;
-    }
-    public static void init(TextAsset file)
-    {
-        // load all tilesets
-        // TODO: This is hard-capping the number of tilesets to 24.
-        tilesets = new Tileset[0x18];
-        for (int i = 0; i<tilesets.Length; i++)
-        {
-            tilesets[i] = loadTileset(i, file);
-}
-    }
+    //Tilesets contain 32x32 blocks made up of 4 tiles, which are used to make the map
+    public  Texture2D[] blocks = new Texture2D[256];
 }
 
-public static class Read{
-    public static long mapHeaderPointersAddress = 0x1AE;
-    public static long mapHeaderBanksAddress = 0xC23D;
-    public static long tilesetHeadersAddress = 0xC7BE;
-    public static long readIndex;
-    public static void seek(this TextAsset rom, long addr){
-        readIndex = addr;
-    }
-    public static byte readByte(this TextAsset rom)
-    {
-        readIndex++;
-        return rom.bytes[readIndex - 1];
-    }
-    public static void read(this TextAsset rom, ref byte[] array, int start, int length)
-    {
-        for (int i = start; i < start + length; i++){
-            array[i] = rom.readByte();
-        }
-    }
-    public static int readPointer(this TextAsset rom)
-    {
-        int lo = rom.readByte() & 0xff;
-        int hi = rom.readByte() & 0xff;
-        return (hi << 8) | lo;
-    }
-}
 public class MapEditor : MonoBehaviour
 {
     public GameObject container, grasscontainer;
@@ -361,9 +142,9 @@ public class MapEditor : MonoBehaviour
     public List<Tile> tilepool = new List<Tile>();
     public string MapSaveName;
     public GridTile[,] savedtiles = new GridTile[800, 800];
-    public TextAsset romFile;
-    public Texture2D[] maptiles;
-
+    public int currentMap;
+    public Tileset[] tilesets = new Tileset[24];
+    public MapData[] maps = new MapData[248];
     public static Color[] colors = {
         new Color(1, 1, 1, 1),
     new Color(.5625f, .5625f, .5625f, 1),
@@ -435,7 +216,8 @@ public class MapEditor : MonoBehaviour
     }
 
     public void setCurrentMap(int index){
-        
+        currentMap = index;
+       
     } 
 
 }
@@ -446,6 +228,7 @@ public class MapTileEditor : Editor
    
     private static bool m_editMode = false;
     private static bool m_editMode2 = false;
+    public int curmap = 0;
     public Vector2 atlasSize = new Vector2(1024, 512);
 void OnSceneGUI()
     {
@@ -652,13 +435,30 @@ public override void OnInspectorGUI()
                 ;
             }
         }
-        if (GUILayout.Button("Load Map Data from ROM"))
+      
+        curmap = EditorGUILayout.IntSlider("Current Map", curmap, 0, 247);
+        if (GUILayout.Button("Set Current Map"))
         {
-            MapData.init(me.romFile);
-            Tileset.init(me.romFile);
-            me.setCurrentMap(0);
+            me.setCurrentMap(curmap);
         }
-       
+        if (GUILayout.Button("Load Map Data from file"))
+        {
+            me.maps =  Serializer.Load<MapData>(Application.streamingAssetsPath + "/romMaps.txt");
+        }
+        if (GUILayout.Button("Load Tileset Data from file"))
+        {
+            for (int i = 0; i < 24; i++)
+            {
+                for (int j = 0; j < 256; j++)
+                {
+                    if (File.Exists("Assets/Game/Blocks/tileset" + i + "/block" + j + ".png"))
+                    {
+                        me.tilesets[i].blocks[j] = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Game/Blocks/tileset" + i + "/block" + j + ".png");
+                    }
+                    else me.tilesets[i].blocks[j] = null;
+                }
+            }
+        }
 
      
   }
