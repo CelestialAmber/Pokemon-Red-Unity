@@ -1,5 +1,5 @@
 # Pokemon-Red-Unity
-Recreation of Pokemon Red in Unity
+Recreation of Pokemon Red/Blue in Unity
 
 Main resources/references used:
 
@@ -20,8 +20,6 @@ Overworld: http://vgmaps.com/Atlas/GB-GBC/Pokemon-Red,Green(J)&BlueVersions-Kant
 Interior: https://github.com/huderlem/RBMap
 
 Music-
-
-GarageBand
 
 https://www.nayuki.io/page/transcription-of-pokemon-game-boy-music
 
