@@ -94,14 +94,12 @@ public class Serializer
 //Properties of tile, including collision, and others
 [System.Serializable]
 public class Tile {
-    public int layer;
-    public string sprite;
+    public Texture2D texture;
     public string tag;
     public bool isAnimated;
    
-    public Tile(int l, string s, string t, bool isanim){
-        layer = l;
-        sprite = s;
+    public Tile(Texture2D s, string t, bool isanim){
+        texture = s;
         tag = t;
         isAnimated = isanim;
     }
@@ -131,7 +129,238 @@ public class Tileset
     //Tilesets contain 32x32 blocks made up of 4 tiles, which are used to make the map
     public  Texture2D[] blocks = new Texture2D[256];
 }
+public class MapIndexes
+{
+    public static List<List<int[]>> array = new List<List<int[]>>(
+        new List<int[]>[]{
+        //0: Overworld
+        new List<int[]>(new int[][]{
+           new int[] {191,846,243,244},
+            new int[] {2,1,1,2},
+            new int[] {185,135,152,137},
+            new int[] {135,136,243,154},
+            new int[] {33,33,33,7},
+            new int[] {28,28,28,28},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {28,28,28,28},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0},
+            new int[] {0,0,0,0}
+    }),
+        //1:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //2:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //3:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //4:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //5:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //6:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //7:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //8:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //9:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //10:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //11:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //12:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //13:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //14:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //15:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //16:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //17:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //18:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //19:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //20:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //21:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //22:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    }),
+        //23:
+        new List<int[]>(new int[][]{
+           new int[] {0,0,0,0},
+    })
+    }
 
+    );
+
+}
 public class MapEditor : MonoBehaviour
 {
     public GameObject container, grasscontainer;
@@ -146,10 +375,10 @@ public class MapEditor : MonoBehaviour
     public Tileset[] tilesets = new Tileset[24];
     public MapData[] maps = new MapData[248];
     public static Color[] colors = {
-        new Color(1, 1, 1, 1),
-    new Color(.5625f, .5625f, .5625f, 1),
-    new Color(.25f, .25f, .25f, 1),
-    new Color(0,0,0,1)
+        new Color(1, 1, 1, 1), //0xff
+    new Color(.5625f, .5625f, .5625f, 1), //0x90
+    new Color(.25f, .25f, .25f, 1), //0x40
+    new Color(0,0,0,1) //0x00
 };
 
     int xiterations = 0, yiterations = 0;
@@ -185,8 +414,7 @@ public class MapEditor : MonoBehaviour
         }
                 gameObject.transform.position = snappos;
                 gameObject.tag = tilepool[currentTileIndex].tag;
-                gameObject.layer = tilepool[currentTileIndex].layer;
-                gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("interiortiles/" + tilepool[currentTileIndex].sprite);
+        gameObject.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>(AssetDatabase.GetAssetPath(tilepool[currentTileIndex].texture).Replace("Assets/Resources/", "").Replace(".png",""))[0];
         if (gameObject.tag == "TallGrass")
         {
 
@@ -197,23 +425,27 @@ public class MapEditor : MonoBehaviour
         {
             DestroyImmediate(gameObject.GetComponent<TallGrass>());
         }
-                if (tilepool[currentTileIndex].isAnimated)
+                if (!tilepool[currentTileIndex].isAnimated)
                 {
-
-
-                    gameObject.GetComponent<AnimatedTile>().tileanimsprites = Resources.LoadAll<Sprite>("interiortiles/" + tilepool[currentTileIndex].sprite);
-        }else DestroyImmediate(gameObject.GetComponent<AnimatedTile>());
+            DestroyImmediate(gameObject.GetComponent<AnimatedTile>());
+        }
                 
 
     }
+    public void SpawnMap(){
+        MapData map  = maps[currentMap];
+        for (int i = 0; i < map.tileMap.Length; i++){
+            Texture2D currentBlock = tilesets[maps[currentMap].tilesetNumber].blocks[map.tileMap[i]];
+            for (int j = 0; j < 4; j++){
+                currentTileIndex = MapIndexes.array[map.tilesetNumber][map.tileMap[i]][j];
+                SpawnTile(new Vector2(500 +  2*(i % map.width)  + j % 2,500 -  2 * (i / map.width) - Mathf.FloorToInt((float)j/4 + 0.51f)));
+            }
+        }
+    }
+   
 
   
-    public int FetchIndex(string sprite){
-        foreach (Tile tile in tilepool){
-            if (tile.sprite == sprite) return tilepool.IndexOf(tile);
-        }
-        return 0;
-    }
+   
 
     public void setCurrentMap(int index){
         currentMap = index;
@@ -259,13 +491,8 @@ void OnSceneGUI()
                         int index = 0;
                         foreach (Tile tile in me.tilepool)
                         {
-                            string tempname;
-                            tempname = hit.collider.gameObject.GetComponent<SpriteRenderer>().sprite.name;
-                            if (tempname.Contains("_"))
-                            {
-                                tempname = tempname.Substring(0, tempname.IndexOf('_'));
-                            }
-                            if (Resources.Load<Sprite>("interiortiles/" + tile.sprite) == Resources.Load<Sprite>((tile.sprite.Contains("Water") ? "interiortiles/Water/" : tile.sprite.Contains("Buildings") ? "interiortiles/Buildings/" : "interiortiles/") + tempname))
+                            
+                            if (tile.texture == hit.collider.GetComponent<SpriteRenderer>().sprite.texture)
                             {
 
                                 me.currentTileIndex = index;
@@ -309,29 +536,16 @@ public override void OnInspectorGUI()
 {
   DrawDefaultInspector();
   MapEditor me = (MapEditor)target;
-        Texture2D showntex =  Instantiate(Resources.Load<Texture2D>("interiortiles/" + me.tilepool[me.currentTileIndex].sprite));
-        Texture2D newtex = new Texture2D(showntex.width, showntex.height, TextureFormat.ARGB32,true);
-        newtex.SetPixels(0, 0, 16, 16, showntex.GetPixels());
+        if (me.tilepool.Count > 0)
+        {
+            Texture2D showntex = Instantiate(me.tilepool[me.currentTileIndex].texture);
+            Texture2D newtex = new Texture2D(showntex.width, showntex.height, TextureFormat.ARGB32, true);
+
+            newtex.SetPixels(0, 0, 16, 16, showntex.GetPixels());
             TextureScale.Point(newtex, 64, 64);
 
-        GUILayout.Box(newtex,GUILayout.Width(64), GUILayout.Height(64));
-  if (GUILayout.Button("Add New Tile Entry"))
-  {
-          me.tilepool.Add(new Tile(0,null,null,false));
-    
-  }   
-        if (GUILayout.Button("Save Tile Pool from Save Data"))
-  {
-            Serializer.Save<Tile>("tilepool.txt", me.tilepool.ToArray());
-
-    
-  } 
-        if (GUILayout.Button("Load Tile Pool from Save Data"))
-  {
-           
-            me.tilepool = new List<Tile>(Serializer.Load<Tile>("tilepool.txt"));
-    
-  } 
+            GUILayout.Box(newtex, GUILayout.Width(64), GUILayout.Height(64));
+        }
         if(GUILayout.Button("Save Map to file")){
             Get get = new Get();
 
@@ -416,23 +630,22 @@ public override void OnInspectorGUI()
             Serializer.Save2D<GridTile>(Application.streamingAssetsPath + "/map.txt", me.savedtiles);
            
         }
-        if (GUILayout.Button("Add all building tiles"))
+        if (GUILayout.Button("Add all tiles"))
         {
-            for (int i = 126; i <= 273; i++){
-                foreach (Tile tile in me.tilepool)
-                {
-                   
-                    if (Resources.Load<Sprite>("interiortiles/" + tile.sprite) == Resources.Load<Sprite>("interiortiles/Buildings/tile" + i.ToString()))
-                    {
-
-                        goto SkipCreatingSlot;
-                    }
-
+            me.tilepool.Clear();
+            me.tilepool.Resize(866);
+            foreach(Texture2D tile in Resources.LoadAll<Texture2D>("interiortiles/")){
+                string tag = "Untagged";
+                bool isAnimated = false;
+                if(AssetDatabase.GetAssetPath(tile).Contains("/Collision")){
+                    tag = "WallObject";
                 }
-
-                me.tilepool.Add(new Tile(5,"Buildings/tile" + i.ToString() , "WallObject", false));
-                SkipCreatingSlot:
-                ;
+                string thisIndex = tile.name;
+                int index = int.Parse(thisIndex.Replace("tile", ""));
+                if (tile.width > 16 || tile.height > 16) isAnimated = true;
+                me.tilepool[index] = new Tile(tile, tag, isAnimated);
+                
+                    
             }
         }
       
@@ -440,6 +653,10 @@ public override void OnInspectorGUI()
         if (GUILayout.Button("Set Current Map"))
         {
             me.setCurrentMap(curmap);
+        }
+        if (GUILayout.Button("Spawn current map"))
+        {
+            me.SpawnMap();
         }
         if (GUILayout.Button("Load Map Data from file"))
         {
@@ -459,6 +676,7 @@ public override void OnInspectorGUI()
                 }
             }
         }
+       
 
      
   }
