@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.U2D;
 using System.Linq;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.IO;
 [System.Serializable]
 public class GridTile
 {
@@ -19,23 +22,22 @@ public class GridTile
     public bool isWall;
     public int frames;
     public string mainSprite;
-    public string grassSprite;
     public List<Vector2[]> mainUvs = new List<Vector2[]>();
-    public Vector2[] grassUvs;
-    public GridTile(TilesData itemData, WarpInfo tileWarp, GrassInfo tallGrass, bool isAnimated, int x, int y, string tag,  bool isWarp, bool hasGrass, bool isWall, int frames)
-    {
-        this.tiledata = itemData;
-        this.tileWarp = tileWarp;
+    public GridTile(TilesData tiledata, WarpInfo warpInfo, GrassInfo tallGrass, bool isAnimated, int posx, int posy, string tag, bool isWarp, bool hasGrass, bool isWall, int frames, string mainSprite){
+        this.tiledata = tiledata;
         this.tallGrass = tallGrass;
-        this.posx = x;
-        this.posy = y;
         this.isAnimated = isAnimated;
+        this.posx = posx;
+        this.posy = posy;
         this.tag = tag;
         this.isWarp = isWarp;
-        this.isWall = isWall;
         this.hasGrass = hasGrass;
+        this.isWall = isWall;
         this.frames = frames;
+        this.mainSprite = mainSprite;
+
     }
+
 }
 public class Player : MonoBehaviour
 {
@@ -73,7 +75,7 @@ public class Player : MonoBehaviour
     public bool ledgejumping;
     public GridTile facedtile;
     public float tileanimtimer;
-    public GridTile[,] maptiles = new GridTile[800, 800];
+    public GridTile[,] maptiles = new GridTile[GameConstants.mapWidth, GameConstants.mapHeight];
     public bool doupdate;
     public MeshRenderer mainLayer, grassLayer;
     public SpriteAtlas tileAtlas;
@@ -94,6 +96,7 @@ public class Player : MonoBehaviour
         return a < 0 ? b + a % b : a % b;
     }
     void GenerateUvs(){
+        Rect rect;
         foreach(GridTile tile in maptiles){
             if(tile != null){
                 Sprite tileSprite;
@@ -103,29 +106,30 @@ public class Player : MonoBehaviour
                     for (int i = 0; i < tile.frames; i++)
                     {
                         tileSprite = tileAtlas.GetSprite(tile.mainSprite + "_" + i);
-                        Rect rect = new Rect(tileSprite.textureRect.position, tileSprite.textureRect.size);
+                        rect = new Rect(tileSprite.textureRect.position, tileSprite.textureRect.size);
                         tile.mainUvs.Add(new Vector2[] { new Vector2(rect.xMin / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMax / atlasSize.y), new Vector2(rect.xMin / atlasSize.x, rect.yMax / atlasSize.y) });
                     }
                 }else{
-                    tileSprite = tileAtlas.GetSprite(tile.mainSprite);
-                    Rect rect = new Rect(tileSprite.textureRect.position, tileSprite.textureRect.size);
-                    tile.mainUvs.Add(new Vector2[] { new Vector2(rect.xMin / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMax / atlasSize.y), new Vector2(rect.xMin / atlasSize.x, rect.yMax / atlasSize.y) });
+                    if (tile.hasGrass)
+                    {
+                        tileSprite = tileAtlas.GetSprite(tile.mainSprite);
+                        rect = new Rect(tileSprite.textureRect.position, tileSprite.textureRect.size);
+                        tile.mainUvs.Add(new Vector2[] { new Vector2(rect.xMin / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMax / atlasSize.y), new Vector2(rect.xMin / atlasSize.x, rect.yMax / atlasSize.y) });
 
-                }
-                //Generate grass uvs, if any.
-                if(tile.hasGrass){
-                    tileSprite = tileAtlas.GetSprite(tile.grassSprite);
-                    Rect rect = new Rect(tileSprite.textureRect.position, tileSprite.textureRect.size);
-                    tile.grassUvs = new Vector2[] { new Vector2(rect.xMin / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMax / atlasSize.y), new Vector2(rect.xMin / atlasSize.x, rect.yMax / atlasSize.y) };
 
+                    }
+                    else
+                    {
+                        tileSprite = tileAtlas.GetSprite(tile.mainSprite);
+                        rect = new Rect(tileSprite.textureRect.position, tileSprite.textureRect.size);
+                        tile.mainUvs.Add(new Vector2[] { new Vector2(rect.xMin / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMin / atlasSize.y), new Vector2(rect.xMax / atlasSize.x, rect.yMax / atlasSize.y), new Vector2(rect.xMin / atlasSize.x, rect.yMax / atlasSize.y) });
+                    }
                 }
+               
             }
         }
     }
-      void Awake()
-    {
-        tileMat.mainTexture =  tileAtlas.GetSprite("tile7").texture;
-        atlasSize = new Vector2(tileMat.mainTexture.width, tileMat.mainTexture.height);
+    void GenerateMeshes(){
         mesh = new Mesh();
         List<Vector3> verts = new List<Vector3>();
         List<int> tris = new List<int>();
@@ -134,9 +138,9 @@ public class Player : MonoBehaviour
             for (int x = 0; x < 12; x++)
             {
                 int offset = verts.Count;
-                verts.AddRange(new Vector3[] { new Vector3(x , y), new Vector3(x + 1, y), new Vector3(x + 1, y + 1), new Vector3(x, y + 1) });
+                verts.AddRange(new Vector3[] { new Vector3(x, y), new Vector3(x + 1, y), new Vector3(x + 1, y + 1), new Vector3(x, y + 1) });
 
-                tris.AddRange(new int[] { 0 + offset,2 + offset,1 + offset,0 + offset,3 + offset,2 + offset});
+                tris.AddRange(new int[] { 0 + offset, 2 + offset, 1 + offset, 0 + offset, 3 + offset, 2 + offset });
             }
         }
         mesh.vertices = verts.ToArray();
@@ -148,6 +152,14 @@ public class Player : MonoBehaviour
         grassMesh.mesh = new Mesh();
         grassMesh.mesh.vertices = mesh.vertices;
         grassMesh.mesh.triangles = mesh.triangles;
+
+    }
+      void Awake()
+    {
+        tileMat.mainTexture =  tileAtlas.GetSprite("tile7").texture;
+        atlasSize = new Vector2(tileMat.mainTexture.width, tileMat.mainTexture.height);
+        maptiles = new GridTile[GameConstants.mapWidth, GameConstants.mapHeight];
+        GenerateMeshes();
         SaveData.Init();
         SaveData.money = 3000;
         SaveData.coins = 300;
@@ -162,7 +174,7 @@ public class Player : MonoBehaviour
         {
             for (int x = 0; x < 12; x++)
             {
-                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(centerPos.x  + (x - 5)) , 800), mod(Mathf.RoundToInt(centerPos.y  + (y - 5)) , 800)];
+                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(centerPos.x  + (x - 5)) , GameConstants.mapWidth), mod(Mathf.RoundToInt(centerPos.y  + (y - 5)) , GameConstants.mapHeight)];
                 if ( tileToUse != null)
                 {
                     //Load the main layer.
@@ -191,7 +203,7 @@ public class Player : MonoBehaviour
             for (int x = 0; x < 12; x++)
             {
 
-                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(tr.position.x + (x - 5)) , 800), mod(Mathf.RoundToInt(tr.position.y + (y - 5)) , 800)];
+                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(tr.position.x + (x - 5)) , GameConstants.mapWidth), mod(Mathf.RoundToInt(tr.position.y + (y - 5)) , GameConstants.mapHeight)];
                
                 if (tileToUse != null)
                 {
@@ -201,18 +213,24 @@ public class Player : MonoBehaviour
                     {
                        int frame =  Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 2));
                         mainUvs.AddRange(loadedtile.mainUvs[frame]);
+                        grassUvs.AddRange(new Vector2[] { new Vector2(0.95f, 0.95f), new Vector2(0.96f, 0.95f), new Vector2(0.96f, 0.96f), new Vector2(0.95f, 0.96f) });
                     }
                     else
                     {
-                        mainUvs.AddRange(loadedtile.mainUvs[0]);
+                        if (loadedtile.hasGrass)
+                        { //Does the tile have grass?
+                          //yes
+                            mainUvs.AddRange(new Vector2[] { new Vector2(0.95f, 0.95f), new Vector2(0.96f, 0.95f), new Vector2(0.96f, 0.96f), new Vector2(0.95f, 0.96f) });
+                            grassUvs.AddRange(loadedtile.mainUvs[0]);
+                        }
+                        else
+                        {
+                            
+                            mainUvs.AddRange(loadedtile.mainUvs[0]);
+                            grassUvs.AddRange(new Vector2[] { new Vector2(0.95f, 0.95f), new Vector2(0.96f, 0.95f), new Vector2(0.96f, 0.96f), new Vector2(0.95f, 0.96f) });
+                        }
                     }
-                    if (loadedtile.hasGrass)
-                    { //Does the tile have grass?
-                        //yes
 
-                        grassUvs.AddRange(loadedtile.grassUvs);
-                    }
-                    else grassUvs.AddRange(new Vector2[] { new Vector2(0.95f, 0.95f), new Vector2(0.96f, 0.95f), new Vector2(0.96f, 0.96f), new Vector2(0.95f, 0.96f) });
                 }
                 else {
                     mainUvs.AddRange(new Vector2[] { new Vector2(0.95f, 0.95f), new Vector2(0.96f, 0.95f), new Vector2(0.96f, 0.96f), new Vector2(0.95f, 0.96f) });
@@ -228,10 +246,12 @@ public class Player : MonoBehaviour
         grassMesh.mesh.uv = grassUvs.ToArray();
         centerPos = tr.position;
     }
-  
+    void LoadMapData(){
+        maptiles = Serializer.Load2D<GridTile>(Application.streamingAssetsPath + "/map.txt");
+    }
     void Start()
     {
-        maptiles = Serializer.Load2D<GridTile>(Application.streamingAssetsPath + "/map.txt");
+        LoadMapData();
         GenerateUvs();
         emotionbubble.enabled = false;
         SaveData.trainerID = Random.Range(0, 65536);
@@ -433,7 +453,7 @@ public class Player : MonoBehaviour
                 {
                     if (actuallymoving)
                     {
-                        GridTile currentTile = maptiles[mod((int)tr.position.x,800), mod((int)tr.position.y, 800)];
+                        GridTile currentTile = maptiles[mod((int)tr.position.x, GameConstants.mapWidth), mod((int)tr.position.y, GameConstants.mapHeight)];
                         if (currentTile != null)
                         {
                             if (currentTile.isWarp)
@@ -622,26 +642,26 @@ public class Player : MonoBehaviour
 
 			if (direction == 1) {
 
-                itemCheck =  maptiles[mod((int)tr.position.x, 800), mod((int)tr.position.y + 1, 800)];
-                facingCheck = maptiles[mod((int)tr.position.x, 800) , mod((int)tr.position.y + 1, 800)];
+                itemCheck =  maptiles[mod((int)tr.position.x, GameConstants.mapWidth), mod((int)tr.position.y + 1, GameConstants.mapHeight)];
+                facingCheck = maptiles[mod((int)tr.position.x, GameConstants.mapWidth) , mod((int)tr.position.y + 1, GameConstants.mapHeight)];
 			}
             if (direction == 2)
             {
 
-                itemCheck = maptiles[mod((int)tr.position.x, 800), mod((int)tr.position.y - 1,800)];
-                facingCheck = maptiles[mod((int)tr.position.x, 800), mod((int)tr.position.y - 1,800)];
+                itemCheck = maptiles[mod((int)tr.position.x, GameConstants.mapWidth), mod((int)tr.position.y - 1,GameConstants.mapHeight)];
+                facingCheck = maptiles[mod((int)tr.position.x, GameConstants.mapWidth), mod((int)tr.position.y - 1,GameConstants.mapHeight)];
             }
             if (direction == 3)
             {
 
-                itemCheck = maptiles[mod((int)tr.position.x - 1,800),mod((int)tr.position.y,800)];
-              facingCheck = maptiles[mod((int)tr.position.x - 1, 800), mod((int)tr.position.y, 800)];
+                itemCheck = maptiles[mod((int)tr.position.x - 1,GameConstants.mapWidth),mod((int)tr.position.y,GameConstants.mapHeight)];
+                facingCheck = maptiles[mod((int)tr.position.x - 1, GameConstants.mapWidth), mod((int)tr.position.y, GameConstants.mapHeight)];
             }
             if (direction == 4)
             {
 
-                itemCheck = maptiles[mod((int)tr.position.x + 1, 800), mod((int)tr.position.y, 800)];
-                facingCheck = maptiles[mod((int)tr.position.x + 1, 800), mod((int)tr.position.y, 800)];
+                itemCheck = maptiles[mod((int)tr.position.x + 1, GameConstants.mapWidth), mod((int)tr.position.y, GameConstants.mapHeight)];
+                facingCheck = maptiles[mod((int)tr.position.x + 1, GameConstants.mapWidth), mod((int)tr.position.y, GameConstants.mapHeight)];
             }
             if (facingCheck != null)
             {
@@ -722,25 +742,25 @@ public class Player : MonoBehaviour
         if (tr.position == pos)
         {
             GridTile tileToCheck;
-            tileToCheck = maptiles[mod((int)tr.position.x - 1, 800), mod((int)tr.position.y,800)];
+            tileToCheck = maptiles[mod((int)tr.position.x - 1, GameConstants.mapWidth), mod((int)tr.position.y,GameConstants.mapHeight)];
             if (tileToCheck != null)
             {
                 cannotMoveLeft = tileToCheck.tag.Contains("Wall") || tileToCheck.tag.Contains("Ledge");
             }
             else cannotMoveLeft = false;
-            tileToCheck = maptiles[mod((int)tr.position.x + 1, 800), mod((int)tr.position.y, 800)];
+            tileToCheck = maptiles[mod((int)tr.position.x + 1, GameConstants.mapWidth), mod((int)tr.position.y, GameConstants.mapHeight)];
             if (tileToCheck != null)
             {
                 cannotMoveRight = tileToCheck.tag.Contains("Wall") || tileToCheck.tag.Contains("Ledge");
             }
             else cannotMoveRight = false;
-            tileToCheck = maptiles[mod((int)tr.position.x, 800), mod((int)tr.position.y + 1,800)];
+            tileToCheck = maptiles[mod((int)tr.position.x, GameConstants.mapWidth), mod((int)tr.position.y + 1,GameConstants.mapHeight)];
             if (tileToCheck != null)
             {
                 cannotMoveUp = tileToCheck.tag.Contains("Wall") || tileToCheck.tag.Contains("Ledge");
             }
             else cannotMoveUp = false;
-            tileToCheck = maptiles[mod((int)tr.position.x, 800), mod((int)tr.position.y - 1,800)];
+            tileToCheck = maptiles[mod((int)tr.position.x, GameConstants.mapWidth), mod((int)tr.position.y - 1,GameConstants.mapHeight)];
             if (tileToCheck != null)
             {
                 cannotMoveDown = tileToCheck.tag.Contains("Wall") || tileToCheck.tag.Contains("Ledge");

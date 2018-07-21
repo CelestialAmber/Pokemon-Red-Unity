@@ -3,7 +3,7 @@
 --- !u!84 &8400000
 RenderTexture:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: maingame
   m_ImageContentsHash:
@@ -15,10 +15,10 @@ RenderTexture:
   m_Height: 144
   m_AntiAliasing: 1
   m_DepthFormat: 2
-  m_ColorFormat: 0
+  m_ColorFormat: 24
   m_MipMap: 0
   m_GenerateMips: 1
-  m_SRGB: 0
+  m_SRGB: 1
   m_UseDynamicScale: 0
   m_BindMS: 0
   m_TextureSettings:

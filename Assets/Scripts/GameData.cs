@@ -61,18 +61,11 @@ public class Get
     {
         return fetchObject("UI/Menus/PokemonMenu").GetComponent<PokemonData>();
     }
-    public MapEditor mapEditor
-    {
-        get
-        {
-            return fetchObject("MapEditor").GetComponent<MapEditor>();
-        }
-    }
+
 }
 
 public class Inputs
 {
-
     public static List<KeyCode> inputs = new List<KeyCode>(new KeyCode[]{
         KeyCode.UpArrow,
             KeyCode.DownArrow,
@@ -96,6 +89,7 @@ public class Inputs
     };
     public static bool pressed(string button){
         if (DebugConsole.isActive) return false;
+
         int index = Inputs.keyindices[button];
             if (Input.GetKeyDown(Inputs.inputs[index])) return true;
         else return false;
@@ -117,6 +111,10 @@ public class Inputs
         else return false;
 
     }
+}
+public class GameConstants{
+    public const int mapWidth = 400;
+    public const int mapHeight = 520;
 }
 //Class containing all the save data of the game.
 public class SaveData  {

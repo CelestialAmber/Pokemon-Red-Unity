@@ -135,20 +135,20 @@ public class itemdatabase : MonoBehaviour
     };
 	// Use this for initialization
 	void Start () {
-		
+        check1();
+        check2();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 
-			StartCoroutine (check1 ());
-			StartCoroutine (check2 ());
+			
 
 
 
 		}
-	IEnumerator check1(){
+	public void check1(){
 		for (int i = 0; i < items.Count; i++) {
                 if (System.Array.IndexOf(keyitems, items[i].name) > -1) {
                 items[i].isKeyItem = true;
@@ -156,11 +156,10 @@ public class itemdatabase : MonoBehaviour
 			
 
 		}
-        yield return null;
 	}
 
 
-	IEnumerator check2(){
+	public void check2(){
 		for (int i = 0; i < pcitems.Count; i++) {
                 if (System.Array.IndexOf(keyitems, pcitems[i].name) > -1)
                 {
@@ -168,7 +167,6 @@ public class itemdatabase : MonoBehaviour
                     
                 }
 		}
-        yield return null;
 	}
 
 	}

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 public class bag : MonoBehaviour  {
 	
 	public GameObject currentMenu;
@@ -33,6 +33,7 @@ public class bag : MonoBehaviour  {
 	public MainMenu moon;
 	public int keep;
     public int offscreenindexup, offscreenindexdown;
+    public UnityEvent onGetItem;
 
 	public bool withdrawing;
 
@@ -459,10 +460,11 @@ public IEnumerator AddItem(string name, int quantity){
 
 		ItemMode = 0;
 		currentMenu = itemwindow;
-        yield return null;	
+        onGetItem.Invoke();
+        yield return null;
 
 
-				
+       
 		}
 
 	//deposit

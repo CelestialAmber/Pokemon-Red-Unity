@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 public class pokemart : MonoBehaviour {
 	public GameObject currentMenu;
 	public GameObject cursor;
@@ -36,7 +36,7 @@ public class pokemart : MonoBehaviour {
 	public int keep;
     public int offscreenindexup, offscreenindexdown;
     public GameObject sellcontent, buycontent;
-
+    public UnityEvent onBuyItem;
 	public bool withdrawing;
 
 
@@ -496,6 +496,7 @@ public class pokemart : MonoBehaviour {
 
         ItemMode = 0;
         currentMenu = itemwindow;
+        onBuyItem.Invoke();
         yield return null;
 
 

@@ -31,8 +31,10 @@ public class Dialogue : MonoBehaviour {
 	public GameObject[] options;
 	public Player play;
     public CustomText[] buycoinstext;
+    MainMenu mainmenu;
     string laststring;
 	void Start(){
+        mainmenu = new Get().menu();
         subdialogue.SetActive(true);
 		finishedThePrompt = true;
 		Name = "RED";
@@ -141,7 +143,7 @@ public class Dialogue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (deactivated) {
+		if (deactivated && !Player.disabled) {
 			Player.disabled = true;
 
 		}
@@ -149,10 +151,10 @@ public class Dialogue : MonoBehaviour {
 		buycoinstext [1].text = SaveData.coins.ToString ();
 		yesnomenu.SetActive (!finishedThePrompt);
 		slotsmenu.SetActive (!finishedThePrompt);
-		if(taskType != 6){
+		if(taskType != 6 && yesnomenu.activeSelf){
 			yesnomenu.SetActive(false);
 		}
-		if(taskType != 7){
+        if(taskType != 7 && slotsmenu.activeSelf){
 			slotsmenu.SetActive(false);
 		}
 		if (!finishedThePrompt) {
@@ -184,7 +186,6 @@ public class Dialogue : MonoBehaviour {
 
 				cursor.transform.position = options [selectedOption].transform.position;
 
-				cursor.SetActive (true);
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
@@ -231,7 +232,9 @@ public class Dialogue : MonoBehaviour {
 
 				cursor.transform.position = options [selectedOption].transform.position;
 
-				cursor.SetActive (true);
+                if(!finishedWithTextOverall && !cursor.activeSelf){
+                    cursor.SetActive(true);
+                }
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
@@ -249,7 +252,7 @@ public class Dialogue : MonoBehaviour {
 				}
 			}
 
-			} else if(get.menu().currentmenu == null) {
+			} else if(finishedWithTextOverall && mainmenu.currentmenu == null && cursor.activeSelf) {
 				cursor.SetActive (false);
 			}
 		 

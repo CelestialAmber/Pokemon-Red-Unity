@@ -1017,23 +1017,18 @@ List of index of the party sprite for each Pokemon.
 
 public class PokemonDataJSON : MonoBehaviour
 {
+    public GameObject container;
      void Awake()
     {
+
+            //Disable the editing view when entering 
+            container.SetActive(false);
+
         FileStream file;
         StreamReader sr;
         EvolutionDictionary evolution = new EvolutionDictionary();
             file = new FileStream(Application.streamingAssetsPath + "/evolutiondata.json", FileMode.Open, FileAccess.Read);
-        if ((Application.streamingAssetsPath.Contains("://") || Application.streamingAssetsPath.Contains(":///")) && Serializer.wwwLoad)
-        {
-            using (WebClient client = new WebClient())
-            {
-                byte[] s = client.DownloadData(Application.streamingAssetsPath + "/evolutiondata.json");
-
-                sr = new StreamReader(new MemoryStream(s));
-                }
-
-        }
-        else sr = new StreamReader(file);
+        sr = new StreamReader(file);
         string evolutiondata = sr.ReadToEnd();
         evolution = JsonConvert.DeserializeObject<EvolutionDictionary>(evolutiondata);
         PokemonStats.evolution.Clear();
@@ -1043,16 +1038,7 @@ public class PokemonDataJSON : MonoBehaviour
         file.Close();
         BaseStatDictionary baseStat = new BaseStatDictionary();
         file = new FileStream(Application.streamingAssetsPath + "/basestatsdata.json", FileMode.Open, FileAccess.Read);
-        if ((Application.streamingAssetsPath.Contains("://") || Application.streamingAssetsPath.Contains(":///") ) && Serializer.wwwLoad)
-        {
-            using (WebClient client = new WebClient())
-            {
-                byte[] s = client.DownloadData(Application.streamingAssetsPath + "/basestatsdata.json");
-
-                sr = new StreamReader(new MemoryStream(s));
-            }
-        }
-        else sr = new StreamReader(file);
+       sr = new StreamReader(file);
         string basestatdata = sr.ReadToEnd();
         baseStat = JsonConvert.DeserializeObject<BaseStatDictionary>(basestatdata);
         PokemonStats.baseStats.Clear();
@@ -1063,16 +1049,7 @@ public class PokemonDataJSON : MonoBehaviour
         file.Close();
         LevelMovesDictionary levelmove = new LevelMovesDictionary();
         file = new FileStream(Application.streamingAssetsPath + "/levelmovesdata.json", FileMode.Open, FileAccess.Read);
-        if ((Application.streamingAssetsPath.Contains("://") || Application.streamingAssetsPath.Contains(":///") ) && Serializer.wwwLoad)
-        {
-            using (WebClient client = new WebClient())
-            {
-                byte[] s = client.DownloadData(Application.streamingAssetsPath + "/levelmovesdata.json");
-
-                sr = new StreamReader(new MemoryStream(s));
-            }
-        }
-        else sr = new StreamReader(file);
+        sr = new StreamReader(file);
         string levelmovesdata = sr.ReadToEnd();
         levelmove = JsonConvert.DeserializeObject<LevelMovesDictionary>(levelmovesdata);
         PokemonStats.levelmoves.Clear();
@@ -1083,16 +1060,7 @@ public class PokemonDataJSON : MonoBehaviour
         file.Close();
         TMLearnDictionary tMLearn = new TMLearnDictionary();
         file = new FileStream(Application.streamingAssetsPath + "/learnbytmdata.json", FileMode.Open, FileAccess.Read);
-        if ((Application.streamingAssetsPath.Contains("://") || Application.streamingAssetsPath.Contains(":///")  ) && Serializer.wwwLoad)
-        {
-            using (WebClient client = new WebClient())
-            {
-                byte[] s = client.DownloadData(Application.streamingAssetsPath + "/learnbytmdata.json");
-
-                sr = new StreamReader(new MemoryStream(s));
-            }
-        }
-        else sr = new StreamReader(file);
+        sr = new StreamReader(file);
         string tmlearndata = sr.ReadToEnd();
         tMLearn = JsonConvert.DeserializeObject<TMLearnDictionary>(tmlearndata);
         PokemonStats.learnbytm.Clear();

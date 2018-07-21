@@ -210,6 +210,14 @@ public class PokemonData : MonoBehaviour
     // Use this for initialization
     public void Initialize()
     {
+
+        if (party.Count == 0)
+        {
+            currentMenu = mainwindow;
+            moon.currentmenu = moon.thismenu;
+            this.gameObject.SetActive(false);
+            return;
+        }
         for (int i = 0; i < party.Count; i++)
         {
             party[i].SetExpToLevel();
@@ -281,6 +289,12 @@ public class PokemonData : MonoBehaviour
             }
 
         }
+        UpdateMenus();
+    }
+    public void UpdateSwitch(){
+       
+       
+        UpdateMenus();
     }
     public void UpdateStats1(){
         cursor.SetActive(false);
@@ -325,7 +339,7 @@ public class PokemonData : MonoBehaviour
                 monstatustext.text = "SLP";
                 break;
         }
-
+        UpdateMenus();
     }
     public void UpdateStats2()
     {
@@ -349,7 +363,42 @@ public class PokemonData : MonoBehaviour
         nextleveltext.text = (party[selectedMon].level < 100 ? "È" + (party[selectedMon].level + 1).ToString() : 100.ToString());
         int id = PokemonStats.MonToID(party[selectedMon].pokename);
         pokedexno2.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
+        UpdateMenus();
+    }
+    void UpdateMenus(){
+        menuSlots.Resize(currentMenu.transform.childCount);
+        menuSlots.Clear();
+        for (int i = 0; i < currentMenu.transform.childCount; i++)
+        {
 
+
+            menuSlots.Add(currentMenu.transform.GetChild(i).gameObject);
+        }
+        foreach (GameObject menu in allmenus)
+        {
+            if (menu != currentMenu)
+            {
+                menu.SetActive(false);
+            }
+            else
+            {
+
+                menu.SetActive(true);
+            }
+
+
+            if (menu == switchstats && (currentMenu == mainwindow))
+            {
+                menu.SetActive(false);
+
+            }
+            if (menu == mainwindow && (currentMenu == switchstats))
+            {
+                menu.SetActive(true);
+
+            }
+
+        }
     }
     void Update()
     {
@@ -363,29 +412,14 @@ public class PokemonData : MonoBehaviour
            
         }
 
-        if (party.Count == 0)
-        {
-            currentMenu = mainwindow;
-            moon.currentmenu = moon.thismenu;
-            this.gameObject.SetActive(false);
-            return;
-        }
 
 
         if (currentMenu == switchstats)
         {
-            menuSlots.Resize(currentMenu.transform.childCount);
-            menuSlots.Clear();
-            for (int i = 0; i < currentMenu.transform.childCount; i++)
-            {
-
-
-                menuSlots.Add(currentMenu.transform.GetChild(i).gameObject);
-            }
-
+            cursor.SetActive(true);
             cursor.transform.position = menuSlots[selectedOption].transform.position;
 
-            cursor.SetActive(true);
+           
 
             if (Inputs.pressed("down"))
             {
@@ -459,31 +493,7 @@ public class PokemonData : MonoBehaviour
 
 
         }
-        foreach (GameObject menu in allmenus)
-        {
-            if (menu != currentMenu)
-            {
-                menu.SetActive(false);
-            }
-            else
-            {
 
-                menu.SetActive(true);
-            }
-
-
-            if (menu == switchstats && (currentMenu == mainwindow))
-            {
-                menu.SetActive(false);
-
-            }
-            if (menu == mainwindow && (currentMenu == switchstats))
-            {
-                menu.SetActive(true);
-
-            }
-
-        }
         if (Inputs.pressed("b"))
         {
             if (currentMenu == mainwindow)
@@ -494,6 +504,10 @@ public class PokemonData : MonoBehaviour
                 this.gameObject.SetActive(false);
 
             }
+            if(currentMenu == switchstats){
+                UpdateMainMenu();
+                currentMenu = mainwindow;
+            }
         }
         if (Inputs.pressed("a"))
         {
@@ -503,6 +517,7 @@ public class PokemonData : MonoBehaviour
                 {
                     selectedMon = selectedOption;
                     selectedOption = 0;
+                    UpdateSwitch();
                     currentMenu = switchstats;
                 }
                 else
@@ -530,12 +545,14 @@ public class PokemonData : MonoBehaviour
 
                         switching = true;
                         selectedOption = selectedMon;
+                        UpdateMainMenu();
                         currentMenu = mainwindow;
 
                     }
                     if (selectedOption == 2)
                     {
                         selectedOption = selectedMon;
+                        UpdateMainMenu();
                         currentMenu = mainwindow;
 
                     }
@@ -562,6 +579,7 @@ public class PokemonData : MonoBehaviour
                     d.cantscroll = true;
                     d.displaysimmediate = true;
                     StartCoroutine(d.text("Choose a Pokemon."));
+                    UpdateMainMenu();
                     currentMenu = mainwindow;
 
                 }
@@ -571,67 +589,11 @@ public class PokemonData : MonoBehaviour
 
 
         }
+        UpdateMenus();
     }
     void UseMove()
     {
-        switch (MoveID)
-        {
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-                break;
-            case 7:
-                break;
-            case 8:
-                break;
-            case 9:
-                break;
-            case 10:
-                break;
-            case 11:
-                break;
-            case 12:
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
-            case 15:
-                break;
-            case 16:
-                break;
-            case 17:
-                break;
-            case 18:
-                break;
-            case 19:
-                break;
-            case 20:
-                break;
-            case 21:
-                break;
-            case 22:
-                break;
-            case 23:
-                break;
-            case 24:
-                break;
-
-                //etc
-
-
-
-
-        }
-
+        
 
 
 
