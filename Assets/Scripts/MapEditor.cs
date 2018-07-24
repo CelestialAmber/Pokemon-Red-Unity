@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using System.Text;
-using System.Net;
 using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -11,49 +10,6 @@ using System.Threading;
 #if (UNITY_EDITOR)
 using UnityEditor;
 #endif
-using System.Runtime.Serialization.Formatters.Binary;
-//Save/Loader for Tile Pool
-public class Serializer
-{
-    //Should test WWW loading code be enabled, or default to file loading?
-    public static bool wwwLoad = true;
-
-    public static T[,] Load2D<T>(string filename) where T : class
-    {
-
-
-        try
-        {
-           
-
-                using (Stream stream = File.OpenRead(filename))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    return formatter.Deserialize(stream) as T[,];
-                }
-
-        }
-        catch (Exception e)
-        {
-            Debug.Log(e.Message);
-        }
-
-        return default(T[,]);
-    }
-
-    public static void Save2D<T>(string filename, T[,] data) where T : class
-    {
-        using (Stream stream = File.OpenWrite(filename))
-        {
-            BinaryFormatter formatter = new BinaryFormatter();
-            formatter.Serialize(stream, data);
-        }
-    }
-
-
- 
-
-}
 
 //Properties of tile, including collision, and others
 public class Tile {
@@ -108,9 +64,7 @@ public class MapEditor : MonoBehaviour
     int currentTileIndex = 0;
     public GameObject template;
     public List<Tile> tilepool = new List<Tile>();
-    public string MapSaveName;
     public int currentMap;
-    bool hasDrawnGrid = false;
     public TilesetIndex tSetIndexes;
     public MapData[] maps = new MapData[0];
     public static Color[] colors = {
@@ -131,15 +85,21 @@ public class MapEditor : MonoBehaviour
                 go.transform.localPosition = snappos;
                 go.tag = tilepool[currentTileIndex].tag;
         go.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>(tilepool[currentTileIndex].path.Replace("Assets/Resources/", "").Replace(".png", ""))[0];
-        if (go.tag == "TallGrass")
-        {
+       EncounterInfo encounterInfo = go.GetComponent<EncounterTile>().info;
+        switch(go.tag){
+            case "TallGrass":
+                go.transform.Translate(0, 0, -1);
+                encounterInfo.isWater = false;
+                break;
+            case "Water":
+                go.transform.Translate(0, 0, -1);
+                encounterInfo.isWater = true;
+                break;
+            default:
+                DestroyImmediate(go.GetComponent<EncounterTile>());
+                break;
+        }
 
-            go.transform.Translate(0, 0, -1);
-        }
-        else
-        {
-            DestroyImmediate(go.GetComponent<TallGrass>());
-        }
                 if (!tilepool[currentTileIndex].isAnimated)
                 {
             DestroyImmediate(go.GetComponent<AnimatedTile>());
@@ -149,9 +109,9 @@ public class MapEditor : MonoBehaviour
     }
     public void SpawnMap(){
         //Spawn the map with the current index stored in currentMap
-        GameObject mapContainer = new GameObject("Map " + currentMap);
-        mapContainer.transform.SetParent(container.transform);
-        mapContainer.transform.position = new Vector2(GameConstants.mapWidth/2, GameConstants.mapHeight/2);
+        GameObject maPContainer = new GameObject("Map " + currentMap);
+        maPContainer.transform.SetParent(container.transform);
+        maPContainer.transform.position = new Vector2(GameConstants.mapWidth/2, GameConstants.mapHeight/2);
         MapData map  = maps[currentMap];
         string indicelist;
         string i1, i2, i3, i4;
@@ -174,7 +134,7 @@ public class MapEditor : MonoBehaviour
             for (int j = 0; j < 4; j++){
                 currentTileIndex = indices[j];
                 //account for the map's dimensions to center it with the parent's transform
-                SpawnTile(new Vector2(-map.width + 2*(i % map.width)  + j % 2, map.height -2 * (i / map.width) - Mathf.FloorToInt((float)j/4 + 0.51f)),mapContainer);
+                SpawnTile(new Vector2(-map.width + 2*(i % map.width)  + j % 2, map.height -2 * (i / map.width) - Mathf.FloorToInt((float)j/4 + 0.51f)),maPContainer);
             }
         }
 
@@ -215,8 +175,8 @@ public override void OnInspectorGUI()
 
             int index = 0;
             //look into each map for their tiles;
-            foreach(Transform mapChild in me.container.transform ){
-                foreach (Transform child in mapChild)
+            foreach(Transform mapchild in me.container.transform ){
+                foreach (Transform child in mapchild)
                 {
                     foundtiles.Add(child.gameObject);
                 }
@@ -225,54 +185,65 @@ public override void OnInspectorGUI()
             foreach(GameObject child in foundtiles){
                 int x = (int)child.transform.position.x;
                 int y = (int)child.transform.position.y;
-                if (loadedTiles[x, y] == null)
-                    loadedTiles[x,y] = new GridTile(null, null, null, false, 0, 0, "", false, false, false, 1, "");
+                    loadedTiles[x,y] = new GridTile(null, null, null, false, 0, 0, "", false, false, false, 1, "",false,false);
+                
+                GridTile gridTile = loadedTiles[x, y];
                 string tempname;
                 tempname = child.GetComponent<SpriteRenderer>().sprite.name;
                 if (tempname.Contains("_"))
                 {
                     tempname = tempname.Substring(0, tempname.IndexOf('_'));
                 }
-                loadedTiles[x, y].mainSprite = tempname;
-                loadedTiles[x, y].tag = child.tag;
-                if (loadedTiles[x, y].tag.Contains("Wall")) loadedTiles[x, y].isWall = true;
-                loadedTiles[x, y].isWarp = child.GetComponent<TileWarp>() ? true : false;
-                loadedTiles[x, y].isAnimated = child.GetComponent<AnimatedTile>() ? true : false;
-                if (loadedTiles[x, y].isAnimated){
+                gridTile.mainSprite = tempname;
+                gridTile.tag = child.tag;
+                if (gridTile.tag.Contains("Wall")) loadedTiles[x, y].isWall = true;
+                gridTile.isWarp = child.GetComponent<TileWarp>();
+                gridTile.isAnimated = child.GetComponent<AnimatedTile>();
+                gridTile.isInteractable = child.GetComponent<TileProperties>() ;
+                gridTile.tileWarp = child.GetComponent<TileWarp>() ? child.GetComponent<TileWarp>().info : null;
+                gridTile.tiledata = child.GetComponent<TileProperties>() ? child.GetComponent<TileProperties>().data : null;
+                if (gridTile.isInteractable)
+                {
+                    gridTile.hasItem = gridTile.tiledata.hasItem;
+                    gridTile.hasItemBall = gridTile.tiledata.hasItemBall;
+                }
+                if (gridTile.isAnimated){
                     tempname = AssetDatabase.GetAssetPath(child.GetComponent<SpriteRenderer>().sprite);
                     if (tempname.Contains("_"))
                     {
                         tempname = tempname.Substring(0, tempname.IndexOf('_'));
                     }
-                    Sprite[] tiles = Resources.LoadAll<Sprite>(tempname.Replace("Assets/Resources/", "").Replace(".png",""));
-                    loadedTiles[x, y].frames = tiles.Length;
+                    gridTile.frames = Resources.LoadAll<Sprite>(tempname.Replace("Assets/Resources/", "").Replace(".png","")).Length;
                    
                 }
 
              
-                TallGrass grass = null;
-                if (child.GetComponent<TallGrass>())
+                EncounterTile encounterTile = null;
+                if (child.GetComponent<EncounterTile>())
                 {
-                    grass = child.GetComponent<TallGrass>();
+                    encounterTile = child.GetComponent<EncounterTile>();
                 }
 
 
-                if (grass != null)
+                if (encounterTile != null)
                 {
-                    loadedTiles[x, y].hasGrass = true;
-                    loadedTiles[x, y].tallGrass = grass.info;
+                    gridTile.encounterInfo = encounterTile.info;
+                    switch(child.tag){
+                        case "TallGrass":
+                            gridTile.hasGrass = true;
+                            break;
+                        case "Water":
+                            gridTile.isWater = true;
+                            break;
+                    }
+
 
                    }
 
-                else
-                {
-                    loadedTiles[x, y].tallGrass = null;
-                    loadedTiles[x, y].hasGrass = false;
-                }
-                loadedTiles[x, y].tileWarp = child.GetComponent<TileWarp>() ? child.GetComponent<TileWarp>().info : null;
-                loadedTiles[x, y].tiledata = child.GetComponent<itemData>() ? child.GetComponent<itemData>().data : null;
-                loadedTiles[x, y].posx = x;
-                loadedTiles[x, y].posy = y;
+
+
+                gridTile.posx = x;
+                gridTile.posy = y;        
                 index++;
             }
             Serializer.Save2D<GridTile>(Application.streamingAssetsPath + "/map.txt",loadedTiles);
@@ -280,33 +251,39 @@ public override void OnInspectorGUI()
         }
         if(GUILayout.Button("Save Empty map to file")){
             GridTile[,] nullMap = new GridTile[GameConstants.mapWidth, GameConstants.mapHeight];
-            //for (int x = 0; x < GameConstants.mapWidth; x++){
-            //    for (int y = 0; y < GameConstants.mapHeight; y++){
-            //        nullMap[x, y] = null;
-            //    }
-            //}
             Serializer.Save2D<GridTile>(Application.streamingAssetsPath + "/map.txt",nullMap);
+        }
+        if (GUILayout.Button("Load editor data"))
+        {
+           
+            me.tSetIndexes = Serializer.JSONtoObject<TilesetIndex>("blockIndexData.json");
+            me.maps = Serializer.JSONtoObject<MapData[]>("romMapData.json");
+            me.tilepool = Serializer.JSONtoObject<List<Tile>>("tilePoolData.json");
+  
         }
         if (GUILayout.Button("Add all tiles"))
         {
             me.tilepool.Clear();
-            me.tilepool.Resize(866);
-            foreach(Texture2D tile in Resources.LoadAll<Texture2D>("interiortiles/")){
+            me.tilepool = new List<Tile>(866);
+            foreach (Texture2D tile in Resources.LoadAll<Texture2D>("interiortiles/"))
+            {
                 string path = AssetDatabase.GetAssetPath(tile);
                 string tag = "Untagged";
                 bool isAnimated = false;
-                if(path.Contains("/Collision")){
+                if (path.Contains("/Collision"))
+                {
                     tag = "WallObject";
                 }
                 if (path.Contains("/TallGrass"))
                 {
                     tag = "TallGrass";
                 }
-                if(path.Contains("/Ledges")){
+                if (path.Contains("/Ledges"))
+                {
                     if (path.Contains("/Left"))
                     {
                         tag = "LedgeLeft";
-                    }  
+                    }
                     if (path.Contains("/Right"))
                     {
                         tag = "LedgeRight";
@@ -320,44 +297,9 @@ public override void OnInspectorGUI()
                 int index = int.Parse(thisIndex.Replace("tile", ""));
                 if (tile.width > 16 || tile.height > 16) isAnimated = true;
                 me.tilepool[index] = new Tile(AssetDatabase.GetAssetPath(tile), tag, isAnimated);
-                
-                    
+
+
             }
-        }
-        if(GUILayout.Button("Save tile pool to file")){
-            string data = JsonConvert.SerializeObject(me.tilepool);
-            data = JValue.Parse(data).ToString(Formatting.Indented);
-            File.WriteAllText(Application.streamingAssetsPath + "/tilePoolData.json", data);
-        }
-        if (GUILayout.Button("Load tile pool from file"))
-        {
-            FileStream file;
-            StreamReader streamReader;
-            file = new FileStream(Application.streamingAssetsPath + "/tilePoolData.json", FileMode.Open, FileAccess.Read);
-            streamReader = new StreamReader(file);
-            string data = streamReader.ReadToEnd();
-            me.tilepool = JsonConvert.DeserializeObject<List<Tile>>(data);
-            file.Close();
-        
-        }
-
-
-        if (GUILayout.Button("Load data"))
-        {
-            FileStream file;
-            StreamReader streamReader;
-            file = new FileStream(Application.streamingAssetsPath + "/blockIndexData.json", FileMode.Open, FileAccess.Read);
-            streamReader = new StreamReader(file);
-            string data = streamReader.ReadToEnd();
-            me.tSetIndexes = JsonConvert.DeserializeObject<TilesetIndex>(data);
-            file.Close();
-            file = new FileStream(Application.streamingAssetsPath + "/romMapData.json", FileMode.Open, FileAccess.Read);
-            streamReader = new StreamReader(file);
-            data = streamReader.ReadToEnd();
-            me.maps = JsonConvert.DeserializeObject<MapData[]>(data);
-            file.Close();
-            Debug.Log(me.tSetIndexes.indices.Length);
-  
         }
         if(GUILayout.Button("Spawn map")){
             

@@ -6,19 +6,30 @@ public class shopitemslotinfo : MonoBehaviour {
 	public CustomText slotNameText, slotPriceText;
 	public string Name;
 	public int intPrice;
+    public SlotMode mode;
 	// Use this for initialization
 	void Start () {
 
 	}
     void Awake()
     {
-        slotNameText = transform.GetChild(1).GetComponent<CustomText>();
-        slotPriceText = transform.GetChild(2).GetComponent<CustomText>();
+        slotNameText = transform.GetChild(0).GetComponent<CustomText>();
+        slotPriceText = transform.GetChild(1).GetComponent<CustomText>();
     }
 	// Update is called once per frame
 	void Update () {
-
-		slotNameText.text = Name;
+        switch (mode)
+        {
+            case SlotMode.Item:
+                slotNameText.text = Name;
+                break;
+            case SlotMode.Empty:
+                slotNameText.text = "";
+                break;
+            case SlotMode.Cancel:
+                slotNameText.text = "CANCEL";
+                break;
+        }
 		if (Name == "POKE BALL") {
 			intPrice = 200;
 
@@ -95,7 +106,9 @@ public class shopitemslotinfo : MonoBehaviour {
 			intPrice = 1500;
 
 		}
-		slotPriceText.text = "$" + intPrice.ToString();
+        if (mode == SlotMode.Item)
+            slotPriceText.text = "$" + intPrice.ToString();
+        else slotPriceText.text = "";
 
 	}
 }

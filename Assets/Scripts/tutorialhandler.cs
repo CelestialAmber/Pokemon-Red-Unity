@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class tutorialhandler : MonoBehaviour {
 	public Dialogue mylog;
-	public GameObject cursor, rednamemenu, garynamemenu,nameselectionmenu, currentmenu, oak, gary, red;
+	public GameObject  rednamemenu, garynamemenu,nameselectionmenu, currentmenu, oak, gary, red;
+    public Cursor cursor;
 	public Animator tutanim;
 	public int selectedOption;
-	public GameObject[] menuSlots;
 	public GameObject[] allmenus;
 	public GameObject overworld, white;
 	public bool givingRedAName, givingGaryAName;
@@ -25,33 +25,19 @@ public class tutorialhandler : MonoBehaviour {
 		if (currentmenu == null && currentmenu != nameselectionmenu) {
 			cursor.SetActive (false);
 		} else {
-			menuSlots = new GameObject[currentmenu.transform.childCount];
-		
-			for (int i = 0; i < currentmenu.transform.childCount; i++) {
-				if (i == 4) {
-					break;
-				}
-
-				menuSlots [i] = currentmenu.transform.GetChild (i).gameObject;
-			}
-			cursor.transform.position = menuSlots [selectedOption].transform.position;
+            cursor.SetPosition(8,120 - 16 * selectedOption);
 		
 			cursor.SetActive (true);
 		
             if (Inputs.pressed("down")) {
 				selectedOption++;
+                MathE.Clamp(ref selectedOption, 0, 3);
 			}
             if (Inputs.pressed("up")) {
 				selectedOption--;
+                MathE.Clamp(ref selectedOption, 0, 3);
 			}
-			if (selectedOption < 0) {
-				selectedOption = 0;
-
-			}
-			if (selectedOption == menuSlots.Length) {
-				selectedOption = menuSlots.Length - 1;
-
-			}
+	
 		}
 			foreach (GameObject menu in allmenus) {
 				if (menu != currentmenu) {
@@ -73,14 +59,14 @@ public class tutorialhandler : MonoBehaviour {
 			}
 			if (currentmenu == rednamemenu && selectedOption == 	1) {
 				currentmenu = null;
-				Dialogue.Name = "RED";
+                SaveData.playerName = "RED";
 				tutanim.SetBool ("fourthpass", true);
 				mylog.enabled = true;
 				givingRedAName = false;
 			}
 			if (currentmenu == rednamemenu && selectedOption == 	2) {
 				currentmenu = null;
-                Dialogue.Name = "ASH";
+                SaveData.playerName = "ASH";
 				tutanim.SetBool ("fourthpass", true);
 				mylog.enabled = true;
 				givingRedAName = false;
@@ -88,7 +74,7 @@ public class tutorialhandler : MonoBehaviour {
 			}
 			if (currentmenu == rednamemenu && selectedOption == 	3) {
 				currentmenu = null;
-                Dialogue.Name = "JACK";
+                SaveData.playerName = "JACK";
 				tutanim.SetBool ("fourthpass", true);
 				mylog.enabled = true;
 				givingRedAName = false;
@@ -168,7 +154,7 @@ public class tutorialhandler : MonoBehaviour {
 	public IEnumerator FourthOakDialogue(){
 
 		yield return StartCoroutine(mylog.text ("Right! So your"));
-        yield return StartCoroutine(mylog.line ("name is " + Dialogue.Name + "!"));
+        yield return StartCoroutine(mylog.line ("name is " + SaveData.playerName + "!"));
 		yield return StartCoroutine(mylog.done ());
 		tutanim.SetBool ("fifthpass", true);
 
@@ -193,13 +179,13 @@ public class tutorialhandler : MonoBehaviour {
 
 		yield return StartCoroutine(mylog.text ("That's right! I"));
 		yield return StartCoroutine(mylog.line ("remember now! His",0));
-        yield return StartCoroutine(mylog.cont ("name is " + Dialogue.opponentName + "!"));
+        yield return StartCoroutine(mylog.cont ("name is " + SaveData.rivalName + "!"));
 		yield return StartCoroutine(mylog.done());
 		tutanim.SetBool ("eighthpass", true);
 	}
 	public IEnumerator SeventhOakDialogue(){
 
-        yield return StartCoroutine(mylog.text (Dialogue.Name + "!",1));
+        yield return StartCoroutine(mylog.text (SaveData.playerName + "!",1));
 		yield return StartCoroutine(mylog.para ("Your very own"));
 		yield return StartCoroutine(mylog.line ("POKeMON legend is",0));
 		yield return StartCoroutine(mylog.cont("about to unfold!",1));

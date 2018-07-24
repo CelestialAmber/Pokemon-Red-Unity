@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class title : MonoBehaviour {
 	public bool HasData;
 	public GameObject titlemenu, startmenu;
-	public GameObject nodatamenu, datamenu, cursor, continuemenu, options;
+	public GameObject nodatamenu, datamenu, continuemenu, options;
+    public Cursor cursor;
 	public GameObject[] startmenus;
 	public GameObject currentMenu;
 	public GameObject[] menuSlots;

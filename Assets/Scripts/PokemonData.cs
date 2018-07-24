@@ -169,10 +169,9 @@ public class PokemonData : MonoBehaviour
     public GameObject mainwindow, switchstats, stats1, stats2;
     public GameObject currentMenu;
     public GameObject[] allmenus;
-    public List<GameObject> menuSlots, pokemenuslots, rpkmn;
-    public List<GameObject> partyslots, wrpkmn;
+    public List<GameObject> partyslots;
     public int selectedOption;
-    public GameObject cursor;
+    public Cursor cursor;
     public int selectedMon;
     public int numberofPokemon;
     public int MoveID;
@@ -224,7 +223,7 @@ public class PokemonData : MonoBehaviour
             party[i].RecalculateStats();
             party[i].UpdateMovesToLevel();
             party[i].ownerid = SaveData.trainerID;
-            party[i].owner = Dialogue.Name;
+            party[i].owner = SaveData.playerName;
             int pixelCount = Mathf.RoundToInt((float)party[i].currenthp * 48 / (float)party[i].hp);
             healthbars[i].fillAmount = (float)pixelCount / 48;
             UpdateMainMenu();
@@ -267,7 +266,6 @@ public class PokemonData : MonoBehaviour
 
         for (int l = 0; l < 6; l++)
         {
-            pokemenuslots[l].SetActive(false);
             partyslots[l].SetActive(false);
         }
         for (int i = 0; i < party.Count; i++)
@@ -276,16 +274,11 @@ public class PokemonData : MonoBehaviour
             {
 
                 numberofPokemon = 0;
-                rpkmn.Clear();
-                wrpkmn.Clear();
             }
             if (party[i].pokename != "")
             {
                 partyslots[i].SetActive(true);
-                pokemenuslots[i].SetActive(true);
                 numberofPokemon++;
-                rpkmn.Add(pokemenuslots[i]);
-                wrpkmn.Add(partyslots[i]);
             }
 
         }
@@ -293,7 +286,7 @@ public class PokemonData : MonoBehaviour
     }
     public void UpdateSwitch(){
        
-       
+        cursor.SetPosition(96, 40 - 16 * selectedOption);
         UpdateMenus();
     }
     public void UpdateStats1(){
@@ -366,14 +359,6 @@ public class PokemonData : MonoBehaviour
         UpdateMenus();
     }
     void UpdateMenus(){
-        menuSlots.Resize(currentMenu.transform.childCount);
-        menuSlots.Clear();
-        for (int i = 0; i < currentMenu.transform.childCount; i++)
-        {
-
-
-            menuSlots.Add(currentMenu.transform.GetChild(i).gameObject);
-        }
         foreach (GameObject menu in allmenus)
         {
             if (menu != currentMenu)
@@ -402,42 +387,23 @@ public class PokemonData : MonoBehaviour
     }
     void Update()
     {
-        if (currentMenu == stats1)
-        {
-           
-
-        }
-        if (currentMenu == stats2)
-        {
-           
-        }
-
-
-
         if (currentMenu == switchstats)
         {
             cursor.SetActive(true);
-            cursor.transform.position = menuSlots[selectedOption].transform.position;
 
            
 
             if (Inputs.pressed("down"))
             {
                 selectedOption++;
+                MathE.Clamp(ref selectedOption, 0, 2);
+                cursor.SetPosition(96, 40 - 16 * selectedOption);
             }
             if (Inputs.pressed("up"))
             {
                 selectedOption--;
-            }
-            if (selectedOption < 0)
-            {
-                selectedOption = 0;
-
-            }
-            if (selectedOption == menuSlots.Count)
-            {
-                selectedOption = menuSlots.Count - 1;
-
+                MathE.Clamp(ref selectedOption, 0, 2);
+                cursor.SetPosition(96, 40 - 16 * selectedOption);
             }
 
 
@@ -468,27 +434,19 @@ public class PokemonData : MonoBehaviour
             }
 
             cursor.SetActive(true);
-            cursor.transform.position = pokemenuslots[selectedOption].transform.position;
+            cursor.SetPosition(0,128 - 16 * selectedOption);
 
 
 
             if (Inputs.pressed("down"))
             {
                 selectedOption++;
+                MathE.Clamp(ref selectedOption, 0, numberofPokemon);
             }
             if (Inputs.pressed("up"))
             {
                 selectedOption--;
-            }
-            if (selectedOption < 0)
-            {
-                selectedOption = 0;
-
-            }
-            if (selectedOption == numberofPokemon)
-            {
-                selectedOption = numberofPokemon - 1;
-
+                MathE.Clamp(ref selectedOption, 0, numberofPokemon);
             }
 
 
@@ -661,7 +619,7 @@ public class PokemonDebugEditor : Editor
             {
                 me.party[i].currenthp /= 2;
                 me.party[i].ownerid = SaveData.trainerID;
-                me.party[i].owner = Dialogue.Name;
+                me.party[i].owner = SaveData.playerName;
             }
             me.UpdateScreen();
         }

@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class bag : MonoBehaviour  {
+public class Bag : MonoBehaviour  {
 	
 	public GameObject currentMenu;
-	public GameObject cursor;
-	public GameObject usetossmenu, itemwindow,   quantitymenu, content;
-	public GameObject[] menuSlots, itemSelectSlots;
+	public Cursor cursor;
+	public GameObject usetossmenu, itemwindow,   quantitymenu;
 	public Dialogue mylog;
 	public Player play;
 	public int selectedOption;
@@ -17,10 +16,9 @@ public class bag : MonoBehaviour  {
 	//1 is withdraw;
 	//2 is deposit;
 	//3 is toss;
-	public List<GameObject> Items = new List<GameObject>(21);
-	public itemdatabase id;
+	public List<GameObject> Items = new List<GameObject>(4);
+	public Items id;
 	public int currentBagPosition;
-	public GameObject cancel;
 	public int selectBag;
 	public int amountToTask;
 	public bool didFirstRunthrough;
@@ -59,28 +57,28 @@ public class bag : MonoBehaviour  {
 	}
     public void UpdateBagScreen(){
 
-        foreach (GameObject slot in Items)
+        for (int i = 0; i < 4; i++)
         {
-            slot.SetActive(false);
-        }
-        for (int i = 0; i < id.items.Count; i++)
-        {
-            Items[i].SetActive(true);
-            Items[i].GetComponent<itemslotinformation>().Name = id.items[i].name;
-            Items[i].GetComponent<itemslotinformation>().intquantity = id.items[i].quantity;
-            Items[i].GetComponent<itemslotinformation>().isKeyItem = id.items[i].isKeyItem;
-        }
-        Items[20].SetActive(true);
+            int currentItem = offscreenindexup + 1 + i;
+            if (currentItem > offscreenindexup && currentItem < id.items.Count)
+            {
+                Items[i].GetComponent<itemslotinformation>().mode = SlotMode.Item;
+                Items[i].GetComponent<itemslotinformation>().Name = id.items[currentItem].name;
+                Items[i].GetComponent<itemslotinformation>().intquantity = id.items[currentItem].quantity;
+                Items[i].GetComponent<itemslotinformation>().isKeyItem = id.items[currentItem].isKeyItem;
+            }else if(currentItem == id.items.Count){
+                Items[i].GetComponent<itemslotinformation>().mode = SlotMode.Cancel;
+                 
+            }else
+            {
+                Items[i].GetComponent<itemslotinformation>().mode = SlotMode.Empty;
 
-        itemSelectSlots = new GameObject[id.items.Count + 1];
-
-        for (int i = 0; i < id.items.Count; i++)
-        {
-
-            itemSelectSlots[i] = Items[i].transform.GetChild(0).gameObject;
+            }
         }
-        itemSelectSlots[itemSelectSlots.Length - 1] = Items[20].transform.GetChild(0).gameObject;
-        content.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 16 * (offscreenindexup + 1));
+        cursor.SetPosition(40,108 - 16 * (currentBagPosition - offscreenindexup - 1));
+    }
+    void UpdateUseTossScreen(){
+        cursor.SetPosition(112, 72 - 16 * selectedOption);
     }
 		
 	
@@ -99,14 +97,14 @@ public class bag : MonoBehaviour  {
             switch (play.walkSurfBikeState)
             {
                 case 0:
-                    yield return StartCoroutine(mylog.text(Dialogue.Name + " got on the"));
+                    yield return StartCoroutine(mylog.text(SaveData.playerName + " got on the"));
                     yield return StartCoroutine(mylog.line("BICYCLE!"));
                     yield return StartCoroutine(mylog.done());
                     play.walkSurfBikeState = 1;
                     break;
                 case 1:
 
-                    yield return StartCoroutine(mylog.text(Dialogue.Name + " got off"));
+                    yield return StartCoroutine(mylog.text(SaveData.playerName + " got off"));
                     yield return StartCoroutine(mylog.line("the BICYCLE."));
                     yield return StartCoroutine(mylog.done());
                     play.walkSurfBikeState = 0;
@@ -167,65 +165,39 @@ public class bag : MonoBehaviour  {
             if (Inputs.pressed("down"))
             {
                 currentBagPosition++;
-                if (currentBagPosition == offscreenindexdown && offscreenindexdown != id.items.Count + 1)
+
+                if (currentBagPosition == offscreenindexdown && currentBagPosition <= id.items.Count && id.items.Count > 3)
                 {
                     offscreenindexup++;
                     offscreenindexdown++;
-                    content.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 16 * (offscreenindexup + 1));
                 }
+                MathE.Clamp(ref currentBagPosition, 0, id.items.Count);
+                UpdateBagScreen();
+               
             }
             if (Inputs.pressed("up"))
             {
                 currentBagPosition--;
+
                 if (currentBagPosition == offscreenindexup && offscreenindexup > -1)
                 {
                     offscreenindexup--;
                     offscreenindexdown--;
-                    content.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 16 * (offscreenindexup + 1));
                 }
+                MathE.Clamp(ref currentBagPosition, 0, id.items.Count);
+                UpdateBagScreen();
+               
 
             }
-            if (currentBagPosition < 0)
-            {
+           
 
-                currentBagPosition = 0;
-                if (offscreenindexdown < 0)
-                {
-
-
-                }
-
-
-
-            }
-            if (currentBagPosition == id.items.Count + 1)
-            {
-
-                currentBagPosition = id.items.Count;
-
-                if (offscreenindexdown == id.items.Count + 1)
-                {
-
-                }
-
-            }
-            if (currentBagPosition < 0) currentBagPosition = 0;
             if (!didFirstRunthrough)
             {
                 UpdateBagScreen();
-              
-
-
-
-
                 didFirstRunthrough = true;
                
             }
-            if (didFirstRunthrough)
-            {
-                cursor.transform.position = itemSelectSlots[currentBagPosition].transform.position;
-            }
-			cursor.SetActive (true);
+			
 
 			if (currentBagPosition != id.items.Count) {
 				maximumItem = id.items [currentBagPosition].quantity;
@@ -239,32 +211,20 @@ public class bag : MonoBehaviour  {
 		if (currentMenu == null && (currentMenu != quantitymenu || currentMenu != itemwindow)) {
 			
 		} else {
-			menuSlots = new GameObject[currentMenu.transform.childCount];
-
-			for (int i = 0; i < currentMenu.transform.childCount; i++) {
-				 
-
-				menuSlots [i] = currentMenu.transform.GetChild (i).gameObject;
-			}
             if (currentMenu == usetossmenu && mylog.finishedCurrentTask) {
-				cursor.transform.position = menuSlots [selectedOption].transform.position;
-
-				cursor.SetActive (true);
+				
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
+                    MathE.Clamp(ref selectedOption, 0, 1);
+                    UpdateUseTossScreen();
 				}
                 if (Inputs.pressed("up")) {
 					selectedOption--;
+                    MathE.Clamp(ref selectedOption, 0, 1);
+                    UpdateUseTossScreen();
 				}
-				if (selectedOption < 0) {
-					selectedOption = 0;
-
-				}
-				if (selectedOption == menuSlots.Length) {
-					selectedOption = menuSlots.Length - 1;
-
-				}
+				
 			}
 		
 		}
@@ -272,7 +232,7 @@ public class bag : MonoBehaviour  {
 			if (selectBag == -1) {
 				selectBag = currentBagPosition;
 			} else {
-                //our bag
+                //our Bag
                 Item item = id.items[selectBag];
                 id.items[selectBag] = id.items[currentBagPosition];
                 id.items[currentBagPosition] = item;
@@ -304,6 +264,8 @@ public class bag : MonoBehaviour  {
 						} else {
 							amountToTask = 1;
 							usetossmenu.SetActive (true);
+                            UpdateUseTossScreen();
+                            cursor.SetActive(true);
 							currentMenu = usetossmenu;
 
 
@@ -357,17 +319,18 @@ public class bag : MonoBehaviour  {
 				
 						if (ItemMode == 2) {
 						
-							if (!Items [currentBagPosition].GetComponent<itemslotinformation> ().isKeyItem) {
+							if (!id.items[currentBagPosition].isKeyItem) {
                                 yield return StartCoroutine(mylog.text("Is it OK to toss "));
-                                yield return StartCoroutine(mylog.line(Items[currentBagPosition].GetComponent<itemslotinformation>().Name + "?"));
+                                yield return StartCoroutine(mylog.line(id.items[currentBagPosition].name + "?"));
                                 yield return StartCoroutine(mylog.prompt());
                                 if(mylog.selectedOption == 0){
-                                    yield return StartCoroutine(mylog.text("Threw away " + Items[currentBagPosition].GetComponent<itemslotinformation>().Name + "."));
+                                    yield return StartCoroutine(mylog.text("Threw away " + id.items[currentBagPosition].name + "."));
                                     yield return StartCoroutine(mylog.done());
                                     StartCoroutine(TossItem());
 
                                 }else{
                                     mylog.Deactivate();
+                                    UpdateBagScreen();
                                     currentMenu = itemwindow;
                                 }
 								
@@ -439,33 +402,6 @@ public class bag : MonoBehaviour  {
 	}
 
 
-public IEnumerator AddItem(string name, int quantity){
-
-		alreadyInBag = false;
-
-        Item inbagItem = new Item("", 0);
-        foreach (Item item in id.items)
-        {
-            if (item.name == name)
-            {
-                inbagItem = item;
-                alreadyInBag = true;
-                break;
-            }
-
-        }
-        if (alreadyInBag) id.items[id.items.IndexOf(inbagItem)].quantity += amountToTask;
-        else if (id.items.Count < 20) id.items.Add(new Item(name, quantity));
-
-
-		ItemMode = 0;
-		currentMenu = itemwindow;
-        onGetItem.Invoke();
-        yield return null;
-
-
-       
-		}
 
 	//deposit
 

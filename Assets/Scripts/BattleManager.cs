@@ -58,7 +58,7 @@ public class BattleManager : MonoBehaviour {
 	public GameObject currentmenu;
 	public GameObject battlemenu, movesmenu;
 	public GameObject[] allmenus;
-	public GameObject cursor;
+	public Cursor cursor;
 	public GameObject[] menuSlots;
 	public int selectedOption;
 	public int currentLoadedMon;

@@ -11,7 +11,7 @@ public class Pokedex : MonoBehaviour
     public GameObject entriescontainer;
     public List<GameObject> entries;
     public Get get = new Get();
-    public GameObject cursor;
+    public Cursor cursor;
     public CustomText seentext, owntext;
     public int selectedSlot, topSlotIndex;
     public bool selectingMon;
@@ -74,7 +74,7 @@ public class Pokedex : MonoBehaviour
     {
         if (!selectingMon)
             cursor.GetComponent<RectTransform>().anchoredPosition = new Vector2(-20.1f, -3.2f - 1 * (selectedSlot));
-        if(! cursor.activeSelf)
+        if(! cursor.isActive)
         cursor.SetActive(true);
         if (get.Bio().displayingbio) cursor.SetActive(false);
         if (get.menu().currentmenu == get.menu().pokedexmenu)
@@ -91,7 +91,7 @@ public class Pokedex : MonoBehaviour
                     get.menu().donewaiting = false;
                     get.menu().currentmenu = get.menu().thismenu;
 
-                    transform.GetChild(0).gameObject.SetActive(false);
+                    gameObject.SetActive(false);
                 }
             }
             if (Inputs.pressed("a") && !get.Bio().displayingbio)

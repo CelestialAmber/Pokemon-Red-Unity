@@ -23,12 +23,11 @@ public class Dialogue : MonoBehaviour {
 	public Image box;
 	public bool finishedThePrompt;
 	public Image theindicator;
-	public GameObject cursor;
+	public Cursor cursor;
 	public int selectedOption;
     public bool displayimmediatenoscroll;
 	public Slots lots;
 	public GameObject yesnomenu, slotsmenu, buycoinsmenu;
-	public GameObject[] options;
 	public Player play;
     public CustomText[] buycoinstext;
     MainMenu mainmenu;
@@ -163,7 +162,7 @@ public class Dialogue : MonoBehaviour {
 					finishedThePrompt = true;
 					StopAllCoroutines ();
 					dialoguetext.text = "";
-
+                    cursor.SetActive(false);
 					finishedCurrentTask = true;
 				}
                 if (Inputs.pressed("b")) {
@@ -172,35 +171,24 @@ public class Dialogue : MonoBehaviour {
 
 					play.WaitToInteract ();
 					dialoguetext.text = "";
+                    cursor.SetActive(false);
 					finishedThePrompt = true;
 					finishedCurrentTask = true;
 
 				}
-				options = new GameObject[yesnomenu.transform.childCount];
 
-				for (int i = 0; i < yesnomenu.transform.childCount; i++) {
-
-
-					options [i] = yesnomenu.transform.GetChild (i).gameObject;
-				}
-
-				cursor.transform.position = options [selectedOption].transform.position;
+				cursor.SetPosition(120, 72 - 16 * selectedOption);
 
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
-				}
+                    MathE.Clamp(ref selectedOption, 0, 1);
+                }
                 if (Inputs.pressed("up")) {
 					selectedOption--;
+                    MathE.Clamp(ref selectedOption, 0, 1);
 				}
-				if (selectedOption < 0) {
-					selectedOption = 0;
-
-				}
-				if (selectedOption == options.Length) {
-					selectedOption = options.Length - 1;
-
-				}
+				
 			}
 			if (taskType == 7) {
                 if (Inputs.pressed("a")) {
@@ -222,39 +210,24 @@ public class Dialogue : MonoBehaviour {
 
 
 				}
-				options = new GameObject[slotsmenu.transform.childCount];
 
-				for (int i = 0; i < slotsmenu.transform.childCount; i++) {
+                cursor.SetPosition(120, 40 - 16 * selectedOption);
 
-
-					options [i] = slotsmenu.transform.GetChild (i).gameObject;
-				}
-
-				cursor.transform.position = options [selectedOption].transform.position;
-
-                if(!finishedWithTextOverall && !cursor.activeSelf){
+                if(!finishedWithTextOverall && !cursor.isActive){
                     cursor.SetActive(true);
                 }
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
+                    MathE.Clamp(ref selectedOption, 0, 2);
 				}
                 if (Inputs.pressed("up")) {
 					selectedOption--;
-				}
-				if (selectedOption < 0) {
-					selectedOption = 0;
-
-				}
-				if (selectedOption == options.Length) {
-					selectedOption = options.Length - 1;
-
+                    MathE.Clamp(ref selectedOption, 0, 2);
 				}
 			}
 
-			} else if(finishedWithTextOverall && mainmenu.currentmenu == null && cursor.activeSelf) {
-				cursor.SetActive (false);
-			}
+			} 
 		 
 		if (textSpeed == 1) {
             scrollequation = 1 * Time.deltaTime;

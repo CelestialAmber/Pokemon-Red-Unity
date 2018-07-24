@@ -1,11 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public static class MathE{
+    public static void Clamp (ref int var, int min, int max){
+       var = (int)Mathf.Clamp((float)var, (float)min, (float)max);
+    }
 
+    public static void Wrap(ref int var, int min, int max)
+    {
+        var = var < min ? max : var > max ? min : var;
+    }
+}
 public class Options : MonoBehaviour {
-	public GameObject cursor;
+	public Cursor cursor;
 	public GameObject[] textSlots, animSlots, battleSlots, menuSlots;
-	public int textChoice, animationChoice, battleChoice;
 	public int selectedOption;
 
 	// Use this for initialization
@@ -26,66 +34,43 @@ public class Options : MonoBehaviour {
 		}
         if (Inputs.pressed("left")) {
 			if (selectedOption == 0) {
-				textChoice--;
+				SaveData.textChoice--;
+                MathE.Clamp(ref SaveData.textChoice, 0, 2);
 			}
 			if (selectedOption == 1) {
-				animationChoice--;
+                SaveData.animationChoice--;
+                MathE.Clamp(ref SaveData.animationChoice, 0, 1);
 			}
 			if (selectedOption == 2) {
-				battleChoice--;
+                SaveData.battleChoice--;
+                MathE.Clamp(ref SaveData.battleChoice, 0, 1);
 			}
 		}
 
         if (Inputs.pressed("right")) {
 
 			if (selectedOption == 0) {
-				textChoice++;
+                SaveData.textChoice++;
+                MathE.Clamp(ref SaveData.textChoice, 0, 2);
 			}
 			if (selectedOption == 1) {
-				animationChoice++;
+                SaveData.animationChoice++;
+                MathE.Clamp(ref SaveData.animationChoice, 0, 1);
 			}
 			if (selectedOption == 2) {
-				battleChoice++;
+                SaveData.battleChoice++;
+                MathE.Clamp(ref SaveData.battleChoice,0, 1);
 			}
 
 		}
-		if (textChoice == 3) {
-			textChoice = 2;
 
-		}
-		if (textChoice == -1) {
-			textChoice = 0;
-
-		}
-		if (animationChoice == 2) {
-			animationChoice = 1;
-
-		}
-		if (animationChoice == -1) {
-			animationChoice = 0;
-
-		}
-		if (battleChoice == 2) {
-			battleChoice = 1;
-
-		}
-		if (battleChoice == -1) {
-			battleChoice = 0;
-
-		}
-        if (Inputs.pressed("up")) {
+        if (Inputs.pressed("down")) {
 			selectedOption++;
+            MathE.Clamp(ref selectedOption, 0, 3);
 		}
         if (Inputs.pressed("up")) {
 			selectedOption--;
-		}
-		if (selectedOption < 0) {
-			selectedOption = 0;
-
-		}
-		if (selectedOption == 4) {
-			selectedOption = 3;
-
+            MathE.Clamp(ref selectedOption, 0, 3);
 		}
 	
 	
@@ -113,13 +98,13 @@ public class Options : MonoBehaviour {
 		cursor.transform.position = menuSlots [selectedOption].transform.position;
 		
 			if (selectedOption == 0) {
-				cursor.transform.position = textSlots [textChoice].transform.position;
+				cursor.transform.position = textSlots [SaveData.textChoice].transform.position;
 			}
 			if (selectedOption == 1) {
-				cursor.transform.position = animSlots [animationChoice].transform.position;
+                cursor.transform.position = animSlots [SaveData.animationChoice].transform.position;
 			}
 			if (selectedOption == 2) {
-				cursor.transform.position = battleSlots [battleChoice].transform.position;
+                cursor.transform.position = battleSlots [SaveData.battleChoice].transform.position;
 			}
 		
 

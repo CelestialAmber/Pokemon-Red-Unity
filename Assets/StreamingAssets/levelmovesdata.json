@@ -1,5136 +1,4674 @@
 {
-  "entries": [
+  "Bulbasaur": [
     {
-      "pokemon": "Bulbasaur",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-        {
-          "Name": "Leech Seed",
-          "Int": 7
-        },
-        {
-          "Name": "Vine Whip",
-          "Int": 13
-        },
-        {
-          "Name": "Poisonpowder",
-          "Int": 20
-        },
-        {
-          "Name": "Razor Leaf",
-          "Int": 27
-        },
-        {
-          "Name": "Growth",
-          "Int": 34
-        },
-        {
-          "Name": "Sleep Powder",
-          "Int": 41
-        },
-        {
-          "Name": "Solarbeam",
-          "Int": 48
-        }
-      ]
+      "Name": "Tackle",
+      "Int": 1
     },
-       {
-      "pokemon": "Ivysaur",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-        {
-          "Name": "Leech Seed",
-          "Int": 1
-        },
-        {
-          "Name": "Leech Seed",
-          "Int": 7
-        },
-        {
-          "Name": "Vine Whip",
-          "Int": 13
-        },
-        {
-          "Name": "Poisonpowder",
-          "Int": 22
-        },
-        {
-          "Name": "Razor Leaf",
-          "Int": 30
-        },
-        {
-          "Name": "Growth",
-          "Int": 38
-        },
-        {
-          "Name": "Sleep Powder",
-          "Int": 46
-        },
-        {
-          "Name": "Solarbeam",
-          "Int": 54
-        }
-      ]
+    {
+      "Name": "Growl",
+      "Int": 1
     },
-       {
-      "pokemon": "Venusaur",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-        {
-          "Name": "Leech Seed",
-          "Int": 1
-        },
-           {
-          "Name": "Vine Whip",
-          "Int": 1
-        },
-        {
-          "Name": "Leech Seed",
-          "Int": 7
-        },
-        {
-          "Name": "Vine Whip",
-          "Int": 13
-        },
-        {
-          "Name": "Poisonpowder",
-          "Int": 22
-        },
-        {
-          "Name": "Razor Leaf",
-          "Int": 30
-        },
-        {
-          "Name": "Growth",
-          "Int": 43
-        },
-        {
-          "Name": "Sleep Powder",
-          "Int": 55
-        },
-        {
-          "Name": "Solarbeam",
-          "Int": 65
-        }
-      ]
+    {
+      "Name": "Leech Seed",
+      "Int": 7
     },
-       {
-      "pokemon": "Charmander",
-      "moves": [
-          {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Ember",
-          "Int": 7
-        },
-              {
-          "Name": "Leer",
-          "Int":  15
-        },
-              {
-          "Name": "Rage",
-          "Int": 22
-        },
-              {
-          "Name": "Slash",
-          "Int": 30
-        },
-              {
-          "Name": "Flamethrower",
-          "Int": 38
-        },
-              {
-          "Name": "Fire Spin",
-          "Int": 46
-        }
-      ]
+    {
+      "Name": "Vine Whip",
+      "Int": 13
     },
-     {
-      "pokemon": "Charmeleon",
-      "moves": [
-           {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 1
-        },
-               {
-          "Name": "Ember",
-          "Int": 1
-        },
-              {
-          "Name": "Ember",
-          "Int": 9
-        },
-              {
-          "Name": "Leer",
-          "Int":  15
-        },
-              {
-          "Name": "Rage",
-          "Int": 24
-        },
-              {
-          "Name": "Slash",
-          "Int": 33
-        },
-              {
-          "Name": "Flamethrower",
-          "Int": 42
-        },
-              {
-          "Name": "Fire Spin",
-          "Int": 56
-        }
-      ]
+    {
+      "Name": "Poisonpowder",
+      "Int": 20
     },
-     {
-      "pokemon": "Charizard",
-      "moves": [
-             {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 1
-        },
-               {
-          "Name": "Ember",
-          "Int": 1
-        },
-                {
-          "Name": "Leer",
-          "Int": 1
-        },
-              {
-          "Name": "Ember",
-          "Int": 9
-        },
-              {
-          "Name": "Leer",
-          "Int":  15
-        },
-              {
-          "Name": "Rage",
-          "Int": 24
-        },
-              {
-          "Name": "Slash",
-          "Int": 36
-        },
-              {
-          "Name": "Flamethrower",
-          "Int": 46
-        },
-              {
-          "Name": "Fire Spin",
-          "Int": 55
-        }
-      ]
+    {
+      "Name": "Razor Leaf",
+      "Int": 27
     },
-     {
-      "pokemon": "Squirtle",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-              {
-          "Name": "Bubble",
-          "Int": 8
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 15
-        },
-              {
-          "Name": "Bite",
-          "Int": 22
-        },
-              {
-          "Name": "Withdraw",
-          "Int": 28
-        },
-              {
-          "Name": "Skull Bash",
-          "Int": 39
-        },
-               {
-          "Name": "Hydro Pump",
-          "Int": 42
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Wartortle",
-      "moves": [
-               {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-          
-               {
-          "Name": "Bubble",
-          "Int": 1 
-        },
-              {
-          "Name": "Bubble",
-          "Int": 8
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 15
-        },
-              {
-          "Name": "Bite",
-          "Int": 24
-        },
-              {
-          "Name": "Withdraw",
-          "Int": 31
-        },
-              {
-          "Name": "Skull Bash",
-          "Int": 39
-        },
-               {
-          "Name": "Hydro Pump",
-          "Int": 47
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Blastoise",
-      "moves": [
-               {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-               {
-          "Name": "Water Gun",
-          "Int": 1
-        },
-               {
-          "Name": "Bubble",
-          "Int": 1
-        },
-              {
-          "Name": "Bubble",
-          "Int": 8
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 15
-        },
-              {
-          "Name": "Bite",
-          "Int": 22
-        },
-              {
-          "Name": "Withdraw",
-          "Int": 28
-        },
-              {
-          "Name": "Skull Bash",
-          "Int": 39
-        },
-               {
-          "Name": "Hydro Pump",
-          "Int": 47
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Caterpie",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-        {
-          "Name": "String Shot",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Metapod",
-      "moves": [
-          {
-          "Name": "Harden",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Butterfree",
-      "moves": [
-          {
-          "Name": "Confusion",
-          "Int": 1
-        },
-               {
-          "Name": "Confusion",
-          "Int": 12
-        },
-               {
-          "Name": "Poisonpowder",
-          "Int": 15
-        },
-               {
-          "Name": "Stun Spore",
-          "Int": 16
-        },
-               {
-          "Name": "Sleep Powder",
-          "Int": 17
-        },
-               {
-          "Name": "Supersonic",
-          "Int":  21
-        },
-               {
-          "Name": "Whirlwind",
-          "Int": 26
-        },
-               {
-          "Name": "Psybeam",
-          "Int": 32
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Weedle",
-      "moves": [
-          {
-          "Name": "Poison Sting",
-          "Int": 1
-        },
-               {
-          "Name": "String Shot",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Kakuna",
-      "moves": [
-          {
-          "Name": "Harden",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Beedrill",
-      "moves": [
-          {
-          "Name": "Fury Attack",
-          "Int": 1
-        },
-               {
-          "Name": "Fury Attack",
-          "Int": 12
-        },
-               {
-          "Name": "Focus Energy",
-          "Int": 16
-        },
-               {
-          "Name": "Twineedle",
-          "Int": 20
-        },
-               {
-          "Name": "Rage",
-          "Int": 25
-        },
-               {
-          "Name": "Pin Missle",
-          "Int": 30
-        },
-               {
-          "Name": "Agility",
-          "Int": 35
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Pidgey",
-      "moves": [
-          {
-          "Name": "Gust",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 5
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 12
-        },
-              {
-          "Name": "Whirlwind",
-          "Int": 19
-        },
-              {
-          "Name": "Wing Attack",
-          "Int": 28
-        },
-              {
-          "Name": "Agility",
-          "Int": 36
-        },
-              {
-          "Name": "Mirror Move",
-          "Int": 44
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Pidgeotto",
-      "moves": [
-          {
-          "Name": "Gust",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 5
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 12
-        },
-              {
-          "Name": "Whirlwind",
-          "Int": 21
-        },
-              {
-          "Name": "Wing Attack",
-          "Int": 31
-        },
-              {
-          "Name": "Agility",
-          "Int": 40
-        },
-              {
-          "Name": "Mirror Move",
-          "Int": 49
-        }
-      ]
+    {
+      "Name": "Growth",
+      "Int": 34
     },
-     {
-      "pokemon": "Pidgeot",
-      "moves": [
-           {
-          "Name": "Gust",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 5
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 12
-        },
-              {
-          "Name": "Whirlwind",
-          "Int": 21
-        },
-              {
-          "Name": "Wing Attack",
-          "Int": 31
-        },
-              {
-          "Name": "Agility",
-          "Int": 44
-        },
-              {
-          "Name": "Mirror Move",
-          "Int": 54
-        }
-      ]
+    {
+      "Name": "Sleep Powder",
+      "Int": 41
     },
-     {
-      "pokemon": "Rattata",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 7
-        },
-              {
-          "Name": "Hyper Fang",
-          "Int": 14
-        },
-              {
-          "Name": "Focus Energy",
-          "Int": 23
-        },
-              {
-          "Name": "Super Fang",
-          "Int": 34
-        }
-      ]
+    {
+      "Name": "Solarbeam",
+      "Int": 48
+    }
+  ],
+  "Ivysaur": [
+    {
+      "Name": "Tackle",
+      "Int": 1
     },
-     {
-      "pokemon": "Raticate",
-      "moves": [
-           {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 7
-        },
-              {
-          "Name": "Hyper Fang",
-          "Int": 14
-        },
-              {
-          "Name": "Focus Energy",
-          "Int": 27
-        },
-              {
-          "Name": "Super Fang",
-          "Int": 41
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Spearow",
-      "moves": [
-             {
-          "Name": "Peck",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Leer",
-          "Int": 9
-        },
-              {
-          "Name": "Fury Attack",
-          "Int": 15
-        },
-              {
-          "Name": "Mirror Move",
-          "Int": 22
-        },
-              {
-          "Name": "Drill Peck",
-          "Int": 29
-        },
-              {
-          "Name": "Agility",
-          "Int": 36
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Fearow",
-      "moves": [
-             {
-          "Name": "Peck",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Leer",
-          "Int": 1
-        },
-              {
-          "Name": "Leer",
-          "Int": 9
-        },
-              {
-          "Name": "Fury Attack",
-          "Int": 15
-        },
-              {
-          "Name": "Mirror Move",
-          "Int": 25
-        },
-              {
-          "Name": "Drill Peck",
-          "Int": 34
-        },
-              {
-          "Name": "Agility",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Ekans",
-      "moves": [
-          {
-          "Name": "Wrap",
-          "Int": 1
-        },
-           {
-          "Name": "Leer",
-          "Int": 1
-        },
-           {
-          "Name": "Poison Sting",
-          "Int": 10
-        },
-           {
-          "Name": "Bite",
-          "Int": 17
-        },
-           {
-          "Name": "Glare",
-          "Int": 24
-        },
-           {
-          "Name": "Screech",
-          "Int": 31
-        },
-           {
-          "Name": "Acid",
-          "Int": 38
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Arbok",
-      "moves": [
-             {
-          "Name": "Wrap",
-          "Int": 1
-        },
-           {
-          "Name": "Leer",
-          "Int": 1
-        },
-           {
-          "Name": "Poison Sting",
-          "Int": 1
-        },
-           {
-          "Name": "Poison Sting",
-          "Int": 10
-        },
-           {
-          "Name": "Bite",
-          "Int": 17
-        },
-           {
-          "Name": "Glare",
-          "Int": 24
-        },
-           {
-          "Name": "Screech",
-          "Int": 31
-        },
-           {
-          "Name": "Acid",
-          "Int": 38
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Pikachu",
-      "moves": [
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 1
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 9
-        },
-          {
-          "Name": "Quick Attack",
-          "Int": 16
-        },
-          {
-          "Name": "Swift",
-          "Int": 26
-        },
-          {
-          "Name": "Agility",
-          "Int": 33
-        },
-          {
-          "Name": "Thunder",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Raichu",
-      "moves": [
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Thundershock",
-          "Int": 1
-        },
-              {
-          "Name": "Thunder Wave",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Sandshrew",
-      "moves": [
-          {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 10
-        },
-              {
-          "Name": "Slash",
-          "Int": 17
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 24
-        },
-              {
-          "Name": "Swift",
-          "Int": 31
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 38
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Sandslash",
-      "moves": [
-            {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 10
-        },
-              {
-          "Name": "Slash",
-          "Int": 17
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 27
-        },
-              {
-          "Name": "Swift",
-          "Int": 36
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 47
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Nidoran♀",
-      "moves": [
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 8
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 14
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 21
-        },
-              {
-          "Name": "Bite",
-          "Int": 29
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 36
-        },
-              {
-          "Name": "Double Kick",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Nidorina",
-      "moves": [
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 8
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 14
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 23
-        },
-              {
-          "Name": "Bite",
-          "Int": 32
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 41
-        },
-              {
-          "Name": "Double Kick",
-          "Int": 50
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Nidoqueen",
-      "moves": [
-          {
-          "Name": "Body Slam",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 8
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 14
-        },
-              {
-          "Name": "Body Slam",
-          "Int": 23
-        }
-      ]
+    {
+      "Name": "Growl",
+      "Int": 1
     },
-     {
-      "pokemon": "Nidoran♂",
-      "moves": [
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Horn Attack",
-          "Int": 8
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 14
-        },
-              {
-          "Name": "Focus Energy",
-          "Int": 21
-        },
-              {
-          "Name": "Fury Attack",
-          "Int": 29
-        },
-              {
-          "Name": "Horn Drill",
-          "Int": 36
-        },
-              {
-          "Name": "Double Kick",
-          "Int": 43
-        }
-      ]
+    {
+      "Name": "Leech Seed",
+      "Int": 1
     },
-     {
-      "pokemon": "Nidorino",
-      "moves": [
-            {
-          "Name": "Leer",
-          "Int": 1
-        },
-              {
-          "Name": "Horn Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Horn Attack",
-          "Int": 8
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 14
-        },
-              {
-          "Name": "Focus Energy",
-          "Int": 23
-        },
-              {
-          "Name": "Fury Attack",
-          "Int": 32
-        },
-              {
-          "Name": "Horn Drill",
-          "Int": 41
-        },
-              {
-          "Name": "Double Kick",
-          "Int": 50
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Nidoking",
-      "moves": [
-          {
-          "Name": "Horn Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Thrash",
-          "Int": 1
-        },
-              {
-          "Name": "Horn Attack",
-          "Int": 8
-        },
-              {
-          "Name": "Poison Sting",
-          "Int": 14
-        },
-              {
-          "Name": "Thrash",
-          "Int": 23
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Clefairy",
-      "moves": [
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Pound",
-          "Int": 1
-        },
-              {
-          "Name": "Sing",
-          "Int": 13
-        },
-              {
-          "Name": "Doubleslap",
-          "Int": 18
-        },
-              {
-          "Name": "Minimize",
-          "Int": 24
-        },
-              {
-          "Name": "Metronome",
-          "Int": 31
-        },
-              {
-          "Name": "Defense Curl",
-          "Int": 39
-        },
-              {
-          "Name": "Light Screen",
-          "Int": 48
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Clefable",
-      "moves": [
-          {
-          "Name": "Doubleslap",
-          "Int": 1
-        },
-              {
-          "Name": "Metronome",
-          "Int": 1
-        },
-              {
-          "Name": "Minimize",
-          "Int": 1
-        },
-              {
-          "Name": "Sing",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Vulpix",
-      "moves": [
-          {
-          "Name": "Ember",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 16
-        },
-              {
-          "Name": "Roar",
-          "Int": 21
-        },
-              {
-          "Name": "Confuse Ray",
-          "Int": 28
-        },
-              {
-          "Name": "Flamethrower",
-          "Int": 35
-        },
-              {
-          "Name": "Fire Spin",
-          "Int": 42
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Ninetales",
-      "moves": [
-          {
-          "Name": "Ember",
-          "Int": 1
-        },
-              {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Roar",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Jigglypuff",
-      "moves": [
-          {
-          "Name": "Sing",
-          "Int": 1
-        },
-              {
-          "Name": "Pound",
-          "Int": 9
-        },
-              {
-          "Name": "Disable",
-          "Int": 14
-        },
-              {
-          "Name": "Defense Curl",
-          "Int": 19
-        },
-              {
-          "Name": "Doubleslap",
-          "Int": 24
-        },
-              {
-          "Name": "Rest",
-          "Int": 29
-        },
-              {
-          "Name": "Body Slam",
-          "Int": 34
-        },
-              {
-          "Name": "Double-Edge",
-          "Int": 39
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Wigglytuff",
-      "moves": [
-          {
-          "Name": "Defense Curl",
-          "Int": 1
-        },
-              {
-          "Name": "Disable",
-          "Int": 1
-        },
-              {
-          "Name": "Doubleslap",
-          "Int": 1
-        },
-              {
-          "Name": "Sing",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Zubat",
-      "moves": [
-          {
-          "Name": "Leech Life",
-          "Int": 1
-        },
-              {
-          "Name": "Supersonic",
-          "Int": 10
-        },
-              {
-          "Name": "Bite",
-          "Int": 15
-        },
-              {
-          "Name": "Confuse Ray",
-          "Int": 21
-        },
-              {
-          "Name": "Wing Attack",
-          "Int": 28
-        },
-              {
-          "Name": "Haze",
-          "Int": 36
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Golbat",
-      "moves": [
-           {
-          "Name": "Leech Life",
-          "Int": 1
-        },
-              {
-          "Name": "Bite",
-          "Int": 1 
-        },
-              {
-          "Name": "Screech",
-          "Int": 1
-        },
-              {
-          "Name": "Supersonic",
-          "Int": 10
-        },
-              {
-          "Name": "Bite",
-          "Int": 15
-        },
-              {
-          "Name": "Confuse Ray",
-          "Int": 21
-        },
-              {
-          "Name": "Wing Attack",
-          "Int": 32
-        },
-              {
-          "Name": "Haze",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Oddish",
-      "moves": [
-          {
-          "Name": "Absorb",
-          "Int": 1
-        },
-              {
-          "Name": "Poisonpowder",
-          "Int": 15
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 17
-        },
-              {
-          "Name": "Sleep Powder",
-          "Int": 19
-        },
-              {
-          "Name": "Acid",
-          "Int": 24
-        },
-              {
-          "Name": "Petal Dance",
-          "Int": 33
-        },
-              {
-          "Name": "Solarbeam",
-          "Int": 46
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Gloom",
-      "moves": [
-          {
-          "Name": "Absorb",
-          "Int": 1
-        },
-              {
-          "Name": "Poisonpowder",
-          "Int": 1
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 1
-        },
-              {
-          "Name": "Poisonpowder",
-          "Int": 15
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 17
-        },
-              {
-          "Name": "Sleep Powder",
-          "Int": 19
-        },
-              {
-          "Name": "Acid",
-          "Int": 28
-        },
-              {
-          "Name": "Petal Dance",
-          "Int": 38
-        },
-              {
-          "Name": "Solarbeam",
-          "Int": 52
-        }
-      ]
+    {
+      "Name": "Leech Seed",
+      "Int": 7
     },
-     {
-      "pokemon": "Vileplume",
-      "moves": [
-          {
-          "Name": "Acid",
-          "Int": 1
-        },
-              {
-          "Name": "Petal Dance",
-          "Int": 1
-        },
-              {
-          "Name": "Sleep Powder",
-          "Int": 1
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 1
-        },
-              {
-          "Name": "Poisonpowder",
-          "Int": 15
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 17
-        },
-              {
-          "Name": "Sleep Powder",
-          "Int": 19
-        }
-      ]
+    {
+      "Name": "Vine Whip",
+      "Int": 13
     },
-     {
-      "pokemon": "Paras",
-      "moves": [
-          {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 13
-        },
-              {
-          "Name": "Leech Life",
-          "Int": 20
-        },
-              {
-          "Name": "Spore",
-          "Int": 27
-        },
-              {
-          "Name": "Slash",
-          "Int": 34
-        },
-              {
-          "Name": "Growth",
-          "Int": 41
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Parasect",
-      "moves": [
-          {
-          "Name": "Leech Life",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 1
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 13
-        },
-              {
-          "Name": "Leech Life",
-          "Int": 20
-        },
-              {
-          "Name": "Spore",
-          "Int": 30
-        },
-              {
-          "Name": "Slash",
-          "Int": 39
-        },
-              {
-          "Name": "Growth",
-          "Int": 48
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Venonat",
-      "moves": [
-          {
-          "Name": "Disable",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Poisonpowder",
-          "Int": 24
-        },
-              {
-          "Name": "Leech Life",
-          "Int": 27
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 30
-        },
-              {
-          "Name": "Psybeam",
-          "Int": 35
-        },
-              {
-          "Name": "Sleep Powder",
-          "Int": 38
-        },
-              {
-          "Name": "Psychic",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Venomoth",
-      "moves": [
-          {
-          "Name": "Disable",
-          "Int": 1
-        },
-              {
-          "Name": "Leech Life",
-          "Int": 1
-        },
-              {
-          "Name": "Poisonpowder",
-          "Int": 1
-        },
-              {
-          "Name": "Tackle",
-          "Int": 1
-        },
-              {
-          "Name": "Poisonpowder",
-          "Int": 24
-        },
-              {
-          "Name": "Leech Life",
-          "Int": 27 
-        },
-              {
-          "Name": "Stun Spore",
-          "Int": 30
-        },
-              {
-          "Name": "Psybeam",
-          "Int": 38
-        },
-              {
-          "Name": "Sleep Powder",
-          "Int": 43
-        },
-              {
-          "Name": "Psychic",
-          "Int": 50
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Diglett",
-      "moves": [
-          {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 15
-        },
-              {
-          "Name": "Dig",
-          "Int": 19
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 24
-        },
-              {
-          "Name": "Slash",
-          "Int": 31
-        },
-              {
-          "Name": "Earthquake",
-          "Int": 40
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Dugtrio",
-      "moves": [
-          {
-          "Name": "Dig",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 15
-        },
-              {
-          "Name": "Dig",
-          "Int": 19
-        },
-              {
-          "Name": "Sand-Attack",
-          "Int": 24
-        },
-              {
-          "Name": "Slash",
-          "Int": 35
-        },
-              {
-          "Name": "Earthquake",
-          "Int": 47
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Meowth",
-      "moves": [
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Bite",
-          "Int": 12
-        },
-              {
-          "Name": "Pay Day",
-          "Int": 17
-        },
-              {
-          "Name": "Screech",
-          "Int": 24
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 33
-        },
-              {
-          "Name": "Slash",
-          "Int": 44
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Persian",
-      "moves": [
-          {
-          "Name": "Bite",
-          "Int": 1
-        },
-              {
-          "Name": "Growl",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Screech",
-          "Int": 1
-        },
-              {
-          "Name": "Bite",
-          "Int": 12
-        },
-              {
-          "Name": "Pay Day",
-          "Int": 17
-        },
-              {
-          "Name": "Screech",
-          "Int": 24
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 37
-        },
-              {
-          "Name": "Slash",
-          "Int": 51
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Psyduck",
-      "moves": [
-          {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 28
-        },
-              {
-          "Name": "Disable",
-          "Int": 31
-        },
-              {
-          "Name": "Confusion",
-          "Int": 36
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 43
-        },
-              {
-          "Name": "Hydro Pump",
-          "Int": 52
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Golduck",
-      "moves": [
-          {
-          "Name": "Disable",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-              {
-          "Name": "Tail Whip",
-          "Int": 28
-        },
-              {
-          "Name": "Disable",
-          "Int": 31
-        },
-              {
-          "Name": "Confusion",
-          "Int": 39
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 48
-        },
-              {
-          "Name": "Hydro Pump",
-          "Int": 59 
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Mankey",
-      "moves": [
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Karate Chop",
-          "Int": 15
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 21
-        },
-              {
-          "Name": "Focus Energy",
-          "Int": 27
-        },
-              {
-          "Name": "Seismic Toss",
-          "Int": 33
-        },
-              {
-          "Name": "Thrash",
-          "Int": 39
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Primeape",
-      "moves": [
-         
-              {
-          "Name": "Fury Swipes",
-          "Int": 1
-        },
-              {
-          "Name": "Karate Chop",
-          "Int": 1
-        },
-            {
-          "Name": "Leer",
-          "Int": 1
-        },
-              {
-          "Name": "Scratch",
-          "Int": 1
-        },
-              {
-          "Name": "Karate Chop",
-          "Int": 15
-        },
-              {
-          "Name": "Fury Swipes",
-          "Int": 21
-        },
-              {
-          "Name": "Focus Energy",
-          "Int": 27
-        },
-              {
-          "Name": "Seismic Toss",
-          "Int": 37
-        },
-              {
-          "Name": "Thrash",
-          "Int": 46
-        }
-      ]
+    {
+      "Name": "Poisonpowder",
+      "Int": 22
     },
-     {
-      "pokemon": "Growlithe",
-      "moves": [
-          {
-          "Name": "Bite",
-          "Int": 1
-        },
-              {
-          "Name": "Roar",
-          "Int": 1
-        },
-              {
-          "Name": "Ember",
-          "Int": 18
-        },
-              {
-          "Name": "Leer",
-          "Int": 23
-        },
-              {
-          "Name": "Take Down",
-          "Int": 30
-        },
-              {
-          "Name": "Agility",
-          "Int": 39
-        },
-              {
-          "Name": "Flamethrower",
-          "Int": 50
-        }
-      ]
+    {
+      "Name": "Razor Leaf",
+      "Int": 30
     },
-     {
-      "pokemon": "Arcanine",
-      "moves": [
-          {
-          "Name": "Ember",
-          "Int": 1
-        },
-              {
-          "Name": "Leer",
-          "Int": 1
-        },
-              {
-          "Name": "Roar",
-          "Int": 1
-        },
-              {
-          "Name": "Take Down",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Poliwag",
-      "moves": [
-          {
-          "Name": "Bubble",
-          "Int": 1
-        },
-              {
-          "Name": "Hypnosis",
-          "Int": 16
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 19
-        },
-              {
-          "Name": "Doubleslap",
-          "Int": 25
-        },
-              {
-          "Name": "Body Slam",
-          "Int": 31
-        },
-              {
-          "Name": "Amnesia",
-          "Int": 38
-        },
-              {
-          "Name": "Hydro Pump",
-          "Int": 45
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Poliwhirl",
-      "moves": [
-          {
-          "Name": "Bubble",
-          "Int": 1
-        },
-              {
-          "Name": "Hypnosis",
-          "Int": 1
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 1
-        },
-              {
-          "Name": "Hypnosis",
-          "Int": 16
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 19
-        },
-              {
-          "Name": "Doubleslap",
-          "Int": 26
-        },
-              {
-          "Name": "Body Slam",
-          "Int": 33
-        },
-              {
-          "Name": "Amnesia",
-          "Int": 41
-        },
-              {
-          "Name": "Hydro Pump",
-          "Int": 49
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Poliwrath",
-      "moves": [
-           {
-          "Name": "Body Slam",
-          "Int": 1
-        },
-              {
-          "Name": "Doubleslap",
-          "Int": 1
-        },
-              {
-          "Name": "Hypnosis",
-          "Int": 1
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 1
-        },
-              {
-          "Name": "Hypnosis",
-          "Int": 16
-        },
-              {
-          "Name": "Water Gun",
-          "Int": 19
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Abra",
-      "moves": [
-          {
-          "Name": "Teleport",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Kadabra",
-      "moves": [
-          {
-          "Name": "Confusion",
-          "Int": 1
-        },
-              {
-          "Name": "Disable",
-          "Int": 1
-        },
-              {
-          "Name": "Teleport",
-          "Int": 1
-        },
-              {
-          "Name": "Confusion",
-          "Int": 16
-        },
-              {
-          "Name": "Disable",
-          "Int": 20
-        },
-              {
-          "Name": "Psybeam",
-          "Int": 27
-        },
-              {
-          "Name": "Recover",
-          "Int": 31
-        },
-              {
-          "Name": "Psychic",
-          "Int": 38
-        },
-              {
-          "Name": "Reflect",
-          "Int": 42
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Alakazam",
-      "moves": [
-            {
-          "Name": "Confusion",
-          "Int": 1
-        },
-              {
-          "Name": "Disable",
-          "Int": 1
-        },
-              {
-          "Name": "Teleport",
-          "Int": 1
-        },
-              {
-          "Name": "Confusion",
-          "Int": 16
-        },
-              {
-          "Name": "Disable",
-          "Int": 20
-        },
-              {
-          "Name": "Psybeam",
-          "Int": 27
-        },
-              {
-          "Name": "Recover",
-          "Int": 31
-        },
-              {
-          "Name": "Psychic",
-          "Int": 38
-        },
-              {
-          "Name": "Reflect",
-          "Int": 42
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Machop",
-      "moves": [
-          {
-          "Name": "Karate Chop",
-          "Int": 1
-        },
-          {
-          "Name": "Low Kick",
-          "Int": 20
-        },
-          {
-          "Name": "Leer",
-          "Int": 25
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 32
-        },
-          {
-          "Name": "Seismic Toss",
-          "Int": 39
-        },
-          {
-          "Name": "Submission",
-          "Int": 46
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Machoke",
-      "moves": [
-           {
-          "Name": "Karate Chop",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Low Kick",
-          "Int": 1
-        },
-          {
-          "Name": "Low Kick",
-          "Int": 20
-        },
-          {
-          "Name": "Leer",
-          "Int": 25
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 36
-        },
-          {
-          "Name": "Seismic Toss",
-          "Int": 44
-        },
-          {
-          "Name": "Submission",
-          "Int": 52
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Machamp",
-      "moves": [
-           {
-          "Name": "Karate Chop",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Low Kick",
-          "Int": 1
-        },
-          {
-          "Name": "Low Kick",
-          "Int": 20
-        },
-          {
-          "Name": "Leer",
-          "Int": 25
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 36
-        },
-          {
-          "Name": "Seismic Toss",
-          "Int": 44
-        },
-          {
-          "Name": "Submission",
-          "Int": 52
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Bellsprout",
-      "moves": [
-          {
-          "Name": "Growth",
-          "Int": 1
-        },
-          {
-          "Name": "Vine Whip",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 13
-        },
-          {
-          "Name": "Poisonpowder",
-          "Int": 15
-        },
-          {
-          "Name": "Sleep Powder",
-          "Int": 18
-        },
-          {
-          "Name": "Stun Spore",
-          "Int": 21
-        },
-          {
-          "Name": "Acid",
-          "Int": 26
-        },
-          {
-          "Name": "Razor Leaf",
-          "Int": 33
-        },
-          {
-          "Name": "Slam",
-          "Int": 42
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Weepinbell",
-      "moves": [
-          {
-          "Name": "Growth",
-          "Int": 1
-        },
-          {
-          "Name": "Vine Whip",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 13
-        },
-          {
-          "Name": "Poisonpowder",
-          "Int": 15
-        },
-          {
-          "Name": "Sleep Powder",
-          "Int": 18
-        },
-          {
-          "Name": "Stun Spore",
-          "Int": 23
-        },
-          {
-          "Name": "Acid",
-          "Int": 29
-        },
-          {
-          "Name": "Razor Leaf",
-          "Int": 38
-        },
-          {
-          "Name": "Slam",
-          "Int": 49
-        }
-      ]
+    {
+      "Name": "Growth",
+      "Int": 38
     },
-     {
-      "pokemon": "Victreebel",
-      "moves": [
-          {
-          "Name": "Acid",
-          "Int": 1
-        },
-          {
-          "Name": "Razor Leaf",
-          "Int": 1
-        },
-          {
-          "Name": "Sleep Powder",
-          "Int": 1
-        },
-          {
-          "Name": "Stun Spore",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 13
-        },
-          {
-          "Name": "Poisonpowder",
-          "Int": 15
-        },
-          {
-          "Name": "Sleep Powder",
-          "Int": 18
-        }
-      ]
+    {
+      "Name": "Sleep Powder",
+      "Int": 46
     },
-     {
-      "pokemon": "Tentacool",
-      "moves": [
-          {
-          "Name": "Acid",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 7
-        },
-          {
-          "Name": "Wrap",
-          "Int": 13
-        },
-          {
-          "Name": "Poison Sting",
-          "Int": 18
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 22
-        },
-          {
-          "Name": "Constrict",
-          "Int": 27
-        },
-          {
-          "Name": "Barrier",
-          "Int": 33
-        },
-          {
-          "Name": "Screech",
-          "Int": 40
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 48
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Tentacruel",
-      "moves": [
-          {
-          "Name": "Acid",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 7
-        },
-          {
-          "Name": "Wrap",
-          "Int": 13
-        },
-          {
-          "Name": "Poison Sting",
-          "Int": 18
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 22
-        },
-          {
-          "Name": "Constrict",
-          "Int": 27
-        },
-          {
-          "Name": "Barrier",
-          "Int": 35
-        },
-          {
-          "Name": "Screech",
-          "Int": 43
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 50
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Geodude",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1 
-        },
-          {
-          "Name": "Defense Curl",
-          "Int": 11
-        },
-          {
-          "Name": "Rock Throw",
-          "Int": 16
-        },
-          {
-          "Name": "Selfdestruct",
-          "Int": 21
-        },
-          {
-          "Name": "Harden",
-          "Int": 26
-        },
-          {
-          "Name": "Earthquake",
-          "Int": 31
-        },
-          {
-          "Name": "Explosion",
-          "Int": 36
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Graveler",
-      "moves": [
-          {
-          "Name": "Defense Curl",
-          "Int": 1
-        },
-               {
-          "Name": "Tackle",
-          "Int": 1 
-        },
-          {
-          "Name": "Defense Curl",
-          "Int": 11
-        },
-          {
-          "Name": "Rock Throw",
-          "Int": 16
-        },
-          {
-          "Name": "Selfdestruct",
-          "Int": 21
-        },
-          {
-          "Name": "Harden",
-          "Int": 29
-        },
-          {
-          "Name": "Earthquake",
-          "Int": 36
-        },
-          {
-          "Name": "Explosion",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Golem",
-      "moves": [
-          {
-          "Name": "Defense Curl",
-          "Int": 1
-        },
-               {
-          "Name": "Tackle",
-          "Int": 1 
-        },
-          {
-          "Name": "Defense Curl",
-          "Int": 11
-        },
-          {
-          "Name": "Rock Throw",
-          "Int": 16
-        },
-          {
-          "Name": "Selfdestruct",
-          "Int": 21
-        },
-          {
-          "Name": "Harden",
-          "Int": 29
-        },
-          {
-          "Name": "Earthquake",
-          "Int": 36
-        },
-          {
-          "Name": "Explosion",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Ponyta",
-      "moves": [
-          {
-          "Name": "Ember",
-          "Int": 1
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 30
-        },
-          {
-          "Name": "Stomp",
-          "Int": 32
-        },
-          {
-          "Name": "Growl",
-          "Int": 35
-        },
-          {
-          "Name": "Fire Spin",
-          "Int": 39
-        },
-          {
-          "Name": "Take Down",
-          "Int": 43
-        },
-          {
-          "Name": "Agility",
-          "Int": 48
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Rapidash",
-      "moves": [
-          {
-          "Name": "Ember",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-          {
-          "Name": "Stomp",
-          "Int": 1
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 30
-        },
-          {
-          "Name": "Stomp",
-          "Int": 32
-        },
-          {
-          "Name": "Growl",
-          "Int": 35
-        },
-          {
-          "Name": "Fire Spin",
-          "Int": 39
-        },
-          {
-          "Name": "Take Down",
-          "Int": 47
-        },
-          {
-          "Name": "Agility",
-          "Int": 55
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Slowpoke",
-      "moves": [
-          {
-          "Name": "Confusion",
-          "Int": 1
-        },
-          {
-          "Name": "Disable",
-          "Int": 18
-        },
-          {
-          "Name": "Headbutt",
-          "Int": 22
-        },
-          {
-          "Name": "Growl",
-          "Int": 27
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 33
-        },
-          {
-          "Name": "Amnesia",
-          "Int": 40
-        },
-          {
-          "Name": "Psychic",
-          "Int": 48
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Slowbro",
-      "moves": [
-          {
-          "Name": "Confusion",
-          "Int": 1
-        },
-          {
-          "Name": "Disable",
-          "Int": 1
-        },
-          {
-          "Name": "Headbutt",
-          "Int": 1
-        },
-          {
-          "Name": "Disable",
-          "Int": 18
-        },
-          {
-          "Name": "Headbutt",
-          "Int": 22
-        },
-          {
-          "Name": "Growl",
-          "Int": 27
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 33
-        },
-          {
-          "Name": "Withdraw",
-          "Int": 37
-        },
-          {
-          "Name": "Amnesia",
-          "Int": 44
-        },
-          {
-          "Name": "Psychic",
-          "Int": 55
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Magnemite",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Sonicboom",
-          "Int": 21
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 25
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 29
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 35
-        },
-          {
-          "Name": "Swift",
-          "Int": 41
-        },
-          {
-          "Name": "Screech",
-          "Int": 47
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Magneton",
-      "moves": [
-          {
-          "Name": "Sonicboom",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 1
-        },
-          {
-          "Name": "Sonicboom",
-          "Int": 21
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 25
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 29
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 38
-        },
-          {
-          "Name": "Swift",
-          "Int": 46
-        },
-          {
-          "Name": "Screech",
-          "Int": 54
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Farfetch'd",
-      "moves": [
-          {
-          "Name": "Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 7
-        },
-          {
-          "Name": "Fury Attack",
-          "Int": 15
-        },
-          {
-          "Name": "Swords Dance",
-          "Int": 23
-        },
-          {
-          "Name": "Agility",
-          "Int": 31
-        },
-          {
-          "Name": "Slash",
-          "Int": 39
-        }
-      ]
+    {
+      "Name": "Solarbeam",
+      "Int": 54
+    }
+  ],
+  "Venusaur": [
+    {
+      "Name": "Tackle",
+      "Int": 1
     },
-     {
-      "pokemon": "Doduo",
-      "moves": [
-          {
-          "Name": "Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 20
-        },
-          {
-          "Name": "Fury Attack",
-          "Int": 24
-        },
-          {
-          "Name": "Drill Peck",
-          "Int": 30
-        },
-          {
-          "Name": "Rage",
-          "Int": 36
-        },
-          {
-          "Name": "Tri Attack",
-          "Int": 40
-        },
-          {
-          "Name": "Agility",
-          "Int": 44
-        }
-      ]
+    {
+      "Name": "Growl",
+      "Int": 1
     },
-     {
-      "pokemon": "Dodrio",
-      "moves": [
-          {
-          "Name": "Fury Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-          {
-          "Name": "Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 20
-        },
-          {
-          "Name": "Fury Attack",
-          "Int": 24
-        },
-          {
-          "Name": "Drill Peck",
-          "Int": 30
-        },
-          {
-          "Name": "Rage",
-          "Int": 39
-        },
-          {
-          "Name": "Tri Attack",
-          "Int": 45
-        },
-          {
-          "Name": "Agility",
-          "Int": 51
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Seel",
-      "moves": [
-          {
-          "Name": "Headbutt",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 30
-        },
-          {
-          "Name": "Aurora Beam",
-          "Int": 35
-        },
-          {
-          "Name": "Rest",
-          "Int": 40
-        },
-          {
-          "Name": "Take Down",
-          "Int": 45
-        },
-          {
-          "Name": "Ice Beam",
-          "Int": 50
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Dewgong",
-      "moves": [
-          {
-          "Name": "Aurora Beam",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-          {
-          "Name": "Headbutt",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 30
-        },
-          {
-          "Name": "Aurora Beam",
-          "Int": 35
-        },
-          {
-          "Name": "Rest",
-          "Int": 44
-        },
-          {
-          "Name": "Take Down",
-          "Int": 50
-        },
-          {
-          "Name": "Ice Beam",
-          "Int": 56
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Grimer",
-      "moves": [
-          {
-          "Name": "Disable",
-          "Int": 1
-        },
-          {
-          "Name": "Pound",
-          "Int": 1
-        },
-          {
-          "Name": "Poison Gas",
-          "Int": 30
-        },
-          {
-          "Name": "Minimize",
-          "Int": 33
-        },
-          {
-          "Name": "Sludge",
-          "Int": 37
-        },
-          {
-          "Name": "Harden",
-          "Int": 42
-        },
-          {
-          "Name": "Screech",
-          "Int": 48
-        },
-          {
-          "Name": "Acid Armor",
-          "Int": 55
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Muk",
-      "moves": [
-          {
-          "Name": "Disable",
-          "Int": 1
-        },
-          {
-          "Name": "Poison Gas",
-          "Int": 1
-        },
-          {
-          "Name": "Pound",
-          "Int": 1
-        },
-          {
-          "Name": "Poison Gas",
-          "Int": 30
-        },
-          {
-          "Name": "Minimize",
-          "Int": 33
-        },
-          {
-          "Name": "Sludge",
-          "Int": 37
-        },
-          {
-          "Name": "Harden",
-          "Int": 45
-        },
-          {
-          "Name": "Screech",
-          "Int": 53
-        },
-          {
-          "Name": "Acid Armor",
-          "Int": 60
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Shellder",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Withdraw",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 18
-        },
-          {
-          "Name": "Clamp",
-          "Int": 23
-        },
-          {
-          "Name": "Aurora Beam",
-          "Int": 30
-        },
-          {
-          "Name": "Leer",
-          "Int": 39
-        },
-          {
-          "Name": "Ice Beam",
-          "Int": 50
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Cloyster",
-      "moves": [
-          {
-          "Name": "Aurora Beam",
-          "Int": 1
-        },
-          {
-          "Name": "Clamp",
-          "Int": 1
-        } ,
-          {
-          "Name": "Supersonic",
-          "Int": 1
-        } ,
-          {
-          "Name": "Withdraw",
-          "Int": 1
-        } ,
-          {
-          "Name": "Spike Cannon",
-          "Int": 50
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Gastly",
-      "moves": [
-          {
-          "Name": "Confuse Ray",
-          "Int": 1
-        } ,
-          {
-          "Name": "Lick",
-          "Int": 1
-        } ,
-          {
-          "Name": "Night Shade",
-          "Int": 1
-        } ,
-          {
-          "Name": "Hypnosis",
-          "Int": 27
-        } ,
-          {
-          "Name": "Dream Eater",
-          "Int": 35
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Haunter",
-      "moves": [
-          {
-          "Name": "Confuse Ray",
-          "Int": 1
-        } ,
-          {
-          "Name": "Lick",
-          "Int": 1
-        } ,
-          {
-          "Name": "Night Shade",
-          "Int": 1
-        } ,
-          {
-          "Name": "Hypnosis",
-          "Int": 29
-        } ,
-          {
-          "Name": "Dream Eater",
-          "Int": 38
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Gengar",
-      "moves": [
-            {
-          "Name": "Confuse Ray",
-          "Int": 1
-        } ,
-          {
-          "Name": "Lick",
-          "Int": 1
-        } ,
-          {
-          "Name": "Night Shade",
-          "Int": 1
-        } ,
-          {
-          "Name": "Hypnosis",
-          "Int": 29
-        } ,
-          {
-          "Name": "Dream Eater",
-          "Int": 38
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Onix",
-      "moves": [
-          {
-          "Name": "Screech",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Bind",
-          "Int": 15
-        },
-          {
-          "Name": "Rock Throw",
-          "Int": 19
-        },
-          {
-          "Name": "Rage",
-          "Int": 25
-        },
-          {
-          "Name": "Slam",
-          "Int": 33
-        },
-          {
-          "Name": "Harden",
-          "Int": 43
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Drowzee",
-      "moves": [
-          {
-          "Name": "Hypnosis",
-          "Int": 1
-        },
-          {
-          "Name": "Pound",
-          "Int": 1
-        },
-          {
-          "Name": "Disable",
-          "Int": 12
-        },
-          {
-          "Name": "Confusion",
-          "Int": 17
-        },
-          {
-          "Name": "Headbutt",
-          "Int": 24
-        },
-          {
-          "Name": "Poison Gas",
-          "Int": 29
-        },
-          {
-          "Name": "Psychic",
-          "Int": 32
-        },
-          {
-          "Name": "Meditate",
-          "Int": 37
-        }
-      ]
+    {
+      "Name": "Leech Seed",
+      "Int": 1
     },
-     {
-      "pokemon": "Hypno",
-      "moves": [
-          {
-          "Name": "Confusion",
-          "Int": 1
-        },
-         {
-          "Name": "Disable",
-          "Int": 1
-        },
-              {
-          "Name": "Hypnosis",
-          "Int": 1
-        },
-          {
-          "Name": "Pound",
-          "Int": 1
-        },
-          {
-          "Name": "Disable",
-          "Int": 12
-        },
-          {
-          "Name": "Confusion",
-          "Int": 17
-        },
-          {
-          "Name": "Headbutt",
-          "Int": 24
-        },
-          {
-          "Name": "Poison Gas",
-          "Int": 29
-        },
-          {
-          "Name": "Psychic",
-          "Int": 32
-        },
-          {
-          "Name": "Meditate",
-          "Int": 37
-        }
-      ]
+    {
+      "Name": "Vine Whip",
+      "Int": 1
     },
-     {
-      "pokemon": "Krabby",
-      "moves": [
-          {
-          "Name": "Bubble",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Vicegrip",
-          "Int": 20
-        },
-          {
-          "Name": "Guillotine",
-          "Int": 25
-        },
-          {
-          "Name": "Stomp",
-          "Int": 30
-        },
-          {
-          "Name": "Crabhammer",
-          "Int": 35
-        },
-          {
-          "Name": "Harden",
-          "Int": 40
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Kingler",
-      "moves": [
-          {
-          "Name": "Bubble",
-          "Int": 1
-        },
-               {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Vicegrip",
-          "Int": 1
-        },
-          {
-          "Name": "Vicegrip",
-          "Int": 20
-        },
-          {
-          "Name": "Guillotine",
-          "Int": 25
-        },
-          {
-          "Name": "Stomp",
-          "Int": 34
-        },
-          {
-          "Name": "Crabhammer",
-          "Int": 42
-        },
-          {
-          "Name": "Harden",
-          "Int": 49
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Voltorb",
-      "moves": [
-          {
-          "Name": "Screech",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Sonicboom",
-          "Int": 17
-        },
-          {
-          "Name": "Selfdestruct",
-          "Int": 22
-        },
-          {
-          "Name": "Light Screen",
-          "Int": 29
-        },
-          {
-          "Name": "Swift",
-          "Int": 36
-        },
-          {
-          "Name": "Explosion",
-          "Int": 43
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Electrode",
-      "moves": [
-           {
-          "Name": "Screech",
-          "Int": 1
-        },
-          {
-          "Name": "Sonicboom",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Sonicboom",
-          "Int": 17
-        },
-          {
-          "Name": "Selfdestruct",
-          "Int": 22
-        },
-          {
-          "Name": "Light Screen",
-          "Int": 29
-        },
-          {
-          "Name": "Swift",
-          "Int": 40
-        },
-          {
-          "Name": "Explosion",
-          "Int": 50
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Exeggcute",
-      "moves": [
-          {
-          "Name": "Barrage",
-          "Int": 1
-        },
-          {
-          "Name": "Hypnosis",
-          "Int": 1
-        },
-          {
-          "Name": "Reflect",
-          "Int": 25
-        },
-          {
-          "Name": "Leech Seed",
-          "Int": 28
-        },
-          {
-          "Name": "Stun Spore",
-          "Int": 32
-        },
-          {
-          "Name": "Poisonpowder",
-          "Int": 37
-        },
-          {
-          "Name": "Solarbeam",
-          "Int": 42
-        },
-          {
-          "Name": "Sleep Powder",
-          "Int": 48
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Exeggutor",
-      "moves": [
-          {
-          "Name": "Barrage",
-          "Int": 1
-        },
-          {
-          "Name": "Hypnosis",
-          "Int": 1
-        },
-          {
-          "Name": "Stomp",
-          "Int": 28
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Cubone",
-      "moves": [
-          {
-          "Name": "Bone Club",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 25
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 31
-        },
-          {
-          "Name": "Thrash",
-          "Int": 38
-        },
-          {
-          "Name": "Bonemerang",
-          "Int": 43
-        },
-          {
-          "Name": "Rage",
-          "Int": 46
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Marowak",
-      "moves": [
-          {
-          "Name": "Bone Club",
-          "Int": 1
-        },
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 25
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 31
-        },
-          {
-          "Name": "Thrash",
-          "Int": 38
-        },
-          {
-          "Name": "Bonemerang",
-          "Int": 43
-        },
-          {
-          "Name": "Rage",
-          "Int": 46
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Hitmonlee",
-      "moves": [
-          {
-          "Name": "Double Kick",
-          "Int": 1
-        },
-          {
-          "Name": "Meditate",
-          "Int": 1
-        },
-          {
-          "Name": "Rolling Kick",
-          "Int": 33
-        },
-          {
-          "Name": "Jump Kick",
-          "Int": 38
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 43
-        },
-          {
-          "Name": "Hi Jump Kick",
-          "Int": 48
-        },
-          {
-          "Name": "Mega Kick",
-          "Int": 53
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Hitmonchan",
-      "moves": [
-          {
-          "Name": "Agility",
-          "Int": 1
-        },
-          {
-          "Name": "Comet Punch",
-          "Int": 1
-        },
-          {
-          "Name": "Fire Punch",
-          "Int": 33
-        },
-          {
-          "Name": "Ice Punch",
-          "Int": 38
-        },
-          {
-          "Name": "Thunderpunch",
-          "Int": 43
-        },
-          {
-          "Name": "Mega Punch",
-          "Int": 48
-        },
-          {
-          "Name": "Counter",
-          "Int": 53
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Lickitung",
-      "moves": [
-          {
-          "Name": "Supersonic",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 1
-        },
-          {
-          "Name": "Stomp",
-          "Int": 7
-        },
-          {
-          "Name": "Disable",
-          "Int": 15
-        },
-          {
-          "Name": "Defense Curl",
-          "Int": 23
-        },
-          {
-          "Name": "Slam",
-          "Int": 31
-        },
-          {
-          "Name": "Screech",
-          "Int": 39
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Koffing",
-      "moves": [
-          {
-          "Name": "Smog",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Sludge",
-          "Int": 32
-        },
-          {
-          "Name": "Smokescreen",
-          "Int": 37
-        },
-          {
-          "Name": "Selfdestruct",
-          "Int": 40
-        },
-          {
-          "Name": "Haze",
-          "Int": 45
-        },
-          {
-          "Name": "Explosion",
-          "Int": 48
-        }
-      ]
+    {
+      "Name": "Leech Seed",
+      "Int": 7
     },
-     {
-      "pokemon": "Weezing",
-      "moves": [
-          {
-          "Name": "Sludge",
-          "Int": 1
-        },
-         {
-          "Name": "Smog",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Sludge",
-          "Int": 32
-        },
-          {
-          "Name": "Smokescreen",
-          "Int": 39
-        },
-          {
-          "Name": "Selfdestruct",
-          "Int": 43
-        },
-          {
-          "Name": "Haze",
-          "Int": 49
-        },
-          {
-          "Name": "Explosion",
-          "Int": 53
-        }
-      ]
+    {
+      "Name": "Vine Whip",
+      "Int": 13
     },
-     {
-      "pokemon": "Rhyhorn",
-      "moves": [
-          {
-          "Name": "Horn Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Stomp",
-          "Int": 30
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 35
-        },
-          {
-          "Name": "Fury Attack",
-          "Int": 40
-        },
-          {
-          "Name": "Horn Drill",
-          "Int": 45
-        },
-          {
-          "Name": "Leer",
-          "Int": 50
-        },
-          {
-          "Name": "Take Down",
-          "Int": 55
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Rhydon",
-      "moves": [
-          {
-          "Name": "Fury Attack",
-          "Int": 1
-        },
-              {
-          "Name": "Horn Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Stomp",
-          "Int": 1
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-          {
-          "Name": "Stomp",
-          "Int": 30
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 35
-        },
-          {
-          "Name": "Fury Attack",
-          "Int": 40
-        },
-          {
-          "Name": "Horn Drill",
-          "Int": 48
-        },
-          {
-          "Name": "Leer",
-          "Int": 55
-        },
-          {
-          "Name": "Take Down",
-          "Int": 64
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Chansey",
-      "moves": [
-          {
-          "Name": "Doubleslap",
-          "Int": 1
-        },
-          {
-          "Name": "Pound",
-          "Int": 1
-        },
-          {
-          "Name": "Sing",
-          "Int": 24
-        },
-          {
-          "Name": "Growl",
-          "Int": 30
-        },
-          {
-          "Name": "Minimize",
-          "Int": 38
-        },
-          {
-          "Name": "Defense Curl",
-          "Int": 44
-        },
-          {
-          "Name": "Light Screen",
-          "Int": 48
-        },
-          {
-          "Name": "Double-Edge",
-          "Int": 54 
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Tangela",
-      "moves": [
-          {
-          "Name": "Bind",
-          "Int": 1
-        },
-          {
-          "Name": "Constrict",
-          "Int": 1
-        },
-          {
-          "Name": "Absorb",
-          "Int": 29
-        },
-          {
-          "Name": "Poisonpowder",
-          "Int": 32
-        },
-          {
-          "Name": "Stun Spore",
-          "Int": 36
-        },
-          {
-          "Name": "Sleep Powder",
-          "Int": 39
-        },
-          {
-          "Name": "Slam",
-          "Int": 45
-        },
-          {
-          "Name": "Growth",
-          "Int": 49
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Kangaskhan",
-      "moves": [
-          {
-          "Name": "Comet Punch",
-          "Int": 1
-        },
-          {
-          "Name": "Rage",
-          "Int": 1
-        },
-          {
-          "Name": "Bite",
-          "Int": 26
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 31
-        },
-          {
-          "Name": "Mega Punch",
-          "Int": 36
-        },
-          {
-          "Name": "Leer",
-          "Int": 41
-        },
-          {
-          "Name": "Dizzy Punch",
-          "Int": 46
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Horsea",
-      "moves": [
-          {
-          "Name": "Bubble",
-          "Int": 1
-        },
-          {
-          "Name": "Smokescreen",
-          "Int": 19
-        },
-          {
-          "Name": "Leer",
-          "Int": 24
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 30
-        },
-          {
-          "Name": "Agility",
-          "Int": 37
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 45
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Seadra",
-      "moves": [
-          {
-          "Name": "Bubble",
-          "Int": 1
-        },
-          {
-          "Name": "Smokescreen",
-          "Int": 1
-        },
-          {
-          "Name": "Smokescreen",
-          "Int": 19
-        },
-          {
-          "Name": "Leer",
-          "Int": 24
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 30
-        },
-          {
-          "Name": "Agility",
-          "Int": 41
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 52
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Goldeen",
-      "moves": [
-          {
-          "Name": "Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 19
-        },
-          {
-          "Name": "Horn Attack",
-          "Int": 24
-        },
-          {
-          "Name": "Fury Attack",
-          "Int": 30
-        },
-          {
-          "Name": "Waterfall",
-          "Int": 37
-        },
-          {
-          "Name": "Horn Drill",
-          "Int": 45
-        },
-          {
-          "Name": "Agility",
-          "Int": 54
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Seaking",
-      "moves": [
-         {
-          "Name": "Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 1
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 19
-        },
-          {
-          "Name": "Horn Attack",
-          "Int": 24
-        },
-          {
-          "Name": "Fury Attack",
-          "Int": 30
-        },
-          {
-          "Name": "Waterfall",
-          "Int": 39
-        },
-          {
-          "Name": "Horn Drill",
-          "Int": 48
-        },
-          {
-          "Name": "Agility",
-          "Int": 54
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Staryu",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 17
-        },
-          {
-          "Name": "Harden",
-          "Int": 22
-        },
-          {
-          "Name": "Recover",
-          "Int": 27
-        },
-          {
-          "Name": "Swift",
-          "Int": 32
-        },
-          {
-          "Name": "Minimize",
-          "Int": 37
-        },
-          {
-          "Name": "Light Screen",
-          "Int": 42
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 47
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Starmie",
-      "moves": [
-          {
-          "Name": "Harden",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 1
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Mr. Mime",
-      "moves": [
-          {
-          "Name": "Barrier",
-          "Int": 1
-        },
-          {
-          "Name": "Confusion",
-          "Int": 1
-        },
-          {
-          "Name": "Confusion",
-          "Int": 15
-        },
-          {
-          "Name": "Light Screen",
-          "Int": 23
-        },
-          {
-          "Name": "Doubleslap",
-          "Int": 31
-        },
-          {
-          "Name": "Meditate",
-          "Int": 39
-        },
-          {
-          "Name": "Substitute",
-          "Int": 47
-        }
-      ]
+    {
+      "Name": "Poisonpowder",
+      "Int": 22
     },
-     {
-      "pokemon": "Scyther",
-      "moves": [
-          {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 17
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 20
-        },
-          {
-          "Name": "Double Team",
-          "Int": 24
-        },
-          {
-          "Name": "Slash",
-          "Int": 29
-        },
-          {
-          "Name": "Swords Dance",
-          "Int": 35
-        },
-          {
-          "Name": "Agility",
-          "Int": 42
-        }
-      ]
+    {
+      "Name": "Razor Leaf",
+      "Int": 30
     },
-     {
-      "pokemon": "Jynx",
-      "moves": [
-          {
-          "Name": "Lovely Kiss",
-          "Int": 1
-        },
-          {
-          "Name": "Pound",
-          "Int": 1
-        },
-          {
-          "Name": "Lick",
-          "Int": 18
-        },
-          {
-          "Name": "Doubleslap",
-          "Int": 23
-        },
-          {
-          "Name": "Ice Punch",
-          "Int": 31
-        },
-          {
-          "Name": "Body Slam",
-          "Int": 39
-        },
-          {
-          "Name": "Thrash",
-          "Int": 47
-        },
-          {
-          "Name": "Blizzard",
-          "Int": 58
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Electabuzz",
-      "moves": [
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 34
-        },
-          {
-          "Name": "Screech",
-          "Int": 37
-        },
-          {
-          "Name": "Thunderpunch",
-          "Int": 42
-        },
-          {
-          "Name": "Light Screen",
-          "Int": 49
-        },
-          {
-          "Name": "Thunder",
-          "Int": 54
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Magmar",
-      "moves": [
-          {
-          "Name": "Ember",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 36
-        },
-          {
-          "Name": "Confuse Ray",
-          "Int": 39
-        },
-          {
-          "Name": "Fire Punch",
-          "Int": 43
-        },
-          {
-          "Name": "Smokescreen",
-          "Int": 48
-        },
-          {
-          "Name": "Smog",
-          "Int": 52
-        },
-          {
-          "Name": "Flamethrower",
-          "Int": 55
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Pinsir",
-      "moves": [
-          {
-          "Name": "Vicegrip",
-          "Int": 1
-        },
-          {
-          "Name": "Seismic Toss",
-          "Int": 25
-        },
-          {
-          "Name": "Guillotine",
-          "Int": 30
-        },
-          {
-          "Name": "Focus Energy",
-          "Int": 36
-        },
-          {
-          "Name": "Harden",
-          "Int": 43
-        },
-          {
-          "Name": "Slash",
-          "Int": 49
-        },
-          {
-          "Name": "Swords Dance",
-          "Int": 54
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Tauros",
-      "moves": [
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Stomp",
-          "Int": 21
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 28
-        },
-          {
-          "Name": "Leer",
-          "Int": 35
-        },
-          {
-          "Name": "Rage",
-          "Int": 44
-        },
-          {
-          "Name": "Take Down",
-          "Int": 51
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Magikarp",
-      "moves": [
-          {
-          "Name": "Splash",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 15
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Gyarados",
-      "moves": [
-          {
-          "Name": "Bite",
-          "Int": 1
-        },
-          {
-          "Name": "Dragon Rage",
-          "Int": 1
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Bite",
-          "Int": 20
-        },
-          {
-          "Name": "Dragon Rage",
-          "Int": 25
-        },
-          {
-          "Name": "Leer",
-          "Int": 32
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 41
-        },
-          {
-          "Name": "Hyper Beam",
-          "Int": 52
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Lapras",
-      "moves": [
-          {
-          "Name": "Growl",
-          "Int": 1
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 1
-        },
-          {
-          "Name": "Sing",
-          "Int": 16
-        },
-          {
-          "Name": "Mist",
-          "Int": 20
-        },
-          {
-          "Name": "Body Slam",
-          "Int": 25
-        },
-          {
-          "Name": "Confuse Ray",
-          "Int": 31
-        },
-          {
-          "Name": "Ice Beam",
-          "Int": 38
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 46
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Ditto",
-      "moves": [
-          {
-          "Name": "Transform",
-          "Int": 1
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Eevee",
-      "moves": [
-          {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Quick Attack",
-          "Int": 27
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 31
-        },
-          {
-          "Name": "Bite",
-          "Int": 37
-        },
-          {
-          "Name": "Take Down",
-          "Int": 45
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Vaporeon",
-      "moves": [
-          {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 1
-        },
-          {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Quick Attack",
-          "Int": 27
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 31
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 37
-        },
-          {
-          "Name": "Bite",
-          "Int": 40
-        },
-          {
-          "Name": "Acid Armor",
-          "Int": 42
-        },
-          {
-          "Name": "Haze",
-          "Int": 44
-        },
-          {
-          "Name": "Mist",
-          "Int": 48
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 54
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Jolteon",
-      "moves": [
-           {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 1
-        },
-          {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Quick Attack",
-          "Int": 27
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 31
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 37
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 40
-        },
-          {
-          "Name": "Double Kick",
-          "Int": 42
-        },
-          {
-          "Name": "Agility",
-          "Int": 44
-        },
-          {
-          "Name": "Pin Missle",
-          "Int": 48
-        },
-          {
-          "Name": "Thunder",
-          "Int": 54
-        }
-      ]
+    {
+      "Name": "Growth",
+      "Int": 43
     },
-     {
-      "pokemon": "Flareon",
-      "moves": [
-           {
-          "Name": "Ember",
-          "Int": 1
-        },
-          {
-          "Name": "Sand-Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Quick Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Quick Attack",
-          "Int": 27
-        },
-          {
-          "Name": "Ember",
-          "Int": 31
-        },
-          {
-          "Name": "Tail Whip",
-          "Int": 37
-        },
-          {
-          "Name": "Bite",
-          "Int": 40
-        },
-          {
-          "Name": "Leer",
-          "Int": 42
-        },
-          {
-          "Name": "Fire Spin",
-          "Int": 44
-        },
-          {
-          "Name": "Rage",
-          "Int": 48
-        },
-          {
-          "Name": "Flamethrower",
-          "Int": 54
-        }
-      ]
+    {
+      "Name": "Sleep Powder",
+      "Int": 55
     },
-     {
-      "pokemon": "Porygon",
-      "moves": [
-          {
-          "Name": "Conversion",
-          "Int": 1
-        },
-          {
-          "Name": "Sharpen",
-          "Int": 1
-        },
-          {
-          "Name": "Tackle",
-          "Int": 1
-        },
-          {
-          "Name": "Psybeam",
-          "Int": 23
-        },
-          {
-          "Name": "Recover",
-          "Int": 28
-        },
-          {
-          "Name": "Agility",
-          "Int": 35
-        },
-          {
-          "Name": "Tri Attack",
-          "Int": 42
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Omanyte",
-      "moves": [
-          {
-          "Name": "Water Gun",
-          "Int": 1
-        },
-          {
-          "Name": "Withdraw",
-          "Int": 1
-        },
-          {
-          "Name": "Horn Attack",
-          "Int": 34
-        },
-          {
-          "Name": "Leer",
-          "Int": 39
-        },
-          {
-          "Name": "Spike Cannon",
-          "Int": 46
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 53
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Omastar",
-      "moves": [
-          {
-          "Name": "Horn Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Water Gun",
-          "Int": 1
-        },
-          {
-          "Name": "Withdraw",
-          "Int": 1
-        },
-          {
-          "Name": "Horn Attack",
-          "Int": 34
-        },
-          {
-          "Name": "Leer",
-          "Int": 39
-        },
-          {
-          "Name": "Spike Cannon",
-          "Int": 44
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 49
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Kabuto",
-      "moves": [
-          {
-          "Name": "Harden",
-          "Int": 1
-        },
-          {
-          "Name": "Scratch",
-          "Int": 1
-        },
-          {
-          "Name": "Absorb",
-          "Int": 34
-        },
-          {
-          "Name": "Slash",
-          "Int": 39
-        },
-          {
-          "Name": "Leer",
-          "Int": 44
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 49
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Kabutops",
-      "moves": [
-          {
-          "Name": "Absorb",
-          "Int": 1
-        },
-          {
-          "Name": "Harden",
-          "Int": 1
-        },
-          {
-          "Name": "Scratch",
-          "Int": 1
-        },
-          {
-          "Name": "Absorb",
-          "Int": 34
-        },
-          {
-          "Name": "Slash",
-          "Int": 39
-        },
-          {
-          "Name": "Leer",
-          "Int": 46
-        },
-          {
-          "Name": "Hydro Pump",
-          "Int": 53
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Aerodactyl",
-      "moves": [
-          {
-          "Name": "Agility",
-          "Int": 1
-        },
-          {
-          "Name": "Wing Attack",
-          "Int": 1
-        },
-          {
-          "Name": "Supersonic",
-          "Int": 33
-        },
-          {
-          "Name": "Bite",
-          "Int": 38
-        },
-          {
-          "Name": "Take Down",
-          "Int": 45
-        },
-          {
-          "Name": "Hyper Beam",
-          "Int": 54
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Snorlax",
-      "moves": [
-          {
-          "Name": "Amnesia",
-          "Int": 1
-        },
-          {
-          "Name": "Headbutt",
-          "Int": 1
-        },
-          {
-          "Name": "Rest",
-          "Int": 1
-        },
-          {
-          "Name": "Body Slam",
-          "Int": 35
-        },
-          {
-          "Name": "Harden",
-          "Int": 41
-        },
-          {
-          "Name": "Double-Edge",
-          "Int": 48
-        },
-          {
-          "Name": "Hyper Beam",
-          "Int": 56
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Articuno",
-      "moves": [
-          {
-          "Name": "Ice Beam",
-          "Int": 1
-        },
-          {
-          "Name": "Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Blizzard",
-          "Int": 51
-        },
-          {
-          "Name": "Agility",
-          "Int": 55
-        },
-          {
-          "Name": "Mist",
-          "Int": 60
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Zapdos",
-      "moves": [
-          {
-          "Name": "Drill Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Thundershock",
-          "Int": 1
-        },
-          {
-          "Name": "Thunder",
-          "Int": 51
-        },
-          {
-          "Name": "Agility",
-          "Int": 55
-        },
-          {
-          "Name": "Light Screen",
-          "Int": 60
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Moltres",
-      "moves": [
-          {
-          "Name": "Fire Spin",
-          "Int": 1
-        },
-          {
-          "Name": "Peck",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 51
-        },
-          {
-          "Name": "Agility",
-          "Int": 55
-        },
-          {
-          "Name": "Sky Attack",
-          "Int": 60
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Dratini",
-      "moves": [
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 1
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 10
-        },
-          {
-          "Name": "Agility",
-          "Int": 20
-        },
-          {
-          "Name": "Slam",
-          "Int": 30
-        },
-          {
-          "Name": "Dragon Rage",
-          "Int": 40
-        },
-          {
-          "Name": "Hyper Beam",
-          "Int": 50
-        }
-      ]
-    }  ,
-     {
-      "pokemon": "Dragonair",
-      "moves": [
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 1
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 10
-        },
-          {
-          "Name": "Agility",
-          "Int": 20
-        },
-          {
-          "Name": "Slam",
-          "Int": 35
-        },
-          {
-          "Name": "Dragon Rage",
-          "Int": 45
-        },
-          {
-          "Name": "Hyper Beam",
-          "Int": 55
-        }
-      ]
+    {
+      "Name": "Solarbeam",
+      "Int": 65
+    }
+  ],
+  "Charmander": [
+    {
+      "Name": "Scratch",
+      "Int": 1
     },
-     {
-      "pokemon": "Dragonite",
-      "moves": [
-          {
-          "Name": "Agility",
-          "Int": 1
-        },
-          {
-          "Name": "Leer",
-          "Int": 1
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 1
-        },
-          {
-          "Name": "Wrap",
-          "Int": 1
-        },
-          {
-          "Name": "Thunder Wave",
-          "Int": 10
-        },
-          {
-          "Name": "Agility",
-          "Int": 20
-        },
-          {
-          "Name": "Slam",
-          "Int": 35
-        },
-          {
-          "Name": "Dragon Rage",
-          "Int": 45
-        },
-          {
-          "Name": "Hyper Beam",
-          "Int": 60
-        }
-      ]
+    {
+      "Name": "Growl",
+      "Int": 1
     },
-     {
-      "pokemon": "Mewtwo",
-      "moves": [
-          {
-          "Name": "Confusion",
-          "Int": 1
-        },
-          {
-          "Name": "Disable",
-          "Int": 1
-        },
-          {
-          "Name": "Psychic",
-          "Int": 1
-        },
-          {
-          "Name": "Swift",
-          "Int": 1
-        },
-          {
-          "Name": "Barrier",
-          "Int": 63
-        },
-          {
-          "Name": "Psychic",
-          "Int": 66
-        },
-          {
-          "Name": "Recover",
-          "Int": 70
-        },
-          {
-          "Name": "Mist",
-          "Int": 75
-        },
-          {
-          "Name": "Amnesia",
-          "Int": 81
-        }
-      ]
-    } ,
-     {
-      "pokemon": "Mew",
-      "moves": [
-          {
-          "Name": "Pound",
-          "Int": 1
-        },
-          {
-          "Name": "Transform",
-          "Int": 10
-        },
-          {
-          "Name": "Mega Punch",
-          "Int": 20
-        },
-          {
-          "Name": "Metronome",
-          "Int": 30
-        },
-          {
-          "Name": "Psychic",
-          "Int": 40
-        }
-      ]
+    {
+      "Name": "Ember",
+      "Int": 7
     },
-      {
-          "pokemon": "Linq",
-          "moves": [
-              {
-                  "Name": "Transform",
-                  "Int": 1
-              },
-              {
-                  "Name": "Substitute",
-                  "Int": 1
-              },
-              {
-                  "Name": "Psychic",
-                  "Int": 1
-              },
-              {
-                  "Name": "Metronome",
-                  "Int": 1
-              },
-          ]
-      }
-      
-      
+    {
+      "Name": "Leer",
+      "Int": 15
+    },
+    {
+      "Name": "Rage",
+      "Int": 22
+    },
+    {
+      "Name": "Slash",
+      "Int": 30
+    },
+    {
+      "Name": "Flamethrower",
+      "Int": 38
+    },
+    {
+      "Name": "Fire Spin",
+      "Int": 46
+    }
+  ],
+  "Charmeleon": [
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Ember",
+      "Int": 9
+    },
+    {
+      "Name": "Leer",
+      "Int": 15
+    },
+    {
+      "Name": "Rage",
+      "Int": 24
+    },
+    {
+      "Name": "Slash",
+      "Int": 33
+    },
+    {
+      "Name": "Flamethrower",
+      "Int": 42
+    },
+    {
+      "Name": "Fire Spin",
+      "Int": 56
+    }
+  ],
+  "Charizard": [
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Ember",
+      "Int": 9
+    },
+    {
+      "Name": "Leer",
+      "Int": 15
+    },
+    {
+      "Name": "Rage",
+      "Int": 24
+    },
+    {
+      "Name": "Slash",
+      "Int": 36
+    },
+    {
+      "Name": "Flamethrower",
+      "Int": 46
+    },
+    {
+      "Name": "Fire Spin",
+      "Int": 55
+    }
+  ],
+  "Squirtle": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Bubble",
+      "Int": 8
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 15
+    },
+    {
+      "Name": "Bite",
+      "Int": 22
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 28
+    },
+    {
+      "Name": "Skull Bash",
+      "Int": 39
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 42
+    }
+  ],
+  "Wartortle": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Bubble",
+      "Int": 8
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 15
+    },
+    {
+      "Name": "Bite",
+      "Int": 24
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 31
+    },
+    {
+      "Name": "Skull Bash",
+      "Int": 39
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 47
+    }
+  ],
+  "Blastoise": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    },
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Bubble",
+      "Int": 8
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 15
+    },
+    {
+      "Name": "Bite",
+      "Int": 22
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 28
+    },
+    {
+      "Name": "Skull Bash",
+      "Int": 39
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 47
+    }
+  ],
+  "Caterpie": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "String Shot",
+      "Int": 1
+    }
+  ],
+  "Metapod": [
+    {
+      "Name": "Harden",
+      "Int": 1
+    }
+  ],
+  "Butterfree": [
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Confusion",
+      "Int": 12
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 15
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 16
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 17
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 21
+    },
+    {
+      "Name": "Whirlwind",
+      "Int": 26
+    },
+    {
+      "Name": "Psybeam",
+      "Int": 32
+    }
+  ],
+  "Weedle": [
+    {
+      "Name": "Poison Sting",
+      "Int": 1
+    },
+    {
+      "Name": "String Shot",
+      "Int": 1
+    }
+  ],
+  "Kakuna": [
+    {
+      "Name": "Harden",
+      "Int": 1
+    }
+  ],
+  "Beedrill": [
+    {
+      "Name": "Fury Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 12
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 16
+    },
+    {
+      "Name": "Twineedle",
+      "Int": 20
+    },
+    {
+      "Name": "Rage",
+      "Int": 25
+    },
+    {
+      "Name": "Pin Missle",
+      "Int": 30
+    },
+    {
+      "Name": "Agility",
+      "Int": 35
+    }
+  ],
+  "Pidgey": [
+    {
+      "Name": "Gust",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 5
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 12
+    },
+    {
+      "Name": "Whirlwind",
+      "Int": 19
+    },
+    {
+      "Name": "Wing Attack",
+      "Int": 28
+    },
+    {
+      "Name": "Agility",
+      "Int": 36
+    },
+    {
+      "Name": "Mirror Move",
+      "Int": 44
+    }
+  ],
+  "Pidgeotto": [
+    {
+      "Name": "Gust",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 5
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 12
+    },
+    {
+      "Name": "Whirlwind",
+      "Int": 21
+    },
+    {
+      "Name": "Wing Attack",
+      "Int": 31
+    },
+    {
+      "Name": "Agility",
+      "Int": 40
+    },
+    {
+      "Name": "Mirror Move",
+      "Int": 49
+    }
+  ],
+  "Pidgeot": [
+    {
+      "Name": "Gust",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 5
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 12
+    },
+    {
+      "Name": "Whirlwind",
+      "Int": 21
+    },
+    {
+      "Name": "Wing Attack",
+      "Int": 31
+    },
+    {
+      "Name": "Agility",
+      "Int": 44
+    },
+    {
+      "Name": "Mirror Move",
+      "Int": 54
+    }
+  ],
+  "Rattata": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 7
+    },
+    {
+      "Name": "Hyper Fang",
+      "Int": 14
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 23
+    },
+    {
+      "Name": "Super Fang",
+      "Int": 34
+    }
+  ],
+  "Raticate": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 7
+    },
+    {
+      "Name": "Hyper Fang",
+      "Int": 14
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 27
+    },
+    {
+      "Name": "Super Fang",
+      "Int": 41
+    }
+  ],
+  "Spearow": [
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 9
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 15
+    },
+    {
+      "Name": "Mirror Move",
+      "Int": 22
+    },
+    {
+      "Name": "Drill Peck",
+      "Int": 29
+    },
+    {
+      "Name": "Agility",
+      "Int": 36
+    }
+  ],
+  "Fearow": [
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 9
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 15
+    },
+    {
+      "Name": "Mirror Move",
+      "Int": 25
+    },
+    {
+      "Name": "Drill Peck",
+      "Int": 34
+    },
+    {
+      "Name": "Agility",
+      "Int": 43
+    }
+  ],
+  "Ekans": [
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 10
+    },
+    {
+      "Name": "Bite",
+      "Int": 17
+    },
+    {
+      "Name": "Glare",
+      "Int": 24
+    },
+    {
+      "Name": "Screech",
+      "Int": 31
+    },
+    {
+      "Name": "Acid",
+      "Int": 38
+    }
+  ],
+  "Arbok": [
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 1
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 10
+    },
+    {
+      "Name": "Bite",
+      "Int": 17
+    },
+    {
+      "Name": "Glare",
+      "Int": 24
+    },
+    {
+      "Name": "Screech",
+      "Int": 31
+    },
+    {
+      "Name": "Acid",
+      "Int": 38
+    }
+  ],
+  "Pikachu": [
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 9
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 16
+    },
+    {
+      "Name": "Swift",
+      "Int": 26
+    },
+    {
+      "Name": "Agility",
+      "Int": 33
+    },
+    {
+      "Name": "Thunder",
+      "Int": 43
+    }
+  ],
+  "Raichu": [
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 1
+    }
+  ],
+  "Sandshrew": [
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 10
+    },
+    {
+      "Name": "Slash",
+      "Int": 17
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 24
+    },
+    {
+      "Name": "Swift",
+      "Int": 31
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 38
+    }
+  ],
+  "Sandslash": [
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 10
+    },
+    {
+      "Name": "Slash",
+      "Int": 17
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 27
+    },
+    {
+      "Name": "Swift",
+      "Int": 36
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 47
+    }
+  ],
+  "Nidoran♀": [
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 8
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 14
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 21
+    },
+    {
+      "Name": "Bite",
+      "Int": 29
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 36
+    },
+    {
+      "Name": "Double Kick",
+      "Int": 43
+    }
+  ],
+  "Nidorina": [
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 8
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 14
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 23
+    },
+    {
+      "Name": "Bite",
+      "Int": 32
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 41
+    },
+    {
+      "Name": "Double Kick",
+      "Int": 50
+    }
+  ],
+  "Nidoqueen": [
+    {
+      "Name": "Body Slam",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 8
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 14
+    },
+    {
+      "Name": "Body Slam",
+      "Int": 23
+    }
+  ],
+  "Nidoran♂": [
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 8
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 14
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 21
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 29
+    },
+    {
+      "Name": "Horn Drill",
+      "Int": 36
+    },
+    {
+      "Name": "Double Kick",
+      "Int": 43
+    }
+  ],
+  "Nidorino": [
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 8
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 14
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 23
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 32
+    },
+    {
+      "Name": "Horn Drill",
+      "Int": 41
+    },
+    {
+      "Name": "Double Kick",
+      "Int": 50
+    }
+  ],
+  "Nidoking": [
+    {
+      "Name": "Horn Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Thrash",
+      "Int": 1
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 8
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 14
+    },
+    {
+      "Name": "Thrash",
+      "Int": 23
+    }
+  ],
+  "Clefairy": [
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Sing",
+      "Int": 13
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 18
+    },
+    {
+      "Name": "Minimize",
+      "Int": 24
+    },
+    {
+      "Name": "Metronome",
+      "Int": 31
+    },
+    {
+      "Name": "Defense Curl",
+      "Int": 39
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 48
+    }
+  ],
+  "Clefable": [
+    {
+      "Name": "Doubleslap",
+      "Int": 1
+    },
+    {
+      "Name": "Metronome",
+      "Int": 1
+    },
+    {
+      "Name": "Minimize",
+      "Int": 1
+    },
+    {
+      "Name": "Sing",
+      "Int": 1
+    }
+  ],
+  "Vulpix": [
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 16
+    },
+    {
+      "Name": "Roar",
+      "Int": 21
+    },
+    {
+      "Name": "Confuse Ray",
+      "Int": 28
+    },
+    {
+      "Name": "Flamethrower",
+      "Int": 35
+    },
+    {
+      "Name": "Fire Spin",
+      "Int": 42
+    }
+  ],
+  "Ninetales": [
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Roar",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    }
+  ],
+  "Jigglypuff": [
+    {
+      "Name": "Sing",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 9
+    },
+    {
+      "Name": "Disable",
+      "Int": 14
+    },
+    {
+      "Name": "Defense Curl",
+      "Int": 19
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 24
+    },
+    {
+      "Name": "Rest",
+      "Int": 29
+    },
+    {
+      "Name": "Body Slam",
+      "Int": 34
+    },
+    {
+      "Name": "Double-Edge",
+      "Int": 39
+    }
+  ],
+  "Wigglytuff": [
+    {
+      "Name": "Defense Curl",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 1
+    },
+    {
+      "Name": "Sing",
+      "Int": 1
+    }
+  ],
+  "Zubat": [
+    {
+      "Name": "Leech Life",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 10
+    },
+    {
+      "Name": "Bite",
+      "Int": 15
+    },
+    {
+      "Name": "Confuse Ray",
+      "Int": 21
+    },
+    {
+      "Name": "Wing Attack",
+      "Int": 28
+    },
+    {
+      "Name": "Haze",
+      "Int": 36
+    }
+  ],
+  "Golbat": [
+    {
+      "Name": "Leech Life",
+      "Int": 1
+    },
+    {
+      "Name": "Bite",
+      "Int": 1
+    },
+    {
+      "Name": "Screech",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 10
+    },
+    {
+      "Name": "Bite",
+      "Int": 15
+    },
+    {
+      "Name": "Confuse Ray",
+      "Int": 21
+    },
+    {
+      "Name": "Wing Attack",
+      "Int": 32
+    },
+    {
+      "Name": "Haze",
+      "Int": 43
+    }
+  ],
+  "Oddish": [
+    {
+      "Name": "Absorb",
+      "Int": 1
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 15
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 17
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 19
+    },
+    {
+      "Name": "Acid",
+      "Int": 24
+    },
+    {
+      "Name": "Petal Dance",
+      "Int": 33
+    },
+    {
+      "Name": "Solarbeam",
+      "Int": 46
+    }
+  ],
+  "Gloom": [
+    {
+      "Name": "Absorb",
+      "Int": 1
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 1
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 1
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 15
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 17
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 19
+    },
+    {
+      "Name": "Acid",
+      "Int": 28
+    },
+    {
+      "Name": "Petal Dance",
+      "Int": 38
+    },
+    {
+      "Name": "Solarbeam",
+      "Int": 52
+    }
+  ],
+  "Vileplume": [
+    {
+      "Name": "Acid",
+      "Int": 1
+    },
+    {
+      "Name": "Petal Dance",
+      "Int": 1
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 1
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 1
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 15
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 17
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 19
+    }
+  ],
+  "Paras": [
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 13
+    },
+    {
+      "Name": "Leech Life",
+      "Int": 20
+    },
+    {
+      "Name": "Spore",
+      "Int": 27
+    },
+    {
+      "Name": "Slash",
+      "Int": 34
+    },
+    {
+      "Name": "Growth",
+      "Int": 41
+    }
+  ],
+  "Parasect": [
+    {
+      "Name": "Leech Life",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 1
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 13
+    },
+    {
+      "Name": "Leech Life",
+      "Int": 20
+    },
+    {
+      "Name": "Spore",
+      "Int": 30
+    },
+    {
+      "Name": "Slash",
+      "Int": 39
+    },
+    {
+      "Name": "Growth",
+      "Int": 48
+    }
+  ],
+  "Venonat": [
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 24
+    },
+    {
+      "Name": "Leech Life",
+      "Int": 27
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 30
+    },
+    {
+      "Name": "Psybeam",
+      "Int": 35
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 38
+    },
+    {
+      "Name": "Psychic",
+      "Int": 43
+    }
+  ],
+  "Venomoth": [
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Leech Life",
+      "Int": 1
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 24
+    },
+    {
+      "Name": "Leech Life",
+      "Int": 27
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 30
+    },
+    {
+      "Name": "Psybeam",
+      "Int": 38
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 43
+    },
+    {
+      "Name": "Psychic",
+      "Int": 50
+    }
+  ],
+  "Diglett": [
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 15
+    },
+    {
+      "Name": "Dig",
+      "Int": 19
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 24
+    },
+    {
+      "Name": "Slash",
+      "Int": 31
+    },
+    {
+      "Name": "Earthquake",
+      "Int": 40
+    }
+  ],
+  "Dugtrio": [
+    {
+      "Name": "Dig",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 15
+    },
+    {
+      "Name": "Dig",
+      "Int": 19
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 24
+    },
+    {
+      "Name": "Slash",
+      "Int": 35
+    },
+    {
+      "Name": "Earthquake",
+      "Int": 47
+    }
+  ],
+  "Meowth": [
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Bite",
+      "Int": 12
+    },
+    {
+      "Name": "Pay Day",
+      "Int": 17
+    },
+    {
+      "Name": "Screech",
+      "Int": 24
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 33
+    },
+    {
+      "Name": "Slash",
+      "Int": 44
+    }
+  ],
+  "Persian": [
+    {
+      "Name": "Bite",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Screech",
+      "Int": 1
+    },
+    {
+      "Name": "Bite",
+      "Int": 12
+    },
+    {
+      "Name": "Pay Day",
+      "Int": 17
+    },
+    {
+      "Name": "Screech",
+      "Int": 24
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 37
+    },
+    {
+      "Name": "Slash",
+      "Int": 51
+    }
+  ],
+  "Psyduck": [
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 28
+    },
+    {
+      "Name": "Disable",
+      "Int": 31
+    },
+    {
+      "Name": "Confusion",
+      "Int": 36
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 43
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 52
+    }
+  ],
+  "Golduck": [
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 28
+    },
+    {
+      "Name": "Disable",
+      "Int": 31
+    },
+    {
+      "Name": "Confusion",
+      "Int": 39
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 48
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 59
+    }
+  ],
+  "Mankey": [
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Karate Chop",
+      "Int": 15
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 21
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 27
+    },
+    {
+      "Name": "Seismic Toss",
+      "Int": 33
+    },
+    {
+      "Name": "Thrash",
+      "Int": 39
+    }
+  ],
+  "Primeape": [
+    {
+      "Name": "Fury Swipes",
+      "Int": 1
+    },
+    {
+      "Name": "Karate Chop",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Karate Chop",
+      "Int": 15
+    },
+    {
+      "Name": "Fury Swipes",
+      "Int": 21
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 27
+    },
+    {
+      "Name": "Seismic Toss",
+      "Int": 37
+    },
+    {
+      "Name": "Thrash",
+      "Int": 46
+    }
+  ],
+  "Growlithe": [
+    {
+      "Name": "Bite",
+      "Int": 1
+    },
+    {
+      "Name": "Roar",
+      "Int": 1
+    },
+    {
+      "Name": "Ember",
+      "Int": 18
+    },
+    {
+      "Name": "Leer",
+      "Int": 23
+    },
+    {
+      "Name": "Take Down",
+      "Int": 30
+    },
+    {
+      "Name": "Agility",
+      "Int": 39
+    },
+    {
+      "Name": "Flamethrower",
+      "Int": 50
+    }
+  ],
+  "Arcanine": [
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Roar",
+      "Int": 1
+    },
+    {
+      "Name": "Take Down",
+      "Int": 1
+    }
+  ],
+  "Poliwag": [
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 16
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 19
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 25
+    },
+    {
+      "Name": "Body Slam",
+      "Int": 31
+    },
+    {
+      "Name": "Amnesia",
+      "Int": 38
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 45
+    }
+  ],
+  "Poliwhirl": [
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 16
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 19
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 26
+    },
+    {
+      "Name": "Body Slam",
+      "Int": 33
+    },
+    {
+      "Name": "Amnesia",
+      "Int": 41
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 49
+    }
+  ],
+  "Poliwrath": [
+    {
+      "Name": "Body Slam",
+      "Int": 1
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 16
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 19
+    }
+  ],
+  "Abra": [
+    {
+      "Name": "Teleport",
+      "Int": 1
+    }
+  ],
+  "Kadabra": [
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Teleport",
+      "Int": 1
+    },
+    {
+      "Name": "Confusion",
+      "Int": 16
+    },
+    {
+      "Name": "Disable",
+      "Int": 20
+    },
+    {
+      "Name": "Psybeam",
+      "Int": 27
+    },
+    {
+      "Name": "Recover",
+      "Int": 31
+    },
+    {
+      "Name": "Psychic",
+      "Int": 38
+    },
+    {
+      "Name": "Reflect",
+      "Int": 42
+    }
+  ],
+  "Alakazam": [
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Teleport",
+      "Int": 1
+    },
+    {
+      "Name": "Confusion",
+      "Int": 16
+    },
+    {
+      "Name": "Disable",
+      "Int": 20
+    },
+    {
+      "Name": "Psybeam",
+      "Int": 27
+    },
+    {
+      "Name": "Recover",
+      "Int": 31
+    },
+    {
+      "Name": "Psychic",
+      "Int": 38
+    },
+    {
+      "Name": "Reflect",
+      "Int": 42
+    }
+  ],
+  "Machop": [
+    {
+      "Name": "Karate Chop",
+      "Int": 1
+    },
+    {
+      "Name": "Low Kick",
+      "Int": 20
+    },
+    {
+      "Name": "Leer",
+      "Int": 25
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 32
+    },
+    {
+      "Name": "Seismic Toss",
+      "Int": 39
+    },
+    {
+      "Name": "Submission",
+      "Int": 46
+    }
+  ],
+  "Machoke": [
+    {
+      "Name": "Karate Chop",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Low Kick",
+      "Int": 1
+    },
+    {
+      "Name": "Low Kick",
+      "Int": 20
+    },
+    {
+      "Name": "Leer",
+      "Int": 25
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 36
+    },
+    {
+      "Name": "Seismic Toss",
+      "Int": 44
+    },
+    {
+      "Name": "Submission",
+      "Int": 52
+    }
+  ],
+  "Machamp": [
+    {
+      "Name": "Karate Chop",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Low Kick",
+      "Int": 1
+    },
+    {
+      "Name": "Low Kick",
+      "Int": 20
+    },
+    {
+      "Name": "Leer",
+      "Int": 25
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 36
+    },
+    {
+      "Name": "Seismic Toss",
+      "Int": 44
+    },
+    {
+      "Name": "Submission",
+      "Int": 52
+    }
+  ],
+  "Bellsprout": [
+    {
+      "Name": "Growth",
+      "Int": 1
+    },
+    {
+      "Name": "Vine Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 13
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 15
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 18
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 21
+    },
+    {
+      "Name": "Acid",
+      "Int": 26
+    },
+    {
+      "Name": "Razor Leaf",
+      "Int": 33
+    },
+    {
+      "Name": "Slam",
+      "Int": 42
+    }
+  ],
+  "Weepinbell": [
+    {
+      "Name": "Growth",
+      "Int": 1
+    },
+    {
+      "Name": "Vine Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 13
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 15
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 18
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 23
+    },
+    {
+      "Name": "Acid",
+      "Int": 29
+    },
+    {
+      "Name": "Razor Leaf",
+      "Int": 38
+    },
+    {
+      "Name": "Slam",
+      "Int": 49
+    }
+  ],
+  "Victreebel": [
+    {
+      "Name": "Acid",
+      "Int": 1
+    },
+    {
+      "Name": "Razor Leaf",
+      "Int": 1
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 1
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 13
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 15
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 18
+    }
+  ],
+  "Tentacool": [
+    {
+      "Name": "Acid",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 7
+    },
+    {
+      "Name": "Wrap",
+      "Int": 13
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 18
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 22
+    },
+    {
+      "Name": "Constrict",
+      "Int": 27
+    },
+    {
+      "Name": "Barrier",
+      "Int": 33
+    },
+    {
+      "Name": "Screech",
+      "Int": 40
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 48
+    }
+  ],
+  "Tentacruel": [
+    {
+      "Name": "Acid",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 7
+    },
+    {
+      "Name": "Wrap",
+      "Int": 13
+    },
+    {
+      "Name": "Poison Sting",
+      "Int": 18
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 22
+    },
+    {
+      "Name": "Constrict",
+      "Int": 27
+    },
+    {
+      "Name": "Barrier",
+      "Int": 35
+    },
+    {
+      "Name": "Screech",
+      "Int": 43
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 50
+    }
+  ],
+  "Geodude": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Defense Curl",
+      "Int": 11
+    },
+    {
+      "Name": "Rock Throw",
+      "Int": 16
+    },
+    {
+      "Name": "Selfdestruct",
+      "Int": 21
+    },
+    {
+      "Name": "Harden",
+      "Int": 26
+    },
+    {
+      "Name": "Earthquake",
+      "Int": 31
+    },
+    {
+      "Name": "Explosion",
+      "Int": 36
+    }
+  ],
+  "Graveler": [
+    {
+      "Name": "Defense Curl",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Defense Curl",
+      "Int": 11
+    },
+    {
+      "Name": "Rock Throw",
+      "Int": 16
+    },
+    {
+      "Name": "Selfdestruct",
+      "Int": 21
+    },
+    {
+      "Name": "Harden",
+      "Int": 29
+    },
+    {
+      "Name": "Earthquake",
+      "Int": 36
+    },
+    {
+      "Name": "Explosion",
+      "Int": 43
+    }
+  ],
+  "Golem": [
+    {
+      "Name": "Defense Curl",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Defense Curl",
+      "Int": 11
+    },
+    {
+      "Name": "Rock Throw",
+      "Int": 16
+    },
+    {
+      "Name": "Selfdestruct",
+      "Int": 21
+    },
+    {
+      "Name": "Harden",
+      "Int": 29
+    },
+    {
+      "Name": "Earthquake",
+      "Int": 36
+    },
+    {
+      "Name": "Explosion",
+      "Int": 43
+    }
+  ],
+  "Ponyta": [
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 30
+    },
+    {
+      "Name": "Stomp",
+      "Int": 32
+    },
+    {
+      "Name": "Growl",
+      "Int": 35
+    },
+    {
+      "Name": "Fire Spin",
+      "Int": 39
+    },
+    {
+      "Name": "Take Down",
+      "Int": 43
+    },
+    {
+      "Name": "Agility",
+      "Int": 48
+    }
+  ],
+  "Rapidash": [
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Stomp",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 30
+    },
+    {
+      "Name": "Stomp",
+      "Int": 32
+    },
+    {
+      "Name": "Growl",
+      "Int": 35
+    },
+    {
+      "Name": "Fire Spin",
+      "Int": 39
+    },
+    {
+      "Name": "Take Down",
+      "Int": 47
+    },
+    {
+      "Name": "Agility",
+      "Int": 55
+    }
+  ],
+  "Slowpoke": [
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 18
+    },
+    {
+      "Name": "Headbutt",
+      "Int": 22
+    },
+    {
+      "Name": "Growl",
+      "Int": 27
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 33
+    },
+    {
+      "Name": "Amnesia",
+      "Int": 40
+    },
+    {
+      "Name": "Psychic",
+      "Int": 48
+    }
+  ],
+  "Slowbro": [
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Headbutt",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 18
+    },
+    {
+      "Name": "Headbutt",
+      "Int": 22
+    },
+    {
+      "Name": "Growl",
+      "Int": 27
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 33
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 37
+    },
+    {
+      "Name": "Amnesia",
+      "Int": 44
+    },
+    {
+      "Name": "Psychic",
+      "Int": 55
+    }
+  ],
+  "Magnemite": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Sonicboom",
+      "Int": 21
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 25
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 29
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 35
+    },
+    {
+      "Name": "Swift",
+      "Int": 41
+    },
+    {
+      "Name": "Screech",
+      "Int": 47
+    }
+  ],
+  "Magneton": [
+    {
+      "Name": "Sonicboom",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 1
+    },
+    {
+      "Name": "Sonicboom",
+      "Int": 21
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 25
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 29
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 38
+    },
+    {
+      "Name": "Swift",
+      "Int": 46
+    },
+    {
+      "Name": "Screech",
+      "Int": 54
+    }
+  ],
+  "Farfetch'd": [
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 7
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 15
+    },
+    {
+      "Name": "Swords Dance",
+      "Int": 23
+    },
+    {
+      "Name": "Agility",
+      "Int": 31
+    },
+    {
+      "Name": "Slash",
+      "Int": 39
+    }
+  ],
+  "Doduo": [
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 20
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 24
+    },
+    {
+      "Name": "Drill Peck",
+      "Int": 30
+    },
+    {
+      "Name": "Rage",
+      "Int": 36
+    },
+    {
+      "Name": "Tri Attack",
+      "Int": 40
+    },
+    {
+      "Name": "Agility",
+      "Int": 44
+    }
+  ],
+  "Dodrio": [
+    {
+      "Name": "Fury Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 20
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 24
+    },
+    {
+      "Name": "Drill Peck",
+      "Int": 30
+    },
+    {
+      "Name": "Rage",
+      "Int": 39
+    },
+    {
+      "Name": "Tri Attack",
+      "Int": 45
+    },
+    {
+      "Name": "Agility",
+      "Int": 51
+    }
+  ],
+  "Seel": [
+    {
+      "Name": "Headbutt",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 30
+    },
+    {
+      "Name": "Aurora Beam",
+      "Int": 35
+    },
+    {
+      "Name": "Rest",
+      "Int": 40
+    },
+    {
+      "Name": "Take Down",
+      "Int": 45
+    },
+    {
+      "Name": "Ice Beam",
+      "Int": 50
+    }
+  ],
+  "Dewgong": [
+    {
+      "Name": "Aurora Beam",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Headbutt",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 30
+    },
+    {
+      "Name": "Aurora Beam",
+      "Int": 35
+    },
+    {
+      "Name": "Rest",
+      "Int": 44
+    },
+    {
+      "Name": "Take Down",
+      "Int": 50
+    },
+    {
+      "Name": "Ice Beam",
+      "Int": 56
+    }
+  ],
+  "Grimer": [
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Poison Gas",
+      "Int": 30
+    },
+    {
+      "Name": "Minimize",
+      "Int": 33
+    },
+    {
+      "Name": "Sludge",
+      "Int": 37
+    },
+    {
+      "Name": "Harden",
+      "Int": 42
+    },
+    {
+      "Name": "Screech",
+      "Int": 48
+    },
+    {
+      "Name": "Acid Armor",
+      "Int": 55
+    }
+  ],
+  "Muk": [
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Poison Gas",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Poison Gas",
+      "Int": 30
+    },
+    {
+      "Name": "Minimize",
+      "Int": 33
+    },
+    {
+      "Name": "Sludge",
+      "Int": 37
+    },
+    {
+      "Name": "Harden",
+      "Int": 45
+    },
+    {
+      "Name": "Screech",
+      "Int": 53
+    },
+    {
+      "Name": "Acid Armor",
+      "Int": 60
+    }
+  ],
+  "Shellder": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 18
+    },
+    {
+      "Name": "Clamp",
+      "Int": 23
+    },
+    {
+      "Name": "Aurora Beam",
+      "Int": 30
+    },
+    {
+      "Name": "Leer",
+      "Int": 39
+    },
+    {
+      "Name": "Ice Beam",
+      "Int": 50
+    }
+  ],
+  "Cloyster": [
+    {
+      "Name": "Aurora Beam",
+      "Int": 1
+    },
+    {
+      "Name": "Clamp",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 1
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 1
+    },
+    {
+      "Name": "Spike Cannon",
+      "Int": 50
+    }
+  ],
+  "Gastly": [
+    {
+      "Name": "Confuse Ray",
+      "Int": 1
+    },
+    {
+      "Name": "Lick",
+      "Int": 1
+    },
+    {
+      "Name": "Night Shade",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 27
+    },
+    {
+      "Name": "Dream Eater",
+      "Int": 35
+    }
+  ],
+  "Haunter": [
+    {
+      "Name": "Confuse Ray",
+      "Int": 1
+    },
+    {
+      "Name": "Lick",
+      "Int": 1
+    },
+    {
+      "Name": "Night Shade",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 29
+    },
+    {
+      "Name": "Dream Eater",
+      "Int": 38
+    }
+  ],
+  "Gengar": [
+    {
+      "Name": "Confuse Ray",
+      "Int": 1
+    },
+    {
+      "Name": "Lick",
+      "Int": 1
+    },
+    {
+      "Name": "Night Shade",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 29
+    },
+    {
+      "Name": "Dream Eater",
+      "Int": 38
+    }
+  ],
+  "Onix": [
+    {
+      "Name": "Screech",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Bind",
+      "Int": 15
+    },
+    {
+      "Name": "Rock Throw",
+      "Int": 19
+    },
+    {
+      "Name": "Rage",
+      "Int": 25
+    },
+    {
+      "Name": "Slam",
+      "Int": 33
+    },
+    {
+      "Name": "Harden",
+      "Int": 43
+    }
+  ],
+  "Drowzee": [
+    {
+      "Name": "Hypnosis",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 12
+    },
+    {
+      "Name": "Confusion",
+      "Int": 17
+    },
+    {
+      "Name": "Headbutt",
+      "Int": 24
+    },
+    {
+      "Name": "Poison Gas",
+      "Int": 29
+    },
+    {
+      "Name": "Psychic",
+      "Int": 32
+    },
+    {
+      "Name": "Meditate",
+      "Int": 37
+    }
+  ],
+  "Hypno": [
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 12
+    },
+    {
+      "Name": "Confusion",
+      "Int": 17
+    },
+    {
+      "Name": "Headbutt",
+      "Int": 24
+    },
+    {
+      "Name": "Poison Gas",
+      "Int": 29
+    },
+    {
+      "Name": "Psychic",
+      "Int": 32
+    },
+    {
+      "Name": "Meditate",
+      "Int": 37
+    }
+  ],
+  "Krabby": [
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Vicegrip",
+      "Int": 20
+    },
+    {
+      "Name": "Guillotine",
+      "Int": 25
+    },
+    {
+      "Name": "Stomp",
+      "Int": 30
+    },
+    {
+      "Name": "Crabhammer",
+      "Int": 35
+    },
+    {
+      "Name": "Harden",
+      "Int": 40
+    }
+  ],
+  "Kingler": [
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Vicegrip",
+      "Int": 1
+    },
+    {
+      "Name": "Vicegrip",
+      "Int": 20
+    },
+    {
+      "Name": "Guillotine",
+      "Int": 25
+    },
+    {
+      "Name": "Stomp",
+      "Int": 34
+    },
+    {
+      "Name": "Crabhammer",
+      "Int": 42
+    },
+    {
+      "Name": "Harden",
+      "Int": 49
+    }
+  ],
+  "Voltorb": [
+    {
+      "Name": "Screech",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Sonicboom",
+      "Int": 17
+    },
+    {
+      "Name": "Selfdestruct",
+      "Int": 22
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 29
+    },
+    {
+      "Name": "Swift",
+      "Int": 36
+    },
+    {
+      "Name": "Explosion",
+      "Int": 43
+    }
+  ],
+  "Electrode": [
+    {
+      "Name": "Screech",
+      "Int": 1
+    },
+    {
+      "Name": "Sonicboom",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Sonicboom",
+      "Int": 17
+    },
+    {
+      "Name": "Selfdestruct",
+      "Int": 22
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 29
+    },
+    {
+      "Name": "Swift",
+      "Int": 40
+    },
+    {
+      "Name": "Explosion",
+      "Int": 50
+    }
+  ],
+  "Exeggcute": [
+    {
+      "Name": "Barrage",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 1
+    },
+    {
+      "Name": "Reflect",
+      "Int": 25
+    },
+    {
+      "Name": "Leech Seed",
+      "Int": 28
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 32
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 37
+    },
+    {
+      "Name": "Solarbeam",
+      "Int": 42
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 48
+    }
+  ],
+  "Exeggutor": [
+    {
+      "Name": "Barrage",
+      "Int": 1
+    },
+    {
+      "Name": "Hypnosis",
+      "Int": 1
+    },
+    {
+      "Name": "Stomp",
+      "Int": 28
+    }
+  ],
+  "Cubone": [
+    {
+      "Name": "Bone Club",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 25
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 31
+    },
+    {
+      "Name": "Thrash",
+      "Int": 38
+    },
+    {
+      "Name": "Bonemerang",
+      "Int": 43
+    },
+    {
+      "Name": "Rage",
+      "Int": 46
+    }
+  ],
+  "Marowak": [
+    {
+      "Name": "Bone Club",
+      "Int": 1
+    },
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 25
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 31
+    },
+    {
+      "Name": "Thrash",
+      "Int": 38
+    },
+    {
+      "Name": "Bonemerang",
+      "Int": 43
+    },
+    {
+      "Name": "Rage",
+      "Int": 46
+    }
+  ],
+  "Hitmonlee": [
+    {
+      "Name": "Double Kick",
+      "Int": 1
+    },
+    {
+      "Name": "Meditate",
+      "Int": 1
+    },
+    {
+      "Name": "Rolling Kick",
+      "Int": 33
+    },
+    {
+      "Name": "Jump Kick",
+      "Int": 38
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 43
+    },
+    {
+      "Name": "Hi Jump Kick",
+      "Int": 48
+    },
+    {
+      "Name": "Mega Kick",
+      "Int": 53
+    }
+  ],
+  "Hitmonchan": [
+    {
+      "Name": "Agility",
+      "Int": 1
+    },
+    {
+      "Name": "Comet Punch",
+      "Int": 1
+    },
+    {
+      "Name": "Fire Punch",
+      "Int": 33
+    },
+    {
+      "Name": "Ice Punch",
+      "Int": 38
+    },
+    {
+      "Name": "Thunderpunch",
+      "Int": 43
+    },
+    {
+      "Name": "Mega Punch",
+      "Int": 48
+    },
+    {
+      "Name": "Counter",
+      "Int": 53
+    }
+  ],
+  "Lickitung": [
+    {
+      "Name": "Supersonic",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Stomp",
+      "Int": 7
+    },
+    {
+      "Name": "Disable",
+      "Int": 15
+    },
+    {
+      "Name": "Defense Curl",
+      "Int": 23
+    },
+    {
+      "Name": "Slam",
+      "Int": 31
+    },
+    {
+      "Name": "Screech",
+      "Int": 39
+    }
+  ],
+  "Koffing": [
+    {
+      "Name": "Smog",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Sludge",
+      "Int": 32
+    },
+    {
+      "Name": "Smokescreen",
+      "Int": 37
+    },
+    {
+      "Name": "Selfdestruct",
+      "Int": 40
+    },
+    {
+      "Name": "Haze",
+      "Int": 45
+    },
+    {
+      "Name": "Explosion",
+      "Int": 48
+    }
+  ],
+  "Weezing": [
+    {
+      "Name": "Sludge",
+      "Int": 1
+    },
+    {
+      "Name": "Smog",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Sludge",
+      "Int": 32
+    },
+    {
+      "Name": "Smokescreen",
+      "Int": 39
+    },
+    {
+      "Name": "Selfdestruct",
+      "Int": 43
+    },
+    {
+      "Name": "Haze",
+      "Int": 49
+    },
+    {
+      "Name": "Explosion",
+      "Int": 53
+    }
+  ],
+  "Rhyhorn": [
+    {
+      "Name": "Horn Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Stomp",
+      "Int": 30
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 35
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 40
+    },
+    {
+      "Name": "Horn Drill",
+      "Int": 45
+    },
+    {
+      "Name": "Leer",
+      "Int": 50
+    },
+    {
+      "Name": "Take Down",
+      "Int": 55
+    }
+  ],
+  "Rhydon": [
+    {
+      "Name": "Fury Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Stomp",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Stomp",
+      "Int": 30
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 35
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 40
+    },
+    {
+      "Name": "Horn Drill",
+      "Int": 48
+    },
+    {
+      "Name": "Leer",
+      "Int": 55
+    },
+    {
+      "Name": "Take Down",
+      "Int": 64
+    }
+  ],
+  "Chansey": [
+    {
+      "Name": "Doubleslap",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Sing",
+      "Int": 24
+    },
+    {
+      "Name": "Growl",
+      "Int": 30
+    },
+    {
+      "Name": "Minimize",
+      "Int": 38
+    },
+    {
+      "Name": "Defense Curl",
+      "Int": 44
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 48
+    },
+    {
+      "Name": "Double-Edge",
+      "Int": 54
+    }
+  ],
+  "Tangela": [
+    {
+      "Name": "Bind",
+      "Int": 1
+    },
+    {
+      "Name": "Constrict",
+      "Int": 1
+    },
+    {
+      "Name": "Absorb",
+      "Int": 29
+    },
+    {
+      "Name": "Poisonpowder",
+      "Int": 32
+    },
+    {
+      "Name": "Stun Spore",
+      "Int": 36
+    },
+    {
+      "Name": "Sleep Powder",
+      "Int": 39
+    },
+    {
+      "Name": "Slam",
+      "Int": 45
+    },
+    {
+      "Name": "Growth",
+      "Int": 49
+    }
+  ],
+  "Kangaskhan": [
+    {
+      "Name": "Comet Punch",
+      "Int": 1
+    },
+    {
+      "Name": "Rage",
+      "Int": 1
+    },
+    {
+      "Name": "Bite",
+      "Int": 26
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 31
+    },
+    {
+      "Name": "Mega Punch",
+      "Int": 36
+    },
+    {
+      "Name": "Leer",
+      "Int": 41
+    },
+    {
+      "Name": "Dizzy Punch",
+      "Int": 46
+    }
+  ],
+  "Horsea": [
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Smokescreen",
+      "Int": 19
+    },
+    {
+      "Name": "Leer",
+      "Int": 24
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 30
+    },
+    {
+      "Name": "Agility",
+      "Int": 37
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 45
+    }
+  ],
+  "Seadra": [
+    {
+      "Name": "Bubble",
+      "Int": 1
+    },
+    {
+      "Name": "Smokescreen",
+      "Int": 1
+    },
+    {
+      "Name": "Smokescreen",
+      "Int": 19
+    },
+    {
+      "Name": "Leer",
+      "Int": 24
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 30
+    },
+    {
+      "Name": "Agility",
+      "Int": 41
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 52
+    }
+  ],
+  "Goldeen": [
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 19
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 24
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 30
+    },
+    {
+      "Name": "Waterfall",
+      "Int": 37
+    },
+    {
+      "Name": "Horn Drill",
+      "Int": 45
+    },
+    {
+      "Name": "Agility",
+      "Int": 54
+    }
+  ],
+  "Seaking": [
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 1
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 19
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 24
+    },
+    {
+      "Name": "Fury Attack",
+      "Int": 30
+    },
+    {
+      "Name": "Waterfall",
+      "Int": 39
+    },
+    {
+      "Name": "Horn Drill",
+      "Int": 48
+    },
+    {
+      "Name": "Agility",
+      "Int": 54
+    }
+  ],
+  "Staryu": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 17
+    },
+    {
+      "Name": "Harden",
+      "Int": 22
+    },
+    {
+      "Name": "Recover",
+      "Int": 27
+    },
+    {
+      "Name": "Swift",
+      "Int": 32
+    },
+    {
+      "Name": "Minimize",
+      "Int": 37
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 42
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 47
+    }
+  ],
+  "Starmie": [
+    {
+      "Name": "Harden",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    }
+  ],
+  "Mr. Mime": [
+    {
+      "Name": "Barrier",
+      "Int": 1
+    },
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Confusion",
+      "Int": 15
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 23
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 31
+    },
+    {
+      "Name": "Meditate",
+      "Int": 39
+    },
+    {
+      "Name": "Substitute",
+      "Int": 47
+    }
+  ],
+  "Scyther": [
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 17
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 20
+    },
+    {
+      "Name": "Double Team",
+      "Int": 24
+    },
+    {
+      "Name": "Slash",
+      "Int": 29
+    },
+    {
+      "Name": "Swords Dance",
+      "Int": 35
+    },
+    {
+      "Name": "Agility",
+      "Int": 42
+    }
+  ],
+  "Jynx": [
+    {
+      "Name": "Lovely Kiss",
+      "Int": 1
+    },
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Lick",
+      "Int": 18
+    },
+    {
+      "Name": "Doubleslap",
+      "Int": 23
+    },
+    {
+      "Name": "Ice Punch",
+      "Int": 31
+    },
+    {
+      "Name": "Body Slam",
+      "Int": 39
+    },
+    {
+      "Name": "Thrash",
+      "Int": 47
+    },
+    {
+      "Name": "Blizzard",
+      "Int": 58
+    }
+  ],
+  "Electabuzz": [
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 34
+    },
+    {
+      "Name": "Screech",
+      "Int": 37
+    },
+    {
+      "Name": "Thunderpunch",
+      "Int": 42
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 49
+    },
+    {
+      "Name": "Thunder",
+      "Int": 54
+    }
+  ],
+  "Magmar": [
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 36
+    },
+    {
+      "Name": "Confuse Ray",
+      "Int": 39
+    },
+    {
+      "Name": "Fire Punch",
+      "Int": 43
+    },
+    {
+      "Name": "Smokescreen",
+      "Int": 48
+    },
+    {
+      "Name": "Smog",
+      "Int": 52
+    },
+    {
+      "Name": "Flamethrower",
+      "Int": 55
+    }
+  ],
+  "Pinsir": [
+    {
+      "Name": "Vicegrip",
+      "Int": 1
+    },
+    {
+      "Name": "Seismic Toss",
+      "Int": 25
+    },
+    {
+      "Name": "Guillotine",
+      "Int": 30
+    },
+    {
+      "Name": "Focus Energy",
+      "Int": 36
+    },
+    {
+      "Name": "Harden",
+      "Int": 43
+    },
+    {
+      "Name": "Slash",
+      "Int": 49
+    },
+    {
+      "Name": "Swords Dance",
+      "Int": 54
+    }
+  ],
+  "Tauros": [
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Stomp",
+      "Int": 21
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 28
+    },
+    {
+      "Name": "Leer",
+      "Int": 35
+    },
+    {
+      "Name": "Rage",
+      "Int": 44
+    },
+    {
+      "Name": "Take Down",
+      "Int": 51
+    }
+  ],
+  "Magikarp": [
+    {
+      "Name": "Splash",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 15
+    }
+  ],
+  "Gyarados": [
+    {
+      "Name": "Bite",
+      "Int": 1
+    },
+    {
+      "Name": "Dragon Rage",
+      "Int": 1
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Bite",
+      "Int": 20
+    },
+    {
+      "Name": "Dragon Rage",
+      "Int": 25
+    },
+    {
+      "Name": "Leer",
+      "Int": 32
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 41
+    },
+    {
+      "Name": "Hyper Beam",
+      "Int": 52
+    }
+  ],
+  "Lapras": [
+    {
+      "Name": "Growl",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    },
+    {
+      "Name": "Sing",
+      "Int": 16
+    },
+    {
+      "Name": "Mist",
+      "Int": 20
+    },
+    {
+      "Name": "Body Slam",
+      "Int": 25
+    },
+    {
+      "Name": "Confuse Ray",
+      "Int": 31
+    },
+    {
+      "Name": "Ice Beam",
+      "Int": 38
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 46
+    }
+  ],
+  "Ditto": [
+    {
+      "Name": "Transform",
+      "Int": 1
+    }
+  ],
+  "Eevee": [
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 27
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 31
+    },
+    {
+      "Name": "Bite",
+      "Int": 37
+    },
+    {
+      "Name": "Take Down",
+      "Int": 45
+    }
+  ],
+  "Vaporeon": [
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 27
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 31
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 37
+    },
+    {
+      "Name": "Bite",
+      "Int": 40
+    },
+    {
+      "Name": "Acid Armor",
+      "Int": 42
+    },
+    {
+      "Name": "Haze",
+      "Int": 44
+    },
+    {
+      "Name": "Mist",
+      "Int": 48
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 54
+    }
+  ],
+  "Jolteon": [
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 27
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 31
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 37
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 40
+    },
+    {
+      "Name": "Double Kick",
+      "Int": 42
+    },
+    {
+      "Name": "Agility",
+      "Int": 44
+    },
+    {
+      "Name": "Pin Missle",
+      "Int": 48
+    },
+    {
+      "Name": "Thunder",
+      "Int": 54
+    }
+  ],
+  "Flareon": [
+    {
+      "Name": "Ember",
+      "Int": 1
+    },
+    {
+      "Name": "Sand-Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Quick Attack",
+      "Int": 27
+    },
+    {
+      "Name": "Ember",
+      "Int": 31
+    },
+    {
+      "Name": "Tail Whip",
+      "Int": 37
+    },
+    {
+      "Name": "Bite",
+      "Int": 40
+    },
+    {
+      "Name": "Leer",
+      "Int": 42
+    },
+    {
+      "Name": "Fire Spin",
+      "Int": 44
+    },
+    {
+      "Name": "Rage",
+      "Int": 48
+    },
+    {
+      "Name": "Flamethrower",
+      "Int": 54
+    }
+  ],
+  "Porygon": [
+    {
+      "Name": "Conversion",
+      "Int": 1
+    },
+    {
+      "Name": "Sharpen",
+      "Int": 1
+    },
+    {
+      "Name": "Tackle",
+      "Int": 1
+    },
+    {
+      "Name": "Psybeam",
+      "Int": 23
+    },
+    {
+      "Name": "Recover",
+      "Int": 28
+    },
+    {
+      "Name": "Agility",
+      "Int": 35
+    },
+    {
+      "Name": "Tri Attack",
+      "Int": 42
+    }
+  ],
+  "Omanyte": [
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 1
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 34
+    },
+    {
+      "Name": "Leer",
+      "Int": 39
+    },
+    {
+      "Name": "Spike Cannon",
+      "Int": 46
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 53
+    }
+  ],
+  "Omastar": [
+    {
+      "Name": "Horn Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Water Gun",
+      "Int": 1
+    },
+    {
+      "Name": "Withdraw",
+      "Int": 1
+    },
+    {
+      "Name": "Horn Attack",
+      "Int": 34
+    },
+    {
+      "Name": "Leer",
+      "Int": 39
+    },
+    {
+      "Name": "Spike Cannon",
+      "Int": 44
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 49
+    }
+  ],
+  "Kabuto": [
+    {
+      "Name": "Harden",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Absorb",
+      "Int": 34
+    },
+    {
+      "Name": "Slash",
+      "Int": 39
+    },
+    {
+      "Name": "Leer",
+      "Int": 44
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 49
+    }
+  ],
+  "Kabutops": [
+    {
+      "Name": "Absorb",
+      "Int": 1
+    },
+    {
+      "Name": "Harden",
+      "Int": 1
+    },
+    {
+      "Name": "Scratch",
+      "Int": 1
+    },
+    {
+      "Name": "Absorb",
+      "Int": 34
+    },
+    {
+      "Name": "Slash",
+      "Int": 39
+    },
+    {
+      "Name": "Leer",
+      "Int": 46
+    },
+    {
+      "Name": "Hydro Pump",
+      "Int": 53
+    }
+  ],
+  "Aerodactyl": [
+    {
+      "Name": "Agility",
+      "Int": 1
+    },
+    {
+      "Name": "Wing Attack",
+      "Int": 1
+    },
+    {
+      "Name": "Supersonic",
+      "Int": 33
+    },
+    {
+      "Name": "Bite",
+      "Int": 38
+    },
+    {
+      "Name": "Take Down",
+      "Int": 45
+    },
+    {
+      "Name": "Hyper Beam",
+      "Int": 54
+    }
+  ],
+  "Snorlax": [
+    {
+      "Name": "Amnesia",
+      "Int": 1
+    },
+    {
+      "Name": "Headbutt",
+      "Int": 1
+    },
+    {
+      "Name": "Rest",
+      "Int": 1
+    },
+    {
+      "Name": "Body Slam",
+      "Int": 35
+    },
+    {
+      "Name": "Harden",
+      "Int": 41
+    },
+    {
+      "Name": "Double-Edge",
+      "Int": 48
+    },
+    {
+      "Name": "Hyper Beam",
+      "Int": 56
+    }
+  ],
+  "Articuno": [
+    {
+      "Name": "Ice Beam",
+      "Int": 1
+    },
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Blizzard",
+      "Int": 51
+    },
+    {
+      "Name": "Agility",
+      "Int": 55
+    },
+    {
+      "Name": "Mist",
+      "Int": 60
+    }
+  ],
+  "Zapdos": [
+    {
+      "Name": "Drill Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Thundershock",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder",
+      "Int": 51
+    },
+    {
+      "Name": "Agility",
+      "Int": 55
+    },
+    {
+      "Name": "Light Screen",
+      "Int": 60
+    }
+  ],
+  "Moltres": [
+    {
+      "Name": "Fire Spin",
+      "Int": 1
+    },
+    {
+      "Name": "Peck",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 51
+    },
+    {
+      "Name": "Agility",
+      "Int": 55
+    },
+    {
+      "Name": "Sky Attack",
+      "Int": 60
+    }
+  ],
+  "Dratini": [
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 10
+    },
+    {
+      "Name": "Agility",
+      "Int": 20
+    },
+    {
+      "Name": "Slam",
+      "Int": 30
+    },
+    {
+      "Name": "Dragon Rage",
+      "Int": 40
+    },
+    {
+      "Name": "Hyper Beam",
+      "Int": 50
+    }
+  ],
+  "Dragonair": [
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 10
+    },
+    {
+      "Name": "Agility",
+      "Int": 20
+    },
+    {
+      "Name": "Slam",
+      "Int": 35
+    },
+    {
+      "Name": "Dragon Rage",
+      "Int": 45
+    },
+    {
+      "Name": "Hyper Beam",
+      "Int": 55
+    }
+  ],
+  "Dragonite": [
+    {
+      "Name": "Agility",
+      "Int": 1
+    },
+    {
+      "Name": "Leer",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 1
+    },
+    {
+      "Name": "Wrap",
+      "Int": 1
+    },
+    {
+      "Name": "Thunder Wave",
+      "Int": 10
+    },
+    {
+      "Name": "Agility",
+      "Int": 20
+    },
+    {
+      "Name": "Slam",
+      "Int": 35
+    },
+    {
+      "Name": "Dragon Rage",
+      "Int": 45
+    },
+    {
+      "Name": "Hyper Beam",
+      "Int": 60
+    }
+  ],
+  "Mewtwo": [
+    {
+      "Name": "Confusion",
+      "Int": 1
+    },
+    {
+      "Name": "Disable",
+      "Int": 1
+    },
+    {
+      "Name": "Psychic",
+      "Int": 1
+    },
+    {
+      "Name": "Swift",
+      "Int": 1
+    },
+    {
+      "Name": "Barrier",
+      "Int": 63
+    },
+    {
+      "Name": "Psychic",
+      "Int": 66
+    },
+    {
+      "Name": "Recover",
+      "Int": 70
+    },
+    {
+      "Name": "Mist",
+      "Int": 75
+    },
+    {
+      "Name": "Amnesia",
+      "Int": 81
+    }
+  ],
+  "Mew": [
+    {
+      "Name": "Pound",
+      "Int": 1
+    },
+    {
+      "Name": "Transform",
+      "Int": 10
+    },
+    {
+      "Name": "Mega Punch",
+      "Int": 20
+    },
+    {
+      "Name": "Metronome",
+      "Int": 30
+    },
+    {
+      "Name": "Psychic",
+      "Int": 40
+    }
+  ],
+  "Linq": [
+    {
+      "Name": "Transform",
+      "Int": 1
+    },
+    {
+      "Name": "Substitute",
+      "Int": 1
+    },
+    {
+      "Name": "Psychic",
+      "Int": 1
+    },
+    {
+      "Name": "Metronome",
+      "Int": 1
+    }
   ]
 }

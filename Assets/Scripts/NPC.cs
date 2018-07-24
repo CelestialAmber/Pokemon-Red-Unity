@@ -18,7 +18,7 @@ public class NPC : MonoBehaviour {
 	public float speed = .1f;
 	RaycastHit2D leftCheck ;
 	RaycastHit2D rightCheck ;
-	RaycastHit2D upCheck ;
+	RaycastHit2D upcheck ;
 	RaycastHit2D downCheck;
 
 	public LayerMask checkmask;
@@ -135,14 +135,14 @@ public class NPC : MonoBehaviour {
 		
 		 leftCheck = Physics2D.Raycast (transform.position, Vector2.left, 2,checkmask);
 		rightCheck = Physics2D.Raycast (transform.position, Vector2.right, 2,checkmask);
-		upCheck = Physics2D.Raycast (transform.position, Vector2.up, 2,checkmask);
+		upcheck = Physics2D.Raycast (transform.position, Vector2.up, 2,checkmask);
 		downCheck = Physics2D.Raycast (transform.position, Vector2.down, 2,checkmask);
 		Debug.DrawRay (transform.position, Vector3.right, Color.red);
-		if (upCheck.collider != null) {
+		if (upcheck.collider != null) {
 
-			if (upCheck.collider.tag.Contains ("WallObject")) {
-				//print (upCheck.distance);
-				if (upCheck.distance <= 1) {
+			if (upcheck.collider.tag.Contains ("WallObject")) {
+				//print (upcheck.distance);
+				if (upcheck.distance <= 1) {
 					cannotMoveUp = true;
 				} else {
 					cannotMoveUp = false;

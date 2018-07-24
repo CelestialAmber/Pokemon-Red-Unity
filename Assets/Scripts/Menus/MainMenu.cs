@@ -7,16 +7,17 @@ public class MainMenu : MonoBehaviour {
 
 	public int selectedOption;
 	public GameObject[] menuSlots;
-	public GameObject cursor;
-	public GameObject pokemonmenu, bagmenu, badgesmenu, thismenu, optionsmenu, pokedexmenu;
+	public Cursor cursor;
+	public GameObject pokemonmenu, Bagmenu, badgesmenu, thismenu, optionsmenu, pokedexmenu;
 	public GameObject currentmenu;
 	public Options opti;
     public Get get = new Get();
-    private bag lag;
+    private Bag lag;
     private Pokedex pokedex;
 	public bool donewaiting;
 	public PokemonData pk;
     public CustomText playername;
+    public int slotNumber;
 	// Use this for initialization
 	public void Initialize(){
 		donewaiting = true;
@@ -24,7 +25,7 @@ public class MainMenu : MonoBehaviour {
 	}
     private void Awake()
     {
-        lag = get.Bag();
+        lag = get.bag();
         pokedex = get.pokedex();
     }
     // Update is called once per frame
@@ -41,17 +42,11 @@ public class MainMenu : MonoBehaviour {
 		if (currentmenu == null) {
 			cursor.SetActive (false);
 		} else if(currentmenu == thismenu){
-            playername.text = Dialogue.Name;
-			menuSlots = new GameObject[currentmenu.transform.childCount];
-
-			for (int i = 0; i < currentmenu.transform.childCount; i++) {
-				
-
-				menuSlots [i] = currentmenu.transform.GetChild (i).gameObject;
-			}
+            playername.text = SaveData.playerName;
+			
 
 			cursor.SetActive (true);
-			cursor.transform.position = menuSlots [selectedOption].transform.position;
+            cursor.SetPosition(88, 120 - 16 * selectedOption);
 
 
 
@@ -62,10 +57,10 @@ public class MainMenu : MonoBehaviour {
 				selectedOption--;
 			}
 			if (selectedOption < 0) {
-				selectedOption = menuSlots.Length - 1;
+				selectedOption =  slotNumber - 1;
 
 			}
-			if (selectedOption == menuSlots.Length) {
+			if (selectedOption == slotNumber) {
 				selectedOption = 0;
 
 			}
@@ -125,10 +120,11 @@ public class MainMenu : MonoBehaviour {
 
 						if (currentmenu == thismenu) {
 							lag.selectBag = -1;
-							currentmenu = bagmenu;
-							bagmenu.SetActive (true);
+							currentmenu = Bagmenu;
+                            cursor.SetActive(true);
+							Bagmenu.SetActive (true);
                             lag.didFirstRunthrough = false;
-                            StartCoroutine(bagmenu.GetComponent<bag>().Wait());
+                            StartCoroutine(Bagmenu.GetComponent<Bag>().Wait());
 							donewaiting = false;
 
 						}

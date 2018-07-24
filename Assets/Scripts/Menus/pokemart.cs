@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public class pokemart : MonoBehaviour {
 	public GameObject currentMenu;
-	public GameObject cursor;
+	public Cursor cursor;
 	public GameObject buysellwindow, martwindow, itemwindow,   quantitymenu;
 	public GameObject[] menuSlots, itemSelectSlots;
 	public Dialogue mylog;
@@ -17,9 +17,9 @@ public class pokemart : MonoBehaviour {
 	//1 is withdraw;
 	//2 is deposit;
 	//3 is toss;
-	public List<GameObject> Items = new List<GameObject>(21);
-	public List<GameObject> ItemsToBuy = new List<GameObject>(11);
-	public itemdatabase id;
+	public List<GameObject> Items = new List<GameObject>(4);
+	public List<GameObject> ItemsToBuy = new List<GameObject>(4);
+	public Items id;
 	public int currentBagPosition;
 	public GameObject cancel, buycancel;
 	public int MartID;
@@ -290,7 +290,7 @@ public class pokemart : MonoBehaviour {
 				if (selectBag == -1) {
 					selectBag = currentBagPosition;
 				} else {
-                    //our bag
+                    //our Bag
                     Item item = id.items[selectBag];
                     id.items[selectBag] = id.items[currentBagPosition];
                     id.items[currentBagPosition] = item;
@@ -397,7 +397,7 @@ public class pokemart : MonoBehaviour {
 						if (ItemMode == 1) {
 							if (SaveData.money >= fullPrice) {
 								SaveData.money -= fullPrice;
-								StartCoroutine(AddItem (ItemsToBuy [currentBagPosition].GetComponent<shopitemslotinfo> ().Name, amountToTask));
+								AddItem (ItemsToBuy [currentBagPosition].GetComponent<shopitemslotinfo> ().Name, amountToTask);
 							} else {
 
 								StartCoroutine(NotEnoughMoney());
@@ -474,30 +474,29 @@ public class pokemart : MonoBehaviour {
 
 
 
-    public IEnumerator AddItem(string name, int quantity)
+    public void AddItem(string name, int quantity)
     {
 
         alreadyInBag = false;
 
-        Item inbagItem = new Item("", 0);
+        Item inBagItem = new Item("", 0);
         foreach (Item item in id.items)
         {
             if (item.name == name)
             {
-                inbagItem = item;
+                inBagItem = item;
                 alreadyInBag = true;
                 break;
             }
 
         }
-        if (alreadyInBag) id.items[id.items.IndexOf(inbagItem)].quantity += amountToTask;
+        if (alreadyInBag) id.items[id.items.IndexOf(inBagItem)].quantity += amountToTask;
         else if (id.items.Count < 20) id.items.Add(new Item(name, quantity));
 
 
         ItemMode = 0;
         currentMenu = itemwindow;
         onBuyItem.Invoke();
-        yield return null;
 
 
 

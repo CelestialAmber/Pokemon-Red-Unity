@@ -2,21 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+public enum SlotMode{
+    Item,
+    Empty,
+    Cancel
+}
 public class itemslotinformation : MonoBehaviour {
 	public bool isKeyItem;
 	public CustomText slotNameText, slotQuantityText;
 	public string Name;
 	public int intquantity;
+    public SlotMode mode;
 	// Use this for initialization
 	void Awake () {
-        slotNameText = transform.GetChild(1).GetComponent<CustomText>();
-        slotQuantityText = transform.GetChild(2).GetComponent<CustomText>();
+        slotNameText = transform.GetChild(0).GetComponent<CustomText>();
+        slotQuantityText = transform.GetChild(1).GetComponent<CustomText>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		slotNameText.text = Name;
-		if (!isKeyItem) {
+        switch(mode){
+            case SlotMode.Item:
+                slotNameText.text = Name;
+                break;
+            case SlotMode.Empty:
+                slotNameText.text = "";
+                break;
+            case SlotMode.Cancel:
+                slotNameText.text = "CANCEL";
+                break;
+        }
+		
+		if (!isKeyItem && mode == SlotMode.Item) {
 			slotQuantityText.text = "*" +(intquantity <= 9 ? " ": "") + intquantity.ToString ();
 		} else {
 

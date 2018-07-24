@@ -39,10 +39,10 @@ public class Get
     public  Pokedex pokedex(){
             return fetchObject("UI/Menus/Pokedex").GetComponent<Pokedex>();
     }
-    public  bag Bag()
+    public  Bag bag()
     {
 
-            return fetchObject("UI/Menus/Bag").GetComponent<bag>();
+            return fetchObject("UI/Menus/Bag").GetComponent<Bag>();
 
     }
     public MainMenu menu()
@@ -120,17 +120,20 @@ public class GameConstants{
 public class SaveData  {
     public static void Init()
     {
-        if(pokedexlist.Count != 152){
+        if(pokedexlist.Count != 151){
 
             pokedexlist.Clear();
-            for (int i = 0; i < 152; i++){
+            for (int i = 0; i < 151; i++){
                 pokedexlist.Add(new PokedexEntry(false, false));
             }
         }
+        if (playerName == null) playerName = "RED";
     }
-    public static List<PokedexEntry> pokedexlist = new List<PokedexEntry>(152);
+    public static List<PokedexEntry> pokedexlist = new List<PokedexEntry>(151);
     public static bool[] hasBadge = new bool[8];
     public static int money;
     public static int coins;
     public static int trainerID;
+    public static int textChoice, animationChoice, battleChoice;
+    public static string playerName, rivalName;
 }
