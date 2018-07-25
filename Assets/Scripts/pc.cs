@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 public class PC : MonoBehaviour  {
     public GameObject currentMenu;
     public Cursor cursor;
@@ -26,7 +26,7 @@ public class PC : MonoBehaviour  {
     public GameObject last;
     public bool alreadyInBag;
     public bool alreadydidtext;
-
+    public UnityEvent onAddItem;
     public bool withdrawing;
     public int offscreenindexup, offscreenindexdown;
     public int usedcap;
@@ -81,6 +81,9 @@ public class PC : MonoBehaviour  {
                 }
             }
         }
+        if (currentBagPosition != usedcap && Items[currentBagPosition - offscreenindexup].GetComponent<itemslotinformation>().mode == SlotMode.Item)
+            maximumItem = Items[currentBagPosition - offscreenindexup].GetComponent<itemslotinformation>().intquantity;
+        else maximumItem = 0;
         cursor.SetPosition(40, 108 - 16 * (currentBagPosition - offscreenindexup - 1));
     }
     public IEnumerator Initialize(){
@@ -89,6 +92,7 @@ public class PC : MonoBehaviour  {
         yield return StartCoroutine(mylog.text ("What do you want"));
         yield return StartCoroutine(mylog.line("to do?"));
         cursor.SetActive(true);
+        cursor.SetPosition(8, 120 - 16 * selectedOption);
         currentMenu = mainwindow;
         play.PCactive = true;
 
@@ -159,12 +163,11 @@ public class PC : MonoBehaviour  {
             if (!didFirstRunthrough)
             {
                 UpdateBagScreen();
+                cursor.SetActive(true);
             }
-            cursor.SetActive(true);
 
-            if (currentBagPosition != usedcap)
-                maximumItem = Items[currentBagPosition].GetComponent<itemslotinformation>().intquantity;
-            else maximumItem = 0;
+
+
 
 
 
@@ -286,50 +289,20 @@ public class PC : MonoBehaviour  {
                         {
                             if (selectedOption == 0)
                             {
-                                if (id.PCitems.Count > 0)
-                                {
-                                    for (int i = 0; i < id.PCitems.Count; i++)
-                                    {
-                                        Items[i].GetComponent<itemslotinformation>().intquantity = id.PCitems[i].quantity;
-                                        Items[i].GetComponent<itemslotinformation>().isKeyItem = id.PCitems[i].isKeyItem;
-                                        Items[i].GetComponent<itemslotinformation>().Name = id.PCitems[i].name;
-
-
-                                    }
-                                }
+                                UpdateBagScreen();
                                 StartCoroutine(ItemMode1());
 
 
                             }
                             if (selectedOption == 1)
                             {
-                                if (id.items.Count > 0)
-                                {
-                                    for (int i = 0; i < id.items.Count; i++)
-                                    {
-                                        Items[i].GetComponent<itemslotinformation>().intquantity = id.items[i].quantity;
-                                        Items[i].GetComponent<itemslotinformation>().isKeyItem = id.items[i].isKeyItem;
-                                        Items[i].GetComponent<itemslotinformation>().Name = id.items[i].name;
-
-
-                                    }
-                                }
+                                UpdateBagScreen();
                                 StartCoroutine(ItemMode2());
 
                             }
                             if (selectedOption == 2)
                             {
-                                if (id.PCitems.Count > 0)
-                                {
-                                    for (int i = 0; i < id.PCitems.Count; i++)
-                                    {
-                                        Items[i].GetComponent<itemslotinformation>().intquantity = id.PCitems[i].quantity;
-                                        Items[i].GetComponent<itemslotinformation>().isKeyItem = id.PCitems[i].isKeyItem;
-                                        Items[i].GetComponent<itemslotinformation>().Name = id.PCitems[i].name;
-
-
-                                    }
-                                }
+                                UpdateBagScreen();
                                 StartCoroutine(ItemMode3());
 
                             }

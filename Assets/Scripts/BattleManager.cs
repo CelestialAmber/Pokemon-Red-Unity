@@ -26,7 +26,7 @@ public class BattleManager : MonoBehaviour {
 
     public List<Pokemon> enemyMons = new List<Pokemon>();
 	public Dialogue mylog;
-	public PokemonData pkmr;
+	public PokemonMenu pkmr;
 	public GameObject actualscene, ourstats, opponentstats;
 	public Animator battletransitionAnim, otheranim;
 	public bool donetransition;
@@ -249,12 +249,12 @@ public class BattleManager : MonoBehaviour {
 	
 	}
 	public void DetermineFrontSprite(){
-        frontportrait.overrideSprite = frontmon [PokemonStats.MonToID(enemymon.pokename) - 1];
+        frontportrait.overrideSprite = frontmon [PokemonData.MonToID(enemymon.pokename) - 1];
 
 	}
 
 	public void DetermineBackSprite(){
-        backportrait.overrideSprite = backmon [PokemonStats.MonToID(ourmon.pokename) - 1];
+        backportrait.overrideSprite = backmon [PokemonData.MonToID(ourmon.pokename) - 1];
 
 	}
 	public void ActivateOurStats(){

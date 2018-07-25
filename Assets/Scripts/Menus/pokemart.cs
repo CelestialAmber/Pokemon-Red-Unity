@@ -6,7 +6,6 @@ public class pokemart : MonoBehaviour {
 	public GameObject currentMenu;
 	public Cursor cursor;
 	public GameObject buysellwindow, martwindow, itemwindow,   quantitymenu;
-	public GameObject[] menuSlots, itemSelectSlots;
 	public Dialogue mylog;
 	public Player play;
 	public int selectedOption;
@@ -21,7 +20,6 @@ public class pokemart : MonoBehaviour {
 	public List<GameObject> ItemsToBuy = new List<GameObject>(4);
 	public Items id;
 	public int currentBagPosition;
-	public GameObject cancel, buycancel;
 	public int MartID;
 	public List<string> martlist;
 	public int selectBag;
@@ -35,7 +33,6 @@ public class pokemart : MonoBehaviour {
 	public bool alreadydidtext;
 	public int keep;
     public int offscreenindexup, offscreenindexdown;
-    public GameObject sellcontent, buycontent;
     public UnityEvent onBuyItem;
 	public bool withdrawing;
 
@@ -47,7 +44,52 @@ public class pokemart : MonoBehaviour {
 
 
 
+    void UpdateBuyScreen(){
+        for (int i = 0; i < 4; i++)
+        {
+            int currentItem = offscreenindexup + 1 + i;
+            if (currentItem > offscreenindexup && currentItem < id.items.Count)
+            {
+                ItemsToBuy[i].GetComponent<shopitemslotinfo>().mode = SlotMode.Item;
+                ItemsToBuy[i].GetComponent<shopitemslotinfo>().name = martlist[currentItem];
+            }
+            else if (currentItem == id.items.Count)
+            {
+                Items[i].GetComponent<shopitemslotinfo>().mode = SlotMode.Cancel;
 
+            }
+            else
+            {
+                Items[i].GetComponent<shopitemslotinfo>().mode = SlotMode.Empty;
+
+            }
+        }
+        cursor.SetPosition(40, 108 - 16 * (currentBagPosition - offscreenindexup - 1));
+    }
+    void UpdateSellScreen(){
+        for (int i = 0; i < 4; i++)
+        {
+            int currentItem = offscreenindexup + 1 + i;
+            if (currentItem > offscreenindexup && currentItem < id.items.Count)
+            {
+                Items[i].GetComponent<itemslotinformation>().mode = SlotMode.Item;
+                Items[i].GetComponent<itemslotinformation>().Name = id.items[currentItem].name;
+                Items[i].GetComponent<itemslotinformation>().intquantity = id.items[currentItem].quantity;
+                Items[i].GetComponent<itemslotinformation>().isKeyItem = id.items[currentItem].isKeyItem;
+            }
+            else if (currentItem == id.items.Count)
+            {
+                Items[i].GetComponent<itemslotinformation>().mode = SlotMode.Cancel;
+
+            }
+            else
+            {
+                Items[i].GetComponent<itemslotinformation>().mode = SlotMode.Empty;
+
+            }
+        }
+        cursor.SetPosition(40, 108 - 16 * (currentBagPosition - offscreenindexup - 1));
+    }
 
 
 
@@ -57,7 +99,7 @@ public class pokemart : MonoBehaviour {
         if (currentBagPosition == 0)
         {
             offscreenindexup = -1;
-            offscreenindexdown = 4;
+            offscreenindexdown = 3;
         }
 		pricetext.text = "$" + fullPrice.ToString ();
         moneytext.text = "$" + SaveData.money.ToString ();
@@ -70,30 +112,19 @@ public class pokemart : MonoBehaviour {
 				maximumItem = 99;
 			}
 			if (ItemMode == 2) {
+                //Set the selling price of the selected item.
 
-				if (Items [currentBagPosition].GetComponent<itemslotinformation> ().Name == "POTION") {
-
-					ItemPrice = 100;
-                }else{
-                    ItemPrice = 0;
-                }
 				maximumItem = Items [currentBagPosition].GetComponent<itemslotinformation> ().intquantity;
 
 			}
 			fullPrice = amountToTask * ItemPrice;
             if (Inputs.pressed("down")) {
 				amountToTask--;
+                MathE.Wrap(ref amountToTask, 1, maximumItem);
 			}
             if (Inputs.pressed("up")) {
 				amountToTask++;
-			}
-			if (amountToTask < 1) {
-				amountToTask = maximumItem;
-
-			}
-			if (amountToTask > maximumItem) {
-				amountToTask = 1;
-
+                MathE.Wrap(ref amountToTask, 1, maximumItem);
 			}
 
 
@@ -108,9 +139,10 @@ public class pokemart : MonoBehaviour {
                 {
                     offscreenindexup++;
                     offscreenindexdown++;
-                    buycontent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 16 * (offscreenindexup + 1));
 
                 }
+                MathE.Clamp(ref currentBagPosition, 0, martlist.Count - 1);
+                UpdateBuyScreen();
             }
             if (Inputs.pressed("up"))
             {
@@ -119,22 +151,10 @@ public class pokemart : MonoBehaviour {
                 {
                     offscreenindexup--;
                     offscreenindexdown--;
-                    buycontent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 16 * (offscreenindexup + 1));
 
                 }
-
-            }
-            if (currentBagPosition < 0)
-            {
-
-                currentBagPosition = 0;
-
-
-            }
-            if (currentBagPosition == martlist.Count + 1)
-            {
-
-                currentBagPosition = martlist.Count;
+                MathE.Clamp(ref currentBagPosition, 0, martlist.Count - 1);
+                UpdateBuyScreen();
 
             }
 
@@ -142,34 +162,10 @@ public class pokemart : MonoBehaviour {
             if (!didFirstRunthrough)
             {
 
-                foreach (GameObject slot in Items)
-                {
-                    slot.SetActive(false);
-                }
-                for (int i = 0; i < martlist.Count; i++)
-                {
-                    ItemsToBuy[i].SetActive(true);
-                    ItemsToBuy[i].GetComponent<shopitemslotinfo>().Name = martlist[i];
-                }
-                ItemsToBuy[10].SetActive(true);
-
-
-
-
-
-
+                UpdateBuyScreen();
                 didFirstRunthrough = true;
-                itemSelectSlots = new GameObject[martlist.Count + 1];
-
-                for (int i = 0; i < martlist.Count; i++)
-                {
-
-                    itemSelectSlots[i] = ItemsToBuy[i].transform.GetChild(0).gameObject;
-                }
-                itemSelectSlots[itemSelectSlots.Length - 1] = Items[10].transform.GetChild(0).gameObject;
             }
-			cursor.SetActive (true);
-			cursor.transform.position = itemSelectSlots [currentBagPosition].transform.position;
+			
 		
 
 
@@ -184,8 +180,9 @@ public class pokemart : MonoBehaviour {
                 {
                     offscreenindexup++;
                     offscreenindexdown++;
-                    sellcontent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 16 * (offscreenindexup + 1));
                 }
+                MathE.Clamp(ref currentBagPosition, 0, id.items.Count + 1);
+                UpdateSellScreen();
             }
             if (Inputs.pressed("up"))
             {
@@ -194,52 +191,12 @@ public class pokemart : MonoBehaviour {
                 {
                     offscreenindexup--;
                     offscreenindexdown--;
-                    sellcontent.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 16 * (offscreenindexup + 1));
                 }
-
-            }
-            if (currentBagPosition < 0)
-            {
-
-                currentBagPosition = 0;
-            }
-            if (currentBagPosition == id.items.Count + 1)
-            {
-
-                currentBagPosition = id.items.Count;
-
-
+                MathE.Clamp(ref currentBagPosition, 0, id.items.Count + 1);
+                UpdateSellScreen();
             }
 
 
-
-			
-            foreach (GameObject slot in Items)
-            {
-                slot.SetActive(false);
-            }
-            for (int i = 0; i < id.items.Count; i++)
-            {
-                Items[i].SetActive(true);
-                Items[i].GetComponent<itemslotinformation>().Name = id.items[i].name;
-                Items[i].GetComponent<itemslotinformation>().intquantity = id.items[i].quantity;
-                Items[i].GetComponent<itemslotinformation>().isKeyItem = id.items[i].isKeyItem;
-            }
-            Items[20].SetActive(true);
-
-
-
-
-
-
-			didFirstRunthrough = true;
-			itemSelectSlots = new GameObject[id.items.Count + 1];
-
-            for (int i = 0; i < id.items.Count; i++) {
-
-				itemSelectSlots [i] = Items [i].transform.GetChild (0).gameObject;
-			}
-            itemSelectSlots[itemSelectSlots.Length - 1] = Items[20].transform.GetChild(0).gameObject;
 
 
             if (currentBagPosition != id.items.Count) {
@@ -248,40 +205,26 @@ public class pokemart : MonoBehaviour {
 				maximumItem = 0;
 
 			}
-			cursor.transform.position = itemSelectSlots [currentBagPosition].transform.position;
-			cursor.SetActive (true);
 
 		}
 		if (currentMenu == null && (currentMenu != quantitymenu || currentMenu != itemwindow)) {
 
 		} else {
-			menuSlots = new GameObject[currentMenu.transform.childCount];
-
-			for (int i = 0; i < currentMenu.transform.childCount; i++) {
-
-
-				menuSlots [i] = currentMenu.transform.GetChild (i).gameObject;
-			}
 			if (currentMenu == buysellwindow) {
 
-				cursor.transform.position = menuSlots [selectedOption].transform.position;
+				cursor.SetPosition(8, 128 - 16 * selectedOption);
 
 				cursor.SetActive (true);
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
+                    MathE.Clamp(ref selectedOption, 0, 2);
 				}
                 if (Inputs.pressed("up")) {
 					selectedOption--;
+                    MathE.Clamp(ref selectedOption, 0, 2);
 				}
-				if (selectedOption < 0) {
-					selectedOption = 0;
-
-				}
-				if (selectedOption == menuSlots.Length) {
-					selectedOption = menuSlots.Length - 1;
-
-				}
+				
 			}
 
 		}
@@ -311,10 +254,12 @@ public class pokemart : MonoBehaviour {
 					
 						if (selectedOption == 0) {
 							currentMenu = martwindow;
+                        UpdateBuyScreen();
 
 						}
 						if (selectedOption == 1) {
 							currentMenu = itemwindow;
+                        UpdateSellScreen();
 						currentBagPosition = 0;
 
 						}
@@ -388,7 +333,7 @@ public class pokemart : MonoBehaviour {
 								SaveData.money += fullPrice;
 								StartCoroutine (TossItem ());
 							} else {
-								StartCoroutine (TooImportantToToss ());
+								StartCoroutine (CannotSellKeyItem ());
 
 
 							}
@@ -397,7 +342,7 @@ public class pokemart : MonoBehaviour {
 						if (ItemMode == 1) {
 							if (SaveData.money >= fullPrice) {
 								SaveData.money -= fullPrice;
-								AddItem (ItemsToBuy [currentBagPosition].GetComponent<shopitemslotinfo> ().Name, amountToTask);
+								AddItem (ItemsToBuy [currentBagPosition].GetComponent<shopitemslotinfo> ().name, amountToTask);
 							} else {
 
 								StartCoroutine(NotEnoughMoney());
@@ -554,10 +499,11 @@ public class pokemart : MonoBehaviour {
 		selectBag = -1;
 
 	}
-	IEnumerator TooImportantToToss(){
+	IEnumerator CannotSellKeyItem(){
 
 		mylog.Deactivate();
-		yield return StartCoroutine(mylog.text ("That's too important to toss!"));
+		yield return StartCoroutine(mylog.text ("I can't put a"));
+        yield return StartCoroutine(mylog.line("price on that."));
 		yield return StartCoroutine(mylog.done ());
 		currentMenu = itemwindow;
 	}

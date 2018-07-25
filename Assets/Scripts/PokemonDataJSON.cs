@@ -12,84 +12,7 @@ using System.Threading;
 using Newtonsoft.Json;
 using System.Runtime.Serialization.Formatters.Binary;
 using Newtonsoft.Json.Linq;
-[System.Serializable]
-public class EncounterEntry
-{
-    public EncounterEntry(int index, StrInt[] table)
-    {
-        this.index = index;
-        this.table = table;
-    }
-    public int index;
-    public StrInt[] table;
-}
-[System.Serializable]
-public class EncounterDictionary
-{
-    public List<EncounterEntry> entries = new List<EncounterEntry>();
-}
-[System.Serializable]
-public class EvolutionEntry{
-    public EvolutionEntry(string pokemon, StrInt evolution)
-    {
-        this.pokemon = pokemon;
-        this.evolution = evolution;
-    }
-    public string pokemon;
-    public StrInt evolution;
-}
-[System.Serializable]
-public class EvolutionDictionary
-{
-    public List<EvolutionEntry> entries = new List<EvolutionEntry>();
-}
-[System.Serializable]
-public class TMLearnEntry
-{
-    public TMLearnEntry(string pokemon, string[] moves)
-    {
-        this.pokemon = pokemon;
-        this.moves = moves;
-    }
-    public string pokemon;
-    public string[] moves;
-}
-[System.Serializable]
-public class TMLearnDictionary
-{
-    public List<TMLearnEntry> entries = new List<TMLearnEntry>();
-}
-[System.Serializable]
-public class BaseStatEntry
-{
-    public BaseStatEntry(string pokemon, int[] stats){
-        this.pokemon = pokemon;
-        this.stats = stats;
-    }
-    public string pokemon;
-    public int[] stats;
-}
-[System.Serializable]
-public class BaseStatDictionary
-{
-    public List<BaseStatEntry> entries  = new List<BaseStatEntry>();
-}
-[System.Serializable]
-public class LevelMovesEntry
-{
-    public LevelMovesEntry(string pokemon, StrInt[] moves)
-    {
-        this.pokemon = pokemon;
-        this.moves = moves;
-    }
-    public string pokemon;
-    public StrInt[] moves;
-}
-[System.Serializable]
-public class LevelMovesDictionary
-{
-    public List<LevelMovesEntry> entries = new List<LevelMovesEntry>();
-}
+
 [System.Serializable]
 public class MoveData{
     public MoveData(string name, int power, string type, int accuracy, int maxpp,string effect){
@@ -165,7 +88,7 @@ public class Serializer
 
 }
 
-public class PokemonStats
+public class PokemonData
 {
     
     public static MoveData GetMove(string moveToGet){
@@ -241,17 +164,17 @@ public class PokemonDataJSON : MonoBehaviour
      void Awake()
     {
 
-        PokemonStats.evolution = Serializer.JSONtoObject<Dictionary<string,StrInt>>("evolutiondata.json");
-       PokemonStats.baseStats = Serializer.JSONtoObject<Dictionary<string,int[]>>("basestatsdata.json");
-        PokemonStats.levelmoves = Serializer.JSONtoObject<Dictionary<string, StrInt[]>>("levelmovesdata.json");
-        PokemonStats.learnbytm = Serializer.JSONtoObject<Dictionary<string,string[]>>("learnbytmdata.json");
-        PokemonStats.grasswaterencounters = Serializer.JSONtoObject<Dictionary<int,StrInt[]>>("encounterData.json");
-        PokemonStats.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
-        PokemonStats.PokemonPartySprite = Serializer.JSONtoObject<Dictionary<string, int>>("partySpriteData.json");
-        PokemonStats.PokemonTypes = Serializer.JSONtoObject<Dictionary<string, string[]>>("pokemonTypeData.json");
-        PokemonStats.PokemonExpGroup = Serializer.JSONtoObject<Dictionary<string, int>>("expGroupData.json");
-        PokemonStats.PokemonToIndex = Serializer.JSONtoObject<Dictionary<string, int>>("pokemonIndices.json");
-        PokemonStats.TMHMtoIndex = Serializer.JSONtoObject<Dictionary<string, int>>("tmHmIndices.json");
+        PokemonData.evolution = Serializer.JSONtoObject<Dictionary<string,StrInt>>("evolutiondata.json");
+       PokemonData.baseStats = Serializer.JSONtoObject<Dictionary<string,int[]>>("basestatsdata.json");
+        PokemonData.levelmoves = Serializer.JSONtoObject<Dictionary<string, StrInt[]>>("levelmovesdata.json");
+        PokemonData.learnbytm = Serializer.JSONtoObject<Dictionary<string,string[]>>("learnbytmdata.json");
+        PokemonData.grasswaterencounters = Serializer.JSONtoObject<Dictionary<int,StrInt[]>>("encounterData.json");
+        PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
+        PokemonData.PokemonPartySprite = Serializer.JSONtoObject<Dictionary<string, int>>("partySpriteData.json");
+        PokemonData.PokemonTypes = Serializer.JSONtoObject<Dictionary<string, string[]>>("pokemonTypeData.json");
+        PokemonData.PokemonExpGroup = Serializer.JSONtoObject<Dictionary<string, int>>("expGroupData.json");
+        PokemonData.PokemonToIndex = Serializer.JSONtoObject<Dictionary<string, int>>("pokemonIndices.json");
+        PokemonData.TMHMtoIndex = Serializer.JSONtoObject<Dictionary<string, int>>("tmHmIndices.json");
        
     }
 }
@@ -268,9 +191,9 @@ public class PokemonDataEditor : Editor {
 
 }
 public class PokemonTMParser : EditorWindow{
-    TMLearnDictionary tMLearn = new TMLearnDictionary();
+    Dictionary<string,string[]> tMLearn;
+    List<string> moveList;
     int currentpokemon, lastpokemon;
-    public List<string> moveslist;
     public ReorderableList learnlist;
     Vector2 scrollpos;
     [MenuItem("Window/Pokemon TM Editor")]
@@ -280,31 +203,19 @@ public class PokemonTMParser : EditorWindow{
     }
     void OnEnable()
     {
-        FileStream file;
-        StreamReader sr;
-        tMLearn = new TMLearnDictionary();
-        file = new FileStream(Application.streamingAssetsPath + "/learnbytmdata.json", FileMode.Open, FileAccess.Read);
-        sr = new StreamReader(file);
-        string tmlearndata = sr.ReadToEnd();
-        tMLearn = JsonConvert.DeserializeObject<TMLearnDictionary>(tmlearndata);
-        moveslist = new List<string>();
-        moveslist.Clear();
-        foreach (string move in tMLearn.entries[currentpokemon].moves)
-        {
-            moveslist.Add(move);
-        }
-        learnlist = new ReorderableList(moveslist, typeof(string), true, true, true, true);
+        tMLearn = Serializer.JSONtoObject<Dictionary<string, string[]>>("learnbytmdata.json");
+        moveList = new List<string>(tMLearn[PokemonData.IndexToMon(currentpokemon)]);
+        learnlist = new ReorderableList(tMLearn[PokemonData.IndexToMon(currentpokemon)], typeof(string), true, true, true, true);
         learnlist.onAddCallback = (ReorderableList list) =>{
             
-            moveslist.Insert(learnlist.index + 1, "");
+            moveList.Insert(learnlist.index + 1, "");
         };
         learnlist.drawElementCallback =
     (Rect rect, int index, bool isActive, bool isFocused) => {
         rect.y += 2;
-        EditorGUI.LabelField(new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight),new GUIContent(PokemonStats.TMHMtoIndex[moveslist[index]].ToString()));
-            EditorGUI.LabelField(new Rect(rect.x + 60, rect.y, 60, EditorGUIUtility.singleLineHeight), new GUIContent(moveslist[index]));
+        EditorGUI.LabelField(new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight),new GUIContent(PokemonData.TMHMtoIndex[moveList[index]].ToString()));
+            EditorGUI.LabelField(new Rect(rect.x + 60, rect.y, 60, EditorGUIUtility.singleLineHeight), new GUIContent(moveList[index]));
     };
-        file.Close();
     }
     void OnGUI()
     {
@@ -313,35 +224,33 @@ public class PokemonTMParser : EditorWindow{
         scrollpos = EditorGUILayout.BeginScrollView(scrollpos);
         if (currentpokemon != lastpokemon)
         {
-            moveslist.Clear();
-            foreach (string move in tMLearn.entries[currentpokemon].moves)
+            moveList.Clear();
+            foreach (string move in tMLearn[PokemonData.IndexToMon(currentpokemon)])
             {
-               moveslist.Add(move);
+               moveList.Add(move);
               
             }
             lastpokemon = currentpokemon;
-            learnlist = new ReorderableList(moveslist, typeof(string), true, true, true, true);
-            learnlist.onAddCallback = (ReorderableList list) => {moveslist.Insert(learnlist.index + 1, "");};
+            learnlist = new ReorderableList(moveList, typeof(string), true, true, true, true);
+            learnlist.onAddCallback = (ReorderableList list) => {moveList.Insert(learnlist.index + 1, "");};
             learnlist.drawElementCallback =
  (Rect rect, int index, bool isActive, bool isFocused) => {
      rect.y += 2;
-     EditorGUI.LabelField(new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight), new GUIContent(PokemonStats.TMHMtoIndex[moveslist[index]].ToString()));
-     EditorGUI.LabelField(new Rect(rect.x + 60, rect.y, 60, EditorGUIUtility.singleLineHeight), new GUIContent(moveslist[index]));
+                EditorGUI.LabelField(new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight), new GUIContent(PokemonData.TMHMtoIndex[moveList[index]].ToString()));
+     EditorGUI.LabelField(new Rect(rect.x + 60, rect.y, 60, EditorGUIUtility.singleLineHeight), new GUIContent(moveList[index]));
  };
         }
-        currentpokemon = EditorGUILayout.IntField("Current Pokemon (" + tMLearn.entries[currentpokemon].pokemon + ")", currentpokemon);
+        currentpokemon = EditorGUILayout.IntField("Current Pokemon (" + PokemonData.IndexToMon(currentpokemon) + ")", currentpokemon);
         learnlist.DoLayoutList();
         EditorGUILayout.EndScrollView();
         EditorGUILayout.EndVertical();
         if (GUILayout.Button("Save Changes to Learnset"))
         {
 
-            tMLearn.entries[currentpokemon].moves = moveslist.ToArray();
+            tMLearn[PokemonData.IndexToMon(currentpokemon)] = moveList.ToArray();
         }
 if(GUILayout.Button("Save Changes to JSON")){
-            string jsondata = JsonConvert.SerializeObject(tMLearn);
-            jsondata = JValue.Parse(jsondata).ToString(Formatting.Indented);
-            File.WriteAllText(Application.streamingAssetsPath + "/learnbytmdata.json", jsondata);
+            Serializer.objectToJSON("learnbytmdata.json",PokemonData.learnbytm);
 
         }
 
@@ -356,14 +265,14 @@ if(GUILayout.Button("Save Changes to JSON")){
         switch (current.keyCode)
         {
             case KeyCode.C:
-                moveslist.RemoveAt(learnlist.index);
-                learnlist = new ReorderableList(moveslist, typeof(string), true, true, true, true);
-                learnlist.onAddCallback = (ReorderableList list) => { moveslist.Insert(learnlist.index + 1, ""); };
+                moveList.RemoveAt(learnlist.index);
+                learnlist = new ReorderableList(moveList, typeof(string), true, true, true, true);
+                learnlist.onAddCallback = (ReorderableList list) => { moveList.Insert(learnlist.index + 1, ""); };
                 learnlist.drawElementCallback =
  (Rect rect, int index, bool isActive, bool isFocused) => {
      rect.y += 2;
-     EditorGUI.LabelField(new Rect(rect.x, rect.y, 30, EditorGUIUtility.singleLineHeight), new GUIContent(PokemonStats.TMHMtoIndex[moveslist[index]].ToString()));
-     EditorGUI.LabelField(new Rect(rect.x + 80, rect.y, 80, EditorGUIUtility.singleLineHeight), new GUIContent(moveslist[index]));
+     EditorGUI.LabelField(new Rect(rect.x, rect.y, 30, EditorGUIUtility.singleLineHeight), new GUIContent(PokemonData.TMHMtoIndex[moveList[index]].ToString()));
+     EditorGUI.LabelField(new Rect(rect.x + 80, rect.y, 80, EditorGUIUtility.singleLineHeight), new GUIContent(moveList[index]));
  };
                 Repaint();
                 break;

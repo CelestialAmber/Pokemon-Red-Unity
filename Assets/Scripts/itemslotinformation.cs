@@ -23,7 +23,7 @@ public class itemslotinformation : MonoBehaviour {
 	void Update () {
         switch(mode){
             case SlotMode.Item:
-                slotNameText.text = Name;
+                slotNameText.text = Name.ToUpper();
                 break;
             case SlotMode.Empty:
                 slotNameText.text = "";

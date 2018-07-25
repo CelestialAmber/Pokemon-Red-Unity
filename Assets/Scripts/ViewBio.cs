@@ -18,7 +18,7 @@ public class ViewBio : MonoBehaviour {
 
 	public IEnumerator DisplayABio(int whatBio){
         PokedexEntry entry = SaveData.pokedexlist[whatBio - 1];
-        Debug.Log("Display " + PokemonStats.IndexToMon(whatBio) +  "'s bio. \n This Pokemon " + (entry.seen && entry.caught ? "has been seen and caught." : entry.seen ? "has been seen." : "has not been seen or caught."));
+        Debug.Log("Display " + PokemonData.IndexToMon(whatBio) +  "'s bio. \n This Pokemon " + (entry.seen && entry.caught ? "has been seen and caught." : entry.seen ? "has been seen." : "has not been seen or caught."));
 		bioscreen.enabled = true;
 			currentBioNumber = 0;
 		for (int i = 0; i < 3; i++) {

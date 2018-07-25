@@ -57,9 +57,9 @@ public class Get
         return fetchObject("Player").GetComponent<Player>();
 
     }
-    public PokemonData pokemondata()
+    public PokemonMenu pokemonmenu()
     {
-        return fetchObject("UI/Menus/PokemonMenu").GetComponent<PokemonData>();
+        return fetchObject("UI/Menus/PokemonMenu").GetComponent<PokemonMenu>();
     }
 
 }

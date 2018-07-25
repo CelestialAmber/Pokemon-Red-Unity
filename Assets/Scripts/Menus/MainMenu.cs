@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour {
     private Bag lag;
     private Pokedex pokedex;
 	public bool donewaiting;
-	public PokemonData pk;
+	public PokemonMenu pk;
     public CustomText playername;
     public int slotNumber;
 	// Use this for initialization

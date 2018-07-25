@@ -6,10 +6,11 @@ public class TextDatabase : MonoBehaviour {
 	public Dialogue mylog;
 	public GameObject itemPCMenu, shopmenu, slotmenu;
 	public Bag bag;
+    public Cursor cursor;
 	public Items itemDatabase;
 	public pokemart pokeMart;
 	public Player player;
-	public PokemonData pokemonData;
+	public PokemonMenu pokemonData;
 	public Slots slots;
 	// Use this for initialization
 	void Start () {
@@ -132,7 +133,7 @@ public class TextDatabase : MonoBehaviour {
 		yield return StartCoroutine(mylog.para ("Hi there! How may I help you?"));
 		yield return StartCoroutine(mylog.done());
 		player.shopup = true;
-
+        cursor.SetActive(true);
 		pokeMart.martlist = itemDatabase.IndigoItems;
 		shopmenu.SetActive (true);
         pokeMart.currentMenu = pokeMart.buysellwindow;

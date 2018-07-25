@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class shopitemslotinfo : MonoBehaviour {
 	public CustomText slotNameText, slotPriceText;
-	public string Name;
+	public string name;
 	public int intPrice;
     public SlotMode mode;
 	// Use this for initialization
@@ -16,12 +16,13 @@ public class shopitemslotinfo : MonoBehaviour {
         slotNameText = transform.GetChild(0).GetComponent<CustomText>();
         slotPriceText = transform.GetChild(1).GetComponent<CustomText>();
     }
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update()
+    {
         switch (mode)
         {
             case SlotMode.Item:
-                slotNameText.text = Name;
+                slotNameText.text = name.ToUpper();
                 break;
             case SlotMode.Empty:
                 slotNameText.text = "";
@@ -30,82 +31,100 @@ public class shopitemslotinfo : MonoBehaviour {
                 slotNameText.text = "CANCEL";
                 break;
         }
-		if (Name == "POKE BALL") {
-			intPrice = 200;
+        switch (name)
+        {
 
-		}
-		if (Name == "GREAT BALL") {
-			intPrice = 600;
+            case "Poke Ball":
+            intPrice = 200;
+            break;
 
-		}
-		if (Name == "ULTRA BALL") {
-			intPrice = 1200;
+             case "Great Ball":
+            intPrice = 600;
+             break;
 
-		}
-		if (Name == "REPEL") {
-			intPrice = 350;
+        case "Ultra Ball":
+        intPrice = 1200;
+        break;
 
-		}
-		if (Name == "SUPER REPEL") {
-			intPrice = 500;
+       case "Repel":
+        intPrice = 350;
+         break;
 
-		}
-		if (Name == "MAX REPEL") {
-			intPrice = 700;
+       case "Super Repel":
+            intPrice = 500;
+        break;
 
-		}
-		if (Name == "POTION") {
-			intPrice = 300;
+       case "Max Repel":
+        
+            intPrice = 700;
 
-		}
-		if (Name == "SUPER POTION") {
-			intPrice = 700;
+        break;
+       case "Potion":
+        
+            intPrice = 300;
 
-		}
-		if (Name == "HYPER POTION") {
-			intPrice = 1500;
+        break;
+       case "Super Potion":
+        
+            intPrice = 700;
 
-		}
-		if (Name == "MAX POTION") {
-			intPrice = 2500;
+        break;
+       case "Hyper Potion":
+        
+            intPrice = 1500;
 
-		}
-		if (Name == "FULL RESTORE") {
-			intPrice = 3000;
+        break;
+       case "Max Potion":
+        
+            intPrice = 2500;
 
-		}
-		if (Name == "ANTIDOTE") {
-			intPrice = 100;
+        break;
+       case "Full Restore":
+        
+            intPrice = 3000;
 
-		}
-		if (Name == "AWAKENING") {
-			intPrice = 200;
+        break;
+       case "Antidote":
+        
+            intPrice = 100;
 
-		}
-		if (Name == "ICE HEAL") {
-			intPrice = 250;
+        break;
+       case "Awakening":
+        
+            intPrice = 200;
 
-		}
-		if (Name == "BURN HEAL") {
-			intPrice = 250;
+        break;
+       case "Ice Heal":
+        
+            intPrice = 250;
 
-		}
-		if (Name == "PARLYZ HEAL") {
-			intPrice = 200;
+        break;
+       case "Burn Heal":
+        
+            intPrice = 250;
 
-		}
-		if (Name == "FULL HEAL") {
-			intPrice = 600;
+        break;
+       case "Parlyz Heal":
+        
+            intPrice = 200;
 
-		}
-		if (Name == "ESCAPE ROPE") {
-			intPrice = 550;
+        break;
+       case "Full Heal":
+        
+            intPrice = 600;
 
-		}
-		if (Name == "REVIVE") {
-			intPrice = 1500;
+        break;
+       case "Escape Rope":
+        
+            intPrice = 550;
 
-		}
+        break;
+       case "REVIVE":
+        
+            intPrice = 1500;
+                break;
+        
+    }
         if (mode == SlotMode.Item)
             slotPriceText.text = "$" + intPrice.ToString();
         else slotPriceText.text = "";

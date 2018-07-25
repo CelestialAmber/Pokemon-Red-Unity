@@ -87,12 +87,7 @@ public class Bag : MonoBehaviour  {
 	
 	public IEnumerator UseItem(string whatItem){
         
-		if (whatItem == "BIKE VOUCHER") {
-
-			play.Warp (new Vector2(16, -5));
-
-		}
-        if (whatItem == "BICYCLE")
+        if (whatItem == "Bicycle")
         {
             switch (play.walkSurfBikeState)
             {
@@ -112,6 +107,7 @@ public class Bag : MonoBehaviour  {
             }
 
             currentMenu = itemwindow;
+            cursor.SetActive(false);
             play.startmenuup = false;
             moon.selectedOption = 0;
             moon.currentmenu = null;

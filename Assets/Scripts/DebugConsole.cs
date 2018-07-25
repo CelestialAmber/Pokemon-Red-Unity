@@ -71,12 +71,12 @@ public class DebugConsole : MonoBehaviour
                     {
                         case 0:
                             SaveData.pokedexlist[var - 1].seen = (arg == 1 ? true : false);
-                            Message("Set " + PokemonStats.IndexToMon(var) + (arg == 0 ? " as not seen." : " as seen."));
+                            Message("Set " + PokemonData.IndexToMon(var) + (arg == 0 ? " as not seen." : " as seen."));
                             break;
                         case 1:
                             SaveData.pokedexlist[var - 1].seen = (arg == 1 ? true : false);
                             SaveData.pokedexlist[var - 1].caught = (arg == 1 ? true : false);
-                            Message("Set " + PokemonStats.IndexToMon(var) + (arg == 0 ? " as not caught." : " as caught."));
+                            Message("Set " + PokemonData.IndexToMon(var) + (arg == 0 ? " as not caught." : " as caught."));
                             break;
                     }
                 }else Message("Invalid command.");
@@ -85,12 +85,12 @@ public class DebugConsole : MonoBehaviour
 
         }else if(input == "/gen party"){
             Get get = new Get();
-            get.pokemondata().party.Clear();
+            get.pokemonmenu().party.Clear();
             for (int i = 0; i < 6; i++)
             {
                 
-                get.pokemondata().party.Add(new Pokemon(PokemonStats.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
-                get.pokemondata().healthbars[i] = get.pokemondata().partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
+                get.pokemonmenu().party.Add(new Pokemon(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
+                get.pokemonmenu().healthbars[i] = get.pokemonmenu().partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
             }
             Message("Generated a new party.");
 
