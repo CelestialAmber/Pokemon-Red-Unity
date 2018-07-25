@@ -5,6 +5,7 @@ using UnityEngine;
 public class SaveDataManager : MonoBehaviour {
     
     void Awake(){
+        Get.Init();
         SaveData.Init();
         SaveData.money = 3000;
         SaveData.coins = 300;

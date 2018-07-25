@@ -84,20 +84,18 @@ public class DebugConsole : MonoBehaviour
             }else Message("Invalid command.");
 
         }else if(input == "/gen party"){
-            Get get = new Get();
-            get.pokemonmenu().party.Clear();
+            Get.pokeMenu.party.Clear();
             for (int i = 0; i < 6; i++)
             {
                 
-                get.pokemonmenu().party.Add(new Pokemon(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
-                get.pokemonmenu().healthbars[i] = get.pokemonmenu().partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
+                Get.pokeMenu.party.Add(new Pokemon(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
+                Get.pokeMenu.healthbars[i] = Get.pokeMenu.partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
             }
             Message("Generated a new party.");
 
         }else if(input == "/credits"){
-            Get get = new Get();
             Player.disabled = true;
-            get.player().credits.SetActive(true);
+            Get.player.credits.SetActive(true);
         }
         else Message("Invalid command.");
 

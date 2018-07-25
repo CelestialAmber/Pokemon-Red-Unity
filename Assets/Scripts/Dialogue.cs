@@ -33,7 +33,7 @@ public class Dialogue : MonoBehaviour {
     MainMenu mainmenu;
     string laststring;
 	void Start(){
-        mainmenu = new Get().menu();
+        mainmenu = Get.menu;
         subdialogue.SetActive(true);
 		finishedThePrompt = true;
 		Name = "RED";

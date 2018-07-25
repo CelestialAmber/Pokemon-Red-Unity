@@ -90,8 +90,9 @@ public class Serializer
 
 public class PokemonData
 {
-    
-    public static MoveData GetMove(string moveToGet){
+
+    public static MoveData GetMove(string moveToGet)
+    {
         //Debug.Log("Requesting move " + "\"" + moveToGet + "\"");
         //Iterate through the array and find the move by its index.
         foreach (MoveData move in moves)
@@ -103,7 +104,8 @@ public class PokemonData
     }
     //Format: name, power, type, accuracy, max pp, effect
     public static List<MoveData> moves = new List<MoveData>();
-    public static int MonToID(string name){
+    public static int MonToID(string name)
+    {
         return PokemonToIndex[name];
     }
 
@@ -132,10 +134,13 @@ List of index of the party sprite for each Pokemon.
     public static Dictionary<string, int> PokemonPartySprite = new Dictionary<string, int>();
     public static Dictionary<string, string[]> PokemonTypes = new Dictionary<string, string[]>();
     public static Dictionary<string, int> PokemonExpGroup = new Dictionary<string, int>();
-    public static string IndexToMon(int index){
+    public static string IndexToMon(int index)
+    {
         int i = 1;
-        foreach(var key in PokemonToIndex.Keys){
-            if(i == index){
+        foreach (var key in PokemonToIndex.Keys)
+        {
+            if (i == index)
+            {
                 return key;
             }
             i++;
@@ -157,6 +162,7 @@ List of index of the party sprite for each Pokemon.
     }
     public static Dictionary<string, int> PokemonToIndex = new Dictionary<string, int>();
     public static Dictionary<string, int> TMHMtoIndex = new Dictionary<string, int>();
+    public static Dictionary<string, int> itemPrices = new Dictionary<string, int>();
 }
 
 public class PokemonDataJSON : MonoBehaviour
@@ -175,7 +181,7 @@ public class PokemonDataJSON : MonoBehaviour
         PokemonData.PokemonExpGroup = Serializer.JSONtoObject<Dictionary<string, int>>("expGroupData.json");
         PokemonData.PokemonToIndex = Serializer.JSONtoObject<Dictionary<string, int>>("pokemonIndices.json");
         PokemonData.TMHMtoIndex = Serializer.JSONtoObject<Dictionary<string, int>>("tmHmIndices.json");
-       
+        PokemonData.itemPrices = Serializer.JSONtoObject<Dictionary<string, int>>("itemPrices.json");
     }
 }
 #if UNITY_EDITOR
@@ -185,7 +191,8 @@ public class PokemonDataEditor : Editor {
     public override void OnInspectorGUI(){
         PokemonDataJSON pokemonDataJSON = (PokemonDataJSON)target;
         DrawDefaultInspector();
-
+        if(GUILayout.Button("Save data to JSON")){
+        }
     }
 
 

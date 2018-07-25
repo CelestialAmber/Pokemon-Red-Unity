@@ -464,6 +464,7 @@ public class PokemonMenu : MonoBehaviour
 
             }
             if(currentMenu == switchstats){
+                selectedOption = selectedMon;
                 UpdateMainMenu();
                 currentMenu = mainwindow;
             }
@@ -535,9 +536,9 @@ public class PokemonMenu : MonoBehaviour
                 if (donewaiting)
                 {
                     d.Deactivate();
-                    d.cantscroll = true;
                     d.displaysimmediate = true;
                     StartCoroutine(d.text("Choose a Pokemon."));
+                    selectedOption = selectedMon;
                     UpdateMainMenu();
                     currentMenu = mainwindow;
 

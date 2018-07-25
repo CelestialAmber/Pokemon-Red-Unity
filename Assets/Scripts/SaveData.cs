@@ -28,39 +28,25 @@ public static class IntExtensions{
 }
 public class Get 
 {
-    public GameObject fetchObject(string path){
+    public static void Init(){
+        Get.bio = fetchObject("UI/Menus/BioMenu").GetComponent<ViewBio>();
+        Get.pokedex = fetchObject("UI/Menus/Pokedex").GetComponent<Pokedex>();
+        Get.bag = fetchObject("UI/Menus/Bag").GetComponent<Bag>();
+        Get.menu = fetchObject("UI/Menus/StartMenu").GetComponent<MainMenu>();
+        Get.player = fetchObject("Player").GetComponent<Player>();
+        Get.pokeMenu = fetchObject("UI/Menus/PokemonMenu").GetComponent<PokemonMenu>();
+        Get.items = fetchObject("PokemonDataManager").GetComponent<Items>();
+    }
+    public static GameObject fetchObject(string path){
         return GameObject.Find(path);
     }
-     
-    public  ViewBio Bio(){
-            return fetchObject("UI/Menus/BioMenu").GetComponent<ViewBio>();
-        
-    }
-    public  Pokedex pokedex(){
-            return fetchObject("UI/Menus/Pokedex").GetComponent<Pokedex>();
-    }
-    public  Bag bag()
-    {
-
-            return fetchObject("UI/Menus/Bag").GetComponent<Bag>();
-
-    }
-    public MainMenu menu()
-    {
-
-        return fetchObject("UI/Menus/StartMenu").GetComponent<MainMenu>();
-
-    }
-     public Player player()
-    {
-
-        return fetchObject("Player").GetComponent<Player>();
-
-    }
-    public PokemonMenu pokemonmenu()
-    {
-        return fetchObject("UI/Menus/PokemonMenu").GetComponent<PokemonMenu>();
-    }
+    public static ViewBio bio;
+    public static Pokedex pokedex;
+    public static Bag bag;
+    public static MainMenu menu;
+    public static Player player;
+    public static PokemonMenu pokeMenu;
+    public static Items items;
 
 }
 

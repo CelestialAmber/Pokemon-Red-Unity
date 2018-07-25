@@ -8,7 +8,7 @@ public class TextDatabase : MonoBehaviour {
 	public Bag bag;
     public Cursor cursor;
 	public Items itemDatabase;
-	public pokemart pokeMart;
+	public PokeMart pokeMart;
 	public Player player;
 	public PokemonMenu pokemonData;
 	public Slots slots;

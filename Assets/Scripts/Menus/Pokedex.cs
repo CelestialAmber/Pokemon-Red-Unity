@@ -73,13 +73,13 @@ public class Pokedex : MonoBehaviour
     void Update()
     {
         if (!selectingMon)
-            cursor.GetComponent<RectTransform>().anchoredPosition = new Vector2(-20.1f, -3.2f - 1 * (selectedSlot));
+            cursor.SetPosition(0,112 - 16 * selectedSlot);
         if(! cursor.isActive)
         cursor.SetActive(true);
-        if (get.Bio().displayingbio) cursor.SetActive(false);
-        if (get.menu().currentmenu == get.menu().pokedexmenu)
+        if (Get.bio.displayingbio) cursor.SetActive(false);
+        if (Get.menu.currentmenu == Get.menu.pokedexmenu)
         {
-            if (Inputs.pressed("b") && !get.Bio().displayingbio)
+            if (Inputs.pressed("b") && !Get.bio.displayingbio)
             {
                 if (Player.disabled) Player.disabled = false;
                 if (selectingMon)
@@ -88,13 +88,13 @@ public class Pokedex : MonoBehaviour
                 }
                 else
                 {
-                    get.menu().donewaiting = false;
-                    get.menu().currentmenu = get.menu().thismenu;
+                    Get.menu.donewaiting = false;
+                    Get.menu.currentmenu = Get.menu.thismenu;
 
                     gameObject.SetActive(false);
                 }
             }
-            if (Inputs.pressed("a") && !get.Bio().displayingbio)
+            if (Inputs.pressed("a") && !Get.bio.displayingbio)
             {
 
                 if (!selectingMon && SaveData.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
@@ -104,7 +104,7 @@ public class Pokedex : MonoBehaviour
                 }
                 else if (SaveData.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
                 {
-                    StartCoroutine(get.Bio().DisplayABio(topSlotIndex + selectedSlot));
+                    StartCoroutine(Get.bio.DisplayABio(topSlotIndex + selectedSlot));
                 }
 
             }

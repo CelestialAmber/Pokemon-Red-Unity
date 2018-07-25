@@ -25,8 +25,8 @@ public class MainMenu : MonoBehaviour {
 	}
     private void Awake()
     {
-        lag = get.bag();
-        pokedex = get.pokedex();
+        lag = Get.bag;
+        pokedex = Get.pokedex;
     }
     // Update is called once per frame
     void Update () {

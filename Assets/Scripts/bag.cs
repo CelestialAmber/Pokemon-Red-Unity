@@ -327,6 +327,7 @@ public class Bag : MonoBehaviour  {
                                 }else{
                                     mylog.Deactivate();
                                     UpdateBagScreen();
+                                    cursor.SetActive(true);
                                     currentMenu = itemwindow;
                                 }
 								
@@ -408,7 +409,7 @@ public class Bag : MonoBehaviour  {
 		mylog.Deactivate ();
 		mylog.cantscroll = false;
 		mylog.finishedCurrentTask = true;
-		StartCoroutine(RemoveItem (amountToTask));
+		RemoveItem (amountToTask);
         UpdateBagScreen();
 		currentMenu = itemwindow;
 		ItemMode = 0;
@@ -421,13 +422,10 @@ public class Bag : MonoBehaviour  {
 	}
 
 
-	public IEnumerator RemoveItem(int amount){
+	public void RemoveItem(int amount){
 		
 			id.items [currentBagPosition].quantity -= amount;
-        if (id.items[currentBagPosition].quantity == 0) id.items.RemoveAt(currentBagPosition);
-
-		
-		yield return null;
+        if (id.items[currentBagPosition].quantity <= 0) id.items.RemoveAt(currentBagPosition);
 	}
 	void ItemMode1(){
 		//code

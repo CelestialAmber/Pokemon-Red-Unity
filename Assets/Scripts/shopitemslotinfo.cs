@@ -16,6 +16,14 @@ public class shopitemslotinfo : MonoBehaviour {
         slotNameText = transform.GetChild(0).GetComponent<CustomText>();
         slotPriceText = transform.GetChild(1).GetComponent<CustomText>();
     }
+    public void UpdatePrice()
+    {
+        if (PokemonData.itemPrices.ContainsKey(name))
+        {
+            intPrice = PokemonData.itemPrices[name];
+        }
+        else throw new UnityException("A price entry doesn't exist for " + "\"" + name + "\"");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -31,102 +39,8 @@ public class shopitemslotinfo : MonoBehaviour {
                 slotNameText.text = "CANCEL";
                 break;
         }
-        switch (name)
-        {
-
-            case "Poke Ball":
-            intPrice = 200;
-            break;
-
-             case "Great Ball":
-            intPrice = 600;
-             break;
-
-        case "Ultra Ball":
-        intPrice = 1200;
-        break;
-
-       case "Repel":
-        intPrice = 350;
-         break;
-
-       case "Super Repel":
-            intPrice = 500;
-        break;
-
-       case "Max Repel":
-        
-            intPrice = 700;
-
-        break;
-       case "Potion":
-        
-            intPrice = 300;
-
-        break;
-       case "Super Potion":
-        
-            intPrice = 700;
-
-        break;
-       case "Hyper Potion":
-        
-            intPrice = 1500;
-
-        break;
-       case "Max Potion":
-        
-            intPrice = 2500;
-
-        break;
-       case "Full Restore":
-        
-            intPrice = 3000;
-
-        break;
-       case "Antidote":
-        
-            intPrice = 100;
-
-        break;
-       case "Awakening":
-        
-            intPrice = 200;
-
-        break;
-       case "Ice Heal":
-        
-            intPrice = 250;
-
-        break;
-       case "Burn Heal":
-        
-            intPrice = 250;
-
-        break;
-       case "Parlyz Heal":
-        
-            intPrice = 200;
-
-        break;
-       case "Full Heal":
-        
-            intPrice = 600;
-
-        break;
-       case "Escape Rope":
-        
-            intPrice = 550;
-
-        break;
-       case "REVIVE":
-        
-            intPrice = 1500;
-                break;
-        
-    }
         if (mode == SlotMode.Item)
-            slotPriceText.text = "$" + intPrice.ToString();
+            slotPriceText.text = "$" + intPrice;
         else slotPriceText.text = "";
 
 	}

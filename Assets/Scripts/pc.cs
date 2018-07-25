@@ -32,7 +32,7 @@ public class PC : MonoBehaviour  {
     public int usedcap;
 
     void UpdateBagScreen(){
-        usedcap = ItemMode == 2 ? id.items.Count : id.PCitems.Count;
+        usedcap = ItemMode == 2 ? id.items.Count : id.pcItems.Count;
         if (ItemMode == 2)
         {
             for (int i = 0; i < 4; i++)
@@ -65,9 +65,9 @@ public class PC : MonoBehaviour  {
                 if (currentItem > offscreenindexup && currentItem < usedcap)
                 {
                     Items[i].GetComponent<itemslotinformation>().mode = SlotMode.Item;
-                    Items[i].GetComponent<itemslotinformation>().Name = id.PCitems[currentItem].name;
-                    Items[i].GetComponent<itemslotinformation>().intquantity = id.PCitems[currentItem].quantity;
-                    Items[i].GetComponent<itemslotinformation>().isKeyItem = id.PCitems[currentItem].isKeyItem;
+                    Items[i].GetComponent<itemslotinformation>().Name = id.pcItems[currentItem].name;
+                    Items[i].GetComponent<itemslotinformation>().intquantity = id.pcItems[currentItem].quantity;
+                    Items[i].GetComponent<itemslotinformation>().isKeyItem = id.pcItems[currentItem].isKeyItem;
                 }
                 else if (currentItem == usedcap)
                 {
@@ -105,7 +105,7 @@ public class PC : MonoBehaviour  {
     IEnumerator MainUpdate()
     {
 
-        usedcap = ItemMode == 2 ? id.items.Count : id.PCitems.Count;
+        usedcap = ItemMode == 2 ? id.items.Count : id.pcItems.Count;
         if (currentBagPosition == 0)
         {
             offscreenindexup = -1;
@@ -215,9 +215,9 @@ public class PC : MonoBehaviour  {
 
                 if (ItemMode == 1 || ItemMode == 3)
                 {
-                    Item item = id.PCitems[selectBag];
-                    id.PCitems[selectBag] = id.PCitems[currentBagPosition];
-                    id.PCitems[currentBagPosition] = item;
+                    Item item = id.pcItems[selectBag];
+                    id.pcItems[selectBag] = id.pcItems[currentBagPosition];
+                    id.pcItems[currentBagPosition] = item;
 
                     selectBag = -1;
                 }
@@ -238,7 +238,7 @@ public class PC : MonoBehaviour  {
                     {
                         if (donewaiting)
                         {
-                            if (currentBagPosition == ((ItemMode == 2) ? id.items.Count : id.PCitems.Count))
+                            if (currentBagPosition == ((ItemMode == 2) ? id.items.Count : id.pcItems.Count))
                             {
                                 mylog.Deactivate();
                                 mylog.displayimmediatenoscroll = true;
@@ -448,7 +448,7 @@ public class PC : MonoBehaviour  {
         mylog.Deactivate();
         mylog.cantscroll = false;
         mylog.finishedCurrentTask = true;
-        Item  withdrawnitem = id.PCitems[currentBagPosition];
+        Item  withdrawnitem = id.pcItems[currentBagPosition];
         string DisplayString =  withdrawnitem.name + ".";
         yield return StartCoroutine(mylog.text("Withdrew"));
         yield return StartCoroutine(mylog.line(DisplayString));
@@ -494,7 +494,7 @@ public class PC : MonoBehaviour  {
 
         mylog.finishedWithTextOverall = true;
         Item inBagItem = new Item("", 0);
-        foreach(Item item in id.PCitems){
+        foreach(Item item in id.pcItems){
             if (item.name == depositeditem.name)
             {
                 inBagItem = item;
@@ -503,8 +503,8 @@ public class PC : MonoBehaviour  {
             }
 
         }
-        if (alreadyInBag) id.PCitems[id.PCitems.IndexOf(inBagItem)].quantity += amountToTask;
-        else if (id.PCitems.Count < 50) id.PCitems.Add(new Item(depositeditem.name, amountToTask));
+        if (alreadyInBag) id.pcItems[id.pcItems.IndexOf(inBagItem)].quantity += amountToTask;
+        else if (id.pcItems.Count < 50) id.pcItems.Add(new Item(depositeditem.name, amountToTask));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
         mylog.displayimmediatenoscroll = true;
@@ -524,7 +524,7 @@ public class PC : MonoBehaviour  {
         mylog.Deactivate ();
         mylog.cantscroll = false;
         mylog.finishedCurrentTask = true;
-        Item tosseditem = id.PCitems[currentBagPosition];
+        Item tosseditem = id.pcItems[currentBagPosition];
         string DisplayString = "Threw away " + tosseditem.name + ".";
         yield return StartCoroutine(mylog.text(DisplayString));
         mylog.done ();
@@ -547,8 +547,8 @@ public class PC : MonoBehaviour  {
 
     public IEnumerator RemoveItem(int amount){
         if (ItemMode == 1 || ItemMode == 3) {
-            id.PCitems[currentBagPosition].quantity -= amount;
-            if (id.PCitems[currentBagPosition].quantity == 0 || id.PCitems[currentBagPosition].isKeyItem) id.PCitems.RemoveAt(currentBagPosition);
+            id.pcItems[currentBagPosition].quantity -= amount;
+            if (id.pcItems[currentBagPosition].quantity == 0 || id.pcItems[currentBagPosition].isKeyItem) id.pcItems.RemoveAt(currentBagPosition);
         }
         if (ItemMode == 2) {
             id.items[currentBagPosition].quantity -= amount;

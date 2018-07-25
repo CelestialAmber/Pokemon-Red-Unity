@@ -17,121 +17,121 @@ public class Items : MonoBehaviour
     //for items
     public List<Item> items = new List<Item>();
     //for PC
-    public List<Item> PCitems = new List<Item>();
+    public List<Item> pcItems = new List<Item>();
     public PC lc;
     public List<string> ViridianItems = new List<string>(
         new string[]{
-        "POKE BALL",
-        "POTION",
-        "ANTIDOTE",
-        "PARLYZ HEAL",
-        "BURN HEAL"
+        "Poke Ball",
+        "Potion",
+        "Antidote",
+        "Parlyz Heal",
+        "Burn Heal"
     });
     public List<string> PewterItems = new List<string>(
         new string[]{
-        "POKE BALL",
-        "POTION",
-        "ESCAPE ROPE",
-        "ANTIDOTE",
-        "BURN HEAL",
-        "AWAKENING",
-        "PARLYZ HEAL"
+        "Poke Ball",
+        "Potion",
+        "Escape Rope",
+        "Antidote",
+        "Burn Heal",
+        "Awakening",
+        "Parlyz Heal"
     });
     public List<string> CeruleanItems = new List<string>(
         new string[]{
-        "POKE BALL",
-        "POTION",
-        "ESCAPE ROPE",
-        "REPEL",
-        "ANTIDOTE",
-        "BURN HEAL",
-        "AWAKENING",
-        "PARLYZ HEAL"
+        "Poke Ball",
+        "Potion",
+        "Escape Rope",
+        "Repel",
+        "Antidote",
+        "Burn Heal",
+        "Awakening",
+        "Parlyz Heal"
     });
     public List<string> VermilionItems = new List<string>(
         new string[]{
-       "POKE BALL",
-       "SUPER POTION",
-        "ICE HEAL",
-        "AWAKENING",
-       "PARLYZ HEAL",
-       "REPEL"
+       "Poke Ball",
+       "Super Potion",
+        "Ice Heal",
+        "Awakening",
+       "Parlyz Heal",
+       "Repel"
     });
     public List<string> LavenderItems = new List<string>(
         new string[]{
 
-      "GREAT BALL",
-      "SUPER POTION",
-      "REVIVE",
-      "ESCAPE ROPE",
-      "SUPER REPEL",
-      "ANTIDOTE",
-      "BURN HEAL",
-      "ICE HEAL",
-      "PARLYZ HEAL"
+      "Great Ball",
+      "Super Potion",
+      "Revive",
+      "Escape Rope",
+      "Super Repel",
+      "Antidote",
+      "Burn Heal",
+      "Ice Heal",
+      "Parlyz Heal"
     });
     public List<string> SaffronItems = new List<string>(
         new string[]{
-        "GREAT BALL",
-        "HYPER  POTION",
-        "MAX REPEL",
-        "ESCAPE ROPE",
-        "FULL HEAL",
-        "REVIVE"
+        "Great Ball",
+        "Hyper Potion",
+        "Max Repel",
+        "Escape Rope",
+        "Full Heal",
+        "Revive"
     });
     public List<string> FuchsiaItems = new List<string>(
         new string[]{
-        "ULTRA BALL",
-        "GREAT BALL",
-        "SUPER POTION",
-        "HYPER POTION",
-        "REVIVE",
-        "FULL HEAL",
-        "SUPER REPEL"
+        "Ultra Ball",
+        "Great Ball",
+        "Super Potion",
+        "Hyper Potion",
+        "Revive",
+        "Full Heal",
+        "Super Repel"
     });
     public List<string> CinnabarItems = new List<string>(
         new string[]{
-        "ULTRA BALL",
-        "GREAT BALL",
-        "HYPER POTION",
-        "MAX REPEL",
-        "ESCAPE ROPE",
-        "FULL HEAL",
-        "REVIVE"
+        "Ultra Ball",
+        "Great Ball",
+        "Hyper Potion",
+        "Max Repel",
+        "Escape Rope",
+        "Full Heal",
+        "Revive"
     });
     public List<string> IndigoItems = new List<string>(
         new string[]{
-        "ULTRA BALL",
-        "GREAT BALL",
-        "FULL RESTORE",
-        "MAX POTION",
-        "FULL HEAL",
-        "REVIVE",
-        "MAX REPEL"
+        "Ultra Ball",
+        "Great Ball",
+        "Full Restore",
+        "Max Potion",
+        "Full Heal",
+        "Revive",
+        "Max Repel"
     });
 
     public string[] keyitems = {
-        "BIKE VOUCHER",
-        "BICYCLE",
-        "HELIX FOSSIL",
-        "DOME FOSSIL",
-        "CARD KEY",
-        "COIN CASE",
-        "EXP. ALL",
-        "GOLD TEETH",
-        "GOOD ROD",
-        "ITEMFINDER",
-        "LIFT KEY",
-        "OAK'S PARCEL",
-        "OLD AMBER",
-        "OLD ROD",
-        "POKEFLUTE",
-        "POKEDEX",
-        "S.S. TICKET",
-        "SECRET KEY",
-        "SILPH SCOPE",
-        "SUPER ROD",
-        "TOWN MAP" 
+        "Bike Voucher",
+        "Bicycle",
+        "Helix Fossil",
+        "Dome Fossil",
+        "Card Key",
+        "Coin Case",
+        "Exp. All",
+        "Gold Teeth",
+        "Good Rod",
+        "Itemfinder",
+        "Lift Key",
+        "Oak's Parcel",
+        "Old Amber",
+        "Old Rod",
+        "Pokeflute",
+        "Pokedex",
+        "S.S. Ticket",
+        "Secret Key",
+        "Silph Scope",
+        "Super Rod",
+        "Town Map" 
     };
 	// Use this for initialization
 	void Start () {
@@ -160,10 +160,10 @@ public class Items : MonoBehaviour
 
 
     public void checkKeyItemsPC(){
-		for (int i = 0; i < PCitems.Count; i++) {
-                if (System.Array.IndexOf(keyitems, PCitems[i].name) > -1)
+		for (int i = 0; i < pcItems.Count; i++) {
+                if (System.Array.IndexOf(keyitems, pcItems[i].name) > -1)
                 {
-                        PCitems[i].isKeyItem = true;
+                        pcItems[i].isKeyItem = true;
                     
                 }
 		}
@@ -211,6 +211,12 @@ public class Items : MonoBehaviour
 
 
 
+    }
+    public void RemoveItem(int amount, int index)
+    {
+
+        items[index].quantity -= amount;
+        if (items[index].quantity <= 0) items.RemoveAt(index);
     }
 
 	}
