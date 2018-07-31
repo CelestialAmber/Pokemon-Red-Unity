@@ -27,7 +27,7 @@ https://www.nayuki.io/page/transcription-of-pokemon-game-boy-music
 
 --------------------------------------------------------
 
-- [ ] Map - 10%
+- [ ] Map - 100% (Raw map data loader finished)
 
 - [ ] Items - framework done, all items not implemented
 
