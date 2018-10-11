@@ -23,6 +23,9 @@ Music-
 
 https://www.nayuki.io/page/transcription-of-pokemon-game-boy-music
 
+Joycon Library:
+https://github.com/Looking-Glass/JoyconLib
+
 # Feature checklist
 
 --------------------------------------------------------
