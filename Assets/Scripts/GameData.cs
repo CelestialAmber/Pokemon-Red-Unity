@@ -66,6 +66,15 @@ public class Inputs
     public static Joycon leftJoycon;
     public static Joycon rightJoycon;
     public static bool joyconsConnected;
+    public static bool dialogueCheck;
+    public static void Disable(string button){
+        buttonDisabled[keyindices[button]] = true;
+    }
+    public static void Enable(string button)
+    {
+        buttonDisabled[keyindices[button]] = false;
+    }
+    public static bool[] buttonDisabled = new bool[8];
     public static List<KeyCode> inputs = new List<KeyCode>(new KeyCode[]{
         KeyCode.UpArrow,
             KeyCode.DownArrow,
@@ -91,6 +100,8 @@ public class Inputs
         if (DebugConsole.isActive) return false;
 
         int index = Inputs.keyindices[button];
+        if (buttonDisabled[index]) return false;
+        if (index == 6 && dialogueCheck) return false;
             if (Input.GetKeyDown(Inputs.inputs[index])) return true;
         else if(joyconsConnected){
             switch(index){
@@ -112,7 +123,10 @@ public class Inputs
     {
         if (DebugConsole.isActive) return false;
         int index = Inputs.keyindices[button];
+        if (buttonDisabled[index]) return false;
+        if (index == 6 && dialogueCheck) return false;
         if (Input.GetKey(Inputs.inputs[index])) return true;
+
         else if (joyconsConnected)
         {
             switch (index)
@@ -135,6 +149,8 @@ public class Inputs
     {
         if (DebugConsole.isActive) return false;
         int index = Inputs.keyindices[button];
+        if (buttonDisabled[index]) return false;
+        if (index == 6 && dialogueCheck) return false;
         if (Input.GetKeyUp(Inputs.inputs[index])) return true;
         else if (joyconsConnected)
         {
@@ -159,11 +175,14 @@ public class GameConstants{
     public const int mapWidth = 400;
     public const int mapHeight = 520;
 }
-//Class containing all the save data of the game.
+//Class containing all the core data of the game.
 public class GameData  {
+    public static Sprite[] frontMonSprites, backMonSprites;
     public static bool isPaused;
     public static void Init()
     {
+        frontMonSprites = Resources.LoadAll<Sprite>("frontmon");
+        backMonSprites = Resources.LoadAll<Sprite>("backmon");
         if(pokedexlist.Count != 151){
 
             pokedexlist.Clear();

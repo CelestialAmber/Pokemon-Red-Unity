@@ -61,15 +61,15 @@ public class TextDatabase : MonoBehaviour {
 
     IEnumerator GetItemText(string item){
         itemDatabase.AddItem(item, 1);
-        yield return StartCoroutine(mylog.text(SaveData.playerName + " found "));
-        yield return StartCoroutine(mylog.line(item + "!"));
+        yield return StartCoroutine(mylog.text(GameData.playerName + " found "));
+        yield return StartCoroutine(mylog.line(item.ToUpper() + "!"));
         yield return StartCoroutine(mylog.done());
 
 
     }
 	IEnumerator Text1(){
 		if (player.direction == 3 || player.direction == 4) {
-			if (SaveData.coins > 0) {
+			if (GameData.coins > 0) {
 				yield return StartCoroutine(mylog.text ("A slot machine!"));
 				yield return StartCoroutine(mylog.line ("Want to play?"));
                 yield return StartCoroutine(mylog.prompt ());
@@ -85,6 +85,7 @@ public class TextDatabase : MonoBehaviour {
 					}
 					Player.disabled = true;
 					slotmenu.SetActive (true);
+                    Inputs.Disable("start");
 					StartCoroutine (slots.Initialize ());
 
 				} else {
@@ -110,10 +111,11 @@ public class TextDatabase : MonoBehaviour {
 		mylog.Deactivate ();
 		mylog.cantscroll = false;
 		mylog.finishedWithTextOverall = true;
-        yield return StartCoroutine(mylog.para (SaveData.playerName + " turned on"));
+        yield return StartCoroutine(mylog.para (GameData.playerName + " turned on"));
 		yield return StartCoroutine(mylog.line ("the PC!"));
 		yield return StartCoroutine(mylog.done());
 		itemPCMenu.SetActive (true);
+        Inputs.Disable("start");
         StartCoroutine(itemPCMenu.GetComponent<PC> ().Initialize ());
 	}
 	IEnumerator Text3(){
@@ -130,10 +132,12 @@ public class TextDatabase : MonoBehaviour {
 		mylog.Deactivate ();
 		mylog.cantscroll = false;
 		mylog.finishedWithTextOverall = true;
-		yield return StartCoroutine(mylog.para ("Hi there! How may I help you?"));
+        yield return StartCoroutine(mylog.text("Hi there!"));
+        yield return StartCoroutine(mylog.line("May I help you?"));
 		yield return StartCoroutine(mylog.done());
 		player.shopup = true;
         cursor.SetActive(true);
+        Inputs.Disable("start");
 		pokeMart.martlist = itemDatabase.IndigoItems;
 		shopmenu.SetActive (true);
         pokeMart.currentMenu = pokeMart.buysellwindow;
@@ -162,17 +166,17 @@ IEnumerator Text5()
 	}
 	if (mylog.selectedOption == 0)
 	{
-		if (SaveData.coins <= 9949 && SaveData.coins >= 1000)
+		if (GameData.coins <= 9949 && GameData.coins >= 1000)
 		{
-			SaveData.money -= 1000;
-			SaveData.coins += 50;
+			GameData.money -= 1000;
+			GameData.coins += 50;
 			yield return StartCoroutine(mylog.text("Thanks! Here are"));
 			yield return StartCoroutine(mylog.line("your 50 coins!"));
 			yield return StartCoroutine(mylog.done());
 		}
 		else
 		{
-			if (SaveData.money < 1000)
+			if (GameData.money < 1000)
 			{
 				yield return StartCoroutine(mylog.text("You can't afford"));
 				yield return StartCoroutine(mylog.line("the coins!"));
@@ -182,7 +186,7 @@ IEnumerator Text5()
 
 
 			}
-			if (SaveData.coins > 9949)
+			if (GameData.coins > 9949)
 			{
 				yield return StartCoroutine(mylog.text("Oops! Your COIN"));
 				yield return StartCoroutine(mylog.line("CASE is full."));
@@ -211,7 +215,7 @@ IEnumerator Text5()
 
 IEnumerator FoundCoinsText(int coinamount)
 {
-	SaveData.coins += coinamount;
+	GameData.coins += coinamount;
 	yield return StartCoroutine(mylog.text("Found " + coinamount + " coins!"));
 	yield return StartCoroutine(mylog.done());
 

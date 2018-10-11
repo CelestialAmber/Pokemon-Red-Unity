@@ -32,7 +32,6 @@ public class BattleManager : MonoBehaviour {
 	public bool donetransition;
 	public GameObject ourpokeballs, opponentballs;
 	public Image battleoverlay, frontportrait, backportrait;
-	public Sprite[] backmon, frontmon;
 	public Sprite blank, initial, enemystats, allstats;
 	//current loaded your mon stats
 	public string friendpokemonnameinslot;
@@ -64,8 +63,6 @@ public class BattleManager : MonoBehaviour {
 	public int currentLoadedMon;
 	// Use this for initialization
 	void Start(){
-		frontmon = Resources.LoadAll <Sprite> ("frontmon");
-		this.gameObject.SetActive (false);
 	}
 	public void Initialize(){
         enemyMons.Clear();
@@ -124,6 +121,11 @@ public class BattleManager : MonoBehaviour {
 		otheranim.SetInteger ("currentpass", 1);
 
 	}
+    public IEnumerator WildPokemonAppeared(){
+
+        yield return 0;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -139,22 +141,6 @@ public class BattleManager : MonoBehaviour {
 
 		}
 		if (donetransition) {
-			if (Input.GetKeyDown (KeyCode.R)) {
-                StartCoroutine(AnimateOurHealth (-10));
-			}
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                StartCoroutine(AnimateOurHealth(10));
-            }
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                StartCoroutine(AnimateEnemyHealth(-10));
-            }
-            if (Input.GetKeyDown(KeyCode.U))
-            {
-                StartCoroutine(AnimateEnemyHealth(10));
-            }
-
 
 
 			foemonLeveltext.text = enemymon.level.ToString();
@@ -249,12 +235,13 @@ public class BattleManager : MonoBehaviour {
 	
 	}
 	public void DetermineFrontSprite(){
-        frontportrait.overrideSprite = frontmon [PokemonData.MonToID(enemymon.pokename) - 1];
+        frontportrait.overrideSprite = GameData.frontMonSprites[PokemonData.MonToID(enemymon.pokename) - 1];
 
 	}
 
 	public void DetermineBackSprite(){
-        backportrait.overrideSprite = backmon [PokemonData.MonToID(ourmon.pokename) - 1];
+        backportrait.overrideSprite = GameData.backMonSprites
+            [PokemonData.MonToID(ourmon.pokename) - 1];
 
 	}
 	public void ActivateOurStats(){
@@ -309,6 +296,33 @@ public class BattleManager : MonoBehaviour {
         }
         yield return null;
 
+    }
+
+    void ShowBall()
+    {
+        StartCoroutine(PokeballShow());
+    }
+    void DetermineFront()
+    {
+        DetermineFrontSprite();
+    }
+    void DetermineBack()
+    {
+        DetermineBackSprite();
+    }
+    void ReadyToBattle()
+    {
+        
+        readytobattle = true;
+        selectedOption = 0;
+    }
+    void ActivateStatsOur()
+    {
+        ActivateOurStats();
+    }
+    void ActivateStatsTheir()
+    {
+        ActivateTheirStats();
     }
 	
 

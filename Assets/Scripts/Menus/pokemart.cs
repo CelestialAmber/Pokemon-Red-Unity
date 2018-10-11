@@ -45,6 +45,11 @@ public class PokeMart : MonoBehaviour {
 
 
     void UpdateBuyScreen(){
+        if (currentBagPosition == 0)
+        {
+            offscreenindexup = -1;
+            offscreenindexdown = 3;
+        }
         for (int i = 0; i < 4; i++)
         {
             int currentItem = offscreenindexup + 1 + i;
@@ -53,7 +58,7 @@ public class PokeMart : MonoBehaviour {
                 ItemsToBuy[i].mode = SlotMode.Item;
                 ItemsToBuy[i].name = martlist[currentItem];
             }
-            else if (currentItem == id.items.Count)
+            else if (currentItem == martlist.Count)
             {
                 ItemsToBuy[i].mode = SlotMode.Cancel;
 
@@ -68,6 +73,11 @@ public class PokeMart : MonoBehaviour {
         cursor.SetPosition(40, 108 - 16 * (currentBagPosition - offscreenindexup - 1));
     }
     void UpdateSellScreen(){
+        if (currentBagPosition == 0)
+        {
+            offscreenindexup = -1;
+            offscreenindexdown = 3;
+        }
         for (int i = 0; i < 4; i++)
         {
             int currentItem = offscreenindexup + 1 + i;
@@ -97,18 +107,13 @@ public class PokeMart : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (currentBagPosition == 0)
-        {
-            offscreenindexup = -1;
-            offscreenindexdown = 3;
-        }
 		pricetext.text = "$" + fullPrice.ToString ();
-        moneytext.text = "$" + SaveData.money.ToString ();
+        moneytext.text = "$" + GameData.money.ToString ();
 		amountText.text = amountToTask.ToString ();
 		if (currentMenu == quantitymenu) {
 			if (ItemMode == 1) {
-				itemPrice = ItemsToBuy [currentBagPosition].intPrice;
-				maximumItem = Mathf.FloorToInt((float)SaveData.money/(float)itemPrice);
+				itemPrice = ItemsToBuy [currentBagPosition - offscreenindexup - 1].intPrice;
+				maximumItem = 99;
                 if(maximumItem == 0){
                     StartCoroutine(NotEnoughMoney());
                 }
@@ -143,7 +148,7 @@ public class PokeMart : MonoBehaviour {
                     offscreenindexdown++;
 
                 }
-                MathE.Clamp(ref currentBagPosition, 0, martlist.Count - 1);
+                MathE.Clamp(ref currentBagPosition, 0, martlist.Count);
                 UpdateBuyScreen();
             }
             if (Inputs.pressed("up"))
@@ -155,7 +160,7 @@ public class PokeMart : MonoBehaviour {
                     offscreenindexdown--;
 
                 }
-                MathE.Clamp(ref currentBagPosition, 0, martlist.Count - 1);
+                MathE.Clamp(ref currentBagPosition, 0, martlist.Count);
                 UpdateBuyScreen();
 
             }
@@ -209,9 +214,7 @@ public class PokeMart : MonoBehaviour {
 			}
 
 		}
-		if (currentMenu == null && (currentMenu != quantitymenu || currentMenu != itemwindow)) {
-
-		} else {
+		
 			if (currentMenu == buysellwindow) {
 
 				cursor.SetPosition(8, 128 - 16 * selectedOption);
@@ -226,10 +229,17 @@ public class PokeMart : MonoBehaviour {
 					selectedOption--;
                     MathE.Clamp(ref selectedOption, 0, 2);
 				}
-				
+            if(Inputs.pressed("b")){
+                play.shopup = false;
+                cursor.SetActive(false);
+                Inputs.Enable("start");
+                this.gameObject.SetActive(false);
+
+
+            }
 			}
 
-		}
+		
         if (Inputs.pressed("select")) {
 			if (currentMenu == itemwindow) {
 				if (selectBag == -1) {
@@ -255,22 +265,25 @@ public class PokeMart : MonoBehaviour {
 					if (currentMenu == buysellwindow) {
 					
 						if (selectedOption == 0) {
+                        currentBagPosition = 0;
 							currentMenu = martwindow;
                         UpdateBuyScreen();
 
 						}
 						if (selectedOption == 1) {
+                        currentBagPosition = 0;
 							currentMenu = itemwindow;
                         UpdateSellScreen();
-						currentBagPosition = 0;
 
 						}
 					if (selectedOption == 2) {
 							play.shopup = false;
+                        Inputs.Enable("start");
+                        cursor.SetActive(false);
 						this.gameObject.SetActive (false);
 
 
-
+                    
 					}
 				
 					StartCoroutine (Wait ());
@@ -329,17 +342,17 @@ public class PokeMart : MonoBehaviour {
 
 						if (ItemMode == 2) {
 							if (!id.items[currentBagPosition].isKeyItem) {
-								SaveData.money += fullPrice;
-								Get.items.RemoveItem (amountToTask,currentBagPosition);
+								GameData.money += fullPrice;
+                              Get.items.RemoveItem (amountToTask,currentBagPosition);
                                 currentMenu = itemwindow;
                                 UpdateSellScreen();
 							}
 						}
 
 						if (ItemMode == 1) {
-							if (SaveData.money >= fullPrice) {
-								SaveData.money -= fullPrice;
-                                Get.items.AddItem (ItemsToBuy [currentBagPosition].name, amountToTask);
+							if (GameData.money >= fullPrice) {
+								GameData.money -= fullPrice;
+                                Get.items.AddItem (martlist[currentBagPosition], amountToTask);
                                 currentMenu = martwindow;
                                 UpdateBuyScreen();
 							} else {
@@ -451,7 +464,8 @@ public class PokeMart : MonoBehaviour {
 	IEnumerator NotEnoughMoney(){
 
 		mylog.Deactivate();
-		yield return StartCoroutine(mylog.text ("You don't have enough money."));
+        yield return StartCoroutine(mylog.text("You don't have"));
+        yield return StartCoroutine(mylog.line("enough money."));                            
 		yield return StartCoroutine(mylog.done ());
 		currentMenu = martwindow;
 	}

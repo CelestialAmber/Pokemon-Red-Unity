@@ -311,6 +311,7 @@ public class PC : MonoBehaviour  {
                                 play.overrideRenable = false;
                                 mylog.Deactivate();
                                 mylog.finishedWithTextOverall = true;
+                                Inputs.Enable("start");
                                 play.PCactive = false;
                                 play.WaitToInteract();
                                 this.gameObject.SetActive(false);
@@ -362,6 +363,7 @@ public class PC : MonoBehaviour  {
                     play.overrideRenable = false;
                     mylog.Deactivate();
                     play.PCactive = false;
+                    Inputs.Enable("start");
                     mylog.finishedWithTextOverall = true;
                     play.WaitToInteract();
                     this.gameObject.SetActive(false);

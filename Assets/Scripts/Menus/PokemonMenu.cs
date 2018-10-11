@@ -166,7 +166,6 @@ public class PartyAnim
 }
 public class PokemonMenu : MonoBehaviour
 {
-    public Sprite[] MonImages = new Sprite[151];
     public GameObject mainwindow, switchstats, stats1, stats2;
     public GameObject currentMenu;
     public GameObject[] allmenus;
@@ -292,7 +291,7 @@ public class PokemonMenu : MonoBehaviour
     }
     public void UpdateStats1(){
         cursor.SetActive(false);
-        stats1portrait.sprite = MonImages[PokemonData.MonToID(party[selectedMon].pokename) - 1];
+        stats1portrait.sprite = GameData.frontMonSprites[PokemonData.MonToID(party[selectedMon].pokename) - 1];
         int id = PokemonData.MonToID(party[selectedMon].pokename);
         pokedexNO.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
         attacktext.text = party[selectedMon].attack.ToString();
@@ -350,7 +349,7 @@ public class PokemonMenu : MonoBehaviour
                 movestr += (i > 0 ? "\n" : "") + "-" + "\n" + "         " + "--";
         }
         movetext.text = movestr;
-        stats2portrait.sprite = MonImages[PokemonData.MonToID(party[selectedMon].pokename) - 1];
+        stats2portrait.sprite = GameData.frontMonSprites[PokemonData.MonToID(party[selectedMon].pokename) - 1];
         monname2text.text = party[selectedMon].name;
         exptext.text = party[selectedMon].experience.ToString();
         explefttoleveltext.text = (party[selectedMon].ExpToNextLevel() - party[selectedMon].experience).ToString();
@@ -459,6 +458,7 @@ public class PokemonMenu : MonoBehaviour
             {
 
                 d.Deactivate();
+                Inputs.Enable("start");
                 moon.currentmenu = moon.thismenu;
                 this.gameObject.SetActive(false);
 

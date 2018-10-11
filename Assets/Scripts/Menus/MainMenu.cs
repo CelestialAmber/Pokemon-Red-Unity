@@ -23,7 +23,12 @@ public class MainMenu : MonoBehaviour {
 		donewaiting = true;
 		currentmenu = thismenu;
 	}
+    public static MainMenu instance;
     private void Awake()
+    {
+        instance = this;
+    }
+    private void Start()
     {
         lag = Get.bag;
         pokedex = Get.pokedex;
@@ -42,7 +47,7 @@ public class MainMenu : MonoBehaviour {
 		if (currentmenu == null) {
 			cursor.SetActive (false);
 		} else if(currentmenu == thismenu){
-            playername.text = SaveData.playerName;
+            playername.text = GameData.playerName;
 			
 
 			cursor.SetActive (true);
@@ -85,6 +90,7 @@ public class MainMenu : MonoBehaviour {
 		if (Inputs.pressed("a")) {
 			if (currentmenu == badgesmenu && donewaiting) {
 				currentmenu = thismenu;
+                Inputs.Enable("start");
 				badgesmenu.SetActive (false);
 				donewaiting = false;
 
@@ -99,7 +105,7 @@ public class MainMenu : MonoBehaviour {
                         if(currentmenu == thismenu){
                             currentmenu = pokedexmenu;
                             pokedexmenu.SetActive(true);
-
+                            Inputs.Disable("start");
                             pokedex.Init();
                             donewaiting = false;
                         }
@@ -108,6 +114,7 @@ public class MainMenu : MonoBehaviour {
 						if (currentmenu == thismenu) {
 							currentmenu = pokemonmenu;
 							pk.currentMenu = pk.mainwindow;
+                            Inputs.Disable("start");
 							pk.selectedOption = 0;
                             pokemonmenu.SetActive(true);
 							pk.Initialize ();
@@ -123,6 +130,7 @@ public class MainMenu : MonoBehaviour {
 							currentmenu = Bagmenu;
                             cursor.SetActive(true);
 							Bagmenu.SetActive (true);
+                            Inputs.Disable("start");
                             lag.didFirstRunthrough = false;
                             StartCoroutine(Bagmenu.GetComponent<Bag>().Wait());
 							donewaiting = false;
@@ -132,6 +140,7 @@ public class MainMenu : MonoBehaviour {
 				}
 				if (selectedOption == 3) {
 					currentmenu = badgesmenu;
+                    Inputs.Disable("start");
 					badgesmenu.SetActive (true);
 					donewaiting = false;
 				}
@@ -142,6 +151,7 @@ public class MainMenu : MonoBehaviour {
 					opti.selectedOption = 0;
 					if (currentmenu == thismenu) {
 						optionsmenu.SetActive (true);
+                        Inputs.Disable("start");
 						currentmenu = optionsmenu;
 						donewaiting = false;
 
@@ -164,6 +174,7 @@ public class MainMenu : MonoBehaviour {
 		
 				if (currentmenu == optionsmenu) {
 					if (opti.selectedOption == 3) {
+                    Inputs.Enable("start");
 						optionsmenu.SetActive (false);
 						currentmenu = thismenu;
 					donewaiting = false;
@@ -187,7 +198,7 @@ public class MainMenu : MonoBehaviour {
 
 			}
 			if (currentmenu == optionsmenu) {
-
+                Inputs.Enable("start");
 				optionsmenu.SetActive (false);
 				currentmenu = thismenu;
 

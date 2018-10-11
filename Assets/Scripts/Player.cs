@@ -36,24 +36,29 @@ public class Player : MonoBehaviour
     public SpriteRenderer emotionbubble;
     public MainMenu moon;
     public bool shopup;
-    public ViewBio BIO;
+    public ViewBio viewBio;
     public bool actuallymoving;
     public bool ledgejumping;
     public GridTile facedtile;
     public bool doupdate;
+    public int grassCounter;
+  
     //1 up, 2down, 3 left, 4 right
     public bool cannotMoveLeft, cannotMoveRight, cannotMoveUp, cannotMoveDown;
 
     public float speed = 2.0f;
     public Vector3 pos;
-
+    public int holdFrames;
     // Use this for initialization
     int mod(int a, int b){
         return a < 0 ? b + a % b : a % b;
     }
 
+    public static Player instance;
+
       void Awake()
     {
+        instance = this;
         disabled = false;
        
         onHitWarp = new UnityEvent();
@@ -63,7 +68,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         emotionbubble.enabled = false;
-        SaveData.trainerID = Random.Range(0, 65536);
+        GameData.trainerID = Random.Range(0, 65536);
         startmenuup = false;
         canInteractAgain = true;
         direction = 2;
@@ -86,6 +91,7 @@ public class Player : MonoBehaviour
     IEnumerator MovementUpdate()
     {
         
+        
 
         switch (walkSurfBikeState)
         {
@@ -104,6 +110,9 @@ public class Player : MonoBehaviour
        
         if (dia.finishedWithTextOverall && !disabled && !startmenuup && !shopup && !inBattle)
         {
+           
+
+      
             //If we're not ledge jumping already, the adjacent tile is a ledge, and we're exactly on a tile, ledge jump
             if (Inputs.held("down") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeDown" && transform.position == pos && direction == 2)
             {
@@ -145,6 +154,7 @@ public class Player : MonoBehaviour
                 }
                 if (Inputs.held("up"))
                 {
+                    holdFrames++;
                     if (actuallymoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
@@ -156,7 +166,7 @@ public class Player : MonoBehaviour
                         direction = 1;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveUp)
+                    if (transform.position == pos && !cannotMoveUp && holdFrames > 3)
                     {
                         onLoadMap.Invoke();
                         pos += (Vector3.up);
@@ -170,6 +180,7 @@ public class Player : MonoBehaviour
                 }
                 else if (Inputs.held("right"))
                 {
+                    holdFrames++;
                     if (actuallymoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
@@ -181,7 +192,7 @@ public class Player : MonoBehaviour
                         direction = 4;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveRight)
+                    if (transform.position == pos && !cannotMoveRight && holdFrames > 3)
                     {
                         onLoadMap.Invoke();
                         pos += (Vector3.right);
@@ -193,13 +204,15 @@ public class Player : MonoBehaviour
                     }
 
                 }
-             
-                else if (Inputs.held("down"))  {   
+
+                else if (Inputs.held("down"))
+                {
+                    holdFrames++;
                     if (actuallymoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
                     }
-                   
+
 
                     moving = true;
                     if (transform.position == pos)
@@ -207,7 +220,7 @@ public class Player : MonoBehaviour
                         direction = 2;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveDown)
+                    if (transform.position == pos && !cannotMoveDown && holdFrames > 3)
                     {
                         onLoadMap.Invoke();
                         pos += (Vector3.down);
@@ -220,6 +233,7 @@ public class Player : MonoBehaviour
                 }
                 else if (Inputs.held("left"))
                 {
+                    holdFrames++;
                     if (actuallymoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
@@ -231,7 +245,7 @@ public class Player : MonoBehaviour
                         direction = 3;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveLeft)
+                    if (transform.position == pos && !cannotMoveLeft && holdFrames > 3)
                     {
                         onLoadMap.Invoke();
                         pos += (Vector3.left);
@@ -246,13 +260,15 @@ public class Player : MonoBehaviour
                 {
                     actuallymoving = false;
                 }
-
+                else holdFrames = 0;
                 transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
 
                 if (transform.position == pos)
                 {
+                    
                     if (actuallymoving)
                     {
+                        //The player moved onto a tile, run any checks needed;
                         GridTile currentTile = MapManager.maptiles[mod((int)transform.position.x, GameConstants.mapWidth), mod((int)transform.position.y, GameConstants.mapHeight)];
                         if (currentTile != null)
                         {
@@ -260,6 +276,21 @@ public class Player : MonoBehaviour
                             {
                                 onHitWarp.Invoke();
                             }
+                            if (currentTile.hasGrass) grassCounter++;
+
+                            /*
+                             Encounter table probability list:
+                             db $32, $00 ; 51/256 = 19.9% chance of slot 0
+                             db $65, $02 ; 51/256 = 19.9% chance of slot 1
+                            db $8C, $04 ; 39/256 = 15.2% chance of slot 2
+                            db $A5, $06 ; 25/256 =  9.8% chance of slot 3
+                            db $BE, $08 ; 25/256 =  9.8% chance of slot 4
+                            db $D7, $0A ; 25/256 =  9.8% chance of slot 5
+                            db $E4, $0C ; 13/256 =  5.1% chance of slot 6
+                            db $F1, $0E ; 13/256 =  5.1% chance of slot 7
+                            db $FC, $10 ; 11/256 =  4.3% chance of slot 8
+                            db $FF, $12 ;  3/256 =  1.2% chance of slot 9
+    */
                         }
 
                         onLoadMap.Invoke();
@@ -276,7 +307,9 @@ public class Player : MonoBehaviour
                     playerAnim.SetFloat("movedir", direction);
 
             }
+          
 
+           
         }
         yield return 0;
     }
@@ -406,7 +439,7 @@ public class Player : MonoBehaviour
     {
         isDisabled = disabled;
 		playerAnim.SetFloat("walkbikesurfstate", walkSurfBikeState);
-		if (BIO.bioscreen.enabled) {
+		if (viewBio.bioscreen.enabled) {
 
 			disabled = true;
 		}

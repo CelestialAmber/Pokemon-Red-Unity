@@ -32,6 +32,11 @@ public class Dialogue : MonoBehaviour {
     public CustomText[] buycoinstext;
     MainMenu mainmenu;
     string laststring;
+    public static Dialogue instance;
+    private void Awake()
+    {
+        instance = this;
+    }
 	void Start(){
         mainmenu = Get.menu;
         subdialogue.SetActive(true);
@@ -48,7 +53,7 @@ public class Dialogue : MonoBehaviour {
 
 
 	IEnumerator AnimateText(string strComplete){
-        
+        Inputs.dialogueCheck = true;
 		box.enabled = true;
 		dialoguetext.enabled = true;
         dialoguetext.gameObject.SetActive(true);
@@ -115,7 +120,9 @@ public class Dialogue : MonoBehaviour {
 
 		}
 		if (taskType == 5) {
+            Inputs.dialogueCheck = false;
 			box.enabled = false;
+            dialoguetext.text = "";
 			dialoguetext.enabled = false;
             dialoguetext.gameObject.SetActive(false);
 			theindicator.enabled = false;
@@ -146,8 +153,8 @@ public class Dialogue : MonoBehaviour {
 			Player.disabled = true;
 
 		}
-		buycoinstext [0].text = SaveData.money.ToString ();
-		buycoinstext [1].text = SaveData.coins.ToString ();
+		buycoinstext [0].text = GameData.money.ToString ();
+		buycoinstext [1].text = GameData.coins.ToString ();
 		yesnomenu.SetActive (!finishedThePrompt);
 		slotsmenu.SetActive (!finishedThePrompt);
 		if(taskType != 6 && yesnomenu.activeSelf){
@@ -373,7 +380,6 @@ public IEnumerator done(){
 		dialoguetext.enabled = false;
         dialoguetext.gameObject.SetActive(false);
 		theindicator.enabled = false;
-
 	}
 
 }

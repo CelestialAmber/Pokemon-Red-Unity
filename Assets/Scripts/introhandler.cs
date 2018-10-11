@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class introhandler : MonoBehaviour {
+public class IntroHandler : MonoBehaviour {
 	public int ChosenPokemon;
 	public GameObject middle;
 	public Sprite[] titleMons = new Sprite[17];
 	// Use this for initialization
     void Awake()
     {
+        Inputs.Disable("start");
         Player.disabled = true;
     }
 	void Start () {
-		Screen.SetResolution (320, 288, false);
 	}
 	
 	// Update is called once per frame

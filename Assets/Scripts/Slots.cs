@@ -25,7 +25,7 @@ public class Slots : MonoBehaviour {
 	public GameObject row1, row2, row3;
 	public bool rolledone, rolledtwo, rolledthree, canroll;
 	public Dialogue mylog;
-	public string above1, middle1, below1, above2, middle2, below2, above3, middle3, below3;
+	private string above1, middle1, below1, above2, middle2, below2, above3, middle3, below3;
 	public Player play;
 	public int frames;
 	public int payout;
@@ -49,23 +49,9 @@ public class Slots : MonoBehaviour {
 		if (Player.disabled) {
 
 			if (mylog.selectedOption == 0) {
-				if (SaveData.coins < 3) {
-					mylog.text ("Not enough");
-					while (!mylog.finishedCurrentTask) {
-						yield return new WaitForSeconds (0.1f);
-						if (mylog.finishedCurrentTask) {
-							break;
-
-						}
-					}
-					mylog.line ("coins!");
-					while (!mylog.finishedCurrentTask) {
-						yield return new WaitForSeconds (0.1f);
-						if (mylog.finishedCurrentTask) {
-							break;
-
-						}
-					}
+				if (GameData.coins < 3) {
+                    yield return StartCoroutine(mylog.text("Not enough"));
+                    yield return StartCoroutine(mylog.line("coins!"));
 					StartCoroutine(DecideBet ());
 					yield break;
 
@@ -101,7 +87,7 @@ public class Slots : MonoBehaviour {
 				}
 				print ("Betting 3 coins");
 				betamount = 3;
-				SaveData.coins -= 3;
+				GameData.coins -= 3;
 				UpdateCredit ();
 				rolledone = false;
 				rolledtwo = false;
@@ -112,7 +98,7 @@ public class Slots : MonoBehaviour {
 				StartCoroutine(mylog.text ("Start!"));
 			}
 			if (mylog.selectedOption == 1) {
-				if (SaveData.coins < 2) {
+				if (GameData.coins < 2) {
 					yield return StartCoroutine(mylog.text ("Not enough"));
 					yield return StartCoroutine(mylog.line ("coins!"));
 					StartCoroutine(DecideBet ());
@@ -150,7 +136,7 @@ public class Slots : MonoBehaviour {
 				}
 				print ("Betting 2 coins");
 				betamount = 2;
-				SaveData.coins -= 2;
+				GameData.coins -= 2;
 				UpdateCredit ();
 				rolledone = false;
 				rolledtwo = false;
@@ -162,7 +148,7 @@ public class Slots : MonoBehaviour {
 				StartCoroutine(mylog.text ("Start!"));
 			}
 			if (mylog.selectedOption == 2) {
-				if (SaveData.coins < 1) {
+				if (GameData.coins < 1) {
 					yield return StartCoroutine(mylog.text ("Not enough"));
 					yield return StartCoroutine(mylog.line ("coins!"));
 					StartCoroutine (DecideBet ());
@@ -200,7 +186,7 @@ public class Slots : MonoBehaviour {
 				}
 				print ("Betting 1 coin");
 				betamount = 1;
-				SaveData.coins -= 1;
+				GameData.coins -= 1;
 				UpdateCredit ();
 				rolledone = false;
 				rolledtwo = false;
@@ -215,10 +201,10 @@ public class Slots : MonoBehaviour {
 
 	}
 	void UpdateCredit(){
-		if (SaveData.coins > 9999) {
-			SaveData.coins = 9999;
+		if (GameData.coins > 9999) {
+			GameData.coins = 9999;
 		}
-        credittext.text = (SaveData.coins > 999 ? "" : SaveData.coins > 99 ? "0" : SaveData.coins > 9 ? "00" : "000" ) + SaveData.coins.ToString();
+        credittext.text = (GameData.coins > 999 ? "" : GameData.coins > 99 ? "0" : GameData.coins > 9 ? "00" : "000" ) + GameData.coins.ToString();
 	}
 	void UpdatePayout(){
         payouttext.text = (payout > 999 ? "" : payout > 99 ? "0" : payout > 9 ? "00" : "000") + payout.ToString();
@@ -238,6 +224,7 @@ public class Slots : MonoBehaviour {
 
 	}
 			public void Exit(){
+        Inputs.Enable("start");
 		Player.disabled = false;
 		rolledone = false;
 		rolledtwo = false;
@@ -400,7 +387,7 @@ public class Slots : MonoBehaviour {
 				for (int i = 0; i < payoutamount; i++) {
 					yield return new WaitForSeconds (0.01f);
 					payout--;
-					SaveData.coins++;
+					GameData.coins++;
 					UpdateCredit ();
 					UpdatePayout ();
 
@@ -411,13 +398,13 @@ public class Slots : MonoBehaviour {
 				yield return StartCoroutine(mylog.text ("Not this time!",1));
 			}
 			} else {
-				if (SaveData.coins > 0) {
+				if (GameData.coins > 0) {
 				yield return StartCoroutine(mylog.text ("Not this time!",1));
 				} else {
 				yield return StartCoroutine(mylog.text ("Darn! Ran out of"));
 				yield return StartCoroutine(mylog.line ("coins!"));
 				yield return StartCoroutine(mylog.done ());
-
+             
 					Exit ();
 					yield break;
 				}
