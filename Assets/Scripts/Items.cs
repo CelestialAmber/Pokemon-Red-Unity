@@ -134,6 +134,13 @@ public class Items : MonoBehaviour
         "Town Map" 
     };
 	// Use this for initialization
+
+    public static Items instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+
 	void Start () {
         checkKeyItemsBag();
         checkKeyItemsPC();

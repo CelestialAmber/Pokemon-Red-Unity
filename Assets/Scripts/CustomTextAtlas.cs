@@ -20,6 +20,11 @@ public class FontAtlas
     }
 }
 public class CustomTextAtlas : MonoBehaviour {
+    public static CustomTextAtlas instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     public FontAtlas atlas;
     public GameObject linefab, image;
 }

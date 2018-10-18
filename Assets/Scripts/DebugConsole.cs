@@ -42,7 +42,7 @@ public class DebugConsole : MonoBehaviour
                 branch = 1;
             }
             int arg = -1;
-            input = input.Substring(input.IndexOf(token) + token.Length);
+            input = input.Replace(token,"");
             if (input.Contains("true"))
             {
                 arg = 1;
@@ -63,19 +63,19 @@ public class DebugConsole : MonoBehaviour
                         break;
 
                 }
-                input = input.Substring(input.IndexOf(token) + token.Length);
+                input = input.Replace(token,"");
                 int var = 0;
                 if (int.TryParse(input, out var))
                 {
                     switch (branch)
                     {
                         case 0:
-                            SaveData.pokedexlist[var - 1].seen = (arg == 1 ? true : false);
+                            GameData.pokedexlist[var - 1].seen = (arg == 1 ? true : false);
                             Message("Set " + PokemonData.IndexToMon(var) + (arg == 0 ? " as not seen." : " as seen."));
                             break;
                         case 1:
-                            SaveData.pokedexlist[var - 1].seen = (arg == 1 ? true : false);
-                            SaveData.pokedexlist[var - 1].caught = (arg == 1 ? true : false);
+                            GameData.pokedexlist[var - 1].seen = (arg == 1 ? true : false);
+                            GameData.pokedexlist[var - 1].caught = (arg == 1 ? true : false);
                             Message("Set " + PokemonData.IndexToMon(var) + (arg == 0 ? " as not caught." : " as caught."));
                             break;
                     }
@@ -96,6 +96,18 @@ public class DebugConsole : MonoBehaviour
         }else if(input == "/credits"){
             Player.disabled = true;
             Get.player.credits.SetActive(true);
+        }else if(input == "/colorTest"){
+            
+        }
+        else if(input.Contains("/set playerDisabled ")){
+            token = "/set playerDisabled ";
+            input.Replace(token, "");
+            switch(input){
+                case "true": Player.disabled = true; Message("Player is set as disabled."); break;
+                case "false": Player.disabled = false; Message("Player is set as not disabled."); break;
+                default: Message("Invalid command."); break;
+            }
+
         }
         else Message("Invalid command.");
 
