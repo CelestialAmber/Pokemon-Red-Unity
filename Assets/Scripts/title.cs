@@ -6,7 +6,7 @@ public class title : MonoBehaviour {
 	public bool HasData;
 	public GameObject titlemenu, startmenu;
 	public GameObject nodatamenu, datamenu, continuemenu, options;
-    public Cursor cursor;
+    public GameCursor cursor;
 	public GameObject[] startmenus;
 	public GameObject currentMenu;
 	public GameObject[] menuSlots;
@@ -14,7 +14,6 @@ public class title : MonoBehaviour {
 	public bool isCursorDisabled;
 	public int selectedOption;
 	public GameObject tutorialmanager;
-	public Dialogue mylog;
 	public Options opt;
 
 	// Use this for initialization

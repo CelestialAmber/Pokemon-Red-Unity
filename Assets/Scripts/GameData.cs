@@ -25,6 +25,18 @@ public static class IntExtensions{
        throw new UnityException("Incorrect format");
 
     }
+     public static string SpaceFormat(this int input, int format)
+    {
+        switch(format){
+
+            case 2:
+                return (input < 10 ? " " : "") + input;
+            case 3:
+                return (input < 10 ? "  " : input < 100 ? " ": "") + input;
+        }
+       throw new UnityException("Incorrect format");
+
+    }
 }
 public class Get 
 {
@@ -171,10 +183,7 @@ public class Inputs
 
     }
 }
-public class GameConstants{
-    public const int mapWidth = 400;
-    public const int mapHeight = 520;
-}
+
 //Class containing all the core data of the game.
 public class GameData  {
     public static Sprite[] frontMonSprites, backMonSprites;
@@ -199,4 +208,9 @@ public class GameData  {
     public static int trainerID;
     public static int textChoice, animationChoice, battleChoice;
     public static string playerName, rivalName;
+    public const int mapWidth = 400;
+    public const int mapHeight = 520;
+    public static int screenTileWidth, screenTileHeight;
+    public static int hours, minutes, seconds;
 }
+

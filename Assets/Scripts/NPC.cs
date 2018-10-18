@@ -36,7 +36,7 @@ public class NPC : MonoBehaviour {
 				facetimer += Time.deltaTime;
 				if (facetimer > 5) {
 					facetimer = 0;
-					if (play.dia.finishedWithTextOverall) {
+                    if (Dialogue.instance.finishedWithTextOverall) {
 						faceddirection = true;
 					}
 
@@ -70,7 +70,7 @@ public class NPC : MonoBehaviour {
 				movetimer += Time.deltaTime;
 				if (movetimer > 5) {
 					movetimer = 0;
-					if (play.dia.finishedWithTextOverall) {
+                    if (Dialogue.instance.finishedWithTextOverall) {
 						moveddirection = true;
 					}
 
@@ -103,7 +103,7 @@ public class NPC : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		CheckCollision ();
-		if (play.dia.finishedWithTextOverall) {
+        if (Dialogue.instance.finishedWithTextOverall) {
 			StartCoroutine (CheckTypes ());
 		}
 

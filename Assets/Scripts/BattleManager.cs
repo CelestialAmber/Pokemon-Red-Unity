@@ -25,7 +25,6 @@ public class BattleManager : MonoBehaviour {
     public int battleID;
 
     public List<Pokemon> enemyMons = new List<Pokemon>();
-	public Dialogue mylog;
 	public PokemonMenu pkmr;
 	public GameObject actualscene, ourstats, opponentstats;
 	public Animator battletransitionAnim, otheranim;
@@ -57,7 +56,7 @@ public class BattleManager : MonoBehaviour {
 	public GameObject currentmenu;
 	public GameObject battlemenu, movesmenu;
 	public GameObject[] allmenus;
-	public Cursor cursor;
+	public GameCursor cursor;
 	public GameObject[] menuSlots;
 	public int selectedOption;
 	public int currentLoadedMon;
@@ -74,7 +73,7 @@ public class BattleManager : MonoBehaviour {
                     }
                     );
                 break;
-                
+
         }
 		currentLoadedMon = 0;
         foreach (Pokemon pokemon in enemyMons){
@@ -113,8 +112,8 @@ public class BattleManager : MonoBehaviour {
 
 		ourpokeballs.SetActive(true);
 		opponentballs.SetActive (true);
-		yield return StartCoroutine(mylog.text ("TRAINER wants to battle!"));
-		yield return StartCoroutine(mylog.done ());
+		yield return StartCoroutine(Dialogue.instance.text ("TRAINER wants to battle!"));
+		yield return StartCoroutine(Dialogue.instance.done ());
 
 		ourpokeballs.SetActive(false);
 		opponentballs.SetActive (false);
@@ -126,10 +125,10 @@ public class BattleManager : MonoBehaviour {
         yield return 0;
 
     }
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 		foreach (GameObject menu in allmenus) {
 			if (menu != currentmenu) {
 				menu.SetActive (false);
@@ -150,7 +149,7 @@ public class BattleManager : MonoBehaviour {
             foemonname.text = enemymon.name;
 			actualscene.SetActive (true);
 			if (readytobattle) {
-				
+
 				currentmenu = battlemenu;
 				if (currentmenu == battlemenu) {
 
@@ -161,10 +160,10 @@ public class BattleManager : MonoBehaviour {
 
 						menuSlots [i] = currentmenu.transform.GetChild (i).gameObject;
 					}
-				
+
 				}
 				if (currentmenu == battlemenu) {
-					
+
 					cursor.SetActive (true);
 					cursor.transform.position = menuSlots [selectedOption].transform.position;
 
@@ -172,7 +171,7 @@ public class BattleManager : MonoBehaviour {
 
 
 					if (Inputs.pressed("left")) {
-						
+
 						if (selectedOption == 1) {
 							selectedOption = 0;
 							return;
@@ -184,7 +183,7 @@ public class BattleManager : MonoBehaviour {
 						}
 					}
                     if (Inputs.pressed("right")) {
-						
+
 						if (selectedOption == 0) {
 							selectedOption = 1;
 							return;
@@ -232,7 +231,7 @@ public class BattleManager : MonoBehaviour {
 
 			}
 		}
-	
+
 	}
 	public void DetermineFrontSprite(){
         frontportrait.overrideSprite = GameData.frontMonSprites[PokemonData.MonToID(enemymon.pokename) - 1];
@@ -312,7 +311,7 @@ public class BattleManager : MonoBehaviour {
     }
     void ReadyToBattle()
     {
-        
+
         readytobattle = true;
         selectedOption = 0;
     }
@@ -324,8 +323,7 @@ public class BattleManager : MonoBehaviour {
     {
         ActivateTheirStats();
     }
-	
+
 
 
 	}
-

@@ -5,10 +5,8 @@ using UnityEngine.Events;
 public class Bag : MonoBehaviour  {
 	
 	public GameObject currentMenu;
-	public Cursor cursor;
+	public GameCursor cursor;
 	public GameObject usetossmenu, itemwindow,   quantitymenu;
-	public Dialogue mylog;
-	public Player play;
 	public int selectedOption;
 	public GameObject[] allMenus;
 	public int ItemMode;
@@ -21,24 +19,27 @@ public class Bag : MonoBehaviour  {
 	public int currentBagPosition;
 	public int selectBag;
 	public int amountToTask;
-	public bool didFirstRunthrough;
 	public int maximumItem;
 	public CustomText amountText;
 	public bool donewaiting;
 	public GameObject last;
 	public bool alreadyInBag;
 	public bool alreadydidtext;
-	public MainMenu moon;
 	public int keep;
     public int offscreenindexup, offscreenindexdown;
     public UnityEvent onGetItem;
 
 	public bool withdrawing;
 
-
-	void Start() {
-		
+    public static Bag instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    public void Initialize() {
+		UpdateBagScreen();
 		currentMenu = itemwindow;
+		  
 	}
 
 	public bool itemInInventory(string item){
@@ -56,6 +57,11 @@ public class Bag : MonoBehaviour  {
 
 	}
     public void UpdateBagScreen(){
+ if(currentBagPosition == 0){
+            offscreenindexup = -1;
+            offscreenindexdown = 3;
+        }
+
 
         for (int i = 0; i < 4; i++)
         {
@@ -75,7 +81,7 @@ public class Bag : MonoBehaviour  {
 
             }
         }
-        cursor.SetPosition(40,108 - 16 * (currentBagPosition - offscreenindexup - 1));
+        cursor.SetPosition(40,104 - 16 * (currentBagPosition - offscreenindexup - 1));
     }
     void UpdateUseTossScreen(){
         cursor.SetPosition(112, 72 - 16 * selectedOption);
@@ -84,45 +90,9 @@ public class Bag : MonoBehaviour  {
 	
 
 
-	
-	public IEnumerator UseItem(string whatItem){
-        
-        if (whatItem == "Bicycle")
-        {
-            switch (play.walkSurfBikeState)
-            {
-                case 0:
-                    yield return StartCoroutine(mylog.text(SaveData.playerName + " got on the"));
-                    yield return StartCoroutine(mylog.line("BICYCLE!"));
-                    yield return StartCoroutine(mylog.done());
-                    play.walkSurfBikeState = 1;
-                    break;
-                case 1:
-
-                    yield return StartCoroutine(mylog.text(SaveData.playerName + " got off"));
-                    yield return StartCoroutine(mylog.line("the BICYCLE."));
-                    yield return StartCoroutine(mylog.done());
-                    play.walkSurfBikeState = 0;
-                    break;
-            }
-
-            currentMenu = itemwindow;
-            cursor.SetActive(false);
-            play.startmenuup = false;
-            moon.selectedOption = 0;
-            moon.currentmenu = null;
-            moon.gameObject.SetActive(false);
-            this.gameObject.SetActive(false);
-            play.WaitToInteract(0.3f);
-
-        }
 
 
 
-
-
-
-	}
     // Update is called once per frame
     private void Update()
     {
@@ -136,7 +106,7 @@ public class Bag : MonoBehaviour  {
 
 
 		amountText.text = amountToTask.ToString ();
-        if (currentMenu == quantitymenu && mylog.finishedCurrentTask) {
+        if (currentMenu == quantitymenu && Dialogue.instance.finishedCurrentTask) {
 			
             if (Inputs.pressed("down")) {
 				amountToTask--;
@@ -155,7 +125,7 @@ public class Bag : MonoBehaviour  {
 
 
 		}
-        if (currentMenu == itemwindow && mylog.finishedCurrentTask)
+        if (currentMenu == itemwindow && Dialogue.instance.finishedCurrentTask)
         {
 
             if (Inputs.pressed("down"))
@@ -187,14 +157,6 @@ public class Bag : MonoBehaviour  {
             }
            
 
-            if (!didFirstRunthrough)
-            {
-                UpdateBagScreen();
-                didFirstRunthrough = true;
-               
-            }
-			
-
 			if (currentBagPosition != id.items.Count) {
 				maximumItem = id.items [currentBagPosition].quantity;
 			} else {
@@ -207,7 +169,7 @@ public class Bag : MonoBehaviour  {
 		if (currentMenu == null && (currentMenu != quantitymenu || currentMenu != itemwindow)) {
 			
 		} else {
-            if (currentMenu == usetossmenu && mylog.finishedCurrentTask) {
+            if (currentMenu == usetossmenu && Dialogue.instance.finishedCurrentTask) {
 				
 
                 if (Inputs.pressed("down")) {
@@ -224,7 +186,7 @@ public class Bag : MonoBehaviour  {
 			}
 		
 		}
-        if (Inputs.pressed("select") && mylog.finishedCurrentTask && currentBagPosition != id.items.Count) {
+        if (Inputs.pressed("select") && Dialogue.instance.finishedCurrentTask && currentBagPosition != id.items.Count) {
 			if (selectBag == -1) {
 				selectBag = currentBagPosition;
 			} else {
@@ -242,7 +204,7 @@ public class Bag : MonoBehaviour  {
 
 
 		}
-		if (mylog.finishedWithTextOverall) {
+		if (Dialogue.instance.finishedWithTextOverall) {
 			
 			if (Inputs.pressed("a")) {
 			
@@ -252,8 +214,8 @@ public class Bag : MonoBehaviour  {
                         StartCoroutine(Wait()); 
                         if (currentBagPosition == id.items.Count) {
 
-							moon.selectedOption = 0;
-							moon.currentmenu = moon.thismenu;
+							Get.menu.selectedOption = 0;
+							Get.menu.currentmenu = Get.menu.thismenu;
 							this.gameObject.SetActive (false);
 								
 							
@@ -280,7 +242,7 @@ public class Bag : MonoBehaviour  {
 						if (selectedOption == 0) {
                             if (id.items.Count > 0) {
 								ItemMode1 ();
-                                StartCoroutine(UseItem (id.items [currentBagPosition].name));
+                                StartCoroutine(Player.instance.UseItem (id.items [currentBagPosition].name));
 								
 							}
 
@@ -316,16 +278,16 @@ public class Bag : MonoBehaviour  {
 						if (ItemMode == 2) {
 						
 							if (!id.items[currentBagPosition].isKeyItem) {
-                                yield return StartCoroutine(mylog.text("Is it OK to toss "));
-                                yield return StartCoroutine(mylog.line(id.items[currentBagPosition].name + "?"));
-                                yield return StartCoroutine(mylog.prompt());
-                                if(mylog.selectedOption == 0){
-                                    yield return StartCoroutine(mylog.text("Threw away " + id.items[currentBagPosition].name + "."));
-                                    yield return StartCoroutine(mylog.done());
+                                yield return StartCoroutine(Dialogue.instance.text("Is it OK to toss "));
+                                yield return StartCoroutine(Dialogue.instance.line(id.items[currentBagPosition].name + "?"));
+                                yield return StartCoroutine(Dialogue.instance.prompt());
+                                if(Dialogue.instance.selectedOption == 0){
+                                    yield return StartCoroutine(Dialogue.instance.text("Threw away " + id.items[currentBagPosition].name + "."));
+                                    yield return StartCoroutine(Dialogue.instance.done());
                                     StartCoroutine(TossItem());
 
                                 }else{
-                                    mylog.Deactivate();
+                                    Dialogue.instance.Deactivate();
                                     UpdateBagScreen();
                                     cursor.SetActive(true);
                                     currentMenu = itemwindow;
@@ -350,14 +312,13 @@ public class Bag : MonoBehaviour  {
 			if (currentMenu == itemwindow) {
 				
 			
-				moon.currentmenu = moon.thismenu;
+				Get.menu.currentmenu = Get.menu.thismenu;
 				this.gameObject.SetActive (false);
 
 			}
 			if (currentMenu == usetossmenu) {
-				didFirstRunthrough = false;
 				currentMenu = itemwindow;
-
+				UpdateBagScreen();
 			}
 			if (currentMenu == quantitymenu) {
 							
@@ -406,9 +367,9 @@ public class Bag : MonoBehaviour  {
 
 	
 		 
-		mylog.Deactivate ();
-		mylog.cantscroll = false;
-		mylog.finishedCurrentTask = true;
+		Dialogue.instance.Deactivate ();
+		Dialogue.instance.cantscroll = false;
+		Dialogue.instance.finishedCurrentTask = true;
 		RemoveItem (amountToTask);
         UpdateBagScreen();
 		currentMenu = itemwindow;
@@ -437,9 +398,9 @@ public class Bag : MonoBehaviour  {
 	}
 	IEnumerator TooImportantToToss(){
 
-		mylog.Deactivate();
-		yield return StartCoroutine(mylog.text ("That's too important to toss!"));
-		yield return StartCoroutine(mylog.done ());
+		Dialogue.instance.Deactivate();
+		yield return StartCoroutine(Dialogue.instance.text ("That's too important to toss!"));
+		yield return StartCoroutine(Dialogue.instance.done ());
 
 	currentMenu = itemwindow;
 }

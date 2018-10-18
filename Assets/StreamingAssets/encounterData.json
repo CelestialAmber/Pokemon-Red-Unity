@@ -1,5 +1,7 @@
-{
-  "0": [
+[{
+  "encounterChance" : 15,
+
+  "slots": [
     {
       "Name": "Pidgey",
       "Int": 3
@@ -41,4 +43,4 @@
       "Int": 5
     }
   ]
-}
+}]

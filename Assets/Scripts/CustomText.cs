@@ -48,7 +48,7 @@ public class CustomText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ct == null) ct = GameObject.Find("FontAtlas").GetComponent<CustomTextAtlas>();
+        if (ct == null) ct = CustomTextAtlas.instance;
         if (text != lasttext)
         {
             UpdateText();
@@ -64,6 +64,7 @@ public class CustomText : MonoBehaviour
         lasttext = text;
         lastWidth = GetComponent<RectTransform>().sizeDelta.x;
     }
+
     void UpdateText()
     {
         foreach (GameObject line in lines)
@@ -81,13 +82,16 @@ public class CustomText : MonoBehaviour
 #else
             Destroy(child.gameObject);
 #endif 
+
         }
         lines.Clear();
         currentline = null;
+       
         for (int i = 0; i < text.Length; i++){
+           
             if (text.ToCharArray()[i] != '\'')
             {
-                    if ((int)text.ToCharArray()[i] == 10)
+                if ((int)text.ToCharArray()[i] == 10)
                     {
                         if (currentline != null)
                         {

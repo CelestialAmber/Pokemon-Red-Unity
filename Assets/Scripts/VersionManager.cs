@@ -8,13 +8,21 @@ public enum Version{
 }
 public class VersionManager : MonoBehaviour {
     public Version version;
-    public Image frame;
+    public Image frame, nintendoSwitchFrame;
     public Sprite[] frames;
     public GameObject sgbCanvas;
     public Camera renderCamera;
-	// Update is called once per frame
-	void Update () {
-        frame.sprite = frames[(int)version];
+    GameDataManager gameDataManager;
+    private void Start()
+    {
+        gameDataManager = GameDataManager.Instance;    
+    }
+    // Update is called once per frame
+    void Update () {
+        if (gameDataManager.currentScene == GameScene.SGB)
+            frame.sprite = frames[(int)version];
+        else if (gameDataManager.currentScene == GameScene.NintendoSwitch)
+            nintendoSwitchFrame.sprite = frames[(int)version];
        
 	}
 

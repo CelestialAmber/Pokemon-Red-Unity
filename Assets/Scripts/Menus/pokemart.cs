@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 public class PokeMart : MonoBehaviour {
 	public GameObject currentMenu;
-	public Cursor cursor;
+	public GameCursor cursor;
 	public GameObject buysellwindow, martwindow, itemwindow,   quantitymenu;
-	public Dialogue mylog;
 	public Player play;
 	public int selectedOption;
 	public GameObject[] allMenus;
@@ -37,9 +36,9 @@ public class PokeMart : MonoBehaviour {
 	public bool withdrawing;
 
 
-	void Start() {
+	public void Init() {
 
-
+     UpdateBuyScreen();
 	}
 
 
@@ -166,15 +165,6 @@ public class PokeMart : MonoBehaviour {
             }
 
 
-            if (!didFirstRunthrough)
-            {
-
-                UpdateBuyScreen();
-                didFirstRunthrough = true;
-            }
-			
-		
-
 
 		}
 		if (currentMenu == itemwindow) {
@@ -258,7 +248,7 @@ public class PokeMart : MonoBehaviour {
 			}
 
 		}
-		if (mylog.finishedWithTextOverall) {
+		if (Dialogue.instance.finishedWithTextOverall) {
 
 			if (Inputs.pressed("a")) {
 				
@@ -455,18 +445,18 @@ public class PokeMart : MonoBehaviour {
 	}
 	IEnumerator UnsellableItem(){
 
-		mylog.Deactivate();
-		yield return StartCoroutine(mylog.text ("I can't put a"));
-        yield return StartCoroutine(mylog.line("price on that."));
-		yield return StartCoroutine(mylog.done ());
+		Dialogue.instance.Deactivate();
+		yield return StartCoroutine(Dialogue.instance.text ("I can't put a"));
+        yield return StartCoroutine(Dialogue.instance.line("price on that."));
+		yield return StartCoroutine(Dialogue.instance.done ());
 		currentMenu = itemwindow;
 	}
 	IEnumerator NotEnoughMoney(){
 
-		mylog.Deactivate();
-        yield return StartCoroutine(mylog.text("You don't have"));
-        yield return StartCoroutine(mylog.line("enough money."));                            
-		yield return StartCoroutine(mylog.done ());
+		Dialogue.instance.Deactivate();
+        yield return StartCoroutine(Dialogue.instance.text("You don't have"));
+        yield return StartCoroutine(Dialogue.instance.line("enough money."));                            
+		yield return StartCoroutine(Dialogue.instance.done ());
 		currentMenu = martwindow;
 	}
 }

@@ -111,16 +111,17 @@ public class MapEditor : MonoBehaviour
         //Spawn the map with the current index stored in currentMap
         GameObject maPContainer = new GameObject("Map " + currentMap);
         maPContainer.transform.SetParent(container.transform);
-        maPContainer.transform.position = new Vector2(GameConstants.mapWidth/2, GameConstants.mapHeight/2);
+        maPContainer.transform.position = new Vector2(GameData.mapWidth/2, GameData.mapHeight/2);
         MapData map  = maps[currentMap];
         string indicelist;
         string i1, i2, i3, i4;
         //Create string variables to retrieve the values from the string;
         for (int i = 0; i < map.tileMap.Length; i++){
             //is a tileset slot missing?
-            if(tSetIndexes.indices[map.tilesetNumber].indices.Length != 0) 
-                //set it as a null tile to not cause errors
+            if(tSetIndexes.indices[map.tilesetNumber].indices.Length == map.tileMap.Length) {
                 indicelist = tSetIndexes.indices[map.tilesetNumber].indices[map.tileMap[i]].indiceString;
+            }
+          //set it as a null tile to not cause errors
             else indicelist = "0, 0, 0, 0";
             if (indicelist == "") indicelist = "0, 0, 0, 0";
             i1 = indicelist.Substring(0, indicelist.IndexOf(","));
@@ -250,7 +251,7 @@ public override void OnInspectorGUI()
            
         }
         if(GUILayout.Button("Save Empty map to file")){
-            GridTile[,] nullMap = new GridTile[GameConstants.mapWidth, GameConstants.mapHeight];
+            GridTile[,] nullMap = new GridTile[GameData.mapWidth, GameData.mapHeight];
             Serializer.Save2D<GridTile>(Application.streamingAssetsPath + "/map.txt",nullMap);
         }
         if (GUILayout.Button("Load editor data"))

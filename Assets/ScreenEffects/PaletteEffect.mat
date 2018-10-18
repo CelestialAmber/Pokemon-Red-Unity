@@ -5,7 +5,8 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: PaletteEffect
   m_Shader: {fileID: 4800000, guid: 0dfdc8503674b46249c5278eb7e666d1, type: 3}
   m_ShaderKeywords: 
@@ -85,11 +86,14 @@ Material:
     - _ZWrite: 1
     - distort: 0
     - doInvert: 0
+    - flashLevel: 0
     - fov: 1.66
     - horizon: 1.78
+    - lightLevel: 0
     - scale: -2.23
     - scale2: 1.42
     - speed: 8
+    - useRockTunnelColors: 0
     - xfactor: 0.01
     - yfactor: 50
     - ystretch: 1

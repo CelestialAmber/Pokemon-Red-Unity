@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class NameSelection : MonoBehaviour {
 	public int currentXselection, currentYselection;
-	public Cursor cursor;
-	public tutorialhandler tut;
+	public GameCursor cursor;
+	public TutorialHandler tut;
 	public int maxNameSize;
 	public string futureName;
 	public Sprite uppercase, lowercase;
@@ -67,16 +67,16 @@ public class NameSelection : MonoBehaviour {
 
 			if (futureName.Length != 0) {
 				if (tut.givingRedAName) {
-					SaveData.playerName = futureName;
+					GameData.playerName = futureName;
 					tut.tutanim.SetBool ("fourthpass", true);
-					tut.mylog.enabled = true;
+                    Dialogue.instance.enabled = true;
 					tut.givingRedAName = false;
 					this.gameObject.SetActive (false);
 				}
 				if (tut.givingGaryAName) {
-                    SaveData.rivalName = futureName;
+                    GameData.rivalName = futureName;
 					tut.tutanim.SetBool ("seventhpass", true);
-					tut.mylog.enabled = true;
+                    Dialogue.instance.enabled = true;
 					tut.givingGaryAName = false;
 					this.gameObject.SetActive (false);
 				}
@@ -92,16 +92,16 @@ public class NameSelection : MonoBehaviour {
 				if (currentXselection == 8 && currentYselection == 4) {
 					if (futureName.Length != 0) {
 						if (tut.givingRedAName) {
-                            SaveData.playerName = futureName;
+                            GameData.playerName = futureName;
 							tut.tutanim.SetBool ("fourthpass", true);
-							tut.mylog.enabled = true;
+                            Dialogue.instance.enabled = true;
 							tut.givingRedAName = false;
 							this.gameObject.SetActive (false);
 						}
 						if (tut.givingGaryAName) {
-                            SaveData.rivalName = futureName;
+                            GameData.rivalName = futureName;
 							tut.tutanim.SetBool ("seventhpass", true);
-							tut.mylog.enabled = true;
+							Dialogue.instance.enabled = true;
 							tut.givingGaryAName = false;
 							this.gameObject.SetActive (false);
 						}
@@ -327,16 +327,16 @@ public class NameSelection : MonoBehaviour {
 				if (currentXselection == 8 && currentYselection == 4) {
 					if (futureName.Length != 0) {
 						if (tut.givingRedAName) {
-                            SaveData.playerName = futureName;
+                            GameData.playerName = futureName;
 							tut.tutanim.SetBool ("fourthpass", true);
-							tut.mylog.enabled = true;
+                            Dialogue.instance.enabled = true;
 							tut.givingRedAName = false;
 							this.gameObject.SetActive (false);
 						}
 						if (tut.givingGaryAName) {
-                            SaveData.rivalName = futureName;
+                            GameData.rivalName = futureName;
 							tut.tutanim.SetBool ("seventhpass", true);
-							tut.mylog.enabled = true;
+                            Dialogue.instance.enabled = true;
 							tut.givingGaryAName = false;
 							this.gameObject.SetActive (false);
 						}

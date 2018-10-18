@@ -9,10 +9,9 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 public class Player : MonoBehaviour
 {
-    public int bionumber;
+
  public Animator playerAnim;
-    public Dialogue dia;
-    public bool moving;
+    public bool holdingDirection;
     public bool inBattle;
     public bool manuallyWalking;
     public bool walkedfromwarp;
@@ -22,11 +21,10 @@ public class Player : MonoBehaviour
     public GameObject top, bottom;
     public TextDatabase IDB;
     public bool canInteractAgain;
-    public bool overrideRenable;
     public bool PCactive;
     public static bool disabled = true;
     public bool isDisabled;
-    public GridTile itemCheck, facingCheck;
+    public GridTile itemCheck;
     public bool startmenuup;
     public GameObject startmenu;
     public bool displayingEmotion;
@@ -37,12 +35,12 @@ public class Player : MonoBehaviour
     public MainMenu moon;
     public bool shopup;
     public ViewBio viewBio;
-    public bool actuallymoving;
+    public bool isMoving;
     public bool ledgejumping;
     public GridTile facedtile;
-    public bool doupdate;
     public int grassCounter;
-  
+
+
     //1 up, 2down, 3 left, 4 right
     public bool cannotMoveLeft, cannotMoveRight, cannotMoveUp, cannotMoveDown;
 
@@ -60,11 +58,11 @@ public class Player : MonoBehaviour
     {
         instance = this;
         disabled = false;
-       
+
         onHitWarp = new UnityEvent();
         onHitWarp.AddListener(onWarp);
     }
-   
+
     void Start()
     {
         emotionbubble.enabled = false;
@@ -79,42 +77,42 @@ public class Player : MonoBehaviour
     {
         while (true)
         {
-            
+
             StartCoroutine(MovementUpdate());
             yield return new WaitForEndOfFrame();
         }
 
     }
 
-        
+
 
     IEnumerator MovementUpdate()
     {
-        
-        
+
+
 
         switch (walkSurfBikeState)
         {
-            case 0:
-                speed = 4f;
+            case 0: //Walk
+                speed = 3.7f;
                 break;
-            case 1:
-                speed = 8f;
+            case 1: //Bicycle is 2x faster than walking/surfing
+                speed = 7.4f;
                 break;
-            case 2:
-                speed = 4f;
+            case 2: //Surf
+                speed = 3.7f;
                 break;
 
 
         }
-       
-        if (dia.finishedWithTextOverall && !disabled && !startmenuup && !shopup && !inBattle)
-        {
-           
 
-      
+        if (Dialogue.instance.finishedWithTextOverall && !disabled && !startmenuup && !shopup && !inBattle && !manuallyWalking)
+        {
+
+
+
             //If we're not ledge jumping already, the adjacent tile is a ledge, and we're exactly on a tile, ledge jump
-            if (Inputs.held("down") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeDown" && transform.position == pos && direction == 2)
+            if (Inputs.held("down") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeDown" && transform.position == pos && direction == 2 && holdFrames > 2)
             {
                 ledgejumping = true;
                 direction = 2;
@@ -122,7 +120,7 @@ public class Player : MonoBehaviour
                 StartCoroutine(LedgeJump());
 
             }
-            if (Inputs.held("left") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeLeft" && transform.position == pos && direction == 3)
+            if (Inputs.held("left") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeLeft" && transform.position == pos && direction == 3 && holdFrames > 2)
             {
                 ledgejumping = true;
                 direction = 3;
@@ -131,7 +129,7 @@ public class Player : MonoBehaviour
 
 
             }
-            if (Inputs.held("right") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeRight" && transform.position == pos && direction == 4)
+            if (Inputs.held("right") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeRight" && transform.position == pos && direction == 4 && holdFrames > 2)
             {
                 ledgejumping = true;
                 direction = 4;
@@ -143,7 +141,7 @@ public class Player : MonoBehaviour
             if (!ledgejumping)
             {
 
-                if (actuallymoving)
+                if (isMoving)
                 {
                     if (transform.position == pos)
                     {
@@ -155,52 +153,44 @@ public class Player : MonoBehaviour
                 if (Inputs.held("up"))
                 {
                     holdFrames++;
-                    if (actuallymoving && transform.position == pos)
+                    if (isMoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
                     }
 
-                    moving = true;
+                    holdingDirection = true;
                     if (transform.position == pos)
                     {
                         direction = 1;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveUp && holdFrames > 3)
+                    if (transform.position == pos && holdFrames > 2)
                     {
-                        onLoadMap.Invoke();
-                        pos += (Vector3.up);
-                        actuallymoving = true;
-                    }
-                    else if (cannotMoveUp)
-                    {
-                        actuallymoving = false;
+                        //onLoadMap.Invoke();
+                        if(!cannotMoveUp) pos += (Vector3.up);
+                        isMoving = true;
                     }
 
                 }
                 else if (Inputs.held("right"))
                 {
                     holdFrames++;
-                    if (actuallymoving && transform.position == pos)
+                    if (isMoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
                     }
 
-                    moving = true;
+                    holdingDirection = true;
                     if (transform.position == pos)
                     {
                         direction = 4;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveRight && holdFrames > 3)
+                    if (transform.position == pos && holdFrames > 2)
                     {
-                        onLoadMap.Invoke();
-                        pos += (Vector3.right);
-                        actuallymoving = true;
-                    }
-                    else if (cannotMoveRight)
-                    {
-                        actuallymoving = false;
+                        //onLoadMap.Invoke();
+                        if(!cannotMoveRight) pos += (Vector3.right);
+                        isMoving = true;
                     }
 
                 }
@@ -208,68 +198,60 @@ public class Player : MonoBehaviour
                 else if (Inputs.held("down"))
                 {
                     holdFrames++;
-                    if (actuallymoving && transform.position == pos)
+                    if (isMoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
                     }
 
 
-                    moving = true;
+                    holdingDirection = true;
                     if (transform.position == pos)
                     {
                         direction = 2;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveDown && holdFrames > 3)
+                    if (transform.position == pos && holdFrames > 2)
                     {
-                        onLoadMap.Invoke();
-                        pos += (Vector3.down);
-                        actuallymoving = true;
-                    }
-                    else if (cannotMoveDown)
-                    {
-                        actuallymoving = false;
+                        //onLoadMap.Invoke();
+                        if(!cannotMoveDown) pos += (Vector3.down);
+                        isMoving = true;
                     }
                 }
                 else if (Inputs.held("left"))
                 {
                     holdFrames++;
-                    if (actuallymoving && transform.position == pos)
+                    if (isMoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
                     }
-
-                    moving = true;
+                    
+                    holdingDirection = true;
                     if (transform.position == pos)
                     {
                         direction = 3;
                         playerAnim.SetFloat("movedir", direction);
                     }
-                    if (transform.position == pos && !cannotMoveLeft && holdFrames > 3)
+                    if (transform.position == pos && holdFrames > 2)
                     {
-                        onLoadMap.Invoke();
-                        pos += (Vector3.left);
-                        actuallymoving = true;
-                    }
-                    else if (cannotMoveLeft)
-                    {
-                        actuallymoving = false;
+                        //onLoadMap.Invoke();
+                        if(!cannotMoveLeft) pos += (Vector3.left);
+                        isMoving = true;
                     }
                 }
                 else if (transform.position == pos)
                 {
-                    actuallymoving = false;
+                    isMoving = false;
                 }
                 else holdFrames = 0;
                 transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
 
                 if (transform.position == pos)
                 {
-                    
-                    if (actuallymoving)
+
+                    if (isMoving)
                     {
                         //The player moved onto a tile, run any checks needed;
-                        GridTile currentTile = MapManager.maptiles[mod((int)transform.position.x, GameConstants.mapWidth), mod((int)transform.position.y, GameConstants.mapHeight)];
+                        GridTile currentTile = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
                         if (currentTile != null)
                         {
                             if (currentTile.isWarp)
@@ -295,111 +277,118 @@ public class Player : MonoBehaviour
 
                         onLoadMap.Invoke();
                     }
-                    moving = false;
+                    holdingDirection = false;
 
                 }
 
                 if (Inputs.held("up") || Inputs.held("left") ||Inputs.held("right") || Inputs.held("down"))
-                    moving = true;
+                    holdingDirection = true;
 
-                playerAnim.SetFloat("movingfloat", actuallymoving ? 1 : 0);
+                playerAnim.SetFloat("movingfloat", isMoving ? 1 : 0);
                 if (transform.position == pos)
                     playerAnim.SetFloat("movedir", direction);
 
             }
-          
 
-           
+
+
+        }
+        if(manuallyWalking){
+
+             transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
+        
+        playerAnim.SetFloat("movingfloat", isMoving ? 1 : 0);
+                    
+
+            if (transform.position == pos)
+            {
+            
+        onLoadMap.Invoke();
+         isMoving = false;
+        holdingDirection = false;
+        manuallyWalking = false;
+            }
         }
         yield return 0;
     }
-    public IEnumerator MovePlayerOneTile(int direction)
+    public IEnumerator MovePlayerOneTile(int dir)
     {
-        manuallyWalking = true;
-
-        if (direction == 1)
+if(!manuallyWalking){
+        if (dir == 1)
         {
             direction = 1;
-            moving = true;
+            holdingDirection = true;
 
             if (transform.position == pos)
             {
-                onLoadMap.Invoke();
+                playerAnim.SetFloat("movedir", direction);
                 pos += (Vector3.up);
+                 isMoving = true;
             }
         }
-        else if (direction == 2)
+        else if (dir == 2)
         {
             direction = 2;
-            moving = true;
+            holdingDirection = true;
             if (transform.position == pos)
             {
-                onLoadMap.Invoke();
+                playerAnim.SetFloat("movedir", direction);
                 pos += (Vector3.right);
+                isMoving = true;
             }
 
         }
-        else if (direction == 3)
+        else if (dir == 3)
         {
             direction = 3;
-            moving = true;
+            holdingDirection = true;
             if (transform.position == pos)
             {
-                onLoadMap.Invoke();
+                playerAnim.SetFloat("movedir", direction);
                 pos += (Vector3.down);
+                 isMoving = true;
             }
         }
-        else if (direction == 4)
+        else if (dir == 4)
         {
             direction = 4;
-            moving = true;
+            holdingDirection = true;
             if (transform.position == pos)
-            {
-                onLoadMap.Invoke();
+            { 
+                playerAnim.SetFloat("movedir", direction);
                 pos += (Vector3.left);
+                 isMoving = true;
             }
         }
-
-        transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
-        while (moving)
-        {
-            yield return new WaitForSeconds(.1f);
-            if (transform.position == pos)
-            {
-                break;
-            }
-        }
-        moving = false;
-        manuallyWalking = false;
+}
+  manuallyWalking = true;
+yield return 0;
     }
     IEnumerator LedgeJump()
     {
         bool reachedMiddle = false;
         playerAnim.SetBool("ledgejumping", ledgejumping);
         pos += direction == 2 ? new Vector3(0, -2, 0) : direction == 3 ? new Vector3(-2, 0, 0) : new Vector3(2, 0, 0);
-        transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * 4);
         disabled = true;
-        while (transform.position != pos)
+        Vector3 originalPos = transform.position;
+        float ledgeJumpTime = 1.85f/2.775f; //divide the animation clip time over the correct number to get the same duration as the real game
+        float  curTime = 0f;
+        while (curTime < ledgeJumpTime)
         {
-            yield return new WaitForSeconds(0.001f);
-            transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * 4);
-
-
-
-            if (transform.position == pos)
-            {
-                onLoadMap.Invoke();
-                break;
-            }
-            float midDistance = (direction == 2 ? transform.position.y - (pos.y + 1) : direction == 3 ? transform.position.x - (pos.x + 1) : transform.position.x - (pos.x - 1));
-            if (Mathf.Abs(midDistance) < Time.deltaTime * 4 && !reachedMiddle)
+             
+             curTime += Time.deltaTime;
+             if(curTime > ledgeJumpTime) curTime = ledgeJumpTime;
+            transform.position = Vector3.Lerp(originalPos, pos, curTime/ledgeJumpTime);
+            if (curTime >= ledgeJumpTime/2f && !reachedMiddle)
             {
                 reachedMiddle = true;
-                Debug.Log("At middle");
                 onLoadMap.Invoke();
 
             }
+            yield return new WaitForEndOfFrame();
+            
         }
+        onLoadMap.Invoke();
         ledgejumping = false;
         facedtile = null;
         playerAnim.SetBool("ledgejumping", ledgejumping);
@@ -411,7 +400,7 @@ public class Player : MonoBehaviour
 
     public void Warp(Vector2 position)
     {
-        actuallymoving = false;
+        isMoving = false;
         transform.localPosition = position;
         pos = transform.position;
         disabled = true;
@@ -431,7 +420,7 @@ public class Player : MonoBehaviour
 
         }
     }
-   
+
 
 
     // Update is called once per frame
@@ -443,47 +432,46 @@ public class Player : MonoBehaviour
 
 			disabled = true;
 		}
-		
+
 		startmenu.SetActive (startmenuup);
 		if (!disabled && !amenuactive &&!startmenuup) {
-            if (Inputs.pressed("start") && !moving) {
+            if (Inputs.pressed("start") && !isMoving) {
 				startmenuup = true;
 				moon.Initialize ();
 			}
 			top.SetActive (!disabled);
 			bottom.SetActive (!disabled);
 
-			playerAnim.SetBool ("moving", moving);
 			playerAnim.SetInteger ("movedirection", direction);
-	
+
             if (Inputs.released("down") || Inputs.released("right") || Inputs.released("left") || Inputs.released("up")) {
-				moving = false;
-			
+				if (!manuallyWalking) holdingDirection = false;
+
 			}
 			if (transform.position == pos) {
 				transform.localPosition = new Vector3 (Mathf.Round (transform.localPosition.x), Mathf.Round (transform.localPosition.y), 0);
 				pos = transform.position;
 			}
 			if (direction == 1) {
-                itemCheck =  MapManager.maptiles[mod((int)transform.position.x, GameConstants.mapWidth), mod((int)transform.position.y + 1, GameConstants.mapHeight)];
+                itemCheck =  MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y + 1, GameData.mapHeight)];
 
             }
             if (direction == 2)
             {
 
 
-                itemCheck = MapManager.maptiles[mod((int)transform.position.x, GameConstants.mapWidth), mod((int)transform.position.y - 1, GameConstants.mapHeight)];
+                itemCheck = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y - 1, GameData.mapHeight)];
 
             }
             if (direction == 3)
             {
 
-                itemCheck = MapManager.maptiles[mod((int)transform.position.x - 1, GameConstants.mapWidth), mod((int)transform.position.y, GameConstants.mapHeight)];
+                itemCheck = MapManager.maptiles[mod((int)transform.position.x - 1, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
             }
             if (direction == 4)
             {
 
-                itemCheck = MapManager.maptiles[mod((int)transform.position.x + 1, GameConstants.mapWidth), mod((int)transform.position.y, GameConstants.mapHeight)];
+                itemCheck = MapManager.maptiles[mod((int)transform.position.x + 1, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
             }
             if (itemCheck != null)
             {
@@ -495,9 +483,9 @@ public class Player : MonoBehaviour
 
 			if (itemCheck != null) {
             //print (itemCheck.distance.ToString ());
-				if (!moving && transform.position == pos) {
-                    
-					if (!moving && canInteractAgain && !PCactive && !shopup && !disabled && dia.finishedWithTextOverall && !startmenuup && !inBattle && !moving) {
+				if (!holdingDirection && transform.position == pos) {
+
+					if (!holdingDirection && !isMoving && canInteractAgain && !PCactive && !shopup && !disabled && Dialogue.instance.finishedWithTextOverall && !startmenuup && !inBattle && !ledgejumping) {
 						if (itemCheck.isInteractable) {
 							if (Inputs.pressed("a")) {
                             if (itemCheck.tiledata.hasText || itemCheck.hasItem) {
@@ -520,9 +508,10 @@ public class Player : MonoBehaviour
 					}
 				}
 
-			
+
 			//Check collision here?
-		
+//If we just started surfing, skip checking collision until we're in the water
+//if(!startingSurf)...
         CheckCollision();
 
 	}
@@ -539,7 +528,7 @@ public class Player : MonoBehaviour
     }
 
 	void ReenableInteracting(){
-        if (!overrideRenable)
+        if (!inBattle && Dialogue.instance.finishedWithTextOverall)
         {
             canInteractAgain = true;
             disabled = false;
@@ -563,30 +552,90 @@ public class Player : MonoBehaviour
         if (transform.position == pos)
         {
             GridTile tileToCheck;
-            tileToCheck = MapManager.maptiles[mod((int)transform.position.x - 1, GameConstants.mapWidth), mod((int)transform.position.y,GameConstants.mapHeight)];
+            tileToCheck = MapManager.maptiles[mod((int)transform.position.x - 1, GameData.mapWidth), mod((int)transform.position.y,GameData.mapHeight)];
             if (tileToCheck != null)
             {
-                cannotMoveLeft = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall;
+                cannotMoveLeft = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
             else cannotMoveLeft = false;
-            tileToCheck = MapManager.maptiles[mod((int)transform.position.x + 1, GameConstants.mapWidth), mod((int)transform.position.y, GameConstants.mapHeight)];
+            tileToCheck = MapManager.maptiles[mod((int)transform.position.x + 1, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
             if (tileToCheck != null)
             {
-                cannotMoveRight = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall;
+                cannotMoveRight = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall  || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
             else cannotMoveRight = false;
-            tileToCheck = MapManager.maptiles[mod((int)transform.position.x, GameConstants.mapWidth), mod((int)transform.position.y + 1,GameConstants.mapHeight)];
+            tileToCheck = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y + 1,GameData.mapHeight)];
             if (tileToCheck != null)
             {
-                cannotMoveUp = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall;
+                cannotMoveUp = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
             else cannotMoveUp = false;
-            tileToCheck = MapManager.maptiles[mod((int)transform.position.x, GameConstants.mapWidth), mod((int)transform.position.y - 1,GameConstants.mapHeight)];
+            tileToCheck = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y - 1,GameData.mapHeight)];
             if (tileToCheck != null)
             {
-                cannotMoveDown = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall;
+                cannotMoveDown = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
             else cannotMoveDown = false;
         }
     }
+     public BattleManager battleManager;
+
+    public GameObject battlemenu;
+
+    public void StartBattle(int battleID, int battleType)
+    {
+        inBattle = true;
+        disabled = true;
+        battlemenu.SetActive(true);
+        battleManager.battleoverlay.sprite = battleManager.blank;
+        battleManager.battleID = battleID;
+        battleManager.Initialize();
+    }
+public GameCursor cursor;
+public Bag bag;
+
+	public void CloseMenus(){
+
+Inputs.Enable("start");
+            bag.currentMenu = null;
+            cursor.SetActive(false);
+            startmenuup = false;
+            moon.selectedOption = 0;
+            moon.currentmenu = null;
+           
+	}
+
+    	public IEnumerator UseItem(string whatItem){
+        
+        if (whatItem == "Bicycle")
+        {
+			CloseMenus ();
+            switch (walkSurfBikeState)
+            {
+                case 0:
+                    yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + " got on the"));
+                    yield return StartCoroutine(Dialogue.instance.line("BICYCLE!"));
+                    yield return StartCoroutine(Dialogue.instance.done());
+                    walkSurfBikeState = 1;
+                    break;
+                case 1:
+
+                    yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + " got off"));
+                    yield return StartCoroutine(Dialogue.instance.line("the BICYCLE."));
+                    yield return StartCoroutine(Dialogue.instance.done());
+                    walkSurfBikeState = 0;
+                    break;
+            }
+		    moon.gameObject.SetActive(false);
+             bag.gameObject.SetActive(false);
+            WaitToInteract(0.3f);
+
+        }
+
+
+
+
+
+
+	}
 }

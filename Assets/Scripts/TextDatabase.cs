@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TextDatabase : MonoBehaviour {
-	public Dialogue mylog;
 	public GameObject itemPCMenu, shopmenu, slotmenu;
 	public Bag bag;
-    public Cursor cursor;
+    public GameCursor cursor;
 	public Items itemDatabase;
 	public PokeMart pokeMart;
 	public Player player;
@@ -14,12 +13,12 @@ public class TextDatabase : MonoBehaviour {
 	public Slots slots;
 	// Use this for initialization
 	void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 	public void PlayText(int ID, int amount){
 		switch (ID) {
@@ -40,7 +39,7 @@ public class TextDatabase : MonoBehaviour {
 		case 5:
 			StartCoroutine (Text5 ());
 			break;
-	
+
 		case 7:
 			StartCoroutine (Text7 ());
 			break;
@@ -49,7 +48,7 @@ public class TextDatabase : MonoBehaviour {
                 break;
 		}
 
-	
+
 
 
 	}
@@ -61,20 +60,20 @@ public class TextDatabase : MonoBehaviour {
 
     IEnumerator GetItemText(string item){
         itemDatabase.AddItem(item, 1);
-        yield return StartCoroutine(mylog.text(GameData.playerName + " found "));
-        yield return StartCoroutine(mylog.line(item.ToUpper() + "!"));
-        yield return StartCoroutine(mylog.done());
+        yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + " found "));
+        yield return StartCoroutine(Dialogue.instance.line(item.ToUpper() + "!"));
+        yield return StartCoroutine(Dialogue.instance.done());
 
 
     }
 	IEnumerator Text1(){
 		if (player.direction == 3 || player.direction == 4) {
 			if (GameData.coins > 0) {
-				yield return StartCoroutine(mylog.text ("A slot machine!"));
-				yield return StartCoroutine(mylog.line ("Want to play?"));
-                yield return StartCoroutine(mylog.prompt ());
-				if (mylog.selectedOption == 0) {
-					mylog.Deactivate ();
+				yield return StartCoroutine(Dialogue.instance.text ("A slot machine!"));
+				yield return StartCoroutine(Dialogue.instance.line ("Want to play?"));
+                yield return StartCoroutine(Dialogue.instance.prompt ());
+				if (Dialogue.instance.selectedOption == 0) {
+					Dialogue.instance.Deactivate ();
 					Player.disabled = true;
 					StartCoroutine (player.DisplayEmotiveBubble (1));
 					while (player.displayingEmotion) {
@@ -89,14 +88,14 @@ public class TextDatabase : MonoBehaviour {
 					StartCoroutine (slots.Initialize ());
 
 				} else {
-					mylog.Deactivate ();
+					Dialogue.instance.Deactivate ();
 					player.WaitToInteract ();
 				}
 
 			} else {
-				yield return StartCoroutine(mylog.text ("You don't have any"));
-				yield return StartCoroutine(mylog.line ("coins!"));
-				yield return StartCoroutine(mylog.done ());
+				yield return StartCoroutine(Dialogue.instance.text ("You don't have any"));
+				yield return StartCoroutine(Dialogue.instance.line ("coins!"));
+				yield return StartCoroutine(Dialogue.instance.done ());
 
 
 			}
@@ -106,39 +105,39 @@ public class TextDatabase : MonoBehaviour {
 	}
 
 	IEnumerator Text2(){
-        player.overrideRenable = true;
+		Dialogue.instance.Deactivate ();
+		Dialogue.instance.cantscroll = false;
+		Dialogue.instance.finishedWithTextOverall = true;
+        yield return StartCoroutine(Dialogue.instance.para (GameData.playerName + " turned on"));
+		yield return StartCoroutine(Dialogue.instance.line ("the PC!"));
+		yield return StartCoroutine(Dialogue.instance.done());
         Player.disabled = true;
-		mylog.Deactivate ();
-		mylog.cantscroll = false;
-		mylog.finishedWithTextOverall = true;
-        yield return StartCoroutine(mylog.para (GameData.playerName + " turned on"));
-		yield return StartCoroutine(mylog.line ("the PC!"));
-		yield return StartCoroutine(mylog.done());
 		itemPCMenu.SetActive (true);
         Inputs.Disable("start");
         StartCoroutine(itemPCMenu.GetComponent<PC> ().Initialize ());
 	}
 	IEnumerator Text3(){
-		mylog.Deactivate ();
-		mylog.cantscroll = false;
-		mylog.finishedWithTextOverall = true;
-		yield return StartCoroutine(mylog.para ("Battle!"));
-		yield return StartCoroutine(mylog.done());
-		pokemonData.StartBattle (0,0);
+		Dialogue.instance.Deactivate ();
+		Dialogue.instance.cantscroll = false;
+		Dialogue.instance.finishedWithTextOverall = true;
+		yield return StartCoroutine(Dialogue.instance.para ("Battle!"));
+		yield return StartCoroutine(Dialogue.instance.done());
+		player.StartBattle(0,0);
 
 
 	}
 	IEnumerator Text4(){
-		mylog.Deactivate ();
-		mylog.cantscroll = false;
-		mylog.finishedWithTextOverall = true;
-        yield return StartCoroutine(mylog.text("Hi there!"));
-        yield return StartCoroutine(mylog.line("May I help you?"));
-		yield return StartCoroutine(mylog.done());
+		Dialogue.instance.Deactivate ();
+		Dialogue.instance.cantscroll = false;
+		Dialogue.instance.finishedWithTextOverall = true;
+        yield return StartCoroutine(Dialogue.instance.text("Hi there!"));
+        yield return StartCoroutine(Dialogue.instance.line("May I help you?"));
+		yield return StartCoroutine(Dialogue.instance.done());
 		player.shopup = true;
         cursor.SetActive(true);
         Inputs.Disable("start");
 		pokeMart.martlist = itemDatabase.IndigoItems;
+		pokeMart.Init();
 		shopmenu.SetActive (true);
         pokeMart.currentMenu = pokeMart.buysellwindow;
 
@@ -147,51 +146,43 @@ public class TextDatabase : MonoBehaviour {
 
 IEnumerator Text5()
 {
-	mylog.buycoinsmenu.SetActive(true);
-	yield return StartCoroutine(mylog.text("Welcome to ROCKET"));
-	yield return StartCoroutine(mylog.line("GAME CORNER!",1));
-	yield return StartCoroutine(mylog.para("Do you need some"));
-	yield return StartCoroutine(mylog.line("game coins?",1));
-	yield return StartCoroutine(mylog.para("It's $1000 for 50"));
-	yield return StartCoroutine(mylog.line("coins. Would you",0));
-	yield return StartCoroutine(mylog.cont("like some?"));
-	mylog.prompt();
-	while (!mylog.finishedThePrompt)
-	{
-		yield return new WaitForSeconds(0.1f);
-		if (mylog.finishedThePrompt)
-		{
-			break;
-		}
-	}
-	if (mylog.selectedOption == 0)
+	Dialogue.instance.buycoinsmenu.SetActive(true);
+	yield return StartCoroutine(Dialogue.instance.text("Welcome to ROCKET"));
+	yield return StartCoroutine(Dialogue.instance.line("GAME CORNER!",1));
+	yield return StartCoroutine(Dialogue.instance.para("Do you need some"));
+	yield return StartCoroutine(Dialogue.instance.line("game coins?",1));
+	yield return StartCoroutine(Dialogue.instance.para("It's $1000 for 50"));
+	yield return StartCoroutine(Dialogue.instance.line("coins. Would you",0));
+	yield return StartCoroutine(Dialogue.instance.cont("like some?"));
+	yield return StartCoroutine(Dialogue.instance.prompt());
+	if (Dialogue.instance.selectedOption == 0)
 	{
 		if (GameData.coins <= 9949 && GameData.coins >= 1000)
 		{
 			GameData.money -= 1000;
 			GameData.coins += 50;
-			yield return StartCoroutine(mylog.text("Thanks! Here are"));
-			yield return StartCoroutine(mylog.line("your 50 coins!"));
-			yield return StartCoroutine(mylog.done());
+			yield return StartCoroutine(Dialogue.instance.text("Thanks! Here are"));
+			yield return StartCoroutine(Dialogue.instance.line("your 50 coins!"));
+			yield return StartCoroutine(Dialogue.instance.done());
 		}
 		else
 		{
 			if (GameData.money < 1000)
 			{
-				yield return StartCoroutine(mylog.text("You can't afford"));
-				yield return StartCoroutine(mylog.line("the coins!"));
-				yield return StartCoroutine(mylog.done());
-				mylog.buycoinsmenu.SetActive(false);
+				yield return StartCoroutine(Dialogue.instance.text("You can't afford"));
+				yield return StartCoroutine(Dialogue.instance.line("the coins!"));
+				yield return StartCoroutine(Dialogue.instance.done());
+				Dialogue.instance.buycoinsmenu.SetActive(false);
 				yield break;
 
 
 			}
 			if (GameData.coins > 9949)
 			{
-				yield return StartCoroutine(mylog.text("Oops! Your COIN"));
-				yield return StartCoroutine(mylog.line("CASE is full."));
-				yield return StartCoroutine(mylog.done());
-				mylog.buycoinsmenu.SetActive(false);
+				yield return StartCoroutine(Dialogue.instance.text("Oops! Your COIN"));
+				yield return StartCoroutine(Dialogue.instance.line("CASE is full."));
+				yield return StartCoroutine(Dialogue.instance.done());
+				Dialogue.instance.buycoinsmenu.SetActive(false);
 				yield break;
 
 			}
@@ -202,40 +193,40 @@ IEnumerator Text5()
 	}
 	else
 	{
-		yield return StartCoroutine(mylog.text("No? Please come"));
-		yield return StartCoroutine(mylog.line("play sometime!"));
-		yield return StartCoroutine(mylog.done());
+		yield return StartCoroutine(Dialogue.instance.text("No? Please come"));
+		yield return StartCoroutine(Dialogue.instance.line("play sometime!"));
+		yield return StartCoroutine(Dialogue.instance.done());
 
 
 	}
 
 
-	mylog.buycoinsmenu.SetActive(false);
+	Dialogue.instance.buycoinsmenu.SetActive(false);
 }
 
 IEnumerator FoundCoinsText(int coinamount)
 {
 	GameData.coins += coinamount;
-	yield return StartCoroutine(mylog.text("Found " + coinamount + " coins!"));
-	yield return StartCoroutine(mylog.done());
+	yield return StartCoroutine(Dialogue.instance.text("Found " + coinamount + " coins!"));
+	yield return StartCoroutine(Dialogue.instance.done());
 
 
 
 }
 IEnumerator Text7()
 {
-	yield return StartCoroutine(mylog.text("I'm a rocket"));
-	yield return StartCoroutine(mylog.line("scientist!"));
-	yield return StartCoroutine(mylog.done());
+	yield return StartCoroutine(Dialogue.instance.text("I'm a rocket"));
+	yield return StartCoroutine(Dialogue.instance.line("scientist!"));
+	yield return StartCoroutine(Dialogue.instance.done());
 
 
 }
     IEnumerator Text8()
     {
-        yield return StartCoroutine(mylog.text("LINQ's next"));
-        yield return StartCoroutine(mylog.line("stream:",1));
-        yield return StartCoroutine(mylog.para("(Insert time here)"));
-        yield return StartCoroutine(mylog.done());
+        yield return StartCoroutine(Dialogue.instance.text("LINQ's next"));
+        yield return StartCoroutine(Dialogue.instance.line("stream:",1));
+        yield return StartCoroutine(Dialogue.instance.para("(Insert time here)"));
+        yield return StartCoroutine(Dialogue.instance.done());
 
 
     }

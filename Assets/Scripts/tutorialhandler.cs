@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class TutorialHandler : MonoBehaviour {
-	public Dialogue mylog;
 	public GameObject  rednamemenu, garynamemenu,nameselectionmenu, currentmenu, oak, gary, red;
-    public Cursor cursor;
+    public GameCursor cursor;
 	public Animator tutanim;
 	public int selectedOption;
 	public GameObject[] allmenus;
 	public GameObject overworld, white;
-	public bool givingRedAName, givingGaryAName;
-	public Dialogue dia;
+    public bool givingRedAName, givingGaryAName;
 	public Player play;
 	public NameSelection names;
     // Use this for initialization
@@ -61,14 +59,14 @@ public class TutorialHandler : MonoBehaviour {
 				currentmenu = null;
                 GameData.playerName = "RED";
 				tutanim.SetBool ("fourthpass", true);
-				mylog.enabled = true;
+				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 			}
 			if (currentmenu == rednamemenu && selectedOption == 	2) {
 				currentmenu = null;
                 GameData.playerName = "ASH";
 				tutanim.SetBool ("fourthpass", true);
-				mylog.enabled = true;
+				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 
 			}
@@ -76,7 +74,7 @@ public class TutorialHandler : MonoBehaviour {
 				currentmenu = null;
                 GameData.playerName = "JACK";
 				tutanim.SetBool ("fourthpass", true);
-				mylog.enabled = true;
+				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 			}
 			if (currentmenu == garynamemenu && selectedOption == 	0) {
@@ -88,14 +86,14 @@ public class TutorialHandler : MonoBehaviour {
 				currentmenu = null;
                 Dialogue.opponentName = "BLUE";
 				tutanim.SetBool ("seventhpass", true);
-				mylog.enabled = true;
+				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 			}
 			if (currentmenu == garynamemenu && selectedOption == 	2) {
 				currentmenu = null;
                 Dialogue.opponentName = "GARY";
 				tutanim.SetBool ("seventhpass", true);
-				mylog.enabled = true;
+				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 
 			}
@@ -103,7 +101,7 @@ public class TutorialHandler : MonoBehaviour {
 				currentmenu = null;
                 Dialogue.opponentName = "JOHN";
 				tutanim.SetBool ("seventhpass", true);
-				mylog.enabled = true;
+				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 			}
 		}
@@ -111,41 +109,41 @@ public class TutorialHandler : MonoBehaviour {
 
 	public IEnumerator FirstOakDialogue(){
 		play.amenuactive = true;
-		mylog.deactivated = true;
+		Dialogue.instance.deactivated = true;
 		currentmenu = null;
-		yield return StartCoroutine(mylog.text ("Hello there!"));
-		yield return StartCoroutine(mylog.line ("Welcome to the",0));
-		yield return StartCoroutine(mylog.cont ("world of POKeMON!",1));
-		yield return StartCoroutine(mylog.para ("My name is OAK!"));
-		yield return StartCoroutine(mylog.line("People call me",0));
-		yield return StartCoroutine(mylog.cont ("the POKeMON PROF!"));
-		yield return StartCoroutine(mylog.done ());
+		yield return StartCoroutine(Dialogue.instance.text ("Hello there!"));
+		yield return StartCoroutine(Dialogue.instance.line ("Welcome to the",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("world of POKeMON!",1));
+		yield return StartCoroutine(Dialogue.instance.para ("My name is OAK!"));
+		yield return StartCoroutine(Dialogue.instance.line("People call me",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("the POKeMON PROF!"));
+		yield return StartCoroutine(Dialogue.instance.done ());
 		tutanim.SetBool ("firstpass", true);
 
 	}
 	public IEnumerator SecondOakDialogue(){
-		yield return StartCoroutine(mylog.text ("This world is"));
-		yield return StartCoroutine(mylog.line ("inhabited by",0));
-		yield return StartCoroutine(mylog.cont ("creatures called",0));
-		yield return StartCoroutine(mylog.cont ("POKeMON!",1));
-		yield return StartCoroutine(mylog.para("For some people,"));
-		yield return StartCoroutine(mylog.line ("POKeMON are",0));
-		yield return StartCoroutine(mylog.cont ("pets. Others use",0));
-		yield return StartCoroutine(mylog.cont ("them for fights.",1));
-		yield return StartCoroutine(mylog.para("Myself...",1));
-		yield return StartCoroutine(mylog.para ("I study POKeMON"));
-		yield return StartCoroutine(mylog.line ("as a profession."));
-		yield return StartCoroutine(mylog.done ());
+		yield return StartCoroutine(Dialogue.instance.text ("This world is"));
+		yield return StartCoroutine(Dialogue.instance.line ("inhabited by",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("creatures called",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("POKeMON!",1));
+		yield return StartCoroutine(Dialogue.instance.para("For some people,"));
+		yield return StartCoroutine(Dialogue.instance.line ("POKeMON are",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("pets. Others use",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("them for fights.",1));
+		yield return StartCoroutine(Dialogue.instance.para("Myself...",1));
+		yield return StartCoroutine(Dialogue.instance.para ("I study POKeMON"));
+		yield return StartCoroutine(Dialogue.instance.line ("as a profession."));
+		yield return StartCoroutine(Dialogue.instance.done ());
 		tutanim.SetBool ("secondpass", true);
 
 	}
 	public IEnumerator ThirdOakDialogue(){
 		
-		yield return StartCoroutine(mylog.text ("First, what is"));
-		yield return StartCoroutine(mylog.line ("your name?"));
-		yield return StartCoroutine(mylog.done ());
+		yield return StartCoroutine(Dialogue.instance.text ("First, what is"));
+		yield return StartCoroutine(Dialogue.instance.line ("your name?"));
+		yield return StartCoroutine(Dialogue.instance.done ());
 		tutanim.SetBool ("thirdpass", true);
-		mylog.enabled = false;
+		Dialogue.instance.enabled = false;
 
 		currentmenu = rednamemenu;
 		selectedOption = 0;
@@ -153,23 +151,23 @@ public class TutorialHandler : MonoBehaviour {
 }
 	public IEnumerator FourthOakDialogue(){
 
-		yield return StartCoroutine(mylog.text ("Right! So your"));
-        yield return StartCoroutine(mylog.line ("name is " + GameData.playerName + "!"));
-		yield return StartCoroutine(mylog.done ());
+		yield return StartCoroutine(Dialogue.instance.text ("Right! So your"));
+        yield return StartCoroutine(Dialogue.instance.line ("name is " + GameData.playerName + "!"));
+		yield return StartCoroutine(Dialogue.instance.done ());
 		tutanim.SetBool ("fifthpass", true);
 
 	}
 	public IEnumerator FifthOakDialogue(){
 
-		yield return StartCoroutine(mylog.text ("This is my grand-"));
-		yield return StartCoroutine(mylog.line ("son. He's been",0));
-		yield return StartCoroutine(mylog.cont ("your rival since",0));
-		yield return StartCoroutine(mylog.cont ("you were a baby.",1));
-		yield return StartCoroutine(mylog.para ("...Erm, what is"));
-		yield return StartCoroutine(mylog.line ("his name again?"));
-		yield return StartCoroutine(mylog.done ());
+		yield return StartCoroutine(Dialogue.instance.text ("This is my grand-"));
+		yield return StartCoroutine(Dialogue.instance.line ("son. He's been",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("your rival since",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("you were a baby.",1));
+		yield return StartCoroutine(Dialogue.instance.para ("...Erm, what is"));
+		yield return StartCoroutine(Dialogue.instance.line ("his name again?"));
+		yield return StartCoroutine(Dialogue.instance.done ());
 		tutanim.SetBool ("sixthpass", true);
-		mylog.enabled = false;
+		Dialogue.instance.enabled = false;
 
 		currentmenu = garynamemenu;
 		selectedOption = 0;
@@ -177,23 +175,23 @@ public class TutorialHandler : MonoBehaviour {
 	}
 	public IEnumerator SixthOakDialogue(){
 
-		yield return StartCoroutine(mylog.text ("That's right! I"));
-		yield return StartCoroutine(mylog.line ("remember now! His",0));
-        yield return StartCoroutine(mylog.cont ("name is " + GameData.rivalName + "!"));
-		yield return StartCoroutine(mylog.done());
+		yield return StartCoroutine(Dialogue.instance.text ("That's right! I"));
+		yield return StartCoroutine(Dialogue.instance.line ("remember now! His",0));
+        yield return StartCoroutine(Dialogue.instance.cont ("name is " + GameData.rivalName + "!"));
+		yield return StartCoroutine(Dialogue.instance.done());
 		tutanim.SetBool ("eighthpass", true);
 	}
 	public IEnumerator SeventhOakDialogue(){
 
-        yield return StartCoroutine(mylog.text (GameData.playerName + "!",1));
-		yield return StartCoroutine(mylog.para ("Your very own"));
-		yield return StartCoroutine(mylog.line ("POKeMON legend is",0));
-		yield return StartCoroutine(mylog.cont("about to unfold!",1));
-		yield return StartCoroutine(mylog.para ("A world of dreams"));
-		yield return StartCoroutine(mylog.line ("and adventures",0));
-		yield return StartCoroutine(mylog.cont ("with POKeMON",0));
-		yield return StartCoroutine(mylog.cont ("awaits! Let's go!"));
-		yield return StartCoroutine(mylog.done());
+        yield return StartCoroutine(Dialogue.instance.text (GameData.playerName + "!",1));
+		yield return StartCoroutine(Dialogue.instance.para ("Your very own"));
+		yield return StartCoroutine(Dialogue.instance.line ("POKeMON legend is",0));
+		yield return StartCoroutine(Dialogue.instance.cont("about to unfold!",1));
+		yield return StartCoroutine(Dialogue.instance.para ("A world of dreams"));
+		yield return StartCoroutine(Dialogue.instance.line ("and adventures",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("with POKeMON",0));
+		yield return StartCoroutine(Dialogue.instance.cont ("awaits! Let's go!"));
+		yield return StartCoroutine(Dialogue.instance.done());
 		tutanim.SetBool ("ninthpass", true);
 	}
 	void DisableOak(){
@@ -220,7 +218,7 @@ public class TutorialHandler : MonoBehaviour {
 		overworld.SetActive (true);
 		white.SetActive (false);
 		play.amenuactive = false;
-		mylog.deactivated = false;
+		Dialogue.instance.deactivated = false;
 			Player.disabled = false;
         Inputs.Enable("start");
 		this.gameObject.SetActive (false);

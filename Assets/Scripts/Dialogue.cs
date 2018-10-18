@@ -23,7 +23,7 @@ public class Dialogue : MonoBehaviour {
 	public Image box;
 	public bool finishedThePrompt;
 	public Image theindicator;
-	public Cursor cursor;
+	public GameCursor cursor;
 	public int selectedOption;
     public bool displayimmediatenoscroll;
 	public Slots lots;
@@ -168,6 +168,7 @@ public class Dialogue : MonoBehaviour {
                 if (Inputs.pressed("a")) {
 					finishedThePrompt = true;
 					StopAllCoroutines ();
+                    Inputs.dialogueCheck = false;
 					dialoguetext.text = "";
                     cursor.SetActive(false);
 					finishedCurrentTask = true;
@@ -175,25 +176,26 @@ public class Dialogue : MonoBehaviour {
                 if (Inputs.pressed("b")) {
 					selectedOption = 1;
 					StopAllCoroutines ();
-
+                    Inputs.dialogueCheck = false;
 					play.WaitToInteract ();
 					dialoguetext.text = "";
                     cursor.SetActive(false);
 					finishedThePrompt = true;
 					finishedCurrentTask = true;
-
 				}
 
-				cursor.SetPosition(120, 72 - 16 * selectedOption);
+				
 
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
                     MathE.Clamp(ref selectedOption, 0, 1);
+                    cursor.SetPosition(120, 72 - 16 * selectedOption);
                 }
                 if (Inputs.pressed("up")) {
 					selectedOption--;
                     MathE.Clamp(ref selectedOption, 0, 1);
+                    cursor.SetPosition(120, 72 - 16 * selectedOption);
 				}
 				
 			}
@@ -218,7 +220,7 @@ public class Dialogue : MonoBehaviour {
 
 				}
 
-                cursor.SetPosition(120, 40 - 16 * selectedOption);
+               
 
                 if(!finishedWithTextOverall && !cursor.isActive){
                     cursor.SetActive(true);
@@ -227,10 +229,12 @@ public class Dialogue : MonoBehaviour {
                 if (Inputs.pressed("down")) {
 					selectedOption++;
                     MathE.Clamp(ref selectedOption, 0, 2);
+                    cursor.SetPosition(120, 40 - 16 * selectedOption);
 				}
                 if (Inputs.pressed("up")) {
 					selectedOption--;
                     MathE.Clamp(ref selectedOption, 0, 2);
+                    cursor.SetPosition(120, 40 - 16 * selectedOption);
 				}
 			}
 
@@ -350,6 +354,8 @@ public IEnumerator done(){
 	public IEnumerator prompt(){
 		selectedOption = 0;
 		taskType = 6;
+        cursor.SetActive(true);
+        cursor.SetPosition(120, 72 - 16 * selectedOption);
 		finishedCurrentTask = false;
 		finishedWithTextOverall = false;
 		finishedThePrompt = false;
@@ -365,6 +371,8 @@ public IEnumerator done(){
 	public void slots(){
 		selectedOption = 0;
 		taskType = 7;
+        cursor.SetActive(true);
+        cursor.SetPosition(120, 40 - 16 * selectedOption);
 		finishedCurrentTask = false;
 		finishedWithTextOverall = false;
 		finishedThePrompt = false;
@@ -375,6 +383,7 @@ public IEnumerator done(){
 		StopAllCoroutines ();
 		finishedCurrentTask = true;
 		finishedWithTextOverall = true;
+        Inputs.dialogueCheck = false;
 		stringToReveal = "";
 		box.enabled = false;
 		dialoguetext.enabled = false;

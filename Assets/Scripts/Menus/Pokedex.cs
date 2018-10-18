@@ -11,7 +11,7 @@ public class Pokedex : MonoBehaviour
     public GameObject entriescontainer;
     public List<GameObject> entries;
     public Get get = new Get();
-    public Cursor cursor;
+    public GameCursor cursor;
     public CustomText seentext, owntext;
     public int selectedSlot, topSlotIndex;
     public bool selectingMon;

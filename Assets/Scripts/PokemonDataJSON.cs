@@ -31,6 +31,12 @@ public class MoveData{
     public string effect;
 
 }
+//Class for encounter tables.
+[System.Serializable]
+public class EncounterData{
+    public int encounterChance;
+    public StrInt[] slots;
+}
 
 
 //Save/Loader for Tile Pool
@@ -116,7 +122,7 @@ public class PokemonData
     public static Dictionary<string, StrInt[]> levelmoves = new Dictionary<string, StrInt[]>();
     //format: pokemon name as key, outputs pokemon and evolved level
     public static Dictionary<string, StrInt> evolution = new Dictionary<string, StrInt>();
-    public static Dictionary<int, StrInt[]> grasswaterencounters = new Dictionary<int, StrInt[]>();
+    public static List<EncounterData> grasswaterencounters = new List<EncounterData>();
     /*
 List of index of the party sprite for each Pokemon.
 0:Generic Sprite
@@ -174,7 +180,7 @@ public class PokemonDataJSON : MonoBehaviour
        PokemonData.baseStats = Serializer.JSONtoObject<Dictionary<string,int[]>>("basestatsdata.json");
         PokemonData.levelmoves = Serializer.JSONtoObject<Dictionary<string, StrInt[]>>("levelmovesdata.json");
         PokemonData.learnbytm = Serializer.JSONtoObject<Dictionary<string,string[]>>("learnbytmdata.json");
-        PokemonData.grasswaterencounters = Serializer.JSONtoObject<Dictionary<int,StrInt[]>>("encounterData.json");
+        PokemonData.grasswaterencounters = Serializer.JSONtoObject<List<EncounterData>>("encounterData.json");
         PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
         PokemonData.PokemonPartySprite = Serializer.JSONtoObject<Dictionary<string, int>>("partySpriteData.json");
         PokemonData.PokemonTypes = Serializer.JSONtoObject<Dictionary<string, string[]>>("pokemonTypeData.json");
@@ -182,6 +188,9 @@ public class PokemonDataJSON : MonoBehaviour
         PokemonData.PokemonToIndex = Serializer.JSONtoObject<Dictionary<string, int>>("pokemonIndices.json");
         PokemonData.TMHMtoIndex = Serializer.JSONtoObject<Dictionary<string, int>>("tmHmIndices.json");
         PokemonData.itemPrices = Serializer.JSONtoObject<Dictionary<string, int>>("itemPrices.json");
+
+
+       
     }
 }
 #if UNITY_EDITOR

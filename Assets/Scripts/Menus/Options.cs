@@ -12,7 +12,7 @@ public static class MathE{
     }
 }
 public class Options : MonoBehaviour {
-	public Cursor cursor;
+	public GameCursor cursor;
 	public GameObject[] textSlots, animSlots, battleSlots, menuSlots;
 	public int selectedOption;
 
@@ -34,32 +34,32 @@ public class Options : MonoBehaviour {
 		}
         if (Inputs.pressed("left")) {
 			if (selectedOption == 0) {
-				SaveData.textChoice--;
-                MathE.Clamp(ref SaveData.textChoice, 0, 2);
+				GameData.textChoice--;
+                MathE.Clamp(ref GameData.textChoice, 0, 2);
 			}
 			if (selectedOption == 1) {
-                SaveData.animationChoice--;
-                MathE.Clamp(ref SaveData.animationChoice, 0, 1);
+                GameData.animationChoice--;
+                MathE.Clamp(ref GameData.animationChoice, 0, 1);
 			}
 			if (selectedOption == 2) {
-                SaveData.battleChoice--;
-                MathE.Clamp(ref SaveData.battleChoice, 0, 1);
+                GameData.battleChoice--;
+                MathE.Clamp(ref GameData.battleChoice, 0, 1);
 			}
 		}
 
         if (Inputs.pressed("right")) {
 
 			if (selectedOption == 0) {
-                SaveData.textChoice++;
-                MathE.Clamp(ref SaveData.textChoice, 0, 2);
+                GameData.textChoice++;
+                MathE.Clamp(ref GameData.textChoice, 0, 2);
 			}
 			if (selectedOption == 1) {
-                SaveData.animationChoice++;
-                MathE.Clamp(ref SaveData.animationChoice, 0, 1);
+                GameData.animationChoice++;
+                MathE.Clamp(ref GameData.animationChoice, 0, 1);
 			}
 			if (selectedOption == 2) {
-                SaveData.battleChoice++;
-                MathE.Clamp(ref SaveData.battleChoice,0, 1);
+                GameData.battleChoice++;
+                MathE.Clamp(ref GameData.battleChoice,0, 1);
 			}
 
 		}
@@ -98,13 +98,13 @@ public class Options : MonoBehaviour {
 		cursor.transform.position = menuSlots [selectedOption].transform.position;
 		
 			if (selectedOption == 0) {
-				cursor.transform.position = textSlots [SaveData.textChoice].transform.position;
+				cursor.transform.position = textSlots [GameData.textChoice].transform.position;
 			}
 			if (selectedOption == 1) {
-                cursor.transform.position = animSlots [SaveData.animationChoice].transform.position;
+                cursor.transform.position = animSlots [GameData.animationChoice].transform.position;
 			}
 			if (selectedOption == 2) {
-                cursor.transform.position = battleSlots [SaveData.battleChoice].transform.position;
+                cursor.transform.position = battleSlots [GameData.battleChoice].transform.position;
 			}
 		
 

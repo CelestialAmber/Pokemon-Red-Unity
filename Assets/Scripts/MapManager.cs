@@ -13,14 +13,16 @@ public enum Map
 public class MapManager : MonoBehaviour {
     public Player player;
     public GameObject mainmap;
-    public MeshRenderer mainLayer, grassLayer, objectLayer;
+    public MeshRenderer mainLayer, grassLayer, objectLayer, grassBGLayer;
     public SpriteAtlas tileAtlas;
     public Mesh mesh;
-    public Material tileMat;
+    public Material templateMat;
+    private Material tileMat;
     public Vector2 atlasSize;
-    public Vector2[] mainUv, grassUv, objectUv;
-    public MeshFilter mainMesh, grassMesh, objectMesh;
-    public static GridTile[,] maptiles = new GridTile[GameConstants.mapWidth, GameConstants.mapHeight];
+    public Vector2[] mainUv, grassUv, objectUv, grassBGUv;
+    public MeshFilter mainMesh, grassMesh, objectMesh,grassBGMesh;
+    public int currentGrassEcounterTable, currentWaterEncounterTable;
+    public static GridTile[,] maptiles = new GridTile[GameData.mapWidth, GameData.mapHeight];
     //The map the player is currently in.
     public Map currentMap;
     public Vector3 centerPos;
@@ -76,9 +78,9 @@ public class MapManager : MonoBehaviour {
         mesh = new Mesh();
         List<Vector3> verts = new List<Vector3>();
         List<int> tris = new List<int>();
-        for (int y = 0; y < 11; y++)
+        for (int y = 0; y < GameData.screenTileHeight + 2; y++)
         {
-            for (int x = 0; x < 12; x++)
+            for (int x = 0; x < GameData.screenTileWidth + 2; x++)
             {
                 int offset = verts.Count;
                 verts.AddRange(new Vector3[] { new Vector3(x, y), new Vector3(x + 1, y), new Vector3(x + 1, y + 1), new Vector3(x, y + 1) });
@@ -92,13 +94,21 @@ public class MapManager : MonoBehaviour {
         mainMesh.mesh = mesh;
         grassMesh.mesh = mesh;
         objectMesh.mesh = mesh;
+           grassBGMesh.mesh = mesh;
     }
     private void Awake()
     {
+        tileMat = new Material(templateMat);
+        mainLayer.material = tileMat;   
+        grassLayer.material = tileMat;
+        objectLayer.material = tileMat;
+        grassBGLayer.material = tileMat;
             tileMat.mainTexture = tileAtlas.GetSprite("tile7").texture;
             atlasSize = new Vector2(tileMat.mainTexture.width, tileMat.mainTexture.height);
-            maptiles = new GridTile[GameConstants.mapWidth, GameConstants.mapHeight];
+            maptiles = new GridTile[GameData.mapWidth, GameData.mapHeight];
             GenerateMeshes();
+         
+          
         LoadMapData();
         GenerateUvs();
         SetUpUvShop();
@@ -107,6 +117,7 @@ public class MapManager : MonoBehaviour {
         UvShop.Add("itemPokeball", GetUvsFromAtlas("itemPokeball"));
         UvShop.Add("cutTree", GetUvsFromAtlas("tile24"));
         UvShop.Add("transparent", new Vector2[] { new Vector2(0.95f, 0.95f), new Vector2(0.96f, 0.95f), new Vector2(0.96f, 0.96f), new Vector2(0.95f, 0.96f) });
+        UvShop.Add("white", GetUvsFromAtlas("tile1"));
     }
     Vector2[] GetUvsFromAtlas(string atlasSpriteName){
         Rect rect = tileAtlas.GetSprite(atlasSpriteName).textureRect;
@@ -114,11 +125,11 @@ public class MapManager : MonoBehaviour {
     }
      void AnimateTiles()
     {
-        for (int y = 0; y < 11; y++)
+        for (int y = 0; y < GameData.screenTileHeight + 2; y++)
         {
-            for (int x = 0; x < 12; x++)
+            for (int x = 0; x < GameData.screenTileWidth + 2; x++)
             {
-                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(centerPos.x  + (x - 5)) , GameConstants.mapWidth), mod(Mathf.RoundToInt(centerPos.y  + (y - 5)) , GameConstants.mapHeight)];
+                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(centerPos.x  + (x - GameData.screenTileWidth/2)) , GameData.mapWidth), mod(Mathf.RoundToInt(centerPos.y  + (y - GameData.screenTileHeight / 2 - 1)) , GameData.mapHeight)];
                 if ( tileToUse != null)
                 {
                     //Load the main layer.
@@ -126,9 +137,9 @@ public class MapManager : MonoBehaviour {
                     if (loadedtile.isAnimated)
                     {
                         
-                        int frame = Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 2));
+                        int frame = Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 1.4f));
                         Vector2[] copyUvs = loadedtile.mainUvs[frame];
-                        copyUvs.CopyTo(mainUv, 4 * (y * 12 + x));
+                        copyUvs.CopyTo(mainUv, 4 * (y * (GameData.screenTileWidth + 2) + x));
                     }
 
                 }
@@ -137,38 +148,43 @@ public class MapManager : MonoBehaviour {
             }
         }
     }
-    List<Vector2> mainUvs = new List<Vector2>(2112);
-    List<Vector2> grassUvs = new List<Vector2>(2112);
-    List<Vector2> objectUvs = new List<Vector2>(2112);
+    List<Vector2> mainUvs = new List<Vector2>(); //size should be set to 2112? 
+    List<Vector2> grassUvs  = new List<Vector2>();
+    List<Vector2> objectUvs  = new List<Vector2>();
+    List<Vector2> grassBGUvs = new List<Vector2>();
     public void LoadMap(){
         mainUvs.Clear();
         grassUvs.Clear();
         objectUvs.Clear();
+        grassBGUvs.Clear();
         Vector2[] transparentUvs = UvShop["transparent"];
         Vector2[] itemPokeballUvs = UvShop["itemPokeball"];
-        for (int y = 0; y < 11; y++)
+        Vector2[] whiteTileUvs = UvShop["white"];
+        for (int y = 0; y < GameData.screenTileHeight + 2; y++)
         {
-            for (int x = 0; x < 12; x++)
+            for (int x = 0; x < GameData.screenTileWidth + 2; x++)
             {
 
-                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(player.transform.position.x + (x - 5)) , GameConstants.mapWidth), mod(Mathf.RoundToInt(player.transform.position.y + (y - 5)) , GameConstants.mapHeight)];
+                GridTile tileToUse = maptiles[mod(Mathf.RoundToInt(player.transform.position.x + (x - GameData.screenTileWidth / 2)) , GameData.mapWidth), mod(Mathf.RoundToInt(player.transform.position.y + (y - GameData.screenTileHeight / 2 - 1)) , GameData.mapHeight)];
                
                 if (tileToUse != null)
                 {
                     //Load the main layer.
                     GridTile loadedtile = tileToUse;
+                    //is the tile an animated tile?
                     if (loadedtile.isAnimated)
                     {
-                       int frame =  Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 2));
+                       int frame =  Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 1.4f));
                         for (int i = 0; i < 4; i++){
                             mainUvs.Add(loadedtile.mainUvs[frame][i]);
                             grassUvs.Add(transparentUvs[i]);
                             objectUvs.Add(transparentUvs[i]);
+                            grassBGUvs.Add(transparentUvs[i]);
                         }
                     }
                     else
                     {
-                        
+                        //does the tile have an item pokeball/other object on it?
                         if(loadedtile.hasItemBall){
 
 
@@ -190,6 +206,7 @@ public class MapManager : MonoBehaviour {
                             {
                                 mainUvs.Add(transparentUvs[i]);
                                 grassUvs.Add(loadedtile.mainUvs[0][i]);
+                                grassBGUvs.Add(whiteTileUvs[i]);
                             }
                         }
                         else
@@ -198,6 +215,7 @@ public class MapManager : MonoBehaviour {
                             {
                                 mainUvs.Add(loadedtile.mainUvs[0][i]);
                                 grassUvs.Add(transparentUvs[i]);
+                                   grassBGUvs.Add(transparentUvs[i]);
                             }
                         }
                     }
@@ -209,18 +227,22 @@ public class MapManager : MonoBehaviour {
                         mainUvs.Add(transparentUvs[i]);
                         grassUvs.Add(transparentUvs[i]);
                         objectUvs.Add(transparentUvs[i]);
+                           grassBGUvs.Add(transparentUvs[i]);
                     }
                 }
 
 
             }
         }
-        mainLayer.transform.position = player.transform.position - new Vector3(5.5f, 5.5f, -1);
-        grassLayer.transform.position = player.transform.position - new Vector3(5.5f, 5.5f, -0.33f);
-        objectLayer.transform.position = player.transform.position - new Vector3(5.5f, 5.25f, -0.75f);
+        //the layers are all organized from back to front
+       grassBGLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, -1.1f);
+        mainLayer.transform.position = player.transform.position - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f , -1);
+        objectLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, -0.75f);
+         grassLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, -0.33f);
         mainUv = mainUvs.ToArray();
         grassUv = grassUvs.ToArray();
         objectUv = objectUvs.ToArray();
+        grassBGUv = grassBGUvs.ToArray();
         centerPos = player.transform.position;
     }
     void LoadMapData(){
@@ -244,9 +266,10 @@ public class MapManager : MonoBehaviour {
             mainMesh.mesh.uv = mainUv;
             grassMesh.mesh.uv = grassUv;
             objectMesh.mesh.uv = objectUv;
+            grassBGMesh.mesh.uv = grassBGUv;
             //Update the animated tile timer.
             tileanimtimer += Time.deltaTime;
-            if (tileanimtimer >= 2) tileanimtimer = 0;
+            if (tileanimtimer >= 1.4f) tileanimtimer = 0;
 
 
             //Wait until the end of the frame to sync it with other updates;

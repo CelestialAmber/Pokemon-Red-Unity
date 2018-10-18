@@ -31,33 +31,37 @@ public class PaletteSet{
 }
 public class ScreenEffects : MonoBehaviour {
     public Material paletteEffect, invertEffect, waveEffect;
-    public RawImage screen;
-    public RenderTexture texture, outputScreen;
+    public RawImage sgbScreen, nintendoSwitchScreen;
+    private RenderTexture texture, outputScreen;
     public bool invert, wave;
     public Palette usedPalette;
     private Palette lastPalette;
     public List<PaletteSet> palettes = new List<PaletteSet>();
     public VersionManager versionManager;
+    [Range(-3,3)]
+    public int flashLevel;
+    public bool useRockTunnelDarkEffect;
 	// Use this for initialization
 	void Start () {
-        screen.texture = outputScreen;
-        UpdatePalette();
+        texture = GameDataManager.mainRender;
+        outputScreen = GameDataManager.postRender;
+        sgbScreen.texture = outputScreen;
+        nintendoSwitchScreen.texture = outputScreen;
 	}
 	
 	// Update is called once per frame
     void Update () {
-        if (usedPalette != lastPalette) UpdatePalette();
+        paletteEffect.SetColor("color1", palettes[(int)usedPalette].bg1);
+        paletteEffect.SetColor("color2", palettes[(int)usedPalette].bg2);
+        paletteEffect.SetColor("color3", palettes[(int)usedPalette].bg3);
+        paletteEffect.SetColor("color4", palettes[(int)usedPalette].bg4);
+        paletteEffect.SetInt("useRockTunnelColors",(useRockTunnelDarkEffect ? 1 : 0));
+        paletteEffect.SetInt("flashLevel",flashLevel);
         Graphics.Blit(texture,outputScreen, paletteEffect,0);
         if (invert)
             Graphics.Blit(outputScreen, outputScreen, invertEffect);
         if(wave)
             Graphics.Blit(outputScreen, outputScreen, waveEffect);
-        lastPalette = usedPalette;
 	}
-    void UpdatePalette(){
-        paletteEffect.SetColor("color1", palettes[(int)usedPalette].bg1);
-        paletteEffect.SetColor("color2", palettes[(int)usedPalette].bg2);
-        paletteEffect.SetColor("color3", palettes[(int)usedPalette].bg3);
-        paletteEffect.SetColor("color4", palettes[(int)usedPalette].bg4);
-    }
+
 }

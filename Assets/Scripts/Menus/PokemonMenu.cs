@@ -44,7 +44,10 @@ public class Pokemon
         UpdateMovesToLevel();
         SetExpToLevel();
         RecalculateStats();
+        //If the Pokemon hasnt been registered as caught before, register it
+        if(!GameData.pokedexlist[PokemonData.MonToID(pokename) - 1].caught){
         RegisterInDex();
+        }
     }
     public void RegisterInDex()
     {
@@ -171,21 +174,14 @@ public class PokemonMenu : MonoBehaviour
     public GameObject[] allmenus;
     public List<GameObject> partyslots;
     public int selectedOption;
-    public Cursor cursor;
+    public GameCursor cursor;
     public int selectedMon;
     public int numberofPokemon;
     public int MoveID;
     public MainMenu moon;
     public bool donewaiting;
-    public int loadedpokemonID;
-    public int loadedMonStatus;
     public bool switching;
-    public GameObject battlemenu;
-    public BattleManager bm;
-    public Player play;
-    public Dialogue d;
     public List<Pokemon> party = new List<Pokemon>();
-    public int[] loadedMonStats = new int[4];
     public Image[] healthbars = new Image[6];
     //STATS1DATA
     public Image stats1portrait;
@@ -230,23 +226,12 @@ public class PokemonMenu : MonoBehaviour
 
         }
         UpdateScreen();
-        d.Deactivate();
-        d.cantscroll = true;
-        d.displaysimmediate = true;
-        StartCoroutine(d.text("Choose a Pokemon."));
+       Dialogue.instance.Deactivate();
+       Dialogue.instance.cantscroll = true;
+       Dialogue.instance.displaysimmediate = true;
+        StartCoroutine(Dialogue.instance.text("Choose a Pokemon."));
     }
 
-    // Update is called once per frame
-    public void StartBattle(int battleID, int battleType)
-    {
-        play.inBattle = true;
-        Player.disabled = true;
-        play.overrideRenable = true;
-        battlemenu.SetActive(true);
-        bm.battleoverlay.sprite = bm.blank;
-        bm.battleID = battleID;
-        bm.Initialize();
-    }
     public void UpdateScreen()
     {
         int index = 0;
@@ -263,7 +248,7 @@ public class PokemonMenu : MonoBehaviour
     }
     public void UpdateMainMenu()
     {
-
+        cursor.SetActive(true);
         for (int l = 0; l < 6; l++)
         {
             partyslots[l].SetActive(false);
@@ -285,7 +270,7 @@ public class PokemonMenu : MonoBehaviour
         UpdateMenus();
     }
     public void UpdateSwitch(){
-       
+
         cursor.SetPosition(96, 40 - 16 * selectedOption);
         UpdateMenus();
     }
@@ -389,9 +374,9 @@ public class PokemonMenu : MonoBehaviour
     {
         if (currentMenu == switchstats)
         {
-            cursor.SetActive(true);
 
-           
+
+
 
             if (Inputs.pressed("down"))
             {
@@ -457,7 +442,7 @@ public class PokemonMenu : MonoBehaviour
             if (currentMenu == mainwindow)
             {
 
-                d.Deactivate();
+               Dialogue.instance.Deactivate();
                 Inputs.Enable("start");
                 moon.currentmenu = moon.thismenu;
                 this.gameObject.SetActive(false);
@@ -465,8 +450,9 @@ public class PokemonMenu : MonoBehaviour
             }
             if(currentMenu == switchstats){
                 selectedOption = selectedMon;
-                UpdateMainMenu();
                 currentMenu = mainwindow;
+                UpdateMainMenu();
+
             }
         }
         if (Inputs.pressed("a"))
@@ -477,8 +463,9 @@ public class PokemonMenu : MonoBehaviour
                 {
                     selectedMon = selectedOption;
                     selectedOption = 0;
-                    UpdateSwitch();
                     currentMenu = switchstats;
+                    UpdateSwitch();
+
                 }
                 else
                 {
@@ -495,9 +482,10 @@ public class PokemonMenu : MonoBehaviour
 
                     if (selectedOption == 0)
                     {
-                        d.Deactivate();
-                        UpdateStats1();
+                       Dialogue.instance.Deactivate();
                         currentMenu = stats1;
+                        UpdateStats1();
+
 
                     }
                     if (selectedOption == 1)
@@ -505,15 +493,17 @@ public class PokemonMenu : MonoBehaviour
 
                         switching = true;
                         selectedOption = selectedMon;
-                        UpdateMainMenu();
                         currentMenu = mainwindow;
+                        UpdateMainMenu();
+
 
                     }
                     if (selectedOption == 2)
                     {
                         selectedOption = selectedMon;
-                        UpdateMainMenu();
                         currentMenu = mainwindow;
+                        UpdateMainMenu();
+
 
                     }
                     StartCoroutine(Wait());
@@ -524,8 +514,9 @@ public class PokemonMenu : MonoBehaviour
             {
                 if (donewaiting)
                 {
-                    UpdateStats2();
                     currentMenu = stats2;
+                    UpdateStats2();
+
 
                 }
                 StartCoroutine(Wait());
@@ -535,12 +526,13 @@ public class PokemonMenu : MonoBehaviour
 
                 if (donewaiting)
                 {
-                    d.Deactivate();
-                    d.displaysimmediate = true;
-                    StartCoroutine(d.text("Choose a Pokemon."));
+                   Dialogue.instance.Deactivate();
+                   Dialogue.instance.displaysimmediate = true;
+                    StartCoroutine(Dialogue.instance.text("Choose a Pokemon."));
                     selectedOption = selectedMon;
-                    UpdateMainMenu();
                     currentMenu = mainwindow;
+                    UpdateMainMenu();
+
 
                 }
                 StartCoroutine(Wait());
@@ -549,11 +541,11 @@ public class PokemonMenu : MonoBehaviour
 
 
         }
-        UpdateMenus();
+
     }
     void UseMove()
     {
-        
+
 
 
 

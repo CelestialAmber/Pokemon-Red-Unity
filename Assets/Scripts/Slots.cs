@@ -24,7 +24,6 @@ public class Slots : MonoBehaviour {
 	public bool canstopthereels;
 	public GameObject row1, row2, row3;
 	public bool rolledone, rolledtwo, rolledthree, canroll;
-	public Dialogue mylog;
 	private string above1, middle1, below1, above2, middle2, below2, above3, middle3, below3;
 	public Player play;
 	public int frames;
@@ -38,20 +37,20 @@ public class Slots : MonoBehaviour {
 	IEnumerator DecideBet(){
 		int RandomNumber;
 		int ModeNumber;
-		mylog.slots ();
-		while (!mylog.finishedThePrompt) {
+		Dialogue.instance.slots ();
+		while (!Dialogue.instance.finishedThePrompt) {
 			yield return new WaitForSeconds (0.1f);
-			if (mylog.finishedThePrompt) {
+			if (Dialogue.instance.finishedThePrompt) {
 				break;
 
 			}
 		}
 		if (Player.disabled) {
 
-			if (mylog.selectedOption == 0) {
+			if (Dialogue.instance.selectedOption == 0) {
 				if (GameData.coins < 3) {
-                    yield return StartCoroutine(mylog.text("Not enough"));
-                    yield return StartCoroutine(mylog.line("coins!"));
+                    yield return StartCoroutine(Dialogue.instance.text("Not enough"));
+                    yield return StartCoroutine(Dialogue.instance.line("coins!"));
 					StartCoroutine(DecideBet ());
 					yield break;
 
@@ -94,13 +93,13 @@ public class Slots : MonoBehaviour {
 				rolledthree = false;
 				canstopthereels = false;
 				canroll = true;
-                mylog.displaysimmediate = true;
-				StartCoroutine(mylog.text ("Start!"));
+                Dialogue.instance.displaysimmediate = true;
+				StartCoroutine(Dialogue.instance.text ("Start!"));
 			}
-			if (mylog.selectedOption == 1) {
+			if (Dialogue.instance.selectedOption == 1) {
 				if (GameData.coins < 2) {
-					yield return StartCoroutine(mylog.text ("Not enough"));
-					yield return StartCoroutine(mylog.line ("coins!"));
+					yield return StartCoroutine(Dialogue.instance.text ("Not enough"));
+					yield return StartCoroutine(Dialogue.instance.line ("coins!"));
 					StartCoroutine(DecideBet ());
 					yield break;
 
@@ -144,13 +143,13 @@ public class Slots : MonoBehaviour {
 				rolledthree = false;
 				canstopthereels = false;
 				canroll = true;
-                mylog.displaysimmediate = true;
-				StartCoroutine(mylog.text ("Start!"));
+                Dialogue.instance.displaysimmediate = true;
+				StartCoroutine(Dialogue.instance.text ("Start!"));
 			}
-			if (mylog.selectedOption == 2) {
+			if (Dialogue.instance.selectedOption == 2) {
 				if (GameData.coins < 1) {
-					yield return StartCoroutine(mylog.text ("Not enough"));
-					yield return StartCoroutine(mylog.line ("coins!"));
+					yield return StartCoroutine(Dialogue.instance.text ("Not enough"));
+					yield return StartCoroutine(Dialogue.instance.line ("coins!"));
 					StartCoroutine (DecideBet ());
 					yield break;
 
@@ -193,8 +192,8 @@ public class Slots : MonoBehaviour {
 				rolledthree = false;
 				canstopthereels = false;
 				canroll = true;
-                mylog.displaysimmediate = true;
-				StartCoroutine(mylog.text ("Start!"));
+                Dialogue.instance.displaysimmediate = true;
+				StartCoroutine(Dialogue.instance.text ("Start!"));
 			}
 		}
 
@@ -217,8 +216,8 @@ public class Slots : MonoBehaviour {
 		row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, -152, 0);
 		row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, -152, 0);
 		canroll = false;
-		yield return StartCoroutine(mylog.text ("Bet how many"));
-		yield return StartCoroutine(mylog.line ("coins?"));
+		yield return StartCoroutine(Dialogue.instance.text ("Bet how many"));
+		yield return StartCoroutine(Dialogue.instance.line ("coins?"));
 		StartCoroutine(DecideBet ());
 
 
@@ -232,7 +231,7 @@ public class Slots : MonoBehaviour {
 		canroll = false;
 
 
-		mylog.Deactivate ();
+		Dialogue.instance.Deactivate ();
 		play.WaitToInteract();
 		this.gameObject.SetActive (false);
 
@@ -380,8 +379,8 @@ public class Slots : MonoBehaviour {
                         whatwaslinedup = "ā";
                         break;
                 }
-				yield return StartCoroutine(mylog.text (whatwaslinedup + " lined up!"));
-				yield return StartCoroutine(mylog.line ("Scored " + payout + "!"));
+				yield return StartCoroutine(Dialogue.instance.text (whatwaslinedup + " lined up!"));
+				yield return StartCoroutine(Dialogue.instance.line ("Scored " + payout + "!"));
 
 				int payoutamount = payout;
 				for (int i = 0; i < payoutamount; i++) {
@@ -395,15 +394,15 @@ public class Slots : MonoBehaviour {
 
 				}
 			} else {
-				yield return StartCoroutine(mylog.text ("Not this time!",1));
+				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",1));
 			}
 			} else {
 				if (GameData.coins > 0) {
-				yield return StartCoroutine(mylog.text ("Not this time!",1));
+				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",1));
 				} else {
-				yield return StartCoroutine(mylog.text ("Darn! Ran out of"));
-				yield return StartCoroutine(mylog.line ("coins!"));
-				yield return StartCoroutine(mylog.done ());
+				yield return StartCoroutine(Dialogue.instance.text ("Darn! Ran out of"));
+				yield return StartCoroutine(Dialogue.instance.line ("coins!"));
+				yield return StartCoroutine(Dialogue.instance.done ());
              
 					Exit ();
 					yield break;
@@ -411,12 +410,12 @@ public class Slots : MonoBehaviour {
 
 			}
 			
-		yield return StartCoroutine(mylog.para ("One more go?"));
-        yield return StartCoroutine(mylog.prompt ());
-			if (mylog.selectedOption == 0) {
+		yield return StartCoroutine(Dialogue.instance.para ("One more go?"));
+        yield return StartCoroutine(Dialogue.instance.prompt ());
+			if (Dialogue.instance.selectedOption == 0) {
 				canroll = false;
-			yield return StartCoroutine(mylog.text ("Bet how many"));
-			yield return StartCoroutine(mylog.line ("coins?"));
+			yield return StartCoroutine(Dialogue.instance.text ("Bet how many"));
+			yield return StartCoroutine(Dialogue.instance.line ("coins?"));
 				StartCoroutine(DecideBet ());
 
 

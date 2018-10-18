@@ -1,12 +1,16 @@
-﻿Shader "Pokemon/Palette Effect"
+Shader "Pokemon/Palette Effect"
 {
 	Properties
 	{
 		 _MainTex ("Texture", 2D) = "white" {}
+		 //default colors that pokemon rb uses
         color1 ("Color 1", Color) = (1,1,1,1)
         color2 ("Color 2", Color) = (.564,.564,.564,1)
         color3 ("Color 3", Color) = (.25,.25,.25,1)
         color4 ("Color 4", Color) = (0,0,0,1)
+		//value determining the current screen flash level used. e.g. Wild Encounters
+		flashLevel ("Screen Flash", Range(-3,3)) = 0
+		useRockTunnelColors ("Use Rock Tunnel Colors", Int) = 0
 	}
 	SubShader
 	{
@@ -18,6 +22,8 @@
         Name "MainEffects"
 
         CGPROGRAM
+// Upgrade NOTE: excluded shader from DX11, OpenGL ES 2.0 because it uses unsized arrays
+#pragma exclude_renderers d3d11 gles
         #pragma vertex vert
             #pragma fragment frag
             // make fog work
@@ -41,6 +47,8 @@
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
             float4 color1, color2, color3, color4;
+			int flashLevel;
+			int useRockTunnelColors;
 			v2f vert (appdata v)
 			{
 				v2f o;
@@ -52,18 +60,26 @@
 
 			float4 frag (v2f i) : SV_Target
 			{
+
+//store colors in an array to make creating the flash effect easier
+				float4 colors[] = {color1,color2,color3,color4};
             float4 color = tex2D(_MainTex,i.uv);
                 if(!any(float4(1,1,1,1) - color)){
-                color = color1;
+                color = colors[0 + (flashLevel < 0 ? -flashLevel : 0)];
+				if(useRockTunnelColors) color = color3;
                 }
-                else if(color.r >= .564 && color.g >= .564 && color.b >= .564){
-                color = color2;
+				//make the value thresholds lower to account for possible deviation in color
+                else if(color.r >= .66 && color.g >= .66 && color.b >= .66){ //the color value on avg is 0.68
+                color = colors[1 + (flashLevel < 0 ? min(-flashLevel,2) : -min(flashLevel,1))];
+				if(useRockTunnelColors) color = color4;
                 }
-                else if(color.r >= .25 && color.g >= .25 && color.b >= .25){
-                color = color3;
+                else if(color.r >= .38 && color.g >= .38 && color.b >= .38){ //avg is 0.39
+                color = colors[2 + (flashLevel < 0 ? min(-flashLevel,1) : -min(flashLevel,2))];
+				if(useRockTunnelColors) color = color4;
                 }
                 else if(!any(float4(0,0,0,1) - color)){
-                color = color4;
+                color = colors[3 + (flashLevel < 0 ? min(-flashLevel,0) : -min(flashLevel,3))];
+				
                 }
                 return color;
 
