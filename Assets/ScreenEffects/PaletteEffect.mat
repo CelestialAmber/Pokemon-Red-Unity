@@ -93,7 +93,7 @@ Material:
     - scale: -2.23
     - scale2: 1.42
     - speed: 8
-    - useRockTunnelColors: 0
+    - useRockTunnelColors: 1
     - xfactor: 0.01
     - yfactor: 50
     - ystretch: 1

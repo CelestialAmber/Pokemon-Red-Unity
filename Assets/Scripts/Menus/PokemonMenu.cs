@@ -338,7 +338,7 @@ public class PokemonMenu : MonoBehaviour
         monname2text.text = party[selectedMon].name;
         exptext.text = party[selectedMon].experience.ToString();
         explefttoleveltext.text = (party[selectedMon].ExpToNextLevel() - party[selectedMon].experience).ToString();
-        nextleveltext.text = (party[selectedMon].level < 100 ? "È" + (party[selectedMon].level + 1).ToString() : 100.ToString());
+        nextleveltext.text = (party[selectedMon].level < 99 ? "È" + (party[selectedMon].level + 1).ToString() : 100.ToString());
         int id = PokemonData.MonToID(party[selectedMon].pokename);
         pokedexno2.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
         UpdateMenus();

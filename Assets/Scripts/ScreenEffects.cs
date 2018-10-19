@@ -40,7 +40,6 @@ public class ScreenEffects : MonoBehaviour {
     public VersionManager versionManager;
     [Range(-3,3)]
     public int flashLevel;
-    public bool useRockTunnelDarkEffect;
 	// Use this for initialization
 	void Start () {
         texture = GameDataManager.mainRender;
@@ -55,7 +54,6 @@ public class ScreenEffects : MonoBehaviour {
         paletteEffect.SetColor("color2", palettes[(int)usedPalette].bg2);
         paletteEffect.SetColor("color3", palettes[(int)usedPalette].bg3);
         paletteEffect.SetColor("color4", palettes[(int)usedPalette].bg4);
-        paletteEffect.SetInt("useRockTunnelColors",(useRockTunnelDarkEffect ? 1 : 0));
         paletteEffect.SetInt("flashLevel",flashLevel);
         Graphics.Blit(texture,outputScreen, paletteEffect,0);
         if (invert)

@@ -10,7 +10,6 @@ Shader "Pokemon/Palette Effect"
         color4 ("Color 4", Color) = (0,0,0,1)
 		//value determining the current screen flash level used. e.g. Wild Encounters
 		flashLevel ("Screen Flash", Range(-3,3)) = 0
-		useRockTunnelColors ("Use Rock Tunnel Colors", Int) = 0
 	}
 	SubShader
 	{
@@ -66,16 +65,13 @@ Shader "Pokemon/Palette Effect"
             float4 color = tex2D(_MainTex,i.uv);
                 if(!any(float4(1,1,1,1) - color)){
                 color = colors[0 + (flashLevel < 0 ? -flashLevel : 0)];
-				if(useRockTunnelColors) color = color3;
                 }
 				//make the value thresholds lower to account for possible deviation in color
                 else if(color.r >= .66 && color.g >= .66 && color.b >= .66){ //the color value on avg is 0.68
                 color = colors[1 + (flashLevel < 0 ? min(-flashLevel,2) : -min(flashLevel,1))];
-				if(useRockTunnelColors) color = color4;
                 }
                 else if(color.r >= .38 && color.g >= .38 && color.b >= .38){ //avg is 0.39
                 color = colors[2 + (flashLevel < 0 ? min(-flashLevel,1) : -min(flashLevel,2))];
-				if(useRockTunnelColors) color = color4;
                 }
                 else if(!any(float4(0,0,0,1) - color)){
                 color = colors[3 + (flashLevel < 0 ? min(-flashLevel,0) : -min(flashLevel,3))];

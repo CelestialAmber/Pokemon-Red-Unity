@@ -37,14 +37,8 @@ public class Slots : MonoBehaviour {
 	IEnumerator DecideBet(){
 		int RandomNumber;
 		int ModeNumber;
-		Dialogue.instance.slots ();
-		while (!Dialogue.instance.finishedThePrompt) {
-			yield return new WaitForSeconds (0.1f);
-			if (Dialogue.instance.finishedThePrompt) {
-				break;
+		yield return StartCoroutine(Dialogue.instance.slots ());
 
-			}
-		}
 		if (Player.disabled) {
 
 			if (Dialogue.instance.selectedOption == 0) {
@@ -242,12 +236,13 @@ public class Slots : MonoBehaviour {
 	void Update () {
 
 		frames++;
-		if (frames % 2 == 0) {
+		HandleInput ();
+		if (frames % 3 == 0) {
 			
 			Frame2Update ();
 			frames = 0;
 		}
-		HandleInput ();
+		
 	}
 	void Frame2Update(){
 		if (canroll) {
@@ -261,12 +256,7 @@ public class Slots : MonoBehaviour {
 				row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 8, 0);
 				row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 8, 0);
 				canstopthereels = true;
-				//	if (Inputs.pressed("a")) {
-				//		if((Mathf.Abs(row1.transform.localPosition.y) - 8) % 16 == 0){
-				//			rolledone = true;
-				//		}
-				//	}
-
+					
 
 
 			}
@@ -275,11 +265,7 @@ public class Slots : MonoBehaviour {
 				row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 8, 0);
 				row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 8, 0);
 
-				//	if (Inputs.pressed("a")) {
-				//		if((Mathf.Abs(row2.transform.localPosition.y) - 8) % 16 == 0){
-				//			rolledtwo = true;
-				//		}
-				//	}
+					
 
 
 			}
@@ -287,16 +273,10 @@ public class Slots : MonoBehaviour {
 
 				row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 8, 0);
 
-				//	if (Inputs.pressed("a")) {
-				//		if((Mathf.Abs(row3.transform.localPosition.y) - 8) % 16 == 0){
-				//
-				//		rolledthree = true;
-				//		CheckPositions ();
-				//		StartCoroutine (LinedUp ());
-				//		}
-				//	}
+					
 
 			}
+			CheckIfIllegalPosition();
 			CheckPositions ();
 		}
 	}
@@ -491,7 +471,7 @@ public class Slots : MonoBehaviour {
 			middle1 = "BAR";
 			below1 = "BIRD";
 		}
-		if (row1.transform.localPosition.y <= -136) {
+		if (row1.transform.localPosition.y == -136) {
 			above1 = "7";
 			middle1 = "CHERRY";
 			below1 = "BAR";
@@ -567,7 +547,7 @@ public class Slots : MonoBehaviour {
 			middle2 = "CHERRY";
 			below2 = "BIRD";
 		}
-		if (row2.transform.localPosition.y <= -136) {
+		if (row2.transform.localPosition.y == -136) {
 			above2 = "7";
 			middle2 = "MOUSE";
 			below2 = "CHERRY";
@@ -643,7 +623,7 @@ public class Slots : MonoBehaviour {
 			middle3 = "BIRD";
 			below3 = "MOUSE";
 		}
-		if (row3.transform.localPosition.y <= -136) {
+		if (row3.transform.localPosition.y == -136) {
 			above3 = "7";
 			middle3 = "BAR";
 			below3 = "BIRD";
@@ -678,14 +658,20 @@ public class Slots : MonoBehaviour {
 
 			if (rolledtwo && !rolledthree) {
 				if (Inputs.pressed("a")) {
-					if ((Mathf.Abs (row3.transform.localPosition.y) - 8) % 16 == 0) {
+					if ((Mathf.Abs (row3.transform.localPosition.y)+8) % 16 == 8) {
+							 row3.transform.Translate(0,-8,0);
+							 CheckIfIllegalPosition();
+					}
+					Debug.Log(row3.transform.localPosition.y);
+						 
+		
 						if (CurrentMode == "SUPER" || CurrentMode == "GOOD") {
 							CheckPositions ();
 							if (middle1 == middle2) {
 
 								if (middle3 != middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle3 == middle2) {
@@ -699,7 +685,7 @@ public class Slots : MonoBehaviour {
 
 								if (above3 != above2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 == above2) {
@@ -713,7 +699,7 @@ public class Slots : MonoBehaviour {
 
 								if (below3 != below2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 == below2) {
@@ -728,7 +714,7 @@ public class Slots : MonoBehaviour {
 
 								if (below3 != middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 == middle2) {
@@ -743,7 +729,7 @@ public class Slots : MonoBehaviour {
 
 								if (above3 != middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 == middle2) {
@@ -763,7 +749,7 @@ public class Slots : MonoBehaviour {
 								if (middle2 == "BAR" || middle2 == "7") {
 									if (middle3 == middle2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 											CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (middle3 != middle2) {
@@ -779,7 +765,7 @@ public class Slots : MonoBehaviour {
 									if (above3 == above2) {
 
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 											CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (above3 != above2) {
@@ -794,7 +780,7 @@ public class Slots : MonoBehaviour {
 								if (below2 == "BAR" || below2 == "7") {
 									if (below3 == below2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 											CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (below3 != below2) {
@@ -810,7 +796,7 @@ public class Slots : MonoBehaviour {
 								if (middle2 == "BAR" || middle2 == "7") {
 									if (below3 == middle2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 											CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (below3 != middle2) {
@@ -826,7 +812,7 @@ public class Slots : MonoBehaviour {
 								if (middle2 == "BAR" || middle2 == "7") {
 									if (above3 == middle2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 											CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (above3 != middle2) {
@@ -847,7 +833,7 @@ public class Slots : MonoBehaviour {
 
 								if (middle3 == middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle3 != middle2) {
@@ -862,7 +848,7 @@ public class Slots : MonoBehaviour {
 
 								if (below3 == middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 != middle2) {
@@ -877,7 +863,7 @@ public class Slots : MonoBehaviour {
 
 								if (above3 == middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 != middle2) {
@@ -892,7 +878,7 @@ public class Slots : MonoBehaviour {
 
 								if (above3 == above2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 != above2) {
@@ -906,7 +892,7 @@ public class Slots : MonoBehaviour {
 
 								if (below3 == below2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 != below2) {
@@ -923,22 +909,28 @@ public class Slots : MonoBehaviour {
 						rolledthree = true;
 						CheckPositions ();
 						StartCoroutine (LinedUp ());
-					}
+					
 				}
 
 			}
-			if (rolledone && !rolledtwo) {
+			else if (rolledone && !rolledtwo) {
 				bool FoundASuperMatch = false;
 				bool FoundAMatch = false;
 				if (Inputs.pressed("a")) {
-					if ((Mathf.Abs (row2.transform.localPosition.y) - 8) % 16 == 0) {
+						if ((Mathf.Abs (row2.transform.localPosition.y)+ 8) % 16 == 8) {
+					
+					  row2.transform.Translate(0,-8,0);
+					  CheckIfIllegalPosition();
+						}
+						
+	
 						if (CurrentMode == "SUPER") {
 							CheckPositions ();
 							if (middle1 == "BAR" || middle1 == "7") {
 						
 								if (middle2 != middle1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
+										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle2 == middle1) {
@@ -958,7 +950,7 @@ public class Slots : MonoBehaviour {
 
 								if (above2 != above1 && middle2 != above1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
+										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above2 == above1 || middle2 == above1) {
@@ -977,7 +969,7 @@ public class Slots : MonoBehaviour {
 
 								if (below2 != below1 && middle2 != below1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
+										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below2 == below1 || middle2 == below1) {
@@ -1000,7 +992,7 @@ public class Slots : MonoBehaviour {
 
 								if (middle2 != middle1) {
 									for (int i = 0; i < 4; i++) {
-									row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
+									row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle2 == middle1) {
@@ -1020,7 +1012,7 @@ public class Slots : MonoBehaviour {
 
 								if (above2 != above1 && middle2 != above1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
+										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above2 == above1 || middle2 == above1) {
@@ -1039,7 +1031,7 @@ public class Slots : MonoBehaviour {
 
 								if (below2 != below1 && middle2 != below1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
+										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below2 == below1 || middle2 == below1) {
@@ -1060,20 +1052,24 @@ public class Slots : MonoBehaviour {
 
 
 						rolledtwo = true;
-					}
+					
 				}
 
 
 			}
-			if (!rolledone) {
+			else if (!rolledone) {
 				if (Inputs.pressed("a")) {
-					if ((Mathf.Abs (row1.transform.localPosition.y) - 8) % 16 == 0) {
+						if ((Mathf.Abs (row1.transform.localPosition.y) + 8) % 16 == 8) {
+					 row1.transform.Translate(0,-8,0);
+					  CheckIfIllegalPosition();
+						}
+						
 						if (CurrentMode == "SUPER") {
 							CheckPositions ();
-							//oversight where it spins regardless in mode super. lel
+							//oversight where it spins regardless in mode super.
 							if (above1 != "7" && middle1 != "7" && below1 != "7") { //DISABLE FOR OVERSIGHT
 								for (int i = 0; i < 4; i++) {
-									row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, row1.transform.localPosition.y - 16);
+									row1.transform.localPosition = new Vector2 (row1.transform.localPosition.x, row1.transform.localPosition.y - 16);
 									CheckIfIllegalPosition ();
 									CheckPositions ();
 									if (above1 == "7" || middle1 == "7" || below1 == "7") {
@@ -1086,7 +1082,7 @@ public class Slots : MonoBehaviour {
 							CheckPositions ();
 							if (middle1 == "CHERRY") {
 								for (int i = 0; i < 4; i++) {
-									row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, row1.transform.localPosition.y - 16);
+									row1.transform.localPosition = new Vector2 (row1.transform.localPosition.x, row1.transform.localPosition.y - 16);
 									CheckIfIllegalPosition ();
 									CheckPositions ();
 									if (middle1 != "CHERRY") {
@@ -1097,7 +1093,7 @@ public class Slots : MonoBehaviour {
 							}
 						}
 						rolledone = true;
-					}
+					
 				}
 
 

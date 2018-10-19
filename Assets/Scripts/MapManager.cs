@@ -137,7 +137,12 @@ public class MapManager : MonoBehaviour {
                     if (loadedtile.isAnimated)
                     {
                         
-                        int frame = Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 1.4f));
+                        int frame;
+
+                     
+                        if(loadedtile.tag == "Water") frame =  Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 2.8f));
+                        else   frame = Mathf.FloorToInt(loadedtile.frames * (tileanimtimer % 1.4f / 1.4f));
+                        
                         Vector2[] copyUvs = loadedtile.mainUvs[frame];
                         copyUvs.CopyTo(mainUv, 4 * (y * (GameData.screenTileWidth + 2) + x));
                     }
@@ -174,7 +179,11 @@ public class MapManager : MonoBehaviour {
                     //is the tile an animated tile?
                     if (loadedtile.isAnimated)
                     {
-                       int frame =  Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 1.4f));
+                        int frame;
+
+                     
+                        if(loadedtile.tag == "Water") frame =  Mathf.FloorToInt(loadedtile.frames * (tileanimtimer / 2.8f));
+                        else   frame = Mathf.FloorToInt(loadedtile.frames * (tileanimtimer % 1.4f / 1.4f));
                         for (int i = 0; i < 4; i++){
                             mainUvs.Add(loadedtile.mainUvs[frame][i]);
                             grassUvs.Add(transparentUvs[i]);
@@ -269,7 +278,7 @@ public class MapManager : MonoBehaviour {
             grassBGMesh.mesh.uv = grassBGUv;
             //Update the animated tile timer.
             tileanimtimer += Time.deltaTime;
-            if (tileanimtimer >= 1.4f) tileanimtimer = 0;
+            if (tileanimtimer >= 2.8f) tileanimtimer = 0;
 
 
             //Wait until the end of the frame to sync it with other updates;

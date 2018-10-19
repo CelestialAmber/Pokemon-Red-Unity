@@ -313,6 +313,7 @@ public class Bag : MonoBehaviour  {
 				
 			
 				Get.menu.currentmenu = Get.menu.thismenu;
+				Inputs.Enable("start");
 				this.gameObject.SetActive (false);
 
 			}

@@ -5,14 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - WallObject
-  - WallObjectInteract
-  - Interact
-  - WallObjectPlayer
   - LedgeDown
   - LedgeLeft
   - LedgeRight
   - TallGrass
   - Water
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -22,8 +20,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - MapEditor
+  - ConsoleScene
   - 
   - 
   - 

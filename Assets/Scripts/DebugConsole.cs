@@ -6,6 +6,7 @@ public class DebugConsole : MonoBehaviour
 {
     public GameObject template, container, window;
     public InputField field;
+    public ViewBio bio;
     public static bool isActive;
     // Update is called once per frame
     void Update()
@@ -101,13 +102,23 @@ public class DebugConsole : MonoBehaviour
         }
         else if(input.Contains("/set playerDisabled ")){
             token = "/set playerDisabled ";
-            input.Replace(token, "");
+           input = input.Replace(token, "");
             switch(input){
                 case "true": Player.disabled = true; Message("Player is set as disabled."); break;
                 case "false": Player.disabled = false; Message("Player is set as not disabled."); break;
                 default: Message("Invalid command."); break;
             }
 
+        }
+        else if(input.Contains("/bio ")){
+            token = "/bio ";
+           input =  input.Replace(token, "");
+            int var = 0;
+            Debug.Log(input);
+                if (int.TryParse(input, out var))
+                {
+            StartCoroutine(bio.DisplayABio(var));
+                }
         }
         else Message("Invalid command.");
 

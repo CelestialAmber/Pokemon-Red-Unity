@@ -368,7 +368,7 @@ public IEnumerator done(){
             }
         }
 	}
-	public void slots(){
+	public IEnumerator slots(){
 		selectedOption = 0;
 		taskType = 7;
         cursor.SetActive(true);
@@ -376,7 +376,15 @@ public IEnumerator done(){
 		finishedCurrentTask = false;
 		finishedWithTextOverall = false;
 		finishedThePrompt = false;
-
+		while (!finishedThePrompt)
+        {
+            yield return new WaitForSeconds(0.1f);
+            if (finishedThePrompt)
+            {
+                break;
+            }
+        }
+cursor.SetActive(false);
 
 	}
 	public void Deactivate(){
