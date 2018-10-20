@@ -20,15 +20,17 @@ Overworld: http://vgmaps.com/Atlas/GB-GBC/Pokemon-Red,Green(J)&BlueVersions-Kant
 Interior: https://github.com/huderlem/RBMap
 
 Music-
-
-https://www.nayuki.io/page/transcription-of-pokemon-game-boy-music
+https://www.zophar.net/music/gameboy-gbs/pokemon-red
 
 Joycon Library:
 https://github.com/Looking-Glass/JoyconLib
 
-Special Thanks:
+Sounds- 
 
-Thanks to https://github.com/dannye for helping me extract alot of sounds from the game!
+Thanks to https://github.com/dannye for helping me extract alot of sound effects from the game
+
+Move sounds by CELEBI: http://cutstuff.net/forum/index.php?topic=6528.0)
+
 
 # Feature checklist
 
