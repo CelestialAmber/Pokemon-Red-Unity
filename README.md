@@ -26,6 +26,10 @@ https://www.nayuki.io/page/transcription-of-pokemon-game-boy-music
 Joycon Library:
 https://github.com/Looking-Glass/JoyconLib
 
+Special Thanks:
+
+Thanks to https://github.com/dannye for helping me extract alot of sounds from the game!
+
 # Feature checklist
 
 --------------------------------------------------------
