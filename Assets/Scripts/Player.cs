@@ -41,6 +41,10 @@ public class Player : MonoBehaviour
     public int grassCounter;
 
 
+	public AudioSource audioSource;
+	public AudioClip collisionClip, ledgeJumpClip, openStartMenuClip;
+	public float collisionSoundTimer;
+
     //1 up, 2down, 3 left, 4 right
     public bool cannotMoveLeft, cannotMoveRight, cannotMoveUp, cannotMoveDown;
 
@@ -140,6 +144,11 @@ public class Player : MonoBehaviour
             }
             if (!ledgejumping)
             {
+                if(Inputs.held("up")||Inputs.held("down")||Inputs.held("left")||Inputs.held("right")){
+                if(!isMoving){
+                collisionSoundTimer += 0.3f;
+                }
+                }
 
                 if (isMoving)
                 {
@@ -288,6 +297,15 @@ public class Player : MonoBehaviour
                 if (transform.position == pos)
                     playerAnim.SetFloat("movedir", direction);
 
+
+                    collisionSoundTimer += Time.deltaTime;
+                    if(collisionSoundTimer >= 0.3f && (isMoving && facingWall()) && !ledgejumping){
+                    audioSource.PlayOneShot(collisionClip);
+                    collisionSoundTimer = 0;
+                    }
+                if(!isMoving) collisionSoundTimer = 0;
+
+
             }
 
 
@@ -309,8 +327,21 @@ public class Player : MonoBehaviour
         manuallyWalking = false;
             }
         }
+
+ 
+
+
+
+
+
         yield return 0;
+
+
     }
+   
+
+public bool facingWall() => (direction == 1 && cannotMoveUp) || (direction == 2 && cannotMoveDown)  || (direction == 3 && cannotMoveLeft) || (direction == 4 && cannotMoveRight);
+
     public IEnumerator MovePlayerOneTile(int dir)
     {
 if(!manuallyWalking){
@@ -366,6 +397,7 @@ yield return 0;
     }
     IEnumerator LedgeJump()
     {
+        audioSource.PlayOneShot (ledgeJumpClip);
         bool reachedMiddle = false;
         playerAnim.SetBool("ledgejumping", ledgejumping);
         pos += direction == 2 ? new Vector3(0, -2, 0) : direction == 3 ? new Vector3(-2, 0, 0) : new Vector3(2, 0, 0);
@@ -433,9 +465,11 @@ yield return 0;
 			disabled = true;
 		}
 
+       
 		startmenu.SetActive (startmenuup);
 		if (!disabled && !amenuactive &&!startmenuup) {
             if (Inputs.pressed("start") && !isMoving) {
+                audioSource.PlayOneShot(openStartMenuClip,0.5f);
 				startmenuup = true;
 				moon.Initialize ();
 			}

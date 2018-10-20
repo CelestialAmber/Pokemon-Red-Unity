@@ -35,7 +35,6 @@ public class PokeMart : MonoBehaviour {
     public UnityEvent onBuyItem;
 	public bool withdrawing;
 
-
 	public void Init() {
 
      UpdateBuyScreen();
@@ -271,7 +270,7 @@ public class PokeMart : MonoBehaviour {
                         Inputs.Enable("start");
                         cursor.SetActive(false);
 						this.gameObject.SetActive (false);
-
+return;
 
                     
 					}
