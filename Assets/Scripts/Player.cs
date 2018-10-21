@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
     public int grassCounter;
 
 
-	public AudioSource audioSource;
+	
 	public AudioClip collisionClip, ledgeJumpClip, openStartMenuClip;
 	public float collisionSoundTimer;
 
@@ -299,8 +299,8 @@ public class Player : MonoBehaviour
 
 
                     collisionSoundTimer += Time.deltaTime;
-                    if(collisionSoundTimer >= 0.3f && (isMoving && facingWall()) && !ledgejumping){
-                    audioSource.PlayOneShot(collisionClip);
+                    if(collisionSoundTimer >= 0.3f && (isMoving && facingWall()) && !ledgejumping && holdFrames > 2){
+                   SoundManager.instance.sfx.PlayOneShot(collisionClip);
                     collisionSoundTimer = 0;
                     }
                 if(!isMoving) collisionSoundTimer = 0;
@@ -397,7 +397,7 @@ yield return 0;
     }
     IEnumerator LedgeJump()
     {
-        audioSource.PlayOneShot (ledgeJumpClip);
+        SoundManager.instance.sfx.PlayOneShot (ledgeJumpClip);
         bool reachedMiddle = false;
         playerAnim.SetBool("ledgejumping", ledgejumping);
         pos += direction == 2 ? new Vector3(0, -2, 0) : direction == 3 ? new Vector3(-2, 0, 0) : new Vector3(2, 0, 0);
@@ -469,7 +469,7 @@ yield return 0;
 		startmenu.SetActive (startmenuup);
 		if (!disabled && !amenuactive &&!startmenuup) {
             if (Inputs.pressed("start") && !isMoving) {
-                audioSource.PlayOneShot(openStartMenuClip,0.5f);
+                SoundManager.instance.sfx.PlayOneShot(openStartMenuClip,0.5f);
 				startmenuup = true;
 				moon.Initialize ();
 			}

@@ -30,7 +30,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: CREDITSROLL
-  m_Speed: 1.07
+  m_Speed: 1.12
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
