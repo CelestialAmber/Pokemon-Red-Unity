@@ -16,17 +16,22 @@ public class GameDataManager : MonoBehaviour {
     public RectTransform renderRect;
     public float ms;
     public bool inGame;
-    JoyconManager joyconManager;
     private void Awake(){
         Instance = this;
 
  
-        foreach(GameObject scene in gameScenes){
+    
+        Inputs.Init();
+        Get.Init();
+        GameData.Init();
+        GameData.money = 3000;
+        GameData.coins = 300;
+        GameData.screenTileHeight = 9;
+         foreach(GameObject scene in gameScenes){
             scene.SetActive(false);
         }
-        joyconManager = JoyconManager.Instance;
-        if(joyconManager.j.Count == 2){
-            Debug.Log("Both joycons were detected, setting scene to the Nintendo Switch scene");
+        if(Inputs.joyconConnected){
+            Debug.Log("A Joy-Con was detected, setting scene to the Nintendo Switch scene");
             currentScene = GameScene.NintendoSwitch;
         }
         switch(currentScene){
@@ -38,12 +43,6 @@ public class GameDataManager : MonoBehaviour {
                 gameScenes[0].SetActive(true);
                 break;    
         }
-        Inputs.Init();
-        Get.Init();
-        GameData.Init();
-        GameData.money = 3000;
-        GameData.coins = 300;
-        GameData.screenTileHeight = 9;
         if (widescreen)
         {
             GameData.screenTileWidth = 16;

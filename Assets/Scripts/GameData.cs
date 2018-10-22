@@ -64,20 +64,18 @@ public class Get
 public class Inputs
 {
     public static void Init(){
-        if (JoyconManager.Instance != null && JoyconManager.Instance.j.Count == 2)
-        {
-            int leftIndex = JoyconManager.Instance.j[0].isLeft ? 0 : 1;
-            leftJoycon = JoyconManager.Instance.j[leftIndex];
-            rightJoycon = JoyconManager.Instance.j[leftIndex ^ 1];
-            joyconsConnected = true;
-        }
-        else joyconsConnected = false;
 
+        string[] controllerInfo = Input.GetJoystickNames();
+        joyconConnected = false;
+        foreach(string s in controllerInfo){
+        if (s.Contains("Joy-Con")) //if one of the connected controllers is a Joy-Con, then set the Joy-Con as being connected
+        {
+            joyconConnected = true;
+        }
+        }
     }
    
-    public static Joycon leftJoycon;
-    public static Joycon rightJoycon;
-    public static bool joyconsConnected;
+    public static bool joyconConnected;
     public static bool dialogueCheck;
     public static void Disable(string button){
         buttonDisabled[keyindices[button]] = true;
@@ -115,18 +113,11 @@ public class Inputs
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;
             if (Input.GetKeyDown(Inputs.inputs[index])) return true;
-        else if(joyconsConnected){
-            switch(index){
-                case 0: return leftJoycon.GetButtonDown(Joycon.Button.DPAD_UP);
-                case 1: return leftJoycon.GetButtonDown(Joycon.Button.DPAD_DOWN);
-                case 2: return leftJoycon.GetButtonDown(Joycon.Button.DPAD_LEFT);
-                case 3: return leftJoycon.GetButtonDown(Joycon.Button.DPAD_RIGHT);
-                case 4: return rightJoycon.GetButtonDown(Joycon.Button.DPAD_DOWN);
-                case 5: return rightJoycon.GetButtonDown(Joycon.Button.DPAD_RIGHT);
-                case 6: return rightJoycon.GetButtonDown(Joycon.Button.PLUS);
-                case 7: return leftJoycon.GetButtonDown(Joycon.Button.MINUS);
-                default: return false;
-            }
+        else if(joyconConnected){
+
+             return false;
+            
+            
         }
         else return false;
 
@@ -139,20 +130,11 @@ public class Inputs
         if (index == 6 && dialogueCheck) return false;
         if (Input.GetKey(Inputs.inputs[index])) return true;
 
-        else if (joyconsConnected)
+        else if (joyconConnected)
         {
-            switch (index)
-            {
-                case 0: return leftJoycon.GetButton(Joycon.Button.DPAD_UP);
-                case 1: return leftJoycon.GetButton(Joycon.Button.DPAD_DOWN);
-                case 2: return leftJoycon.GetButton(Joycon.Button.DPAD_LEFT);
-                case 3: return leftJoycon.GetButton(Joycon.Button.DPAD_RIGHT);
-                case 4: return rightJoycon.GetButton(Joycon.Button.DPAD_DOWN);
-                case 5: return rightJoycon.GetButton(Joycon.Button.DPAD_RIGHT);
-                case 6: return rightJoycon.GetButton(Joycon.Button.PLUS);
-                case 7: return leftJoycon.GetButton(Joycon.Button.MINUS);
-                default: return false;
-            }
+           return false;
+            
+ 
         }
         else return false;
 
@@ -164,20 +146,11 @@ public class Inputs
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;
         if (Input.GetKeyUp(Inputs.inputs[index])) return true;
-        else if (joyconsConnected)
+        else if (joyconConnected)
         {
-            switch (index)
-            {
-                case 0: return leftJoycon.GetButtonUp(Joycon.Button.DPAD_UP);
-                case 1: return leftJoycon.GetButtonUp(Joycon.Button.DPAD_DOWN);
-                case 2: return leftJoycon.GetButtonUp(Joycon.Button.DPAD_LEFT);
-                case 3: return leftJoycon.GetButtonUp(Joycon.Button.DPAD_RIGHT);
-                case 4: return rightJoycon.GetButtonUp(Joycon.Button.DPAD_DOWN);
-                case 5: return rightJoycon.GetButtonUp(Joycon.Button.DPAD_RIGHT);
-                case 6: return rightJoycon.GetButtonUp(Joycon.Button.PLUS);
-                case 7: return leftJoycon.GetButtonUp(Joycon.Button.MINUS);
-                default: return false;
-            }
+            return false;
+            
+            
         }
         else return false;
 
