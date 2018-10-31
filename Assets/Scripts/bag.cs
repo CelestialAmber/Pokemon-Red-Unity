@@ -21,7 +21,7 @@ public class Bag : MonoBehaviour  {
 	public int amountToTask;
 	public int maximumItem;
 	public CustomText amountText;
-	public bool donewaiting;
+
 	public GameObject last;
 	public bool alreadyInBag;
 	public bool alreadydidtext;
@@ -210,8 +210,8 @@ public class Bag : MonoBehaviour  {
 			
 				if (currentMenu == itemwindow) {
                    
-					if (donewaiting) {
-                        StartCoroutine(Wait()); 
+					
+                        
                         if (currentBagPosition == id.items.Count) {
 
 							Get.menu.selectedOption = 0;
@@ -231,14 +231,14 @@ public class Bag : MonoBehaviour  {
 
 						}
 						
-					}
+					
 					
 				}
 
-				if (currentMenu == usetossmenu) {
+				else if (currentMenu == usetossmenu) {
                     
-					if (donewaiting) {
-                        StartCoroutine(Wait());
+				
+                   
 						if (selectedOption == 0) {
                             if (id.items.Count > 0) {
 								ItemMode1 ();
@@ -260,13 +260,13 @@ public class Bag : MonoBehaviour  {
 
 						}
 
-					}
+					
 					
 
 
 				}
-				if (currentMenu == quantitymenu) {
-					if (donewaiting) {
+				else if (currentMenu == quantitymenu) {
+					
 						
 						if (ItemMode == 1) {
 
@@ -285,6 +285,7 @@ public class Bag : MonoBehaviour  {
                                     yield return StartCoroutine(Dialogue.instance.text("Threw away " + id.items[currentBagPosition].name + "."));
                                     yield return StartCoroutine(Dialogue.instance.done());
                                     StartCoroutine(TossItem());
+									
 
                                 }else{
                                     Dialogue.instance.Deactivate();
@@ -303,8 +304,8 @@ public class Bag : MonoBehaviour  {
 
 
 					}
-					StartCoroutine (Wait ());
-				}
+					
+				
 
 			}
 		}
@@ -317,11 +318,11 @@ public class Bag : MonoBehaviour  {
 				this.gameObject.SetActive (false);
 
 			}
-			if (currentMenu == usetossmenu) {
+			else if (currentMenu == usetossmenu) {
 				currentMenu = itemwindow;
 				UpdateBagScreen();
 			}
-			if (currentMenu == quantitymenu) {
+			else if (currentMenu == quantitymenu) {
 							
 				if (ItemMode == 2) {
 					currentBagPosition = 0;
@@ -369,19 +370,15 @@ public class Bag : MonoBehaviour  {
 	
 		 
 		Dialogue.instance.Deactivate ();
-		Dialogue.instance.cantscroll = false;
 		Dialogue.instance.finishedCurrentTask = true;
 		RemoveItem (amountToTask);
+		cursor.SetActive (true);
         UpdateBagScreen();
 		currentMenu = itemwindow;
 		ItemMode = 0;
         yield return 0;
 	}
-	public IEnumerator Wait(){
-		donewaiting = false;
-		yield return new WaitForSeconds (0.1f);
-		donewaiting = true;
-	}
+	
 
 
 	public void RemoveItem(int amount){
@@ -402,7 +399,7 @@ public class Bag : MonoBehaviour  {
 		Dialogue.instance.Deactivate();
 		yield return StartCoroutine(Dialogue.instance.text ("That's too important to toss!"));
 		yield return StartCoroutine(Dialogue.instance.done ());
-
+UpdateBagScreen();
 	currentMenu = itemwindow;
 }
 }

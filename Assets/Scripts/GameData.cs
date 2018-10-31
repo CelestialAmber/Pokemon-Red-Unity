@@ -61,6 +61,8 @@ public class Get
     public static Items items;
 
 }
+
+
 public class Inputs
 {
     public static void Init(){
@@ -80,6 +82,7 @@ public class Inputs
     public static void Disable(string button){
         buttonDisabled[keyindices[button]] = true;
     }
+    
     public static void Enable(string button)
     {
         buttonDisabled[keyindices[button]] = false;
@@ -112,13 +115,8 @@ public class Inputs
         int index = Inputs.keyindices[button];
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;
-            if (Input.GetKeyDown(Inputs.inputs[index])) return true;
-        else if(joyconConnected){
+        if (Input.GetKeyDown(Inputs.inputs[index])) return true;
 
-             return false;
-            
-            
-        }
         else return false;
 
     }
@@ -130,12 +128,6 @@ public class Inputs
         if (index == 6 && dialogueCheck) return false;
         if (Input.GetKey(Inputs.inputs[index])) return true;
 
-        else if (joyconConnected)
-        {
-           return false;
-            
- 
-        }
         else return false;
 
     }
@@ -146,12 +138,7 @@ public class Inputs
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;
         if (Input.GetKeyUp(Inputs.inputs[index])) return true;
-        else if (joyconConnected)
-        {
-            return false;
-            
-            
-        }
+        
         else return false;
 
     }
@@ -159,6 +146,8 @@ public class Inputs
 
 //Class containing all the core data of the game.
 public class GameData  {
+    public static List<string> fieldMoves = new List<string>(new string[]{"Teleport","Fly","Cut","Surf","Dig","Strength","Flash","Softboiled"});
+     public static List<Pokemon> party = new List<Pokemon>();
     public static Sprite[] frontMonSprites, backMonSprites;
     public static bool isPaused;
     public static void Init()

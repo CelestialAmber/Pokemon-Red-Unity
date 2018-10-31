@@ -14,13 +14,12 @@ public class MainMenu : MonoBehaviour {
     public Get get = new Get();
     private Bag bag;
     private Pokedex pokedex;
-	public bool donewaiting;
 	public PokemonMenu pk;
     public CustomText playername;
     public int slotNumber;
+	public bool disableB;
 	// Use this for initialization
 	public void Initialize(){
-		donewaiting = true;
 		currentmenu = thismenu;
 	}
     public static MainMenu instance;
@@ -35,15 +34,8 @@ public class MainMenu : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (Inputs.released("a")) {
-
-			donewaiting = true;
-		}
-        if (Inputs.released("b") && !donewaiting)
-        {
-
-            donewaiting = true;
-        }
+		if(disableB && Inputs.released("b")) disableB = false;
+       
 		if (currentmenu == null) {
 			cursor.SetActive (false);
 		} else if(currentmenu == thismenu){
@@ -87,27 +79,25 @@ public class MainMenu : MonoBehaviour {
 
 
 		}
+		
 		if (Inputs.pressed("a")) {
-			if (currentmenu == badgesmenu && donewaiting) {
+		
+		
+			if (currentmenu == badgesmenu) {
 				currentmenu = thismenu;
                 Inputs.Enable("start");
 				badgesmenu.SetActive (false);
-				donewaiting = false;
+				return;
 
 			}
-
-		}
-		if (Inputs.pressed("a")) {
-			if (donewaiting) {
-
-				if (currentmenu == thismenu) {
+			else if (currentmenu == thismenu) {
 					if (selectedOption == 0) {
                         if(currentmenu == thismenu){
                             currentmenu = pokedexmenu;
                             pokedexmenu.SetActive(true);
                             Inputs.Disable("start");
                             pokedex.Init();
-                            donewaiting = false;
+                           
                         }
 					}
 					if (selectedOption == 1) {
@@ -119,7 +109,7 @@ public class MainMenu : MonoBehaviour {
                             pokemonmenu.SetActive(true);
 							pk.Initialize ();
 
-							donewaiting = false;
+							
 						}
 					}
 					if (selectedOption == 2) {
@@ -133,8 +123,8 @@ public class MainMenu : MonoBehaviour {
                             cursor.SetActive(true);
 							Bagmenu.SetActive (true);
                             Inputs.Disable("start");
-                            StartCoroutine(Bagmenu.GetComponent<Bag>().Wait());
-							donewaiting = false;
+                        
+							
 
 						}
 					}
@@ -144,7 +134,7 @@ public class MainMenu : MonoBehaviour {
                     Inputs.Disable("start");
                     badgesmenu.GetComponent<Badges>().Init();
 					badgesmenu.SetActive (true);
-					donewaiting = false;
+					
 				}
 				if (selectedOption == 4) {
 
@@ -155,7 +145,7 @@ public class MainMenu : MonoBehaviour {
 						optionsmenu.SetActive (true);
                         Inputs.Disable("start");
 						currentmenu = optionsmenu;
-						donewaiting = false;
+						
 
 
 					}
@@ -165,13 +155,13 @@ public class MainMenu : MonoBehaviour {
 						cursor.SetActive (false);
 						currentmenu = null;
 						play.startmenuup = false;
-						donewaiting = false;
+					
 
 
 					}
 				}
 
-			}
+			
 
 
 				if (currentmenu == optionsmenu) {
@@ -179,7 +169,7 @@ public class MainMenu : MonoBehaviour {
                     Inputs.Enable("start");
 						optionsmenu.SetActive (false);
 						currentmenu = thismenu;
-					donewaiting = false;
+					
 
 					}
 
@@ -187,11 +177,10 @@ public class MainMenu : MonoBehaviour {
 
 
 
-			donewaiting = false;
+			
 		}
-		if (Inputs.pressed("b")) {
-			if (currentmenu == thismenu && donewaiting) {
-                Debug.Log("x press");
+		if (Inputs.pressed("b") && !disableB) {
+			if (currentmenu == thismenu) {
 				cursor.SetActive (false);
 				currentmenu = null;
 				play.startmenuup = false;

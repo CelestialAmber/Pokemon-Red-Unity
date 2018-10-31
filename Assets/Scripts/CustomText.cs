@@ -69,19 +69,19 @@ public class CustomText : MonoBehaviour
     {
         foreach (GameObject line in lines)
         {
-#if UNITY_EDITOR
+            if(!Application.isPlaying)
             DestroyImmediate(line);
-#else
+            else
             Destroy(line);
-#endif 
+
         }
         foreach (Transform child in transform)
         {
-#if UNITY_EDITOR
+             if(!Application.isPlaying)
             DestroyImmediate(child.gameObject);
-#else
+            else
             Destroy(child.gameObject);
-#endif 
+
 
         }
         lines.Clear();

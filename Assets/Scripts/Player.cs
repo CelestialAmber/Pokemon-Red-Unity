@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     public int walkSurfBikeState;
     public int direction;
     public GameObject top, bottom;
-    public TextDatabase IDB;
+    public TextDatabase textData;
     public bool canInteractAgain;
     public bool PCactive;
     public static bool disabled = true;
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public bool isMoving;
     public bool ledgejumping;
     public GridTile facedtile;
-    public int grassCounter;
+    public int numberOfNoRandomBattleStepsLeft;
 
 
 	
@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+       GameData.party.Add(new Pokemon("Pikachu",50));
         emotionbubble.enabled = false;
         GameData.trainerID = Random.Range(0, 65536);
         startmenuup = false;
@@ -112,6 +113,7 @@ public class Player : MonoBehaviour
 
         if (Dialogue.instance.finishedWithTextOverall && !disabled && !startmenuup && !shopup && !inBattle && !manuallyWalking)
         {
+             
 
 
 
@@ -142,10 +144,12 @@ public class Player : MonoBehaviour
 
 
             }
+          
             if (!ledgejumping)
             {
+                 
                 if(Inputs.held("up")||Inputs.held("down")||Inputs.held("left")||Inputs.held("right")){
-                if(!isMoving){
+                if(!holdingDirection){
                 collisionSoundTimer += 0.3f;
                 }
                 }
@@ -175,9 +179,11 @@ public class Player : MonoBehaviour
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
-                        //onLoadMap.Invoke();
-                        if(!cannotMoveUp) pos += (Vector3.up);
+                        
+                        if(!cannotMoveUp){ 
+                        pos += (Vector3.up);
                         isMoving = true;
+                        }
                     }
 
                 }
@@ -197,9 +203,11 @@ public class Player : MonoBehaviour
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
-                        //onLoadMap.Invoke();
-                        if(!cannotMoveRight) pos += (Vector3.right);
+                        
+                        if(!cannotMoveRight){
+                             pos += (Vector3.right);
                         isMoving = true;
+                    }
                     }
 
                 }
@@ -221,9 +229,11 @@ public class Player : MonoBehaviour
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
-                        //onLoadMap.Invoke();
-                        if(!cannotMoveDown) pos += (Vector3.down);
+                        
+                        if(!cannotMoveDown){ 
+                            pos += (Vector3.down);
                         isMoving = true;
+                        } 
                     }
                 }
                 else if (Inputs.held("left"))
@@ -242,9 +252,11 @@ public class Player : MonoBehaviour
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
-                        //onLoadMap.Invoke();
-                        if(!cannotMoveLeft) pos += (Vector3.left);
+                       
+                        if(!cannotMoveLeft){ 
+                            pos += (Vector3.left);
                         isMoving = true;
+                        }
                     }
                 }
                 else if (transform.position == pos)
@@ -253,7 +265,7 @@ public class Player : MonoBehaviour
                 }
                 else holdFrames = 0;
                 transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
-
+                if(facingWall()) isMoving = false;
                 if (transform.position == pos)
                 {
 
@@ -267,43 +279,58 @@ public class Player : MonoBehaviour
                             {
                                 onHitWarp.Invoke();
                             }
-                            if (currentTile.hasGrass) grassCounter++;
+                            if(numberOfNoRandomBattleStepsLeft > 0) numberOfNoRandomBattleStepsLeft--;
+                            if (currentTile.hasGrass || currentTile.isWater){ 
+                                
+                                if(numberOfNoRandomBattleStepsLeft == 0) {
+                                int rand = Random.Range(0,256);
+                                if(rand < PokemonData.encounters[0].encounterChance){
+                                rand = Random.Range(0,256);
+                                Debug.Log("Wild encounter triggered. Choosing the encounter slot.");
+                                int chosenIndex = (
+                                rand <= 50 ? 0 : //51/256 = 19.9% chance of slot 0
+                                rand <= 101 ? 1 : //51/256 = 19.9% chance of slot 1
+                                rand <= 140 ? 2 : //39/256 = 15.2% chance of slot 2
+                                rand <= 165 ? 3 : //25/256 =  9.8% chance of slot 3
+                                rand <= 190 ? 4 : //25/256 =  9.8% chance of slot 4
+                                rand <= 215 ? 5 : //25/256 =  9.8% chance of slot 5
+                                rand <= 228 ? 6 : //13/256 =  5.1% chance of slot 6
+                                rand <= 241 ? 7 : //13/256 =  5.1% chance of slot 7
+                                rand <= 252 ? 8 : 9);//11/256 =  4.3% chance of slot 8
+                                //3/256 =  1.2% chance of slot 9
+                                Debug.Log("Chosen Pokemon: " + PokemonData.encounters[0].slots[chosenIndex].ToString());
+                                isMoving = false;
+                                holdingDirection = false;
+                                StartCoroutine(StartWildBattle(PokemonData.encounters[0].slots[chosenIndex]));
+                                }
 
-                            /*
-                             Encounter table probability list:
-                             db $32, $00 ; 51/256 = 19.9% chance of slot 0
-                             db $65, $02 ; 51/256 = 19.9% chance of slot 1
-                            db $8C, $04 ; 39/256 = 15.2% chance of slot 2
-                            db $A5, $06 ; 25/256 =  9.8% chance of slot 3
-                            db $BE, $08 ; 25/256 =  9.8% chance of slot 4
-                            db $D7, $0A ; 25/256 =  9.8% chance of slot 5
-                            db $E4, $0C ; 13/256 =  5.1% chance of slot 6
-                            db $F1, $0E ; 13/256 =  5.1% chance of slot 7
-                            db $FC, $10 ; 11/256 =  4.3% chance of slot 8
-                            db $FF, $12 ;  3/256 =  1.2% chance of slot 9
-    */
+                                }
+                            }
+                            
+    
                         }
-
+                      
                         onLoadMap.Invoke();
                     }
-                    holdingDirection = false;
+                    
 
                 }
+                 playerAnim.SetFloat("movingfloat",holdingDirection||isMoving ? 1f : 0);
+                if (Inputs.held("up") || Inputs.held("left") ||Inputs.held("right") || Inputs.held("down")) holdingDirection = true;
 
-                if (Inputs.held("up") || Inputs.held("left") ||Inputs.held("right") || Inputs.held("down"))
-                    holdingDirection = true;
-
-                playerAnim.SetFloat("movingfloat", isMoving ? 1 : 0);
-                if (transform.position == pos)
-                    playerAnim.SetFloat("movedir", direction);
+               
+                if (transform.position == pos) playerAnim.SetFloat("movedir", direction);
 
 
                     collisionSoundTimer += Time.deltaTime;
-                    if(collisionSoundTimer >= 0.3f && (isMoving && facingWall()) && !ledgejumping && holdFrames > 2){
-                   SoundManager.instance.sfx.PlayOneShot(collisionClip);
+                    
+                    if(collisionSoundTimer >= 0.3f && (holdingDirection && facingWall()) && !ledgejumping && holdFrames > 2){
+
+                   SoundManager.instance.sfx.PlayOneShot(collisionClip,0.5f);
                     collisionSoundTimer = 0;
                     }
-                if(!isMoving) collisionSoundTimer = 0;
+                    
+                if(!holdingDirection) collisionSoundTimer = 0;
 
 
             }
@@ -333,7 +360,7 @@ public class Player : MonoBehaviour
 
 
 
-
+        
         yield return 0;
 
 
@@ -397,6 +424,7 @@ yield return 0;
     }
     IEnumerator LedgeJump()
     {
+        holdingDirection = false;
         SoundManager.instance.sfx.PlayOneShot (ledgeJumpClip);
         bool reachedMiddle = false;
         playerAnim.SetBool("ledgejumping", ledgejumping);
@@ -458,6 +486,7 @@ yield return 0;
     // Update is called once per frame
     void Update()
     {
+       
         isDisabled = disabled;
 		playerAnim.SetFloat("walkbikesurfstate", walkSurfBikeState);
 		if (viewBio.bioscreen.enabled) {
@@ -516,7 +545,7 @@ yield return 0;
             else facedtile = null;
 
 			if (itemCheck != null) {
-            //print (itemCheck.distance.ToString ());
+         
 				if (!holdingDirection && transform.position == pos) {
 
 					if (!holdingDirection && !isMoving && canInteractAgain && !PCactive && !shopup && !disabled && Dialogue.instance.finishedWithTextOverall && !startmenuup && !inBattle && !ledgejumping) {
@@ -530,11 +559,11 @@ yield return 0;
                                         onLoadMap.Invoke();
                                     }
 											canInteractAgain = false;
-                                    IDB.GetItem(itemCheck.tiledata.itemName, itemCheck.tiledata.coinamount);
+                                    textData.GetItem(itemCheck.tiledata.itemName, itemCheck.tiledata.coinamount);
                                     itemCheck.hasItem = false;
 									}
 										canInteractAgain = false;
-										IDB.PlayText (itemCheck.tiledata.TextID, itemCheck.tiledata.coinamount);
+										textData.PlayText (itemCheck.tiledata.TextID, itemCheck.tiledata.coinamount);
 									}
 								}
 							}
@@ -616,15 +645,48 @@ yield return 0;
 
     public GameObject battlemenu;
 
-    public void StartBattle(int battleID, int battleType)
+ public IEnumerator StartWildBattle(StrInt pokemon)
     {
+        disabled = true;
+        WaitForSeconds wait = new WaitForSeconds(2f/60f);
+        for(int i = 0; i < 3; i++){
+            ScreenEffects.flashLevel = 0;
+            for(int j = 0; j < 3; j++){
+            ScreenEffects.flashLevel--;
+            yield return wait;
+            }
+            for(int j = 0; j < 6; j++){
+            ScreenEffects.flashLevel++;
+            yield return wait;
+            }
+            for(int j = 0; j < 3; j++){
+            ScreenEffects.flashLevel--;
+            yield return wait;
+            }
+        
+        }
+        battleManager.battleType = BattleType.Wild;
+        battleManager.enemyMons = new List<Pokemon>(new Pokemon[]{new Pokemon(pokemon.Name,pokemon.Int)});
+        inBattle = true;
+        disabled = true;
+        battlemenu.SetActive(true);
+        battleManager.battleoverlay.sprite = battleManager.blank;
+        battleManager.Initialize();
+        yield return 0;
+    }
+    public IEnumerator StartTrainerBattle(int battleID)
+    {
+        disabled = true;
+        battleManager.battleType = BattleType.Trainer;
         inBattle = true;
         disabled = true;
         battlemenu.SetActive(true);
         battleManager.battleoverlay.sprite = battleManager.blank;
         battleManager.battleID = battleID;
         battleManager.Initialize();
+         yield return 0;
     }
+
 public GameCursor cursor;
 public Bag bag;
 
@@ -672,4 +734,28 @@ Inputs.Enable("start");
 
 
 	}
+    public void RunFromBattle(){
+    StartCoroutine(Run());
+    }
+    public IEnumerator Run(){
+
+	if(battleManager.battleType == BattleType.Wild){
+		yield return StartCoroutine(Dialogue.instance.text("Ran away"));
+		yield return StartCoroutine(Dialogue.instance.line("safely!"));
+        yield return StartCoroutine(Dialogue.instance.done());
+        battlemenu.SetActive(false);
+        battleManager.Deactivate();
+		ScreenEffects.flashLevel = 3;
+        yield return new WaitForSeconds(1);
+        WaitForSeconds wait = new WaitForSeconds(0.1f);
+        for(int i = 0; i < 3; i++){
+            yield return wait;
+            ScreenEffects.flashLevel--;
+        }
+        numberOfNoRandomBattleStepsLeft = 3;
+        inBattle = false;
+        disabled = false;
+		
+	}
+}
 }

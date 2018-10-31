@@ -38,9 +38,13 @@ public class ScreenEffects : MonoBehaviour {
     private Palette lastPalette;
     public List<PaletteSet> palettes = new List<PaletteSet>();
     public VersionManager versionManager;
+    public static ScreenEffects instance;
     [Range(-3,3)]
-    public int flashLevel;
+    public static int flashLevel;
 	// Use this for initialization
+    void Awake(){
+        instance = this;
+    }
 	void Start () {
         texture = GameDataManager.mainRender;
         outputScreen = GameDataManager.postRender;

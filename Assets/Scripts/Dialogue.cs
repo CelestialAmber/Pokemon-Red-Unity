@@ -9,7 +9,7 @@ public class Dialogue : MonoBehaviour {
 	public bool nextIsCont, nextisPara;
 	public GameObject DialogueBox;
 	public string stringToReveal;
-	public bool cantscroll, displaysimmediate;
+	public bool  displaysimmediate;
 	//public Text dialoguetext;
 	public CustomText dialoguetext;
 	public GameObject indicator;
@@ -25,7 +25,6 @@ public class Dialogue : MonoBehaviour {
 	public Image theindicator;
 	public GameCursor cursor;
 	public int selectedOption;
-    public bool displayimmediatenoscroll;
 	public Slots lots;
 	public GameObject yesnomenu, slotsmenu, buycoinsmenu;
 	public Player play;
@@ -80,7 +79,7 @@ public class Dialogue : MonoBehaviour {
 
 		if(taskType != 5){
             if(displaysimmediate){
-                str = strComplete;
+                str += strComplete;
                 dialoguetext.text = str;
                 i = strComplete.Length;
             }
@@ -91,7 +90,7 @@ public class Dialogue : MonoBehaviour {
 				
 			str += strComplete[i++];
 			dialoguetext.text = str;
-				if (!displayimmediatenoscroll && !displaysimmediate && !cantscroll) {
+				if (!displaysimmediate) {
                     if (Inputs.held("a")) {
 						yield return new WaitForSeconds (scrollequation  / 2);
 					
@@ -127,21 +126,16 @@ public class Dialogue : MonoBehaviour {
             dialoguetext.gameObject.SetActive(false);
 			theindicator.enabled = false;
 			finishedWithTextOverall = true;
+			finishedCurrentTask = true;
 			play.WaitToInteract ();
 			stringToReveal = "";
 		}
 		stringToReveal = str;
-		if (!cantscroll) {
-			finishedCurrentTask = true;	
-		}
-        if (displayimmediatenoscroll)
-        {
-            finishedWithTextOverall = true;
-        }
-        displayimmediatenoscroll = false;
+		
+      
 		nextIsCont = false;
-			cantscroll = false;
-		displaysimmediate = false;
+		
+		//displaysimmediate = false;
 		nextisPara = false;
 
 	}

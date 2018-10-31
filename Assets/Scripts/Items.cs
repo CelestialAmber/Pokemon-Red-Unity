@@ -6,9 +6,10 @@ public class Item{
     public string name;
     public int quantity;
     public bool isKeyItem;
-    public Item(string name, int quantity){
+    public Item(string name, int quantity, bool isKeyItem){
         this.name = name;
         this.quantity = quantity;
+        this.isKeyItem = isKeyItem;
     }
 }
 public class Items : MonoBehaviour
@@ -195,11 +196,11 @@ public class Items : MonoBehaviour
 
     }
     //Adds an item to the bag.
-    public void AddItem(string name, int quantity)
+    public void AddItem(string name, int quantity, bool isKeyItem)
     {
         bool alreadyInBag = false;
 
-        Item inBagItem = new Item("", 0);
+        Item inBagItem = new Item("", 0,false);
         foreach (Item item in items)
         {
             if (item.name == name)
@@ -212,7 +213,7 @@ public class Items : MonoBehaviour
         }
         //If the item is already in the bag, just increase the stack.
         if (alreadyInBag) items[items.IndexOf(inBagItem)].quantity += quantity;
-        else if (items.Count < 20) items.Add(new Item(name, quantity));
+        else if (items.Count < 20) items.Add(new Item(name, quantity,isKeyItem));
 
         checkKeyItemsBag();
 

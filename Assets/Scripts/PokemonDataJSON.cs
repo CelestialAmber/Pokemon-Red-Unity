@@ -122,7 +122,7 @@ public class PokemonData
     public static Dictionary<string, StrInt[]> levelmoves = new Dictionary<string, StrInt[]>();
     //format: pokemon name as key, outputs pokemon and evolved level
     public static Dictionary<string, StrInt> evolution = new Dictionary<string, StrInt>();
-    public static List<EncounterData> grasswaterencounters = new List<EncounterData>();
+    public static List<EncounterData> encounters = new List<EncounterData>();
     /*
 List of index of the party sprite for each Pokemon.
 0:Generic Sprite
@@ -169,18 +169,19 @@ List of index of the party sprite for each Pokemon.
     public static Dictionary<string, int> PokemonToIndex = new Dictionary<string, int>();
     public static Dictionary<string, int> TMHMtoIndex = new Dictionary<string, int>();
     public static Dictionary<string, int> itemPrices = new Dictionary<string, int>();
+public static Dictionary<string,Dictionary<string,float>> TypeEffectiveness = new Dictionary<string, Dictionary<string, float>>(){};
 }
 
 public class PokemonDataJSON : MonoBehaviour
 {
      void Awake()
     {
-
+        PokemonData.TypeEffectiveness = Serializer.JSONtoObject<Dictionary<string,Dictionary<string,float>>>("typeEffectiveness.json");
         PokemonData.evolution = Serializer.JSONtoObject<Dictionary<string,StrInt>>("evolutiondata.json");
        PokemonData.baseStats = Serializer.JSONtoObject<Dictionary<string,int[]>>("basestatsdata.json");
         PokemonData.levelmoves = Serializer.JSONtoObject<Dictionary<string, StrInt[]>>("levelmovesdata.json");
         PokemonData.learnbytm = Serializer.JSONtoObject<Dictionary<string,string[]>>("learnbytmdata.json");
-        PokemonData.grasswaterencounters = Serializer.JSONtoObject<List<EncounterData>>("encounterData.json");
+        PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterData.json");
         PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
         PokemonData.PokemonPartySprite = Serializer.JSONtoObject<Dictionary<string, int>>("partySpriteData.json");
         PokemonData.PokemonTypes = Serializer.JSONtoObject<Dictionary<string, string[]>>("pokemonTypeData.json");
@@ -223,6 +224,9 @@ public class StrInt
             default:
                 throw new IndexOutOfRangeException("Index is not 0 or 1.");
         }
+    }
+    public override string ToString(){
+        return Name + ", " + Int.ToString();
     }
     public bool Equals(StrInt str)
     {

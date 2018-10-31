@@ -95,7 +95,7 @@ public class Pokedex : MonoBehaviour
                 else
                 {
                     Inputs.Enable("start");
-                    mainMenu.donewaiting = false;
+                    
                     mainMenu.currentmenu = mainMenu.thismenu;
 
                     gameObject.SetActive(false);

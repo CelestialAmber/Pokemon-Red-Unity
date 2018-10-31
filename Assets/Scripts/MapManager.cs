@@ -313,6 +313,11 @@ public class GridTile
     public bool isTreeCut;
     public bool hasItem;
     public bool hasItemBall;
+    public bool isBoulderSwitch;
+    public bool hasPokemon;
+    public bool hasPokedex;
+    public int pokemonIconIndex; //0:bird,1:snorlax,2:fossil
+    public bool isBoulderWall;
     public int frames;
     public string mainSprite;
     public List<Vector2[]> mainUvs = new List<Vector2[]>();

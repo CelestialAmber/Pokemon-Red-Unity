@@ -26,7 +26,6 @@ public class PokeMart : MonoBehaviour {
 	public bool didFirstRunthrough;
 	public int maximumItem;
 	public CustomText amountText, moneytext, pricetext;
-	public bool donewaiting;
 	public GameObject last;
 	public bool alreadyInBag;
 	public bool alreadydidtext;
@@ -270,18 +269,15 @@ public class PokeMart : MonoBehaviour {
                         Inputs.Enable("start");
                         cursor.SetActive(false);
 						this.gameObject.SetActive (false);
-return;
+						return;
 
                     
 					}
 				
-					StartCoroutine (Wait ());
-
 
 					
 				}
-				if (currentMenu == martwindow) {
-					if (donewaiting) {
+				else if (currentMenu == martwindow) {
 						if (currentBagPosition == martlist.Count) {
 
 
@@ -295,12 +291,10 @@ return;
 							ItemMode1 ();
 
 						}
-						StartCoroutine (Wait ());
-					}
+					
 				
 				}
-				if (currentMenu == itemwindow) {
-					if (donewaiting) {
+				else if (currentMenu == itemwindow) {
                         if (currentBagPosition == id.items.Count) {
 
 
@@ -319,14 +313,12 @@ return;
                             else StartCoroutine(UnsellableItem());
 
 						}
-						StartCoroutine (Wait ());
-					}
+					
 
 				}
 
 
-				if (currentMenu == quantitymenu) {
-					if (donewaiting) {
+				else if (currentMenu == quantitymenu) {
 
 
 						if (ItemMode == 2) {
@@ -341,7 +333,7 @@ return;
 						if (ItemMode == 1) {
 							if (GameData.money >= fullPrice) {
 								GameData.money -= fullPrice;
-                                Get.items.AddItem (martlist[currentBagPosition], amountToTask);
+                                Get.items.AddItem (martlist[currentBagPosition], amountToTask,false);
                                 currentMenu = martwindow;
                                 UpdateBuyScreen();
 							} else {
@@ -351,8 +343,7 @@ return;
 							}
 
 						}
-						}
-						StartCoroutine (Wait ());
+						
 					}
 
 				}
@@ -364,12 +355,12 @@ return;
 				currentMenu = buysellwindow;
 
 				}
-				if (currentMenu == itemwindow) {
+				else if (currentMenu == itemwindow) {
 					didFirstRunthrough = false;
 					currentMenu = buysellwindow;
 
 				}
-			if (currentMenu == quantitymenu) {
+			    else if (currentMenu == quantitymenu) {
 
 				if (ItemMode == 1) {
 					selectBag = -1;
@@ -416,12 +407,7 @@ return;
 			}
 		}
 
-	IEnumerator Wait(){
-		donewaiting = false;
-		yield return new WaitForSeconds (0.1f);
-		donewaiting = true;
-	}
-
+	
 
 
     public IEnumerator RemoveItem(int amount)

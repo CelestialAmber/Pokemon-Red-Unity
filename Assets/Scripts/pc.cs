@@ -20,7 +20,6 @@ public class PC : MonoBehaviour  {
     public int amountToTask;
     public int maximumItem;
     public CustomText amountText;
-    public bool donewaiting;
     public GameObject last;
     public bool alreadyInBag;
     public bool alreadydidtext;
@@ -30,6 +29,7 @@ public class PC : MonoBehaviour  {
     public int usedcap;
 
     void UpdateBagScreen(){
+        cursor.SetPosition(8, 120 - 16 * selectedOption);
         usedcap = ItemMode == 2 ? id.items.Count : id.pcItems.Count;
           if (currentBagPosition == 0)
         {
@@ -91,7 +91,7 @@ public class PC : MonoBehaviour  {
     }
     public IEnumerator Initialize(){
         
-        Dialogue.instance.displayimmediatenoscroll = true;
+        Dialogue.instance.displaysimmediate = true;
         yield return StartCoroutine(Dialogue.instance.text ("What do you want"));
         yield return StartCoroutine(Dialogue.instance.line("to do?"));
         cursor.SetActive(true);
@@ -226,20 +226,17 @@ public class PC : MonoBehaviour  {
 
 
         }
-        if (Dialogue.instance.finishedWithTextOverall)
-        {
+        
             if (Inputs.pressed("a"))
             {
-                if (donewaiting)
-                {
+                
                     if (currentMenu == itemwindow)
                     {
-                        if (donewaiting)
-                        {
+                        
                             if (currentBagPosition == ((ItemMode == 2) ? id.items.Count : id.pcItems.Count))
                             {
                                 Dialogue.instance.Deactivate();
-                                Dialogue.instance.displayimmediatenoscroll = true;
+                                Dialogue.instance.displaysimmediate = true;
                                 yield return StartCoroutine(Dialogue.instance.text("What do you want"));
                                 yield return StartCoroutine(Dialogue.instance.line("to do?"));
                                 currentMenu = mainwindow;
@@ -250,7 +247,7 @@ public class PC : MonoBehaviour  {
                                 {
                                     amountToTask = 1;
                                     Dialogue.instance.Deactivate();
-                                    Dialogue.instance.displayimmediatenoscroll = true;
+                                    Dialogue.instance.displaysimmediate = true;
                                     yield return StartCoroutine(Dialogue.instance.text("How much?"));
                                     currentMenu = quantitymenu;
                                 }else if(Items[currentBagPosition].GetComponent<itemslotinformation>().isKeyItem){
@@ -266,7 +263,7 @@ public class PC : MonoBehaviour  {
                                 }else if(ItemMode == 3){
                                     amountToTask = 1;
                                     Dialogue.instance.Deactivate();
-                                    Dialogue.instance.displayimmediatenoscroll = true;
+                                    Dialogue.instance.displaysimmediate = true;
                                     yield return StartCoroutine(Dialogue.instance.text("How much?"));
                                     currentMenu = quantitymenu;
                                 }
@@ -277,14 +274,12 @@ public class PC : MonoBehaviour  {
                             {
                                 StartCoroutine(TooImportantToToss());
                             }
-                        }
-                        StartCoroutine(Wait());
+                        
                     }
 
-                    if (currentMenu == mainwindow)
+                    else if (currentMenu == mainwindow)
                     {
-                        if (donewaiting)
-                        {
+                       
                             if (selectedOption == 0)
                             {
                                 UpdateBagScreen();
@@ -307,7 +302,7 @@ public class PC : MonoBehaviour  {
                             if (selectedOption == 3)
                             {
                                 Dialogue.instance.Deactivate();
-                                Dialogue.instance.finishedWithTextOverall = true;
+                                cursor.SetActive(false);
                                 Inputs.Enable("start");
                                 play.PCactive = false;
                                 play.WaitToInteract();
@@ -315,13 +310,10 @@ public class PC : MonoBehaviour  {
 
                             }
 
-                        }
-                        StartCoroutine(Wait());
                     }
-                    if (currentMenu == quantitymenu)
+                    else if (currentMenu == quantitymenu)
                     {
-                        if (donewaiting)
-                        {
+                        
                             if (ItemMode == 3)
                             {
                                 if (!Items[currentBagPosition].GetComponent<itemslotinformation>().isKeyItem)
@@ -346,10 +338,9 @@ public class PC : MonoBehaviour  {
 
 
 
-                        }
-                        StartCoroutine(Wait());
+                        
                     }
-                }
+                
             }
 
 
@@ -357,31 +348,33 @@ public class PC : MonoBehaviour  {
             {
                 if (currentMenu == mainwindow)
                 {
+                    cursor.SetActive(false);
                     Dialogue.instance.Deactivate();
                     play.PCactive = false;
                     Inputs.Enable("start");
-                    Dialogue.instance.finishedWithTextOverall = true;
                     play.WaitToInteract();
                     this.gameObject.SetActive(false);
 
                 }
-                if (currentMenu == itemwindow)
+                else if (currentMenu == itemwindow)
                 {
+                    
                     Dialogue.instance.Deactivate();
-                    Dialogue.instance.displayimmediatenoscroll = true;
+                    Dialogue.instance.displaysimmediate = true;
                     yield return StartCoroutine(Dialogue.instance.text("What do you want"));
                     yield return StartCoroutine(Dialogue.instance.line("to do?"));
+                    UpdateBagScreen();
                     currentMenu = mainwindow;
 
                 }
-                if (currentMenu == quantitymenu)
+                else if (currentMenu == quantitymenu)
                 {
                     if (ItemMode == 1)
                     {
                         currentBagPosition = 0;
                         selectBag = -1;
                         Dialogue.instance.Deactivate();
-                        Dialogue.instance.displayimmediatenoscroll = true;
+                        Dialogue.instance.displaysimmediate = true;
                         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
                         yield return StartCoroutine(Dialogue.instance.line("to withdraw?"));
                         currentMenu = itemwindow;
@@ -392,7 +385,7 @@ public class PC : MonoBehaviour  {
                         currentBagPosition = 0;
                         selectBag = -1;
                         Dialogue.instance.Deactivate();
-                        Dialogue.instance.displayimmediatenoscroll = true;
+                        Dialogue.instance.displaysimmediate = true;
                         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
                         yield return StartCoroutine(Dialogue.instance.line("to deposit?"));
                         currentMenu = itemwindow;
@@ -403,7 +396,7 @@ public class PC : MonoBehaviour  {
                         currentBagPosition = 0;
                         selectBag = -1;
                         Dialogue.instance.Deactivate();
-                        Dialogue.instance.displayimmediatenoscroll = true;
+                        Dialogue.instance.displaysimmediate = true;
                         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
                         yield return StartCoroutine(Dialogue.instance.line("to toss?"));
                         currentMenu = itemwindow;
@@ -412,7 +405,7 @@ public class PC : MonoBehaviour  {
                 }
 
             }
-        }
+        
         foreach (GameObject menu in allMenus) {
             if (menu != currentMenu) {
                 menu.SetActive (false);
@@ -443,15 +436,12 @@ public class PC : MonoBehaviour  {
 
         alreadyInBag = false;
         Dialogue.instance.Deactivate();
-        Dialogue.instance.cantscroll = false;
         Dialogue.instance.finishedCurrentTask = true;
         Item  withdrawnitem = id.pcItems[currentBagPosition];
         string DisplayString =  withdrawnitem.name + ".";
         yield return StartCoroutine(Dialogue.instance.text("Withdrew"));
         yield return StartCoroutine(Dialogue.instance.line(DisplayString));
-
-        Dialogue.instance.finishedWithTextOverall = true;
-        Item inBagItem = new Item("", 0);
+        Item inBagItem = new Item("", 0,false);
         foreach (Item item in id.items)
         {
             if (item.name == withdrawnitem.name)
@@ -463,11 +453,11 @@ public class PC : MonoBehaviour  {
 
         }
         if (alreadyInBag) id.items[id.items.IndexOf(inBagItem)].quantity += amountToTask;
-        else if (id.items.Count < 20) id.items.Add(new Item(withdrawnitem.name, amountToTask));
+        else if (id.items.Count < 20) id.items.Add(new Item(withdrawnitem.name, amountToTask,withdrawnitem.isKeyItem));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
 
-        Dialogue.instance.displayimmediatenoscroll = true;
+        Dialogue.instance.displaysimmediate = true;
        yield return StartCoroutine(Dialogue.instance.text("What do you want"));
         yield return StartCoroutine(Dialogue.instance.line("to do?"));
         ItemMode = 0;
@@ -483,14 +473,11 @@ public class PC : MonoBehaviour  {
     IEnumerator DepositItem(){
         alreadyInBag = false;
         Dialogue.instance.Deactivate ();
-        Dialogue.instance.cantscroll = false;
         Dialogue.instance.finishedCurrentTask = true;
         Item depositeditem = id.items[currentBagPosition];
         yield return StartCoroutine(Dialogue.instance.text (depositeditem.name + " was"));
         yield return StartCoroutine(Dialogue.instance.line("stored via PC."));
-
-        Dialogue.instance.finishedWithTextOverall = true;
-        Item inBagItem = new Item("", 0);
+        Item inBagItem = new Item("", 0,false);
         foreach(Item item in id.pcItems){
             if (item.name == depositeditem.name)
             {
@@ -501,10 +488,10 @@ public class PC : MonoBehaviour  {
 
         }
         if (alreadyInBag) id.pcItems[id.pcItems.IndexOf(inBagItem)].quantity += amountToTask;
-        else if (id.pcItems.Count < 50) id.pcItems.Add(new Item(depositeditem.name, amountToTask));
+        else if (id.pcItems.Count < 50) id.pcItems.Add(new Item(depositeditem.name, amountToTask,depositeditem.isKeyItem));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
-        Dialogue.instance.displayimmediatenoscroll = true;
+        Dialogue.instance.displaysimmediate = true;
         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
         yield return StartCoroutine(Dialogue.instance.line("to do?"));
         ItemMode = 0;
@@ -519,7 +506,6 @@ public class PC : MonoBehaviour  {
 
          
         Dialogue.instance.Deactivate ();
-        Dialogue.instance.cantscroll = false;
         Dialogue.instance.finishedCurrentTask = true;
         Item tosseditem = id.pcItems[currentBagPosition];
         string DisplayString = "Threw away " + tosseditem.name + ".";
@@ -527,17 +513,12 @@ public class PC : MonoBehaviour  {
         Dialogue.instance.done ();
         yield return StartCoroutine(RemoveItem (amountToTask));
     
-        Dialogue.instance.displayimmediatenoscroll = true;
+        Dialogue.instance.displaysimmediate = true;
         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
         yield return StartCoroutine(Dialogue.instance.line("to do?"));
         currentMenu = mainwindow;
         UpdateBagScreen();
         ItemMode = 0;
-    }
-    IEnumerator Wait(){
-        donewaiting = false;
-        yield return new WaitForSeconds (0.1f);
-        donewaiting = true;
     }
     
 
@@ -559,7 +540,7 @@ public class PC : MonoBehaviour  {
         ItemMode = 1;
         selectBag = -1;
         Dialogue.instance.Deactivate ();
-        Dialogue.instance.displayimmediatenoscroll = true;
+        Dialogue.instance.displaysimmediate = true;
         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
         yield return StartCoroutine(Dialogue.instance.line("to withdraw?"));
         currentMenu = itemwindow;
@@ -570,7 +551,7 @@ public class PC : MonoBehaviour  {
         ItemMode = 2;
         selectBag = -1;
         Dialogue.instance.Deactivate ();
-        Dialogue.instance.displayimmediatenoscroll = true;
+        Dialogue.instance.displaysimmediate = true;
         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
         yield return StartCoroutine(Dialogue.instance.line("to deposit?"));
         currentMenu = itemwindow;
@@ -582,7 +563,7 @@ public class PC : MonoBehaviour  {
         ItemMode = 3;
         selectBag = -1;
         Dialogue.instance.Deactivate ();
-        Dialogue.instance.displayimmediatenoscroll = true;
+        Dialogue.instance.displaysimmediate = true;
         yield return StartCoroutine(Dialogue.instance.text("What do you want"));
         yield return StartCoroutine(Dialogue.instance.line("to toss?"));
         currentMenu = itemwindow;

@@ -3,133 +3,188 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-public class BattleMon{
-    public int defense;
-    public int attack;
-    public int speed;
-    public int special;
-    public int hp;
-    public int maxhp;
-    public int level;
-    public Status status;
-    public string pokename;
-    public string name;
-}
+
 public enum BattleType{
     Wild,
     Trainer,
     Safari,
     OldMan
 }
+public enum BattleState{
+	Intro,
+	PlayerTurn,
+	Attacking,
+	End
+}
+public class BattleStatus{
+	public BattleStatus(){
+	
+	}
+	 public int attackLevel, defenseLevel, speedLevel, specialLevel;
+	 public bool[] isDisabled = new bool[4];
+}
 public class BattleManager : MonoBehaviour {
     public int battleID;
 
     public List<Pokemon> enemyMons = new List<Pokemon>();
-	public PokemonMenu pkmr;
-	public GameObject actualscene, ourstats, opponentstats;
-	public Animator battletransitionAnim, otheranim;
-	public bool donetransition;
-	public GameObject ourpokeballs, opponentballs;
+	public GameObject  playerstats, enemystatsObject;
+	public Animator battleMainAnim;
+	public GameObject playerpokeballs, enemyballs;
 	public Image battleoverlay, frontportrait, backportrait;
-	public Sprite blank, initial, enemystats, allstats;
-	//current loaded your mon stats
-	public string friendpokemonnameinslot;
-    public Pokemon ourmon;
-	public CustomText friendHPtext;
-	public CustomText friendmaxHPtext;
-	public CustomText friendmonLeveltext;
-    public CustomText friendName;
-	public int oldfriendhealth;
-	public Image friendHPBar;
-	public float friendsavedhealthpixels;
+	public GameObject playerMonObject,playerObject,trainerObject, enemyMonObject;
+	//current loaded playermon stats
+	public string playerpokemonnameinslot;
+    public Pokemon playermon;
+	public CustomText playerHPtext;
+	public CustomText playermaxHPtext;
+	public CustomText playermonLeveltext;
+    public CustomText playerName;
+	public Image playerHPBar;
+	public Image[] playerPartyBalls;
 	//current loaded enemymon stats
 
+	public List<Pokemon> enemyParty;
 	public string enemypokemonnameinslot;
     public Pokemon enemymon;
-	public int oldfoehealth;
-	public CustomText foemonLeveltext;
-    public CustomText foemonname;
-	public Image foeHPBar;
-	public float foesavedhealthpixels;
+	public CustomText enemymonLeveltext;
+    public CustomText enemymonname;
+	public Image enemyHPBar;
+	public Image[] enemyPartyBalls;
 	//
-	public bool readytobattle;
 	public GameObject currentmenu;
 	public GameObject battlemenu, movesmenu;
 	public GameObject[] allmenus;
 	public GameCursor cursor;
-	public GameObject[] menuSlots;
+	public BattleType battleType;
 	public int selectedOption;
 	public int currentLoadedMon;
+	public GameObject battleBG;
+	public Sprite[] partyBallSprites;
+	public Sprite[] battleOverlaySprites;
+	public Sprite blank;
+	/*
+	Battle Overlay Documentation:
+	0:initial1
+	1:initial2
+	2:hp_all
+	3:hp_enemy
+	4:trainer_party
+	5:player_only
+	 */
+	public GameObject bgTextbox;
+	public BattleState battleState;
 	// Use this for initialization
 	void Start(){
 	}
 	public void Initialize(){
-        enemyMons.Clear();
-        switch(battleID){
-            case 0:
-                enemyMons = new List<Pokemon>(
-                    new Pokemon[]{
-                        new Pokemon("Bulbasaur",90)
-                    }
-                    );
-                break;
-
-        }
+		battleState = BattleState.Intro;
+		if(battleType == BattleType.Trainer){
+       // switch(battleID)
+            
+        
+		}
 		currentLoadedMon = 0;
         foreach (Pokemon pokemon in enemyMons){
             pokemon.RecalculateStats();
         }
         enemymon = enemyMons[0];
-        ourmon = pkmr.party[0];
-         ourmon.RecalculateStats();
-        friendsavedhealthpixels = Mathf.Round (ourmon.currenthp * 48 / ourmon.hp);
-        foesavedhealthpixels = Mathf.Round (enemymon.currenthp * 48 / enemymon.hp);
-        foeHPBar.fillAmount = (Mathf.Round(enemymon.currenthp * 48 / enemymon.hp))/48;
-        friendHPBar.fillAmount = (Mathf.Round(ourmon.currenthp * 48 / ourmon.hp))/48;
-        friendName.text = ourmon.name;
-		ourstats.SetActive (false);
-		opponentstats.SetActive (false);
-		ourpokeballs.SetActive(false);
-		opponentballs.SetActive (false);
-        if (pkmr.party[0].level - enemyMons[0].level <= -3) {
-			battletransitionAnim.SetInteger ("transitiontype",1);
-		}
-        if (pkmr.party[0].level - enemyMons[0].level >= -2) {
-			battletransitionAnim.SetInteger ("transitiontype",2);
-		}
-
-
-
+        playermon = GameData.party[0];
+         playermon.RecalculateStats();
+        enemyHPBar.fillAmount = (Mathf.Round(enemymon.currenthp * 48 / enemymon.hp))/48;
+        playerHPBar.fillAmount = (Mathf.Round(playermon.currenthp * 48 / playermon.hp))/48;
+        playerName.text = playermon.name;
+		battleoverlay.gameObject.SetActive(true);
+		playerstats.SetActive (false);
+		enemystatsObject.SetActive (false);
+		playerpokeballs.SetActive(false);
+		enemyballs.SetActive (false);
+		DetermineBackSprite();
+		DetermineFrontSprite();
+	StartCoroutine(BattleInit());
 
 	}
-	void DoneWithTransition(){
 
-		donetransition = true;
+	public IEnumerator BattleInit(){
+
+	battleMainAnim.SetBool("isFadingIn",true);
+        if (GameData.party[0].level - enemyMons[0].level <= -3) {
+			battleMainAnim.SetInteger ("fadetype",1);
+		}
+        if (GameData.party[0].level - enemyMons[0].level >= -2) {
+			battleMainAnim.SetInteger ("fadetype",2);
+		}
+		yield return new WaitForSeconds(2.5f);
+		battleBG.SetActive(true);
+		bgTextbox.SetActive(true);
+		ScreenEffects.flashLevel = 0;
+
+
+if(battleType == BattleType.Trainer){
+       StartCoroutine(TrainerBattleStart());
+		}
+		if(battleType == BattleType.Wild){
+       StartCoroutine(WildBattleStart());
+		}
 
 	}
-	public IEnumerator PokeballShow(){
-		battleoverlay.sprite = initial;
-
-		ourpokeballs.SetActive(true);
-		opponentballs.SetActive (true);
-		yield return StartCoroutine(Dialogue.instance.text ("TRAINER wants to battle!"));
+	
+	public IEnumerator TrainerBattleStart(){
+		yield return 0;
+	}
+    public IEnumerator WildBattleStart(){
+		//enemy x pos starts at -28, and goes to 124
+		//player x pos starts at 188, and goes to 36
+		UpdatePokeBallUI();
+		UpdateStatsUI();
+	playerObject.SetActive(true);
+	enemyMonObject.SetActive(true);
+	float initialTimer = 0f;
+	while(initialTimer < 1.2f){
+		initialTimer += Time.deltaTime;
+	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(188,76,0),new Vector3(36,76,0),initialTimer/1.2f);
+	enemyMonObject.transform.localPosition = Vector3.Lerp(new Vector3(-28,124,0),new Vector3(124,124,0),initialTimer/1.2f);
+	yield return new WaitForEndOfFrame();
+	}
+	
+battleoverlay.sprite = battleOverlaySprites[0];
+playerpokeballs.SetActive(true);
+	Dialogue.instance.displaysimmediate = true;
+		yield return StartCoroutine(Dialogue.instance.text ("Wild " + enemyMons[0].name));
+		yield return StartCoroutine(Dialogue.instance.line("appeared!"));
 		yield return StartCoroutine(Dialogue.instance.done ());
-
-		ourpokeballs.SetActive(false);
-		opponentballs.SetActive (false);
-		otheranim.SetInteger ("currentpass", 1);
-
+		enemystatsObject.SetActive (true);
+		playerpokeballs.SetActive(false);
+		battleoverlay.sprite = battleOverlaySprites[3];
+		initialTimer = 0f;
+		yield return new WaitForSeconds(1f);
+	
+		playermon = GameData.party[0];
+		enemymon = enemyMons[0];
+			yield return StartCoroutine(Dialogue.instance.text ("Go! " + playermon.name + "!"));
+	while(initialTimer < 0.6f){
+		initialTimer += Time.deltaTime;
+	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(36,76,0),new Vector3(-26,76,0),initialTimer/0.6f);
+	yield return new WaitForEndOfFrame();
 	}
-    public IEnumerator WildPokemonAppeared(){
-
-        yield return 0;
-
+	
+	battleMainAnim.SetTrigger("sendMon");
+yield return new WaitForSeconds(1f);
+		Dialogue.instance.Deactivate();
+		
+battleState = BattleState.PlayerTurn;
+currentmenu = battlemenu;
     }
-
-	// Update is called once per frame
-	void Update () {
-
-		foreach (GameObject menu in allmenus) {
+	public void FinishedBattleTransition(){
+ScreenEffects.flashLevel = -3;
+battleMainAnim.SetBool("isFadingIn",false);
+	}
+	public void SetBackMonImageActive(){
+    playerMonObject.SetActive(true);
+	playerstats.SetActive(true);
+	battleoverlay.sprite = battleOverlaySprites[2];
+	}
+	void UpdateMenus(){
+foreach (GameObject menu in allmenus) {
 			if (menu != currentmenu) {
 				menu.SetActive (false);
 			} else {
@@ -139,33 +194,22 @@ public class BattleManager : MonoBehaviour {
 
 
 		}
-		if (donetransition) {
+	}
 
 
-			foemonLeveltext.text = enemymon.level.ToString();
-			friendmonLeveltext.text = ourmon.level.ToString ();
-			friendHPtext.text = ourmon.currenthp.ToString ();
-			friendmaxHPtext.text = ourmon.hp.ToString ();
-            foemonname.text = enemymon.name;
-			actualscene.SetActive (true);
-			if (readytobattle) {
-
-				currentmenu = battlemenu;
-				if (currentmenu == battlemenu) {
-
-					menuSlots = new GameObject[currentmenu.transform.childCount];
-
-					for (int i = 0; i < currentmenu.transform.childCount; i++) {
+	// Update is called once per frame
+	void Update () {
+		UpdateMenus();
+		
+		if (battleState == BattleState.PlayerTurn && Dialogue.instance.finishedWithTextOverall) {
 
 
-						menuSlots [i] = currentmenu.transform.GetChild (i).gameObject;
-					}
-
-				}
+			UpdateStatsUI();
+				
 				if (currentmenu == battlemenu) {
 
 					cursor.SetActive (true);
-					cursor.transform.position = menuSlots [selectedOption].transform.position;
+				cursor.SetPosition(48*(selectedOption%2) + 72,-16 * Mathf.FloorToInt((float)selectedOption/2f)+24);
 
 
 
@@ -221,16 +265,24 @@ public class BattleManager : MonoBehaviour {
 
 
 					}
-
+					if(Inputs.pressed("a")){
+					if(selectedOption == 3){
+						currentmenu = null;
+						cursor.SetActive(false);
+						Player.instance.RunFromBattle();
+						 UpdateMenus();
+					}
+					
+					}
 
 
 				}
-			} else {
+			
+		} else {
 
 				currentmenu = null;
 
 			}
-		}
 
 	}
 	public void DetermineFrontSprite(){
@@ -239,37 +291,150 @@ public class BattleManager : MonoBehaviour {
 	}
 
 	public void DetermineBackSprite(){
-        backportrait.overrideSprite = GameData.backMonSprites
-            [PokemonData.MonToID(ourmon.pokename) - 1];
+        backportrait.overrideSprite = GameData.backMonSprites[PokemonData.MonToID(playermon.pokename) - 1];
 
 	}
-	public void ActivateOurStats(){
-		ourstats.SetActive (true);
-		battleoverlay.sprite = allstats;
-	}
-	public void ActivateTheirStats(){
-		opponentstats.SetActive (true);
-		battleoverlay.sprite = enemystats;
-	}
+void UpdateStatsUI(){
+	enemymonLeveltext.text = (enemymon.level != 100 ? "È" : "") + enemymon.level.ToString();
+			playermonLeveltext.text = (playermon.level != 100 ? "È" : "") +  playermon.level.ToString ();
+			playerHPtext.text = playermon.currenthp.ToString ();
+			playermaxHPtext.text = playermon.hp.ToString ();
+            enemymonname.text = enemymon.name;
+}
 	//these functions animate health.
+void UpdatePokeBallUI(){
+     for(int i = 0; i < 6; i++){
+		 if(GameData.party.Count >= i + 1){
+			
+			 if(GameData.party[i].status == Status.Ok){ 
+				 playerPartyBalls[i].sprite = partyBallSprites[0];
+			 }
+			 else if(GameData.party[i].status == Status.Fainted) {
+			  playerPartyBalls[i].sprite = partyBallSprites[3];
+			 }
+			  else{ 
+				  playerPartyBalls[i].sprite = partyBallSprites[1];
+				  
+			  }
+		 }
+		 else{
+			  playerPartyBalls[i].sprite = partyBallSprites[2];
+		 }
+		 
+		 if(enemyParty.Count >= i + 1){
+			 if(enemyParty[i].status == Status.Ok) {
+			 enemyPartyBalls[i].sprite = partyBallSprites[0];
+			 }
+			 else if(enemyParty[i].status == Status.Fainted) {
+			  enemyPartyBalls[i].sprite = partyBallSprites[3];
+			 }
+			  else{
+				  enemyPartyBalls[i].sprite = partyBallSprites[1];
+			  } 
+		 }
+		 else{
+			  enemyPartyBalls[i].sprite = partyBallSprites[2];
+		 }
+		 
 
+	 }
+
+}
+
+void UseMove(string moveName){
+MoveData moveData = PokemonData.GetMove(moveName);
+switch(moveData.effect){
+	case "noEffect": break;
+	case "twoFiveEffect": break;
+	case "payDayEffect": break;
+	case "burnSideEffect1": break;
+	case "freezeSideEffect": break;
+	case "paralyzeSideEffect1": break;
+	case "ohkoEffect": break;
+	case "chargeEffect": break;
+	case "attackUp2Effect": break;
+	case "switchTeleportEffect": break;
+	case "flyEffect": break;
+	case "trappingEffect": break;
+	case "flinchSideEffect2": break;
+	case "doubleAttackEffect": break;
+	case "jumpKickEffect" : break;
+	case "accuracyDown1Effect": break;
+	case "paralyzeSideEffect2": break;
+    case "recoilEffect": break;
+	case "thrashEffect": break;
+	case "defenseDown1Effect": break;
+	case "poisonSideEffect1": break;
+	case "twinNeedleEffect": break;
+	case "flinchSideEffect1": break;
+	case "attackDown1Effect": break;
+	case "sleepEffect": break;
+	case "confusionEffect": break;
+	case "specialDamageEffect": break;
+	case "disableEffect": break;
+	case "defenseDownSideEffect": break;
+	case "mistEffect": break;
+	case "confusionSideEffect": break;
+	case "speedDownSideEffect": break;
+	case "attackDownSideEffect": break;
+	case "hyperBeamEffect": break;
+	case "drainHpEffect": break;
+	case "leechSeedEffect": break;
+	case "specialUp1Effect": break;
+	case "poisonEffect": break;
+	case "paralyzeEffect": break;
+	case "speedDown1Effect": break;
+	case "specialDownSideEffect": break;
+	case "attackUp1Effect": break;
+	case "speedUp2Effect": break;
+	case "rageEffect": break;
+	case "mimicEffect": break;
+	case "defenseDown2Effect": break;
+	case "evasionUp1Effect": break;
+	case "healEffect": break;
+	case "defenseUp1Effect": break;
+	case "defenseUp2Effect": break;
+	case "lightScreenEffect": break;
+	case "hazeEffect": break;
+	case "reflectEffect": break;
+	case "focusEffect": break;
+	case "bideEffect": break;
+	case "metronomeEffect": break;
+	case "mirrorMoveEffect": break;
+	case "explodeEffect": break;
+	case "poisonSideEffect2": break;
+	case "burnSideEffect2": break;
+	case "swiftEffect": break;
+	case "specialUp2Effect": break;
+	case "dreamEaterEffect": break;
+	case "transformEffect": break;
+	case "splashEffect": break;
+	case "conversionEffect": break;
+	case "superFangEffect": break;
+	case "substituteEffect": break;	
+}
+
+
+
+
+}
 
     IEnumerator AnimateOurHealth(int amount)
     {
-        int newHealth = ourmon.currenthp + amount;
+        int newHealth = playermon.currenthp + amount;
         if (newHealth < 0) newHealth = 0;
-        if (newHealth > ourmon.hp) newHealth = ourmon.hp;
-        int result = Mathf.RoundToInt(newHealth - ourmon.currenthp);
+        if (newHealth > playermon.hp) newHealth = playermon.hp;
+        int result = Mathf.RoundToInt(newHealth - playermon.currenthp);
 
-        WaitForSeconds wait = new WaitForSeconds(5 / ourmon.hp);
+        WaitForSeconds wait = new WaitForSeconds(5 / playermon.hp);
 
         for (int l = 0; l < Mathf.Abs(result); l++)
         {
             yield return wait;
 
-            ourmon.currenthp += 1 * Mathf.Clamp(result, -1, 1);
-            int pixelCount = Mathf.RoundToInt((float)ourmon.currenthp * 48 / (float)ourmon.hp);
-            friendHPBar.fillAmount = (float)pixelCount / 48;
+            playermon.currenthp += 1 * Mathf.Clamp(result, -1, 1);
+            int pixelCount = Mathf.RoundToInt((float)playermon.currenthp * 48 / (float)playermon.hp);
+            playerHPBar.fillAmount = (float)pixelCount / 48;
 
         }
         yield return null;
@@ -290,40 +455,27 @@ public class BattleManager : MonoBehaviour {
             enemymon.currenthp += 1 * Mathf.Clamp(result, -1, 1);
 
             int pixelCount = Mathf.RoundToInt((float)enemymon.currenthp * 48 / (float)enemymon.hp);
-   foeHPBar.fillAmount = (float)pixelCount / 48;
+   enemyHPBar.fillAmount = (float)pixelCount / 48;
 
         }
         yield return null;
 
     }
-
-    void ShowBall()
-    {
-        StartCoroutine(PokeballShow());
-    }
-    void DetermineFront()
-    {
-        DetermineFrontSprite();
-    }
-    void DetermineBack()
-    {
-        DetermineBackSprite();
-    }
-    void ReadyToBattle()
-    {
-
-        readytobattle = true;
-        selectedOption = 0;
-    }
-    void ActivateStatsOur()
-    {
-        ActivateOurStats();
-    }
-    void ActivateStatsTheir()
-    {
-        ActivateTheirStats();
-    }
-
-
+float moveEffectiveness(Move move,Pokemon target){
+float result = PokemonData.TypeEffectiveness[move.type][target.types[0]];
+if(target.types[1] != "") result *= PokemonData.TypeEffectiveness[move.type][target.types[1]];
+return result;
+}
+public void Deactivate(){
+	battleBG.SetActive(false);
+	cursor.SetActive(false);
+	playerstats.SetActive(false);
+	battleoverlay.sprite = blank;
+	battleoverlay.gameObject.SetActive(false);
+	enemystatsObject.SetActive(false);
+	playerMonObject.SetActive(false);
+	enemyMonObject.SetActive(false);
+	bgTextbox.SetActive(false);
+}
 
 	}

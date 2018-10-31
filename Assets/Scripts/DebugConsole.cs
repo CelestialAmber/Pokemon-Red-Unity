@@ -85,11 +85,11 @@ public class DebugConsole : MonoBehaviour
             }else Message("Invalid command.");
 
         }else if(input == "/gen party"){
-            Get.pokeMenu.party.Clear();
+            GameData.party.Clear();
             for (int i = 0; i < 6; i++)
             {
                 
-                Get.pokeMenu.party.Add(new Pokemon(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
+               GameData.party.Add(new Pokemon(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
                 Get.pokeMenu.healthbars[i] = Get.pokeMenu.partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
             }
             Message("Generated a new party.");
