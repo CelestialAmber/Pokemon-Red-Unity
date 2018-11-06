@@ -120,6 +120,23 @@ public class Inputs
         else return false;
 
     }
+    public static bool pressedDpad(){
+        return pressed("up") || pressed("down") || pressed("left") || pressed("right");
+    }
+    public static void disableDpad(){
+        Disable("up");
+        Disable("down");
+        Disable("left");
+        Disable("right");
+
+    }
+     public static void enableDpad(){
+        Enable("up");
+        Enable("down");
+        Enable("left");
+        Enable("right");
+
+    }
     public static bool held(string button)
     {
         if (DebugConsole.isActive) return false;

@@ -108,6 +108,7 @@ public class MapEditor : MonoBehaviour
 
     }
     public void SpawnMap(){
+ 
         //Spawn the map with the current index stored in currentMap
         GameObject maPContainer = new GameObject("Map " + currentMap);
         maPContainer.transform.SetParent(container.transform);
@@ -118,7 +119,8 @@ public class MapEditor : MonoBehaviour
         //Create string variables to retrieve the values from the string;
         for (int i = 0; i < map.tileMap.Length; i++){
             //is a tileset slot missing?
-            if(tSetIndexes.indices[map.tilesetNumber].indices.Length == map.tileMap.Length) {
+            if(tSetIndexes.indices[map.tilesetNumber].indices.Length >= map.tileMap[i]) {
+                
                 indicelist = tSetIndexes.indices[map.tilesetNumber].indices[map.tileMap[i]].indiceString;
             }
           //set it as a null tile to not cause errors
@@ -262,10 +264,19 @@ public override void OnInspectorGUI()
             me.tilepool = Serializer.JSONtoObject<List<Tile>>("tilePoolData.json");
   
         }
+         if (GUILayout.Button("Save tilepool"))
+        {
+          
+           Serializer.objectToJSON("tilePoolData.json",me.tilepool);
+  
+        }
         if (GUILayout.Button("Add all tiles"))
         {
             me.tilepool.Clear();
-            me.tilepool = new List<Tile>(866);
+            for(int i = 0; i < 871; i++){
+                me.tilepool.Add(new Tile("","",false));
+            }
+             
             foreach (Texture2D tile in Resources.LoadAll<Texture2D>("interiortiles/"))
             {
                 string path = AssetDatabase.GetAssetPath(tile);
@@ -294,8 +305,14 @@ public override void OnInspectorGUI()
                         tag = "LedgeDown";
                     }
                 }
+                if(path.Contains("/Water")){
+                    tag = "Water";
+                }
                 string thisIndex = tile.name;
                 int index = int.Parse(thisIndex.Replace("tile", ""));
+                
+                
+                
                 if (tile.width > 16 || tile.height > 16) isAnimated = true;
                 me.tilepool[index] = new Tile(AssetDatabase.GetAssetPath(tile), tag, isAnimated);
 
@@ -306,6 +323,7 @@ public override void OnInspectorGUI()
             
            me.SpawnMap();
         }
+       
       
        
 

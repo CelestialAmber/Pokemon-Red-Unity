@@ -12,6 +12,8 @@ using System.Threading;
 using Newtonsoft.Json;
 using System.Runtime.Serialization.Formatters.Binary;
 using Newtonsoft.Json.Linq;
+using System.Xml;
+using System.Xml.Serialization;
 
 [System.Serializable]
 public class MoveData{
@@ -79,7 +81,7 @@ public class Serializer
 
 
     public static void objectToJSON (string fileName,object type){
-        string data =  JValue.Parse(JsonConvert.SerializeObject(type)).ToString(Formatting.Indented);
+        string data =  JValue.Parse(JsonConvert.SerializeObject(type)).ToString(Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Application.streamingAssetsPath + "/" + fileName, data);
     }
     public static T JSONtoObject<T> (string fileName){
@@ -91,6 +93,7 @@ public class Serializer
         file.Close();
         return JsonConvert.DeserializeObject<T>(tmlearndata);
     }
+    
 
 }
 

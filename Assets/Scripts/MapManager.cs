@@ -6,13 +6,13 @@ using UnityEngine.U2D;
 public enum Map
 {
     PalletTown,
-    Route1
+    Route1,
+    ViridianCity
 }
 
 //Script to manage the world status.
 public class MapManager : MonoBehaviour {
     public Player player;
-    public GameObject mainmap;
     public MeshRenderer mainLayer, grassLayer, objectLayer, grassBGLayer;
     public SpriteAtlas tileAtlas;
     public Mesh mesh;
@@ -259,7 +259,7 @@ public class MapManager : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        mainmap.SetActive(false);
+       
         centerPos = transform.position;
         LoadMap();
         StartCoroutine(CoreUpdate());

@@ -305,7 +305,6 @@ public class PC : MonoBehaviour  {
                                 cursor.SetActive(false);
                                 Inputs.Enable("start");
                                 play.PCactive = false;
-                                play.WaitToInteract();
                                 this.gameObject.SetActive(false);
 
                             }
@@ -352,7 +351,6 @@ public class PC : MonoBehaviour  {
                     Dialogue.instance.Deactivate();
                     play.PCactive = false;
                     Inputs.Enable("start");
-                    play.WaitToInteract();
                     this.gameObject.SetActive(false);
 
                 }

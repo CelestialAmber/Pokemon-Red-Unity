@@ -58,7 +58,7 @@ public class TextDatabase : MonoBehaviour {
 
     }
 	IEnumerator Text1(){
-		if (player.direction == 3 || player.direction == 4) {
+		if (player.direction == Direction.Left || player.direction == Direction.Right) {
 			if (GameData.coins > 0) {
 				yield return StartCoroutine(Dialogue.instance.text ("A slot machine!"));
 				yield return StartCoroutine(Dialogue.instance.line ("Want to play?"));
@@ -80,7 +80,6 @@ public class TextDatabase : MonoBehaviour {
 
 				} else {
 					Dialogue.instance.Deactivate ();
-					player.WaitToInteract ();
 				}
 
 			} else {

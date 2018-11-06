@@ -7,6 +7,13 @@ using System.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;
+public enum Direction{
+Null,
+Up,
+Down,
+Left,
+Right
+}
 public class Player : MonoBehaviour
 {
 
@@ -17,7 +24,7 @@ public class Player : MonoBehaviour
     public bool walkedfromwarp;
     public GameObject credits;
     public int walkSurfBikeState;
-    public int direction;
+    public Direction direction;
     public GameObject top, bottom;
     public TextDatabase textData;
     public bool canInteractAgain;
@@ -39,9 +46,8 @@ public class Player : MonoBehaviour
     public bool ledgejumping;
     public GridTile facedtile;
     public int numberOfNoRandomBattleStepsLeft;
-
-
-	
+    public WarpInfo warpInfo;
+	public bool isWarping;
 	public AudioClip collisionClip, ledgeJumpClip, openStartMenuClip;
 	public float collisionSoundTimer;
 
@@ -74,7 +80,7 @@ public class Player : MonoBehaviour
         GameData.trainerID = Random.Range(0, 65536);
         startmenuup = false;
         canInteractAgain = true;
-        direction = 2;
+        direction = Direction.Down;
         pos = transform.position;
         StartCoroutine(CoreUpdate());
     }
@@ -89,7 +95,7 @@ public class Player : MonoBehaviour
 
     }
 
-
+    
 
     IEnumerator MovementUpdate()
     {
@@ -118,28 +124,28 @@ public class Player : MonoBehaviour
 
 
             //If we're not ledge jumping already, the adjacent tile is a ledge, and we're exactly on a tile, ledge jump
-            if (Inputs.held("down") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeDown" && transform.position == pos && direction == 2 && holdFrames > 2)
+            if (Inputs.held("down") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeDown" && transform.position == pos && direction == Direction.Down && holdFrames > 2)
             {
                 ledgejumping = true;
-                direction = 2;
-                playerAnim.SetFloat("movedir", direction);
+                direction = Direction.Down;
+                playerAnim.SetFloat("movedir", (int)direction);
                 StartCoroutine(LedgeJump());
 
             }
-            if (Inputs.held("left") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeLeft" && transform.position == pos && direction == 3 && holdFrames > 2)
+            if (Inputs.held("left") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeLeft" && transform.position == pos && direction == Direction.Left && holdFrames > 2)
             {
                 ledgejumping = true;
-                direction = 3;
-                playerAnim.SetFloat("movedir", direction);
+                direction = Direction.Left;
+                playerAnim.SetFloat("movedir", (int)direction);
                 StartCoroutine(LedgeJump());
 
 
             }
-            if (Inputs.held("right") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeRight" && transform.position == pos && direction == 4 && holdFrames > 2)
+            if (Inputs.held("right") && !disabled && !ledgejumping && facedtile != null && facedtile.tag == "LedgeRight" && transform.position == pos && direction == Direction.Right && holdFrames > 2)
             {
                 ledgejumping = true;
-                direction = 4;
-                playerAnim.SetFloat("movedir", direction);
+                direction = Direction.Right;
+                playerAnim.SetFloat("movedir", (int)direction);
                 StartCoroutine(LedgeJump());
 
 
@@ -174,8 +180,8 @@ public class Player : MonoBehaviour
                     holdingDirection = true;
                     if (transform.position == pos)
                     {
-                        direction = 1;
-                        playerAnim.SetFloat("movedir", direction);
+                        direction = Direction.Up;
+                        playerAnim.SetFloat("movedir", (int)direction);
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
@@ -198,8 +204,8 @@ public class Player : MonoBehaviour
                     holdingDirection = true;
                     if (transform.position == pos)
                     {
-                        direction = 4;
-                        playerAnim.SetFloat("movedir", direction);
+                        direction = Direction.Right;
+                        playerAnim.SetFloat("movedir", (int)direction);
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
@@ -224,8 +230,8 @@ public class Player : MonoBehaviour
                     holdingDirection = true;
                     if (transform.position == pos)
                     {
-                        direction = 2;
-                        playerAnim.SetFloat("movedir", direction);
+                        direction = Direction.Down;
+                        playerAnim.SetFloat("movedir", (int)direction);
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
@@ -247,8 +253,8 @@ public class Player : MonoBehaviour
                     holdingDirection = true;
                     if (transform.position == pos)
                     {
-                        direction = 3;
-                        playerAnim.SetFloat("movedir", direction);
+                        direction = Direction.Left;
+                        playerAnim.SetFloat("movedir", (int)direction);
                     }
                     if (transform.position == pos && holdFrames > 2)
                     {
@@ -275,15 +281,17 @@ public class Player : MonoBehaviour
                         GridTile currentTile = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
                         if (currentTile != null)
                         {
-                            if (currentTile.isWarp)
+                            if (currentTile.isWarp && currentTile.tileWarp.warpType == WarpType.WalkOnWarp)
                             {
+                                warpInfo = currentTile.tileWarp;
                                 onHitWarp.Invoke();
                             }
                             if(numberOfNoRandomBattleStepsLeft > 0) numberOfNoRandomBattleStepsLeft--;
                             if (currentTile.hasGrass || currentTile.isWater){ 
                                 
                                 if(numberOfNoRandomBattleStepsLeft == 0) {
-                                int rand = Random.Range(0,256);
+                               // int rand = Random.Range(0,256);
+                               int rand = 255;
                                 if(rand < PokemonData.encounters[0].encounterChance){
                                 rand = Random.Range(0,256);
                                 Debug.Log("Wild encounter triggered. Choosing the encounter slot.");
@@ -312,6 +320,11 @@ public class Player : MonoBehaviour
                       
                         onLoadMap.Invoke();
                     }
+                 
+                    if(holdingDirection && !isWarping && facedtile != null && facedtile.isWarp && facedtile.tileWarp.warpType == WarpType.WallWarp && direction == facedtile.tileWarp.wallDirection){
+                         warpInfo = facedtile.tileWarp;
+                        onHitWarp.Invoke();
+                    }
                     
 
                 }
@@ -319,7 +332,7 @@ public class Player : MonoBehaviour
                 if (Inputs.held("up") || Inputs.held("left") ||Inputs.held("right") || Inputs.held("down")) holdingDirection = true;
 
                
-                if (transform.position == pos) playerAnim.SetFloat("movedir", direction);
+                if (transform.position == pos) playerAnim.SetFloat("movedir", (int)direction);
 
 
                     collisionSoundTimer += Time.deltaTime;
@@ -352,6 +365,7 @@ public class Player : MonoBehaviour
          isMoving = false;
         holdingDirection = false;
         manuallyWalking = false;
+        if(!walkedfromwarp) walkedfromwarp = true;
             }
         }
 
@@ -367,54 +381,54 @@ public class Player : MonoBehaviour
     }
    
 
-public bool facingWall() => (direction == 1 && cannotMoveUp) || (direction == 2 && cannotMoveDown)  || (direction == 3 && cannotMoveLeft) || (direction == 4 && cannotMoveRight);
+public bool facingWall() => (direction == Direction.Up && cannotMoveUp) || (direction == Direction.Down && cannotMoveDown)  || (direction == Direction.Left && cannotMoveLeft) || (direction == Direction.Right && cannotMoveRight);
 
-    public IEnumerator MovePlayerOneTile(int dir)
+    public IEnumerator MovePlayerOneTile(Direction dir)
     {
 if(!manuallyWalking){
-        if (dir == 1)
+        if (dir == Direction.Up)
         {
-            direction = 1;
+            direction = Direction.Up;
             holdingDirection = true;
 
             if (transform.position == pos)
             {
-                playerAnim.SetFloat("movedir", direction);
+                playerAnim.SetFloat("movedir", (int)direction);
                 pos += (Vector3.up);
                  isMoving = true;
             }
         }
-        else if (dir == 2)
+        else if (dir == Direction.Down)
         {
-            direction = 2;
+            direction = Direction.Down;
             holdingDirection = true;
             if (transform.position == pos)
             {
-                playerAnim.SetFloat("movedir", direction);
-                pos += (Vector3.right);
+                playerAnim.SetFloat("movedir", (int)direction);
+                pos += (Vector3.down);
                 isMoving = true;
             }
 
         }
-        else if (dir == 3)
+        else if (dir == Direction.Left)
         {
-            direction = 3;
+            direction = Direction.Left;
             holdingDirection = true;
             if (transform.position == pos)
             {
-                playerAnim.SetFloat("movedir", direction);
-                pos += (Vector3.down);
+                playerAnim.SetFloat("movedir", (int)direction);
+                pos += (Vector3.left);
                  isMoving = true;
             }
         }
-        else if (dir == 4)
+        else if (dir == Direction.Right)
         {
-            direction = 4;
+            direction = Direction.Right;
             holdingDirection = true;
             if (transform.position == pos)
             { 
-                playerAnim.SetFloat("movedir", direction);
-                pos += (Vector3.left);
+                playerAnim.SetFloat("movedir", (int)direction);
+                pos += (Vector3.right);
                  isMoving = true;
             }
         }
@@ -428,7 +442,7 @@ yield return 0;
         SoundManager.instance.sfx.PlayOneShot (ledgeJumpClip);
         bool reachedMiddle = false;
         playerAnim.SetBool("ledgejumping", ledgejumping);
-        pos += direction == 2 ? new Vector3(0, -2, 0) : direction == 3 ? new Vector3(-2, 0, 0) : new Vector3(2, 0, 0);
+        pos += direction == Direction.Down ? new Vector3(0, -2, 0) : direction == Direction.Left ? new Vector3(-2, 0, 0) : new Vector3(2, 0, 0);
         disabled = true;
         Vector3 originalPos = transform.position;
         float ledgeJumpTime = 1.85f/2.775f; //divide the animation clip time over the correct number to get the same duration as the real game
@@ -451,32 +465,54 @@ yield return 0;
         onLoadMap.Invoke();
         ledgejumping = false;
         facedtile = null;
+        disabled = false;
         playerAnim.SetBool("ledgejumping", ledgejumping);
-        WaitToInteract(0.2f);
+       
 
 
 
     }
 
-    public void Warp(Vector2 position)
+    public IEnumerator Warp(Vector2 position)
     {
+        Inputs.Disable("start");
+        Inputs.disableDpad();
         isMoving = false;
+         WaitForSeconds wait = new WaitForSeconds(0.1f);
+        for(int i = 0; i < 3; i++){
+            yield return wait;
+            ScreenEffects.flashLevel--;
+        }
+yield return new WaitForSeconds(0.25f);
         transform.localPosition = position;
         pos = transform.position;
-        disabled = true;
+        
         onLoadMap.Invoke();
-        WaitToInteract();
+        ScreenEffects.flashLevel = 3;
+        yield return wait;
+        ScreenEffects.flashLevel = 0;
+        
+        Inputs.Enable("start");
+        Inputs.enableDpad();
+        isWarping = false;
+        GridTile currentTile = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
+        if(currentTile != null && currentTile.isWarp && currentTile.tileWarp.forceMove){
+        StartCoroutine(MovePlayerOneTile(direction));
+        }
+       
 
     }
     public void onWarp()
     {
-
+        holdingDirection = false;
+        isWarping = true;
         Debug.Log("Detected player.");
+        if(warpInfo.warpType == WarpType.WallWarp) walkedfromwarp = true;
         if (transform.position == pos && walkedfromwarp)
         {
             walkedfromwarp = false;
-            WarpInfo warp = MapManager.maptiles[(int)transform.position.x, (int)transform.position.y].tileWarp;
-            Warp(new Vector2(warp.warpposx, warp.warpposy));
+            WarpInfo warp = warpInfo;
+            StartCoroutine(Warp(new Vector2(warp.warpposx, warp.warpposy)));
 
         }
     }
@@ -505,7 +541,7 @@ yield return 0;
 			top.SetActive (!disabled);
 			bottom.SetActive (!disabled);
 
-			playerAnim.SetInteger ("movedirection", direction);
+			playerAnim.SetInteger ("movedirection", (int)direction);
 
             if (Inputs.released("down") || Inputs.released("right") || Inputs.released("left") || Inputs.released("up")) {
 				if (!manuallyWalking) holdingDirection = false;
@@ -515,23 +551,23 @@ yield return 0;
 				transform.localPosition = new Vector3 (Mathf.Round (transform.localPosition.x), Mathf.Round (transform.localPosition.y), 0);
 				pos = transform.position;
 			}
-			if (direction == 1) {
+			if (direction == Direction.Up) {
                 itemCheck =  MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y + 1, GameData.mapHeight)];
 
             }
-            if (direction == 2)
+            if (direction == Direction.Down)
             {
 
 
                 itemCheck = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y - 1, GameData.mapHeight)];
 
             }
-            if (direction == 3)
+            if (direction == Direction.Left)
             {
 
                 itemCheck = MapManager.maptiles[mod((int)transform.position.x - 1, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
             }
-            if (direction == 4)
+            if (direction == Direction.Right)
             {
 
                 itemCheck = MapManager.maptiles[mod((int)transform.position.x + 1, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
@@ -579,24 +615,7 @@ yield return 0;
 
 	}
 
-	public void WaitToInteract(){
-		Invoke ("ReenableInteracting", .1f);
-
-	}
-    public void WaitToInteract(float time)
-    {
-        disabled = true;
-        Invoke("ReenableInteracting", time);
-
-    }
-
-	void ReenableInteracting(){
-        if (!inBattle && Dialogue.instance.finishedWithTextOverall)
-        {
-            canInteractAgain = true;
-            disabled = false;
-        }
-	}
+	
 	public IEnumerator DisplayEmotiveBubble(int type){
 		disabled = true;
 		displayingEmotion = true;
@@ -620,25 +639,25 @@ yield return 0;
             {
                 cannotMoveLeft = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
-            else cannotMoveLeft = false;
+            else cannotMoveLeft = true;
             tileToCheck = MapManager.maptiles[mod((int)transform.position.x + 1, GameData.mapWidth), mod((int)transform.position.y, GameData.mapHeight)];
             if (tileToCheck != null)
             {
                 cannotMoveRight = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall  || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
-            else cannotMoveRight = false;
+            else cannotMoveRight = true;
             tileToCheck = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y + 1,GameData.mapHeight)];
             if (tileToCheck != null)
             {
                 cannotMoveUp = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
-            else cannotMoveUp = false;
+            else cannotMoveUp = true;
             tileToCheck = MapManager.maptiles[mod((int)transform.position.x, GameData.mapWidth), mod((int)transform.position.y - 1,GameData.mapHeight)];
             if (tileToCheck != null)
             {
                 cannotMoveDown = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || tileToCheck.hasItemBall || (tileToCheck.tag.Contains("Water") && walkSurfBikeState != 2);
             }
-            else cannotMoveDown = false;
+            else cannotMoveDown = true;
         }
     }
      public BattleManager battleManager;
@@ -724,7 +743,7 @@ Inputs.Enable("start");
             }
 		    moon.gameObject.SetActive(false);
              bag.gameObject.SetActive(false);
-            WaitToInteract(0.3f);
+            
 
         }
 

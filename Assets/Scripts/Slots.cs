@@ -225,7 +225,6 @@ public class Slots : MonoBehaviour {
 		canroll = false;
 		Dialogue.instance.displaysimmediate = false;
 		Dialogue.instance.Deactivate ();
-		play.WaitToInteract();
 		this.gameObject.SetActive (false);
 
 
@@ -373,11 +372,11 @@ public class Slots : MonoBehaviour {
 
 				}
 			} else {
-				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",1));
+				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",true));
 			}
 			} else {
 				if (GameData.coins > 0) {
-				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",1));
+				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",true));
 				} else {
 				yield return StartCoroutine(Dialogue.instance.text ("Darn! Ran out of"));
 				yield return StartCoroutine(Dialogue.instance.line ("coins!"));

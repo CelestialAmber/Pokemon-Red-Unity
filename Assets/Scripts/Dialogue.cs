@@ -6,7 +6,7 @@ public class Dialogue : MonoBehaviour {
 	private string str;
 	public float scrollequation;
 	public static string Name, opponentName;
-	public bool nextIsCont, nextisPara;
+	public bool needButtonPress;
 	public GameObject DialogueBox;
 	public string stringToReveal;
 	public bool  displaysimmediate;
@@ -104,7 +104,7 @@ public class Dialogue : MonoBehaviour {
 			}
 		}
 
-		if((nextIsCont || taskType == 5 || nextisPara)){
+		if((needButtonPress || taskType == 5 )){
             while (!Inputs.pressed("a")) {
 				
 				yield return new WaitForSeconds (0.001f);
@@ -127,16 +127,14 @@ public class Dialogue : MonoBehaviour {
 			theindicator.enabled = false;
 			finishedWithTextOverall = true;
 			finishedCurrentTask = true;
-			play.WaitToInteract ();
 			stringToReveal = "";
 		}
 		stringToReveal = str;
 		
       
-		nextIsCont = false;
+		needButtonPress = false;
 		
-		//displaysimmediate = false;
-		nextisPara = false;
+	
 
 	}
 	// Use this for initialization
@@ -171,7 +169,6 @@ public class Dialogue : MonoBehaviour {
 					selectedOption = 1;
 					StopAllCoroutines ();
                     Inputs.dialogueCheck = false;
-					play.WaitToInteract ();
 					dialoguetext.text = "";
                     cursor.SetActive(false);
 					finishedThePrompt = true;
@@ -205,7 +202,6 @@ public class Dialogue : MonoBehaviour {
 					finishedThePrompt = true;
 					Deactivate ();
 					StopAllCoroutines ();
-					play.WaitToInteract ();
 					dialoguetext.text = "";
 					finishedCurrentTask = true;
 					finishedWithTextOverall = true;
@@ -244,6 +240,7 @@ public class Dialogue : MonoBehaviour {
             scrollequation = .5f * Time.deltaTime;
 		}
 	}
+	
 
 	public IEnumerator para(string text){
 		finishedCurrentTask = false;
@@ -257,83 +254,65 @@ public class Dialogue : MonoBehaviour {
 /// <returns>The text.</returns>
 /// <param name="text">Text.</param>
 /// <param name="nextypeindex">Nextypeindex.</param>
-public IEnumerator para(string text, int nextypeindex)
+public IEnumerator para(string text, bool buttonPress)
 {
-	if (nextypeindex == 0)
-		nextIsCont = true;
-	else if (nextypeindex == 1)
-		nextisPara = true;
+	if (buttonPress)
+		needButtonPress = true;
 				finishedCurrentTask = false;
 		taskType = 1;
 		stringToReveal = "";
 		yield return StartCoroutine(AnimateText (text));
 	}
-public IEnumerator text(string text){
-		finishedWithTextOverall = false;
-		finishedCurrentTask = false;
-		taskType = 2;
-		stringToReveal = "";
-		yield return StartCoroutine(AnimateText (text));
-	}
-	/// <summary>
-	/// Initiates a starting text dialogue message signifying the next as a specific type. 0 for continue, 1 for paragraph.
-	/// </summary>
-	/// <returns>The text.</returns>
-	/// <param name="text">Text.</param>
-	/// <param name="nextypeindex">Nextypeindex.</param>
-public IEnumerator text(string text, int nextypeindex)
+
+public IEnumerator text(string text, bool buttonPress)
 {
-	if (nextypeindex == 0)
-		nextIsCont = true;
-	else if (nextypeindex == 1)
-		nextisPara = true;
+	if (buttonPress)
+		needButtonPress = true;
 			finishedWithTextOverall = false;
 		finishedCurrentTask = false;
 		taskType = 2;
 		stringToReveal = "";
 		yield return StartCoroutine(AnimateText (text));
 	}
-public IEnumerator line(string text){
-					finishedCurrentTask = false;
-		taskType = 3;
-
+	public IEnumerator text(string text)
+{
+			finishedWithTextOverall = false;
+		finishedCurrentTask = false;
+		taskType = 2;
+		stringToReveal = "";
 		yield return StartCoroutine(AnimateText (text));
 	}
-/// <summary>
-/// Initiates a generic text dialogue message signifying the next as a specific type. 0 for continue, 1 for paragraph.
-/// </summary>
-/// <returns>The text.</returns>
-/// <param name="text">Text.</param>
-/// <param name="nextypeindex">Nextypeindex.</param>
-public IEnumerator line(string text, int nextypeindex)
+
+public IEnumerator line(string text, bool buttonPress)
 {
-	if (nextypeindex == 0)
-		nextIsCont = true;
-	else if (nextypeindex == 1)
-		nextisPara = true;
+	if (buttonPress)
+		needButtonPress = true;
 	finishedCurrentTask = false;
 	taskType = 3;
 
-	yield return StartCoroutine(AnimateText(text));	}
-public IEnumerator cont(string text){
-					finishedCurrentTask = false;
-		taskType = 4;
-		stringToReveal =   text;
-		yield return StartCoroutine(AnimateText (text));
+	yield return StartCoroutine(AnimateText(text));
+		}
+		public IEnumerator line(string text){
 
-	}
-/// <summary>
-/// Initiates a continuing text dialogue message signifying the next as a specific type. 0 for continue, 1 for paragraph.
-/// </summary>
-/// <returns>The text.</returns>
-/// <param name="text">Text.</param>
-/// <param name="nextypeindex">Nextypeindex.</param>
-public IEnumerator cont(string text, int nextypeindex)
+	finishedCurrentTask = false;
+	taskType = 3;
+
+	yield return StartCoroutine(AnimateText(text));
+		}
+
+
+public IEnumerator cont(string text, bool buttonPress)
 {
-	if (nextypeindex == 0)
-		nextIsCont = true;
-	else if (nextypeindex == 1)
-		nextisPara = true;
+	if (buttonPress)
+		needButtonPress = true;
+	finishedCurrentTask = false;
+	taskType = 4;
+	stringToReveal = text;
+	yield return StartCoroutine(AnimateText(text));
+	}
+	public IEnumerator cont(string text)
+{
+
 	finishedCurrentTask = false;
 	taskType = 4;
 	stringToReveal = text;

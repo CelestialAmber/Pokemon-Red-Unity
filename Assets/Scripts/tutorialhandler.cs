@@ -77,19 +77,19 @@ public class TutorialHandler : MonoBehaviour {
 				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 			}
-			if (currentmenu == garynamemenu && selectedOption == 	0) {
+			if (currentmenu == garynamemenu && selectedOption == 0) {
 				currentmenu = nameselectionmenu;
 				nameselectionmenu.SetActive (true);
 				names.futureName = "";
 			}
-			if (currentmenu == garynamemenu && selectedOption == 	1) {
+			if (currentmenu == garynamemenu && selectedOption == 1) {
 				currentmenu = null;
                 Dialogue.opponentName = "BLUE";
 				tutanim.SetBool ("seventhpass", true);
 				Dialogue.instance.enabled = true;
 				givingRedAName = false;
 			}
-			if (currentmenu == garynamemenu && selectedOption == 	2) {
+			if (currentmenu == garynamemenu && selectedOption == 2) {
 				currentmenu = null;
                 Dialogue.opponentName = "GARY";
 				tutanim.SetBool ("seventhpass", true);
@@ -97,7 +97,7 @@ public class TutorialHandler : MonoBehaviour {
 				givingRedAName = false;
 
 			}
-			if (currentmenu == garynamemenu && selectedOption == 	3) {
+			if (currentmenu == garynamemenu && selectedOption == 3) {
 				currentmenu = null;
                 Dialogue.opponentName = "JOHN";
 				tutanim.SetBool ("seventhpass", true);
@@ -112,10 +112,10 @@ public class TutorialHandler : MonoBehaviour {
 		Dialogue.instance.deactivated = true;
 		currentmenu = null;
 		yield return StartCoroutine(Dialogue.instance.text ("Hello there!"));
-		yield return StartCoroutine(Dialogue.instance.line ("Welcome to the",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("world of POKeMON!",1));
+		yield return StartCoroutine(Dialogue.instance.line ("Welcome to the",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("world of POKeMON!",true));
 		yield return StartCoroutine(Dialogue.instance.para ("My name is OAK!"));
-		yield return StartCoroutine(Dialogue.instance.line("People call me",0));
+		yield return StartCoroutine(Dialogue.instance.line("People call me",true));
 		yield return StartCoroutine(Dialogue.instance.cont ("the POKeMON PROF!"));
 		yield return StartCoroutine(Dialogue.instance.done ());
 		tutanim.SetBool ("firstpass", true);
@@ -123,14 +123,14 @@ public class TutorialHandler : MonoBehaviour {
 	}
 	public IEnumerator SecondOakDialogue(){
 		yield return StartCoroutine(Dialogue.instance.text ("This world is"));
-		yield return StartCoroutine(Dialogue.instance.line ("inhabited by",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("creatures called",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("POKeMON!",1));
+		yield return StartCoroutine(Dialogue.instance.line ("inhabited by",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("creatures called",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("POKeMON!",true));
 		yield return StartCoroutine(Dialogue.instance.para("For some people,"));
-		yield return StartCoroutine(Dialogue.instance.line ("POKeMON are",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("pets. Others use",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("them for fights.",1));
-		yield return StartCoroutine(Dialogue.instance.para("Myself...",1));
+		yield return StartCoroutine(Dialogue.instance.line ("POKeMON are",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("pets. Others use",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("them for fights.",true));
+		yield return StartCoroutine(Dialogue.instance.para("Myself...",true));
 		yield return StartCoroutine(Dialogue.instance.para ("I study POKeMON"));
 		yield return StartCoroutine(Dialogue.instance.line ("as a profession."));
 		yield return StartCoroutine(Dialogue.instance.done ());
@@ -160,9 +160,9 @@ public class TutorialHandler : MonoBehaviour {
 	public IEnumerator FifthOakDialogue(){
 
 		yield return StartCoroutine(Dialogue.instance.text ("This is my grand-"));
-		yield return StartCoroutine(Dialogue.instance.line ("son. He's been",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("your rival since",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("you were a baby.",1));
+		yield return StartCoroutine(Dialogue.instance.line ("son. He's been",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("your rival since",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("you were a baby.",true));
 		yield return StartCoroutine(Dialogue.instance.para ("...Erm, what is"));
 		yield return StartCoroutine(Dialogue.instance.line ("his name again?"));
 		yield return StartCoroutine(Dialogue.instance.done ());
@@ -176,20 +176,20 @@ public class TutorialHandler : MonoBehaviour {
 	public IEnumerator SixthOakDialogue(){
 
 		yield return StartCoroutine(Dialogue.instance.text ("That's right! I"));
-		yield return StartCoroutine(Dialogue.instance.line ("remember now! His",0));
+		yield return StartCoroutine(Dialogue.instance.line ("remember now! His",true));
         yield return StartCoroutine(Dialogue.instance.cont ("name is " + GameData.rivalName + "!"));
 		yield return StartCoroutine(Dialogue.instance.done());
 		tutanim.SetBool ("eighthpass", true);
 	}
 	public IEnumerator SeventhOakDialogue(){
 
-        yield return StartCoroutine(Dialogue.instance.text (GameData.playerName + "!",1));
+        yield return StartCoroutine(Dialogue.instance.text (GameData.playerName + "!",true));
 		yield return StartCoroutine(Dialogue.instance.para ("Your very own"));
-		yield return StartCoroutine(Dialogue.instance.line ("POKeMON legend is",0));
-		yield return StartCoroutine(Dialogue.instance.cont("about to unfold!",1));
+		yield return StartCoroutine(Dialogue.instance.line ("POKeMON legend is",true));
+		yield return StartCoroutine(Dialogue.instance.cont("about to unfold!",true));
 		yield return StartCoroutine(Dialogue.instance.para ("A world of dreams"));
-		yield return StartCoroutine(Dialogue.instance.line ("and adventures",0));
-		yield return StartCoroutine(Dialogue.instance.cont ("with POKeMON",0));
+		yield return StartCoroutine(Dialogue.instance.line ("and adventures",true));
+		yield return StartCoroutine(Dialogue.instance.cont ("with POKeMON",true));
 		yield return StartCoroutine(Dialogue.instance.cont ("awaits! Let's go!"));
 		yield return StartCoroutine(Dialogue.instance.done());
 		tutanim.SetBool ("ninthpass", true);
