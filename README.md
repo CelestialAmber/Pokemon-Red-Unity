@@ -64,9 +64,9 @@ Move sounds by CELEBI: http://cutstuff.net/forum/index.php?topic=6528.0)
 
 - [x] Interactables - done
 
-- [ ] Warps - done except for fadeout, and slight functional variants
+- [x] Warps - done 
 
-- [ ] Tall Grass - done except for main functionality
+- [x] Tall Grass - done
 
 - [ ] Water - done except for main functionality
 
