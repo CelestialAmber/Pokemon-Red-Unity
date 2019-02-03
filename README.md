@@ -22,9 +22,6 @@ Interior: https://github.com/huderlem/RBMap
 Music-
 https://www.zophar.net/music/gameboy-gbs/pokemon-red
 
-Joycon Library:
-https://github.com/Looking-Glass/JoyconLib
-
 Sounds- 
 
 Thanks to https://github.com/dannye for helping me extract alot of sound effects from the game
@@ -96,4 +93,4 @@ Not done:  Save/Load
 - [ ] Trading - not done
 - [ ] Battling - not done
 --------------------------------------------------------
-- [ ] Sound - not done (lower priority than all else above)
+- [x] Sound - done 
