@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5945110692948074047
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6467040112955112719, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: m_Name
+      value: NPC 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleUpSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 12f8d601c8ee04cf3adc1daa8ca612b5,
+        type: 3}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleUpSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: a51ad526a7dee4862a133faf29d9de4b,
+        type: 3}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleDownSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 365f54cdb506d476581f830732e8908a,
+        type: 3}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleDownSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cda28bf80f85a40b1b006acd4a93d823,
+        type: 3}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleLeftSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc3084602f89c43e99a833a13a5e3027,
+        type: 3}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleLeftSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 479c9177b09ed4c4895a65a6f9e737f5,
+        type: 3}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleRightSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b987904a8166649e18e5f32a667fb380,
+        type: 3}
+    - target: {fileID: 6467040112955112717, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: idleRightSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 46c7b5e504bae43aa91aaef40fea1a38,
+        type: 3}
+    - target: {fileID: 6467040113096324442, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 365f54cdb506d476581f830732e8908a,
+        type: 3}
+    - target: {fileID: 6467040113092433992, guid: 7bff1b0df4e32492c8ca5f186ad51b7e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cda28bf80f85a40b1b006acd4a93d823,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7bff1b0df4e32492c8ca5f186ad51b7e, type: 3}

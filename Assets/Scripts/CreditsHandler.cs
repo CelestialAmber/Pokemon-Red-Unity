@@ -7,30 +7,36 @@ public class CreditsHandler : MonoBehaviour {
 	public int CreditIndex, MonIndex;
 	public Image monimage;
 	public Sprite[] mons = new Sprite[16];
-	public AudioSource audi;
 	public GameObject textboxes;
-	public AudioClip lol; 
-	// Use this for initialization
-	void Start () {
+    public static CreditsHandler instance;
+    public Animator anim;
+    private void Awake()
+    {
+        instance = this;
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
+   public void Init()
+    {
+        Player.disabled = true;
+        SoundManager.instance.PlaySongNoLoop(8);
+        CreditIndex = -2;
+        MonIndex = 1;
+        anim.SetTrigger("startCredits");
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
-	}
-	void BeginPlayingTrack(){
-		//audi.clip = lol;
-		//audi.Play ();
-
-
 	}
 	void SetMonSprite(){
 		if (MonIndex <= 0) {
 			monimage.enabled = false;
 		} else {
 			monimage.enabled = true;
-			monimage.sprite = mons [MonIndex - 1];
+			monimage.sprite = mons [MonIndex];
 		}
 		MonIndex++;
 

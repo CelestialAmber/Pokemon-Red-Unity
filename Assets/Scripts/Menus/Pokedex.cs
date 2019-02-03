@@ -10,7 +10,6 @@ public class Pokedex : MonoBehaviour
 {
     public GameObject entriescontainer;
     public List<GameObject> entries;
-    public Get get = new Get();
     public GameCursor cursor;
     public CustomText seentext, owntext;
     public int selectedSlot, topSlotIndex;
@@ -51,9 +50,10 @@ public class Pokedex : MonoBehaviour
         {
             entries.Add(entriescontainer.transform.GetChild(i).gameObject);
         }
-        bio = Get.bio;
-        mainMenu = Get.menu;
+        bio = ViewBio.instance;
+        mainMenu = MainMenu.instance;
     }
+  
     public void Init()
     {
         topSlotIndex = 1;
@@ -87,6 +87,7 @@ public class Pokedex : MonoBehaviour
         {
             if (Inputs.pressed("b") && !bio.displayingbio)
             {
+                SoundManager.instance.PlayABSound();
                 if (Player.disabled) Player.disabled = false;
                 if (selectingMon)
                 {
@@ -103,6 +104,7 @@ public class Pokedex : MonoBehaviour
             }
             if (Inputs.pressed("a") && !bio.displayingbio)
             {
+                SoundManager.instance.PlayABSound();
 
                 if (!selectingMon && GameData.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
                 {

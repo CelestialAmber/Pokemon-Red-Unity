@@ -2,51 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+[System.Serializable]
+public class DialogueMessage {
+public bool isContinue;
+public string message;
+}
+
+public enum DialogueType
+{
+Text,
+Continue,
+Done
+}
 public class Dialogue : MonoBehaviour {
 	private string str;
 	public float scrollequation;
 	public static string Name, opponentName;
-	public bool needButtonPress;
 	public GameObject DialogueBox;
 	public string stringToReveal;
-	public bool  displaysimmediate;
-	//public Text dialoguetext;
+	public bool fastText;
 	public CustomText dialoguetext;
 	public GameObject indicator;
 	public bool deactivated;
 	public GameObject subdialogue;
 	public int taskType;
-	public int textSpeed;
-    Get get = new Get();
-	public bool finishedWithTextOverall;
-	public bool finishedCurrentTask;
+	public bool finishedText;
 	public Image box;
 	public bool finishedThePrompt;
-	public Image theindicator;
 	public GameCursor cursor;
 	public int selectedOption;
-	public Slots lots;
 	public GameObject yesnomenu, slotsmenu, buycoinsmenu;
 	public Player play;
     public CustomText[] buycoinstext;
     MainMenu mainmenu;
     string laststring;
     public static Dialogue instance;
+    public bool keepTextOnScreen;
+    public UnityEvent onFinishText;
+    public DialogueType currentDialogueType;
     private void Awake()
     {
         instance = this;
     }
 	void Start(){
-        mainmenu = Get.menu;
+        mainmenu = MainMenu.instance;
         subdialogue.SetActive(true);
 		finishedThePrompt = true;
 		Name = "RED";
-		finishedCurrentTask = true;
-		finishedWithTextOverall = true;
+		finishedText = true;
 		box.enabled = false;
+        indicator.SetActive(false);
 		dialoguetext.enabled = false;
         dialoguetext.gameObject.SetActive(false);
-		theindicator.enabled = false;
 
 	}
 
@@ -56,29 +64,24 @@ public class Dialogue : MonoBehaviour {
 		box.enabled = true;
 		dialoguetext.enabled = true;
         dialoguetext.gameObject.SetActive(true);
-		theindicator.enabled = true;
 		indicator.SetActive (false);
 
+	strComplete = strComplete.Replace("<player>",GameData.playerName).Replace("<rival>",GameData.rivalName).Replace("#MON","POKéMON").Replace("//","\n");
 		int i = 0;
-		if (taskType == 3) {
-			str = stringToReveal + "\n" +  "";
-		} if(taskType != 5 && taskType != 3){
-			str = "";
-		}
-		if (taskType == 5) {
-			str = stringToReveal;
-
-		}
-        if(taskType == 4){
+		 if(currentDialogueType != DialogueType.Done) str = "";
+else str = stringToReveal;
+        if(currentDialogueType == DialogueType.Continue)
+        {
             str = laststring + "\n" + "";
         }
-            laststring = strComplete;
-
+		if(currentDialogueType != DialogueType.Done)laststring = strComplete.Substring(strComplete.IndexOf('\n')+1);
+       
 		
 		dialoguetext.text = str;
 
-		if(taskType != 5){
-            if(displaysimmediate){
+		if(currentDialogueType != DialogueType.Done)
+        {
+            if(fastText){
                 str += strComplete;
                 dialoguetext.text = str;
                 i = strComplete.Length;
@@ -90,49 +93,40 @@ public class Dialogue : MonoBehaviour {
 				
 			str += strComplete[i++];
 			dialoguetext.text = str;
-				if (!displaysimmediate) {
-                    if (Inputs.held("a")) {
-						yield return new WaitForSeconds (scrollequation  / 2);
-					
-					}
-					if (!Inputs.held("a")) {
-						yield return new WaitForSeconds (scrollequation / Time.deltaTime);
-
-					}
+				if (!fastText) {
+						yield return new WaitForSeconds (scrollequation);
 				}
 
 			}
 		}
 
-		if((needButtonPress || taskType == 5 )){
+		if(currentDialogueType == DialogueType.Done){
+            indicator.SetActive(true);
             while (!Inputs.pressed("a")) {
 				
 				yield return new WaitForSeconds (0.001f);
-				if (i == strComplete.Length || taskType == 5) {
-					indicator.SetActive (true);
-				}
                 if (Inputs.pressed("a")) {
+                    SoundManager.instance.PlayABSound();
 					break;
 				}
 
 			}
-
-		}
-		if (taskType == 5) {
             Inputs.dialogueCheck = false;
-			box.enabled = false;
-            dialoguetext.text = "";
-			dialoguetext.enabled = false;
-            dialoguetext.gameObject.SetActive(false);
-			theindicator.enabled = false;
-			finishedWithTextOverall = true;
-			finishedCurrentTask = true;
+			
+            if (!keepTextOnScreen)
+            {
+                box.enabled = false;
+                dialoguetext.text = "";
+                dialoguetext.enabled = false;
+                dialoguetext.gameObject.SetActive(false);
+            }
+            keepTextOnScreen = false;
+            indicator.SetActive(false);
+			finishedText = true;
 			stringToReveal = "";
 		}
+
 		stringToReveal = str;
-		
-      
-		needButtonPress = false;
 		
 	
 
@@ -141,38 +135,37 @@ public class Dialogue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
 		if (deactivated && !Player.disabled) {
 			Player.disabled = true;
 
 		}
 		buycoinstext [0].text = GameData.money.ToString ();
 		buycoinstext [1].text = GameData.coins.ToString ();
-		yesnomenu.SetActive (!finishedThePrompt);
-		slotsmenu.SetActive (!finishedThePrompt);
-		if(taskType != 6 && yesnomenu.activeSelf){
-			yesnomenu.SetActive(false);
-		}
-        if(taskType != 7 && slotsmenu.activeSelf){
-			slotsmenu.SetActive(false);
-		}
 		if (!finishedThePrompt) {
-			if (taskType == 6) {
+
                 if (Inputs.pressed("a")) {
 					finishedThePrompt = true;
 					StopAllCoroutines ();
                     Inputs.dialogueCheck = false;
 					dialoguetext.text = "";
                     cursor.SetActive(false);
-					finishedCurrentTask = true;
 				}
                 if (Inputs.pressed("b")) {
-					selectedOption = 1;
+                switch (taskType)
+                {
+                    case 0:
+                        selectedOption = 1;
+                        break;
+                    case 1:
+                        selectedOption = 3;
+                        break;
+                }
 					StopAllCoroutines ();
                     Inputs.dialogueCheck = false;
 					dialoguetext.text = "";
                     cursor.SetActive(false);
 					finishedThePrompt = true;
-					finishedCurrentTask = true;
 				}
 
 				
@@ -180,158 +173,96 @@ public class Dialogue : MonoBehaviour {
 
                 if (Inputs.pressed("down")) {
 					selectedOption++;
-                    MathE.Clamp(ref selectedOption, 0, 1);
-                    cursor.SetPosition(120, 72 - 16 * selectedOption);
+                switch (taskType)
+                {
+                    case 0:
+                        MathE.Clamp(ref selectedOption, 0, 1);
+                        cursor.SetPosition(120, 72 - 16 * selectedOption);
+                        break;
+                    case 1:
+                        MathE.Clamp(ref selectedOption, 0, 2);
+                        cursor.SetPosition(120, 40 - 16 * selectedOption);
+                        break;
+                }
+                    
                 }
                 if (Inputs.pressed("up")) {
 					selectedOption--;
-                    MathE.Clamp(ref selectedOption, 0, 1);
-                    cursor.SetPosition(120, 72 - 16 * selectedOption);
-				}
-				
-			}
-			if (taskType == 7) {
-                if (Inputs.pressed("a")) {
-					finishedThePrompt = true;
-					StopAllCoroutines ();
-					dialoguetext.text = "";
-					finishedCurrentTask = true;
-					finishedWithTextOverall = true;
-				}
-                if (Inputs.pressed("b")) {
-					finishedThePrompt = true;
-					Deactivate ();
-					StopAllCoroutines ();
-					dialoguetext.text = "";
-					finishedCurrentTask = true;
-					finishedWithTextOverall = true;
-					lots.Exit ();
-
-
-				}
-
+                switch (taskType)
+                {
+                    case 0:
+                        MathE.Clamp(ref selectedOption, 0, 1);
+                        cursor.SetPosition(120, 72 - 16 * selectedOption);
+                        break;
+                    case 1:
+                        MathE.Clamp(ref selectedOption, 0, 2);
+                        cursor.SetPosition(120, 40 - 16 * selectedOption);
+                        break;
+                }
                
-
-                if(!finishedWithTextOverall && !cursor.isActive){
-                    cursor.SetActive(true);
-                }
-
-                if (Inputs.pressed("down")) {
-					selectedOption++;
-                    MathE.Clamp(ref selectedOption, 0, 2);
-                    cursor.SetPosition(120, 40 - 16 * selectedOption);
 				}
-                if (Inputs.pressed("up")) {
-					selectedOption--;
-                    MathE.Clamp(ref selectedOption, 0, 2);
-                    cursor.SetPosition(120, 40 - 16 * selectedOption);
-				}
-			}
+				
+			
+
+			
 
 			} 
 		 
-		if (textSpeed == 1) {
-            scrollequation = 1 * Time.deltaTime;
+		if (GameData.textChoice == 2) {
+            scrollequation = 3 * 0.016f;
 		}
-		if (textSpeed == 2) {
-            scrollequation = 0.75f * Time.deltaTime;
+		if (GameData.textChoice == 1) {
+            scrollequation = 2f * 0.016f;
 		}
-		if (textSpeed == 3) {
-            scrollequation = .5f * Time.deltaTime;
+		if (GameData.textChoice == 0) {
+            scrollequation = 1f * 0.016f;
 		}
 	}
-	
 
-	public IEnumerator para(string text){
-		finishedCurrentTask = false;
-		taskType = 1;
+
+public IEnumerator text(string text){
+			finishedText = false;
+        currentDialogueType = DialogueType.Text;
 		stringToReveal = "";
 		yield return StartCoroutine(AnimateText (text));
+		yield return StartCoroutine(done());
 	}
-/// <summary>
-/// Initiates a paragraph text dialogue message signifying the next as a specific type. 0 for continue, 1 for paragraph.
-/// </summary>
-/// <returns>The text.</returns>
-/// <param name="text">Text.</param>
-/// <param name="nextypeindex">Nextypeindex.</param>
-public IEnumerator para(string text, bool buttonPress)
-{
-	if (buttonPress)
-		needButtonPress = true;
-				finishedCurrentTask = false;
-		taskType = 1;
+	public IEnumerator text(string text,bool keepText){
+			finishedText = false;
+        currentDialogueType = DialogueType.Text;
 		stringToReveal = "";
 		yield return StartCoroutine(AnimateText (text));
+		if(!keepText)yield return StartCoroutine(done());
 	}
-
-public IEnumerator text(string text, bool buttonPress)
-{
-	if (buttonPress)
-		needButtonPress = true;
-			finishedWithTextOverall = false;
-		finishedCurrentTask = false;
-		taskType = 2;
-		stringToReveal = "";
-		yield return StartCoroutine(AnimateText (text));
-	}
-	public IEnumerator text(string text)
-{
-			finishedWithTextOverall = false;
-		finishedCurrentTask = false;
-		taskType = 2;
-		stringToReveal = "";
-		yield return StartCoroutine(AnimateText (text));
-	}
-
-public IEnumerator line(string text, bool buttonPress)
-{
-	if (buttonPress)
-		needButtonPress = true;
-	finishedCurrentTask = false;
-	taskType = 3;
-
-	yield return StartCoroutine(AnimateText(text));
-		}
-		public IEnumerator line(string text){
-
-	finishedCurrentTask = false;
-	taskType = 3;
-
-	yield return StartCoroutine(AnimateText(text));
-		}
-
-
-public IEnumerator cont(string text, bool buttonPress)
-{
-	if (buttonPress)
-		needButtonPress = true;
-	finishedCurrentTask = false;
-	taskType = 4;
+	public IEnumerator cont(string text){
+	finishedText = false;
+        currentDialogueType = DialogueType.Continue;
 	stringToReveal = text;
 	yield return StartCoroutine(AnimateText(text));
+		yield return StartCoroutine(done());
 	}
-	public IEnumerator cont(string text)
-{
-
-	finishedCurrentTask = false;
-	taskType = 4;
-	stringToReveal = text;
-	yield return StartCoroutine(AnimateText(text));
-	}
-public IEnumerator done(){
-		taskType = 5;
-					finishedCurrentTask = false;
+    public IEnumerator cont(string text, bool keepText)
+    {
+        finishedText = false;
+        currentDialogueType = DialogueType.Continue;
+        stringToReveal = text;
+        keepTextOnScreen = true;
+        yield return StartCoroutine(AnimateText(text));
+        yield return StartCoroutine(done());
+    }
+    public IEnumerator done(){
+        currentDialogueType = DialogueType.Done;
 		yield return StartCoroutine(AnimateText (stringToReveal));
 
 	}
 	public IEnumerator prompt(){
 		selectedOption = 0;
-		taskType = 6;
+		taskType = 0;
         cursor.SetActive(true);
         cursor.SetPosition(120, 72 - 16 * selectedOption);
-		finishedCurrentTask = false;
-		finishedWithTextOverall = false;
+		finishedText = false;
 		finishedThePrompt = false;
+        yesnomenu.SetActive(true);
         while (!finishedThePrompt)
         {
             yield return new WaitForSeconds(0.1f);
@@ -340,16 +271,17 @@ public IEnumerator done(){
                 break;
             }
         }
-	}
+        yesnomenu.SetActive(false);
+    }
 	public IEnumerator slots(){
 		selectedOption = 0;
-		taskType = 7;
+		taskType = 1;
         cursor.SetActive(true);
         cursor.SetPosition(120, 40 - 16 * selectedOption);
-		finishedCurrentTask = false;
-		finishedWithTextOverall = false;
+		finishedText = false;
 		finishedThePrompt = false;
-		while (!finishedThePrompt)
+        slotsmenu.SetActive(true);
+        while (!finishedThePrompt)
         {
             yield return new WaitForSeconds(0.1f);
             if (finishedThePrompt)
@@ -357,19 +289,21 @@ public IEnumerator done(){
                 break;
             }
         }
-cursor.SetActive(false);
+        slotsmenu.SetActive(false);
+        cursor.SetActive(false);
 
 	}
 	public void Deactivate(){
 		StopAllCoroutines ();
-		finishedCurrentTask = true;
-		finishedWithTextOverall = true;
+		finishedText = true;
         Inputs.dialogueCheck = false;
 		stringToReveal = "";
 		box.enabled = false;
 		dialoguetext.enabled = false;
         dialoguetext.gameObject.SetActive(false);
-		theindicator.enabled = false;
+        indicator.SetActive(false);
+
+
 	}
 
 }

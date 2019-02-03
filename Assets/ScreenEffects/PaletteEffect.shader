@@ -2,7 +2,7 @@ Shader "Pokemon/Palette Effect"
 {
 	Properties
 	{
-		 _MainTex ("Texture", 2D) = "white" {}
+		 _MainTex ("Base (RGB)", 2D) = "white" {}
 		 //default colors that pokemon rb uses
         color1 ("Color 1", Color) = (1,1,1,1)
         color2 ("Color 2", Color) = (.564,.564,.564,1)
@@ -10,6 +10,8 @@ Shader "Pokemon/Palette Effect"
         color4 ("Color 4", Color) = (0,0,0,1)
 		//value determining the current screen flash level used. e.g. Wild Encounters
 		flashLevel ("Screen Flash", Range(-3,3)) = 0
+		screenPos ("Screen Position", Vector) = (0,0,0,0)
+
 	}
 	SubShader
 	{
@@ -21,8 +23,6 @@ Shader "Pokemon/Palette Effect"
         Name "MainEffects"
 
         CGPROGRAM
-// Upgrade NOTE: excluded shader from DX11, OpenGL ES 2.0 because it uses unsized arrays
-#pragma exclude_renderers d3d11 gles
         #pragma vertex vert
             #pragma fragment frag
             // make fog work
@@ -48,6 +48,7 @@ Shader "Pokemon/Palette Effect"
             float4 color1, color2, color3, color4;
 			int flashLevel;
 			int useRockTunnelColors;
+			float2 screenPos;
 			v2f vert (appdata v)
 			{
 				v2f o;
@@ -61,8 +62,10 @@ Shader "Pokemon/Palette Effect"
 			{
 
 //store colors in an array to make creating the flash effect easier
-				float4 colors[] = {color1,color2,color3,color4};
+				float4 colors[4] = {color1,color2,color3,color4};
+				i.uv += screenPos;
             float4 color = tex2D(_MainTex,i.uv);
+			if(i.uv.x < 0 || i.uv.x > 1 || i.uv.y < 0 || i.uv.y > 1) color = float4(1,1,1,1);
                 if(!any(float4(1,1,1,1) - color)){
                 color = colors[0 + (flashLevel < 0 ? -flashLevel : 0)];
                 }
@@ -77,6 +80,7 @@ Shader "Pokemon/Palette Effect"
                 color = colors[3 + (flashLevel < 0 ? min(-flashLevel,0) : -min(flashLevel,3))];
 				
                 }
+
                 return color;
 
 			}

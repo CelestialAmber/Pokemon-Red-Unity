@@ -4,37 +4,34 @@ using UnityEngine;
 
 public class TextDatabase : MonoBehaviour {
 	public GameObject itemPCMenu, shopmenu, slotmenu;
-	public Bag bag;
     public GameCursor cursor;
 	public Items itemDatabase;
 	public PokeMart pokeMart;
-	public Player player;
-	public PokemonMenu pokemonData;
-	public Slots slots;
-	// Use this for initialization
-	void Start () {
-
+    public Slots slots;
+	public static TextDatabase instance;
+    public IEnumerator[] enumerators;
+	void Awake(){
+		instance = this;
 	}
+	// Use this for initialization
 
 	// Update is called once per frame
 	void Update () {
 
 	}
-	public void PlayText(int ID, int amount){
+	public void PlayText(int ID){
 		switch (ID) {
-		case 1:
-		//	if (play.direction == 3 || play.direction == 4) {
-				StartCoroutine (Text1 ());
-		//	}
-			break;
+            case 1:
+                StartCoroutine("Text1");
+                break;
 		case 2:
-			StartCoroutine (Text2 ());
+			StartCoroutine ("Text2");
 			break;
 		case 3:
-			StartCoroutine (Text3 ());
+			StartCoroutine ("Text3");
 			break;
 		case 4:
-			StartCoroutine (Text4 ());
+			StartCoroutine ("Text4");
 			break;
 		
 		}
@@ -43,81 +40,78 @@ public class TextDatabase : MonoBehaviour {
 
 
 	}
-    public void GetItem(string item, int coinAmount){
-        if (coinAmount == 0)
+    public void GetItem(string item){
             StartCoroutine(GetItemText(item));
-        else StartCoroutine(FoundCoinsText(coinAmount));
     }
 
-    IEnumerator GetItemText(string item){
+    public IEnumerator GetItemText(string item){
         itemDatabase.AddItem(item, 1,false);
-        yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + " found "));
-        yield return StartCoroutine(Dialogue.instance.line(item.ToUpper() + "!"));
-        yield return StartCoroutine(Dialogue.instance.done());
+        yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + " found \n"+item.ToUpper() + "!"));
 
 
     }
-	IEnumerator Text1(){
-		if (player.direction == Direction.Left || player.direction == Direction.Right) {
-			if (GameData.coins > 0) {
-				yield return StartCoroutine(Dialogue.instance.text ("A slot machine!"));
-				yield return StartCoroutine(Dialogue.instance.line ("Want to play?"));
-                yield return StartCoroutine(Dialogue.instance.prompt ());
-				if (Dialogue.instance.selectedOption == 0) {
-					Dialogue.instance.Deactivate ();
-					Player.disabled = true;
-					StartCoroutine (player.DisplayEmotiveBubble (1));
-					while (player.displayingEmotion) {
-						yield return new WaitForSeconds (0.1f);
-						if (!player.displayingEmotion) {
-							break;
-						}
-					}
-					Player.disabled = true;
-					slotmenu.SetActive (true);
+    IEnumerator Text1()
+    {
+        if (Player.instance.direction == Direction.Left || Player.instance.direction == Direction.Right)
+        {
+            if (GameData.coins > 0)
+            {
+                yield return StartCoroutine(Dialogue.instance.text("A slot machine!\nWant to play?",true));
+                yield return StartCoroutine(Dialogue.instance.prompt());
+                if (Dialogue.instance.selectedOption == 0)
+                {
+                    Dialogue.instance.Deactivate();
+                    Player.disabled = true;
+                    StartCoroutine(Player.instance.DisplayEmotiveBubble(1));
+                    while (Player.instance.displayingEmotion)
+                    {
+                        yield return new WaitForSeconds(0.1f);
+                        if (!Player.instance.displayingEmotion)
+                        {
+                            break;
+                        }
+                    }
+                    Player.disabled = true;
+                    slotmenu.SetActive(true);
                     Inputs.Disable("start");
-					StartCoroutine (slots.Initialize ());
+                    StartCoroutine(Slots.instance.Initialize());
 
-				} else {
-					Dialogue.instance.Deactivate ();
-				}
+                }
+                else
+                {
+                    Dialogue.instance.Deactivate();
+                }
 
-			} else {
-				yield return StartCoroutine(Dialogue.instance.text ("You don't have any"));
-				yield return StartCoroutine(Dialogue.instance.line ("coins!"));
-				yield return StartCoroutine(Dialogue.instance.done ());
+            }
+            else
+            {
+                yield return StartCoroutine(Dialogue.instance.text("You don't have any\ncoins!"));
 
 
-			}
-		} else {
-			player.canInteractAgain = true;
-		}
-	}
+            }
+        }
+    }
 
-	IEnumerator Text2(){
+
+    IEnumerator Text2(){
 		Dialogue.instance.Deactivate ();
-        yield return StartCoroutine(Dialogue.instance.para (GameData.playerName + " turned on"));
-		yield return StartCoroutine(Dialogue.instance.line ("the PC!"));
-		yield return StartCoroutine(Dialogue.instance.done());
-        Player.disabled = true;
+        yield return StartCoroutine(Dialogue.instance.text (GameData.playerName + " turned on\nthe PC!"));
+		Player.instance.menuActive = true;
 		itemPCMenu.SetActive (true);
         Inputs.Disable("start");
         StartCoroutine(itemPCMenu.GetComponent<PC> ().Initialize ());
 	}
 	IEnumerator Text3(){
 		Dialogue.instance.Deactivate ();
-		yield return StartCoroutine(Dialogue.instance.para ("Battle!"));
-		yield return StartCoroutine(Dialogue.instance.done());
-		player.StartTrainerBattle(0);
+		yield return StartCoroutine(Dialogue.instance.text ("Battle!"));
+		Player.instance.StartTrainerBattle(0);
 
 
 	}
 	IEnumerator Text4(){
 		Dialogue.instance.Deactivate ();
-        yield return StartCoroutine(Dialogue.instance.text("Hi there!"));
-        yield return StartCoroutine(Dialogue.instance.line("May I help you?"));
-		yield return StartCoroutine(Dialogue.instance.done());
-		player.shopup = true;
+        yield return StartCoroutine(Dialogue.instance.text("Hi there!\nMay I help you?"));
+		Player.instance.menuActive = true;
         cursor.SetActive(true);
         Inputs.Disable("start");
 		pokeMart.martlist = itemDatabase.IndigoItems;
@@ -130,14 +124,6 @@ public class TextDatabase : MonoBehaviour {
 
 
 
-IEnumerator FoundCoinsText(int coinamount)
-{
-	GameData.coins += coinamount;
-	yield return StartCoroutine(Dialogue.instance.text("Found " + coinamount + " coins!"));
-	yield return StartCoroutine(Dialogue.instance.done());
 
-
-
-}
 
 }

@@ -10,7 +10,8 @@ TagManager:
   - LedgeRight
   - TallGrass
   - Water
-  - Fire
+  - MapCollider
+  - Tree
   layers:
   - Default
   - TransparentFX
@@ -22,11 +23,11 @@ TagManager:
   - 
   - MapEditor
   - ConsoleScene
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - MapCollider
+  - Object
+  - NPC Moving Hitbox
+  - Player Moving Hitbox
   - 
   - 
   - 

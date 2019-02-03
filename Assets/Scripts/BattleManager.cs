@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -36,7 +36,6 @@ public class BattleManager : MonoBehaviour {
 	public string playerpokemonnameinslot;
     public Pokemon playermon;
 	public CustomText playerHPtext;
-	public CustomText playermaxHPtext;
 	public CustomText playermonLeveltext;
     public CustomText playerName;
 	public Image playerHPBar;
@@ -71,11 +70,11 @@ public class BattleManager : MonoBehaviour {
 	4:trainer_party
 	5:player_only
 	 */
+	 public AudioClip sendOutMonClip;
 	public GameObject bgTextbox;
 	public BattleState battleState;
 	// Use this for initialization
-	void Start(){
-	}
+
 	public void Initialize(){
 		battleState = BattleState.Intro;
 		if(battleType == BattleType.Trainer){
@@ -90,9 +89,9 @@ public class BattleManager : MonoBehaviour {
         enemymon = enemyMons[0];
         playermon = GameData.party[0];
          playermon.RecalculateStats();
-        enemyHPBar.fillAmount = (Mathf.Round(enemymon.currenthp * 48 / enemymon.hp))/48;
-        playerHPBar.fillAmount = (Mathf.Round(playermon.currenthp * 48 / playermon.hp))/48;
-        playerName.text = playermon.name;
+        enemyHPBar.fillAmount = (Mathf.Round(enemymon.currenthp * 48 / enemymon.maxhp))/48;
+        playerHPBar.fillAmount = (Mathf.Round(playermon.currenthp * 48 / playermon.maxhp))/48;
+        playerName.text = playermon.nickname;
 		battleoverlay.gameObject.SetActive(true);
 		playerstats.SetActive (false);
 		enemystatsObject.SetActive (false);
@@ -105,6 +104,7 @@ public class BattleManager : MonoBehaviour {
 	}
 
 	public IEnumerator BattleInit(){
+		Player.instance.holdingDirection = false;
 
 	battleMainAnim.SetBool("isFadingIn",true);
         if (GameData.party[0].level - enemyMons[0].level <= -3) {
@@ -141,17 +141,15 @@ if(battleType == BattleType.Trainer){
 	float initialTimer = 0f;
 	while(initialTimer < 1.2f){
 		initialTimer += Time.deltaTime;
-	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(188,76,0),new Vector3(36,76,0),initialTimer/1.2f);
-	enemyMonObject.transform.localPosition = Vector3.Lerp(new Vector3(-28,124,0),new Vector3(124,124,0),initialTimer/1.2f);
+	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(188,76,0),new Vector3(38,76,0),initialTimer/1.2f);
+	enemyMonObject.transform.localPosition = Vector3.Lerp(new Vector3(-28,116,0),new Vector3(124,116,0),initialTimer/1.2f);
 	yield return new WaitForEndOfFrame();
 	}
-	
+	yield return StartCoroutine(SoundManager.instance.PlayCryCoroutine(PokemonData.MonToID(enemymon.name) - 1));
 battleoverlay.sprite = battleOverlaySprites[0];
 playerpokeballs.SetActive(true);
-	Dialogue.instance.displaysimmediate = true;
-		yield return StartCoroutine(Dialogue.instance.text ("Wild " + enemyMons[0].name));
-		yield return StartCoroutine(Dialogue.instance.line("appeared!"));
-		yield return StartCoroutine(Dialogue.instance.done ());
+	Dialogue.instance.fastText = true;
+		yield return StartCoroutine(Dialogue.instance.text ("Wild " + enemyMons[0].name + "\nappeared!"));
 		enemystatsObject.SetActive (true);
 		playerpokeballs.SetActive(false);
 		battleoverlay.sprite = battleOverlaySprites[3];
@@ -160,17 +158,20 @@ playerpokeballs.SetActive(true);
 	
 		playermon = GameData.party[0];
 		enemymon = enemyMons[0];
-			yield return StartCoroutine(Dialogue.instance.text ("Go! " + playermon.name + "!"));
+			yield return StartCoroutine(Dialogue.instance.text ("Go! " + playermon.name + "!",true));
 	while(initialTimer < 0.6f){
 		initialTimer += Time.deltaTime;
-	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(36,76,0),new Vector3(-26,76,0),initialTimer/0.6f);
+	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(38,76,0),new Vector3(-26,76,0),initialTimer/0.6f);
 	yield return new WaitForEndOfFrame();
 	}
 	
 	battleMainAnim.SetTrigger("sendMon");
 yield return new WaitForSeconds(1f);
+while(SoundManager.instance.isPlayingCry){
+	yield return new WaitForSeconds(0.01f);
+}
 		Dialogue.instance.Deactivate();
-		
+		selectedOption = 0;
 battleState = BattleState.PlayerTurn;
 currentmenu = battlemenu;
     }
@@ -178,9 +179,13 @@ currentmenu = battlemenu;
 ScreenEffects.flashLevel = -3;
 battleMainAnim.SetBool("isFadingIn",false);
 	}
+public void SendOutMonSound(){
+	SoundManager.instance.sfx.PlayOneShot(sendOutMonClip);
+}
 	public void SetBackMonImageActive(){
     playerMonObject.SetActive(true);
 	playerstats.SetActive(true);
+	SoundManager.instance.PlayCry(PokemonData.MonToID(playermon.name) - 1);
 	battleoverlay.sprite = battleOverlaySprites[2];
 	}
 	void UpdateMenus(){
@@ -201,7 +206,7 @@ foreach (GameObject menu in allmenus) {
 	void Update () {
 		UpdateMenus();
 		
-		if (battleState == BattleState.PlayerTurn && Dialogue.instance.finishedWithTextOverall) {
+		if (battleState == BattleState.PlayerTurn && Dialogue.instance.finishedText) {
 
 
 			UpdateStatsUI();
@@ -286,20 +291,19 @@ foreach (GameObject menu in allmenus) {
 
 	}
 	public void DetermineFrontSprite(){
-        frontportrait.overrideSprite = GameData.frontMonSprites[PokemonData.MonToID(enemymon.pokename) - 1];
+        frontportrait.overrideSprite = GameData.frontMonSprites[PokemonData.MonToID(enemymon.name) - 1];
 
 	}
 
 	public void DetermineBackSprite(){
-        backportrait.overrideSprite = GameData.backMonSprites[PokemonData.MonToID(playermon.pokename) - 1];
+        backportrait.overrideSprite = GameData.backMonSprites[PokemonData.MonToID(playermon.name) - 1];
 
 	}
 void UpdateStatsUI(){
 	enemymonLeveltext.text = (enemymon.level != 100 ? "È" : "") + enemymon.level.ToString();
 			playermonLeveltext.text = (playermon.level != 100 ? "È" : "") +  playermon.level.ToString ();
-			playerHPtext.text = playermon.currenthp.ToString ();
-			playermaxHPtext.text = playermon.hp.ToString ();
-            enemymonname.text = enemymon.name;
+			playerHPtext.text = (playermon.currenthp > 99 ? "" : playermon.currenthp > 9 ? " " : "  ") + playermon.currenthp + " " + playermon.maxhp;
+            enemymonname.text = enemymon.name.ToUpper();
 }
 	//these functions animate health.
 void UpdatePokeBallUI(){
@@ -423,17 +427,17 @@ switch(moveData.effect){
     {
         int newHealth = playermon.currenthp + amount;
         if (newHealth < 0) newHealth = 0;
-        if (newHealth > playermon.hp) newHealth = playermon.hp;
+        if (newHealth > playermon.maxhp) newHealth = playermon.maxhp;
         int result = Mathf.RoundToInt(newHealth - playermon.currenthp);
 
-        WaitForSeconds wait = new WaitForSeconds(5 / playermon.hp);
+        WaitForSeconds wait = new WaitForSeconds(5 / playermon.maxhp);
 
         for (int l = 0; l < Mathf.Abs(result); l++)
         {
             yield return wait;
 
             playermon.currenthp += 1 * Mathf.Clamp(result, -1, 1);
-            int pixelCount = Mathf.RoundToInt((float)playermon.currenthp * 48 / (float)playermon.hp);
+            int pixelCount = Mathf.RoundToInt((float)playermon.currenthp * 48 / (float)playermon.maxhp);
             playerHPBar.fillAmount = (float)pixelCount / 48;
 
         }
@@ -444,9 +448,9 @@ switch(moveData.effect){
     {
         int newHealth = enemymon.currenthp + amount;
         if (newHealth < 0) newHealth = 0;
-        if (newHealth > enemymon.hp) newHealth = enemymon.hp;
+        if (newHealth > enemymon.maxhp) newHealth = enemymon.maxhp;
         int result = Mathf.RoundToInt(newHealth - enemymon.currenthp);
-        WaitForSeconds wait = new WaitForSeconds(5 / enemymon.hp);
+        WaitForSeconds wait = new WaitForSeconds(5 / enemymon.maxhp);
 
         for (int l = 0; l < Mathf.Abs(result); l++)
         {
@@ -454,7 +458,7 @@ switch(moveData.effect){
 
             enemymon.currenthp += 1 * Mathf.Clamp(result, -1, 1);
 
-            int pixelCount = Mathf.RoundToInt((float)enemymon.currenthp * 48 / (float)enemymon.hp);
+            int pixelCount = Mathf.RoundToInt((float)enemymon.currenthp * 48 / (float)enemymon.maxhp);
    enemyHPBar.fillAmount = (float)pixelCount / 48;
 
         }

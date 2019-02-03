@@ -13,38 +13,82 @@ public static class MathE{
 }
 public class Options : MonoBehaviour {
 	public GameCursor cursor;
-	public GameObject[] textSlots, animSlots, battleSlots, menuSlots;
+	public RectTransform textSpeedArrow, battleAnimationArrow, battleStyleArrow;
 	public int selectedOption;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public static Options instance;
+    // Use this for initialization
+    private void Awake()
+    {
+        instance = this;
+    }
+    public void Init()
+    {
+        selectedOption = 0;
+        UpdateCursorPosition();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		menuSlots = new GameObject[transform.childCount];
+        if (Inputs.pressed("a"))
+        {
+            if (Title.instance.gameObject.activeSelf)
+            {
+                if (selectedOption == 3)
+                {
+                    SoundManager.instance.PlayABSound();
+                    Inputs.instance.DisableForSeconds("a", 0.2f);
+                    Title.instance.currentMenu = Title.instance.HasData ? Title.instance.datamenu : Title.instance.nodatamenu;
+                    this.gameObject.SetActive(false);
+                }
+            }
+            else if (MainMenu.instance.currentmenu == MainMenu.instance.optionsmenu)
+            {
+                if (selectedOption == 3)
+                {
+                    SoundManager.instance.PlayABSound();
+                    Inputs.Enable("start");
+                    MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
+                    this.gameObject.SetActive(false);
+                    
 
-		for (int i = 0; i < transform.childCount; i++) {
-			if (i == 4) {
-				break;
-			}
 
-			menuSlots [i] = transform.GetChild (i).gameObject;
-		}
+                }
+
+            }
+        }
+        if (Inputs.pressed("b"))
+        {
+            if (Title.instance.gameObject.activeSelf)
+            {
+                SoundManager.instance.PlayABSound();
+                this.gameObject.SetActive(false);
+            }
+            else if (MainMenu.instance.currentmenu == MainMenu.instance.optionsmenu)
+            {
+                SoundManager.instance.PlayABSound();
+                Inputs.Enable("start");
+                MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
+                this.gameObject.SetActive(false);
+
+            }
+        }
+		
         if (Inputs.pressed("left")) {
 			if (selectedOption == 0) {
 				GameData.textChoice--;
                 MathE.Clamp(ref GameData.textChoice, 0, 2);
-			}
+                UpdateCursorPosition();
+            }
 			if (selectedOption == 1) {
                 GameData.animationChoice--;
                 MathE.Clamp(ref GameData.animationChoice, 0, 1);
-			}
+                UpdateCursorPosition();
+            }
 			if (selectedOption == 2) {
                 GameData.battleChoice--;
                 MathE.Clamp(ref GameData.battleChoice, 0, 1);
-			}
+                UpdateCursorPosition();
+            }
 		}
 
         if (Inputs.pressed("right")) {
@@ -52,62 +96,59 @@ public class Options : MonoBehaviour {
 			if (selectedOption == 0) {
                 GameData.textChoice++;
                 MathE.Clamp(ref GameData.textChoice, 0, 2);
-			}
+                UpdateCursorPosition();
+            }
 			if (selectedOption == 1) {
                 GameData.animationChoice++;
                 MathE.Clamp(ref GameData.animationChoice, 0, 1);
-			}
+                UpdateCursorPosition();
+            }
 			if (selectedOption == 2) {
                 GameData.battleChoice++;
                 MathE.Clamp(ref GameData.battleChoice,0, 1);
-			}
+                UpdateCursorPosition();
+            }
 
 		}
 
         if (Inputs.pressed("down")) {
 			selectedOption++;
             MathE.Clamp(ref selectedOption, 0, 3);
-		}
+            UpdateCursorPosition();
+        }
         if (Inputs.pressed("up")) {
 			selectedOption--;
             MathE.Clamp(ref selectedOption, 0, 3);
-		}
+            UpdateCursorPosition();
+        }
 	
 	
-		textSlots = new GameObject[3];
-		animSlots = new GameObject[2];
-		battleSlots = new GameObject[2];
-	
-			for (int i = 0; i < transform.GetChild(0).childCount; i++) {
-
-				textSlots [i] = transform.GetChild(0).GetChild (i).gameObject;
-			}
-			for (int i = 0; i < transform.GetChild(1).childCount; i++) {
-
-				animSlots [i] = transform.GetChild(1).GetChild (i).gameObject;
-			}
-			for (int i = 0; i < transform.GetChild(2).childCount; i++) {
-
-				battleSlots [i] = transform.GetChild(2).GetChild (i).gameObject;
-			}
 
 
 	
-	if (menuSlots.Length != 0) {
-			
-		cursor.transform.position = menuSlots [selectedOption].transform.position;
-		
-			if (selectedOption == 0) {
-				cursor.transform.position = textSlots [GameData.textChoice].transform.position;
-			}
-			if (selectedOption == 1) {
-                cursor.transform.position = animSlots [GameData.animationChoice].transform.position;
-			}
-			if (selectedOption == 2) {
-                cursor.transform.position = battleSlots [GameData.battleChoice].transform.position;
-			}
-		
-
+	
 	}
-	}
+    void UpdateCursorPosition()
+    {
+        switch (selectedOption)
+        {
+            case 0:
+                if (GameData.textChoice == 2) cursor.SetPosition(112, 112);
+                else if (GameData.textChoice == 1) cursor.SetPosition(56, 112);
+                else cursor.SetPosition(8, 112);
+                textSpeedArrow.anchoredPosition = cursor.rectTransform.anchoredPosition + new Vector2(4,4);
+                break;
+            case 1:
+                cursor.SetPosition(8 + (9 * GameData.animationChoice) * 8, 72);
+                battleAnimationArrow.anchoredPosition = cursor.rectTransform.anchoredPosition + new Vector2(4, 4);
+                break;
+            case 2:
+                cursor.SetPosition(8 + (9 * GameData.battleChoice) * 8, 32);
+                battleStyleArrow.anchoredPosition = cursor.rectTransform.anchoredPosition + new Vector2(4, 4);
+                break;
+            case 3:
+                cursor.SetPosition(8, 8);
+                break;
+        }
+    }
 }

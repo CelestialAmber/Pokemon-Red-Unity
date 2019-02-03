@@ -12,16 +12,18 @@ public class VersionManager : MonoBehaviour {
     public Sprite[] frames;
     public GameObject sgbCanvas;
     public Camera renderCamera;
-    GameDataManager gameDataManager;
+    public static VersionManager instance;
+    public void Awake(){
+        instance = this;
+    }
     private void Start()
     {
-        gameDataManager = GameDataManager.Instance;    
     }
     // Update is called once per frame
     void Update () {
-        if (gameDataManager.currentScene == GameScene.SGB)
+        if (GameDataManager.instance.currentScene == GameScene.SGB)
             frame.sprite = frames[(int)version];
-        else if (gameDataManager.currentScene == GameScene.NintendoSwitch)
+        else if (GameDataManager.instance.currentScene == GameScene.NintendoSwitch)
             nintendoSwitchFrame.sprite = frames[(int)version];
        
 	}

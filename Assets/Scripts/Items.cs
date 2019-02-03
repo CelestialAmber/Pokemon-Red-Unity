@@ -20,6 +20,7 @@ public class Items : MonoBehaviour
     //for PC
     public List<Item> pcItems = new List<Item>();
     public PC lc;
+
     public List<string> ViridianItems = new List<string>(
         new string[]{
         "Poke Ball",

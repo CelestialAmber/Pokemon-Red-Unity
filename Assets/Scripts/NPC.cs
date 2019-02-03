@@ -1,280 +1,299 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class NPC : MonoBehaviour {
-	public enum FacingDirection{ North, South, West, East};
-	public FacingDirection currentdir;
-	public Sprite[] upsprites, downsprites, leftsprites, rightsprites;
-	public Player play;
-	public SpriteRenderer top, bottom;
-	public bool cannotMoveLeft, cannotMoveRight, cannotMoveDown, cannotMoveUp;
-	public enum NPCType{Static, Directions, Moving  };
-	public NPCType currentType;
-	public Vector3 pos;
-	Transform tr;
-	bool faceddirection, moveddirection;
-	public float facetimer, movetimer;
-	public bool moving;
-	public float speed = .1f;
-	RaycastHit2D leftCheck ;
-	RaycastHit2D rightCheck ;
-	RaycastHit2D upcheck ;
-	RaycastHit2D downCheck;
-
-	public LayerMask checkmask;
-	// Use this for initialization
-	void Start () {
-		tr = transform;
-
-		pos = transform.localPosition;
-		play = GameObject.Find ("Player").GetComponent<Player> ();
-	}
-	IEnumerator CheckTypes(){
-		if (currentType == NPCType.Directions) {
-
-			if (!faceddirection) {
-				facetimer += Time.deltaTime;
-				if (facetimer > 5) {
-					facetimer = 0;
-                    if (Dialogue.instance.finishedWithTextOverall) {
-						faceddirection = true;
-					}
-
-				}
-
-
-			}
-			if (faceddirection) {
-				int randomface = Random.Range (0, 4);
-				if (randomface == 0) {
-					currentdir = FacingDirection.North;
-				}
-				if (randomface == 1) {
-					currentdir = FacingDirection.South;
-				}
-				if (randomface == 2) {
-					currentdir = FacingDirection.West;
-				}
-				if (randomface == 3) {
-					currentdir = FacingDirection.East;
-				}
-				faceddirection = false;
-			}
-
-
-
-		}
-		if (currentType == NPCType.Moving) {
-
-			if (!moveddirection) {
-				movetimer += Time.deltaTime;
-				if (movetimer > 5) {
-					movetimer = 0;
-                    if (Dialogue.instance.finishedWithTextOverall) {
-						moveddirection = true;
-					}
-
-
-				}
-
-
-			}
-			if (moveddirection) {
-				int randommove = Random.Range (1, 5);
-				if (!moving) {
-					StartCoroutine (MovePlayerOneTile (randommove));
-				}
-				while (moving) {
-					yield return new WaitForSeconds (.1f);
-					if (tr.localPosition == pos) {
-						break;
-					}
-				}
-				moveddirection = false;
-			}
-
-
-
-
-
-
-		}
-	}
-	// Update is called once per frame
-	void Update () {
-		CheckCollision ();
-        if (Dialogue.instance.finishedWithTextOverall) {
-			StartCoroutine (CheckTypes ());
-		}
-
-		if (currentdir == FacingDirection.East) {
-			top.sprite = rightsprites [0];
-			bottom.sprite = rightsprites [1];
-
-		}
-		if (currentdir == FacingDirection.West) {
-
-			top.sprite = leftsprites [0];
-			bottom.sprite = leftsprites [1];
-
-		}
-		if (currentdir == FacingDirection.North) {
-
-			top.sprite = upsprites [0];
-			bottom.sprite = upsprites [1];
-
-		}
-		if (currentdir == FacingDirection.South) {
-
-			top.sprite = downsprites [0];
-			bottom.sprite = downsprites [1];
-
-		}
-	}
-	void CheckCollision(){
-		
-		 leftCheck = Physics2D.Raycast (transform.position, Vector2.left, 2,checkmask);
-		rightCheck = Physics2D.Raycast (transform.position, Vector2.right, 2,checkmask);
-		upcheck = Physics2D.Raycast (transform.position, Vector2.up, 2,checkmask);
-		downCheck = Physics2D.Raycast (transform.position, Vector2.down, 2,checkmask);
-		Debug.DrawRay (transform.position, Vector3.right, Color.red);
-		if (upcheck.collider != null) {
-
-			if (upcheck.collider.tag.Contains ("WallObject")) {
-				//print (upcheck.distance);
-				if (upcheck.distance <= 1) {
-					cannotMoveUp = true;
-				} else {
-					cannotMoveUp = false;
-
-				}
-
-			}
-		} else {
-			
-			cannotMoveUp = false;
-
-
-		}
-		if (downCheck.collider != null) {
-
-			if (downCheck.collider.tag.Contains ("WallObject")) {
-				//print (downCheck.distance);
-				if (downCheck.distance <= 1) {
-					cannotMoveDown = true;
-				} else {
-					cannotMoveDown = false;
-
-				}
-			}
-
-		} else {
-
-			cannotMoveDown = false;
-
-		}
-		if (leftCheck.collider != null) {
-
-			if (leftCheck.collider.tag.Contains ("WallObject")) {
-				//print (leftCheck.distance);
-				if (leftCheck.distance <= 1) {
-					cannotMoveLeft = true;
-				} else {
-					cannotMoveLeft = false;
-
-				}
-
-			}
-		} else {
-
-			cannotMoveLeft = false;
-
-		}
-		if (rightCheck.collider != null) {
-
-			if (rightCheck.collider.tag.Contains ("WallObject")) {
-				
-				if (rightCheck.distance <= 1) {
-					cannotMoveRight = true;
-				} else {
-					cannotMoveRight = false;
-
-				}
-
-			}
-		} else {
-			
-			cannotMoveRight = false;
-
-
-		}
-
-	}
-	public IEnumerator MovePlayerOneTile(int direction){
-		moving = true;
-
-		if (direction == 1) {
-			currentdir = FacingDirection.North;
-			if (cannotMoveUp) {
-				moving = false;
-				yield return 0;
-
-
-			}
-
-
-			if (!cannotMoveUp) {
-				pos += (Vector3.up);
-			}
-			
-		} else if (direction == 2) {
-			currentdir = FacingDirection.East;
-			if (cannotMoveRight) {
-				moving = false;
-				yield return 0;
-
-
-			}
-			if (!cannotMoveRight) {
-				pos += (Vector3.right);
-			}
-
-
-		} else if (direction == 3) {
-			currentdir = FacingDirection.South;
-			if (cannotMoveDown) {
-				moving = false;
-				yield return 0;
-
-
-			}
-			if (!cannotMoveDown) {
-				pos += (Vector3.down);
-			}
-
-		} else if (direction == 4) {
-			currentdir = FacingDirection.West;
-			if (cannotMoveLeft) {
-				moving = false;
-				yield return 0;
-
-
-			}
-			if (!cannotMoveLeft) {
-				pos += (Vector3.left);
-			}
-
-		}
-
-
-		while (moving) {
-			yield return new WaitForSeconds (.1f);
-			transform.localPosition = Vector3.MoveTowards (transform.localPosition, pos, Time.deltaTime * speed);
-			if (tr.localPosition == pos || !moving) {
-				break;
-			}
-		}
-		moving = false;
-
-	}
+/*
+Enum for all the different types of NPCS,
+which are static NPC's, ones that change direction,
+and ones that can move.
+*/
+public enum NPCType{
+    Static,
+    Direction,
+    MovingOneDirection,
+    Moving
+}
+
+//for Single direction NPCS
+public enum NPCDirection{
+Vertical,
+Horizontal
+}
+public class NPC : MonoBehaviour
+{
+    public Texture2D[] moveUpSprites,moveDownSprites,moveLeftSprites,moveRightSprites;
+    public Sprite[] idleUpSprites, idleDownSprites, idleLeftSprites, idleRightSprites;
+    public bool[] cannotMove = new bool[4], objectExists = new bool[4]; //follows the enum order
+    public Direction direction;
+    public Direction staticDirection;
+    public NPCType npcType;
+    public int movementDelay; //set to a random number from 0 to 127
+    public int frameTimer; //timer for decrementing the movementDelay every 2 frames;
+    public SpriteRenderer topRenderer, bottomRenderer;
+    public bool isMoving;
+    public float movingTimer; //moving takes 0.55 seconds (33 frames)
+    public NPCDirection npcDirection;
+    public Vector3 homePos;
+    public bool isTrainer;
+    public int trainerSpriteIndex;
+    public int textIndex;
+    public GameObject movingHitbox, exclamationBox;
+    public DialogueMessage[] dialogue;
+    public int framesSinceMoving;
+    // Start is called before the first frame update
+    void Start()
+    {
+        UpdateSprite();
+        homePos = transform.position;
+        frameTimer = 2;
+        movementDelay = Random.Range(0,128);
+    }
+private bool dontUpdateDireciton;
+    // Update is called once per frame
+    void UpdateDirectionBool(){
+         if(movementDelay == 1) dontUpdateDireciton = true; //moonwalking bug if exiting npc dialogue the frame before moving
+             Dialogue.instance.onFinishText.RemoveListener(UpdateDirectionBool);
+    }
+    void Update()
+    {
+        CheckCollision();
+         if(!Dialogue.instance.finishedText || Player.instance.menuActive || Player.instance.inBattle || GameData.isPaused) return;
+        if(isMoving) return;
+        frameTimer--;
+        if(frameTimer == 0){
+             movementDelay--;
+             frameTimer = 2;
+             if(movementDelay <= 0){
+             DoMovement();
+            movementDelay = Random.Range(0,128);
+             }
+        }
+        
+
+    }
+    void DoMovement(){
+Direction chosenDir;
+        switch(npcType){
+            case NPCType.Static:
+            direction = staticDirection;
+            UpdateSprite();
+            break;
+            case NPCType.Direction:
+            int newDir = Random.Range(0,4);
+            direction = (Direction)newDir;
+            UpdateSprite();
+            break;
+            case NPCType.MovingOneDirection:
+            switch(npcDirection){
+
+                case NPCDirection.Horizontal:
+                int random = Random.Range(0,2);
+                if(random == 0){
+                    chosenDir = Direction.Left;
+                    StartCoroutine(MoveNPC(chosenDir));
+                }else {
+                    chosenDir = Direction.Right;
+                    StartCoroutine(MoveNPC(chosenDir));
+                }
+                break;
+                case NPCDirection.Vertical:
+                random = Random.Range(0,2);
+                if(random == 0){
+                    chosenDir = Direction.Up;
+                    StartCoroutine(MoveNPC(chosenDir));
+                }else {
+                    chosenDir = Direction.Down;
+                    StartCoroutine(MoveNPC(chosenDir));
+                }
+                break;
+            }
+            break;
+            case NPCType.Moving:
+             newDir = Random.Range(0,4);
+            chosenDir = (Direction)newDir;
+            StartCoroutine(MoveNPC(chosenDir));
+            break;
+
+
+
+        }
+    }
+    public IEnumerator MoveNPC(Direction direction){
+        movingTimer = 0;
+        if(!dontUpdateDireciton) this.direction = direction;
+        dontUpdateDireciton = false;
+     UpdateSprite();
+     if(cannotMove[(int)direction]){ 
+         yield break;
+
+     }
+     isMoving = true;
+     Vector2 initialPos = transform.position;
+     Vector3 delta = (direction == Direction.Up ? Vector3.up : direction == Direction.Down ? Vector3.down : direction == Direction.Left ? Vector3.left : Vector3.right);
+     Vector2 targetPos = transform.position + delta;
+     movingHitbox.transform.position = targetPos;
+     while(movingTimer < 0.55f){
+        movingTimer += Time.deltaTime;
+        UpdateSprite();
+         transform.position = Vector2.Lerp(initialPos,targetPos,movingTimer/0.55f);
+         movingHitbox.transform.position = targetPos;
+         yield return new WaitForEndOfFrame();
+
+     }
+     isMoving = false;
+     framesSinceMoving = 0;
+     UpdateSprite();
+     movingHitbox.transform.position = transform.position;
+    }
+    void UpdateSprite(){
+        if(!isMoving){
+            switch(direction){
+                case Direction.Up:
+                topRenderer.sprite = idleUpSprites[0];
+                bottomRenderer.sprite = idleUpSprites[1];
+                break;
+                case Direction.Down:
+                topRenderer.sprite = idleDownSprites[0];
+                bottomRenderer.sprite = idleDownSprites[1];
+                break;
+                case Direction.Left:
+                topRenderer.sprite = idleLeftSprites[0];
+                bottomRenderer.sprite = idleLeftSprites[1];
+                break;
+                case Direction.Right:
+                topRenderer.sprite = idleRightSprites[0];
+                bottomRenderer.sprite = idleRightSprites[1];
+                break;
+
+            }
+        }else{
+            int frame;
+            if(direction == Direction.Up || direction == Direction.Down)
+             frame = Mathf.FloorToInt(movingTimer/0.55f * 4f) + 1;
+             else frame = Mathf.FloorToInt(movingTimer/0.55f * 4f) % 2 + 1;
+        switch(direction){
+                case Direction.Up:
+                topRenderer.sprite = Sprite.Create(moveUpSprites[0],new Rect(0f,64f - (float)frame/4f*64,16,16),new Vector2(0.5f,0.5f),16);
+                bottomRenderer.sprite = Sprite.Create(moveUpSprites[1],new Rect(0f,64f - (float)frame/4f*64,16,16),new Vector2(0.5f,0.5f),16);
+                break;
+                case Direction.Down:
+                topRenderer.sprite = Sprite.Create(moveDownSprites[0],new Rect(0f,64f - (float)frame/4f*64,16,16),new Vector2(0.5f,0.5f),16);
+                bottomRenderer.sprite = Sprite.Create(moveDownSprites[1],new Rect(0f,64f - (float)frame/4f*64,16,16),new Vector2(0.5f,0.5f),16);
+                break;
+                case Direction.Left:
+                topRenderer.sprite = Sprite.Create(moveLeftSprites[0],new Rect(0f,32f - (float)frame/2f*32,16,16),new Vector2(0.5f,0.5f),16);
+                bottomRenderer.sprite = Sprite.Create(moveLeftSprites[1],new Rect(0f,32f - (float)frame/2f*32,16,16),new Vector2(0.5f,0.5f),16);
+                break;
+                case Direction.Right:
+                topRenderer.sprite = Sprite.Create(moveRightSprites[0],new Rect(0f,32f - (float)frame/2f*32,16,16),new Vector2(0.5f,0.5f),16);
+                bottomRenderer.sprite = Sprite.Create(moveRightSprites[1],new Rect(0f,32f - (float)frame/2f*32,16,16),new Vector2(0.5f,0.5f),16);
+                break;
+
+            }
+
+        }
+
+
+    }
+    void CheckCollision(){
+        CheckObjectCollision();
+        if (!isMoving)
+        {
+            GridTile tileToCheck = null;
+            if(transform.position.x > 0)
+            tileToCheck = MapManager.maptiles[(int)transform.position.x - 1, (int)transform.position.y];
+            if (tileToCheck != null)
+            {
+                cannotMove[2] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[2];
+            }
+            else cannotMove[2] = true;
+            if(transform.position.x < GameData.mapWidth - 1)
+            tileToCheck = MapManager.maptiles[(int)transform.position.x + 1, (int)transform.position.y];
+            if (tileToCheck != null)
+            {
+                cannotMove[3] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[3];
+            }
+            else cannotMove[3] = true;
+            if(transform.position.y < GameData.mapHeight - 1)
+            tileToCheck = MapManager.maptiles[(int)transform.position.x, (int)transform.position.y + 1];
+            if (tileToCheck != null)
+            {
+                cannotMove[0] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[0];
+            }
+            else cannotMove[0] = true;
+            if(transform.position.y > 0)
+            tileToCheck = MapManager.maptiles[(int)transform.position.x, (int)transform.position.y - 1];
+            if (tileToCheck != null)
+            {
+                cannotMove[1] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[1];
+            }
+            else cannotMove[1] = true;
+        }
+        
+    if(transform.position.x - homePos.x > 3) cannotMove[3] = true;
+    if(transform.position.x - homePos.x < -3) cannotMove[2] = true;
+    if(transform.position.y - homePos.y > 3) cannotMove[0] = true;
+    if(transform.position.y - homePos.y < -3) cannotMove[1] = true;
+
+    }
+    public LayerMask layerMask, playerMask;
+    public void CheckObjectCollision(){
+        //Use a raycast to check for objects such as trees, etc...
+        RaycastHit2D ray; 
+        ray =  Physics2D.Raycast(transform.position,(direction == Direction.Up ? Vector2.up : direction == Direction.Down ? Vector2.down : direction == Direction.Left ? Vector2.left : Vector2.right),1,playerMask);
+        if(ray.collider != null && ray.collider.tag == "Player" && ray.distance <= 4.5 && isTrainer){ 
+            StartEncounter();
+            Debug.Log(ray.distance);
+        }
+         ray =  Physics2D.Raycast(transform.position + Vector3.up,Vector2.up,1,layerMask);
+         if(ray.collider != null) objectExists[0] = true;
+         else objectExists[0] = false;
+         ray =  Physics2D.Raycast(transform.position + Vector3.down,Vector2.down,1,layerMask);
+         if(ray.collider != null) objectExists[1] = true;
+         else objectExists[1] = false;
+         ray =  Physics2D.Raycast(transform.position + Vector3.left,Vector2.left,1,layerMask);
+         if(ray.collider != null) objectExists[2] = true;
+         else objectExists[2] = false;
+         ray =  Physics2D.Raycast(transform.position + Vector3.right,Vector2.right,1,layerMask);
+         if(ray.collider != null) objectExists[3] = true;
+         else objectExists[3] = false;
+
+    }
+    public void StartEncounter(){
+    Debug.Log("triggered an encounter");
+    }
+    public void FacePlayer(){
+        if(Player.instance.direction == Direction.Up){
+            direction = Direction.Down;
+            UpdateSprite();
+        }
+        if(Player.instance.direction == Direction.Down){
+            direction = Direction.Up;
+            UpdateSprite();
+        }
+        if(Player.instance.direction == Direction.Left){
+            direction = Direction.Right;
+            UpdateSprite();
+        }
+        if(Player.instance.direction == Direction.Right){
+            direction = Direction.Left;
+            UpdateSprite();
+        }
+    }
+   public IEnumerator NPCText(){
+     Dialogue.instance.onFinishText.AddListener(UpdateDirectionBool);
+      foreach(DialogueMessage dialogueMessage in dialogue){
+
+          if(dialogueMessage.message.Contains("giveItem(")){
+          string itemToGive = dialogueMessage.message.Replace("giveItem(","").Replace(")","");
+          yield return TextDatabase.instance.GetItemText(itemToGive);
+          
+          }else{
+              if(dialogueMessage.isContinue){
+            yield return Dialogue.instance.cont(dialogueMessage.message);
+              }else{
+                  yield return Dialogue.instance.text(dialogueMessage.message);
+              }
+          }
+      } 
+    }
 }

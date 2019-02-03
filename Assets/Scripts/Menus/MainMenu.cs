@@ -10,17 +10,16 @@ public class MainMenu : MonoBehaviour {
 	public GameCursor cursor;
 	public GameObject pokemonmenu, Bagmenu, badgesmenu, thismenu, optionsmenu, pokedexmenu;
 	public GameObject currentmenu;
-	public Options opti;
-    public Get get = new Get();
+	private Options options;
     private Bag bag;
     private Pokedex pokedex;
-	public PokemonMenu pk;
+	private PokemonMenu pokemonMenu;
     public CustomText playername;
     public int slotNumber;
-	public bool disableB;
 	// Use this for initialization
 	public void Initialize(){
 		currentmenu = thismenu;
+		cursor.SetActive(true);
 	}
     public static MainMenu instance;
     private void Awake()
@@ -29,20 +28,21 @@ public class MainMenu : MonoBehaviour {
     }
     private void Start()
     {
-        bag = Get.bag;
-        pokedex = Get.pokedex;
+        bag = Bag.instance;
+        pokedex = Pokedex.instance;
+        options = Options.instance;
+        pokemonMenu = PokemonMenu.instance;
+        
+
+
     }
     // Update is called once per frame
     void Update () {
-		if(disableB && Inputs.released("b")) disableB = false;
        
 		if (currentmenu == null) {
 			cursor.SetActive (false);
 		} else if(currentmenu == thismenu){
             playername.text = GameData.playerName;
-
-
-			cursor.SetActive (true);
             cursor.SetPosition(88, 120 - 16 * selectedOption);
 
 
@@ -62,18 +62,12 @@ public class MainMenu : MonoBehaviour {
 
 			}
 		}
-		if (currentmenu == badgesmenu) {
-
-			cursor.SetActive (false);
-		}
+		
 
         if (Inputs.pressed("start")) {
 			if (currentmenu == thismenu) {
 
-				cursor.SetActive (false);
-				currentmenu = null;
-				play.startmenuup = false;
-
+				Close();
 
 			}
 
@@ -81,120 +75,98 @@ public class MainMenu : MonoBehaviour {
 		}
 		
 		if (Inputs.pressed("a")) {
-		
-		
-			if (currentmenu == badgesmenu) {
-				currentmenu = thismenu;
-                Inputs.Enable("start");
-				badgesmenu.SetActive (false);
-				return;
-
-			}
-			else if (currentmenu == thismenu) {
-					if (selectedOption == 0) {
-                        if(currentmenu == thismenu){
-                            currentmenu = pokedexmenu;
-                            pokedexmenu.SetActive(true);
-                            Inputs.Disable("start");
-                            pokedex.Init();
-                           
-                        }
-					}
-					if (selectedOption == 1) {
-						if (currentmenu == thismenu) {
-							currentmenu = pokemonmenu;
-							pk.currentMenu = pk.mainwindow;
-                            Inputs.Disable("start");
-							pk.selectedOption = 0;
-                            pokemonmenu.SetActive(true);
-							pk.Initialize ();
-
-							
-						}
-					}
-					if (selectedOption == 2) {
 
 
-						if (currentmenu == thismenu) {
-							
-							bag.Initialize();
-							bag.selectBag = -1;
-							currentmenu = Bagmenu;
-                            cursor.SetActive(true);
-							Bagmenu.SetActive (true);
-                            Inputs.Disable("start");
-                        
-							
+             if (currentmenu == thismenu)
+            {
+                SoundManager.instance.PlayABSound();
+                if (selectedOption == 0)
+                {
+                 
+                        currentmenu = pokedexmenu;
+                        pokedexmenu.SetActive(true);
+                        Inputs.Disable("start");
+                        pokedex.Init();
 
-						}
-					}
-				}
-				if (selectedOption == 3) {
-					currentmenu = badgesmenu;
+                    
+                }
+                if (selectedOption == 1)
+                {
+                   
+                        currentmenu = pokemonmenu;
+                        pokemonMenu.currentMenu = pokemonMenu.mainwindow;
+                        Inputs.Disable("start");
+                        pokemonMenu.selectedOption = 0;
+                        pokemonmenu.SetActive(true);
+                        pokemonMenu.Initialize();
+
+
+                    
+                }
+                if (selectedOption == 2)
+                {
+
+                        bag.Initialize();
+                        bag.selectBag = -1;
+                        currentmenu = Bagmenu;
+                        cursor.SetActive(true);
+                        Bagmenu.SetActive(true);
+                        Inputs.Disable("start");
+                }
+
+                if (selectedOption == 3)
+                {
+                    currentmenu = badgesmenu;
+                    cursor.SetActive(false);
                     Inputs.Disable("start");
                     badgesmenu.GetComponent<Badges>().Init();
-					badgesmenu.SetActive (true);
-					
-				}
-				if (selectedOption == 4) {
+                    badgesmenu.SetActive(true);
 
-				}
-				if (selectedOption == 5) {
-					opti.selectedOption = 0;
-					if (currentmenu == thismenu) {
-						optionsmenu.SetActive (true);
+                }
+                if (selectedOption == 4)
+                {
+
+                }
+                if (selectedOption == 5)
+                {
+                    options.Init();
+          
+                        optionsmenu.SetActive(true);
                         Inputs.Disable("start");
-						currentmenu = optionsmenu;
-						
+                        currentmenu = optionsmenu;
 
-
-					}
-				}
-				if (selectedOption == 6) {
-					if (currentmenu == thismenu) {
-						cursor.SetActive (false);
-						currentmenu = null;
-						play.startmenuup = false;
-					
-
-
-					}
-				}
+                    
+                }
+                if (selectedOption == 6)
+                {
+                   
+                        Close();
+                    
+                }
+            }
 
 			
 
 
-				if (currentmenu == optionsmenu) {
-					if (opti.selectedOption == 3) {
-                    Inputs.Enable("start");
-						optionsmenu.SetActive (false);
-						currentmenu = thismenu;
-					
-
-					}
-
-				}
+				
 
 
 
 			
 		}
-		if (Inputs.pressed("b") && !disableB) {
+		if (Inputs.pressed("b")) {
 			if (currentmenu == thismenu) {
-				cursor.SetActive (false);
-				currentmenu = null;
-				play.startmenuup = false;
+				SoundManager.instance.PlayABSound();
+				Close();
 
-
-
-			}
-			if (currentmenu == optionsmenu) {
-                Inputs.Enable("start");
-				optionsmenu.SetActive (false);
-				currentmenu = thismenu;
 
 			}
 		}
 	}
-
+public void Close(){
+cursor.SetActive (false);
+currentmenu = null;
+play.startMenuActive = false;
+this.gameObject.SetActive(false);
+}
 }

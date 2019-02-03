@@ -4,9 +4,6 @@ using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Threading;
 #if (UNITY_EDITOR)
 using UnityEditor;
 #endif
@@ -45,11 +42,9 @@ public class MapData{
  
 
 }
-public class TileIndex{
-    public string indiceString;
-}
+
 public class BlockIndex{
-    public TileIndex[] indices;
+    public string[] indices;
 }
 public class TilesetIndex
 {
@@ -81,7 +76,7 @@ public class MapEditor : MonoBehaviour
 
             go = Instantiate(template, parent.transform, true);
 
-       
+        if (currentTileIndex == 31) currentTileIndex = 24;
                 go.transform.localPosition = snappos;
                 go.tag = tilepool[currentTileIndex].tag;
         go.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>(tilepool[currentTileIndex].path.Replace("Assets/Resources/", "").Replace(".png", ""))[0];
@@ -118,10 +113,30 @@ public class MapEditor : MonoBehaviour
         string i1, i2, i3, i4;
         //Create string variables to retrieve the values from the string;
         for (int i = 0; i < map.tileMap.Length; i++){
+            //point any duplicate tileset number to the preexisting tileset
+            int tilesetNumber = map.tilesetNumber;
+            switch (tilesetNumber)
+            {
+                case 4:
+                    tilesetNumber = 1;
+                    break;
+                case 6:
+                    tilesetNumber = 2;
+                    break;
+                case 7:
+                    tilesetNumber = 5;
+                    break;
+                case 10:
+                    tilesetNumber = 9;
+                    break;
+                case 12:
+                    tilesetNumber = 9;
+                    break;
+            }
             //is a tileset slot missing?
-            if(tSetIndexes.indices[map.tilesetNumber].indices.Length >= map.tileMap[i]) {
-                
-                indicelist = tSetIndexes.indices[map.tilesetNumber].indices[map.tileMap[i]].indiceString;
+            if (tSetIndexes.indices[tilesetNumber].indices.Length >= map.tileMap[i]) {
+               
+                indicelist = tSetIndexes.indices[tilesetNumber].indices[map.tileMap[i]];
             }
           //set it as a null tile to not cause errors
             else indicelist = "0, 0, 0, 0";
@@ -157,9 +172,6 @@ public class MapEditor : MonoBehaviour
 [CustomEditor(typeof(MapEditor))]
 public class MapTileEditor : Editor
 {
-   
-    private static bool m_editMode = false;
-    private static bool m_editMode2 = false;
     public int curmap = 0;
     //assume that the atlas's size will be what it is manually set to;
     public Vector2 atlasSize = new Vector2(1024, 512);
@@ -172,7 +184,6 @@ public override void OnInspectorGUI()
         //iterate through the gameobjects in the map container, and parse their values;
         if(GUILayout.Button("Save Map to file")){
             GridTile[,] loadedTiles  = Serializer.Load2D<GridTile>(Application.streamingAssetsPath + "/map.txt");
-            Get get = new Get();
 
             List<GameObject> foundtiles = new List<GameObject>();
 
@@ -208,7 +219,6 @@ public override void OnInspectorGUI()
                 if (gridTile.isInteractable)
                 {
                     gridTile.hasItem = gridTile.tiledata.hasItem;
-                    gridTile.hasItemBall = gridTile.tiledata.hasItemBall;
                 }
                 if (gridTile.isAnimated){
                     tempname = AssetDatabase.GetAssetPath(child.GetComponent<SpriteRenderer>().sprite);
@@ -258,7 +268,6 @@ public override void OnInspectorGUI()
         }
         if (GUILayout.Button("Load editor data"))
         {
-           
             me.tSetIndexes = Serializer.JSONtoObject<TilesetIndex>("blockIndexData.json");
             me.maps = Serializer.JSONtoObject<MapData[]>("romMapData.json");
             me.tilepool = Serializer.JSONtoObject<List<Tile>>("tilePoolData.json");

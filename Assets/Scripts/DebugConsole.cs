@@ -90,13 +90,14 @@ public class DebugConsole : MonoBehaviour
             {
                 
                GameData.party.Add(new Pokemon(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
-                Get.pokeMenu.healthbars[i] = Get.pokeMenu.partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
+                PokemonMenu.instance.healthbars[i] = PokemonMenu.instance.partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
             }
             Message("Generated a new party.");
 
         }else if(input == "/credits"){
             Player.disabled = true;
-            Get.player.credits.SetActive(true);
+            CreditsHandler.instance.gameObject.SetActive(true);
+            CreditsHandler.instance.Init();
         }else if(input == "/colorTest"){
             
         }

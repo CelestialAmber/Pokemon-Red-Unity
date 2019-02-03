@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class NameSelection : MonoBehaviour {
 	public int currentXselection, currentYselection;
 	public GameCursor cursor;
-	public TutorialHandler tut;
 	public int maxNameSize;
 	public string futureName;
 	public Sprite uppercase, lowercase;
@@ -16,10 +15,7 @@ public class NameSelection : MonoBehaviour {
 	public bool isLowerCase;
 	public  CustomText displaytext;
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (isLowerCase) {
@@ -28,7 +24,7 @@ public class NameSelection : MonoBehaviour {
 			nameselectscreen.sprite = uppercase;
 		}
 		displaytext.text = futureName;
-		if (tut.givingRedAName || tut.givingGaryAName) {
+		if (BeginHandler.instance.givingRedAName || BeginHandler.instance.givingGaryAName) {
 			maxNameSize = 7;
 		} else {
 			maxNameSize = 10;
@@ -66,49 +62,53 @@ public class NameSelection : MonoBehaviour {
         if (Inputs.pressed("start")) {
 
 			if (futureName.Length != 0) {
-				if (tut.givingRedAName) {
+				if (BeginHandler.instance.givingRedAName) {
 					GameData.playerName = futureName;
-					tut.tutanim.SetBool ("fourthpass", true);
+                    BeginHandler.instance.tutanim.SetTrigger("transition");
                     Dialogue.instance.enabled = true;
-					tut.givingRedAName = false;
+                    BeginHandler.instance.givingRedAName = false;
 					this.gameObject.SetActive (false);
 				}
-				if (tut.givingGaryAName) {
+				if (BeginHandler.instance.givingGaryAName) {
                     GameData.rivalName = futureName;
-					tut.tutanim.SetBool ("seventhpass", true);
+                    BeginHandler.instance.tutanim.SetTrigger("transition");
                     Dialogue.instance.enabled = true;
-					tut.givingGaryAName = false;
+                    BeginHandler.instance.givingGaryAName = false;
 					this.gameObject.SetActive (false);
 				}
 
-				tut.currentmenu = null;
+                BeginHandler.instance.currentmenu = null;
 			}
 
 
 		}
 		if (Inputs.pressed("a")) {
-			
-			if (isLowerCase) {
-				if (currentXselection == 8 && currentYselection == 4) {
-					if (futureName.Length != 0) {
-						if (tut.givingRedAName) {
-                            GameData.playerName = futureName;
-							tut.tutanim.SetBool ("fourthpass", true);
-                            Dialogue.instance.enabled = true;
-							tut.givingRedAName = false;
-							this.gameObject.SetActive (false);
-						}
-						if (tut.givingGaryAName) {
-                            GameData.rivalName = futureName;
-							tut.tutanim.SetBool ("seventhpass", true);
-							Dialogue.instance.enabled = true;
-							tut.givingGaryAName = false;
-							this.gameObject.SetActive (false);
-						}
+            if (currentXselection == 8 && currentYselection == 4)
+            {
+                if (futureName.Length != 0)
+                {
+                    if (BeginHandler.instance.givingRedAName)
+                    {
+                        GameData.playerName = futureName;
+                        BeginHandler.instance.tutanim.SetTrigger("transition");
+                        Dialogue.instance.enabled = true;
+                        BeginHandler.instance.givingRedAName = false;
+                        this.gameObject.SetActive(false);
+                    }
+                    if (BeginHandler.instance.givingGaryAName)
+                    {
+                        GameData.rivalName = futureName;
+                        BeginHandler.instance.tutanim.SetTrigger("transition");
+                        Dialogue.instance.enabled = true;
+                        BeginHandler.instance.givingGaryAName = false;
+                        this.gameObject.SetActive(false);
+                    }
 
-						tut.currentmenu = null;
-					}
-				}
+                    BeginHandler.instance.currentmenu = null;
+                }
+            }
+            if (isLowerCase) {
+				
 				if (currentXselection == 0 && currentYselection == 5) {
 					isLowerCase = !isLowerCase;
 				}
@@ -204,7 +204,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if (currentXselection == 3 && currentYselection == 4) {
-					futureName += "{"; //
+					futureName += "♂"; //
 				}
 
 				
@@ -228,7 +228,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if (currentXselection == 4 && currentYselection == 4) {
-					futureName += "}"; //female 
+					futureName += "♀"; //female 
 				}
 
 				
@@ -324,26 +324,7 @@ public class NameSelection : MonoBehaviour {
 				
 
 			} else {
-				if (currentXselection == 8 && currentYselection == 4) {
-					if (futureName.Length != 0) {
-						if (tut.givingRedAName) {
-                            GameData.playerName = futureName;
-							tut.tutanim.SetBool ("fourthpass", true);
-                            Dialogue.instance.enabled = true;
-							tut.givingRedAName = false;
-							this.gameObject.SetActive (false);
-						}
-						if (tut.givingGaryAName) {
-                            GameData.rivalName = futureName;
-							tut.tutanim.SetBool ("seventhpass", true);
-                            Dialogue.instance.enabled = true;
-							tut.givingGaryAName = false;
-							this.gameObject.SetActive (false);
-						}
-
-						tut.currentmenu = null;
-					}
-				} 
+			
 			
 				if(currentXselection == 0 && currentYselection == 5){
 					isLowerCase = !isLowerCase;

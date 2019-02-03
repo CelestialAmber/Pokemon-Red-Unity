@@ -46,12 +46,12 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile9.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile10.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
@@ -61,17 +61,17 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile12.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile13.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
-    "path": "Assets/Resources/interiortiles/Collision/tile14.png",
-    "tag": "WallObject",
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile14.png",
+    "tag": "Untagged",
     "isAnimated": false
   },
   {
@@ -95,7 +95,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile19.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile19.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -161,17 +161,17 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile32.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile33.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile34.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
@@ -181,17 +181,17 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile36.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile37.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile38.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
@@ -281,42 +281,42 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile56.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile57.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile58.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile59.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile60.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile61.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile62.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile63.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
@@ -411,12 +411,12 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile82.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": false
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile83.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": false
   },
   {
@@ -835,12 +835,12 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile167.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile167.png",
     "tag": "Untagged",
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile168.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile168.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -1245,7 +1245,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile249.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile249.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -1766,7 +1766,7 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile353.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
@@ -1960,12 +1960,12 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile392.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile392.png",
     "tag": "Untagged",
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile393.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile393.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -2400,12 +2400,12 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile480.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile480.png",
     "tag": "Untagged",
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile481.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile481.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -2441,17 +2441,17 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile488.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile489.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile490.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
@@ -2500,7 +2500,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile500.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile500.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -2536,17 +2536,17 @@
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile507.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile508.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
     "path": "Assets/Resources/interiortiles/Water/tile509.png",
-    "tag": "Untagged",
+    "tag": "Water",
     "isAnimated": true
   },
   {
@@ -3110,7 +3110,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile622.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile622.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -3145,7 +3145,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile629.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile629.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -3300,12 +3300,12 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile660.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile660.png",
     "tag": "Untagged",
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile661.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile661.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -3410,7 +3410,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile682.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile682.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -3635,7 +3635,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile727.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile727.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -3800,7 +3800,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile760.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile760.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -3990,7 +3990,7 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile798.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile798.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -4245,12 +4245,12 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile849.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile849.png",
     "tag": "Untagged",
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile850.png",
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile850.png",
     "tag": "Untagged",
     "isAnimated": false
   },
@@ -4347,6 +4347,11 @@
   {
     "path": "Assets/Resources/interiortiles/Collision/Mountains/tile869.png",
     "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Blank/tile870.png",
+    "tag": "Untagged",
     "isAnimated": false
   }
 ]

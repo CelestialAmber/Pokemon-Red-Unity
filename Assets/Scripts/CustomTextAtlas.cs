@@ -21,8 +21,16 @@ public class FontAtlas
 }
 public class CustomTextAtlas : MonoBehaviour {
     public static CustomTextAtlas instance;
+    public Sprite[] slotsBlueSprites;
     private void Awake()
     {
+        if (VersionManager.instance.version == Version.Blue)
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                atlas.chars[i + 92] = slotsBlueSprites[i];
+            }
+        }
         instance = this;
     }
     public FontAtlas atlas;

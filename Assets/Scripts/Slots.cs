@@ -22,30 +22,70 @@ using UnityEngine.UI;
 public class Slots : MonoBehaviour {
 	public string CurrentMode;
 	public bool canstopthereels;
-	public GameObject row1, row2, row3;
+	private GameObject row1, row2, row3;
 	public bool rolledone, rolledtwo, rolledthree, canroll;
 	private string above1, middle1, below1, above2, middle2, below2, above3, middle3, below3;
-	public Player play;
 	public int frames;
 	public int payout;
 	public bool stayingInModeSuper;
 	public int GuaranteedModeGood;
     public CustomText credittext, payouttext;
-	public Sprite[] numbers = new Sprite[10];
 	public int betamount;
-	// Use this for initialization
-	IEnumerator DecideBet(){
+    public GameObject[] blueRows, redRows;
+    public Sprite blueBG, redBG;
+    public Image bg;
+    public GameObject blueRowsObject, redRowsObject;
+    public static Slots instance;
+    public int row1Index, row2Index, row3Index, row1Half, row2Half, row3Half;
+    public bool funMode;
+
+    public AudioClip startSlotsSound, payoutSound, stopReelSound;
+    public Animator slotPointsAnimator;
+    public GameObject flashObject;
+    // Use this for initialization
+
+    public void Init()
+    {
+        instance = this;
+        if (VersionManager.instance.version == Version.Red)
+        {
+            row1 = redRows[0];
+            row2 = redRows[1];
+            row3 = redRows[2];
+            bg.sprite = redBG;
+            blueRowsObject.SetActive(false);
+
+        }
+        else
+        {
+            row1 = blueRows[0];
+            row2 = blueRows[1];
+            row3 = blueRows[2];
+            bg.sprite = blueBG;
+            redRowsObject.SetActive(false);
+        }
+    }
+    IEnumerator DecideBet(){
 		int RandomNumber;
 		int ModeNumber;
+        if (funMode)
+        {
+            GuaranteedModeGood = 999;
+            stayingInModeSuper = true;
+        }
 		yield return StartCoroutine(Dialogue.instance.slots ());
+        if (Dialogue.instance.selectedOption == 3)
+        {
+            Exit();
+            yield break;
+        }
+        if (Player.disabled) {
 
-		if (Player.disabled) {
-
-			if (Dialogue.instance.selectedOption == 0) {
-				if (GameData.coins < 3) {
-                    yield return StartCoroutine(Dialogue.instance.text("Not enough"));
-                    yield return StartCoroutine(Dialogue.instance.line("coins!"));
-					StartCoroutine(DecideBet ());
+            int amount = 3 - Dialogue.instance.selectedOption;
+		
+				if (GameData.coins < amount) {
+                    yield return StartCoroutine(Dialogue.instance.text("Not enough\ncoins!"));
+                    StartCoroutine (DecideBet ());
 					yield break;
 
 				}
@@ -78,117 +118,20 @@ public class Slots : MonoBehaviour {
 				if (CurrentMode == "SUPER") {
 					stayingInModeSuper = true;
 				}
-				print ("Betting 3 coins");
-				betamount = 3;
-				GameData.coins -= 3;
+				print ("Betting " + amount + " coin(s)");
+				betamount = amount;
+				GameData.coins -= amount;
 				UpdateCredit ();
 				rolledone = false;
 				rolledtwo = false;
 				rolledthree = false;
 				canstopthereels = false;
 				canroll = true;
-                Dialogue.instance.displaysimmediate = true;
-				StartCoroutine(Dialogue.instance.text ("Start!"));
-			}
-			if (Dialogue.instance.selectedOption == 1) {
-				if (GameData.coins < 2) {
-					yield return StartCoroutine(Dialogue.instance.text ("Not enough"));
-					yield return StartCoroutine(Dialogue.instance.line ("coins!"));
-					StartCoroutine(DecideBet ());
-					yield break;
-
-				}
-				RandomNumber = Random.Range (0, 256);
-				if (RandomNumber <= 1) {
-
-					CurrentMode = "SUPER";
-				}
-				if (RandomNumber <= 54 && RandomNumber > 1) {
-
-					CurrentMode = "GOOD";
-				}
-				if (RandomNumber > 54) {
-
-					CurrentMode = "BAD";
-
-				}
-				ModeNumber = Random.Range (0, 256);
-				if (ModeNumber < 1) {
-
-					GuaranteedModeGood = 60;
-				}
-				if (GuaranteedModeGood != 0) {
-
-					CurrentMode = "GOOD";
-				}
-				if (stayingInModeSuper) {
-					CurrentMode = "SUPER";
-				}
-				if (CurrentMode == "SUPER") {
-					stayingInModeSuper = true;
-				}
-				print ("Betting 2 coins");
-				betamount = 2;
-				GameData.coins -= 2;
-				UpdateCredit ();
-				rolledone = false;
-				rolledtwo = false;
-
-				rolledthree = false;
-				canstopthereels = false;
-				canroll = true;
-                Dialogue.instance.displaysimmediate = true;
-				StartCoroutine(Dialogue.instance.text ("Start!"));
-			}
-			if (Dialogue.instance.selectedOption == 2) {
-				if (GameData.coins < 1) {
-					yield return StartCoroutine(Dialogue.instance.text ("Not enough"));
-					yield return StartCoroutine(Dialogue.instance.line ("coins!"));
-					StartCoroutine (DecideBet ());
-					yield break;
-
-				}
-				RandomNumber = Random.Range (0, 256);
-				if (RandomNumber <= 1) {
-
-					CurrentMode = "SUPER";
-				}
-				if (RandomNumber <= 54 && RandomNumber > 1) {
-
-					CurrentMode = "GOOD";
-				}
-				if (RandomNumber > 54) {
-
-					CurrentMode = "BAD";
-
-				}
-				ModeNumber = Random.Range (0, 256);
-				if (ModeNumber < 1) {
-
-					GuaranteedModeGood = 60;
-				}
-				if (GuaranteedModeGood != 0) {
-
-					CurrentMode = "GOOD";
-				}
-				if (stayingInModeSuper) {
-					CurrentMode = "SUPER";
-				}
-				if (CurrentMode == "SUPER") {
-					stayingInModeSuper = true;
-				}
-				print ("Betting 1 coin");
-				betamount = 1;
-				GameData.coins -= 1;
-				UpdateCredit ();
-				rolledone = false;
-				rolledtwo = false;
-				rolledthree = false;
-				canstopthereels = false;
-				canroll = true;
-                Dialogue.instance.displaysimmediate = true;
-				StartCoroutine(Dialogue.instance.text ("Start!"));
-			}
+            SoundManager.instance.sfx.PlayOneShot(startSlotsSound);
+                slotPointsAnimator.SetBool("toggleStatus", true);
+                StartCoroutine(Dialogue.instance.text ("Start!",true));
+            slotPointsAnimator.SetFloat("betAmount", (float)amount);
+			
 		}
 
 
@@ -203,15 +146,18 @@ public class Slots : MonoBehaviour {
         payouttext.text = (payout > 999 ? "" : payout > 99 ? "0" : payout > 9 ? "00" : "000") + payout.ToString();
 	}
 	public IEnumerator Initialize () {
+        Dialogue.instance.fastText = true;
 		GuaranteedModeGood = 0;
 		UpdateCredit ();
 		UpdatePayout ();
-		row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, -152, 0);
-		row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, -152, 0);
-		row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, -152, 0);
+        row1Index = 0;
+        row2Index = 0;
+        row3Index = 0;
 		canroll = false;
-		yield return StartCoroutine(Dialogue.instance.text ("Bet how many"));
-		yield return StartCoroutine(Dialogue.instance.line ("coins?"));
+        Dialogue.instance.fastText = false;
+        slotPointsAnimator.SetBool("toggleStatus",false);
+        yield return StartCoroutine(Dialogue.instance.text ("Bet how many\ncoins?",true));
+        Dialogue.instance.fastText = true;
 		StartCoroutine(DecideBet ());
 
 
@@ -223,7 +169,7 @@ public class Slots : MonoBehaviour {
 		rolledtwo = false;
 		rolledthree = false;
 		canroll = false;
-		Dialogue.instance.displaysimmediate = false;
+		Dialogue.instance.fastText = false;
 		Dialogue.instance.Deactivate ();
 		this.gameObject.SetActive (false);
 
@@ -237,47 +183,100 @@ public class Slots : MonoBehaviour {
 		HandleInput ();
 		if (frames % 3 == 0) {
 			
-			Frame2Update ();
+			UpdatePositions (true);
 			frames = 0;
 		}
 		
 	}
-	void Frame2Update(){
+	void UpdatePositions(bool addHalf){
 		if (canroll) {
-			//REST
-			CheckIfIllegalPosition();
 		
 
 			if (!rolledone) {
+               if(addHalf) row1Half++;
+                if (row1Half > 1)
+                {
+                    row1Half = 0;
+                    row1Index--;
+                    if (row1Index < 0) row1Index = 14;
+                }
+                if (addHalf) row2Half++;
+                if (row2Half > 1)
+                {
+                    row2Half = 0;
+                    row2Index--;
+                    if (row2Index < 0) row2Index = 14;
+                }
+                if (addHalf) row3Half++;
+                if (row3Half > 1)
+                {
+                    row3Half = 0;
+                    row3Index--;
+                    if (row3Index < 0) row3Index = 14;
+                }
 
-				row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, row1.transform.localPosition.y - 8, 0);
-				row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 8, 0);
-				row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 8, 0);
-				canstopthereels = true;
+                row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, -152 + row1Index * 16 - row1Half * 8, 0);
+				row2.transform.localPosition = new Vector3(row2.transform.localPosition.x, -152 + row2Index * 16 - row2Half * 8, 0);
+                row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
+                canstopthereels = true;
 					
 
 
 			}
 			if (rolledone && !rolledtwo) {
-				
-				row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, row2.transform.localPosition.y - 8, 0);
-				row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 8, 0);
+                if (addHalf) row2Half++;
+                if (row2Half > 1)
+                {
+                    row2Half = 0;
+                    row2Index--;
+                    if (row2Index < 0) row2Index = 14;
+                }
+                if (addHalf) row3Half++;
+                if (row3Half > 1)
+                {
+                    row3Half = 0;
+                    row3Index--;
+                    if (row3Index < 0) row3Index = 14;
+                }
+                row2.transform.localPosition = new Vector3(row2.transform.localPosition.x, -152 + row2Index * 16 - row2Half * 8, 0);
+                row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
 
-					
 
 
-			}
+
+            }
 			if (rolledtwo && !rolledthree) {
+                if (addHalf) row3Half++;
+                if (row3Half > 1)
+                {
+                    row3Half = 0;
+                    row3Index--;
+                    if (row3Index < 0) row3Index = 14;
+                }
 
-				row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, row3.transform.localPosition.y - 8, 0);
+                row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
 
-					
 
-			}
-			CheckIfIllegalPosition();
+
+            }
+
 			CheckPositions ();
 		}
 	}
+    IEnumerator SlotsFlash(int times)
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.016f * 5f);
+        for (int i = 0; i < times; i++)
+        {
+       
+            ScreenEffects.flashLevel = 1;
+            yield return wait;
+            ScreenEffects.flashLevel = 0;
+            yield return wait;
+        }
+        
+
+    }
 	IEnumerator LinedUp(){
 		if (GuaranteedModeGood != 0) {
 			GuaranteedModeGood--;
@@ -337,7 +336,17 @@ public class Slots : MonoBehaviour {
 					payout = 8;
 
 				}
-                switch(whatwaslinedup){
+                if (whatwaslinedup == "7")
+                {
+                    yield return StartCoroutine(Dialogue.instance.text("Yeah!", true));
+                    StartCoroutine(SlotsFlash(8));
+                    yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(1));
+                }else StartCoroutine(SlotsFlash(1));
+                if (whatwaslinedup == "BAR") yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(2));
+                float timeToWait;
+                if (whatwaslinedup == "7" || whatwaslinedup == "BAR") timeToWait = 0.016f * 3f;
+                else timeToWait = 0.016f * 8f;
+                switch (whatwaslinedup){
                     case "CHERRY":
                         whatwaslinedup = "à";
                         break;
@@ -357,30 +366,33 @@ public class Slots : MonoBehaviour {
                         whatwaslinedup = "ā";
                         break;
                 }
-				yield return StartCoroutine(Dialogue.instance.text (whatwaslinedup + " lined up!"));
-				yield return StartCoroutine(Dialogue.instance.line ("Scored " + payout + "!"));
+               
+                yield return StartCoroutine(Dialogue.instance.text (whatwaslinedup + " lined up!\nScored " + payout + "!"));
+                yield return StartCoroutine(Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + "!",true));
 
-				int payoutamount = payout;
-				for (int i = 0; i < payoutamount; i++) {
-					yield return new WaitForSeconds (0.01f);
+                int payoutamount = payout;
+                
+                flashObject.SetActive(true);
+                for (int i = 0; i < payoutamount; i++) {
+			
 					payout--;
+                    SoundManager.instance.sfx.PlayOneShot(payoutSound);
 					GameData.coins++;
 					UpdateCredit ();
 					UpdatePayout ();
-
+                    yield return new WaitForSeconds(timeToWait);
 
 
 				}
+                flashObject.SetActive(false);
 			} else {
-				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",true));
+				yield return StartCoroutine(Dialogue.instance.text ("Not this time!"));
 			}
 			} else {
 				if (GameData.coins > 0) {
-				yield return StartCoroutine(Dialogue.instance.text ("Not this time!",true));
+				yield return StartCoroutine(Dialogue.instance.text ("Not this time!"));
 				} else {
-				yield return StartCoroutine(Dialogue.instance.text ("Darn! Ran out of"));
-				yield return StartCoroutine(Dialogue.instance.line ("coins!"));
-				yield return StartCoroutine(Dialogue.instance.done ());
+				yield return StartCoroutine(Dialogue.instance.text ("Darn! Ran out of\ncoins!"));
              
 					Exit ();
 					yield break;
@@ -388,12 +400,14 @@ public class Slots : MonoBehaviour {
 
 			}
 			
-		yield return StartCoroutine(Dialogue.instance.para ("One more go?"));
+		yield return StartCoroutine(Dialogue.instance.text ("One more go?",true));
         yield return StartCoroutine(Dialogue.instance.prompt ());
 			if (Dialogue.instance.selectedOption == 0) {
 				canroll = false;
-			yield return StartCoroutine(Dialogue.instance.text ("Bet how many"));
-			yield return StartCoroutine(Dialogue.instance.line ("coins?"));
+            Dialogue.instance.fastText = false;
+            slotPointsAnimator.SetBool("toggleStatus",false);
+			yield return StartCoroutine(Dialogue.instance.text ("Bet how many\ncoins?",true));
+            Dialogue.instance.fastText = true;
 				StartCoroutine(DecideBet ());
 
 
@@ -409,258 +423,267 @@ public class Slots : MonoBehaviour {
 
 	}
 	void CheckPositions(){
-		if (row1.transform.localPosition.y == 56) {
-			above1 = "BAR";
-			middle1 = "FISH";
-			below1 = "MOUSE";
-		}
-		if (row1.transform.localPosition.y == 40) {
-			above1 = "CHERRY";
-			middle1 = "BAR";
-			below1 = "FISH";
-		}
-		if (row1.transform.localPosition.y == 24) {
-			above1 = "7";
-			middle1 = "CHERRY";
-			below1 = "BAR";
-		}
-		if (row1.transform.localPosition.y == 8) {
-			above1 = "FISH";
-			middle1 = "7";
-			below1 = "CHERRY";
-		}
-		if (row1.transform.localPosition.y == -8) {
-			above1 = "BIRD";
-			middle1 = "FISH";
-			below1 = "7";
-		}
-		if (row1.transform.localPosition.y == -24) {
-			above1 = "BAR";
-			middle1 = "BIRD";
-			below1 = "FISH";
-		}
-		if (row1.transform.localPosition.y == -40) {
-			above1 = "CHERRY";
-			middle1 = "BAR";
-			below1 = "BIRD";
-		}
-		if (row1.transform.localPosition.y == -56) {
-			above1 = "7";
-			middle1 = "CHERRY";
-			below1 = "BAR";
-		}
-		if (row1.transform.localPosition.y == -72) {
-			above1 = "MOUSE";
-			middle1 = "7";
-			below1 = "CHERRY";
-		}
-		if (row1.transform.localPosition.y == -88) {
-			above1 = "BIRD";
-			middle1 = "MOUSE";
-			below1 = "7";
-		}
-		if (row1.transform.localPosition.y == -104) {
-			above1 = "BAR";
-			middle1 = "BIRD";
-			below1 = "MOUSE";
-		}
-		if (row1.transform.localPosition.y == -120) {
-			above1 = "CHERRY";
-			middle1 = "BAR";
-			below1 = "BIRD";
-		}
-		if (row1.transform.localPosition.y == -136) {
-			above1 = "7";
-			middle1 = "CHERRY";
-			below1 = "BAR";
-		}
-		if (row1.transform.localPosition.y == -152) {
-			above1 = "MOUSE";
-			middle1 = "7";
-			below1 = "CHERRY";
-		}
-		if (row1.transform.localPosition.y == -168) {
+		if (row1Index == 14) { //-168
 			above1 = "FISH";
 			middle1 = "MOUSE";
 			below1 = "7";
 		}
+		if (row1Index == 13) { //56
+			above1 = "BAR";
+			middle1 = "FISH";
+			below1 = "MOUSE";
+		}
+		if (row1Index == 12) {
+			above1 = "CHERRY";
+			middle1 = "BAR";
+			below1 = "FISH";
+		}
+		if (row1Index == 11) {
+			above1 = "7";
+			middle1 = "CHERRY";
+			below1 = "BAR";
+		}
+		if (row1Index == 10) {
+			above1 = "FISH";
+			middle1 = "7";
+			below1 = "CHERRY";
+		}
+		if (row1Index == 9) {
+			above1 = "BIRD";
+			middle1 = "FISH";
+			below1 = "7";
+		}
+		if (row1Index == 8) {
+			above1 = "BAR";
+			middle1 = "BIRD";
+			below1 = "FISH";
+		}
+		if (row1Index == 7) {
+			above1 = "CHERRY";
+			middle1 = "BAR";
+			below1 = "BIRD";
+		}
+		if (row1Index == 6) {
+			above1 = "7";
+			middle1 = "CHERRY";
+			below1 = "BAR";
+		}
+		if (row1Index == 5) {
+			above1 = "MOUSE";
+			middle1 = "7";
+			below1 = "CHERRY";
+		}
+		if (row1Index == 4) {
+			above1 = "BIRD";
+			middle1 = "MOUSE";
+			below1 = "7";
+		}
+		if (row1Index == 3) {
+			above1 = "BAR";
+			middle1 = "BIRD";
+			below1 = "MOUSE";
+		}
+		if (row1Index == 2) {
+			above1 = "CHERRY";
+			middle1 = "BAR";
+			below1 = "BIRD";
+		}
+		if (row1Index == 1) {
+			above1 = "7";
+			middle1 = "CHERRY";
+			below1 = "BAR";
+		}
+		if (row1Index == 0) {
+			above1 = "MOUSE";
+			middle1 = "7";
+			below1 = "CHERRY";
+		}
+		
 		//ROW2
-		if (row2.transform.localPosition.y == 56) {
-			above2 = "BIRD";
-			middle2 = "CHERRY";
-			below2 = "FISH";
-		}
-		if (row2.transform.localPosition.y == 40) {
-			above2 = "MOUSE";
-			middle2 = "BIRD";
-			below2 = "CHERRY";
-		}
-		if (row2.transform.localPosition.y == 24) {
-			above2 = "BAR";
-			middle2 = "MOUSE";
-			below2 = "BIRD";
-		}
-		if (row2.transform.localPosition.y == 8) {
-			above2 = "CHERRY";
-			middle2 = "BAR";
-			below2 = "MOUSE";
-		}
-		if (row2.transform.localPosition.y == -8) {
-			above2 = "FISH";
-			middle2 = "CHERRY";
-			below2 = "BAR";
-		}
-		if (row2.transform.localPosition.y == -24) {
-			above2 = "BIRD";
-			middle2 = "FISH";
-			below2 = "CHERRY";
-		}
-		if (row2.transform.localPosition.y == -40) {
-			above2 = "CHERRY";
-			middle2 = "BIRD";
-			below2 = "FISH";
-		}
-		if (row2.transform.localPosition.y == -56) {
-			above2 = "BAR";
-			middle2 = "CHERRY";
-			below2 = "BIRD";
-		}
-		if (row2.transform.localPosition.y == -72) {
-			above2 = "FISH";
-			middle2 = "BAR";
-			below2 = "CHERRY";
-		}
-		if (row2.transform.localPosition.y == -88) {
-			above2 = "BIRD";
-			middle2 = "FISH";
-			below2 = "BAR";
-		}
-		if (row2.transform.localPosition.y == -104) {
-			above2 = "CHERRY";
-			middle2 = "BIRD";
-			below2 = "FISH";
-		}
-		if (row2.transform.localPosition.y == -120) {
-			above2 = "MOUSE";
-			middle2 = "CHERRY";
-			below2 = "BIRD";
-		}
-		if (row2.transform.localPosition.y == -136) {
-			above2 = "7";
-			middle2 = "MOUSE";
-			below2 = "CHERRY";
-		}
-		if (row2.transform.localPosition.y == -152) {
-			above2 = "FISH";
-			middle2 = "7";
-			below2 = "MOUSE";
-		}
-		if (row2.transform.localPosition.y == -168) {
+		if (row2Index == 14) {
 			above2 = "CHERRY";
 			middle2 = "FISH";
 			below2 = "7";
 		}
+		if (row2Index == 13) {
+			above2 = "BIRD";
+			middle2 = "CHERRY";
+			below2 = "FISH";
+		}
+		if (row2Index == 12) {
+			above2 = "MOUSE";
+			middle2 = "BIRD";
+			below2 = "CHERRY";
+		}
+		if (row2Index == 11) {
+			above2 = "BAR";
+			middle2 = "MOUSE";
+			below2 = "BIRD";
+		}
+		if (row2Index == 10) {
+			above2 = "CHERRY";
+			middle2 = "BAR";
+			below2 = "MOUSE";
+		}
+		if (row2Index == 9) {
+			above2 = "FISH";
+			middle2 = "CHERRY";
+			below2 = "BAR";
+		}
+		if (row2Index == 8) {
+			above2 = "BIRD";
+			middle2 = "FISH";
+			below2 = "CHERRY";
+		}
+		if (row2Index == 7) {
+			above2 = "CHERRY";
+			middle2 = "BIRD";
+			below2 = "FISH";
+		}
+		if (row2Index == 6) {
+			above2 = "BAR";
+			middle2 = "CHERRY";
+			below2 = "BIRD";
+		}
+		if (row2Index == 5) {
+			above2 = "FISH";
+			middle2 = "BAR";
+			below2 = "CHERRY";
+		}
+		if (row2Index == 4) {
+			above2 = "BIRD";
+			middle2 = "FISH";
+			below2 = "BAR";
+		}
+		if (row2Index == 3) {
+			above2 = "CHERRY";
+			middle2 = "BIRD";
+			below2 = "FISH";
+		}
+		if (row2Index == 2) {
+			above2 = "MOUSE";
+			middle2 = "CHERRY";
+			below2 = "BIRD";
+		}
+		if (row2Index == 1) {
+			above2 = "7";
+			middle2 = "MOUSE";
+			below2 = "CHERRY";
+		}
+		if (row2Index == 0) {
+			above2 = "FISH";
+			middle2 = "7";
+			below2 = "MOUSE";
+		}
+		
 		//ROW3
-		if (row3.transform.localPosition.y == 56) {
-			above3 = "CHERRY";
-			middle3 = "FISH";
-			below3 = "BIRD";
-		}
-		if (row3.transform.localPosition.y == 40) {
-			above3 = "MOUSE";
-			middle3 = "CHERRY";
-			below3 = "FISH";
-		}
-		if (row3.transform.localPosition.y == 24) {
-			above3 = "BIRD";
-			middle3 = "MOUSE";
-			below3 = "CHERRY";
-		}
-		if (row3.transform.localPosition.y == 8) {
-			above3 = "FISH";
-			middle3 = "BIRD";
-			below3 = "MOUSE";
-		}
-		if (row3.transform.localPosition.y == -8) {
-			above3 = "CHERRY";
-			middle3 = "FISH";
-			below3 = "BIRD";
-		}
-		if (row3.transform.localPosition.y == -24) {
-			above3 = "MOUSE";
-			middle3 = "CHERRY";
-			below3 = "FISH";
-		}
-		if (row3.transform.localPosition.y == -40) {
-			above3 = "BIRD";
-			middle3 = "MOUSE";
-			below3 = "CHERRY";
-		}
-		if (row3.transform.localPosition.y == -56) {
-			above3 = "FISH";
-			middle3 = "BIRD";
-			below3 = "MOUSE";
-		}
-		if (row3.transform.localPosition.y == -72) {
-			above3 = "CHERRY";
-			middle3 = "FISH";
-			below3 = "BIRD";
-		}
-		if (row3.transform.localPosition.y == -88) {
-			above3 = "MOUSE";
-			middle3 = "CHERRY";
-			below3 = "FISH";
-		}
-		if (row3.transform.localPosition.y == -104) {
-			above3 = "BIRD";
-			middle3 = "MOUSE";
-			below3 = "CHERRY";
-		}
-		if (row3.transform.localPosition.y == -120) {
-			above3 = "BAR";
-			middle3 = "BIRD";
-			below3 = "MOUSE";
-		}
-		if (row3.transform.localPosition.y == -136) {
-			above3 = "7";
-			middle3 = "BAR";
-			below3 = "BIRD";
-		}
-		if (row3.transform.localPosition.y == -152) {
-			above3 = "BIRD";
-			middle3 = "7";
-			below3 = "BAR";
-		}
-		if (row3.transform.localPosition.y == -168) {
+		if (row3Index == 14) {
 			above3 = "FISH";
 			middle3 = "BIRD";
 			below3 = "7";
 		}
+		if (row3Index == 13) {
+			above3 = "CHERRY";
+			middle3 = "FISH";
+			below3 = "BIRD";
+		}
+		if (row3Index == 12) {
+			above3 = "MOUSE";
+			middle3 = "CHERRY";
+			below3 = "FISH";
+		}
+		if (row3Index == 11) {
+			above3 = "BIRD";
+			middle3 = "MOUSE";
+			below3 = "CHERRY";
+		}
+		if (row3Index == 10) {
+			above3 = "FISH";
+			middle3 = "BIRD";
+			below3 = "MOUSE";
+		}
+		if (row3Index == 9) {
+			above3 = "CHERRY";
+			middle3 = "FISH";
+			below3 = "BIRD";
+		}
+		if (row3Index == 8) {
+			above3 = "MOUSE";
+			middle3 = "CHERRY";
+			below3 = "FISH";
+		}
+		if (row3Index == 7) {
+			above3 = "BIRD";
+			middle3 = "MOUSE";
+			below3 = "CHERRY";
+		}
+		if (row3Index == 6) {
+			above3 = "FISH";
+			middle3 = "BIRD";
+			below3 = "MOUSE";
+		}
+		if (row3Index == 5) {
+			above3 = "CHERRY";
+			middle3 = "FISH";
+			below3 = "BIRD";
+		}
+		if (row3Index == 4) {
+			above3 = "MOUSE";
+			middle3 = "CHERRY";
+			below3 = "FISH";
+		}
+		if (row3Index == 3) {
+			above3 = "BIRD";
+			middle3 = "MOUSE";
+			below3 = "CHERRY";
+		}
+		if (row3Index == 2) {
+			above3 = "BAR";
+			middle3 = "BIRD";
+			below3 = "MOUSE";
+		}
+		if (row3Index == 1) {
+			above3 = "7";
+			middle3 = "BAR";
+			below3 = "BIRD";
+		}
+		if (row3Index == 0) {
+			above3 = "BIRD";
+			middle3 = "7";
+			below3 = "BAR";
+		}
+		
 	}
 	void CheckIfIllegalPosition(){
-		if (row1.transform.localPosition.y <= -168) {
-			row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, 72, 0);
+		if (row1Index < 0) {
+			row1Index = 14; //goes to 72 y
 
 		}
-		if (row2.transform.localPosition.y <= -168) {
-			row2.transform.localPosition = new Vector3 (row2.transform.localPosition.x, 72, 0);
+        if (row2Index < 0)
+        {
+            row2Index = 14; //goes to 72 y
 
-		}
-		if (row3.transform.localPosition.y <= -168) {
-			row3.transform.localPosition = new Vector3 (row3.transform.localPosition.x, 72, 0);
+        }
+        if (row3Index < 0)
+        {
+            row3Index = 14; //goes to 72 y
 
-		}
-	}
+        }
+        UpdatePositions(false);
+    }
 	void HandleInput(){
 		if (canroll && canstopthereels) {
 
 			if (rolledtwo && !rolledthree) {
 				if (Inputs.pressed("a")) {
-					if ((Mathf.Abs (row3.transform.localPosition.y)+8) % 16 == 8) {
-							 row3.transform.Translate(0,-8,0);
-							 CheckIfIllegalPosition();
+				SoundManager.instance.sfx.PlayOneShot(stopReelSound);
+					if (row3Half > 0) {
+                        row3Half++;
+                        UpdatePositions(false);
+						CheckIfIllegalPosition();
+                        CheckPositions();
 					}
-					Debug.Log(row3.transform.localPosition.y);
+
 						 
 		
 						if (CurrentMode == "SUPER" || CurrentMode == "GOOD") {
@@ -669,7 +692,8 @@ public class Slots : MonoBehaviour {
 
 								if (middle3 != middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
+										row3Index--;
+                                    UpdatePositions(false);
 										CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle3 == middle2) {
@@ -683,8 +707,9 @@ public class Slots : MonoBehaviour {
 
 								if (above3 != above2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 == above2) {
 											break;
@@ -697,8 +722,9 @@ public class Slots : MonoBehaviour {
 
 								if (below3 != below2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 == below2) {
 											break;
@@ -712,8 +738,9 @@ public class Slots : MonoBehaviour {
 
 								if (below3 != middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 == middle2) {
 											break;
@@ -727,8 +754,9 @@ public class Slots : MonoBehaviour {
 
 								if (above3 != middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 == middle2) {
 											break;
@@ -747,8 +775,9 @@ public class Slots : MonoBehaviour {
 								if (middle2 == "BAR" || middle2 == "7") {
 									if (middle3 == middle2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-											CheckIfIllegalPosition ();
+                                        row3Index--;
+                                        UpdatePositions(false);
+                                        CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (middle3 != middle2) {
 												break;
@@ -763,8 +792,9 @@ public class Slots : MonoBehaviour {
 									if (above3 == above2) {
 
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-											CheckIfIllegalPosition ();
+                                        row3Index--;
+                                        UpdatePositions(false);
+                                        CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (above3 != above2) {
 												break;
@@ -778,8 +808,9 @@ public class Slots : MonoBehaviour {
 								if (below2 == "BAR" || below2 == "7") {
 									if (below3 == below2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-											CheckIfIllegalPosition ();
+                                        row3Index--;
+                                        UpdatePositions(false);
+                                        CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (below3 != below2) {
 												break;
@@ -794,8 +825,9 @@ public class Slots : MonoBehaviour {
 								if (middle2 == "BAR" || middle2 == "7") {
 									if (below3 == middle2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-											CheckIfIllegalPosition ();
+                                        row3Index--;
+                                        UpdatePositions(false);
+                                        CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (below3 != middle2) {
 												break;
@@ -810,8 +842,9 @@ public class Slots : MonoBehaviour {
 								if (middle2 == "BAR" || middle2 == "7") {
 									if (above3 == middle2) {
 										for (int i = 0; i < 4; i++) {
-											row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-											CheckIfIllegalPosition ();
+                                        row3Index--;
+                                        UpdatePositions(false);
+                                        CheckIfIllegalPosition ();
 											CheckPositions ();
 											if (above3 != middle2) {
 												break;
@@ -831,8 +864,9 @@ public class Slots : MonoBehaviour {
 
 								if (middle3 == middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle3 != middle2) {
 											break;
@@ -846,8 +880,9 @@ public class Slots : MonoBehaviour {
 
 								if (below3 == middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 != middle2) {
 											break;
@@ -861,8 +896,9 @@ public class Slots : MonoBehaviour {
 
 								if (above3 == middle2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 != middle2) {
 											break;
@@ -876,8 +912,9 @@ public class Slots : MonoBehaviour {
 
 								if (above3 == above2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above3 != above2) {
 											break;
@@ -890,8 +927,9 @@ public class Slots : MonoBehaviour {
 
 								if (below3 == below2) {
 									for (int i = 0; i < 4; i++) {
-										row3.transform.localPosition = new Vector2 (row3.transform.localPosition.x, row3.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row3Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below3 != below2) {
 											break;
@@ -915,11 +953,15 @@ public class Slots : MonoBehaviour {
 				bool FoundASuperMatch = false;
 				bool FoundAMatch = false;
 				if (Inputs.pressed("a")) {
-						if ((Mathf.Abs (row2.transform.localPosition.y)+ 8) % 16 == 8) {
-					
-					  row2.transform.Translate(0,-8,0);
-					  CheckIfIllegalPosition();
-						}
+					SoundManager.instance.sfx.PlayOneShot(stopReelSound);
+						if (row2Half > 0) {
+
+                        row2Half++;
+                        UpdatePositions(false);
+                        
+                        CheckIfIllegalPosition();
+                        CheckPositions();
+                    }
 						
 	
 						if (CurrentMode == "SUPER") {
@@ -928,8 +970,9 @@ public class Slots : MonoBehaviour {
 						
 								if (middle2 != middle1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row2Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle2 == middle1) {
 											FoundASuperMatch = true;
@@ -948,8 +991,9 @@ public class Slots : MonoBehaviour {
 
 								if (above2 != above1 && middle2 != above1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row2Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above2 == above1 || middle2 == above1) {
 											FoundASuperMatch = true;
@@ -967,8 +1011,9 @@ public class Slots : MonoBehaviour {
 
 								if (below2 != below1 && middle2 != below1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row2Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below2 == below1 || middle2 == below1) {
 											FoundASuperMatch = true;
@@ -990,8 +1035,9 @@ public class Slots : MonoBehaviour {
 
 								if (middle2 != middle1) {
 									for (int i = 0; i < 4; i++) {
-									row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                row2Index--;
+                                UpdatePositions(false);
+                                CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (middle2 == middle1) {
 											FoundAMatch = true;
@@ -1010,8 +1056,9 @@ public class Slots : MonoBehaviour {
 
 								if (above2 != above1 && middle2 != above1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row2Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (above2 == above1 || middle2 == above1) {
 											FoundAMatch = true;
@@ -1029,8 +1076,9 @@ public class Slots : MonoBehaviour {
 
 								if (below2 != below1 && middle2 != below1) {
 									for (int i = 0; i < 4; i++) {
-										row2.transform.localPosition = new Vector2 (row2.transform.localPosition.x, row2.transform.localPosition.y - 16);
-										CheckIfIllegalPosition ();
+                                    row2Index--;
+                                    UpdatePositions(false);
+                                    CheckIfIllegalPosition ();
 										CheckPositions ();
 										if (below2 == below1 || middle2 == below1) {
 											FoundAMatch = true;
@@ -1057,18 +1105,24 @@ public class Slots : MonoBehaviour {
 			}
 			else if (!rolledone) {
 				if (Inputs.pressed("a")) {
-						if ((Mathf.Abs (row1.transform.localPosition.y) + 8) % 16 == 8) {
-					 row1.transform.Translate(0,-8,0);
+					SoundManager.instance.sfx.PlayOneShot(stopReelSound);
+						if (row1Half > 0) {
+                        row1Half++;
+                        UpdatePositions(false);
+                       
 					  CheckIfIllegalPosition();
-						}
-						
+                        CheckPositions();
+                    }
+                    
 						if (CurrentMode == "SUPER") {
+
 							CheckPositions ();
 							//oversight where it spins regardless in mode super.
 							if (above1 != "7" && middle1 != "7" && below1 != "7") { //DISABLE FOR OVERSIGHT
 								for (int i = 0; i < 4; i++) {
-									row1.transform.localPosition = new Vector2 (row1.transform.localPosition.x, row1.transform.localPosition.y - 16);
-									CheckIfIllegalPosition ();
+                                row1Index--;
+                                UpdatePositions(false);
+                                CheckIfIllegalPosition ();
 									CheckPositions ();
 									if (above1 == "7" || middle1 == "7" || below1 == "7") {
 										break;
@@ -1080,8 +1134,9 @@ public class Slots : MonoBehaviour {
 							CheckPositions ();
 							if (middle1 == "CHERRY") {
 								for (int i = 0; i < 4; i++) {
-									row1.transform.localPosition = new Vector2 (row1.transform.localPosition.x, row1.transform.localPosition.y - 16);
-									CheckIfIllegalPosition ();
+                                row1Index--;
+                                UpdatePositions(false);
+                                CheckIfIllegalPosition ();
 									CheckPositions ();
 									if (middle1 != "CHERRY") {
 										break;

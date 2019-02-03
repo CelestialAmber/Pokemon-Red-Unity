@@ -1,26 +1,110 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
 
+
 public enum Map
 {
     PalletTown,
+    OakLab,
     Route1,
-    ViridianCity
+    ViridianCity,
+    PokeCenter,
+    PokeMart,
+    PokemonGym,
+    Route22,
+    Route23,
+    VictoryRoad1,
+    VictoryRoad2,
+    VictoryRoad3,
+    IndigoPlateau,
+    Lorelei,
+    Bruno,
+    Agatha,
+    HallofFameRoom,
+    Route2,
+    ViridianForest,
+    DiglettCave,
+    PewterCity,
+    Route3,
+    MtMoon1,
+    MtMoon2,
+    MtMoon3,
+    Route4,
+    CeruleanCity,
+    Route24,
+    Route25,
+    Route5,
+    UndergroundRoad,
+    Route6,
+    VermillionCity,
+    SSAnne,
+    Route11,
+    Route9,
+    RockTunnel1,
+    RockTunnel2,
+    PowerPlant,
+    LavenderTown,
+    Route7,
+    PokemonTower1,
+    PokemonTower2,
+    PokemonTower3,
+    PokemonTower4,
+    PokemonTower5,
+    PokemonTower6,
+    PokemonTower7,
+    CeladonCity,
+    GameCorner,
+    RocketHideout,
+    Route16,
+    Route17,
+    Route18,
+    FuchsiaCity,
+    SafariZoneCenter,
+    SafariZoneEast,
+    SafariZoneNorth,
+    SafariZoneWest,
+    SafariZoneHouse,
+    Route15,
+    Route14,
+    Route13,
+    Route12,
+    SaffronCity,
+    SilphCo,
+    Route19,
+    SeafoamIslands1,
+    SeafoamIslands2,
+    SeafoamIslands3,
+    SeafoamIslands4,
+    SeafoamIslands5,
+    Route20,
+    CinnabarIsland,
+    Mansion1,
+    Mansion2,
+    Mansion3,
+    Mansion4,
+    Route21,
+    Unknown1,
+    Unknown2,
+    Unknown3,
+    TradeCenter,
+    Colloseum,
+    BillsHouse
 }
+
 
 //Script to manage the world status.
 public class MapManager : MonoBehaviour {
     public Player player;
-    public MeshRenderer mainLayer, grassLayer, objectLayer, grassBGLayer;
+    public MeshRenderer mainLayer, grassLayer,  grassBGLayer;
     public SpriteAtlas tileAtlas;
     public Mesh mesh;
     public Material templateMat;
     private Material tileMat;
     public Vector2 atlasSize;
-    public Vector2[] mainUv, grassUv, objectUv, grassBGUv;
-    public MeshFilter mainMesh, grassMesh, objectMesh,grassBGMesh;
+    public Vector2[] mainUv, grassUv,  grassBGUv;
+    public MeshFilter mainMesh, grassMesh, grassBGMesh;
     public int currentGrassEcounterTable, currentWaterEncounterTable;
     public static GridTile[,] maptiles = new GridTile[GameData.mapWidth, GameData.mapHeight];
     //The map the player is currently in.
@@ -93,7 +177,6 @@ public class MapManager : MonoBehaviour {
         mesh.RecalculateNormals();
         mainMesh.mesh = mesh;
         grassMesh.mesh = mesh;
-        objectMesh.mesh = mesh;
            grassBGMesh.mesh = mesh;
     }
     private void Awake()
@@ -101,7 +184,6 @@ public class MapManager : MonoBehaviour {
         tileMat = new Material(templateMat);
         mainLayer.material = tileMat;   
         grassLayer.material = tileMat;
-        objectLayer.material = tileMat;
         grassBGLayer.material = tileMat;
             tileMat.mainTexture = tileAtlas.GetSprite("tile7").texture;
             atlasSize = new Vector2(tileMat.mainTexture.width, tileMat.mainTexture.height);
@@ -114,8 +196,6 @@ public class MapManager : MonoBehaviour {
         SetUpUvShop();
     }
     void SetUpUvShop(){
-        UvShop.Add("itemPokeball", GetUvsFromAtlas("itemPokeball"));
-        UvShop.Add("cutTree", GetUvsFromAtlas("tile24"));
         UvShop.Add("transparent", new Vector2[] { new Vector2(0.95f, 0.95f), new Vector2(0.96f, 0.95f), new Vector2(0.96f, 0.96f), new Vector2(0.95f, 0.96f) });
         UvShop.Add("white", GetUvsFromAtlas("tile1"));
     }
@@ -153,17 +233,14 @@ public class MapManager : MonoBehaviour {
             }
         }
     }
-    List<Vector2> mainUvs = new List<Vector2>(); //size should be set to 2112? 
+    List<Vector2> mainUvs = new List<Vector2>(); 
     List<Vector2> grassUvs  = new List<Vector2>();
-    List<Vector2> objectUvs  = new List<Vector2>();
     List<Vector2> grassBGUvs = new List<Vector2>();
     public void LoadMap(){
         mainUvs.Clear();
         grassUvs.Clear();
-        objectUvs.Clear();
         grassBGUvs.Clear();
         Vector2[] transparentUvs = UvShop["transparent"];
-        Vector2[] itemPokeballUvs = UvShop["itemPokeball"];
         Vector2[] whiteTileUvs = UvShop["white"];
         for (int y = 0; y < GameData.screenTileHeight + 2; y++)
         {
@@ -187,26 +264,13 @@ public class MapManager : MonoBehaviour {
                         for (int i = 0; i < 4; i++){
                             mainUvs.Add(loadedtile.mainUvs[frame][i]);
                             grassUvs.Add(transparentUvs[i]);
-                            objectUvs.Add(transparentUvs[i]);
                             grassBGUvs.Add(transparentUvs[i]);
                         }
                     }
                     else
                     {
-                        //does the tile have an item pokeball/other object on it?
-                        if(loadedtile.hasItemBall){
-
-
-                            for (int i = 0; i < 4; i++)
-                            {
-                                objectUvs.Add(itemPokeballUvs[i]);
-                            }
-                        }else{
-                            for (int i = 0; i < 4; i++)
-                            {
-                                objectUvs.Add(transparentUvs[i]);
-                            }
-                        }
+                          
+                        
                         if (loadedtile.hasGrass)
                         { //Does the tile have grass?
                           //yes
@@ -235,7 +299,6 @@ public class MapManager : MonoBehaviour {
                     {
                         mainUvs.Add(transparentUvs[i]);
                         grassUvs.Add(transparentUvs[i]);
-                        objectUvs.Add(transparentUvs[i]);
                            grassBGUvs.Add(transparentUvs[i]);
                     }
                 }
@@ -244,13 +307,11 @@ public class MapManager : MonoBehaviour {
             }
         }
         //the layers are all organized from back to front
-       grassBGLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, -1.1f);
-        mainLayer.transform.position = player.transform.position - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f , -1);
-        objectLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, -0.75f);
-         grassLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, -0.33f);
+       grassBGLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, -0.03f);
+        mainLayer.transform.position = player.transform.position - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f , -0.02f);
+         grassLayer.transform.position = player.transform.position  - new Vector3(GameData.screenTileWidth / 2 + 0.5f, GameData.screenTileHeight / 2 + 1.5f, 0f);
         mainUv = mainUvs.ToArray();
         grassUv = grassUvs.ToArray();
-        objectUv = objectUvs.ToArray();
         grassBGUv = grassBGUvs.ToArray();
         centerPos = player.transform.position;
     }
@@ -274,7 +335,6 @@ public class MapManager : MonoBehaviour {
             //Update the layer meshes' uv's.
             mainMesh.mesh.uv = mainUv;
             grassMesh.mesh.uv = grassUv;
-            objectMesh.mesh.uv = objectUv;
             grassBGMesh.mesh.uv = grassBGUv;
             //Update the animated tile timer.
             tileanimtimer += Time.deltaTime;
@@ -309,15 +369,10 @@ public class GridTile
     public bool isWater;
     public bool isWall;
     public bool isInteractable;
-    public bool hasTree;
-    public bool isTreeCut;
     public bool hasItem;
-    public bool hasItemBall;
-    public bool isBoulderSwitch;
     public bool hasPokemon;
     public bool hasPokedex;
     public int pokemonIconIndex; //0:bird,1:snorlax,2:fossil
-    public bool isBoulderWall;
     public int frames;
     public string mainSprite;
     public List<Vector2[]> mainUvs = new List<Vector2[]>();
