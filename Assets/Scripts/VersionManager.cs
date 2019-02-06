@@ -21,11 +21,8 @@ public class VersionManager : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (GameDataManager.instance.currentScene == GameScene.SGB)
-            frame.sprite = frames[(int)version];
-        else if (GameDataManager.instance.currentScene == GameScene.NintendoSwitch)
-            nintendoSwitchFrame.sprite = frames[(int)version];
-       
-	}
+        frame.sprite = frames[(int)version];
+    }
+
 
 }

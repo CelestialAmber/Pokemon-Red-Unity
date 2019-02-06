@@ -1160,8 +1160,8 @@
     "isAnimated": false
   },
   {
-    "path": "Assets/Resources/interiortiles/Non-Collision/tile232.png",
-    "tag": "Untagged",
+    "path": "Assets/Resources/interiortiles/Collision/tile232.png",
+    "tag": "WallObject",
     "isAnimated": false
   },
   {

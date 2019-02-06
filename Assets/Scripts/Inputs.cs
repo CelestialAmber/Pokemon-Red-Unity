@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Inputs : MonoBehaviour
 {
 
@@ -56,73 +57,18 @@ public class Inputs : MonoBehaviour
     {
         instance = this;
     }
+    void Start()
+    {
+        for (int i = 0; i < 4; i++) {
+            isHoldingJoystickDirections[i] = false;
+            hasPressedJoystickDirections[i] = false;
+            releasedJoystickDirections[i] = false;
+        }
+    }
     public void Update()
     {
 
-        if (Input.GetAxisRaw("Vertical") > 0.5f || Input.GetAxisRaw("DpadY") > 0.5f)
-        {
-            if (hasPressedJoystickDirections[0])
-            {
-                isHoldingJoystickDirections[0] = true;
-                hasPressedJoystickDirections[0] = false;
-            }
-            if(!isHoldingJoystickDirections[0]) hasPressedJoystickDirections[0] = true;
-        }
-        else
-        {
-            if (isHoldingJoystickDirections[0] || hasPressedJoystickDirections[0]) releasedJoystickDirections[0] = true;
-            else releasedJoystickDirections[0] = false;
-            isHoldingJoystickDirections[0] = false;
-            hasPressedJoystickDirections[0] = false;
-        }
-        if (Input.GetAxisRaw("Vertical") < -0.5f || Input.GetAxisRaw("DpadY") < -0.5f)
-        {
-            if (hasPressedJoystickDirections[1])
-            {
-                isHoldingJoystickDirections[1] = true;
-                hasPressedJoystickDirections[1] = false;
-            }
-            if (!isHoldingJoystickDirections[1]) hasPressedJoystickDirections[1] = true;
-        }
-        else
-        {
-            if (isHoldingJoystickDirections[1] || hasPressedJoystickDirections[1]) releasedJoystickDirections[1] = true;
-            else releasedJoystickDirections[1] = false;
-            isHoldingJoystickDirections[1] = false;
-            hasPressedJoystickDirections[1] = false;
-        }
-        if (Input.GetAxisRaw("Horizontal") < -0.5f || Input.GetAxisRaw("DpadX") < -0.5f)
-        {
-            if (hasPressedJoystickDirections[2])
-            {
-                isHoldingJoystickDirections[2] = true;
-                hasPressedJoystickDirections[2] = false;
-            }
-            if (!isHoldingJoystickDirections[2]) hasPressedJoystickDirections[2] = true;
-        }
-        else
-        {
-            if (isHoldingJoystickDirections[2] || hasPressedJoystickDirections[2]) releasedJoystickDirections[2] = true;
-            else releasedJoystickDirections[2] = false;
-            isHoldingJoystickDirections[2] = false;
-            hasPressedJoystickDirections[2] = false;
-        }
-        if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("DpadX") > 0.5f)
-        {
-            if (hasPressedJoystickDirections[3])
-            {
-                isHoldingJoystickDirections[3] = true;
-                hasPressedJoystickDirections[3] = false;
-            }
-            if (!isHoldingJoystickDirections[3]) hasPressedJoystickDirections[3] = true;
-        }
-        else
-        {
-            if (isHoldingJoystickDirections[3] || hasPressedJoystickDirections[3]) releasedJoystickDirections[3] = true;
-            else releasedJoystickDirections[3] = false;
-            isHoldingJoystickDirections[3] = false;
-            hasPressedJoystickDirections[3] = false;
-        }
+        UpdateControllerInput();
     }
     public static bool pressedDpad()
     {
@@ -156,13 +102,16 @@ public class Inputs : MonoBehaviour
     }
     public static bool pressed(string button)
     {
+
         if (DebugConsole.isActive || GameData.isPaused) return false;
 
         int index = Inputs.keyindices[button];
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;
-         if (index < 4 && hasPressedJoystickDirections[index]) return true;
-        if (Input.GetKeyDown(Inputs.inputs[index]) || Input.GetKeyDown(Inputs.controllerInputs[index])) return true;
+        if ((Input.GetKeyDown(Inputs.inputs[index]) || Input.GetKeyDown(Inputs.controllerInputs[index])) || (index < 4 && hasPressedJoystickDirections[index]))
+        {
+            return true;
+        }
         return false;
 
     }
@@ -184,10 +133,79 @@ public class Inputs : MonoBehaviour
         int index = Inputs.keyindices[button];
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;
-        if (index < 4 && releasedJoystickDirections[index]) return true;
-        if (Input.GetKeyUp(Inputs.inputs[index]) || Input.GetKeyUp(Inputs.controllerInputs[index])) return true;
+        if ((Input.GetKeyUp(Inputs.inputs[index]) || Input.GetKeyUp(Inputs.controllerInputs[index])) || (index < 4 && releasedJoystickDirections[index]))
+        {
+            return true;
+        }
 
         return false;
 
+    }
+    public void UpdateControllerInput()
+    {
+        if (Input.GetAxisRaw("JoystickY") > 0.5f || Input.GetAxisRaw("DpadY") > 0.5f)
+        {
+            if (hasPressedJoystickDirections[0])
+            {
+                isHoldingJoystickDirections[0] = true;
+                hasPressedJoystickDirections[0] = false;
+            }
+            if (!isHoldingJoystickDirections[0]) hasPressedJoystickDirections[0] = true;
+        }
+        else
+        {
+            if (isHoldingJoystickDirections[0] || hasPressedJoystickDirections[0]) releasedJoystickDirections[0] = true;
+            else releasedJoystickDirections[0] = false;
+            isHoldingJoystickDirections[0] = false;
+            hasPressedJoystickDirections[0] = false;
+        }
+        if (Input.GetAxisRaw("JoystickY") < -0.5f || Input.GetAxisRaw("DpadY") < -0.5f)
+        {
+            if (hasPressedJoystickDirections[1])
+            {
+                isHoldingJoystickDirections[1] = true;
+                hasPressedJoystickDirections[1] = false;
+            }
+            if (!isHoldingJoystickDirections[1]) hasPressedJoystickDirections[1] = true;
+        }
+        else
+        {
+            if (isHoldingJoystickDirections[1] || hasPressedJoystickDirections[1]) releasedJoystickDirections[1] = true;
+            else releasedJoystickDirections[1] = false;
+            isHoldingJoystickDirections[1] = false;
+            hasPressedJoystickDirections[1] = false;
+        }
+        if (Input.GetAxisRaw("JoystickX") < -0.5f || Input.GetAxisRaw("DpadX") < -0.5f)
+        {
+            if (hasPressedJoystickDirections[2])
+            {
+                isHoldingJoystickDirections[2] = true;
+                hasPressedJoystickDirections[2] = false;
+            }
+            if (!isHoldingJoystickDirections[2]) hasPressedJoystickDirections[2] = true;
+        }
+        else
+        {
+            if (isHoldingJoystickDirections[2] || hasPressedJoystickDirections[2]) releasedJoystickDirections[2] = true;
+            else releasedJoystickDirections[2] = false;
+            isHoldingJoystickDirections[2] = false;
+            hasPressedJoystickDirections[2] = false;
+        }
+        if (Input.GetAxisRaw("JoystickX") > 0.5f || Input.GetAxisRaw("DpadX") > 0.5f)
+        {
+            if (hasPressedJoystickDirections[3])
+            {
+                isHoldingJoystickDirections[3] = true;
+                hasPressedJoystickDirections[3] = false;
+            }
+            if (!isHoldingJoystickDirections[3]) hasPressedJoystickDirections[3] = true;
+        }
+        else
+        {
+            if (isHoldingJoystickDirections[3] || hasPressedJoystickDirections[3]) releasedJoystickDirections[3] = true;
+            else releasedJoystickDirections[3] = false;
+            isHoldingJoystickDirections[3] = false;
+            hasPressedJoystickDirections[3] = false;
+        }
     }
 }

@@ -83,11 +83,9 @@ public class MapEditor : MonoBehaviour
        EncounterInfo encounterInfo = go.GetComponent<EncounterTile>().info;
         switch(go.tag){
             case "TallGrass":
-                go.transform.Translate(0, 0, -1);
                 encounterInfo.isWater = false;
                 break;
             case "Water":
-                go.transform.Translate(0, 0, -1);
                 encounterInfo.isWater = true;
                 break;
             default:

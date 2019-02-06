@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public enum GameScene{
-    SGB,
-    NintendoSwitch
-}
 public class GameDataManager : MonoBehaviour {
-    public GameScene currentScene;
     public GameObject[] gameScenes;
     public static GameDataManager instance;
-    [HideInInspector]
-    public RenderTexture mainRender,postRender,pass1,pass2;
+    public RenderTexture mainRender,postRender, templateRenderTexture;
     public RectTransform renderRect;
     public float ms;
     public Slots slots;
@@ -44,17 +38,6 @@ public class GameDataManager : MonoBehaviour {
         GameData.money = 3000;
         GameData.coins = 300;
         GameData.screenTileHeight = 9;
-         foreach(GameObject scene in gameScenes){
-            scene.SetActive(false);
-        }
-        switch(currentScene){
-            case GameScene.NintendoSwitch:
-                gameScenes[1].SetActive(true);
-                break;
-            case GameScene.SGB:
-                gameScenes[0].SetActive(true);
-                break;    
-        }
         
         
         GameData.screenTileWidth = 10;
@@ -62,11 +45,8 @@ public class GameDataManager : MonoBehaviour {
         mainRender.filterMode = FilterMode.Point;
         postRender = new RenderTexture(160, 144, 1);
         postRender.filterMode = FilterMode.Point;
-        pass1 = new RenderTexture(160, 144, 1);
-        pass1.filterMode = FilterMode.Point;
-        pass2 = new RenderTexture(160, 144, 1);
-        pass2.filterMode = FilterMode.Point;
-            renderRect.sizeDelta = new Vector2(1200, renderRect.sizeDelta.y);
+        templateRenderTexture = new RenderTexture(mainRender);
+        renderRect.sizeDelta = new Vector2(1200, renderRect.sizeDelta.y);
         
 
         Camera.main.targetTexture = mainRender;

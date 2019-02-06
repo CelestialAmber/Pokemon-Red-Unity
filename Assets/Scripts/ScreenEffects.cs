@@ -30,9 +30,9 @@ public class PaletteSet{
 
 }
 public class ScreenEffects : MonoBehaviour {
-    public Material paletteEffect, invertEffect, waveEffect, noEffect;
-    public RawImage sgbScreen, nintendoSwitchScreen;
-    private RenderTexture texture, outputScreen, pass1, pass2;
+    public Material paletteEffect, invertEffect, waveEffect, noEffect, ssAnneScrollEffect;
+    public RawImage sgbScreen;
+    public RenderTexture texture, outputScreen;
     public bool invert, wave;
     public Palette usedPalette;
     private Palette lastPalette;
@@ -42,17 +42,20 @@ public class ScreenEffects : MonoBehaviour {
     [Range(-3,3)]
     public static int flashLevel;
     public Vector2 screenPos;
-	// Use this for initialization
+    public int shipScrollOffset;
+    private RenderTexture[] passTex = new RenderTexture[3]; //RenderTextures for blitting
+    // Use this for initialization
     void Awake(){
         instance = this;
     }
 	void Start () {
         texture = GameDataManager.instance.mainRender;
         outputScreen = GameDataManager.instance.postRender;
-        pass1 = GameDataManager.instance.pass1;
-        pass2 = GameDataManager.instance.pass2;
+        for(int i = 0; i < passTex.Length; i++) //create duplicates for pass textures
+        {
+            passTex[i] = new RenderTexture(GameDataManager.instance.templateRenderTexture);
+        }
         sgbScreen.texture = outputScreen;
-        nintendoSwitchScreen.texture = outputScreen;
 	}
    
 	// Update is called once per frame
@@ -72,19 +75,31 @@ public class ScreenEffects : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.G)){
             StartCoroutine(ShakeVertical());
         }
+        if (Input.GetKeyDown(KeyCode.H)) StartCoroutine(ScrollShip());
         paletteEffect.SetColor("color1", palettes[(int)usedPalette].bg1);
         paletteEffect.SetColor("color2", palettes[(int)usedPalette].bg2);
         paletteEffect.SetColor("color3", palettes[(int)usedPalette].bg3);
         paletteEffect.SetColor("color4", palettes[(int)usedPalette].bg4);
         paletteEffect.SetInt("flashLevel",flashLevel);
-        Graphics.Blit(texture,pass1, paletteEffect,0);
-        if (invert) Graphics.Blit(pass1, pass2, invertEffect, 0);
-        else Graphics.Blit(pass1, pass2, noEffect, 0);
-        if (wave) Graphics.Blit(pass2, outputScreen, waveEffect, 0);
-        else Graphics.Blit(pass2, outputScreen, noEffect, 0);
-
+        ssAnneScrollEffect.SetFloat("shipScrollOffset", shipScrollOffset);
+        Graphics.Blit(texture,passTex[0], paletteEffect,0);
+        if (invert) Graphics.Blit(passTex[0], passTex[1], invertEffect, 0);
+        else Graphics.Blit(passTex[0], passTex[1], noEffect, 0);
+        if (wave) Graphics.Blit(passTex[1], passTex[2], waveEffect, 0);
+        else Graphics.Blit(passTex[1], passTex[2], noEffect, 0);
+        Graphics.Blit(passTex[2], outputScreen, ssAnneScrollEffect, 0);
         paletteEffect.SetVector("screenPos",screenPos);
 	}
+    public IEnumerator ScrollShip() //function to scroll the S.S. Anne Ship off screen.
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.0166f * 8f); //the ship moves every 8 frames
+        for(int i = 0; i < 144; i++) //Scroll from 0 to 144 pixels until the ship is offscreen.
+        {
+            shipScrollOffset = i + 1;
+            yield return wait;
+        }
+        shipScrollOffset = 0;
+    }
     public IEnumerator SlowShortShakeHorizontal()
     {
 

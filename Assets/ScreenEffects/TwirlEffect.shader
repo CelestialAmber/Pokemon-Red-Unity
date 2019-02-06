@@ -6,8 +6,8 @@ Properties {
     speed("Speed",Float) = 1
     }
 SubShader {
+		Cull Off ZWrite Off ZTest Always
  Tags { "RenderType"="Opaque" }
-    LOD 100
 
     Pass {
         CGPROGRAM

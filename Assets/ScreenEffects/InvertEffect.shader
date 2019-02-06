@@ -3,8 +3,8 @@ Properties {
     _MainTex ("Base (RGB)", 2D) = "white" {}
     }
 SubShader {
+		Cull Off ZWrite Off ZTest Always
  Tags { "RenderType"="Opaque" }
-    LOD 100
 
     Pass {
         CGPROGRAM
