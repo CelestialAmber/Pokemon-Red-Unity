@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6467040112955112716}
   - component: {fileID: 6467040112955112717}
   - component: {fileID: 6467040112955112714}
+  - component: {fileID: 264213776}
+  - component: {fileID: 8529154339518581654}
   m_Layer: 12
   m_Name: NPC 1
   m_TagString: Untagged
@@ -89,19 +91,17 @@ MonoBehaviour:
   trainerSpriteIndex: 0
   textIndex: 0
   movingHitbox: {fileID: 6467040113119842889}
-  dialogue:
-  - isContinue: 0
-    message: Technology is//incredible!
-  - isContinue: 0
-    message: You can now store//and recall items
-  - isContinue: 1
-    message: 'and #MON as'
-  - isContinue: 1
-    message: data via PC!
+  exclamationBox: {fileID: 0}
   framesSinceMoving: 0
+  playerDistance: {x: 0, y: 0}
+  pokemonObject: {fileID: 0}
+  npcDialogue: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 21504
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &6467040112955112714
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,6 +128,44 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &264213776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467040112955112719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064e878d9fa37454e9ae5e380adf2f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDistance: {x: 0, y: 0}
+  isDisabled: 0
+  spriteRenderers: []
+  onEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &8529154339518581654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467040112955112719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f72a6b8cafeada429936b4a54f6d7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueArray: []
 --- !u!1 &6467040113092433994
 GameObject:
   m_ObjectHideFlags: 0

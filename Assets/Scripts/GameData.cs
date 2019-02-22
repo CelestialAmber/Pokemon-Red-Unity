@@ -94,6 +94,7 @@ public class GameData {
         saveData = SaveData.Create();
         SaveGameData(Application.persistentDataPath + "/save.sav", saveData); //save
     }
+    //encounter table indices for all maps
     public static int[] MapGrassEncounterTableIndices = {
         -1, //Pallet Town
         -1, //Oak's Lab
@@ -179,9 +180,12 @@ public class GameData {
         50,//Unknown 3
         -1,//Trade Center
         -1,//Colloseum
-        -1 //Bill's House
+        -1, //Bill's House
+        -1, //Houses
+
 
     };
+    //List of maps that have water encounters
     public static List<Map> WaterEncounterMaps = new List<Map>(
         new Map[]{
             Map.Route19,
@@ -210,7 +214,7 @@ public class GameData {
             return JsonConvert.DeserializeObject<SaveData>(data);
     }
 
-    public static void SaveGameData(string filename, SaveData saveData)
+    public static void SaveGameData(string filename, SaveData saveData) //method for saving the game
     {
 
         string data = JValue.Parse(JsonConvert.SerializeObject(saveData)).ToString();

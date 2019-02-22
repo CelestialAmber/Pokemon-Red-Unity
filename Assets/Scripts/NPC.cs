@@ -37,15 +37,21 @@ public class NPC : MonoBehaviour
     public int trainerSpriteIndex;
     public int textIndex;
     public GameObject movingHitbox, exclamationBox;
-    public DialogueMessage[] dialogue;
     public int framesSinceMoving;
+    public Vector2 playerDistance;
+    public PokemonObject pokemonObject;
+    public NPCTileDialogue npcDialogue;
+
     // Start is called before the first frame update
     void Start()
     {
+        npcDialogue = GetComponent<NPCTileDialogue>();
         UpdateSprite();
         homePos = transform.position;
         frameTimer = 2;
         movementDelay = Random.Range(0,128);
+        pokemonObject = GetComponent<PokemonObject>();
+        pokemonObject.onDisabled.AddListener(OnDisableNPC);
     }
 private bool dontUpdateDireciton;
     // Update is called once per frame
@@ -56,8 +62,10 @@ private bool dontUpdateDireciton;
     void Update()
     {
         CheckCollision();
-         if(!Dialogue.instance.finishedText || Player.instance.menuActive || Player.instance.inBattle || GameData.isPaused) return;
+        if (!Dialogue.instance.finishedText || Player.instance.menuActive || Player.instance.inBattle || GameData.isPaused) return;
         if(isMoving) return;
+        if (pokemonObject.isDisabled) return;
+        
         frameTimer--;
         if(frameTimer == 0){
              movementDelay--;
@@ -281,19 +289,10 @@ Direction chosenDir;
     }
    public IEnumerator NPCText(){
      Dialogue.instance.onFinishText.AddListener(UpdateDirectionBool);
-      foreach(DialogueMessage dialogueMessage in dialogue){
-
-          if(dialogueMessage.message.Contains("giveItem(")){
-          string itemToGive = dialogueMessage.message.Replace("giveItem(","").Replace(")","");
-          yield return TextDatabase.instance.GetItemText(itemToGive);
-          
-          }else{
-              if(dialogueMessage.isContinue){
-            yield return Dialogue.instance.cont(dialogueMessage.message);
-              }else{
-                  yield return Dialogue.instance.text(dialogueMessage.message);
-              }
-          }
-      } 
+        yield return npcDialogue.PlayDialogue(npcDialogue.dialogueArray);
+    }
+    public void OnDisableNPC()
+    {
+        movementDelay = Random.Range(0, 128);
     }
 }

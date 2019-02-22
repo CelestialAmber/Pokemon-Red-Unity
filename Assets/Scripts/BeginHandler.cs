@@ -174,29 +174,29 @@ public class BeginHandler : MonoBehaviour {
 		play.menuActive = true;
 		Dialogue.instance.deactivated = true;
 		currentmenu = null;
-		yield return StartCoroutine(Dialogue.instance.text ("Hello there!\nWelcome to the"));
-		yield return StartCoroutine(Dialogue.instance.cont ("world of POKeMON!"));
-		yield return StartCoroutine(Dialogue.instance.text ("My name is OAK!\nPeople call me"));
-		yield return StartCoroutine(Dialogue.instance.cont ("the POKeMON PROF!"));
+		yield return Dialogue.instance.text ("Hello there!\nWelcome to the");
+		yield return Dialogue.instance.cont ("world of POKeMON!");
+		yield return Dialogue.instance.text ("My name is OAK!\nPeople call me");
+		yield return Dialogue.instance.cont ("the POKeMON PROF!");
        tutanim.SetTrigger("transition");
 
     }
 	public IEnumerator SecondOakDialogue(){
-		yield return StartCoroutine(Dialogue.instance.text ("This world is\ninhabited by"));
-		yield return StartCoroutine(Dialogue.instance.cont ("creatures called"));
-		yield return StartCoroutine(Dialogue.instance.cont ("POKeMON!",true));
-        yield return StartCoroutine(SoundManager.instance.PlayCryCoroutine(29));
-		yield return StartCoroutine(Dialogue.instance.text("For some people,\nPOKéMON are"));
-		yield return StartCoroutine(Dialogue.instance.cont ("pets. Others use"));
-		yield return StartCoroutine(Dialogue.instance.cont ("them for fights."));
-		yield return StartCoroutine(Dialogue.instance.text("Myself..."));
-		yield return StartCoroutine(Dialogue.instance.text ("I study POKeMON\nas a profession."));
+		yield return Dialogue.instance.text ("This world is\ninhabited by");
+		yield return Dialogue.instance.cont ("creatures called");
+		yield return Dialogue.instance.cont ("POKeMON!",true);
+        yield return SoundManager.instance.PlayCryCoroutine(29);
+		yield return Dialogue.instance.text("For some people,\nPOKéMON are");
+		yield return Dialogue.instance.cont ("pets. Others use");
+		yield return Dialogue.instance.cont ("them for fights.");
+		yield return Dialogue.instance.text("Myself...");
+		yield return Dialogue.instance.text ("I study POKeMON\nas a profession.");
         tutanim.SetTrigger("transition");
 
     }
 	public IEnumerator ThirdOakDialogue(){
 		
-		yield return StartCoroutine(Dialogue.instance.text ("First, what is\nyour name?"));
+		yield return Dialogue.instance.text ("First, what is\nyour name?");
         tutanim.SetTrigger("transition");
         Dialogue.instance.enabled = false;
 
@@ -206,16 +206,16 @@ public class BeginHandler : MonoBehaviour {
 }
 	public IEnumerator FourthOakDialogue(){
 
-		yield return StartCoroutine(Dialogue.instance.text ("Right! So your\nname is " + GameData.playerName + "!"));
+		yield return Dialogue.instance.text ("Right! So your\nname is " + GameData.playerName + "!");
         tutanim.SetTrigger("transition");
 
     }
 	public IEnumerator FifthOakDialogue(){
 
-		yield return StartCoroutine(Dialogue.instance.text ("This is my grand-\nson. He's been"));
-		yield return StartCoroutine(Dialogue.instance.cont ("your rival since"));
-		yield return StartCoroutine(Dialogue.instance.cont ("you were a baby."));
-		yield return StartCoroutine(Dialogue.instance.text ("...Erm, what is\nhis name again?"));
+		yield return Dialogue.instance.text ("This is my grand-\nson. He's been");
+		yield return Dialogue.instance.cont ("your rival since");
+		yield return Dialogue.instance.cont ("you were a baby.");
+		yield return Dialogue.instance.text ("...Erm, what is\nhis name again?");
         tutanim.SetTrigger("transition");
         Dialogue.instance.enabled = false;
 
@@ -225,18 +225,18 @@ public class BeginHandler : MonoBehaviour {
 	}
 	public IEnumerator SixthOakDialogue(){
 
-		yield return StartCoroutine(Dialogue.instance.text ("That's right! I\nremember now! His"));
-        yield return StartCoroutine(Dialogue.instance.cont ("name is " + GameData.rivalName + "!"));
+		yield return Dialogue.instance.text ("That's right! I\nremember now! His");
+        yield return Dialogue.instance.cont ("name is " + GameData.rivalName + "!");
         tutanim.SetTrigger("transition");
     }
 	public IEnumerator SeventhOakDialogue(){
 
-        yield return StartCoroutine(Dialogue.instance.text (GameData.playerName + "!"));
-		yield return StartCoroutine(Dialogue.instance.text ("Your very own\nPOKéMON legend is"));
-		yield return StartCoroutine(Dialogue.instance.cont("about to unfold!"));
-		yield return StartCoroutine(Dialogue.instance.text ("A world of dreams\nand adventures"));
-		yield return StartCoroutine(Dialogue.instance.cont ("with POKeMON"));
-		yield return StartCoroutine(Dialogue.instance.cont ("awaits! Let's go!"));
+        yield return Dialogue.instance.text (GameData.playerName + "!");
+		yield return Dialogue.instance.text ("Your very own\nPOKéMON legend is");
+		yield return Dialogue.instance.cont("about to unfold!");
+        yield return Dialogue.instance.text("A world of dreams\nand adventures");
+		yield return Dialogue.instance.cont ("with POKeMON");
+		yield return Dialogue.instance.cont ("awaits! Let's go!");
         SoundManager.instance.FadeSong();
         tutanim.SetTrigger("transition");
     }

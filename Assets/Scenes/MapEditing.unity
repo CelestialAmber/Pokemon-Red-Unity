@@ -284,8 +284,14 @@ PrefabInstance:
     - target: {fileID: 8521858559098567680, guid: 706b460b40c6a4a7f8cd10d655109aad,
         type: 3}
       propertyPath: currentMap
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8521858559098567680, guid: 706b460b40c6a4a7f8cd10d655109aad,
+        type: 3}
+      propertyPath: template
+      value: 
+      objectReference: {fileID: 1001321408194904, guid: e9a16157dfcf44578a8fde75fa9bd8c9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 706b460b40c6a4a7f8cd10d655109aad, type: 3}
 --- !u!1 &675631239
@@ -437,6 +443,9 @@ MonoBehaviour:
     hasItem: 1
     TextID: 0
     itemName: Potion
+  tileDialogue:
+    canInteractDirs: 01010101
+    dialogue: []
 --- !u!1 &1528562152 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2532810646065698227, guid: 58525091eadae4b5388ac7c83a2a8ac1,
@@ -460,6 +469,9 @@ MonoBehaviour:
     hasItem: 0
     TextID: 4
     itemName: 
+  tileDialogue:
+    canInteractDirs: 01010101
+    dialogue: []
 --- !u!1 &1528562154 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2532810645280856842, guid: 58525091eadae4b5388ac7c83a2a8ac1,
@@ -483,6 +495,9 @@ MonoBehaviour:
     hasItem: 0
     TextID: 1
     itemName: 
+  tileDialogue:
+    canInteractDirs: 01010101
+    dialogue: []
 --- !u!1 &1528562156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2532810644085502032, guid: 58525091eadae4b5388ac7c83a2a8ac1,
@@ -506,6 +521,9 @@ MonoBehaviour:
     hasItem: 0
     TextID: 2
     itemName: 
+  tileDialogue:
+    canInteractDirs: 01010101
+    dialogue: []
 --- !u!4 &1528562181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2532810644165247263, guid: 58525091eadae4b5388ac7c83a2a8ac1,

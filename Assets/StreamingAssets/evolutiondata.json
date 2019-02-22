@@ -1,606 +1,606 @@
 {
   "Bulbasaur": {
-    "Name": "Ivysaur",
-    "Int": 16
+    "Item1": "Ivysaur",
+    "Item2": 16
   },
   "Ivysaur": {
-    "Name": "Venusaur",
-    "Int": 32
+    "Item1": "Venusaur",
+    "Item2": 32
   },
   "Venusaur": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Charmander": {
-    "Name": "Charmeleon",
-    "Int": 16
+    "Item1": "Charmeleon",
+    "Item2": 16
   },
   "Charmeleon": {
-    "Name": "Charizard",
-    "Int": 36
+    "Item1": "Charizard",
+    "Item2": 36
   },
   "Charizard": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Squirtle": {
-    "Name": "Wartortle",
-    "Int": 16
+    "Item1": "Wartortle",
+    "Item2": 16
   },
   "Wartortle": {
-    "Name": "Blastoise",
-    "Int": 36
+    "Item1": "Blastoise",
+    "Item2": 36
   },
   "Blastoise": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Caterpie": {
-    "Name": "Metapod",
-    "Int": 7
+    "Item1": "Metapod",
+    "Item2": 7
   },
   "Metapod": {
-    "Name": "Butterfree",
-    "Int": 10
+    "Item1": "Butterfree",
+    "Item2": 10
   },
   "Butterfree": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Weedle": {
-    "Name": "Kakuna",
-    "Int": 7
+    "Item1": "Kakuna",
+    "Item2": 7
   },
   "Kakuna": {
-    "Name": "Beedrill",
-    "Int": 10
+    "Item1": "Beedrill",
+    "Item2": 10
   },
   "Beedrill": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Pidgey": {
-    "Name": "Pidgeotto",
-    "Int": 18
+    "Item1": "Pidgeotto",
+    "Item2": 18
   },
   "Pidgeotto": {
-    "Name": "Pidgeot",
-    "Int": 36
+    "Item1": "Pidgeot",
+    "Item2": 36
   },
   "Pidgeot": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Rattata": {
-    "Name": "Raticate",
-    "Int": 20
+    "Item1": "Raticate",
+    "Item2": 20
   },
   "Raticate": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Spearow": {
-    "Name": "Fearow",
-    "Int": 20
+    "Item1": "Fearow",
+    "Item2": 20
   },
   "Fearow": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Ekans": {
-    "Name": "Arbok",
-    "Int": 22
+    "Item1": "Arbok",
+    "Item2": 22
   },
   "Arbok": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Pikachu": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Raichu": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Sandshrew": {
-    "Name": "Sandslash",
-    "Int": 22
+    "Item1": "Sandslash",
+    "Item2": 22
   },
   "Sandslash": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Nidoran♀": {
-    "Name": "Nidorina",
-    "Int": 16
+    "Item1": "Nidorina",
+    "Item2": 16
   },
   "Nidorina": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Nidoqueen": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Nidoran♂": {
-    "Name": "Nidorino",
-    "Int": 16
+    "Item1": "Nidorino",
+    "Item2": 16
   },
   "Nidorino": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Nidoking": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Clefairy": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Clefable": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Vulpix": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Ninetales": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Jigglypuff": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Wigglytuff": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Zubat": {
-    "Name": "Golbat",
-    "Int": 22
+    "Item1": "Golbat",
+    "Item2": 22
   },
   "Golbat": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Oddish": {
-    "Name": "Gloom",
-    "Int": 21
+    "Item1": "Gloom",
+    "Item2": 21
   },
   "Gloom": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Vileplume": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Paras": {
-    "Name": "Parasect",
-    "Int": 24
+    "Item1": "Parasect",
+    "Item2": 24
   },
   "Parasect": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Venonat": {
-    "Name": "Venomoth",
-    "Int": 31
+    "Item1": "Venomoth",
+    "Item2": 31
   },
   "Venomoth": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Diglett": {
-    "Name": "Dugtrio",
-    "Int": 26
+    "Item1": "Dugtrio",
+    "Item2": 26
   },
   "Dugtrio": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Meowth": {
-    "Name": "Persian",
-    "Int": 28
+    "Item1": "Persian",
+    "Item2": 28
   },
   "Persian": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Psyduck": {
-    "Name": "Golduck",
-    "Int": 33
+    "Item1": "Golduck",
+    "Item2": 33
   },
   "Golduck": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Mankey": {
-    "Name": "Primeape",
-    "Int": 28
+    "Item1": "Primeape",
+    "Item2": 28
   },
   "Primeape": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Growlithe": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Arcanine": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Poliwag": {
-    "Name": "Poliwhirl",
-    "Int": 25
+    "Item1": "Poliwhirl",
+    "Item2": 25
   },
   "Poliwhirl": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Poliwrath": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Abra": {
-    "Name": "Kadabra",
-    "Int": 16
+    "Item1": "Kadabra",
+    "Item2": 16
   },
   "Kadabra": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Alakazam": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Machop": {
-    "Name": "Machoke",
-    "Int": 28
+    "Item1": "Machoke",
+    "Item2": 28
   },
   "Machoke": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Machamp": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Bellsprout": {
-    "Name": "Weepinbell",
-    "Int": 21
+    "Item1": "Weepinbell",
+    "Item2": 21
   },
   "Weepinbell": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Victreebel": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Tentacool": {
-    "Name": "Tentacruel",
-    "Int": 30
+    "Item1": "Tentacruel",
+    "Item2": 30
   },
   "Tentacruel": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Geodude": {
-    "Name": "Graveler",
-    "Int": 25
+    "Item1": "Graveler",
+    "Item2": 25
   },
   "Graveler": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Golem": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Ponyta": {
-    "Name": "Rapidash",
-    "Int": 40
+    "Item1": "Rapidash",
+    "Item2": 40
   },
   "Rapidash": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Slowpoke": {
-    "Name": "Slowbro",
-    "Int": 37
+    "Item1": "Slowbro",
+    "Item2": 37
   },
   "Slowbro": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Magnemite": {
-    "Name": "Magneton",
-    "Int": 30
+    "Item1": "Magneton",
+    "Item2": 30
   },
   "Magneton": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Farfetch'd": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Doduo": {
-    "Name": "Dodrio",
-    "Int": 31
+    "Item1": "Dodrio",
+    "Item2": 31
   },
   "Dodrio": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Seel": {
-    "Name": "Dewgong",
-    "Int": 34
+    "Item1": "Dewgong",
+    "Item2": 34
   },
   "Dewgong": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Grimer": {
-    "Name": "Muk",
-    "Int": 38
+    "Item1": "Muk",
+    "Item2": 38
   },
   "Muk": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Shellder": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Cloyster": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Gastly": {
-    "Name": "Haunter",
-    "Int": 25
+    "Item1": "Haunter",
+    "Item2": 25
   },
   "Haunter": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Gengar": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Onix": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Drowzee": {
-    "Name": "Hypno",
-    "Int": 26
+    "Item1": "Hypno",
+    "Item2": 26
   },
   "Hypno": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Krabby": {
-    "Name": "Kingler",
-    "Int": 28
+    "Item1": "Kingler",
+    "Item2": 28
   },
   "Kingler": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Voltorb": {
-    "Name": "Electrode",
-    "Int": 30
+    "Item1": "Electrode",
+    "Item2": 30
   },
   "Electrode": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Exeggcute": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Exeggutor": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Cubone": {
-    "Name": "Marowak",
-    "Int": 28
+    "Item1": "Marowak",
+    "Item2": 28
   },
   "Marowak": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Hitmonlee": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Hitmonchan": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Lickitung": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Koffing": {
-    "Name": "Weezing",
-    "Int": 35
+    "Item1": "Weezing",
+    "Item2": 35
   },
   "Weezing": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Rhyhorn": {
-    "Name": "Rhydon",
-    "Int": 42
+    "Item1": "Rhydon",
+    "Item2": 42
   },
   "Rhydon": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Chansey": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Tangela": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Kangaskhan": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Horsea": {
-    "Name": "Seadra",
-    "Int": 32
+    "Item1": "Seadra",
+    "Item2": 32
   },
   "Seadra": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Goldeen": {
-    "Name": "Seaking",
-    "Int": 33
+    "Item1": "Seaking",
+    "Item2": 33
   },
   "Seaking": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Staryu": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Starmie": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Mr. Mime": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Scyther": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Jynx": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Electabuzz": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Magmar": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Pinsir": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Tauros": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Magikarp": {
-    "Name": "Gyarados",
-    "Int": 20
+    "Item1": "Gyarados",
+    "Item2": 20
   },
   "Gyarados": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Lapras": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Ditto": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Eevee": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Vaporeon": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Jolteon": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Flareon": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Porygon": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Omanyte": {
-    "Name": "Omastar",
-    "Int": 40
+    "Item1": "Omastar",
+    "Item2": 40
   },
   "Omastar": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Kabuto": {
-    "Name": "Kabutops",
-    "Int": 40
+    "Item1": "Kabutops",
+    "Item2": 40
   },
   "Kabutops": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Aerodactyl": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Snorlax": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Articuno": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Zapdos": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Moltres": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Dratini": {
-    "Name": "Dragonair",
-    "Int": 30
+    "Item1": "Dragonair",
+    "Item2": 30
   },
   "Dragonair": {
-    "Name": "Dragonite",
-    "Int": 55
+    "Item1": "Dragonite",
+    "Item2": 55
   },
   "Dragonite": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Mewtwo": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   },
   "Mew": {
-    "Name": "",
-    "Int": 0
+    "Item1": "",
+    "Item2": 0
   }
 }

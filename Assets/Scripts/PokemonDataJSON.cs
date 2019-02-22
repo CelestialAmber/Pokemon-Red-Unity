@@ -1,10 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-using UnityEditorInternal;
-#endif
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Xml;
@@ -35,11 +31,11 @@ public class MoveData{
 [System.Serializable]
 public class EncounterData{
     public int encounterChance;
-    public StrInt[] slots;
+    public Tuple<string,int>[] slots;
 }
 public class FishingGroup{
-    public StrInt[] slots;
-    public FishingGroup(StrInt[] slots) => this.slots = slots;
+    public Tuple<string,int>[] slots;
+    public FishingGroup(Tuple<string,int>[] slots) => this.slots = slots;
 }
 
 
@@ -109,6 +105,7 @@ public class Serializer
         string tmlearndata = sr.ReadToEnd();
         file.Close();
         return JsonConvert.DeserializeObject<T>(tmlearndata);
+
     }
     
 
@@ -139,9 +136,9 @@ public class PokemonData
     public static Dictionary<string, string[]> learnbytm = new Dictionary<string, string[]>();
     //format(HP,Attack,Defense,Speed,Special)
     public static Dictionary<string, int[]> baseStats = new Dictionary<string, int[]>();
-    public static Dictionary<string, StrInt[]> levelmoves = new Dictionary<string, StrInt[]>();
+    public static Dictionary<string, Tuple<string,int>[]> levelmoves = new Dictionary<string, Tuple<string,int>[]>();
     //format: pokemon name as key, outputs pokemon and evolved level
-    public static Dictionary<string, StrInt> evolution = new Dictionary<string, StrInt>();
+    public static Dictionary<string, Tuple<string,int>> evolution = new Dictionary<string, Tuple<string,int>>();
     public static List<EncounterData> encounters = new List<EncounterData>();
     /* Encounter Table Indices:
     0:Diglett Cave
@@ -213,16 +210,16 @@ public class PokemonData
     
      */
 public static List<FishingGroup> superFishingGroups = new List<FishingGroup>(new FishingGroup[]{ //groups for the super rod
-new FishingGroup(new StrInt[]{new StrInt("Tentacool",15), new StrInt("Poliwag",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Goldeen",15), new StrInt("Poliwag",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Psyduck",15), new StrInt("Goldeen",15), new StrInt("Krabby",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Krabby",15), new StrInt("Shellder",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Poliwhirl",23), new StrInt("Slowpoke",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Dratini",15), new StrInt("Krabby",15), new StrInt("Psyduck",15), new StrInt("Slowpoke",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Tentacool",5), new StrInt("Krabby",15), new StrInt("Goldeen",15), new StrInt("Magikarp",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Staryu",15), new StrInt("Horsea",15), new StrInt("Shellder",15), new StrInt("Goldeen",15)}),
-new FishingGroup(new StrInt[]{new StrInt("Slowbro",23), new StrInt("Seaking",23), new StrInt("Kingler",23), new StrInt("Seadra",23)}),
-new FishingGroup(new StrInt[]{new StrInt("Seaking",23), new StrInt("Krabby",15), new StrInt("Goldeen",15), new StrInt("Magikarp",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Tentacool",15), new Tuple<string,int>("Poliwag",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Poliwag",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Psyduck",15), new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Krabby",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Krabby",15), new Tuple<string,int>("Shellder",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Poliwhirl",23), new Tuple<string,int>("Slowpoke",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Dratini",15), new Tuple<string,int>("Krabby",15), new Tuple<string,int>("Psyduck",15), new Tuple<string,int>("Slowpoke",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Tentacool",5), new Tuple<string,int>("Krabby",15), new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Magikarp",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Staryu",15), new Tuple<string,int>("Horsea",15), new Tuple<string,int>("Shellder",15), new Tuple<string,int>("Goldeen",15)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Slowbro",23), new Tuple<string,int>("Seaking",23), new Tuple<string,int>("Kingler",23), new Tuple<string,int>("Seadra",23)}),
+new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Seaking",23), new Tuple<string,int>("Krabby",15), new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Magikarp",15)}),
     });
     /*
 List of index of the party sprite for each Pokemon.
@@ -279,15 +276,14 @@ public class PokemonDataJSON : MonoBehaviour
      void Awake()
     {
         PokemonData.TypeEffectiveness = Serializer.JSONtoObject<Dictionary<string,Dictionary<string,float>>>("typeEffectiveness.json");
-        PokemonData.evolution = Serializer.JSONtoObject<Dictionary<string,StrInt>>("evolutiondata.json");
+        PokemonData.evolution = Serializer.JSONtoObject<Dictionary<string,Tuple<string,int>>>("evolutiondata.json");
        PokemonData.baseStats = Serializer.JSONtoObject<Dictionary<string,int[]>>("basestatsdata.json");
-        PokemonData.levelmoves = Serializer.JSONtoObject<Dictionary<string, StrInt[]>>("levelmovesdata.json");
+        PokemonData.levelmoves = Serializer.JSONtoObject<Dictionary<string, Tuple<string,int>[]>>("levelmovesdata.json");
         PokemonData.learnbytm = Serializer.JSONtoObject<Dictionary<string,string[]>>("learnbytmdata.json");
         if(versionManager.version == Version.Red){
         PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataRed.json");
         }
         else PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataBlue.json");
-        
         PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
         PokemonData.PokemonPartySprite = Serializer.JSONtoObject<Dictionary<string, int>>("partySpriteData.json");
         PokemonData.PokemonTypes = Serializer.JSONtoObject<Dictionary<string, string[]>>("pokemonTypeData.json");
@@ -296,55 +292,8 @@ public class PokemonDataJSON : MonoBehaviour
         PokemonData.TMHMtoIndex = Serializer.JSONtoObject<Dictionary<string, int>>("tmHmIndices.json");
         PokemonData.itemPrices = Serializer.JSONtoObject<Dictionary<string, int>>("itemPrices.json");
 
-
+        
        
-    }
-}
-
-[System.Serializable]
-public class StrInt
-{
-    public string Name;
-    public int Int;
-    public StrInt(string first, int second)
-    {
-        Name = first;
-        Int = second;
-    }
-    public object this[int index]
-    {
-        get
-        {
-            return FetchValue(index);
-        }
-
-    }
-    object FetchValue(int index)
-    {
-        switch (index)
-        {
-            case 0:
-                return Name;
-            case 1:
-                return Int;
-            default:
-                throw new IndexOutOfRangeException("Index is not 0 or 1.");
-        }
-    }
-    public override string ToString(){
-        return Name + ", " + Int.ToString();
-    }
-    public bool Equals(StrInt str)
-    {
-        return str.Name.Equals(Name) && str.Int.Equals(Int);
-    }
-    public override bool Equals(object o)
-    {
-        return this.Equals(o as StrInt);
-    }
-    public override int GetHashCode()
-    {
-        return Name.GetHashCode() ^ Int.GetHashCode();
     }
 }
 

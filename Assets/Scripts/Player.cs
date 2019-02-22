@@ -15,8 +15,11 @@ Right,
 Null
 
 }
+
+
 public class Player : MonoBehaviour
 {
+
 
  public Animator playerAnim;
     public bool holdingDirection;
@@ -48,7 +51,7 @@ public class Player : MonoBehaviour
 	public float collisionSoundTimer;
     //1 up, 2down, 3 left, 4 right
     public bool cannotMoveLeft, cannotMoveRight, cannotMoveUp, cannotMoveDown;
-
+    public bool canUseBike;
     public float speed = 2.0f;
     public Vector3 pos;
     public int holdFrames;
@@ -62,11 +65,13 @@ public class Player : MonoBehaviour
     public GameObject movingHitbox;
         public UnityEvent onHitWarp, onLoadMap, onEncounterTrainer;
     // Use this for initialization
-   
+    
+    
 
     public static Player instance;
+    public List<string> doorSprites = new List<string>(new string[]{ "tile137", "tile149", "tile249", "tile480", "tile760" });
 
-      void Awake()
+    void Awake()
     {
         instance = this;
         disabled = false;
@@ -310,6 +315,8 @@ public class Player : MonoBehaviour
                         {
                             if (currentTile.isWarp && currentTile.tileWarp.warpType == WarpType.WalkOnWarp)
                             {
+                                if (doorSprites.Contains(currentTile.mainSprite)) SoundManager.instance.PlayGoInsideSound();
+                                else SoundManager.instance.PlayGoOutsideSound();
                                 warpInfo = currentTile.tileWarp;
                                 onHitWarp.Invoke();
                             }
@@ -321,6 +328,7 @@ public class Player : MonoBehaviour
                                 EncounterData table = (currentTile.hasGrass ? currentAreaTable : PokemonData.encounters[55]);
                                 if(rand < currentAreaTable.encounterChance){
                                 rand = Random.Range(0,256);
+                                        rand = 254;
                                 Debug.Log("Wild encounter triggered. Choosing the encounter slot.");
                                 int chosenIndex = (
                                 rand <= 50 ? 0 : //51/256 = 19.9% chance of slot 0
@@ -332,8 +340,9 @@ public class Player : MonoBehaviour
                                 rand <= 228 ? 6 : //13/256 =  5.1% chance of slot 6
                                 rand <= 241 ? 7 : //13/256 =  5.1% chance of slot 7
                                 rand <= 252 ? 8 : 9);//11/256 =  4.3% chance of slot 8
-                                //3/256 =  1.2% chance of slot 9
+                                                     //3/256 =  1.2% chance of slot 9
                                 Debug.Log("Chosen Pokemon: " + table.slots[chosenIndex].ToString());
+                                        Debug.Log(table.slots[chosenIndex].Item1.Length);
                                 isMoving = false;
                                 holdingDirection = false;
                                 StartCoroutine(StartWildBattle(table.slots[chosenIndex]));
@@ -351,6 +360,7 @@ public class Player : MonoBehaviour
                     }
                  
                     if(holdingDirection && !isWarping && facedtile != null && facedtile.isWarp && facedtile.tileWarp.warpType == WarpType.WallWarp && direction == facedtile.tileWarp.wallDirection){
+                        SoundManager.instance.PlayGoOutsideSound();
                          warpInfo = facedtile.tileWarp;
                         onHitWarp.Invoke();
                     }
@@ -588,10 +598,9 @@ yield return new WaitForSeconds(0.25f);
 
 			if (facedObject != null ||(facedtile != null && facedtile.isInteractable)) {
                 NPC npc = null;
-                Pokeball pokeball = null;
                 if(facedObject != null){
                      npc = facedObject.GetComponent<NPC>();
-                     pokeball = facedObject.GetComponent<Pokeball>();
+                     
                 }
 				if (!holdingDirection && transform.position == pos) {
 
@@ -607,11 +616,23 @@ yield return new WaitForSeconds(0.25f);
                             return;
 
                         }
-                        if (pokeball != null)
+                        if(facedObject != null)
                         {
-                            pokeball.gameObject.SetActive(false);
-                            textData.GetItem(pokeball.item);
-                            return;
+                            switch (facedObject.tag) //what tag does the interactable object have?
+                            {
+                                case "Slots":
+                                    SlotsObject dialogueSlots = facedObject.GetComponent<SlotsObject>();
+                                    StartCoroutine(dialogueSlots.PlayDialogue());
+                                    return;
+                                case "Pokeball":
+                                    Pokeball pokeball = facedObject.GetComponent<Pokeball>();
+                                    pokeball.gameObject.SetActive(false);
+                                    textData.GetItem(pokeball.item);
+                                    return;
+
+
+
+                            }
                         }
                         if (facedtile != null)
                         {
@@ -619,11 +640,6 @@ yield return new WaitForSeconds(0.25f);
                             if (facedtile.isInteractable)
                             {
                                 
-                                if (facedtile.tiledata.hasText)
-                                {
-                                    textData.PlayText(facedtile.tiledata.TextID);
-                                    return;
-                                }
                                 if (facedtile.hasItem)
                                 {
                                     facedtile.hasItem = false;
@@ -760,7 +776,7 @@ yield return new WaitForSeconds(0.25f);
         StartCoroutine(CutFunction(MonName));
     }
     public IEnumerator CutFunction(string MonName){
-        yield return StartCoroutine(Dialogue.instance.text(MonName + " hacked\naway with CUT!"));
+        yield return Dialogue.instance.text(MonName + " hacked\naway with CUT!");
         SoundManager.instance.sfx.PlayOneShot(cutClip);
          facedObject.GetComponent<Tree>().Cut();
          disabled = true;
@@ -781,7 +797,7 @@ yield return new WaitForSeconds(0.25f);
      public BattleManager battleManager;
 
     public GameObject battlemenu;
- public IEnumerator StartWildBattle(StrInt pokemon)
+ public IEnumerator StartWildBattle(System.Tuple<string,int> pokemon)
     {
         inBattle = true;
         disabled = true;
@@ -804,7 +820,7 @@ yield return new WaitForSeconds(0.25f);
         
         }
         battleManager.battleType = BattleType.Wild;
-        battleManager.enemyMons = new List<Pokemon>(new Pokemon[]{new Pokemon(pokemon.Name,pokemon.Int)});
+        battleManager.enemyMons = new List<Pokemon>(new Pokemon[]{new Pokemon(pokemon.Item1,pokemon.Item2)});
         battlemenu.SetActive(true);
         battleManager.battleoverlay.sprite = battleManager.blank;
         battleManager.Initialize();
@@ -846,13 +862,13 @@ Inputs.Enable("start");
             {
                 case 0:
                 SoundManager.instance.PlaySong(7);
-                    yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + " got on the \nBICYCLE!"));
+                    yield return Dialogue.instance.text(GameData.playerName + " got on the \nBICYCLE!");
                     
                     walkSurfBikeState = 1;
                     break;
                 case 1:
                     PlayCurrentAreaSong();
-                    yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + "got off\nthe BICYCLE."));
+                    yield return Dialogue.instance.text(GameData.playerName + " got off\nthe BICYCLE.");
                     walkSurfBikeState = 0;
                     break;
             }
@@ -874,7 +890,7 @@ Inputs.Enable("start");
     public IEnumerator Run(){
 
 	if(battleManager.battleType == BattleType.Wild){
-		yield return StartCoroutine(Dialogue.instance.text("Ran away\nsafely!"));
+		yield return Dialogue.instance.text("Ran away\nsafely!");
         battlemenu.SetActive(false);
         battleManager.Deactivate();
 		ScreenEffects.flashLevel = 3;
@@ -913,12 +929,16 @@ public void EncounterTrainer(){
 void OnTriggerEnter2D(Collider2D col){
 if(col.gameObject.tag == "MapCollider"){
             if (GameData.atTitleScreen) return;
-currentArea = col.gameObject.GetComponent<MapCollider>().mapArea;
-int mapArea = (int)col.gameObject.GetComponent<MapCollider>().mapArea;
+            MapCollider mapCollider = col.gameObject.GetComponent<MapCollider>();
+currentArea = mapCollider.mapArea;
+int mapArea = (int)mapCollider.mapArea;
+            canUseBike = !mapCollider.cantUseBike; //set the bool for whether the player can use the bike
+
 if(GameData.WaterEncounterMaps.Contains(currentArea)) areaHasWaterEncounters = true;
     else areaHasWaterEncounters = false;
 if(GameData.MapGrassEncounterTableIndices[mapArea] != -1) currentAreaTable = PokemonData.encounters[GameData.MapGrassEncounterTableIndices[mapArea]];
 else currentAreaTable = null;
+            if (currentArea == Map.House) return; //if the current area is a house, don't set the music
 int songIndex = SoundManager.MapSongs[mapArea];
 if(SoundManager.instance.currentSong != songIndex && walkSurfBikeState == 0 && !inBattle){
     if(SoundManager.instance.isFadingSong){

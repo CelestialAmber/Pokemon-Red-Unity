@@ -84,7 +84,7 @@ public class Slots : MonoBehaviour {
             int amount = 3 - Dialogue.instance.selectedOption;
 		
 				if (GameData.coins < amount) {
-                    yield return StartCoroutine(Dialogue.instance.text("Not enough\ncoins!"));
+                    yield return Dialogue.instance.text("Not enough\ncoins!");
                     StartCoroutine (DecideBet ());
 					yield break;
 
@@ -156,7 +156,7 @@ public class Slots : MonoBehaviour {
 		canroll = false;
         Dialogue.instance.fastText = false;
         slotPointsAnimator.SetBool("toggleStatus",false);
-        yield return StartCoroutine(Dialogue.instance.text ("Bet how many\ncoins?",true));
+        yield return Dialogue.instance.text ("Bet how many\ncoins?",true);
         Dialogue.instance.fastText = true;
 		StartCoroutine(DecideBet ());
 
@@ -338,7 +338,7 @@ public class Slots : MonoBehaviour {
 				}
                 if (whatwaslinedup == "7")
                 {
-                    yield return StartCoroutine(Dialogue.instance.text("Yeah!", true));
+                    yield return Dialogue.instance.text("Yeah!", true);
                     StartCoroutine(SlotsFlash(8));
                     yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(1));
                 }else StartCoroutine(SlotsFlash(1));
@@ -367,8 +367,8 @@ public class Slots : MonoBehaviour {
                         break;
                 }
                
-                yield return StartCoroutine(Dialogue.instance.text (whatwaslinedup + " lined up!\nScored " + payout + "!"));
-                yield return StartCoroutine(Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + "!",true));
+                yield return Dialogue.instance.text (whatwaslinedup + " lined up!\nScored " + payout + "!");
+                yield return Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + "!",true);
 
                 int payoutamount = payout;
                 
@@ -386,13 +386,13 @@ public class Slots : MonoBehaviour {
 				}
                 flashObject.SetActive(false);
 			} else {
-				yield return StartCoroutine(Dialogue.instance.text ("Not this time!"));
+				yield return Dialogue.instance.text ("Not this time!");
 			}
 			} else {
 				if (GameData.coins > 0) {
-				yield return StartCoroutine(Dialogue.instance.text ("Not this time!"));
+				yield return Dialogue.instance.text ("Not this time!");
 				} else {
-				yield return StartCoroutine(Dialogue.instance.text ("Darn! Ran out of\ncoins!"));
+				yield return Dialogue.instance.text ("Darn! Ran out of\ncoins!");
              
 					Exit ();
 					yield break;
@@ -400,13 +400,13 @@ public class Slots : MonoBehaviour {
 
 			}
 			
-		yield return StartCoroutine(Dialogue.instance.text ("One more go?",true));
+		yield return Dialogue.instance.text ("One more go?",true);
         yield return StartCoroutine(Dialogue.instance.prompt ());
 			if (Dialogue.instance.selectedOption == 0) {
 				canroll = false;
             Dialogue.instance.fastText = false;
             slotPointsAnimator.SetBool("toggleStatus",false);
-			yield return StartCoroutine(Dialogue.instance.text ("Bet how many\ncoins?",true));
+			yield return Dialogue.instance.text ("Bet how many\ncoins?",true);
             Dialogue.instance.fastText = true;
 				StartCoroutine(DecideBet ());
 

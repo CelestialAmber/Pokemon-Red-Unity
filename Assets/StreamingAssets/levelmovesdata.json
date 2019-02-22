@@ -1,4674 +1,4674 @@
 {
   "Bulbasaur": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Leech Seed",
-      "Int": 7
+      "Item1": "Leech Seed",
+      "Item2": 7
     },
     {
-      "Name": "Vine Whip",
-      "Int": 13
+      "Item1": "Vine Whip",
+      "Item2": 13
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 20
+      "Item1": "Poisonpowder",
+      "Item2": 20
     },
     {
-      "Name": "Razor Leaf",
-      "Int": 27
+      "Item1": "Razor Leaf",
+      "Item2": 27
     },
     {
-      "Name": "Growth",
-      "Int": 34
+      "Item1": "Growth",
+      "Item2": 34
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 41
+      "Item1": "Sleep Powder",
+      "Item2": 41
     },
     {
-      "Name": "Solarbeam",
-      "Int": 48
+      "Item1": "Solarbeam",
+      "Item2": 48
     }
   ],
   "Ivysaur": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Leech Seed",
-      "Int": 1
+      "Item1": "Leech Seed",
+      "Item2": 1
     },
     {
-      "Name": "Leech Seed",
-      "Int": 7
+      "Item1": "Leech Seed",
+      "Item2": 7
     },
     {
-      "Name": "Vine Whip",
-      "Int": 13
+      "Item1": "Vine Whip",
+      "Item2": 13
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 22
+      "Item1": "Poisonpowder",
+      "Item2": 22
     },
     {
-      "Name": "Razor Leaf",
-      "Int": 30
+      "Item1": "Razor Leaf",
+      "Item2": 30
     },
     {
-      "Name": "Growth",
-      "Int": 38
+      "Item1": "Growth",
+      "Item2": 38
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 46
+      "Item1": "Sleep Powder",
+      "Item2": 46
     },
     {
-      "Name": "Solarbeam",
-      "Int": 54
+      "Item1": "Solarbeam",
+      "Item2": 54
     }
   ],
   "Venusaur": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Leech Seed",
-      "Int": 1
+      "Item1": "Leech Seed",
+      "Item2": 1
     },
     {
-      "Name": "Vine Whip",
-      "Int": 1
+      "Item1": "Vine Whip",
+      "Item2": 1
     },
     {
-      "Name": "Leech Seed",
-      "Int": 7
+      "Item1": "Leech Seed",
+      "Item2": 7
     },
     {
-      "Name": "Vine Whip",
-      "Int": 13
+      "Item1": "Vine Whip",
+      "Item2": 13
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 22
+      "Item1": "Poisonpowder",
+      "Item2": 22
     },
     {
-      "Name": "Razor Leaf",
-      "Int": 30
+      "Item1": "Razor Leaf",
+      "Item2": 30
     },
     {
-      "Name": "Growth",
-      "Int": 43
+      "Item1": "Growth",
+      "Item2": 43
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 55
+      "Item1": "Sleep Powder",
+      "Item2": 55
     },
     {
-      "Name": "Solarbeam",
-      "Int": 65
+      "Item1": "Solarbeam",
+      "Item2": 65
     }
   ],
   "Charmander": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Ember",
-      "Int": 7
+      "Item1": "Ember",
+      "Item2": 7
     },
     {
-      "Name": "Leer",
-      "Int": 15
+      "Item1": "Leer",
+      "Item2": 15
     },
     {
-      "Name": "Rage",
-      "Int": 22
+      "Item1": "Rage",
+      "Item2": 22
     },
     {
-      "Name": "Slash",
-      "Int": 30
+      "Item1": "Slash",
+      "Item2": 30
     },
     {
-      "Name": "Flamethrower",
-      "Int": 38
+      "Item1": "Flamethrower",
+      "Item2": 38
     },
     {
-      "Name": "Fire Spin",
-      "Int": 46
+      "Item1": "Fire Spin",
+      "Item2": 46
     }
   ],
   "Charmeleon": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Ember",
-      "Int": 9
+      "Item1": "Ember",
+      "Item2": 9
     },
     {
-      "Name": "Leer",
-      "Int": 15
+      "Item1": "Leer",
+      "Item2": 15
     },
     {
-      "Name": "Rage",
-      "Int": 24
+      "Item1": "Rage",
+      "Item2": 24
     },
     {
-      "Name": "Slash",
-      "Int": 33
+      "Item1": "Slash",
+      "Item2": 33
     },
     {
-      "Name": "Flamethrower",
-      "Int": 42
+      "Item1": "Flamethrower",
+      "Item2": 42
     },
     {
-      "Name": "Fire Spin",
-      "Int": 56
+      "Item1": "Fire Spin",
+      "Item2": 56
     }
   ],
   "Charizard": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Ember",
-      "Int": 9
+      "Item1": "Ember",
+      "Item2": 9
     },
     {
-      "Name": "Leer",
-      "Int": 15
+      "Item1": "Leer",
+      "Item2": 15
     },
     {
-      "Name": "Rage",
-      "Int": 24
+      "Item1": "Rage",
+      "Item2": 24
     },
     {
-      "Name": "Slash",
-      "Int": 36
+      "Item1": "Slash",
+      "Item2": 36
     },
     {
-      "Name": "Flamethrower",
-      "Int": 46
+      "Item1": "Flamethrower",
+      "Item2": 46
     },
     {
-      "Name": "Fire Spin",
-      "Int": 55
+      "Item1": "Fire Spin",
+      "Item2": 55
     }
   ],
   "Squirtle": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Bubble",
-      "Int": 8
+      "Item1": "Bubble",
+      "Item2": 8
     },
     {
-      "Name": "Water Gun",
-      "Int": 15
+      "Item1": "Water Gun",
+      "Item2": 15
     },
     {
-      "Name": "Bite",
-      "Int": 22
+      "Item1": "Bite",
+      "Item2": 22
     },
     {
-      "Name": "Withdraw",
-      "Int": 28
+      "Item1": "Withdraw",
+      "Item2": 28
     },
     {
-      "Name": "Skull Bash",
-      "Int": 39
+      "Item1": "Skull Bash",
+      "Item2": 39
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 42
+      "Item1": "Hydro Pump",
+      "Item2": 42
     }
   ],
   "Wartortle": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Bubble",
-      "Int": 8
+      "Item1": "Bubble",
+      "Item2": 8
     },
     {
-      "Name": "Water Gun",
-      "Int": 15
+      "Item1": "Water Gun",
+      "Item2": 15
     },
     {
-      "Name": "Bite",
-      "Int": 24
+      "Item1": "Bite",
+      "Item2": 24
     },
     {
-      "Name": "Withdraw",
-      "Int": 31
+      "Item1": "Withdraw",
+      "Item2": 31
     },
     {
-      "Name": "Skull Bash",
-      "Int": 39
+      "Item1": "Skull Bash",
+      "Item2": 39
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 47
+      "Item1": "Hydro Pump",
+      "Item2": 47
     }
   ],
   "Blastoise": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     },
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Bubble",
-      "Int": 8
+      "Item1": "Bubble",
+      "Item2": 8
     },
     {
-      "Name": "Water Gun",
-      "Int": 15
+      "Item1": "Water Gun",
+      "Item2": 15
     },
     {
-      "Name": "Bite",
-      "Int": 22
+      "Item1": "Bite",
+      "Item2": 22
     },
     {
-      "Name": "Withdraw",
-      "Int": 28
+      "Item1": "Withdraw",
+      "Item2": 28
     },
     {
-      "Name": "Skull Bash",
-      "Int": 39
+      "Item1": "Skull Bash",
+      "Item2": 39
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 47
+      "Item1": "Hydro Pump",
+      "Item2": 47
     }
   ],
   "Caterpie": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "String Shot",
-      "Int": 1
+      "Item1": "String Shot",
+      "Item2": 1
     }
   ],
   "Metapod": [
     {
-      "Name": "Harden",
-      "Int": 1
+      "Item1": "Harden",
+      "Item2": 1
     }
   ],
   "Butterfree": [
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Confusion",
-      "Int": 12
+      "Item1": "Confusion",
+      "Item2": 12
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 15
+      "Item1": "Poisonpowder",
+      "Item2": 15
     },
     {
-      "Name": "Stun Spore",
-      "Int": 16
+      "Item1": "Stun Spore",
+      "Item2": 16
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 17
+      "Item1": "Sleep Powder",
+      "Item2": 17
     },
     {
-      "Name": "Supersonic",
-      "Int": 21
+      "Item1": "Supersonic",
+      "Item2": 21
     },
     {
-      "Name": "Whirlwind",
-      "Int": 26
+      "Item1": "Whirlwind",
+      "Item2": 26
     },
     {
-      "Name": "Psybeam",
-      "Int": 32
+      "Item1": "Psybeam",
+      "Item2": 32
     }
   ],
   "Weedle": [
     {
-      "Name": "Poison Sting",
-      "Int": 1
+      "Item1": "Poison Sting",
+      "Item2": 1
     },
     {
-      "Name": "String Shot",
-      "Int": 1
+      "Item1": "String Shot",
+      "Item2": 1
     }
   ],
   "Kakuna": [
     {
-      "Name": "Harden",
-      "Int": 1
+      "Item1": "Harden",
+      "Item2": 1
     }
   ],
   "Beedrill": [
     {
-      "Name": "Fury Attack",
-      "Int": 1
+      "Item1": "Fury Attack",
+      "Item2": 1
     },
     {
-      "Name": "Fury Attack",
-      "Int": 12
+      "Item1": "Fury Attack",
+      "Item2": 12
     },
     {
-      "Name": "Focus Energy",
-      "Int": 16
+      "Item1": "Focus Energy",
+      "Item2": 16
     },
     {
-      "Name": "Twineedle",
-      "Int": 20
+      "Item1": "Twineedle",
+      "Item2": 20
     },
     {
-      "Name": "Rage",
-      "Int": 25
+      "Item1": "Rage",
+      "Item2": 25
     },
     {
-      "Name": "Pin Missle",
-      "Int": 30
+      "Item1": "Pin Missle",
+      "Item2": 30
     },
     {
-      "Name": "Agility",
-      "Int": 35
+      "Item1": "Agility",
+      "Item2": 35
     }
   ],
   "Pidgey": [
     {
-      "Name": "Gust",
-      "Int": 1
+      "Item1": "Gust",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 5
+      "Item1": "Sand-Attack",
+      "Item2": 5
     },
     {
-      "Name": "Quick Attack",
-      "Int": 12
+      "Item1": "Quick Attack",
+      "Item2": 12
     },
     {
-      "Name": "Whirlwind",
-      "Int": 19
+      "Item1": "Whirlwind",
+      "Item2": 19
     },
     {
-      "Name": "Wing Attack",
-      "Int": 28
+      "Item1": "Wing Attack",
+      "Item2": 28
     },
     {
-      "Name": "Agility",
-      "Int": 36
+      "Item1": "Agility",
+      "Item2": 36
     },
     {
-      "Name": "Mirror Move",
-      "Int": 44
+      "Item1": "Mirror Move",
+      "Item2": 44
     }
   ],
   "Pidgeotto": [
     {
-      "Name": "Gust",
-      "Int": 1
+      "Item1": "Gust",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 5
+      "Item1": "Sand-Attack",
+      "Item2": 5
     },
     {
-      "Name": "Quick Attack",
-      "Int": 12
+      "Item1": "Quick Attack",
+      "Item2": 12
     },
     {
-      "Name": "Whirlwind",
-      "Int": 21
+      "Item1": "Whirlwind",
+      "Item2": 21
     },
     {
-      "Name": "Wing Attack",
-      "Int": 31
+      "Item1": "Wing Attack",
+      "Item2": 31
     },
     {
-      "Name": "Agility",
-      "Int": 40
+      "Item1": "Agility",
+      "Item2": 40
     },
     {
-      "Name": "Mirror Move",
-      "Int": 49
+      "Item1": "Mirror Move",
+      "Item2": 49
     }
   ],
   "Pidgeot": [
     {
-      "Name": "Gust",
-      "Int": 1
+      "Item1": "Gust",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 5
+      "Item1": "Sand-Attack",
+      "Item2": 5
     },
     {
-      "Name": "Quick Attack",
-      "Int": 12
+      "Item1": "Quick Attack",
+      "Item2": 12
     },
     {
-      "Name": "Whirlwind",
-      "Int": 21
+      "Item1": "Whirlwind",
+      "Item2": 21
     },
     {
-      "Name": "Wing Attack",
-      "Int": 31
+      "Item1": "Wing Attack",
+      "Item2": 31
     },
     {
-      "Name": "Agility",
-      "Int": 44
+      "Item1": "Agility",
+      "Item2": 44
     },
     {
-      "Name": "Mirror Move",
-      "Int": 54
+      "Item1": "Mirror Move",
+      "Item2": 54
     }
   ],
   "Rattata": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 7
+      "Item1": "Quick Attack",
+      "Item2": 7
     },
     {
-      "Name": "Hyper Fang",
-      "Int": 14
+      "Item1": "Hyper Fang",
+      "Item2": 14
     },
     {
-      "Name": "Focus Energy",
-      "Int": 23
+      "Item1": "Focus Energy",
+      "Item2": 23
     },
     {
-      "Name": "Super Fang",
-      "Int": 34
+      "Item1": "Super Fang",
+      "Item2": 34
     }
   ],
   "Raticate": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 7
+      "Item1": "Quick Attack",
+      "Item2": 7
     },
     {
-      "Name": "Hyper Fang",
-      "Int": 14
+      "Item1": "Hyper Fang",
+      "Item2": 14
     },
     {
-      "Name": "Focus Energy",
-      "Int": 27
+      "Item1": "Focus Energy",
+      "Item2": 27
     },
     {
-      "Name": "Super Fang",
-      "Int": 41
+      "Item1": "Super Fang",
+      "Item2": 41
     }
   ],
   "Spearow": [
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 9
+      "Item1": "Leer",
+      "Item2": 9
     },
     {
-      "Name": "Fury Attack",
-      "Int": 15
+      "Item1": "Fury Attack",
+      "Item2": 15
     },
     {
-      "Name": "Mirror Move",
-      "Int": 22
+      "Item1": "Mirror Move",
+      "Item2": 22
     },
     {
-      "Name": "Drill Peck",
-      "Int": 29
+      "Item1": "Drill Peck",
+      "Item2": 29
     },
     {
-      "Name": "Agility",
-      "Int": 36
+      "Item1": "Agility",
+      "Item2": 36
     }
   ],
   "Fearow": [
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 9
+      "Item1": "Leer",
+      "Item2": 9
     },
     {
-      "Name": "Fury Attack",
-      "Int": 15
+      "Item1": "Fury Attack",
+      "Item2": 15
     },
     {
-      "Name": "Mirror Move",
-      "Int": 25
+      "Item1": "Mirror Move",
+      "Item2": 25
     },
     {
-      "Name": "Drill Peck",
-      "Int": 34
+      "Item1": "Drill Peck",
+      "Item2": 34
     },
     {
-      "Name": "Agility",
-      "Int": 43
+      "Item1": "Agility",
+      "Item2": 43
     }
   ],
   "Ekans": [
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Poison Sting",
-      "Int": 10
+      "Item1": "Poison Sting",
+      "Item2": 10
     },
     {
-      "Name": "Bite",
-      "Int": 17
+      "Item1": "Bite",
+      "Item2": 17
     },
     {
-      "Name": "Glare",
-      "Int": 24
+      "Item1": "Glare",
+      "Item2": 24
     },
     {
-      "Name": "Screech",
-      "Int": 31
+      "Item1": "Screech",
+      "Item2": 31
     },
     {
-      "Name": "Acid",
-      "Int": 38
+      "Item1": "Acid",
+      "Item2": 38
     }
   ],
   "Arbok": [
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Poison Sting",
-      "Int": 1
+      "Item1": "Poison Sting",
+      "Item2": 1
     },
     {
-      "Name": "Poison Sting",
-      "Int": 10
+      "Item1": "Poison Sting",
+      "Item2": 10
     },
     {
-      "Name": "Bite",
-      "Int": 17
+      "Item1": "Bite",
+      "Item2": 17
     },
     {
-      "Name": "Glare",
-      "Int": 24
+      "Item1": "Glare",
+      "Item2": 24
     },
     {
-      "Name": "Screech",
-      "Int": 31
+      "Item1": "Screech",
+      "Item2": 31
     },
     {
-      "Name": "Acid",
-      "Int": 38
+      "Item1": "Acid",
+      "Item2": 38
     }
   ],
   "Pikachu": [
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Thundershock",
-      "Int": 1
+      "Item1": "Thundershock",
+      "Item2": 1
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 9
+      "Item1": "Thunder Wave",
+      "Item2": 9
     },
     {
-      "Name": "Quick Attack",
-      "Int": 16
+      "Item1": "Quick Attack",
+      "Item2": 16
     },
     {
-      "Name": "Swift",
-      "Int": 26
+      "Item1": "Swift",
+      "Item2": 26
     },
     {
-      "Name": "Agility",
-      "Int": 33
+      "Item1": "Agility",
+      "Item2": 33
     },
     {
-      "Name": "Thunder",
-      "Int": 43
+      "Item1": "Thunder",
+      "Item2": 43
     }
   ],
   "Raichu": [
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Thundershock",
-      "Int": 1
+      "Item1": "Thundershock",
+      "Item2": 1
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 1
+      "Item1": "Thunder Wave",
+      "Item2": 1
     }
   ],
   "Sandshrew": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 10
+      "Item1": "Sand-Attack",
+      "Item2": 10
     },
     {
-      "Name": "Slash",
-      "Int": 17
+      "Item1": "Slash",
+      "Item2": 17
     },
     {
-      "Name": "Poison Sting",
-      "Int": 24
+      "Item1": "Poison Sting",
+      "Item2": 24
     },
     {
-      "Name": "Swift",
-      "Int": 31
+      "Item1": "Swift",
+      "Item2": 31
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 38
+      "Item1": "Fury Swipes",
+      "Item2": 38
     }
   ],
   "Sandslash": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 10
+      "Item1": "Sand-Attack",
+      "Item2": 10
     },
     {
-      "Name": "Slash",
-      "Int": 17
+      "Item1": "Slash",
+      "Item2": 17
     },
     {
-      "Name": "Poison Sting",
-      "Int": 27
+      "Item1": "Poison Sting",
+      "Item2": 27
     },
     {
-      "Name": "Swift",
-      "Int": 36
+      "Item1": "Swift",
+      "Item2": 36
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 47
+      "Item1": "Fury Swipes",
+      "Item2": 47
     }
   ],
   "Nidoran♀": [
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 8
+      "Item1": "Scratch",
+      "Item2": 8
     },
     {
-      "Name": "Poison Sting",
-      "Int": 14
+      "Item1": "Poison Sting",
+      "Item2": 14
     },
     {
-      "Name": "Tail Whip",
-      "Int": 21
+      "Item1": "Tail Whip",
+      "Item2": 21
     },
     {
-      "Name": "Bite",
-      "Int": 29
+      "Item1": "Bite",
+      "Item2": 29
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 36
+      "Item1": "Fury Swipes",
+      "Item2": 36
     },
     {
-      "Name": "Double Kick",
-      "Int": 43
+      "Item1": "Double Kick",
+      "Item2": 43
     }
   ],
   "Nidorina": [
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 8
+      "Item1": "Scratch",
+      "Item2": 8
     },
     {
-      "Name": "Poison Sting",
-      "Int": 14
+      "Item1": "Poison Sting",
+      "Item2": 14
     },
     {
-      "Name": "Tail Whip",
-      "Int": 23
+      "Item1": "Tail Whip",
+      "Item2": 23
     },
     {
-      "Name": "Bite",
-      "Int": 32
+      "Item1": "Bite",
+      "Item2": 32
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 41
+      "Item1": "Fury Swipes",
+      "Item2": 41
     },
     {
-      "Name": "Double Kick",
-      "Int": 50
+      "Item1": "Double Kick",
+      "Item2": 50
     }
   ],
   "Nidoqueen": [
     {
-      "Name": "Body Slam",
-      "Int": 1
+      "Item1": "Body Slam",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 8
+      "Item1": "Scratch",
+      "Item2": 8
     },
     {
-      "Name": "Poison Sting",
-      "Int": 14
+      "Item1": "Poison Sting",
+      "Item2": 14
     },
     {
-      "Name": "Body Slam",
-      "Int": 23
+      "Item1": "Body Slam",
+      "Item2": 23
     }
-  ],
+  ], 
   "Nidoran♂": [
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Horn Attack",
-      "Int": 8
+      "Item1": "Horn Attack",
+      "Item2": 8
     },
     {
-      "Name": "Poison Sting",
-      "Int": 14
+      "Item1": "Poison Sting",
+      "Item2": 14
     },
     {
-      "Name": "Focus Energy",
-      "Int": 21
+      "Item1": "Focus Energy",
+      "Item2": 21
     },
     {
-      "Name": "Fury Attack",
-      "Int": 29
+      "Item1": "Fury Attack",
+      "Item2": 29
     },
     {
-      "Name": "Horn Drill",
-      "Int": 36
+      "Item1": "Horn Drill",
+      "Item2": 36
     },
     {
-      "Name": "Double Kick",
-      "Int": 43
+      "Item1": "Double Kick",
+      "Item2": 43
     }
   ],
   "Nidorino": [
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Horn Attack",
-      "Int": 1
+      "Item1": "Horn Attack",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Horn Attack",
-      "Int": 8
+      "Item1": "Horn Attack",
+      "Item2": 8
     },
     {
-      "Name": "Poison Sting",
-      "Int": 14
+      "Item1": "Poison Sting",
+      "Item2": 14
     },
     {
-      "Name": "Focus Energy",
-      "Int": 23
+      "Item1": "Focus Energy",
+      "Item2": 23
     },
     {
-      "Name": "Fury Attack",
-      "Int": 32
+      "Item1": "Fury Attack",
+      "Item2": 32
     },
     {
-      "Name": "Horn Drill",
-      "Int": 41
+      "Item1": "Horn Drill",
+      "Item2": 41
     },
     {
-      "Name": "Double Kick",
-      "Int": 50
+      "Item1": "Double Kick",
+      "Item2": 50
     }
   ],
   "Nidoking": [
     {
-      "Name": "Horn Attack",
-      "Int": 1
+      "Item1": "Horn Attack",
+      "Item2": 1
     },
     {
-      "Name": "Poison Sting",
-      "Int": 1
+      "Item1": "Poison Sting",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Thrash",
-      "Int": 1
+      "Item1": "Thrash",
+      "Item2": 1
     },
     {
-      "Name": "Horn Attack",
-      "Int": 8
+      "Item1": "Horn Attack",
+      "Item2": 8
     },
     {
-      "Name": "Poison Sting",
-      "Int": 14
+      "Item1": "Poison Sting",
+      "Item2": 14
     },
     {
-      "Name": "Thrash",
-      "Int": 23
+      "Item1": "Thrash",
+      "Item2": 23
     }
   ],
   "Clefairy": [
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Sing",
-      "Int": 13
+      "Item1": "Sing",
+      "Item2": 13
     },
     {
-      "Name": "Doubleslap",
-      "Int": 18
+      "Item1": "Doubleslap",
+      "Item2": 18
     },
     {
-      "Name": "Minimize",
-      "Int": 24
+      "Item1": "Minimize",
+      "Item2": 24
     },
     {
-      "Name": "Metronome",
-      "Int": 31
+      "Item1": "Metronome",
+      "Item2": 31
     },
     {
-      "Name": "Defense Curl",
-      "Int": 39
+      "Item1": "Defense Curl",
+      "Item2": 39
     },
     {
-      "Name": "Light Screen",
-      "Int": 48
+      "Item1": "Light Screen",
+      "Item2": 48
     }
   ],
   "Clefable": [
     {
-      "Name": "Doubleslap",
-      "Int": 1
+      "Item1": "Doubleslap",
+      "Item2": 1
     },
     {
-      "Name": "Metronome",
-      "Int": 1
+      "Item1": "Metronome",
+      "Item2": 1
     },
     {
-      "Name": "Minimize",
-      "Int": 1
+      "Item1": "Minimize",
+      "Item2": 1
     },
     {
-      "Name": "Sing",
-      "Int": 1
+      "Item1": "Sing",
+      "Item2": 1
     }
   ],
   "Vulpix": [
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 16
+      "Item1": "Quick Attack",
+      "Item2": 16
     },
     {
-      "Name": "Roar",
-      "Int": 21
+      "Item1": "Roar",
+      "Item2": 21
     },
     {
-      "Name": "Confuse Ray",
-      "Int": 28
+      "Item1": "Confuse Ray",
+      "Item2": 28
     },
     {
-      "Name": "Flamethrower",
-      "Int": 35
+      "Item1": "Flamethrower",
+      "Item2": 35
     },
     {
-      "Name": "Fire Spin",
-      "Int": 42
+      "Item1": "Fire Spin",
+      "Item2": 42
     }
   ],
   "Ninetales": [
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Roar",
-      "Int": 1
+      "Item1": "Roar",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     }
   ],
   "Jigglypuff": [
     {
-      "Name": "Sing",
-      "Int": 1
+      "Item1": "Sing",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 9
+      "Item1": "Pound",
+      "Item2": 9
     },
     {
-      "Name": "Disable",
-      "Int": 14
+      "Item1": "Disable",
+      "Item2": 14
     },
     {
-      "Name": "Defense Curl",
-      "Int": 19
+      "Item1": "Defense Curl",
+      "Item2": 19
     },
     {
-      "Name": "Doubleslap",
-      "Int": 24
+      "Item1": "Doubleslap",
+      "Item2": 24
     },
     {
-      "Name": "Rest",
-      "Int": 29
+      "Item1": "Rest",
+      "Item2": 29
     },
     {
-      "Name": "Body Slam",
-      "Int": 34
+      "Item1": "Body Slam",
+      "Item2": 34
     },
     {
-      "Name": "Double-Edge",
-      "Int": 39
+      "Item1": "Double-Edge",
+      "Item2": 39
     }
   ],
   "Wigglytuff": [
     {
-      "Name": "Defense Curl",
-      "Int": 1
+      "Item1": "Defense Curl",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Doubleslap",
-      "Int": 1
+      "Item1": "Doubleslap",
+      "Item2": 1
     },
     {
-      "Name": "Sing",
-      "Int": 1
+      "Item1": "Sing",
+      "Item2": 1
     }
   ],
   "Zubat": [
     {
-      "Name": "Leech Life",
-      "Int": 1
+      "Item1": "Leech Life",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 10
+      "Item1": "Supersonic",
+      "Item2": 10
     },
     {
-      "Name": "Bite",
-      "Int": 15
+      "Item1": "Bite",
+      "Item2": 15
     },
     {
-      "Name": "Confuse Ray",
-      "Int": 21
+      "Item1": "Confuse Ray",
+      "Item2": 21
     },
     {
-      "Name": "Wing Attack",
-      "Int": 28
+      "Item1": "Wing Attack",
+      "Item2": 28
     },
     {
-      "Name": "Haze",
-      "Int": 36
+      "Item1": "Haze",
+      "Item2": 36
     }
   ],
   "Golbat": [
     {
-      "Name": "Leech Life",
-      "Int": 1
+      "Item1": "Leech Life",
+      "Item2": 1
     },
     {
-      "Name": "Bite",
-      "Int": 1
+      "Item1": "Bite",
+      "Item2": 1
     },
     {
-      "Name": "Screech",
-      "Int": 1
+      "Item1": "Screech",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 10
+      "Item1": "Supersonic",
+      "Item2": 10
     },
     {
-      "Name": "Bite",
-      "Int": 15
+      "Item1": "Bite",
+      "Item2": 15
     },
     {
-      "Name": "Confuse Ray",
-      "Int": 21
+      "Item1": "Confuse Ray",
+      "Item2": 21
     },
     {
-      "Name": "Wing Attack",
-      "Int": 32
+      "Item1": "Wing Attack",
+      "Item2": 32
     },
     {
-      "Name": "Haze",
-      "Int": 43
+      "Item1": "Haze",
+      "Item2": 43
     }
   ],
   "Oddish": [
     {
-      "Name": "Absorb",
-      "Int": 1
+      "Item1": "Absorb",
+      "Item2": 1
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 15
+      "Item1": "Poisonpowder",
+      "Item2": 15
     },
     {
-      "Name": "Stun Spore",
-      "Int": 17
+      "Item1": "Stun Spore",
+      "Item2": 17
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 19
+      "Item1": "Sleep Powder",
+      "Item2": 19
     },
     {
-      "Name": "Acid",
-      "Int": 24
+      "Item1": "Acid",
+      "Item2": 24
     },
     {
-      "Name": "Petal Dance",
-      "Int": 33
+      "Item1": "Petal Dance",
+      "Item2": 33
     },
     {
-      "Name": "Solarbeam",
-      "Int": 46
+      "Item1": "Solarbeam",
+      "Item2": 46
     }
   ],
   "Gloom": [
     {
-      "Name": "Absorb",
-      "Int": 1
+      "Item1": "Absorb",
+      "Item2": 1
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 1
+      "Item1": "Poisonpowder",
+      "Item2": 1
     },
     {
-      "Name": "Stun Spore",
-      "Int": 1
+      "Item1": "Stun Spore",
+      "Item2": 1
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 15
+      "Item1": "Poisonpowder",
+      "Item2": 15
     },
     {
-      "Name": "Stun Spore",
-      "Int": 17
+      "Item1": "Stun Spore",
+      "Item2": 17
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 19
+      "Item1": "Sleep Powder",
+      "Item2": 19
     },
     {
-      "Name": "Acid",
-      "Int": 28
+      "Item1": "Acid",
+      "Item2": 28
     },
     {
-      "Name": "Petal Dance",
-      "Int": 38
+      "Item1": "Petal Dance",
+      "Item2": 38
     },
     {
-      "Name": "Solarbeam",
-      "Int": 52
+      "Item1": "Solarbeam",
+      "Item2": 52
     }
   ],
   "Vileplume": [
     {
-      "Name": "Acid",
-      "Int": 1
+      "Item1": "Acid",
+      "Item2": 1
     },
     {
-      "Name": "Petal Dance",
-      "Int": 1
+      "Item1": "Petal Dance",
+      "Item2": 1
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 1
+      "Item1": "Sleep Powder",
+      "Item2": 1
     },
     {
-      "Name": "Stun Spore",
-      "Int": 1
+      "Item1": "Stun Spore",
+      "Item2": 1
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 15
+      "Item1": "Poisonpowder",
+      "Item2": 15
     },
     {
-      "Name": "Stun Spore",
-      "Int": 17
+      "Item1": "Stun Spore",
+      "Item2": 17
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 19
+      "Item1": "Sleep Powder",
+      "Item2": 19
     }
   ],
   "Paras": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Stun Spore",
-      "Int": 13
+      "Item1": "Stun Spore",
+      "Item2": 13
     },
     {
-      "Name": "Leech Life",
-      "Int": 20
+      "Item1": "Leech Life",
+      "Item2": 20
     },
     {
-      "Name": "Spore",
-      "Int": 27
+      "Item1": "Spore",
+      "Item2": 27
     },
     {
-      "Name": "Slash",
-      "Int": 34
+      "Item1": "Slash",
+      "Item2": 34
     },
     {
-      "Name": "Growth",
-      "Int": 41
+      "Item1": "Growth",
+      "Item2": 41
     }
   ],
   "Parasect": [
     {
-      "Name": "Leech Life",
-      "Int": 1
+      "Item1": "Leech Life",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Stun Spore",
-      "Int": 1
+      "Item1": "Stun Spore",
+      "Item2": 1
     },
     {
-      "Name": "Stun Spore",
-      "Int": 13
+      "Item1": "Stun Spore",
+      "Item2": 13
     },
     {
-      "Name": "Leech Life",
-      "Int": 20
+      "Item1": "Leech Life",
+      "Item2": 20
     },
     {
-      "Name": "Spore",
-      "Int": 30
+      "Item1": "Spore",
+      "Item2": 30
     },
     {
-      "Name": "Slash",
-      "Int": 39
+      "Item1": "Slash",
+      "Item2": 39
     },
     {
-      "Name": "Growth",
-      "Int": 48
+      "Item1": "Growth",
+      "Item2": 48
     }
   ],
   "Venonat": [
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 24
+      "Item1": "Poisonpowder",
+      "Item2": 24
     },
     {
-      "Name": "Leech Life",
-      "Int": 27
+      "Item1": "Leech Life",
+      "Item2": 27
     },
     {
-      "Name": "Stun Spore",
-      "Int": 30
+      "Item1": "Stun Spore",
+      "Item2": 30
     },
     {
-      "Name": "Psybeam",
-      "Int": 35
+      "Item1": "Psybeam",
+      "Item2": 35
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 38
+      "Item1": "Sleep Powder",
+      "Item2": 38
     },
     {
-      "Name": "Psychic",
-      "Int": 43
+      "Item1": "Psychic",
+      "Item2": 43
     }
   ],
   "Venomoth": [
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Leech Life",
-      "Int": 1
+      "Item1": "Leech Life",
+      "Item2": 1
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 1
+      "Item1": "Poisonpowder",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 24
+      "Item1": "Poisonpowder",
+      "Item2": 24
     },
     {
-      "Name": "Leech Life",
-      "Int": 27
+      "Item1": "Leech Life",
+      "Item2": 27
     },
     {
-      "Name": "Stun Spore",
-      "Int": 30
+      "Item1": "Stun Spore",
+      "Item2": 30
     },
     {
-      "Name": "Psybeam",
-      "Int": 38
+      "Item1": "Psybeam",
+      "Item2": 38
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 43
+      "Item1": "Sleep Powder",
+      "Item2": 43
     },
     {
-      "Name": "Psychic",
-      "Int": 50
+      "Item1": "Psychic",
+      "Item2": 50
     }
   ],
   "Diglett": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 15
+      "Item1": "Growl",
+      "Item2": 15
     },
     {
-      "Name": "Dig",
-      "Int": 19
+      "Item1": "Dig",
+      "Item2": 19
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 24
+      "Item1": "Sand-Attack",
+      "Item2": 24
     },
     {
-      "Name": "Slash",
-      "Int": 31
+      "Item1": "Slash",
+      "Item2": 31
     },
     {
-      "Name": "Earthquake",
-      "Int": 40
+      "Item1": "Earthquake",
+      "Item2": 40
     }
   ],
   "Dugtrio": [
     {
-      "Name": "Dig",
-      "Int": 1
+      "Item1": "Dig",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 15
+      "Item1": "Growl",
+      "Item2": 15
     },
     {
-      "Name": "Dig",
-      "Int": 19
+      "Item1": "Dig",
+      "Item2": 19
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 24
+      "Item1": "Sand-Attack",
+      "Item2": 24
     },
     {
-      "Name": "Slash",
-      "Int": 35
+      "Item1": "Slash",
+      "Item2": 35
     },
     {
-      "Name": "Earthquake",
-      "Int": 47
+      "Item1": "Earthquake",
+      "Item2": 47
     }
   ],
   "Meowth": [
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Bite",
-      "Int": 12
+      "Item1": "Bite",
+      "Item2": 12
     },
     {
-      "Name": "Pay Day",
-      "Int": 17
+      "Item1": "Pay Day",
+      "Item2": 17
     },
     {
-      "Name": "Screech",
-      "Int": 24
+      "Item1": "Screech",
+      "Item2": 24
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 33
+      "Item1": "Fury Swipes",
+      "Item2": 33
     },
     {
-      "Name": "Slash",
-      "Int": 44
+      "Item1": "Slash",
+      "Item2": 44
     }
   ],
   "Persian": [
     {
-      "Name": "Bite",
-      "Int": 1
+      "Item1": "Bite",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Screech",
-      "Int": 1
+      "Item1": "Screech",
+      "Item2": 1
     },
     {
-      "Name": "Bite",
-      "Int": 12
+      "Item1": "Bite",
+      "Item2": 12
     },
     {
-      "Name": "Pay Day",
-      "Int": 17
+      "Item1": "Pay Day",
+      "Item2": 17
     },
     {
-      "Name": "Screech",
-      "Int": 24
+      "Item1": "Screech",
+      "Item2": 24
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 37
+      "Item1": "Fury Swipes",
+      "Item2": 37
     },
     {
-      "Name": "Slash",
-      "Int": 51
+      "Item1": "Slash",
+      "Item2": 51
     }
   ],
   "Psyduck": [
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 28
+      "Item1": "Tail Whip",
+      "Item2": 28
     },
     {
-      "Name": "Disable",
-      "Int": 31
+      "Item1": "Disable",
+      "Item2": 31
     },
     {
-      "Name": "Confusion",
-      "Int": 36
+      "Item1": "Confusion",
+      "Item2": 36
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 43
+      "Item1": "Fury Swipes",
+      "Item2": 43
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 52
+      "Item1": "Hydro Pump",
+      "Item2": 52
     }
   ],
   "Golduck": [
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 28
+      "Item1": "Tail Whip",
+      "Item2": 28
     },
     {
-      "Name": "Disable",
-      "Int": 31
+      "Item1": "Disable",
+      "Item2": 31
     },
     {
-      "Name": "Confusion",
-      "Int": 39
+      "Item1": "Confusion",
+      "Item2": 39
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 48
+      "Item1": "Fury Swipes",
+      "Item2": 48
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 59
+      "Item1": "Hydro Pump",
+      "Item2": 59
     }
   ],
   "Mankey": [
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Karate Chop",
-      "Int": 15
+      "Item1": "Karate Chop",
+      "Item2": 15
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 21
+      "Item1": "Fury Swipes",
+      "Item2": 21
     },
     {
-      "Name": "Focus Energy",
-      "Int": 27
+      "Item1": "Focus Energy",
+      "Item2": 27
     },
     {
-      "Name": "Seismic Toss",
-      "Int": 33
+      "Item1": "Seismic Toss",
+      "Item2": 33
     },
     {
-      "Name": "Thrash",
-      "Int": 39
+      "Item1": "Thrash",
+      "Item2": 39
     }
   ],
   "Primeape": [
     {
-      "Name": "Fury Swipes",
-      "Int": 1
+      "Item1": "Fury Swipes",
+      "Item2": 1
     },
     {
-      "Name": "Karate Chop",
-      "Int": 1
+      "Item1": "Karate Chop",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Karate Chop",
-      "Int": 15
+      "Item1": "Karate Chop",
+      "Item2": 15
     },
     {
-      "Name": "Fury Swipes",
-      "Int": 21
+      "Item1": "Fury Swipes",
+      "Item2": 21
     },
     {
-      "Name": "Focus Energy",
-      "Int": 27
+      "Item1": "Focus Energy",
+      "Item2": 27
     },
     {
-      "Name": "Seismic Toss",
-      "Int": 37
+      "Item1": "Seismic Toss",
+      "Item2": 37
     },
     {
-      "Name": "Thrash",
-      "Int": 46
+      "Item1": "Thrash",
+      "Item2": 46
     }
   ],
   "Growlithe": [
     {
-      "Name": "Bite",
-      "Int": 1
+      "Item1": "Bite",
+      "Item2": 1
     },
     {
-      "Name": "Roar",
-      "Int": 1
+      "Item1": "Roar",
+      "Item2": 1
     },
     {
-      "Name": "Ember",
-      "Int": 18
+      "Item1": "Ember",
+      "Item2": 18
     },
     {
-      "Name": "Leer",
-      "Int": 23
+      "Item1": "Leer",
+      "Item2": 23
     },
     {
-      "Name": "Take Down",
-      "Int": 30
+      "Item1": "Take Down",
+      "Item2": 30
     },
     {
-      "Name": "Agility",
-      "Int": 39
+      "Item1": "Agility",
+      "Item2": 39
     },
     {
-      "Name": "Flamethrower",
-      "Int": 50
+      "Item1": "Flamethrower",
+      "Item2": 50
     }
   ],
   "Arcanine": [
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Roar",
-      "Int": 1
+      "Item1": "Roar",
+      "Item2": 1
     },
     {
-      "Name": "Take Down",
-      "Int": 1
+      "Item1": "Take Down",
+      "Item2": 1
     }
   ],
   "Poliwag": [
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 16
+      "Item1": "Hypnosis",
+      "Item2": 16
     },
     {
-      "Name": "Water Gun",
-      "Int": 19
+      "Item1": "Water Gun",
+      "Item2": 19
     },
     {
-      "Name": "Doubleslap",
-      "Int": 25
+      "Item1": "Doubleslap",
+      "Item2": 25
     },
     {
-      "Name": "Body Slam",
-      "Int": 31
+      "Item1": "Body Slam",
+      "Item2": 31
     },
     {
-      "Name": "Amnesia",
-      "Int": 38
+      "Item1": "Amnesia",
+      "Item2": 38
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 45
+      "Item1": "Hydro Pump",
+      "Item2": 45
     }
   ],
   "Poliwhirl": [
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 1
+      "Item1": "Hypnosis",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 16
+      "Item1": "Hypnosis",
+      "Item2": 16
     },
     {
-      "Name": "Water Gun",
-      "Int": 19
+      "Item1": "Water Gun",
+      "Item2": 19
     },
     {
-      "Name": "Doubleslap",
-      "Int": 26
+      "Item1": "Doubleslap",
+      "Item2": 26
     },
     {
-      "Name": "Body Slam",
-      "Int": 33
+      "Item1": "Body Slam",
+      "Item2": 33
     },
     {
-      "Name": "Amnesia",
-      "Int": 41
+      "Item1": "Amnesia",
+      "Item2": 41
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 49
+      "Item1": "Hydro Pump",
+      "Item2": 49
     }
   ],
   "Poliwrath": [
     {
-      "Name": "Body Slam",
-      "Int": 1
+      "Item1": "Body Slam",
+      "Item2": 1
     },
     {
-      "Name": "Doubleslap",
-      "Int": 1
+      "Item1": "Doubleslap",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 1
+      "Item1": "Hypnosis",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 16
+      "Item1": "Hypnosis",
+      "Item2": 16
     },
     {
-      "Name": "Water Gun",
-      "Int": 19
+      "Item1": "Water Gun",
+      "Item2": 19
     }
   ],
   "Abra": [
     {
-      "Name": "Teleport",
-      "Int": 1
+      "Item1": "Teleport",
+      "Item2": 1
     }
   ],
   "Kadabra": [
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Teleport",
-      "Int": 1
+      "Item1": "Teleport",
+      "Item2": 1
     },
     {
-      "Name": "Confusion",
-      "Int": 16
+      "Item1": "Confusion",
+      "Item2": 16
     },
     {
-      "Name": "Disable",
-      "Int": 20
+      "Item1": "Disable",
+      "Item2": 20
     },
     {
-      "Name": "Psybeam",
-      "Int": 27
+      "Item1": "Psybeam",
+      "Item2": 27
     },
     {
-      "Name": "Recover",
-      "Int": 31
+      "Item1": "Recover",
+      "Item2": 31
     },
     {
-      "Name": "Psychic",
-      "Int": 38
+      "Item1": "Psychic",
+      "Item2": 38
     },
     {
-      "Name": "Reflect",
-      "Int": 42
+      "Item1": "Reflect",
+      "Item2": 42
     }
   ],
   "Alakazam": [
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Teleport",
-      "Int": 1
+      "Item1": "Teleport",
+      "Item2": 1
     },
     {
-      "Name": "Confusion",
-      "Int": 16
+      "Item1": "Confusion",
+      "Item2": 16
     },
     {
-      "Name": "Disable",
-      "Int": 20
+      "Item1": "Disable",
+      "Item2": 20
     },
     {
-      "Name": "Psybeam",
-      "Int": 27
+      "Item1": "Psybeam",
+      "Item2": 27
     },
     {
-      "Name": "Recover",
-      "Int": 31
+      "Item1": "Recover",
+      "Item2": 31
     },
     {
-      "Name": "Psychic",
-      "Int": 38
+      "Item1": "Psychic",
+      "Item2": 38
     },
     {
-      "Name": "Reflect",
-      "Int": 42
+      "Item1": "Reflect",
+      "Item2": 42
     }
   ],
   "Machop": [
     {
-      "Name": "Karate Chop",
-      "Int": 1
+      "Item1": "Karate Chop",
+      "Item2": 1
     },
     {
-      "Name": "Low Kick",
-      "Int": 20
+      "Item1": "Low Kick",
+      "Item2": 20
     },
     {
-      "Name": "Leer",
-      "Int": 25
+      "Item1": "Leer",
+      "Item2": 25
     },
     {
-      "Name": "Focus Energy",
-      "Int": 32
+      "Item1": "Focus Energy",
+      "Item2": 32
     },
     {
-      "Name": "Seismic Toss",
-      "Int": 39
+      "Item1": "Seismic Toss",
+      "Item2": 39
     },
     {
-      "Name": "Submission",
-      "Int": 46
+      "Item1": "Submission",
+      "Item2": 46
     }
   ],
   "Machoke": [
     {
-      "Name": "Karate Chop",
-      "Int": 1
+      "Item1": "Karate Chop",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Low Kick",
-      "Int": 1
+      "Item1": "Low Kick",
+      "Item2": 1
     },
     {
-      "Name": "Low Kick",
-      "Int": 20
+      "Item1": "Low Kick",
+      "Item2": 20
     },
     {
-      "Name": "Leer",
-      "Int": 25
+      "Item1": "Leer",
+      "Item2": 25
     },
     {
-      "Name": "Focus Energy",
-      "Int": 36
+      "Item1": "Focus Energy",
+      "Item2": 36
     },
     {
-      "Name": "Seismic Toss",
-      "Int": 44
+      "Item1": "Seismic Toss",
+      "Item2": 44
     },
     {
-      "Name": "Submission",
-      "Int": 52
+      "Item1": "Submission",
+      "Item2": 52
     }
   ],
   "Machamp": [
     {
-      "Name": "Karate Chop",
-      "Int": 1
+      "Item1": "Karate Chop",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Low Kick",
-      "Int": 1
+      "Item1": "Low Kick",
+      "Item2": 1
     },
     {
-      "Name": "Low Kick",
-      "Int": 20
+      "Item1": "Low Kick",
+      "Item2": 20
     },
     {
-      "Name": "Leer",
-      "Int": 25
+      "Item1": "Leer",
+      "Item2": 25
     },
     {
-      "Name": "Focus Energy",
-      "Int": 36
+      "Item1": "Focus Energy",
+      "Item2": 36
     },
     {
-      "Name": "Seismic Toss",
-      "Int": 44
+      "Item1": "Seismic Toss",
+      "Item2": 44
     },
     {
-      "Name": "Submission",
-      "Int": 52
+      "Item1": "Submission",
+      "Item2": 52
     }
   ],
   "Bellsprout": [
     {
-      "Name": "Growth",
-      "Int": 1
+      "Item1": "Growth",
+      "Item2": 1
     },
     {
-      "Name": "Vine Whip",
-      "Int": 1
+      "Item1": "Vine Whip",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 13
+      "Item1": "Wrap",
+      "Item2": 13
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 15
+      "Item1": "Poisonpowder",
+      "Item2": 15
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 18
+      "Item1": "Sleep Powder",
+      "Item2": 18
     },
     {
-      "Name": "Stun Spore",
-      "Int": 21
+      "Item1": "Stun Spore",
+      "Item2": 21
     },
     {
-      "Name": "Acid",
-      "Int": 26
+      "Item1": "Acid",
+      "Item2": 26
     },
     {
-      "Name": "Razor Leaf",
-      "Int": 33
+      "Item1": "Razor Leaf",
+      "Item2": 33
     },
     {
-      "Name": "Slam",
-      "Int": 42
+      "Item1": "Slam",
+      "Item2": 42
     }
   ],
   "Weepinbell": [
     {
-      "Name": "Growth",
-      "Int": 1
+      "Item1": "Growth",
+      "Item2": 1
     },
     {
-      "Name": "Vine Whip",
-      "Int": 1
+      "Item1": "Vine Whip",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 13
+      "Item1": "Wrap",
+      "Item2": 13
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 15
+      "Item1": "Poisonpowder",
+      "Item2": 15
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 18
+      "Item1": "Sleep Powder",
+      "Item2": 18
     },
     {
-      "Name": "Stun Spore",
-      "Int": 23
+      "Item1": "Stun Spore",
+      "Item2": 23
     },
     {
-      "Name": "Acid",
-      "Int": 29
+      "Item1": "Acid",
+      "Item2": 29
     },
     {
-      "Name": "Razor Leaf",
-      "Int": 38
+      "Item1": "Razor Leaf",
+      "Item2": 38
     },
     {
-      "Name": "Slam",
-      "Int": 49
+      "Item1": "Slam",
+      "Item2": 49
     }
   ],
   "Victreebel": [
     {
-      "Name": "Acid",
-      "Int": 1
+      "Item1": "Acid",
+      "Item2": 1
     },
     {
-      "Name": "Razor Leaf",
-      "Int": 1
+      "Item1": "Razor Leaf",
+      "Item2": 1
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 1
+      "Item1": "Sleep Powder",
+      "Item2": 1
     },
     {
-      "Name": "Stun Spore",
-      "Int": 1
+      "Item1": "Stun Spore",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 13
+      "Item1": "Wrap",
+      "Item2": 13
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 15
+      "Item1": "Poisonpowder",
+      "Item2": 15
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 18
+      "Item1": "Sleep Powder",
+      "Item2": 18
     }
   ],
   "Tentacool": [
     {
-      "Name": "Acid",
-      "Int": 1
+      "Item1": "Acid",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 7
+      "Item1": "Supersonic",
+      "Item2": 7
     },
     {
-      "Name": "Wrap",
-      "Int": 13
+      "Item1": "Wrap",
+      "Item2": 13
     },
     {
-      "Name": "Poison Sting",
-      "Int": 18
+      "Item1": "Poison Sting",
+      "Item2": 18
     },
     {
-      "Name": "Water Gun",
-      "Int": 22
+      "Item1": "Water Gun",
+      "Item2": 22
     },
     {
-      "Name": "Constrict",
-      "Int": 27
+      "Item1": "Constrict",
+      "Item2": 27
     },
     {
-      "Name": "Barrier",
-      "Int": 33
+      "Item1": "Barrier",
+      "Item2": 33
     },
     {
-      "Name": "Screech",
-      "Int": 40
+      "Item1": "Screech",
+      "Item2": 40
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 48
+      "Item1": "Hydro Pump",
+      "Item2": 48
     }
   ],
   "Tentacruel": [
     {
-      "Name": "Acid",
-      "Int": 1
+      "Item1": "Acid",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 1
+      "Item1": "Supersonic",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 7
+      "Item1": "Supersonic",
+      "Item2": 7
     },
     {
-      "Name": "Wrap",
-      "Int": 13
+      "Item1": "Wrap",
+      "Item2": 13
     },
     {
-      "Name": "Poison Sting",
-      "Int": 18
+      "Item1": "Poison Sting",
+      "Item2": 18
     },
     {
-      "Name": "Water Gun",
-      "Int": 22
+      "Item1": "Water Gun",
+      "Item2": 22
     },
     {
-      "Name": "Constrict",
-      "Int": 27
+      "Item1": "Constrict",
+      "Item2": 27
     },
     {
-      "Name": "Barrier",
-      "Int": 35
+      "Item1": "Barrier",
+      "Item2": 35
     },
     {
-      "Name": "Screech",
-      "Int": 43
+      "Item1": "Screech",
+      "Item2": 43
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 50
+      "Item1": "Hydro Pump",
+      "Item2": 50
     }
   ],
   "Geodude": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Defense Curl",
-      "Int": 11
+      "Item1": "Defense Curl",
+      "Item2": 11
     },
     {
-      "Name": "Rock Throw",
-      "Int": 16
+      "Item1": "Rock Throw",
+      "Item2": 16
     },
     {
-      "Name": "Selfdestruct",
-      "Int": 21
+      "Item1": "Selfdestruct",
+      "Item2": 21
     },
     {
-      "Name": "Harden",
-      "Int": 26
+      "Item1": "Harden",
+      "Item2": 26
     },
     {
-      "Name": "Earthquake",
-      "Int": 31
+      "Item1": "Earthquake",
+      "Item2": 31
     },
     {
-      "Name": "Explosion",
-      "Int": 36
+      "Item1": "Explosion",
+      "Item2": 36
     }
   ],
   "Graveler": [
     {
-      "Name": "Defense Curl",
-      "Int": 1
+      "Item1": "Defense Curl",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Defense Curl",
-      "Int": 11
+      "Item1": "Defense Curl",
+      "Item2": 11
     },
     {
-      "Name": "Rock Throw",
-      "Int": 16
+      "Item1": "Rock Throw",
+      "Item2": 16
     },
     {
-      "Name": "Selfdestruct",
-      "Int": 21
+      "Item1": "Selfdestruct",
+      "Item2": 21
     },
     {
-      "Name": "Harden",
-      "Int": 29
+      "Item1": "Harden",
+      "Item2": 29
     },
     {
-      "Name": "Earthquake",
-      "Int": 36
+      "Item1": "Earthquake",
+      "Item2": 36
     },
     {
-      "Name": "Explosion",
-      "Int": 43
+      "Item1": "Explosion",
+      "Item2": 43
     }
   ],
   "Golem": [
     {
-      "Name": "Defense Curl",
-      "Int": 1
+      "Item1": "Defense Curl",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Defense Curl",
-      "Int": 11
+      "Item1": "Defense Curl",
+      "Item2": 11
     },
     {
-      "Name": "Rock Throw",
-      "Int": 16
+      "Item1": "Rock Throw",
+      "Item2": 16
     },
     {
-      "Name": "Selfdestruct",
-      "Int": 21
+      "Item1": "Selfdestruct",
+      "Item2": 21
     },
     {
-      "Name": "Harden",
-      "Int": 29
+      "Item1": "Harden",
+      "Item2": 29
     },
     {
-      "Name": "Earthquake",
-      "Int": 36
+      "Item1": "Earthquake",
+      "Item2": 36
     },
     {
-      "Name": "Explosion",
-      "Int": 43
+      "Item1": "Explosion",
+      "Item2": 43
     }
   ],
   "Ponyta": [
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 30
+      "Item1": "Tail Whip",
+      "Item2": 30
     },
     {
-      "Name": "Stomp",
-      "Int": 32
+      "Item1": "Stomp",
+      "Item2": 32
     },
     {
-      "Name": "Growl",
-      "Int": 35
+      "Item1": "Growl",
+      "Item2": 35
     },
     {
-      "Name": "Fire Spin",
-      "Int": 39
+      "Item1": "Fire Spin",
+      "Item2": 39
     },
     {
-      "Name": "Take Down",
-      "Int": 43
+      "Item1": "Take Down",
+      "Item2": 43
     },
     {
-      "Name": "Agility",
-      "Int": 48
+      "Item1": "Agility",
+      "Item2": 48
     }
   ],
   "Rapidash": [
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Stomp",
-      "Int": 1
+      "Item1": "Stomp",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 30
+      "Item1": "Tail Whip",
+      "Item2": 30
     },
     {
-      "Name": "Stomp",
-      "Int": 32
+      "Item1": "Stomp",
+      "Item2": 32
     },
     {
-      "Name": "Growl",
-      "Int": 35
+      "Item1": "Growl",
+      "Item2": 35
     },
     {
-      "Name": "Fire Spin",
-      "Int": 39
+      "Item1": "Fire Spin",
+      "Item2": 39
     },
     {
-      "Name": "Take Down",
-      "Int": 47
+      "Item1": "Take Down",
+      "Item2": 47
     },
     {
-      "Name": "Agility",
-      "Int": 55
+      "Item1": "Agility",
+      "Item2": 55
     }
   ],
   "Slowpoke": [
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 18
+      "Item1": "Disable",
+      "Item2": 18
     },
     {
-      "Name": "Headbutt",
-      "Int": 22
+      "Item1": "Headbutt",
+      "Item2": 22
     },
     {
-      "Name": "Growl",
-      "Int": 27
+      "Item1": "Growl",
+      "Item2": 27
     },
     {
-      "Name": "Water Gun",
-      "Int": 33
+      "Item1": "Water Gun",
+      "Item2": 33
     },
     {
-      "Name": "Amnesia",
-      "Int": 40
+      "Item1": "Amnesia",
+      "Item2": 40
     },
     {
-      "Name": "Psychic",
-      "Int": 48
+      "Item1": "Psychic",
+      "Item2": 48
     }
   ],
   "Slowbro": [
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Headbutt",
-      "Int": 1
+      "Item1": "Headbutt",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 18
+      "Item1": "Disable",
+      "Item2": 18
     },
     {
-      "Name": "Headbutt",
-      "Int": 22
+      "Item1": "Headbutt",
+      "Item2": 22
     },
     {
-      "Name": "Growl",
-      "Int": 27
+      "Item1": "Growl",
+      "Item2": 27
     },
     {
-      "Name": "Water Gun",
-      "Int": 33
+      "Item1": "Water Gun",
+      "Item2": 33
     },
     {
-      "Name": "Withdraw",
-      "Int": 37
+      "Item1": "Withdraw",
+      "Item2": 37
     },
     {
-      "Name": "Amnesia",
-      "Int": 44
+      "Item1": "Amnesia",
+      "Item2": 44
     },
     {
-      "Name": "Psychic",
-      "Int": 55
+      "Item1": "Psychic",
+      "Item2": 55
     }
   ],
   "Magnemite": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Sonicboom",
-      "Int": 21
+      "Item1": "Sonicboom",
+      "Item2": 21
     },
     {
-      "Name": "Thundershock",
-      "Int": 25
+      "Item1": "Thundershock",
+      "Item2": 25
     },
     {
-      "Name": "Supersonic",
-      "Int": 29
+      "Item1": "Supersonic",
+      "Item2": 29
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 35
+      "Item1": "Thunder Wave",
+      "Item2": 35
     },
     {
-      "Name": "Swift",
-      "Int": 41
+      "Item1": "Swift",
+      "Item2": 41
     },
     {
-      "Name": "Screech",
-      "Int": 47
+      "Item1": "Screech",
+      "Item2": 47
     }
   ],
   "Magneton": [
     {
-      "Name": "Sonicboom",
-      "Int": 1
+      "Item1": "Sonicboom",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Thundershock",
-      "Int": 1
+      "Item1": "Thundershock",
+      "Item2": 1
     },
     {
-      "Name": "Sonicboom",
-      "Int": 21
+      "Item1": "Sonicboom",
+      "Item2": 21
     },
     {
-      "Name": "Thundershock",
-      "Int": 25
+      "Item1": "Thundershock",
+      "Item2": 25
     },
     {
-      "Name": "Supersonic",
-      "Int": 29
+      "Item1": "Supersonic",
+      "Item2": 29
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 38
+      "Item1": "Thunder Wave",
+      "Item2": 38
     },
     {
-      "Name": "Swift",
-      "Int": 46
+      "Item1": "Swift",
+      "Item2": 46
     },
     {
-      "Name": "Screech",
-      "Int": 54
+      "Item1": "Screech",
+      "Item2": 54
     }
   ],
   "Farfetch'd": [
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 7
+      "Item1": "Leer",
+      "Item2": 7
     },
     {
-      "Name": "Fury Attack",
-      "Int": 15
+      "Item1": "Fury Attack",
+      "Item2": 15
     },
     {
-      "Name": "Swords Dance",
-      "Int": 23
+      "Item1": "Swords Dance",
+      "Item2": 23
     },
     {
-      "Name": "Agility",
-      "Int": 31
+      "Item1": "Agility",
+      "Item2": 31
     },
     {
-      "Name": "Slash",
-      "Int": 39
+      "Item1": "Slash",
+      "Item2": 39
     }
   ],
   "Doduo": [
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 20
+      "Item1": "Growl",
+      "Item2": 20
     },
     {
-      "Name": "Fury Attack",
-      "Int": 24
+      "Item1": "Fury Attack",
+      "Item2": 24
     },
     {
-      "Name": "Drill Peck",
-      "Int": 30
+      "Item1": "Drill Peck",
+      "Item2": 30
     },
     {
-      "Name": "Rage",
-      "Int": 36
+      "Item1": "Rage",
+      "Item2": 36
     },
     {
-      "Name": "Tri Attack",
-      "Int": 40
+      "Item1": "Tri Attack",
+      "Item2": 40
     },
     {
-      "Name": "Agility",
-      "Int": 44
+      "Item1": "Agility",
+      "Item2": 44
     }
   ],
   "Dodrio": [
     {
-      "Name": "Fury Attack",
-      "Int": 1
+      "Item1": "Fury Attack",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 20
+      "Item1": "Growl",
+      "Item2": 20
     },
     {
-      "Name": "Fury Attack",
-      "Int": 24
+      "Item1": "Fury Attack",
+      "Item2": 24
     },
     {
-      "Name": "Drill Peck",
-      "Int": 30
+      "Item1": "Drill Peck",
+      "Item2": 30
     },
     {
-      "Name": "Rage",
-      "Int": 39
+      "Item1": "Rage",
+      "Item2": 39
     },
     {
-      "Name": "Tri Attack",
-      "Int": 45
+      "Item1": "Tri Attack",
+      "Item2": 45
     },
     {
-      "Name": "Agility",
-      "Int": 51
+      "Item1": "Agility",
+      "Item2": 51
     }
   ],
   "Seel": [
     {
-      "Name": "Headbutt",
-      "Int": 1
+      "Item1": "Headbutt",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 30
+      "Item1": "Growl",
+      "Item2": 30
     },
     {
-      "Name": "Aurora Beam",
-      "Int": 35
+      "Item1": "Aurora Beam",
+      "Item2": 35
     },
     {
-      "Name": "Rest",
-      "Int": 40
+      "Item1": "Rest",
+      "Item2": 40
     },
     {
-      "Name": "Take Down",
-      "Int": 45
+      "Item1": "Take Down",
+      "Item2": 45
     },
     {
-      "Name": "Ice Beam",
-      "Int": 50
+      "Item1": "Ice Beam",
+      "Item2": 50
     }
   ],
   "Dewgong": [
     {
-      "Name": "Aurora Beam",
-      "Int": 1
+      "Item1": "Aurora Beam",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Headbutt",
-      "Int": 1
+      "Item1": "Headbutt",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 30
+      "Item1": "Growl",
+      "Item2": 30
     },
     {
-      "Name": "Aurora Beam",
-      "Int": 35
+      "Item1": "Aurora Beam",
+      "Item2": 35
     },
     {
-      "Name": "Rest",
-      "Int": 44
+      "Item1": "Rest",
+      "Item2": 44
     },
     {
-      "Name": "Take Down",
-      "Int": 50
+      "Item1": "Take Down",
+      "Item2": 50
     },
     {
-      "Name": "Ice Beam",
-      "Int": 56
+      "Item1": "Ice Beam",
+      "Item2": 56
     }
   ],
   "Grimer": [
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Poison Gas",
-      "Int": 30
+      "Item1": "Poison Gas",
+      "Item2": 30
     },
     {
-      "Name": "Minimize",
-      "Int": 33
+      "Item1": "Minimize",
+      "Item2": 33
     },
     {
-      "Name": "Sludge",
-      "Int": 37
+      "Item1": "Sludge",
+      "Item2": 37
     },
     {
-      "Name": "Harden",
-      "Int": 42
+      "Item1": "Harden",
+      "Item2": 42
     },
     {
-      "Name": "Screech",
-      "Int": 48
+      "Item1": "Screech",
+      "Item2": 48
     },
     {
-      "Name": "Acid Armor",
-      "Int": 55
+      "Item1": "Acid Armor",
+      "Item2": 55
     }
   ],
   "Muk": [
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Poison Gas",
-      "Int": 1
+      "Item1": "Poison Gas",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Poison Gas",
-      "Int": 30
+      "Item1": "Poison Gas",
+      "Item2": 30
     },
     {
-      "Name": "Minimize",
-      "Int": 33
+      "Item1": "Minimize",
+      "Item2": 33
     },
     {
-      "Name": "Sludge",
-      "Int": 37
+      "Item1": "Sludge",
+      "Item2": 37
     },
     {
-      "Name": "Harden",
-      "Int": 45
+      "Item1": "Harden",
+      "Item2": 45
     },
     {
-      "Name": "Screech",
-      "Int": 53
+      "Item1": "Screech",
+      "Item2": 53
     },
     {
-      "Name": "Acid Armor",
-      "Int": 60
+      "Item1": "Acid Armor",
+      "Item2": 60
     }
   ],
   "Shellder": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Withdraw",
-      "Int": 1
+      "Item1": "Withdraw",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 18
+      "Item1": "Supersonic",
+      "Item2": 18
     },
     {
-      "Name": "Clamp",
-      "Int": 23
+      "Item1": "Clamp",
+      "Item2": 23
     },
     {
-      "Name": "Aurora Beam",
-      "Int": 30
+      "Item1": "Aurora Beam",
+      "Item2": 30
     },
     {
-      "Name": "Leer",
-      "Int": 39
+      "Item1": "Leer",
+      "Item2": 39
     },
     {
-      "Name": "Ice Beam",
-      "Int": 50
+      "Item1": "Ice Beam",
+      "Item2": 50
     }
   ],
   "Cloyster": [
     {
-      "Name": "Aurora Beam",
-      "Int": 1
+      "Item1": "Aurora Beam",
+      "Item2": 1
     },
     {
-      "Name": "Clamp",
-      "Int": 1
+      "Item1": "Clamp",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 1
+      "Item1": "Supersonic",
+      "Item2": 1
     },
     {
-      "Name": "Withdraw",
-      "Int": 1
+      "Item1": "Withdraw",
+      "Item2": 1
     },
     {
-      "Name": "Spike Cannon",
-      "Int": 50
+      "Item1": "Spike Cannon",
+      "Item2": 50
     }
   ],
   "Gastly": [
     {
-      "Name": "Confuse Ray",
-      "Int": 1
+      "Item1": "Confuse Ray",
+      "Item2": 1
     },
     {
-      "Name": "Lick",
-      "Int": 1
+      "Item1": "Lick",
+      "Item2": 1
     },
     {
-      "Name": "Night Shade",
-      "Int": 1
+      "Item1": "Night Shade",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 27
+      "Item1": "Hypnosis",
+      "Item2": 27
     },
     {
-      "Name": "Dream Eater",
-      "Int": 35
+      "Item1": "Dream Eater",
+      "Item2": 35
     }
   ],
   "Haunter": [
     {
-      "Name": "Confuse Ray",
-      "Int": 1
+      "Item1": "Confuse Ray",
+      "Item2": 1
     },
     {
-      "Name": "Lick",
-      "Int": 1
+      "Item1": "Lick",
+      "Item2": 1
     },
     {
-      "Name": "Night Shade",
-      "Int": 1
+      "Item1": "Night Shade",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 29
+      "Item1": "Hypnosis",
+      "Item2": 29
     },
     {
-      "Name": "Dream Eater",
-      "Int": 38
+      "Item1": "Dream Eater",
+      "Item2": 38
     }
   ],
   "Gengar": [
     {
-      "Name": "Confuse Ray",
-      "Int": 1
+      "Item1": "Confuse Ray",
+      "Item2": 1
     },
     {
-      "Name": "Lick",
-      "Int": 1
+      "Item1": "Lick",
+      "Item2": 1
     },
     {
-      "Name": "Night Shade",
-      "Int": 1
+      "Item1": "Night Shade",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 29
+      "Item1": "Hypnosis",
+      "Item2": 29
     },
     {
-      "Name": "Dream Eater",
-      "Int": 38
+      "Item1": "Dream Eater",
+      "Item2": 38
     }
   ],
   "Onix": [
     {
-      "Name": "Screech",
-      "Int": 1
+      "Item1": "Screech",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Bind",
-      "Int": 15
+      "Item1": "Bind",
+      "Item2": 15
     },
     {
-      "Name": "Rock Throw",
-      "Int": 19
+      "Item1": "Rock Throw",
+      "Item2": 19
     },
     {
-      "Name": "Rage",
-      "Int": 25
+      "Item1": "Rage",
+      "Item2": 25
     },
     {
-      "Name": "Slam",
-      "Int": 33
+      "Item1": "Slam",
+      "Item2": 33
     },
     {
-      "Name": "Harden",
-      "Int": 43
+      "Item1": "Harden",
+      "Item2": 43
     }
   ],
   "Drowzee": [
     {
-      "Name": "Hypnosis",
-      "Int": 1
+      "Item1": "Hypnosis",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 12
+      "Item1": "Disable",
+      "Item2": 12
     },
     {
-      "Name": "Confusion",
-      "Int": 17
+      "Item1": "Confusion",
+      "Item2": 17
     },
     {
-      "Name": "Headbutt",
-      "Int": 24
+      "Item1": "Headbutt",
+      "Item2": 24
     },
     {
-      "Name": "Poison Gas",
-      "Int": 29
+      "Item1": "Poison Gas",
+      "Item2": 29
     },
     {
-      "Name": "Psychic",
-      "Int": 32
+      "Item1": "Psychic",
+      "Item2": 32
     },
     {
-      "Name": "Meditate",
-      "Int": 37
+      "Item1": "Meditate",
+      "Item2": 37
     }
   ],
   "Hypno": [
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 1
+      "Item1": "Hypnosis",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 12
+      "Item1": "Disable",
+      "Item2": 12
     },
     {
-      "Name": "Confusion",
-      "Int": 17
+      "Item1": "Confusion",
+      "Item2": 17
     },
     {
-      "Name": "Headbutt",
-      "Int": 24
+      "Item1": "Headbutt",
+      "Item2": 24
     },
     {
-      "Name": "Poison Gas",
-      "Int": 29
+      "Item1": "Poison Gas",
+      "Item2": 29
     },
     {
-      "Name": "Psychic",
-      "Int": 32
+      "Item1": "Psychic",
+      "Item2": 32
     },
     {
-      "Name": "Meditate",
-      "Int": 37
+      "Item1": "Meditate",
+      "Item2": 37
     }
   ],
   "Krabby": [
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Vicegrip",
-      "Int": 20
+      "Item1": "Vicegrip",
+      "Item2": 20
     },
     {
-      "Name": "Guillotine",
-      "Int": 25
+      "Item1": "Guillotine",
+      "Item2": 25
     },
     {
-      "Name": "Stomp",
-      "Int": 30
+      "Item1": "Stomp",
+      "Item2": 30
     },
     {
-      "Name": "Crabhammer",
-      "Int": 35
+      "Item1": "Crabhammer",
+      "Item2": 35
     },
     {
-      "Name": "Harden",
-      "Int": 40
+      "Item1": "Harden",
+      "Item2": 40
     }
   ],
   "Kingler": [
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Vicegrip",
-      "Int": 1
+      "Item1": "Vicegrip",
+      "Item2": 1
     },
     {
-      "Name": "Vicegrip",
-      "Int": 20
+      "Item1": "Vicegrip",
+      "Item2": 20
     },
     {
-      "Name": "Guillotine",
-      "Int": 25
+      "Item1": "Guillotine",
+      "Item2": 25
     },
     {
-      "Name": "Stomp",
-      "Int": 34
+      "Item1": "Stomp",
+      "Item2": 34
     },
     {
-      "Name": "Crabhammer",
-      "Int": 42
+      "Item1": "Crabhammer",
+      "Item2": 42
     },
     {
-      "Name": "Harden",
-      "Int": 49
+      "Item1": "Harden",
+      "Item2": 49
     }
   ],
   "Voltorb": [
     {
-      "Name": "Screech",
-      "Int": 1
+      "Item1": "Screech",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Sonicboom",
-      "Int": 17
+      "Item1": "Sonicboom",
+      "Item2": 17
     },
     {
-      "Name": "Selfdestruct",
-      "Int": 22
+      "Item1": "Selfdestruct",
+      "Item2": 22
     },
     {
-      "Name": "Light Screen",
-      "Int": 29
+      "Item1": "Light Screen",
+      "Item2": 29
     },
     {
-      "Name": "Swift",
-      "Int": 36
+      "Item1": "Swift",
+      "Item2": 36
     },
     {
-      "Name": "Explosion",
-      "Int": 43
+      "Item1": "Explosion",
+      "Item2": 43
     }
   ],
   "Electrode": [
     {
-      "Name": "Screech",
-      "Int": 1
+      "Item1": "Screech",
+      "Item2": 1
     },
     {
-      "Name": "Sonicboom",
-      "Int": 1
+      "Item1": "Sonicboom",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Sonicboom",
-      "Int": 17
+      "Item1": "Sonicboom",
+      "Item2": 17
     },
     {
-      "Name": "Selfdestruct",
-      "Int": 22
+      "Item1": "Selfdestruct",
+      "Item2": 22
     },
     {
-      "Name": "Light Screen",
-      "Int": 29
+      "Item1": "Light Screen",
+      "Item2": 29
     },
     {
-      "Name": "Swift",
-      "Int": 40
+      "Item1": "Swift",
+      "Item2": 40
     },
     {
-      "Name": "Explosion",
-      "Int": 50
+      "Item1": "Explosion",
+      "Item2": 50
     }
   ],
   "Exeggcute": [
     {
-      "Name": "Barrage",
-      "Int": 1
+      "Item1": "Barrage",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 1
+      "Item1": "Hypnosis",
+      "Item2": 1
     },
     {
-      "Name": "Reflect",
-      "Int": 25
+      "Item1": "Reflect",
+      "Item2": 25
     },
     {
-      "Name": "Leech Seed",
-      "Int": 28
+      "Item1": "Leech Seed",
+      "Item2": 28
     },
     {
-      "Name": "Stun Spore",
-      "Int": 32
+      "Item1": "Stun Spore",
+      "Item2": 32
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 37
+      "Item1": "Poisonpowder",
+      "Item2": 37
     },
     {
-      "Name": "Solarbeam",
-      "Int": 42
+      "Item1": "Solarbeam",
+      "Item2": 42
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 48
+      "Item1": "Sleep Powder",
+      "Item2": 48
     }
   ],
   "Exeggutor": [
     {
-      "Name": "Barrage",
-      "Int": 1
+      "Item1": "Barrage",
+      "Item2": 1
     },
     {
-      "Name": "Hypnosis",
-      "Int": 1
+      "Item1": "Hypnosis",
+      "Item2": 1
     },
     {
-      "Name": "Stomp",
-      "Int": 28
+      "Item1": "Stomp",
+      "Item2": 28
     }
   ],
   "Cubone": [
     {
-      "Name": "Bone Club",
-      "Int": 1
+      "Item1": "Bone Club",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 25
+      "Item1": "Leer",
+      "Item2": 25
     },
     {
-      "Name": "Focus Energy",
-      "Int": 31
+      "Item1": "Focus Energy",
+      "Item2": 31
     },
     {
-      "Name": "Thrash",
-      "Int": 38
+      "Item1": "Thrash",
+      "Item2": 38
     },
     {
-      "Name": "Bonemerang",
-      "Int": 43
+      "Item1": "Bonemerang",
+      "Item2": 43
     },
     {
-      "Name": "Rage",
-      "Int": 46
+      "Item1": "Rage",
+      "Item2": 46
     }
   ],
   "Marowak": [
     {
-      "Name": "Bone Club",
-      "Int": 1
+      "Item1": "Bone Club",
+      "Item2": 1
     },
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 25
+      "Item1": "Leer",
+      "Item2": 25
     },
     {
-      "Name": "Focus Energy",
-      "Int": 31
+      "Item1": "Focus Energy",
+      "Item2": 31
     },
     {
-      "Name": "Thrash",
-      "Int": 38
+      "Item1": "Thrash",
+      "Item2": 38
     },
     {
-      "Name": "Bonemerang",
-      "Int": 43
+      "Item1": "Bonemerang",
+      "Item2": 43
     },
     {
-      "Name": "Rage",
-      "Int": 46
+      "Item1": "Rage",
+      "Item2": 46
     }
   ],
   "Hitmonlee": [
     {
-      "Name": "Double Kick",
-      "Int": 1
+      "Item1": "Double Kick",
+      "Item2": 1
     },
     {
-      "Name": "Meditate",
-      "Int": 1
+      "Item1": "Meditate",
+      "Item2": 1
     },
     {
-      "Name": "Rolling Kick",
-      "Int": 33
+      "Item1": "Rolling Kick",
+      "Item2": 33
     },
     {
-      "Name": "Jump Kick",
-      "Int": 38
+      "Item1": "Jump Kick",
+      "Item2": 38
     },
     {
-      "Name": "Focus Energy",
-      "Int": 43
+      "Item1": "Focus Energy",
+      "Item2": 43
     },
     {
-      "Name": "Hi Jump Kick",
-      "Int": 48
+      "Item1": "Hi Jump Kick",
+      "Item2": 48
     },
     {
-      "Name": "Mega Kick",
-      "Int": 53
+      "Item1": "Mega Kick",
+      "Item2": 53
     }
   ],
   "Hitmonchan": [
     {
-      "Name": "Agility",
-      "Int": 1
+      "Item1": "Agility",
+      "Item2": 1
     },
     {
-      "Name": "Comet Punch",
-      "Int": 1
+      "Item1": "Comet Punch",
+      "Item2": 1
     },
     {
-      "Name": "Fire Punch",
-      "Int": 33
+      "Item1": "Fire Punch",
+      "Item2": 33
     },
     {
-      "Name": "Ice Punch",
-      "Int": 38
+      "Item1": "Ice Punch",
+      "Item2": 38
     },
     {
-      "Name": "Thunderpunch",
-      "Int": 43
+      "Item1": "Thunderpunch",
+      "Item2": 43
     },
     {
-      "Name": "Mega Punch",
-      "Int": 48
+      "Item1": "Mega Punch",
+      "Item2": 48
     },
     {
-      "Name": "Counter",
-      "Int": 53
+      "Item1": "Counter",
+      "Item2": 53
     }
   ],
   "Lickitung": [
     {
-      "Name": "Supersonic",
-      "Int": 1
+      "Item1": "Supersonic",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Stomp",
-      "Int": 7
+      "Item1": "Stomp",
+      "Item2": 7
     },
     {
-      "Name": "Disable",
-      "Int": 15
+      "Item1": "Disable",
+      "Item2": 15
     },
     {
-      "Name": "Defense Curl",
-      "Int": 23
+      "Item1": "Defense Curl",
+      "Item2": 23
     },
     {
-      "Name": "Slam",
-      "Int": 31
+      "Item1": "Slam",
+      "Item2": 31
     },
     {
-      "Name": "Screech",
-      "Int": 39
+      "Item1": "Screech",
+      "Item2": 39
     }
   ],
   "Koffing": [
     {
-      "Name": "Smog",
-      "Int": 1
+      "Item1": "Smog",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Sludge",
-      "Int": 32
+      "Item1": "Sludge",
+      "Item2": 32
     },
     {
-      "Name": "Smokescreen",
-      "Int": 37
+      "Item1": "Smokescreen",
+      "Item2": 37
     },
     {
-      "Name": "Selfdestruct",
-      "Int": 40
+      "Item1": "Selfdestruct",
+      "Item2": 40
     },
     {
-      "Name": "Haze",
-      "Int": 45
+      "Item1": "Haze",
+      "Item2": 45
     },
     {
-      "Name": "Explosion",
-      "Int": 48
+      "Item1": "Explosion",
+      "Item2": 48
     }
   ],
   "Weezing": [
     {
-      "Name": "Sludge",
-      "Int": 1
+      "Item1": "Sludge",
+      "Item2": 1
     },
     {
-      "Name": "Smog",
-      "Int": 1
+      "Item1": "Smog",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Sludge",
-      "Int": 32
+      "Item1": "Sludge",
+      "Item2": 32
     },
     {
-      "Name": "Smokescreen",
-      "Int": 39
+      "Item1": "Smokescreen",
+      "Item2": 39
     },
     {
-      "Name": "Selfdestruct",
-      "Int": 43
+      "Item1": "Selfdestruct",
+      "Item2": 43
     },
     {
-      "Name": "Haze",
-      "Int": 49
+      "Item1": "Haze",
+      "Item2": 49
     },
     {
-      "Name": "Explosion",
-      "Int": 53
+      "Item1": "Explosion",
+      "Item2": 53
     }
   ],
   "Rhyhorn": [
     {
-      "Name": "Horn Attack",
-      "Int": 1
+      "Item1": "Horn Attack",
+      "Item2": 1
     },
     {
-      "Name": "Stomp",
-      "Int": 30
+      "Item1": "Stomp",
+      "Item2": 30
     },
     {
-      "Name": "Tail Whip",
-      "Int": 35
+      "Item1": "Tail Whip",
+      "Item2": 35
     },
     {
-      "Name": "Fury Attack",
-      "Int": 40
+      "Item1": "Fury Attack",
+      "Item2": 40
     },
     {
-      "Name": "Horn Drill",
-      "Int": 45
+      "Item1": "Horn Drill",
+      "Item2": 45
     },
     {
-      "Name": "Leer",
-      "Int": 50
+      "Item1": "Leer",
+      "Item2": 50
     },
     {
-      "Name": "Take Down",
-      "Int": 55
+      "Item1": "Take Down",
+      "Item2": 55
     }
   ],
   "Rhydon": [
     {
-      "Name": "Fury Attack",
-      "Int": 1
+      "Item1": "Fury Attack",
+      "Item2": 1
     },
     {
-      "Name": "Horn Attack",
-      "Int": 1
+      "Item1": "Horn Attack",
+      "Item2": 1
     },
     {
-      "Name": "Stomp",
-      "Int": 1
+      "Item1": "Stomp",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Stomp",
-      "Int": 30
+      "Item1": "Stomp",
+      "Item2": 30
     },
     {
-      "Name": "Tail Whip",
-      "Int": 35
+      "Item1": "Tail Whip",
+      "Item2": 35
     },
     {
-      "Name": "Fury Attack",
-      "Int": 40
+      "Item1": "Fury Attack",
+      "Item2": 40
     },
     {
-      "Name": "Horn Drill",
-      "Int": 48
+      "Item1": "Horn Drill",
+      "Item2": 48
     },
     {
-      "Name": "Leer",
-      "Int": 55
+      "Item1": "Leer",
+      "Item2": 55
     },
     {
-      "Name": "Take Down",
-      "Int": 64
+      "Item1": "Take Down",
+      "Item2": 64
     }
   ],
   "Chansey": [
     {
-      "Name": "Doubleslap",
-      "Int": 1
+      "Item1": "Doubleslap",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Sing",
-      "Int": 24
+      "Item1": "Sing",
+      "Item2": 24
     },
     {
-      "Name": "Growl",
-      "Int": 30
+      "Item1": "Growl",
+      "Item2": 30
     },
     {
-      "Name": "Minimize",
-      "Int": 38
+      "Item1": "Minimize",
+      "Item2": 38
     },
     {
-      "Name": "Defense Curl",
-      "Int": 44
+      "Item1": "Defense Curl",
+      "Item2": 44
     },
     {
-      "Name": "Light Screen",
-      "Int": 48
+      "Item1": "Light Screen",
+      "Item2": 48
     },
     {
-      "Name": "Double-Edge",
-      "Int": 54
+      "Item1": "Double-Edge",
+      "Item2": 54
     }
   ],
   "Tangela": [
     {
-      "Name": "Bind",
-      "Int": 1
+      "Item1": "Bind",
+      "Item2": 1
     },
     {
-      "Name": "Constrict",
-      "Int": 1
+      "Item1": "Constrict",
+      "Item2": 1
     },
     {
-      "Name": "Absorb",
-      "Int": 29
+      "Item1": "Absorb",
+      "Item2": 29
     },
     {
-      "Name": "Poisonpowder",
-      "Int": 32
+      "Item1": "Poisonpowder",
+      "Item2": 32
     },
     {
-      "Name": "Stun Spore",
-      "Int": 36
+      "Item1": "Stun Spore",
+      "Item2": 36
     },
     {
-      "Name": "Sleep Powder",
-      "Int": 39
+      "Item1": "Sleep Powder",
+      "Item2": 39
     },
     {
-      "Name": "Slam",
-      "Int": 45
+      "Item1": "Slam",
+      "Item2": 45
     },
     {
-      "Name": "Growth",
-      "Int": 49
+      "Item1": "Growth",
+      "Item2": 49
     }
   ],
   "Kangaskhan": [
     {
-      "Name": "Comet Punch",
-      "Int": 1
+      "Item1": "Comet Punch",
+      "Item2": 1
     },
     {
-      "Name": "Rage",
-      "Int": 1
+      "Item1": "Rage",
+      "Item2": 1
     },
     {
-      "Name": "Bite",
-      "Int": 26
+      "Item1": "Bite",
+      "Item2": 26
     },
     {
-      "Name": "Tail Whip",
-      "Int": 31
+      "Item1": "Tail Whip",
+      "Item2": 31
     },
     {
-      "Name": "Mega Punch",
-      "Int": 36
+      "Item1": "Mega Punch",
+      "Item2": 36
     },
     {
-      "Name": "Leer",
-      "Int": 41
+      "Item1": "Leer",
+      "Item2": 41
     },
     {
-      "Name": "Dizzy Punch",
-      "Int": 46
+      "Item1": "Dizzy Punch",
+      "Item2": 46
     }
   ],
   "Horsea": [
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Smokescreen",
-      "Int": 19
+      "Item1": "Smokescreen",
+      "Item2": 19
     },
     {
-      "Name": "Leer",
-      "Int": 24
+      "Item1": "Leer",
+      "Item2": 24
     },
     {
-      "Name": "Water Gun",
-      "Int": 30
+      "Item1": "Water Gun",
+      "Item2": 30
     },
     {
-      "Name": "Agility",
-      "Int": 37
+      "Item1": "Agility",
+      "Item2": 37
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 45
+      "Item1": "Hydro Pump",
+      "Item2": 45
     }
   ],
   "Seadra": [
     {
-      "Name": "Bubble",
-      "Int": 1
+      "Item1": "Bubble",
+      "Item2": 1
     },
     {
-      "Name": "Smokescreen",
-      "Int": 1
+      "Item1": "Smokescreen",
+      "Item2": 1
     },
     {
-      "Name": "Smokescreen",
-      "Int": 19
+      "Item1": "Smokescreen",
+      "Item2": 19
     },
     {
-      "Name": "Leer",
-      "Int": 24
+      "Item1": "Leer",
+      "Item2": 24
     },
     {
-      "Name": "Water Gun",
-      "Int": 30
+      "Item1": "Water Gun",
+      "Item2": 30
     },
     {
-      "Name": "Agility",
-      "Int": 41
+      "Item1": "Agility",
+      "Item2": 41
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 52
+      "Item1": "Hydro Pump",
+      "Item2": 52
     }
   ],
   "Goldeen": [
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 19
+      "Item1": "Supersonic",
+      "Item2": 19
     },
     {
-      "Name": "Horn Attack",
-      "Int": 24
+      "Item1": "Horn Attack",
+      "Item2": 24
     },
     {
-      "Name": "Fury Attack",
-      "Int": 30
+      "Item1": "Fury Attack",
+      "Item2": 30
     },
     {
-      "Name": "Waterfall",
-      "Int": 37
+      "Item1": "Waterfall",
+      "Item2": 37
     },
     {
-      "Name": "Horn Drill",
-      "Int": 45
+      "Item1": "Horn Drill",
+      "Item2": 45
     },
     {
-      "Name": "Agility",
-      "Int": 54
+      "Item1": "Agility",
+      "Item2": 54
     }
   ],
   "Seaking": [
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 1
+      "Item1": "Supersonic",
+      "Item2": 1
     },
     {
-      "Name": "Tail Whip",
-      "Int": 1
+      "Item1": "Tail Whip",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 19
+      "Item1": "Supersonic",
+      "Item2": 19
     },
     {
-      "Name": "Horn Attack",
-      "Int": 24
+      "Item1": "Horn Attack",
+      "Item2": 24
     },
     {
-      "Name": "Fury Attack",
-      "Int": 30
+      "Item1": "Fury Attack",
+      "Item2": 30
     },
     {
-      "Name": "Waterfall",
-      "Int": 39
+      "Item1": "Waterfall",
+      "Item2": 39
     },
     {
-      "Name": "Horn Drill",
-      "Int": 48
+      "Item1": "Horn Drill",
+      "Item2": 48
     },
     {
-      "Name": "Agility",
-      "Int": 54
+      "Item1": "Agility",
+      "Item2": 54
     }
   ],
   "Staryu": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 17
+      "Item1": "Water Gun",
+      "Item2": 17
     },
     {
-      "Name": "Harden",
-      "Int": 22
+      "Item1": "Harden",
+      "Item2": 22
     },
     {
-      "Name": "Recover",
-      "Int": 27
+      "Item1": "Recover",
+      "Item2": 27
     },
     {
-      "Name": "Swift",
-      "Int": 32
+      "Item1": "Swift",
+      "Item2": 32
     },
     {
-      "Name": "Minimize",
-      "Int": 37
+      "Item1": "Minimize",
+      "Item2": 37
     },
     {
-      "Name": "Light Screen",
-      "Int": 42
+      "Item1": "Light Screen",
+      "Item2": 42
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 47
+      "Item1": "Hydro Pump",
+      "Item2": 47
     }
   ],
   "Starmie": [
     {
-      "Name": "Harden",
-      "Int": 1
+      "Item1": "Harden",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     }
   ],
   "Mr. Mime": [
     {
-      "Name": "Barrier",
-      "Int": 1
+      "Item1": "Barrier",
+      "Item2": 1
     },
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Confusion",
-      "Int": 15
+      "Item1": "Confusion",
+      "Item2": 15
     },
     {
-      "Name": "Light Screen",
-      "Int": 23
+      "Item1": "Light Screen",
+      "Item2": 23
     },
     {
-      "Name": "Doubleslap",
-      "Int": 31
+      "Item1": "Doubleslap",
+      "Item2": 31
     },
     {
-      "Name": "Meditate",
-      "Int": 39
+      "Item1": "Meditate",
+      "Item2": 39
     },
     {
-      "Name": "Substitute",
-      "Int": 47
+      "Item1": "Substitute",
+      "Item2": 47
     }
   ],
   "Scyther": [
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 17
+      "Item1": "Leer",
+      "Item2": 17
     },
     {
-      "Name": "Focus Energy",
-      "Int": 20
+      "Item1": "Focus Energy",
+      "Item2": 20
     },
     {
-      "Name": "Double Team",
-      "Int": 24
+      "Item1": "Double Team",
+      "Item2": 24
     },
     {
-      "Name": "Slash",
-      "Int": 29
+      "Item1": "Slash",
+      "Item2": 29
     },
     {
-      "Name": "Swords Dance",
-      "Int": 35
+      "Item1": "Swords Dance",
+      "Item2": 35
     },
     {
-      "Name": "Agility",
-      "Int": 42
+      "Item1": "Agility",
+      "Item2": 42
     }
   ],
   "Jynx": [
     {
-      "Name": "Lovely Kiss",
-      "Int": 1
+      "Item1": "Lovely Kiss",
+      "Item2": 1
     },
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Lick",
-      "Int": 18
+      "Item1": "Lick",
+      "Item2": 18
     },
     {
-      "Name": "Doubleslap",
-      "Int": 23
+      "Item1": "Doubleslap",
+      "Item2": 23
     },
     {
-      "Name": "Ice Punch",
-      "Int": 31
+      "Item1": "Ice Punch",
+      "Item2": 31
     },
     {
-      "Name": "Body Slam",
-      "Int": 39
+      "Item1": "Body Slam",
+      "Item2": 39
     },
     {
-      "Name": "Thrash",
-      "Int": 47
+      "Item1": "Thrash",
+      "Item2": 47
     },
     {
-      "Name": "Blizzard",
-      "Int": 58
+      "Item1": "Blizzard",
+      "Item2": 58
     }
   ],
   "Electabuzz": [
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Thundershock",
-      "Int": 34
+      "Item1": "Thundershock",
+      "Item2": 34
     },
     {
-      "Name": "Screech",
-      "Int": 37
+      "Item1": "Screech",
+      "Item2": 37
     },
     {
-      "Name": "Thunderpunch",
-      "Int": 42
+      "Item1": "Thunderpunch",
+      "Item2": 42
     },
     {
-      "Name": "Light Screen",
-      "Int": 49
+      "Item1": "Light Screen",
+      "Item2": 49
     },
     {
-      "Name": "Thunder",
-      "Int": 54
+      "Item1": "Thunder",
+      "Item2": 54
     }
   ],
   "Magmar": [
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 36
+      "Item1": "Leer",
+      "Item2": 36
     },
     {
-      "Name": "Confuse Ray",
-      "Int": 39
+      "Item1": "Confuse Ray",
+      "Item2": 39
     },
     {
-      "Name": "Fire Punch",
-      "Int": 43
+      "Item1": "Fire Punch",
+      "Item2": 43
     },
     {
-      "Name": "Smokescreen",
-      "Int": 48
+      "Item1": "Smokescreen",
+      "Item2": 48
     },
     {
-      "Name": "Smog",
-      "Int": 52
+      "Item1": "Smog",
+      "Item2": 52
     },
     {
-      "Name": "Flamethrower",
-      "Int": 55
+      "Item1": "Flamethrower",
+      "Item2": 55
     }
   ],
   "Pinsir": [
     {
-      "Name": "Vicegrip",
-      "Int": 1
+      "Item1": "Vicegrip",
+      "Item2": 1
     },
     {
-      "Name": "Seismic Toss",
-      "Int": 25
+      "Item1": "Seismic Toss",
+      "Item2": 25
     },
     {
-      "Name": "Guillotine",
-      "Int": 30
+      "Item1": "Guillotine",
+      "Item2": 30
     },
     {
-      "Name": "Focus Energy",
-      "Int": 36
+      "Item1": "Focus Energy",
+      "Item2": 36
     },
     {
-      "Name": "Harden",
-      "Int": 43
+      "Item1": "Harden",
+      "Item2": 43
     },
     {
-      "Name": "Slash",
-      "Int": 49
+      "Item1": "Slash",
+      "Item2": 49
     },
     {
-      "Name": "Swords Dance",
-      "Int": 54
+      "Item1": "Swords Dance",
+      "Item2": 54
     }
   ],
   "Tauros": [
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Stomp",
-      "Int": 21
+      "Item1": "Stomp",
+      "Item2": 21
     },
     {
-      "Name": "Tail Whip",
-      "Int": 28
+      "Item1": "Tail Whip",
+      "Item2": 28
     },
     {
-      "Name": "Leer",
-      "Int": 35
+      "Item1": "Leer",
+      "Item2": 35
     },
     {
-      "Name": "Rage",
-      "Int": 44
+      "Item1": "Rage",
+      "Item2": 44
     },
     {
-      "Name": "Take Down",
-      "Int": 51
+      "Item1": "Take Down",
+      "Item2": 51
     }
   ],
   "Magikarp": [
     {
-      "Name": "Splash",
-      "Int": 1
+      "Item1": "Splash",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 15
+      "Item1": "Tackle",
+      "Item2": 15
     }
   ],
   "Gyarados": [
     {
-      "Name": "Bite",
-      "Int": 1
+      "Item1": "Bite",
+      "Item2": 1
     },
     {
-      "Name": "Dragon Rage",
-      "Int": 1
+      "Item1": "Dragon Rage",
+      "Item2": 1
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 1
+      "Item1": "Hydro Pump",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Bite",
-      "Int": 20
+      "Item1": "Bite",
+      "Item2": 20
     },
     {
-      "Name": "Dragon Rage",
-      "Int": 25
+      "Item1": "Dragon Rage",
+      "Item2": 25
     },
     {
-      "Name": "Leer",
-      "Int": 32
+      "Item1": "Leer",
+      "Item2": 32
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 41
+      "Item1": "Hydro Pump",
+      "Item2": 41
     },
     {
-      "Name": "Hyper Beam",
-      "Int": 52
+      "Item1": "Hyper Beam",
+      "Item2": 52
     }
   ],
   "Lapras": [
     {
-      "Name": "Growl",
-      "Int": 1
+      "Item1": "Growl",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     },
     {
-      "Name": "Sing",
-      "Int": 16
+      "Item1": "Sing",
+      "Item2": 16
     },
     {
-      "Name": "Mist",
-      "Int": 20
+      "Item1": "Mist",
+      "Item2": 20
     },
     {
-      "Name": "Body Slam",
-      "Int": 25
+      "Item1": "Body Slam",
+      "Item2": 25
     },
     {
-      "Name": "Confuse Ray",
-      "Int": 31
+      "Item1": "Confuse Ray",
+      "Item2": 31
     },
     {
-      "Name": "Ice Beam",
-      "Int": 38
+      "Item1": "Ice Beam",
+      "Item2": 38
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 46
+      "Item1": "Hydro Pump",
+      "Item2": 46
     }
   ],
   "Ditto": [
     {
-      "Name": "Transform",
-      "Int": 1
+      "Item1": "Transform",
+      "Item2": 1
     }
   ],
   "Eevee": [
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 27
+      "Item1": "Quick Attack",
+      "Item2": 27
     },
     {
-      "Name": "Tail Whip",
-      "Int": 31
+      "Item1": "Tail Whip",
+      "Item2": 31
     },
     {
-      "Name": "Bite",
-      "Int": 37
+      "Item1": "Bite",
+      "Item2": 37
     },
     {
-      "Name": "Take Down",
-      "Int": 45
+      "Item1": "Take Down",
+      "Item2": 45
     }
   ],
   "Vaporeon": [
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 27
+      "Item1": "Quick Attack",
+      "Item2": 27
     },
     {
-      "Name": "Water Gun",
-      "Int": 31
+      "Item1": "Water Gun",
+      "Item2": 31
     },
     {
-      "Name": "Tail Whip",
-      "Int": 37
+      "Item1": "Tail Whip",
+      "Item2": 37
     },
     {
-      "Name": "Bite",
-      "Int": 40
+      "Item1": "Bite",
+      "Item2": 40
     },
     {
-      "Name": "Acid Armor",
-      "Int": 42
+      "Item1": "Acid Armor",
+      "Item2": 42
     },
     {
-      "Name": "Haze",
-      "Int": 44
+      "Item1": "Haze",
+      "Item2": 44
     },
     {
-      "Name": "Mist",
-      "Int": 48
+      "Item1": "Mist",
+      "Item2": 48
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 54
+      "Item1": "Hydro Pump",
+      "Item2": 54
     }
   ],
   "Jolteon": [
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Thundershock",
-      "Int": 1
+      "Item1": "Thundershock",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 27
+      "Item1": "Quick Attack",
+      "Item2": 27
     },
     {
-      "Name": "Thundershock",
-      "Int": 31
+      "Item1": "Thundershock",
+      "Item2": 31
     },
     {
-      "Name": "Tail Whip",
-      "Int": 37
+      "Item1": "Tail Whip",
+      "Item2": 37
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 40
+      "Item1": "Thunder Wave",
+      "Item2": 40
     },
     {
-      "Name": "Double Kick",
-      "Int": 42
+      "Item1": "Double Kick",
+      "Item2": 42
     },
     {
-      "Name": "Agility",
-      "Int": 44
+      "Item1": "Agility",
+      "Item2": 44
     },
     {
-      "Name": "Pin Missle",
-      "Int": 48
+      "Item1": "Pin Missle",
+      "Item2": 48
     },
     {
-      "Name": "Thunder",
-      "Int": 54
+      "Item1": "Thunder",
+      "Item2": 54
     }
   ],
   "Flareon": [
     {
-      "Name": "Ember",
-      "Int": 1
+      "Item1": "Ember",
+      "Item2": 1
     },
     {
-      "Name": "Sand-Attack",
-      "Int": 1
+      "Item1": "Sand-Attack",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 1
+      "Item1": "Quick Attack",
+      "Item2": 1
     },
     {
-      "Name": "Quick Attack",
-      "Int": 27
+      "Item1": "Quick Attack",
+      "Item2": 27
     },
     {
-      "Name": "Ember",
-      "Int": 31
+      "Item1": "Ember",
+      "Item2": 31
     },
     {
-      "Name": "Tail Whip",
-      "Int": 37
+      "Item1": "Tail Whip",
+      "Item2": 37
     },
     {
-      "Name": "Bite",
-      "Int": 40
+      "Item1": "Bite",
+      "Item2": 40
     },
     {
-      "Name": "Leer",
-      "Int": 42
+      "Item1": "Leer",
+      "Item2": 42
     },
     {
-      "Name": "Fire Spin",
-      "Int": 44
+      "Item1": "Fire Spin",
+      "Item2": 44
     },
     {
-      "Name": "Rage",
-      "Int": 48
+      "Item1": "Rage",
+      "Item2": 48
     },
     {
-      "Name": "Flamethrower",
-      "Int": 54
+      "Item1": "Flamethrower",
+      "Item2": 54
     }
   ],
   "Porygon": [
     {
-      "Name": "Conversion",
-      "Int": 1
+      "Item1": "Conversion",
+      "Item2": 1
     },
     {
-      "Name": "Sharpen",
-      "Int": 1
+      "Item1": "Sharpen",
+      "Item2": 1
     },
     {
-      "Name": "Tackle",
-      "Int": 1
+      "Item1": "Tackle",
+      "Item2": 1
     },
     {
-      "Name": "Psybeam",
-      "Int": 23
+      "Item1": "Psybeam",
+      "Item2": 23
     },
     {
-      "Name": "Recover",
-      "Int": 28
+      "Item1": "Recover",
+      "Item2": 28
     },
     {
-      "Name": "Agility",
-      "Int": 35
+      "Item1": "Agility",
+      "Item2": 35
     },
     {
-      "Name": "Tri Attack",
-      "Int": 42
+      "Item1": "Tri Attack",
+      "Item2": 42
     }
   ],
   "Omanyte": [
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     },
     {
-      "Name": "Withdraw",
-      "Int": 1
+      "Item1": "Withdraw",
+      "Item2": 1
     },
     {
-      "Name": "Horn Attack",
-      "Int": 34
+      "Item1": "Horn Attack",
+      "Item2": 34
     },
     {
-      "Name": "Leer",
-      "Int": 39
+      "Item1": "Leer",
+      "Item2": 39
     },
     {
-      "Name": "Spike Cannon",
-      "Int": 46
+      "Item1": "Spike Cannon",
+      "Item2": 46
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 53
+      "Item1": "Hydro Pump",
+      "Item2": 53
     }
   ],
   "Omastar": [
     {
-      "Name": "Horn Attack",
-      "Int": 1
+      "Item1": "Horn Attack",
+      "Item2": 1
     },
     {
-      "Name": "Water Gun",
-      "Int": 1
+      "Item1": "Water Gun",
+      "Item2": 1
     },
     {
-      "Name": "Withdraw",
-      "Int": 1
+      "Item1": "Withdraw",
+      "Item2": 1
     },
     {
-      "Name": "Horn Attack",
-      "Int": 34
+      "Item1": "Horn Attack",
+      "Item2": 34
     },
     {
-      "Name": "Leer",
-      "Int": 39
+      "Item1": "Leer",
+      "Item2": 39
     },
     {
-      "Name": "Spike Cannon",
-      "Int": 44
+      "Item1": "Spike Cannon",
+      "Item2": 44
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 49
+      "Item1": "Hydro Pump",
+      "Item2": 49
     }
   ],
   "Kabuto": [
     {
-      "Name": "Harden",
-      "Int": 1
+      "Item1": "Harden",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Absorb",
-      "Int": 34
+      "Item1": "Absorb",
+      "Item2": 34
     },
     {
-      "Name": "Slash",
-      "Int": 39
+      "Item1": "Slash",
+      "Item2": 39
     },
     {
-      "Name": "Leer",
-      "Int": 44
+      "Item1": "Leer",
+      "Item2": 44
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 49
+      "Item1": "Hydro Pump",
+      "Item2": 49
     }
   ],
   "Kabutops": [
     {
-      "Name": "Absorb",
-      "Int": 1
+      "Item1": "Absorb",
+      "Item2": 1
     },
     {
-      "Name": "Harden",
-      "Int": 1
+      "Item1": "Harden",
+      "Item2": 1
     },
     {
-      "Name": "Scratch",
-      "Int": 1
+      "Item1": "Scratch",
+      "Item2": 1
     },
     {
-      "Name": "Absorb",
-      "Int": 34
+      "Item1": "Absorb",
+      "Item2": 34
     },
     {
-      "Name": "Slash",
-      "Int": 39
+      "Item1": "Slash",
+      "Item2": 39
     },
     {
-      "Name": "Leer",
-      "Int": 46
+      "Item1": "Leer",
+      "Item2": 46
     },
     {
-      "Name": "Hydro Pump",
-      "Int": 53
+      "Item1": "Hydro Pump",
+      "Item2": 53
     }
   ],
   "Aerodactyl": [
     {
-      "Name": "Agility",
-      "Int": 1
+      "Item1": "Agility",
+      "Item2": 1
     },
     {
-      "Name": "Wing Attack",
-      "Int": 1
+      "Item1": "Wing Attack",
+      "Item2": 1
     },
     {
-      "Name": "Supersonic",
-      "Int": 33
+      "Item1": "Supersonic",
+      "Item2": 33
     },
     {
-      "Name": "Bite",
-      "Int": 38
+      "Item1": "Bite",
+      "Item2": 38
     },
     {
-      "Name": "Take Down",
-      "Int": 45
+      "Item1": "Take Down",
+      "Item2": 45
     },
     {
-      "Name": "Hyper Beam",
-      "Int": 54
+      "Item1": "Hyper Beam",
+      "Item2": 54
     }
   ],
   "Snorlax": [
     {
-      "Name": "Amnesia",
-      "Int": 1
+      "Item1": "Amnesia",
+      "Item2": 1
     },
     {
-      "Name": "Headbutt",
-      "Int": 1
+      "Item1": "Headbutt",
+      "Item2": 1
     },
     {
-      "Name": "Rest",
-      "Int": 1
+      "Item1": "Rest",
+      "Item2": 1
     },
     {
-      "Name": "Body Slam",
-      "Int": 35
+      "Item1": "Body Slam",
+      "Item2": 35
     },
     {
-      "Name": "Harden",
-      "Int": 41
+      "Item1": "Harden",
+      "Item2": 41
     },
     {
-      "Name": "Double-Edge",
-      "Int": 48
+      "Item1": "Double-Edge",
+      "Item2": 48
     },
     {
-      "Name": "Hyper Beam",
-      "Int": 56
+      "Item1": "Hyper Beam",
+      "Item2": 56
     }
   ],
   "Articuno": [
     {
-      "Name": "Ice Beam",
-      "Int": 1
+      "Item1": "Ice Beam",
+      "Item2": 1
     },
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Blizzard",
-      "Int": 51
+      "Item1": "Blizzard",
+      "Item2": 51
     },
     {
-      "Name": "Agility",
-      "Int": 55
+      "Item1": "Agility",
+      "Item2": 55
     },
     {
-      "Name": "Mist",
-      "Int": 60
+      "Item1": "Mist",
+      "Item2": 60
     }
   ],
   "Zapdos": [
     {
-      "Name": "Drill Peck",
-      "Int": 1
+      "Item1": "Drill Peck",
+      "Item2": 1
     },
     {
-      "Name": "Thundershock",
-      "Int": 1
+      "Item1": "Thundershock",
+      "Item2": 1
     },
     {
-      "Name": "Thunder",
-      "Int": 51
+      "Item1": "Thunder",
+      "Item2": 51
     },
     {
-      "Name": "Agility",
-      "Int": 55
+      "Item1": "Agility",
+      "Item2": 55
     },
     {
-      "Name": "Light Screen",
-      "Int": 60
+      "Item1": "Light Screen",
+      "Item2": 60
     }
   ],
   "Moltres": [
     {
-      "Name": "Fire Spin",
-      "Int": 1
+      "Item1": "Fire Spin",
+      "Item2": 1
     },
     {
-      "Name": "Peck",
-      "Int": 1
+      "Item1": "Peck",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 51
+      "Item1": "Leer",
+      "Item2": 51
     },
     {
-      "Name": "Agility",
-      "Int": 55
+      "Item1": "Agility",
+      "Item2": 55
     },
     {
-      "Name": "Sky Attack",
-      "Int": 60
+      "Item1": "Sky Attack",
+      "Item2": 60
     }
   ],
   "Dratini": [
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 10
+      "Item1": "Thunder Wave",
+      "Item2": 10
     },
     {
-      "Name": "Agility",
-      "Int": 20
+      "Item1": "Agility",
+      "Item2": 20
     },
     {
-      "Name": "Slam",
-      "Int": 30
+      "Item1": "Slam",
+      "Item2": 30
     },
     {
-      "Name": "Dragon Rage",
-      "Int": 40
+      "Item1": "Dragon Rage",
+      "Item2": 40
     },
     {
-      "Name": "Hyper Beam",
-      "Int": 50
+      "Item1": "Hyper Beam",
+      "Item2": 50
     }
   ],
   "Dragonair": [
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 1
+      "Item1": "Thunder Wave",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 10
+      "Item1": "Thunder Wave",
+      "Item2": 10
     },
     {
-      "Name": "Agility",
-      "Int": 20
+      "Item1": "Agility",
+      "Item2": 20
     },
     {
-      "Name": "Slam",
-      "Int": 35
+      "Item1": "Slam",
+      "Item2": 35
     },
     {
-      "Name": "Dragon Rage",
-      "Int": 45
+      "Item1": "Dragon Rage",
+      "Item2": 45
     },
     {
-      "Name": "Hyper Beam",
-      "Int": 55
+      "Item1": "Hyper Beam",
+      "Item2": 55
     }
   ],
   "Dragonite": [
     {
-      "Name": "Agility",
-      "Int": 1
+      "Item1": "Agility",
+      "Item2": 1
     },
     {
-      "Name": "Leer",
-      "Int": 1
+      "Item1": "Leer",
+      "Item2": 1
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 1
+      "Item1": "Thunder Wave",
+      "Item2": 1
     },
     {
-      "Name": "Wrap",
-      "Int": 1
+      "Item1": "Wrap",
+      "Item2": 1
     },
     {
-      "Name": "Thunder Wave",
-      "Int": 10
+      "Item1": "Thunder Wave",
+      "Item2": 10
     },
     {
-      "Name": "Agility",
-      "Int": 20
+      "Item1": "Agility",
+      "Item2": 20
     },
     {
-      "Name": "Slam",
-      "Int": 35
+      "Item1": "Slam",
+      "Item2": 35
     },
     {
-      "Name": "Dragon Rage",
-      "Int": 45
+      "Item1": "Dragon Rage",
+      "Item2": 45
     },
     {
-      "Name": "Hyper Beam",
-      "Int": 60
+      "Item1": "Hyper Beam",
+      "Item2": 60
     }
   ],
   "Mewtwo": [
     {
-      "Name": "Confusion",
-      "Int": 1
+      "Item1": "Confusion",
+      "Item2": 1
     },
     {
-      "Name": "Disable",
-      "Int": 1
+      "Item1": "Disable",
+      "Item2": 1
     },
     {
-      "Name": "Psychic",
-      "Int": 1
+      "Item1": "Psychic",
+      "Item2": 1
     },
     {
-      "Name": "Swift",
-      "Int": 1
+      "Item1": "Swift",
+      "Item2": 1
     },
     {
-      "Name": "Barrier",
-      "Int": 63
+      "Item1": "Barrier",
+      "Item2": 63
     },
     {
-      "Name": "Psychic",
-      "Int": 66
+      "Item1": "Psychic",
+      "Item2": 66
     },
     {
-      "Name": "Recover",
-      "Int": 70
+      "Item1": "Recover",
+      "Item2": 70
     },
     {
-      "Name": "Mist",
-      "Int": 75
+      "Item1": "Mist",
+      "Item2": 75
     },
     {
-      "Name": "Amnesia",
-      "Int": 81
+      "Item1": "Amnesia",
+      "Item2": 81
     }
   ],
   "Mew": [
     {
-      "Name": "Pound",
-      "Int": 1
+      "Item1": "Pound",
+      "Item2": 1
     },
     {
-      "Name": "Transform",
-      "Int": 10
+      "Item1": "Transform",
+      "Item2": 10
     },
     {
-      "Name": "Mega Punch",
-      "Int": 20
+      "Item1": "Mega Punch",
+      "Item2": 20
     },
     {
-      "Name": "Metronome",
-      "Int": 30
+      "Item1": "Metronome",
+      "Item2": 30
     },
     {
-      "Name": "Psychic",
-      "Int": 40
+      "Item1": "Psychic",
+      "Item2": 40
     }
   ],
   "Linq": [
     {
-      "Name": "Transform",
-      "Int": 1
+      "Item1": "Transform",
+      "Item2": 1
     },
     {
-      "Name": "Substitute",
-      "Int": 1
+      "Item1": "Substitute",
+      "Item2": 1
     },
     {
-      "Name": "Psychic",
-      "Int": 1
+      "Item1": "Psychic",
+      "Item2": 1
     },
     {
-      "Name": "Metronome",
-      "Int": 1
+      "Item1": "Metronome",
+      "Item2": 1
     }
   ]
 }

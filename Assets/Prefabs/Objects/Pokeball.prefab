@@ -90,9 +90,10 @@ GameObject:
   - component: {fileID: 2489123089968432115}
   - component: {fileID: 2489123089968432112}
   - component: {fileID: 2489123089968432113}
+  - component: {fileID: 2489123090033435696}
   m_Layer: 12
   m_Name: Pokeball
-  m_TagString: Untagged
+  m_TagString: Pokeball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,6 +153,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2489123090033435696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2489123089968432114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064e878d9fa37454e9ae5e380adf2f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDistance: {x: 0, y: 0}
+  isDisabled: 0
+  spriteRenderers: []
+  onEnabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDisabled:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2489123090569283550
 GameObject:
   m_ObjectHideFlags: 0

@@ -90,9 +90,9 @@ public enum Map
     Unknown3,
     TradeCenter,
     Colloseum,
-    BillsHouse
+    BillsHouse,
+    House //general entry for houses. 
 }
-
 
 //Script to manage the world status.
 public class MapManager : MonoBehaviour {

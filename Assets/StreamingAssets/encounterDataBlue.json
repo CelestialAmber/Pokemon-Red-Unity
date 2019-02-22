@@ -1,46 +1,47 @@
-[{
+[
+{
   "encounterChance" : 20,
 
   "slots": [
     {
-      "Name": "Diglett",
-      "Int": 18
+      "Item1": "Diglett",
+      "Item2": 18
     },
     {
-      "Name": "Diglett",
-      "Int": 19
+      "Item1": "Diglett",
+      "Item2": 19
     },
     {
-      "Name": "Diglett",
-      "Int": 17
+      "Item1": "Diglett",
+      "Item2": 17
     },
     {
-      "Name": "Diglett",
-      "Int": 20
+      "Item1": "Diglett",
+      "Item2": 20
     },
     {
-      "Name": "Diglett",
-      "Int": 16
+      "Item1": "Diglett",
+      "Item2": 16
     },
     {
-      "Name": "Diglett",
-      "Int": 15
+      "Item1": "Diglett",
+      "Item2": 15
     },
     {
-      "Name": "Diglett",
-      "Int": 21
+      "Item1": "Diglett",
+      "Item2": 21
     },
     {
-      "Name": "Diglett",
-      "Int": 22
+      "Item1": "Diglett",
+      "Item2": 22
     },
     {
-      "Name": "Dugtrio",
-      "Int": 29
+      "Item1": "Dugtrio",
+      "Item2": 29
     },
     {
-      "Name": "Dugtrio",
-      "Int": 31
+      "Item1": "Dugtrio",
+      "Item2": 31
     }
   ]
 },{
@@ -48,44 +49,44 @@
 
   "slots": [
     {
-      "Name": "Grimer",
-      "Int": 30
+      "Item1": "Grimer",
+      "Item2": 30
     },
     {
-      "Name": "Grimer",
-      "Int": 30
+      "Item1": "Grimer",
+      "Item2": 30
     },
     {
-      "Name": "Ponyta",
-      "Int": 34
+      "Item1": "Ponyta",
+      "Item2": 34
     },
     {
-      "Name": "Ponyta",
-      "Int": 30
+      "Item1": "Ponyta",
+      "Item2": 30
     },
     {
-      "Name": "Vulpix",
-      "Int": 34
+      "Item1": "Vulpix",
+      "Item2": 34
     },
     {
-      "Name": "Ponyta",
-      "Int": 32
+      "Item1": "Ponyta",
+      "Item2": 32
     },
     {
-      "Name": "Koffing",
-      "Int": 30
+      "Item1": "Koffing",
+      "Item2": 30
     },
     {
-      "Name": "Ponyta",
-      "Int": 28
+      "Item1": "Ponyta",
+      "Item2": 28
     },
     {
-      "Name": "Muk",
-      "Int": 37
+      "Item1": "Muk",
+      "Item2": 37
     },
     {
-      "Name": "Weezing",
-      "Int": 39
+      "Item1": "Weezing",
+      "Item2": 39
     }
   ]
 },{
@@ -93,44 +94,44 @@
 
   "slots": [
     {
-      "Name": "Vulpix",
-      "Int": 32
+      "Item1": "Vulpix",
+      "Item2": 32
     },
     {
-      "Name": "Grimer",
-      "Int": 34
+      "Item1": "Grimer",
+      "Item2": 34
     },
     {
-      "Name": "Grimer",
-      "Int": 34
+      "Item1": "Grimer",
+      "Item2": 34
     },
     {
-      "Name": "Ponyta",
-      "Int": 30
+      "Item1": "Ponyta",
+      "Item2": 30
     },
     {
-      "Name": "Grimer",
-      "Int": 30
+      "Item1": "Grimer",
+      "Item2": 30
     },
     {
-      "Name": "Ponyta",
-      "Int": 32
+      "Item1": "Ponyta",
+      "Item2": 32
     },
     {
-      "Name": "Koffing",
-      "Int": 30
+      "Item1": "Koffing",
+      "Item2": 30
     },
     {
-      "Name": "Ponyta",
-      "Int": 28
+      "Item1": "Ponyta",
+      "Item2": 28
     },
     {
-      "Name": "Muk",
-      "Int": 39
+      "Item1": "Muk",
+      "Item2": 39
     },
     {
-      "Name": "Weezing",
-      "Int": 37
+      "Item1": "Weezing",
+      "Item2": 37
     }
   ]
 },{
@@ -138,44 +139,44 @@
 
   "slots": [
     {
-      "Name": "Grimer",
-      "Int": 31
+      "Item1": "Grimer",
+      "Item2": 31
     },
     {
-      "Name": "Vulpix",
-      "Int": 33
+      "Item1": "Vulpix",
+      "Item2": 33
     },
     {
-      "Name": "Grimer",
-      "Int": 35
+      "Item1": "Grimer",
+      "Item2": 35
     },
     {
-      "Name": "Ponyta",
-      "Int": 32
+      "Item1": "Ponyta",
+      "Item2": 32
     },
     {
-      "Name": "Ponyta",
-      "Int": 34
+      "Item1": "Ponyta",
+      "Item2": 34
     },
     {
-      "Name": "Muk",
-      "Int": 40
+      "Item1": "Muk",
+      "Item2": 40
     },
     {
-      "Name": "Koffing",
-      "Int": 34
+      "Item1": "Koffing",
+      "Item2": 34
     },
     {
-      "Name": "Muk",
-      "Int": 38
+      "Item1": "Muk",
+      "Item2": 38
     },
     {
-      "Name": "Ponyta",
-      "Int": 36
+      "Item1": "Ponyta",
+      "Item2": 36
     },
     {
-      "Name": "Weezing",
-      "Int": 42
+      "Item1": "Weezing",
+      "Item2": 42
     }
   ]
 },{
@@ -183,44 +184,44 @@
 
   "slots": [
     {
-      "Name": "Grimer",
-      "Int": 33
+      "Item1": "Grimer",
+      "Item2": 33
     },
     {
-      "Name": "Grimer",
-      "Int": 31
+      "Item1": "Grimer",
+      "Item2": 31
     },
     {
-      "Name": "Vulpix",
-      "Int": 35
+      "Item1": "Vulpix",
+      "Item2": 35
     },
     {
-      "Name": "Ponyta",
-      "Int": 32
+      "Item1": "Ponyta",
+      "Item2": 32
     },
     {
-      "Name": "Grimer",
-      "Int": 31
+      "Item1": "Grimer",
+      "Item2": 31
     },
     {
-      "Name": "Muk",
-      "Int": 40
+      "Item1": "Muk",
+      "Item2": 40
     },
     {
-      "Name": "Ponyta",
-      "Int": 34
+      "Item1": "Ponyta",
+      "Item2": 34
     },
     {
-      "Name": "Koffing",
-      "Int": 35
+      "Item1": "Koffing",
+      "Item2": 35
     },
     {
-      "Name": "Magmar",
-      "Int": 42
+      "Item1": "Magmar",
+      "Item2": 42
     },
     {
-      "Name": "Weezing",
-      "Int": 42
+      "Item1": "Weezing",
+      "Item2": 42
     }
   ]
 },{
@@ -228,44 +229,44 @@
 
   "slots": [
     {
-      "Name": "Zubat",
-      "Int": 8
+      "Item1": "Zubat",
+      "Item2": 8
     },
     {
-      "Name": "Zubat",
-      "Int": 7
+      "Item1": "Zubat",
+      "Item2": 7
     },
     {
-      "Name": "Zubat",
-      "Int": 9
+      "Item1": "Zubat",
+      "Item2": 9
     },
     {
-      "Name": "Geodude",
-      "Int": 8
+      "Item1": "Geodude",
+      "Item2": 8
     },
     {
-      "Name": "Zubat",
-      "Int": 6
+      "Item1": "Zubat",
+      "Item2": 6
     },
     {
-      "Name": "Zubat",
-      "Int": 10
+      "Item1": "Zubat",
+      "Item2": 10
     },
     {
-      "Name": "Geodude",
-      "Int": 10
+      "Item1": "Geodude",
+      "Item2": 10
     },
     {
-      "Name": "Paras",
-      "Int": 8
+      "Item1": "Paras",
+      "Item2": 8
     },
     {
-      "Name": "Zubat",
-      "Int": 11
+      "Item1": "Zubat",
+      "Item2": 11
     },
     {
-      "Name": "Clefairy",
-      "Int": 8
+      "Item1": "Clefairy",
+      "Item2": 8
     }
   ]
 },{
@@ -273,44 +274,44 @@
 
   "slots": [
     {
-      "Name": "Zubat",
-      "Int": 8
+      "Item1": "Zubat",
+      "Item2": 8
     },
     {
-      "Name": "Zubat",
-      "Int": 7
+      "Item1": "Zubat",
+      "Item2": 7
     },
     {
-      "Name": "Geodude",
-      "Int": 7
+      "Item1": "Geodude",
+      "Item2": 7
     },
     {
-      "Name": "Geodude",
-      "Int": 8
+      "Item1": "Geodude",
+      "Item2": 8
     },
     {
-      "Name": "Zubat",
-      "Int": 9
+      "Item1": "Zubat",
+      "Item2": 9
     },
     {
-      "Name": "Paras",
-      "Int": 10
+      "Item1": "Paras",
+      "Item2": 10
     },
     {
-      "Name": "Zubat",
-      "Int": 10
+      "Item1": "Zubat",
+      "Item2": 10
     },
     {
-      "Name": "Zubat",
-      "Int": 11
+      "Item1": "Zubat",
+      "Item2": 11
     },
     {
-      "Name": "Clefairy",
-      "Int": 9
+      "Item1": "Clefairy",
+      "Item2": 9
     },
     {
-      "Name": "Geodude",
-      "Int": 9
+      "Item1": "Geodude",
+      "Item2": 9
     }
   ]
 },{
@@ -318,44 +319,44 @@
 
   "slots": [
     {
-      "Name": "Zubat",
-      "Int": 9
+      "Item1": "Zubat",
+      "Item2": 9
     },
     {
-      "Name": "Geodude",
-      "Int": 9
+      "Item1": "Geodude",
+      "Item2": 9
     },
     {
-      "Name": "Zubat",
-      "Int": 10
+      "Item1": "Zubat",
+      "Item2": 10
     },
     {
-      "Name": "Geodude",
-      "Int": 10
+      "Item1": "Geodude",
+      "Item2": 10
     },
     {
-      "Name": "Zubat",
-      "Int": 11
+      "Item1": "Zubat",
+      "Item2": 11
     },
     {
-      "Name": "Paras",
-      "Int": 10
+      "Item1": "Paras",
+      "Item2": 10
     },
     {
-      "Name": "Paras",
-      "Int": 12
+      "Item1": "Paras",
+      "Item2": 12
     },
     {
-      "Name": "Clefairy",
-      "Int": 10
+      "Item1": "Clefairy",
+      "Item2": 10
     },
     {
-      "Name": "Zubat",
-      "Int": 12
+      "Item1": "Zubat",
+      "Item2": 12
     },
     {
-      "Name": "Clefairy",
-      "Int": 12
+      "Item1": "Clefairy",
+      "Item2": 12
     }
   ]
 },{
@@ -363,44 +364,44 @@
 
   "slots": [
     {
-      "Name": "Gastly",
-      "Int": 20
+      "Item1": "Gastly",
+      "Item2": 20
     },
     {
-      "Name": "Gastly",
-      "Int": 21
+      "Item1": "Gastly",
+      "Item2": 21
     },
     {
-      "Name": "Gastly",
-      "Int": 22
+      "Item1": "Gastly",
+      "Item2": 22
     },
     {
-      "Name": "Gastly",
-      "Int": 23
+      "Item1": "Gastly",
+      "Item2": 23
     },
     {
-      "Name": "Gastly",
-      "Int": 19
+      "Item1": "Gastly",
+      "Item2": 19
     },
     {
-      "Name": "Gastly",
-      "Int": 18
+      "Item1": "Gastly",
+      "Item2": 18
     },
     {
-      "Name": "Gastly",
-      "Int": 24
+      "Item1": "Gastly",
+      "Item2": 24
     },
     {
-      "Name": "Cubone",
-      "Int": 20
+      "Item1": "Cubone",
+      "Item2": 20
     },
     {
-      "Name": "Cubone",
-      "Int": 22
+      "Item1": "Cubone",
+      "Item2": 22
     },
     {
-      "Name": "Haunter",
-      "Int": 25
+      "Item1": "Haunter",
+      "Item2": 25
     }
   ]
 },{
@@ -408,44 +409,44 @@
 
   "slots": [
     {
-      "Name": "Gastly",
-      "Int": 20
+      "Item1": "Gastly",
+      "Item2": 20
     },
     {
-      "Name": "Gastly",
-      "Int": 21
+      "Item1": "Gastly",
+      "Item2": 21
     },
     {
-      "Name": "Gastly",
-      "Int": 22
+      "Item1": "Gastly",
+      "Item2": 22
     },
     {
-      "Name": "Gastly",
-      "Int": 23
+      "Item1": "Gastly",
+      "Item2": 23
     },
     {
-      "Name": "Gastly",
-      "Int": 19
+      "Item1": "Gastly",
+      "Item2": 19
     },
     {
-      "Name": "Gastly",
-      "Int": 18
+      "Item1": "Gastly",
+      "Item2": 18
     },
     {
-      "Name": "Haunter",
-      "Int": 25
+      "Item1": "Haunter",
+      "Item2": 25
     },
     {
-      "Name": "Cubone",
-      "Int": 20
+      "Item1": "Cubone",
+      "Item2": 20
     },
     {
-      "Name": "Cubone",
-      "Int": 22
+      "Item1": "Cubone",
+      "Item2": 22
     },
     {
-      "Name": "Gastly",
-      "Int": 24
+      "Item1": "Gastly",
+      "Item2": 24
     }
   ]
 },{
@@ -453,44 +454,44 @@
 
   "slots": [
     {
-      "Name": "Gastly",
-      "Int": 20
+      "Item1": "Gastly",
+      "Item2": 20
     },
     {
-      "Name": "Gastly",
-      "Int": 21
+      "Item1": "Gastly",
+      "Item2": 21
     },
     {
-      "Name": "Gastly",
-      "Int": 22
+      "Item1": "Gastly",
+      "Item2": 22
     },
     {
-      "Name": "Gastly",
-      "Int": 23
+      "Item1": "Gastly",
+      "Item2": 23
     },
     {
-      "Name": "Gastly",
-      "Int": 19
+      "Item1": "Gastly",
+      "Item2": 19
     },
     {
-      "Name": "Gastly",
-      "Int": 18
+      "Item1": "Gastly",
+      "Item2": 18
     },
     {
-      "Name": "Haunter",
-      "Int": 25
+      "Item1": "Haunter",
+      "Item2": 25
     },
     {
-      "Name": "Cubone",
-      "Int": 20
+      "Item1": "Cubone",
+      "Item2": 20
     },
     {
-      "Name": "Cubone",
-      "Int": 22
+      "Item1": "Cubone",
+      "Item2": 22
     },
     {
-      "Name": "Gastly",
-      "Int": 24
+      "Item1": "Gastly",
+      "Item2": 24
     }
   ]
 },{
@@ -498,44 +499,44 @@
 
   "slots": [
     {
-      "Name": "Gastly",
-      "Int": 21
+      "Item1": "Gastly",
+      "Item2": 21
     },
     {
-      "Name": "Gastly",
-      "Int": 22
+      "Item1": "Gastly",
+      "Item2": 22
     },
     {
-      "Name": "Gastly",
-      "Int": 23
+      "Item1": "Gastly",
+      "Item2": 23
     },
     {
-      "Name": "Gastly",
-      "Int": 24
+      "Item1": "Gastly",
+      "Item2": 24
     },
     {
-      "Name": "Gastly",
-      "Int": 20
+      "Item1": "Gastly",
+      "Item2": 20
     },
     {
-      "Name": "Gastly",
-      "Int": 19
+      "Item1": "Gastly",
+      "Item2": 19
     },
     {
-      "Name": "Haunter",
-      "Int": 26
+      "Item1": "Haunter",
+      "Item2": 26
     },
     {
-      "Name": "Cubone",
-      "Int": 22
+      "Item1": "Cubone",
+      "Item2": 22
     },
     {
-      "Name": "Cubone",
-      "Int": 24
+      "Item1": "Cubone",
+      "Item2": 24
     },
     {
-      "Name": "Haunter",
-      "Int": 28
+      "Item1": "Haunter",
+      "Item2": 28
     }
   ]
 },{
@@ -543,44 +544,44 @@
 
   "slots": [
     {
-      "Name": "Gastly",
-      "Int": 21
+      "Item1": "Gastly",
+      "Item2": 21
     },
     {
-      "Name": "Gastly",
-      "Int": 22
+      "Item1": "Gastly",
+      "Item2": 22
     },
     {
-      "Name": "Gastly",
-      "Int": 23
+      "Item1": "Gastly",
+      "Item2": 23
     },
     {
-      "Name": "Gastly",
-      "Int": 24
+      "Item1": "Gastly",
+      "Item2": 24
     },
     {
-      "Name": "Gastly",
-      "Int": 20
+      "Item1": "Gastly",
+      "Item2": 20
     },
     {
-      "Name": "Haunter",
-      "Int": 28
+      "Item1": "Haunter",
+      "Item2": 28
     },
     {
-      "Name": "Cubone",
-      "Int": 22
+      "Item1": "Cubone",
+      "Item2": 22
     },
     {
-      "Name": "Cubone",
-      "Int": 24
+      "Item1": "Cubone",
+      "Item2": 24
     },
     {
-      "Name": "Haunter",
-      "Int": 28
+      "Item1": "Haunter",
+      "Item2": 28
     },
     {
-      "Name": "Haunter",
-      "Int": 30
+      "Item1": "Haunter",
+      "Item2": 30
     }
   ]
 },{
@@ -588,44 +589,44 @@
 
   "slots": [
     {
-      "Name": "Voltorb",
-      "Int": 21
+      "Item1": "Voltorb",
+      "Item2": 21
     },
     {
-      "Name": "Magnemite",
-      "Int": 21
+      "Item1": "Magnemite",
+      "Item2": 21
     },
     {
-      "Name": "Pikachu",
-      "Int": 20
+      "Item1": "Pikachu",
+      "Item2": 20
     },
     {
-      "Name": "Pikachu",
-      "Int": 24
+      "Item1": "Pikachu",
+      "Item2": 24
     },
     {
-      "Name": "Magnemite",
-      "Int": 23
+      "Item1": "Magnemite",
+      "Item2": 23
     },
     {
-      "Name": "Voltorb",
-      "Int": 23
+      "Item1": "Voltorb",
+      "Item2": 23
     },
     {
-      "Name": "Magneton",
-      "Int": 32
+      "Item1": "Magneton",
+      "Item2": 32
     },
     {
-      "Name": "Magneton",
-      "Int": 35
+      "Item1": "Magneton",
+      "Item2": 35
     },
     {
-      "Name": "Raichu",
-      "Int": 33
+      "Item1": "Raichu",
+      "Item2": 33
     },
     {
-      "Name": "Raichu",
-      "Int": 36
+      "Item1": "Raichu",
+      "Item2": 36
     }
   ]
 },{
@@ -633,44 +634,44 @@
 
   "slots": [
     {
-      "Name": "Zubat",
-      "Int": 16
+      "Item1": "Zubat",
+      "Item2": 16
     },
     {
-      "Name": "Zubat",
-      "Int": 17
+      "Item1": "Zubat",
+      "Item2": 17
     },
     {
-      "Name": "Geodude",
-      "Int": 17
+      "Item1": "Geodude",
+      "Item2": 17
     },
     {
-      "Name": "Machop",
-      "Int": 15
+      "Item1": "Machop",
+      "Item2": 15
     },
     {
-      "Name": "Geodude",
-      "Int": 16
+      "Item1": "Geodude",
+      "Item2": 16
     },
     {
-      "Name": "Zubat",
-      "Int": 18
+      "Item1": "Zubat",
+      "Item2": 18
     },
     {
-      "Name": "Zubat",
-      "Int": 15
+      "Item1": "Zubat",
+      "Item2": 15
     },
     {
-      "Name": "Machop",
-      "Int": 17
+      "Item1": "Machop",
+      "Item2": 17
     },
     {
-      "Name": "Onix",
-      "Int": 13
+      "Item1": "Onix",
+      "Item2": 13
     },
     {
-      "Name": "Onix",
-      "Int": 15
+      "Item1": "Onix",
+      "Item2": 15
     }
   ]
 },{
@@ -678,44 +679,44 @@
 
   "slots": [
     {
-      "Name": "Zubat",
-      "Int": 16
+      "Item1": "Zubat",
+      "Item2": 16
     },
     {
-      "Name": "Zubat",
-      "Int": 17
+      "Item1": "Zubat",
+      "Item2": 17
     },
     {
-      "Name": "Geodude",
-      "Int": 17
+      "Item1": "Geodude",
+      "Item2": 17
     },
     {
-      "Name": "Machop",
-      "Int": 15
+      "Item1": "Machop",
+      "Item2": 15
     },
     {
-      "Name": "Geodude",
-      "Int": 16
+      "Item1": "Geodude",
+      "Item2": 16
     },
     {
-      "Name": "Zubat",
-      "Int": 18
+      "Item1": "Zubat",
+      "Item2": 18
     },
     {
-      "Name": "Machop",
-      "Int": 17
+      "Item1": "Machop",
+      "Item2": 17
     },
     {
-      "Name": "Onix",
-      "Int": 17
+      "Item1": "Onix",
+      "Item2": 17
     },
     {
-      "Name": "Onix",
-      "Int": 13
+      "Item1": "Onix",
+      "Item2": 13
     },
     {
-      "Name": "Geodude",
-      "Int": 18
+      "Item1": "Geodude",
+      "Item2": 18
     }
   ]
 },{
@@ -723,44 +724,44 @@
 
   "slots": [
     {
-      "Name": "Pidgey",
-      "Int": 3
+      "Item1": "Pidgey",
+      "Item2": 3
     },
     {
-      "Name": "Rattata",
-      "Int": 3
+      "Item1": "Rattata",
+      "Item2": 3
     },
     {
-      "Name": "Rattata",
-      "Int": 3
+      "Item1": "Rattata",
+      "Item2": 3
     },
     {
-      "Name": "Rattata",
-      "Int": 2
+      "Item1": "Rattata",
+      "Item2": 2
     },
     {
-      "Name": "Pidgey",
-      "Int": 2
+      "Item1": "Pidgey",
+      "Item2": 2
     },
     {
-      "Name": "Pidgey",
-      "Int": 3
+      "Item1": "Pidgey",
+      "Item2": 3
     },
     {
-      "Name": "Pidgey",
-      "Int": 3
+      "Item1": "Pidgey",
+      "Item2": 3
     },
     {
-      "Name": "Rattata",
-      "Int": 4
+      "Item1": "Rattata",
+      "Item2": 4
     },
     {
-      "Name": "Pidgey",
-      "Int": 4
+      "Item1": "Pidgey",
+      "Item2": 4
     },
     {
-      "Name": "Pidgey",
-      "Int": 5
+      "Item1": "Pidgey",
+      "Item2": 5
     }
   ]
 },{
@@ -768,89 +769,44 @@
 
   "slots": [
     {
-      "Name": "Rattata",
-      "Int": 3
+      "Item1": "Rattata",
+      "Item2": 3
     },
     {
-      "Name": "Pidgey",
-      "Int": 3
+      "Item1": "Pidgey",
+      "Item2": 3
     },
     {
-      "Name": "Pidgey",
-      "Int": 4
+      "Item1": "Pidgey",
+      "Item2": 4
     },
     {
-      "Name": "Rattata",
-      "Int": 4
+      "Item1": "Rattata",
+      "Item2": 4
     },
     {
-      "Name": "Pidgey",
-      "Int": 5
+      "Item1": "Pidgey",
+      "Item2": 5
     },
     {
-      "Name": "Caterpie",
-      "Int": 3
+      "Item1": "Caterpie",
+      "Item2": 3
     },
     {
-      "Name": "Rattata",
-      "Int": 2
+      "Item1": "Rattata",
+      "Item2": 2
     },
     {
-      "Name": "Rattata",
-      "Int": 5
+      "Item1": "Rattata",
+      "Item2": 5
     },
     {
-      "Name": "Caterpie",
-      "Int": 4
+      "Item1": "Caterpie",
+      "Item2": 4
     },
     {
-      "Name": "Caterpie",
-      "Int": 5
-    }
-  ]
-},{
-  "encounterChance" : 20,
-
-  "slots": [
-    {
-      "Name": "Pidgey",
-      "Int": 6
-    },
-    {
-      "Name": "Spearow",
-      "Int": 5
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 7
-    },
-    {
-      "Name": "Spearow",
-      "Int": 6
-    },
-    {
-      "Name": "Spearow",
-      "Int": 7
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 8
-    },
-    {
-      "Name": "Spearow",
-      "Int": 8
-    },
-    {
-      "Name": "Jigglypuff",
-      "Int": 3
-    },
-    {
-      "Name": "Jigglypuff",
-      "Int": 5
-    },
-    {
-      "Name": "Jigglypuff",
-      "Int": 7
+      "Item1": "Caterpie",
+      "Item2": 5
     }
   ]
 },{
@@ -858,404 +814,44 @@
 
   "slots": [
     {
-      "Name": "Rattata",
-      "Int": 10
+      "Item1": "Pidgey",
+      "Item2": 6
     },
     {
-      "Name": "Spearow",
-      "Int": 10
+      "Item1": "Spearow",
+      "Item2": 5
     },
     {
-      "Name": "Rattata",
-      "Int": 8
+      "Item1": "Pidgey",
+      "Item2": 7
     },
     {
-      "Name": "Sandshrew",
-      "Int": 6
+      "Item1": "Spearow",
+      "Item2": 6
     },
     {
-      "Name": "Spearow",
-      "Int": 8
+      "Item1": "Spearow",
+      "Item2": 7
     },
     {
-      "Name": "Sandshrew",
-      "Int": 10
+      "Item1": "Pidgey",
+      "Item2": 8
     },
     {
-      "Name": "Rattata",
-      "Int": 12
+      "Item1": "Spearow",
+      "Item2": 8
     },
     {
-      "Name": "Spearow",
-      "Int": 12
+      "Item1": "Jigglypuff",
+      "Item2": 3
     },
     {
-      "Name": "Sandshrew",
-      "Int": 8
+      "Item1": "Jigglypuff",
+      "Item2": 5
     },
     {
-      "Name": "Sandshrew",
-      "Int": 12
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Bellsprout",
-      "Int": 13
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 13
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 15
-    },
-    {
-      "Name": "Meowth",
-      "Int": 10
-    },
-    {
-      "Name": "Meowth",
-      "Int": 12
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 15
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 16
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 16
-    },
-    {
-      "Name": "Meowth",
-      "Int": 14
-    },
-    {
-      "Name": "Meowth",
-      "Int": 16
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Bellsprout",
-      "Int": 13
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 13
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 15
-    },
-    {
-      "Name": "Meowth",
-      "Int": 10
-    },
-    {
-      "Name": "Meowth",
-      "Int": 12
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 15
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 16
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 16
-    },
-    {
-      "Name": "Meowth",
-      "Int": 14
-    },
-    {
-      "Name": "Meowth",
-      "Int": 16
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Pidgey",
-      "Int": 19
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 19
-    },
-    {
-      "Name": "Meowth",
-      "Int": 17
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 22
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 22
-    },
-    {
-      "Name": "Meowth",
-      "Int": 18
-    },
-    {
-      "Name": "Vulpix",
-      "Int": 18
-    },
-    {
-      "Name": "Vulpix",
-      "Int": 20
-    },
-    {
-      "Name": "Meowth",
-      "Int": 19
-    },
-    {
-      "Name": "Meowth",
-      "Int": 20
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Pidgey",
-      "Int": 18
-    },
-    {
-      "Name": "Meowth",
-      "Int": 18
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 17
-    },
-    {
-      "Name": "Vulpix",
-      "Int": 16
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 20
-    },
-    {
-      "Name": "Meowth",
-      "Int": 20
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 19
-    },
-    {
-      "Name": "Vulpix",
-      "Int": 17
-    },
-    {
-      "Name": "Vulpix",
-      "Int": 15
-    },
-    {
-      "Name": "Vulpix",
-      "Int": 18
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Rattata",
-      "Int": 16
-    },
-    {
-      "Name": "Spearow",
-      "Int": 16
-    },
-    {
-      "Name": "Rattata",
-      "Int": 14
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 11
-    },
-    {
-      "Name": "Spearow",
-      "Int": 13
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 15
-    },
-    {
-      "Name": "Rattata",
-      "Int": 17
-    },
-    {
-      "Name": "Spearow",
-      "Int": 17
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 13
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 17
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Voltorb",
-      "Int": 16
-    },
-    {
-      "Name": "Spearow",
-      "Int": 16
-    },
-    {
-      "Name": "Voltorb",
-      "Int": 14
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 11
-    },
-    {
-      "Name": "Spearow",
-      "Int": 13
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 15
-    },
-    {
-      "Name": "Voltorb",
-      "Int": 17
-    },
-    {
-      "Name": "Spearow",
-      "Int": 17
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 13
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 17
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Sandshrew",
-      "Int": 14
-    },
-    {
-      "Name": "Spearow",
-      "Int": 15
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 12
-    },
-    {
-      "Name": "Drowzee",
-      "Int": 9
-    },
-    {
-      "Name": "Spearow",
-      "Int": 13
-    },
-    {
-      "Name": "Drowzee",
-      "Int": 13
-    },
-    {
-      "Name": "Sandshrew",
-      "Int": 15
-    },
-    {
-      "Name": "Spearow",
-      "Int": 17
-    },
-    {
-      "Name": "Drowzee",
-      "Int": 11
-    },
-    {
-      "Name": "Drowzee",
-      "Int": 15
-    }
-  ]
-},{
-  "encounterChance" : 15,
-
-  "slots": [
-    {
-      "Name": "Bellsprout",
-      "Int": 24
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 25
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 23
-    },
-    {
-      "Name": "Venonat",
-      "Int": 24
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 22
-    },
-    {
-      "Name": "Venonat",
-      "Int": 26
-    },
-    {
-      "Name": "Bellsprout",
-      "Int": 26
-    },
-    {
-      "Name": "Pidgey",
-      "Int": 27
-    },
-    {
-      "Name": "Weepinbell",
-      "Int": 28
-    },
-    {
-      "Name": "Weepinbell",
-      "Int": 30
+      "Item1": "Jigglypuff",
+      "Item2": 7
     }
   ]
 },{
@@ -1263,44 +859,44 @@
 
   "slots": [
     {
-      "Name": "Bellsprout",
-      "Int": 24
+      "Item1": "Rattata",
+      "Item2": 10
     },
     {
-      "Name": "Pidgey",
-      "Int": 25
+      "Item1": "Spearow",
+      "Item2": 10
     },
     {
-      "Name": "Pidgey",
-      "Int": 27
+      "Item1": "Rattata",
+      "Item2": 8
     },
     {
-      "Name": "Venonat",
-      "Int": 24
+      "Item1": "Sandshrew",
+      "Item2": 6
     },
     {
-      "Name": "Bellsprout",
-      "Int": 22
+      "Item1": "Spearow",
+      "Item2": 8
     },
     {
-      "Name": "Venonat",
-      "Int": 26
+      "Item1": "Sandshrew",
+      "Item2": 10
     },
     {
-      "Name": "Bellsprout",
-      "Int": 26
+      "Item1": "Rattata",
+      "Item2": 12
     },
     {
-      "Name": "Ditto",
-      "Int": 25
+      "Item1": "Spearow",
+      "Item2": 12
     },
     {
-      "Name": "Weepinbell",
-      "Int": 28
+      "Item1": "Sandshrew",
+      "Item2": 8
     },
     {
-      "Name": "Weepinbell",
-      "Int": 30
+      "Item1": "Sandshrew",
+      "Item2": 12
     }
   ]
 },{
@@ -1308,44 +904,44 @@
 
   "slots": [
     {
-      "Name": "Bellsprout",
-      "Int": 24
+      "Item1": "Bellsprout",
+      "Item2": 13
     },
     {
-      "Name": "Pidgey",
-      "Int": 26
+      "Item1": "Pidgey",
+      "Item2": 13
     },
     {
-      "Name": "Ditto",
-      "Int": 23
+      "Item1": "Pidgey",
+      "Item2": 15
     },
     {
-      "Name": "Venonat",
-      "Int": 24
+      "Item1": "Meowth",
+      "Item2": 10
     },
     {
-      "Name": "Bellsprout",
-      "Int": 22
+      "Item1": "Meowth",
+      "Item2": 12
     },
     {
-      "Name": "Venonat",
-      "Int": 26
+      "Item1": "Bellsprout",
+      "Item2": 15
     },
     {
-      "Name": "Bellsprout",
-      "Int": 26
+      "Item1": "Bellsprout",
+      "Item2": 16
     },
     {
-      "Name": "Weepinbell",
-      "Int": 30
+      "Item1": "Pidgey",
+      "Item2": 16
     },
     {
-      "Name": "Pidgeotto",
-      "Int": 28
+      "Item1": "Meowth",
+      "Item2": 14
     },
     {
-      "Name": "Pidgeotto",
-      "Int": 30
+      "Item1": "Meowth",
+      "Item2": 16
     }
   ]
 },{
@@ -1353,44 +949,449 @@
 
   "slots": [
     {
-      "Name": "Bellsprout",
-      "Int": 24
+      "Item1": "Bellsprout",
+      "Item2": 13
     },
     {
-      "Name": "Ditto",
-      "Int": 26
+      "Item1": "Pidgey",
+      "Item2": 13
     },
     {
-      "Name": "Pidgey",
-      "Int": 23
+      "Item1": "Pidgey",
+      "Item2": 15
     },
     {
-      "Name": "Venonat",
-      "Int": 26
+      "Item1": "Meowth",
+      "Item2": 10
     },
     {
-      "Name": "Bellsprout",
-      "Int": 22
+      "Item1": "Meowth",
+      "Item2": 12
     },
     {
-      "Name": "Venonat",
-      "Int": 28
+      "Item1": "Bellsprout",
+      "Item2": 15
     },
     {
-      "Name": "Bellsprout",
-      "Int": 26
+      "Item1": "Bellsprout",
+      "Item2": 16
     },
     {
-      "Name": "Weepinbell",
-      "Int": 30
+      "Item1": "Pidgey",
+      "Item2": 16
     },
     {
-      "Name": "Pidgeotto",
-      "Int": 28
+      "Item1": "Meowth",
+      "Item2": 14
     },
     {
-      "Name": "Pidgeotto",
-      "Int": 30
+      "Item1": "Meowth",
+      "Item2": 16
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Pidgey",
+      "Item2": 19
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 19
+    },
+    {
+      "Item1": "Meowth",
+      "Item2": 17
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 22
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 22
+    },
+    {
+      "Item1": "Meowth",
+      "Item2": 18
+    },
+    {
+      "Item1": "Vulpix",
+      "Item2": 18
+    },
+    {
+      "Item1": "Vulpix",
+      "Item2": 20
+    },
+    {
+      "Item1": "Meowth",
+      "Item2": 19
+    },
+    {
+      "Item1": "Meowth",
+      "Item2": 20
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Pidgey",
+      "Item2": 18
+    },
+    {
+      "Item1": "Meowth",
+      "Item2": 18
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 17
+    },
+    {
+      "Item1": "Vulpix",
+      "Item2": 16
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 20
+    },
+    {
+      "Item1": "Meowth",
+      "Item2": 20
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 19
+    },
+    {
+      "Item1": "Vulpix",
+      "Item2": 17
+    },
+    {
+      "Item1": "Vulpix",
+      "Item2": 15
+    },
+    {
+      "Item1": "Vulpix",
+      "Item2": 18
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Rattata",
+      "Item2": 16
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 16
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 14
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 11
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 13
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 15
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 17
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 17
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 13
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 17
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Voltorb",
+      "Item2": 16
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 16
+    },
+    {
+      "Item1": "Voltorb",
+      "Item2": 14
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 11
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 13
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 15
+    },
+    {
+      "Item1": "Voltorb",
+      "Item2": 17
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 17
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 13
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 17
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Sandshrew",
+      "Item2": 14
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 15
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 12
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 9
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 13
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 13
+    },
+    {
+      "Item1": "Sandshrew",
+      "Item2": 15
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 17
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 11
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 15
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Bellsprout",
+      "Item2": 24
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 25
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 23
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 24
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 26
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 27
+    },
+    {
+      "Item1": "Weepinbell",
+      "Item2": 28
+    },
+    {
+      "Item1": "Weepinbell",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 20,
+
+  "slots": [
+    {
+      "Item1": "Bellsprout",
+      "Item2": 24
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 25
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 27
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 24
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 26
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 25
+    },
+    {
+      "Item1": "Weepinbell",
+      "Item2": 28
+    },
+    {
+      "Item1": "Weepinbell",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Bellsprout",
+      "Item2": 24
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 26
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 23
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 24
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 26
+    },
+    {
+      "Item1": "Weepinbell",
+      "Item2": 30
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 28
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Bellsprout",
+      "Item2": 24
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 26
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 23
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 28
+    },
+    {
+      "Item1": "Bellsprout",
+      "Item2": 26
+    },
+    {
+      "Item1": "Weepinbell",
+      "Item2": 30
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 28
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 30
     }
   ]
 },{
@@ -1398,44 +1399,44 @@
 
   "slots": [
     {
-      "Name": "Spearow",
-      "Int": 20
+      "Item1": "Spearow",
+      "Item2": 20
     },
     {
-      "Name": "Spearow",
-      "Int": 22
+      "Item1": "Spearow",
+      "Item2": 22
     },
     {
-      "Name": "Rattata",
-      "Int": 18
+      "Item1": "Rattata",
+      "Item2": 18
     },
     {
-      "Name": "Doduo",
-      "Int": 20
+      "Item1": "Doduo",
+      "Item2": 20
     },
     {
-      "Name": "Rattata",
-      "Int": 20
+      "Item1": "Rattata",
+      "Item2": 20
     },
     {
-      "Name": "Doduo",
-      "Int": 18
+      "Item1": "Doduo",
+      "Item2": 18
     },
     {
-      "Name": "Doduo",
-      "Int": 22
+      "Item1": "Doduo",
+      "Item2": 22
     },
     {
-      "Name": "Rattata",
-      "Int": 22
+      "Item1": "Rattata",
+      "Item2": 22
     },
     {
-      "Name": "Raticate",
-      "Int": 23
+      "Item1": "Raticate",
+      "Item2": 23
     },
     {
-      "Name": "Raticate",
-      "Int": 25
+      "Item1": "Raticate",
+      "Item2": 25
     }
   ]
 },{
@@ -1443,44 +1444,44 @@
 
   "slots": [
     {
-      "Name": "Spearow",
-      "Int": 20
+      "Item1": "Spearow",
+      "Item2": 20
     },
     {
-      "Name": "Spearow",
-      "Int": 22
+      "Item1": "Spearow",
+      "Item2": 22
     },
     {
-      "Name": "Raticate",
-      "Int": 25
+      "Item1": "Raticate",
+      "Item2": 25
     },
     {
-      "Name": "Doduo",
-      "Int": 24
+      "Item1": "Doduo",
+      "Item2": 24
     },
     {
-      "Name": "Raticate",
-      "Int": 27
+      "Item1": "Raticate",
+      "Item2": 27
     },
     {
-      "Name": "Doduo",
-      "Int": 26
+      "Item1": "Doduo",
+      "Item2": 26
     },
     {
-      "Name": "Doduo",
-      "Int": 28
+      "Item1": "Doduo",
+      "Item2": 28
     },
     {
-      "Name": "Raticate",
-      "Int": 29
+      "Item1": "Raticate",
+      "Item2": 29
     },
     {
-      "Name": "Fearow",
-      "Int": 25
+      "Item1": "Fearow",
+      "Item2": 25
     },
     {
-      "Name": "Fearow",
-      "Int": 27
+      "Item1": "Fearow",
+      "Item2": 27
     }
   ]
 },{
@@ -1488,44 +1489,44 @@
 
   "slots": [
     {
-      "Name": "Spearow",
-      "Int": 20
+      "Item1": "Spearow",
+      "Item2": 20
     },
     {
-      "Name": "Spearow",
-      "Int": 22
+      "Item1": "Spearow",
+      "Item2": 22
     },
     {
-      "Name": "Raticate",
-      "Int": 25
+      "Item1": "Raticate",
+      "Item2": 25
     },
     {
-      "Name": "Doduo",
-      "Int": 24
+      "Item1": "Doduo",
+      "Item2": 24
     },
     {
-      "Name": "Fearow",
-      "Int": 25
+      "Item1": "Fearow",
+      "Item2": 25
     },
     {
-      "Name": "Doduo",
-      "Int": 26
+      "Item1": "Doduo",
+      "Item2": 26
     },
     {
-      "Name": "Doduo",
-      "Int": 28
+      "Item1": "Doduo",
+      "Item2": 28
     },
     {
-      "Name": "Raticate",
-      "Int": 29
+      "Item1": "Raticate",
+      "Item2": 29
     },
     {
-      "Name": "Fearow",
-      "Int": 27
+      "Item1": "Fearow",
+      "Item2": 27
     },
     {
-      "Name": "Fearow",
-      "Int": 29
+      "Item1": "Fearow",
+      "Item2": 29
     }
   ]
 },{
@@ -1533,44 +1534,44 @@
 
   "slots": [
     {
-      "Name": "Rattata",
-      "Int": 21
+      "Item1": "Rattata",
+      "Item2": 21
     },
     {
-      "Name": "Pidgey",
-      "Int": 23
+      "Item1": "Pidgey",
+      "Item2": 23
     },
     {
-      "Name": "Raticate",
-      "Int": 30
+      "Item1": "Raticate",
+      "Item2": 30
     },
     {
-      "Name": "Rattata",
-      "Int": 23
+      "Item1": "Rattata",
+      "Item2": 23
     },
     {
-      "Name": "Pidgey",
-      "Int": 21
+      "Item1": "Pidgey",
+      "Item2": 21
     },
     {
-      "Name": "Pidgeotto",
-      "Int": 30
+      "Item1": "Pidgeotto",
+      "Item2": 30
     },
     {
-      "Name": "Pidgeotto",
-      "Int": 32
+      "Item1": "Pidgeotto",
+      "Item2": 32
     },
     {
-      "Name": "Tangela",
-      "Int": 28
+      "Item1": "Tangela",
+      "Item2": 28
     },
     {
-      "Name": "Tangela",
-      "Int": 30
+      "Item1": "Tangela",
+      "Item2": 30
     },
     {
-      "Name": "Tangela",
-      "Int": 32
+      "Item1": "Tangela",
+      "Item2": 32
     }
   ]
 },{
@@ -1578,44 +1579,44 @@
 
   "slots": [
     {
-      "Name": "Rattata",
-      "Int": 3
+      "Item1": "Rattata",
+      "Item2": 3
     },
     {
-      "Name": "Nidoran♀︎",
-      "Int": 3 
+      "Item1": "Nidoran♀",
+      "Item2": 3 
     },
     {
-      "Name": "Rattata",
-      "Int": 4
+      "Item1": "Rattata",
+      "Item2": 4
     },
     {
-      "Name": "Nidoran♀︎",
-      "Int": 4
+      "Item1": "Nidoran♀",
+      "Item2": 4
     },
     {
-      "Name": "Rattata",
-      "Int": 2
+      "Item1": "Rattata",
+      "Item2": 2
     },
     {
-      "Name": "Nidoran♀︎",
-      "Int": 2
+      "Item1": "Nidoran♀",
+      "Item2": 2
     },
     {
-      "Name": "Spearow",
-      "Int": 3
+      "Item1": "Spearow",
+      "Item2": 3
     },
     {
-      "Name": "Spearow",
-      "Int": 5
+      "Item1": "Spearow",
+      "Item2": 5
     },
     {
-      "Name": "Nidoran♂︎",
-      "Int": 3
+      "Item1": "Nidoran♂",
+      "Item2": 3
     },
     {
-      "Name": "Nidoran♂︎",
-      "Int": 4
+      "Item1": "Nidoran♂",
+      "Item2": 4
     }
   ]
 },{
@@ -1623,44 +1624,44 @@
 
   "slots": [
     {
-      "Name": "Sandshrew",
-      "Int": 26
+      "Item1": "Sandshrew",
+      "Item2": 26
     },
     {
-      "Name": "Ditto",
-      "Int": 33
+      "Item1": "Ditto",
+      "Item2": 33
     },
     {
-      "Name": "Spearow",
-      "Int": 26
+      "Item1": "Spearow",
+      "Item2": 26
     },
     {
-      "Name": "Fearow",
-      "Int": 38
+      "Item1": "Fearow",
+      "Item2": 38
     },
     {
-      "Name": "Ditto",
-      "Int": 38
+      "Item1": "Ditto",
+      "Item2": 38
     },
     {
-      "Name": "Fearow",
-      "Int": 38
+      "Item1": "Fearow",
+      "Item2": 38
     },
     {
-      "Name": "Sandslash",
-      "Int": 41
+      "Item1": "Sandslash",
+      "Item2": 41
     },
     {
-      "Name": "Ditto",
-      "Int": 43
+      "Item1": "Ditto",
+      "Item2": 43
     },
     {
-      "Name": "Fearow",
-      "Int": 41
+      "Item1": "Fearow",
+      "Item2": 41
     },
     {
-      "Name": "Fearow",
-      "Int": 43
+      "Item1": "Fearow",
+      "Item2": 43
     }
   ]
 },{
@@ -1668,44 +1669,44 @@
 
   "slots": [
     {
-      "Name": "Caterpie",
-      "Int": 7
+      "Item1": "Caterpie",
+      "Item2": 7
     },
     {
-      "Name": "Kakuna",
-      "Int": 8
+      "Item1": "Kakuna",
+      "Item2": 8
     },
     {
-      "Name": "Pidgey",
-      "Int": 12
+      "Item1": "Pidgey",
+      "Item2": 12
     },
     {
-      "Name": "Bellsprout",
-      "Int": 12
+      "Item1": "Bellsprout",
+      "Item2": 12
     },
     {
-      "Name": "Bellsprout",
-      "Int": 13
+      "Item1": "Bellsprout",
+      "Item2": 13
     },
     {
-      "Name": "Abra",
-      "Int": 10
+      "Item1": "Abra",
+      "Item2": 10
     },
     {
-      "Name": "Bellsprout",
-      "Int": 14
+      "Item1": "Bellsprout",
+      "Item2": 14
     },
     {
-      "Name": "Pidgey",
-      "Int": 13
+      "Item1": "Pidgey",
+      "Item2": 13
     },
     {
-      "Name": "Abra",
-      "Int": 8
+      "Item1": "Abra",
+      "Item2": 8
     },
     {
-      "Name": "Abra",
-      "Int": 12
+      "Item1": "Abra",
+      "Item2": 12
     }
   ]
 },{
@@ -1713,44 +1714,44 @@
 
   "slots": [
     {
-      "Name": "Caterpie",
-      "Int": 8
+      "Item1": "Caterpie",
+      "Item2": 8
     },
     {
-      "Name": "Metapod",
-      "Int": 9
+      "Item1": "Metapod",
+      "Item2": 9
     },
     {
-      "Name": "Pidgey",
-      "Int": 13
+      "Item1": "Pidgey",
+      "Item2": 13
     },
     {
-      "Name": "Bellsprout",
-      "Int": 12
+      "Item1": "Bellsprout",
+      "Item2": 12
     },
     {
-      "Name": "Bellsprout",
-      "Int": 13
+      "Item1": "Bellsprout",
+      "Item2": 13
     },
     {
-      "Name": "Abra",
-      "Int": 12
+      "Item1": "Abra",
+      "Item2": 12
     },
     {
-      "Name": "Bellsprout",
-      "Int": 14
+      "Item1": "Bellsprout",
+      "Item2": 14
     },
     {
-      "Name": "Abra",
-      "Int": 10
+      "Item1": "Abra",
+      "Item2": 10
     },
     {
-      "Name": "Kakuna",
-      "Int": 7
+      "Item1": "Kakuna",
+      "Item2": 7
     },
     {
-      "Name": "Weedle",
-      "Int": 8
+      "Item1": "Weedle",
+      "Item2": 8
     }
   ]
 },{
@@ -1758,44 +1759,44 @@
 
   "slots": [
     {
-      "Name": "Nidoran♀︎",
-      "Int": 24
+      "Item1": "Nidoran♀",
+      "Item2": 24
     },
     {
-      "Name": "Doduo",
-      "Int": 26
+      "Item1": "Doduo",
+      "Item2": 26
     },
     {
-      "Name": "Paras",
-      "Int": 22
+      "Item1": "Paras",
+      "Item2": 22
     },
     {
-      "Name": "Exeggcute",
-      "Int": 25
+      "Item1": "Exeggcute",
+      "Item2": 25
     },
     {
-      "Name": "Nidorino",
-      "Int": 33
+      "Item1": "Nidorino",
+      "Item2": 33
     },
     {
-      "Name": "Exeggcute",
-      "Int": 23
+      "Item1": "Exeggcute",
+      "Item2": 23
     },
     {
-      "Name": "Nidoran♂︎",
-      "Int": 24
+      "Item1": "Nidoran♂",
+      "Item2": 24
     },
     {
-      "Name": "Parasect",
-      "Int": 25
+      "Item1": "Parasect",
+      "Item2": 25
     },
     {
-      "Name": "Kangaskhan",
-      "Int": 25
+      "Item1": "Kangaskhan",
+      "Item2": 25
     },
     {
-      "Name": "Pinsir",
-      "Int": 28
+      "Item1": "Pinsir",
+      "Item2": 28
     }
   ]
 },{
@@ -1803,44 +1804,44 @@
 
   "slots": [
     {
-      "Name": "Nidoran♀︎",
-      "Int": 22
+      "Item1": "Nidoran♀",
+      "Item2": 22
     },
     {
-      "Name": "Rhyhorn",
-      "Int": 26
+      "Item1": "Rhyhorn",
+      "Item2": 26
     },
     {
-      "Name": "Paras",
-      "Int": 23
+      "Item1": "Paras",
+      "Item2": 23
     },
     {
-      "Name": "Exeggcute",
-      "Int": 25
+      "Item1": "Exeggcute",
+      "Item2": 25
     },
     {
-      "Name": "Nidorino",
-      "Int": 30
+      "Item1": "Nidorino",
+      "Item2": 30
     },
     {
-      "Name": "Exeggcute",
-      "Int": 27
+      "Item1": "Exeggcute",
+      "Item2": 27
     },
     {
-      "Name": "Nidorina",
-      "Int": 30
+      "Item1": "Nidorina",
+      "Item2": 30
     },
     {
-      "Name": "Venomoth",
-      "Int": 32
+      "Item1": "Venomoth",
+      "Item2": 32
     },
     {
-      "Name": "Chansey",
-      "Int": 26
+      "Item1": "Chansey",
+      "Item2": 26
     },
     {
-      "Name": "Tauros",
-      "Int": 28
+      "Item1": "Tauros",
+      "Item2": 28
     }
   ]
 },{
@@ -1848,44 +1849,44 @@
 
   "slots": [
     {
-      "Name": "Nidoran♀︎",
-      "Int": 25
+      "Item1": "Nidoran♀",
+      "Item2": 25
     },
     {
-      "Name": "Doduo",
-      "Int": 26
+      "Item1": "Doduo",
+      "Item2": 26
     },
     {
-      "Name": "Venonat",
-      "Int": 23
+      "Item1": "Venonat",
+      "Item2": 23
     },
     {
-      "Name": "Exeggcute",
-      "Int": 24
+      "Item1": "Exeggcute",
+      "Item2": 24
     },
     {
-      "Name": "Nidorino",
-      "Int": 33
+      "Item1": "Nidorino",
+      "Item2": 33
     },
     {
-      "Name": "Exeggcute",
-      "Int": 26
+      "Item1": "Exeggcute",
+      "Item2": 26
     },
     {
-      "Name": "Nidoran♂︎",
-      "Int": 25
+      "Item1": "Nidoran♂",
+      "Item2": 25
     },
     {
-      "Name": "Venomoth",
-      "Int": 31
+      "Item1": "Venomoth",
+      "Item2": 31
     },
     {
-      "Name": "Tauros",
-      "Int": 26
+      "Item1": "Tauros",
+      "Item2": 26
     },
     {
-      "Name": "Kangaskhan",
-      "Int": 28
+      "Item1": "Kangaskhan",
+      "Item2": 28
     }
   ]
 },{
@@ -1893,44 +1894,44 @@
 
   "slots": [
     {
-      "Name": "Nidoran♀︎",
-      "Int": 22
+      "Item1": "Nidoran♀",
+      "Item2": 22
     },
     {
-      "Name": "Rhyhorn",
-      "Int": 25
+      "Item1": "Rhyhorn",
+      "Item2": 25
     },
     {
-      "Name": "Venonat",
-      "Int": 22
+      "Item1": "Venonat",
+      "Item2": 22
     },
     {
-      "Name": "Exeggcute",
-      "Int": 24
+      "Item1": "Exeggcute",
+      "Item2": 24
     },
     {
-      "Name": "Nidorino",
-      "Int": 31
+      "Item1": "Nidorino",
+      "Item2": 31
     },
     {
-      "Name": "Exeggcute",
-      "Int": 25
+      "Item1": "Exeggcute",
+      "Item2": 25
     },
     {
-      "Name": "Nidorina",
-      "Int": 31
+      "Item1": "Nidorina",
+      "Item2": 31
     },
     {
-      "Name": "Parasect",
-      "Int": 30
+      "Item1": "Parasect",
+      "Item2": 30
     },
     {
-      "Name": "Pinsir",
-      "Int": 23
+      "Item1": "Pinsir",
+      "Item2": 23
     },
     {
-      "Name": "Chansey",
-      "Int": 23
+      "Item1": "Chansey",
+      "Item2": 23
     }
   ]
 },{
@@ -1938,44 +1939,44 @@
 
   "slots": [
     {
-      "Name": "Seel",
-      "Int": 30
+      "Item1": "Seel",
+      "Item2": 30
     },
     {
-      "Name": "Psyduck",
-      "Int": 30
+      "Item1": "Psyduck",
+      "Item2": 30
     },
     {
-      "Name": "Staryu",
-      "Int": 30
+      "Item1": "Staryu",
+      "Item2": 30
     },
     {
-      "Name": "Krabby",
-      "Int": 30
+      "Item1": "Krabby",
+      "Item2": 30
     },
     {
-      "Name": "Krabby",
-      "Int": 28
+      "Item1": "Krabby",
+      "Item2": 28
     },
     {
-      "Name": "Zubat",
-      "Int": 21
+      "Item1": "Zubat",
+      "Item2": 21
     },
     {
-      "Name": "Golbat",
-      "Int": 29
+      "Item1": "Golbat",
+      "Item2": 29
     },
     {
-      "Name": "Slowpoke",
-      "Int": 28
+      "Item1": "Slowpoke",
+      "Item2": 28
     },
     {
-      "Name": "Staryu",
-      "Int": 28
+      "Item1": "Staryu",
+      "Item2": 28
     },
     {
-      "Name": "Slowbro",
-      "Int": 38
+      "Item1": "Slowbro",
+      "Item2": 38
     }
   ]
 },{
@@ -1983,44 +1984,44 @@
 
   "slots": [
     {
-      "Name": "Shellder",
-      "Int": 30
+      "Item1": "Shellder",
+      "Item2": 30
     },
     {
-      "Name": "Krabby",
-      "Int": 30
+      "Item1": "Krabby",
+      "Item2": 30
     },
     {
-      "Name": "Staryu",
-      "Int": 32
+      "Item1": "Staryu",
+      "Item2": 32
     },
     {
-      "Name": "Krabby",
-      "Int": 32
+      "Item1": "Krabby",
+      "Item2": 32
     },
     {
-      "Name": "Psyduck",
-      "Int": 28
+      "Item1": "Psyduck",
+      "Item2": 28
     },
     {
-      "Name": "Seel",
-      "Int": 30
+      "Item1": "Seel",
+      "Item2": 30
     },
     {
-      "Name": "Psyduck",
-      "Int": 30
+      "Item1": "Psyduck",
+      "Item2": 30
     },
     {
-      "Name": "Seel",
-      "Int": 28
+      "Item1": "Seel",
+      "Item2": 28
     },
     {
-      "Name": "Dewgong",
-      "Int": 38
+      "Item1": "Dewgong",
+      "Item2": 38
     },
     {
-      "Name": "Kingler",
-      "Int": 37
+      "Item1": "Kingler",
+      "Item2": 37
     }
   ]
 },{
@@ -2028,44 +2029,44 @@
 
   "slots": [
     {
-      "Name": "Seel",
-      "Int": 30
+      "Item1": "Seel",
+      "Item2": 30
     },
     {
-      "Name": "Psyduck",
-      "Int": 30
+      "Item1": "Psyduck",
+      "Item2": 30
     },
     {
-      "Name": "Seel",
-      "Int": 32
+      "Item1": "Seel",
+      "Item2": 32
     },
     {
-      "Name": "Psyduck",
-      "Int": 32
+      "Item1": "Psyduck",
+      "Item2": 32
     },
     {
-      "Name": "Krabby",
-      "Int": 28
+      "Item1": "Krabby",
+      "Item2": 28
     },
     {
-      "Name": "Shellder",
-      "Int": 30
+      "Item1": "Shellder",
+      "Item2": 30
     },
     {
-      "Name": "Krabby",
-      "Int": 30
+      "Item1": "Krabby",
+      "Item2": 30
     },
     {
-      "Name": "Staryu",
-      "Int": 28
+      "Item1": "Staryu",
+      "Item2": 28
     },
     {
-      "Name": "Golbat",
-      "Int": 30
+      "Item1": "Golbat",
+      "Item2": 30
     },
     {
-      "Name": "Golduck",
-      "Int": 37
+      "Item1": "Golduck",
+      "Item2": 37
     }
   ]
 },{
@@ -2073,44 +2074,44 @@
 
   "slots": [
     {
-      "Name": "Psyduck",
-      "Int": 31
+      "Item1": "Psyduck",
+      "Item2": 31
     },
     {
-      "Name": "Seel",
-      "Int": 31
+      "Item1": "Seel",
+      "Item2": 31
     },
     {
-      "Name": "Psyduck",
-      "Int": 33
+      "Item1": "Psyduck",
+      "Item2": 33
     },
     {
-      "Name": "Seel",
-      "Int": 33
+      "Item1": "Seel",
+      "Item2": 33
     },
     {
-      "Name": "Krabby",
-      "Int": 29
+      "Item1": "Krabby",
+      "Item2": 29
     },
     {
-      "Name": "Staryu",
-      "Int": 31
+      "Item1": "Staryu",
+      "Item2": 31
     },
     {
-      "Name": "Krabby",
-      "Int": 31
+      "Item1": "Krabby",
+      "Item2": 31
     },
     {
-      "Name": "Staryu",
-      "Int": 29
+      "Item1": "Staryu",
+      "Item2": 29
     },
     {
-      "Name": "Kingler",
-      "Int": 39
+      "Item1": "Kingler",
+      "Item2": 39
     },
     {
-      "Name": "Dewgong",
-      "Int": 37
+      "Item1": "Dewgong",
+      "Item2": 37
     }
   ]
 },{
@@ -2118,44 +2119,44 @@
 
   "slots": [
     {
-      "Name": "Krabby",
-      "Int": 31
+      "Item1": "Krabby",
+      "Item2": 31
     },
     {
-      "Name": "Staryu",
-      "Int": 31
+      "Item1": "Staryu",
+      "Item2": 31
     },
     {
-      "Name": "Krabby",
-      "Int": 33
+      "Item1": "Krabby",
+      "Item2": 33
     },
     {
-      "Name": "Staryu",
-      "Int": 33
+      "Item1": "Staryu",
+      "Item2": 33
     },
     {
-      "Name": "Psyduck",
-      "Int": 29
+      "Item1": "Psyduck",
+      "Item2": 29
     },
     {
-      "Name": "Seel",
-      "Int": 31
+      "Item1": "Seel",
+      "Item2": 31
     },
     {
-      "Name": "Psyduck",
-      "Int": 31
+      "Item1": "Psyduck",
+      "Item2": 31
     },
     {
-      "Name": "Seel",
-      "Int": 29
+      "Item1": "Seel",
+      "Item2": 29
     },
     {
-      "Name": "Golduck",
-      "Int": 39
+      "Item1": "Golduck",
+      "Item2": 39
     },
     {
-      "Name": "Golbat",
-      "Int": 32
+      "Item1": "Golbat",
+      "Item2": 32
     }
   ]
 },{
@@ -2163,44 +2164,44 @@
 
   "slots": [
     {
-      "Name": "Golbat",
-      "Int": 46
+      "Item1": "Golbat",
+      "Item2": 46
     },
     {
-      "Name": "Hypno",
-      "Int": 46
+      "Item1": "Hypno",
+      "Item2": 46
     },
     {
-      "Name": "Magneton",
-      "Int": 46
+      "Item1": "Magneton",
+      "Item2": 46
     },
     {
-      "Name": "Dodrio",
-      "Int": 49
+      "Item1": "Dodrio",
+      "Item2": 49
     },
     {
-      "Name": "Venomoth",
-      "Int": 49
+      "Item1": "Venomoth",
+      "Item2": 49
     },
     {
-      "Name": "Sandslash",
-      "Int": 52
+      "Item1": "Sandslash",
+      "Item2": 52
     },
     {
-      "Name": "Kadabra",
-      "Int": 49
+      "Item1": "Kadabra",
+      "Item2": 49
     },
     {
-      "Name": "Parasect",
-      "Int": 52
+      "Item1": "Parasect",
+      "Item2": 52
     },
     {
-      "Name": "Raichu",
-      "Int": 53
+      "Item1": "Raichu",
+      "Item2": 53
     },
     {
-      "Name": "Ditto",
-      "Int": 53
+      "Item1": "Ditto",
+      "Item2": 53
     }
   ]
 },{
@@ -2208,44 +2209,44 @@
 
   "slots": [
     {
-      "Name": "Dodrio",
-      "Int": 51
+      "Item1": "Dodrio",
+      "Item2": 51
     },
     {
-      "Name": "Venomoth",
-      "Int": 51
+      "Item1": "Venomoth",
+      "Item2": 51
     },
     {
-      "Name": "Kadabra",
-      "Int": 51
+      "Item1": "Kadabra",
+      "Item2": 51
     },
     {
-      "Name": "Rhyhorn",
-      "Int": 52
+      "Item1": "Rhyhorn",
+      "Item2": 52
     },
     {
-      "Name": "Marowak",
-      "Int": 52
+      "Item1": "Marowak",
+      "Item2": 52
     },
     {
-      "Name": "Electrode",
-      "Int": 52
+      "Item1": "Electrode",
+      "Item2": 52
     },
     {
-      "Name": "Chansey",
-      "Int": 56
+      "Item1": "Chansey",
+      "Item2": 56
     },
     {
-      "Name": "Wigglytuff",
-      "Int": 54
+      "Item1": "Wigglytuff",
+      "Item2": 54
     },
     {
-      "Name": "Ditto",
-      "Int": 55
+      "Item1": "Ditto",
+      "Item2": 55
     },
     {
-      "Name": "Ditto",
-      "Int": 60
+      "Item1": "Ditto",
+      "Item2": 60
     }
   ]
 },{
@@ -2253,44 +2254,44 @@
 
   "slots": [
     {
-      "Name": "Rhydon",
-      "Int": 55
+      "Item1": "Rhydon",
+      "Item2": 55
     },
     {
-      "Name": "Marowak",
-      "Int": 55
+      "Item1": "Marowak",
+      "Item2": 55
     },
     {
-      "Name": "Electrode",
-      "Int": 55
+      "Item1": "Electrode",
+      "Item2": 55
     },
     {
-      "Name": "Chansey",
-      "Int": 64
+      "Item1": "Chansey",
+      "Item2": 64
     },
     {
-      "Name": "Parasect",
-      "Int": 64
+      "Item1": "Parasect",
+      "Item2": 64
     },
     {
-      "Name": "Raichu",
-      "Int": 64
+      "Item1": "Raichu",
+      "Item2": 64
     },
     {
-      "Name": "Sandslash",
-      "Int": 57
+      "Item1": "Sandslash",
+      "Item2": 57
     },
     {
-      "Name": "Ditto",
-      "Int": 65
+      "Item1": "Ditto",
+      "Item2": 65
     },
     {
-      "Name": "Ditto",
-      "Int": 63
+      "Item1": "Ditto",
+      "Item2": 63
     },
     {
-      "Name": "Ditto",
-      "Int": 67
+      "Item1": "Ditto",
+      "Item2": 67
     }
   ]
 },{
@@ -2298,44 +2299,44 @@
 
   "slots": [
     {
-      "Name": "Machop",
-      "Int": 24
+      "Item1": "Machop",
+      "Item2": 24
     },
     {
-      "Name": "Geodude",
-      "Int": 26
+      "Item1": "Geodude",
+      "Item2": 26
     },
     {
-      "Name": "Zubat",
-      "Int": 22
+      "Item1": "Zubat",
+      "Item2": 22
     },
     {
-      "Name": "Onix",
-      "Int": 36
+      "Item1": "Onix",
+      "Item2": 36
     },
     {
-      "Name": "Onix",
-      "Int": 39
+      "Item1": "Onix",
+      "Item2": 39
     },
     {
-      "Name": "Onix",
-      "Int": 42
+      "Item1": "Onix",
+      "Item2": 42
     },
     {
-      "Name": "Graveler",
-      "Int": 41
+      "Item1": "Graveler",
+      "Item2": 41
     },
     {
-      "Name": "Golbat",
-      "Int": 41
+      "Item1": "Golbat",
+      "Item2": 41
     },
     {
-      "Name": "Machoke",
-      "Int": 42
+      "Item1": "Machoke",
+      "Item2": 42
     },
     {
-      "Name": "Marowak",
-      "Int": 43
+      "Item1": "Marowak",
+      "Item2": 43
     }
   ]
 },{
@@ -2343,44 +2344,44 @@
 
   "slots": [
     {
-      "Name": "Machop",
-      "Int": 22
+      "Item1": "Machop",
+      "Item2": 22
     },
     {
-      "Name": "Geodude",
-      "Int": 24
+      "Item1": "Geodude",
+      "Item2": 24
     },
     {
-      "Name": "Zubat",
-      "Int": 26
+      "Item1": "Zubat",
+      "Item2": 26
     },
     {
-      "Name": "Onix",
-      "Int": 36
+      "Item1": "Onix",
+      "Item2": 36
     },
     {
-      "Name": "Onix",
-      "Int": 39
+      "Item1": "Onix",
+      "Item2": 39
     },
     {
-      "Name": "Onix",
-      "Int": 42
+      "Item1": "Onix",
+      "Item2": 42
     },
     {
-      "Name": "Machoke",
-      "Int": 41
+      "Item1": "Machoke",
+      "Item2": 41
     },
     {
-      "Name": "Golbat",
-      "Int": 40
+      "Item1": "Golbat",
+      "Item2": 40
     },
     {
-      "Name": "Marowak",
-      "Int": 40
+      "Item1": "Marowak",
+      "Item2": 40
     },
     {
-      "Name": "Graveler",
-      "Int": 43
+      "Item1": "Graveler",
+      "Item2": 43
     }
   ]
 },{
@@ -2388,44 +2389,44 @@
 
   "slots": [
     {
-      "Name": "Machop",
-      "Int": 24
+      "Item1": "Machop",
+      "Item2": 24
     },
     {
-      "Name": "Geodude",
-      "Int": 26
+      "Item1": "Geodude",
+      "Item2": 26
     },
     {
-      "Name": "Zubat",
-      "Int": 22
+      "Item1": "Zubat",
+      "Item2": 22
     },
     {
-      "Name": "Onix",
-      "Int": 42
+      "Item1": "Onix",
+      "Item2": 42
     },
     {
-      "Name": "Venomoth",
-      "Int": 40
+      "Item1": "Venomoth",
+      "Item2": 40
     },
     {
-      "Name": "Onix",
-      "Int": 45
+      "Item1": "Onix",
+      "Item2": 45
     },
     {
-      "Name": "Graveler",
-      "Int": 43
+      "Item1": "Graveler",
+      "Item2": 43
     },
     {
-      "Name": "Golbat",
-      "Int": 41
+      "Item1": "Golbat",
+      "Item2": 41
     },
     {
-      "Name": "Machoke",
-      "Int": 42
+      "Item1": "Machoke",
+      "Item2": 42
     },
     {
-      "Name": "Machoke",
-      "Int": 45
+      "Item1": "Machoke",
+      "Item2": 45
     }
   ]
 },{
@@ -2433,44 +2434,44 @@
 
   "slots": [
     {
-      "Name": "Caterpie",
-      "Int": 4
+      "Item1": "Caterpie",
+      "Item2": 4
     },
     {
-      "Name": "Metapod",
-      "Int": 5
+      "Item1": "Metapod",
+      "Item2": 5
     },
     {
-      "Name": "Caterpie",
-      "Int": 3
+      "Item1": "Caterpie",
+      "Item2": 3
     },
     {
-      "Name": "Caterpie",
-      "Int": 5
+      "Item1": "Caterpie",
+      "Item2": 5
     },
     {
-      "Name": "Metapod",
-      "Int": 4
+      "Item1": "Metapod",
+      "Item2": 4
     },
     {
-      "Name": "Metapod",
-      "Int": 6
+      "Item1": "Metapod",
+      "Item2": 6
     },
     {
-      "Name": "Kakuna",
-      "Int": 4
+      "Item1": "Kakuna",
+      "Item2": 4
     },
     {
-      "Name": "Weedle",
-      "Int": 3
+      "Item1": "Weedle",
+      "Item2": 3
     },
     {
-      "Name": "Pikachu",
-      "Int": 3
+      "Item1": "Pikachu",
+      "Item2": 3
     },
     {
-      "Name": "Pikachu",
-      "Int": 5
+      "Item1": "Pikachu",
+      "Item2": 5
     }
   ]
 },{
@@ -2478,44 +2479,44 @@
 
   "slots": [
     {
-      "Name": "Tentacool",
-      "Int": 5
+      "Item1": "Tentacool",
+      "Item2": 5
     },
     {
-      "Name": "Tentacool",
-      "Int": 10
+      "Item1": "Tentacool",
+      "Item2": 10
     },
     {
-      "Name": "Tentacool",
-      "Int": 15
+      "Item1": "Tentacool",
+      "Item2": 15
     },
     {
-      "Name": "Tentacool",
-      "Int": 5
+      "Item1": "Tentacool",
+      "Item2": 5
     },
     {
-      "Name": "Tentacool",
-      "Int": 10
+      "Item1": "Tentacool",
+      "Item2": 10
     },
     {
-      "Name": "Tentacool",
-      "Int": 15
+      "Item1": "Tentacool",
+      "Item2": 15
     },
     {
-      "Name": "Tentacool",
-      "Int": 20
+      "Item1": "Tentacool",
+      "Item2": 20
     },
     {
-      "Name": "Tentacool",
-      "Int": 30
+      "Item1": "Tentacool",
+      "Item2": 30
     },
     {
-      "Name": "Tentacool",
-      "Int": 35
+      "Item1": "Tentacool",
+      "Item2": 35
     },
     {
-      "Name": "Tentacool",
-      "Int": 40
+      "Item1": "Tentacool",
+      "Item2": 40
     }
   ]
 }]

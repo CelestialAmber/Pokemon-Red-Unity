@@ -130,27 +130,31 @@ public class Pokemon
 
     }
     Move MoveAtCurrentLevel(){
-        foreach(StrInt move in PokemonData.levelmoves[name]){
-            if(move.Int == level) return new Move(move.Name);
+        foreach(System.Tuple<string,int> move in PokemonData.levelmoves[name]){
+            if(move.Item2 == level) return new Move(move.Item1);
         }
         return null;
     }
     public void UpdateMovesToLevel()
     {
+        List<string> temp = new List<string>(PokemonData.levelmoves.Keys);
+        Debug.Log(name);
+        Debug.Log(name.Length);
+        Debug.Log(name == "Nidoran♀" || name == "Nidoran♂");
         for (int i = 0; i < PokemonData.levelmoves[name].Length; i++)
         {
-            StrInt movetocheck = PokemonData.levelmoves[name][i];
-            if (level >= movetocheck.Int)
+            System.Tuple<string,int> movetocheck = PokemonData.levelmoves[name][i];
+            if (level >= movetocheck.Item2)
             {
-                if (!AlreadyHasMove(movetocheck.Name))
+                if (!AlreadyHasMove(movetocheck.Item1))
                     if (moves.Count < 4)
                     {
-                        moves.Add(new Move(movetocheck.Name));
+                        moves.Add(new Move(movetocheck.Item1));
                     }
                     else
                     {
                         moves.RemoveAt(0);
-                        moves.Add(new Move(movetocheck.Name));
+                        moves.Add(new Move(movetocheck.Item1));
                     }
             }
         }
@@ -633,7 +637,7 @@ if(Player.instance.facingTree){
 }else {
     currentMenu = mainwindow;
     UpdateMainMenu();
-yield return StartCoroutine(Dialogue.instance.text("There isn't\nanything to CUT!"));
+yield return Dialogue.instance.text("There isn't\nanything to CUT!");
 }
 
 }
@@ -643,7 +647,7 @@ if(whatFieldMove == "Surf"){
     SoundManager.instance.PlaySong(18);
     currentMenu = mainwindow;
     UpdateMainMenu();
-    yield return StartCoroutine(Dialogue.instance.text(GameData.playerName + " got on\n"+ monName + "!"));
+    yield return Dialogue.instance.text(GameData.playerName + " got on\n"+ monName + "!");
     Player.instance.Surf();
          CloseMenu();
     this.gameObject.SetActive(false);
@@ -651,7 +655,7 @@ if(whatFieldMove == "Surf"){
     }else{
         currentMenu = mainwindow;
         UpdateMainMenu();
-yield return StartCoroutine(Dialogue.instance.text("No SURFing on\n" + monName + " here!"));
+yield return Dialogue.instance.text("No SURFing on\n" + monName + " here!");
 
     }
    
@@ -676,7 +680,7 @@ if(pokemon.currenthp != pokemon.maxhp){
     int amount = GameData.party[selectedMon].maxhp / 5;
    yield return AnimateOurHealth(-amount,selectedMon);
     yield return AnimateOurHealth(amount,selectedOption);
-    yield return StartCoroutine(Dialogue.instance.text(pokemon.nickname +"\nrecovered by " + amount + "!"));
+    yield return Dialogue.instance.text(pokemon.nickname +"\nrecovered by " + amount + "!");
 }else {
 yield return NoEffectText();
 }
@@ -690,7 +694,7 @@ UpdateMainMenu();
     }
     IEnumerator NoEffectText(){
 
-        yield return StartCoroutine(Dialogue.instance.text("It won't have any\neffect."));
+        yield return Dialogue.instance.text("It won't have any\neffect.");
     
     }
     

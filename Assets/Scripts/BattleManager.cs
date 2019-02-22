@@ -107,12 +107,6 @@ public class BattleManager : MonoBehaviour {
 		Player.instance.holdingDirection = false;
 
 	battleMainAnim.SetBool("isFadingIn",true);
-        if (GameData.party[0].level - enemyMons[0].level <= -3) {
-			battleMainAnim.SetInteger ("fadetype",1);
-		}
-        if (GameData.party[0].level - enemyMons[0].level >= -2) {
-			battleMainAnim.SetInteger ("fadetype",2);
-		}
 		yield return new WaitForSeconds(2.5f);
 		battleBG.SetActive(true);
 		bgTextbox.SetActive(true);
@@ -149,7 +143,7 @@ if(battleType == BattleType.Trainer){
 battleoverlay.sprite = battleOverlaySprites[0];
 playerpokeballs.SetActive(true);
 	Dialogue.instance.fastText = true;
-		yield return StartCoroutine(Dialogue.instance.text ("Wild " + enemyMons[0].name + "\nappeared!"));
+		yield return Dialogue.instance.text ("Wild " + enemyMons[0].name + "\nappeared!");
 		enemystatsObject.SetActive (true);
 		playerpokeballs.SetActive(false);
 		battleoverlay.sprite = battleOverlaySprites[3];
@@ -158,7 +152,7 @@ playerpokeballs.SetActive(true);
 	
 		playermon = GameData.party[0];
 		enemymon = enemyMons[0];
-			yield return StartCoroutine(Dialogue.instance.text ("Go! " + playermon.name + "!",true));
+			yield return Dialogue.instance.text ("Go! " + playermon.name + "!",true);
 	while(initialTimer < 0.6f){
 		initialTimer += Time.deltaTime;
 	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(38,76,0),new Vector3(-26,76,0),initialTimer/0.6f);

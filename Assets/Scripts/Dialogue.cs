@@ -5,10 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 [System.Serializable]
 public class DialogueMessage {
-public bool isContinue;
-public string message;
+    public enum Type
+    {
+        Text,
+        Continue
+    }
+    public Type type;
+    public string message;
+    
 }
-
 public enum DialogueType
 {
 Text,
@@ -63,6 +68,7 @@ public class Dialogue : MonoBehaviour {
         Inputs.dialogueCheck = true;
 		box.enabled = true;
 		dialoguetext.enabled = true;
+        dialoguetext.text = "";
         dialoguetext.gameObject.SetActive(true);
 		indicator.SetActive (false);
 

@@ -65,8 +65,12 @@ public float maxMusicVolume;
 public bool isFadingSong;
 public int switchIndex;
 public AudioClip abSound;
+
 public bool isPlayingCry;
-void Awake(){
+    public AudioClip[] itemGetSounds;
+    public AudioClip goInsideSound, goOutsideSound;
+
+    void Awake(){
 instance = this;
 pokemonCrySounds = Resources.LoadAll<AudioClip>("Pokemon Cries");
 }
@@ -165,11 +169,19 @@ isMusicPlaying = false;
 public void PlayABSound(){
 sfx.PlayOneShot(abSound,0.16f);
 }
+    public void PlayGoInsideSound()
+    {
+        sfx.PlayOneShot(goInsideSound);
+    }
+    public void PlayGoOutsideSound()
+    {
+        sfx.PlayOneShot(goOutsideSound);
+    }
 
 public void PlayCry(int index){
 StartCoroutine(PlayCryCoroutine(index));
 }
-    public AudioClip[] itemGetSounds;
+
 public IEnumerator PlayItemGetSound(int index)
     {
         music.Pause();
@@ -276,7 +288,8 @@ public static int[] MapSongs =
 43, //-
 4, //Trade Center
 4, //Colloseum
-4 //Bill's House
+4, //Bill's House
+4
 };
 }
 

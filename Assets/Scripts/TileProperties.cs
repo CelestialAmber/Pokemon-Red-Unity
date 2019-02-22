@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 public class TilesData {
-    public bool hasText, hasItem;
-    public int TextID;
+    public bool hasItem;
     public string itemName;
 }
 public class TileProperties : MonoBehaviour  {
     public TilesData data;
-
 	
 }
