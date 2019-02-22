@@ -39,23 +39,23 @@ Move sounds by CELEBI: http://cutstuff.net/forum/index.php?topic=6528.0)
 
 - [x] Intro/Credits
 
-- [ ] Basic Movement - all done except for surfing
+- [x] Basic Movement - done
 
-- [ ] Main Pokemon framework - 95% done
+- [x] Main Pokemon framework - done
 
-- [ ] Encounters - 5%
+- [x] Encounters - done
 
 - [ ] Battles - 5%
 
 - [x] Dialogue System 
 
-- [ ] NPCS - 30% done, trainer logic, and movement animations not done
+- [x] NPCS - 60% done, trainer logic not done
 
 - [ ] Hidden Moves - not done
 
 --------------------------------------------------------
 
-- [ ] Tiles -
+- [x] Tiles -
 
 - [x] Collision tiles - done
 
@@ -65,7 +65,7 @@ Move sounds by CELEBI: http://cutstuff.net/forum/index.php?topic=6528.0)
 
 - [x] Tall Grass - done
 
-- [ ] Water - done except for main functionality
+- [x] Water - done
 
 -----------------------------------------------------------------
 
