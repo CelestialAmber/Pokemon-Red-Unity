@@ -1,0 +1,4357 @@
+[
+  {
+    "path": "Assets/Resources/interiortiles/tile0.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile1.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile2.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile3.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile4.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile5.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile6.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile7.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile8.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile9.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile10.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile11.png",
+    "tag": "Untagged",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile12.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile13.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile14.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/TallGrass/tile15.png",
+    "tag": "TallGrass",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile16.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile17.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile18.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile19.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile20.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile21.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile22.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile23.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile24.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/TallGrass/tile25.png",
+    "tag": "TallGrass",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/TallGrass/tile26.png",
+    "tag": "TallGrass",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile27.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile28.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile29.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile30.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile31.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile32.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile33.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile34.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile35.png",
+    "tag": "Untagged",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile36.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile37.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile38.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile39.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/TallGrass/tile40.png",
+    "tag": "TallGrass",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/TallGrass/tile41.png",
+    "tag": "TallGrass",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile42.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile43.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile44.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile45.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile46.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile47.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile48.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile49.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile50.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile51.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile52.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile53.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile54.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile55.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile56.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile57.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile58.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile59.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile60.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile61.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile62.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile63.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/TallGrass/tile64.png",
+    "tag": "TallGrass",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/TallGrass/tile65.png",
+    "tag": "TallGrass",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile66.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile67.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile68.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile69.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile70.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile71.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile72.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile73.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile74.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile75.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile76.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile77.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile78.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile79.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile80.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile81.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile82.png",
+    "tag": "Water",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile83.png",
+    "tag": "Water",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile84.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile85.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile86.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile87.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile88.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile89.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile90.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile91.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Left/tile92.png",
+    "tag": "LedgeLeft",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile93.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Right/tile94.png",
+    "tag": "LedgeRight",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Left/tile95.png",
+    "tag": "LedgeLeft",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile96.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Right/tile97.png",
+    "tag": "LedgeRight",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Left/tile98.png",
+    "tag": "LedgeLeft",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile99.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Right/tile100.png",
+    "tag": "LedgeRight",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile101.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile102.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile103.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile104.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile105.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile106.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile107.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile108.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile109.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile110.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile111.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile112.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile113.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile114.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile115.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile116.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile117.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile118.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile119.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile120.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile121.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile122.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile123.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile124.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile125.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile126.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile127.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile128.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile129.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile130.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile131.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile132.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile133.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile134.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile135.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile136.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile137.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile138.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile139.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile140.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile141.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile142.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile143.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile144.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile145.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile146.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile147.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile148.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile149.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile150.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile151.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile152.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile153.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile154.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile155.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile156.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile157.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile158.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile159.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile160.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile161.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile162.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile163.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile164.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile165.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile166.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile167.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile168.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile169.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile170.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile171.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile172.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile173.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile174.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile175.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile176.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile177.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile178.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile179.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile180.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile181.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile182.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile183.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile184.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile185.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile186.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile187.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile188.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile189.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile190.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile191.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile192.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile193.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile194.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile195.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile196.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile197.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile198.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile199.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile200.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile201.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile202.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Right/tile203.png",
+    "tag": "LedgeRight",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile204.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile205.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile206.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile207.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile208.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile209.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile210.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile211.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile212.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile213.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile214.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile215.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile216.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile217.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile218.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile219.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Ledges/Down/tile220.png",
+    "tag": "LedgeDown",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile221.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile222.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile223.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile224.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile225.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile226.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile227.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile228.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile229.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile230.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile231.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile232.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile233.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile234.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile235.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile236.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile237.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile238.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile239.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile240.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile241.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile242.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile243.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile244.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile245.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile246.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile247.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile248.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile249.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile250.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile251.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile252.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile253.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile254.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile255.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile256.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile257.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile258.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile259.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile260.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile261.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile262.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile263.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile264.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile265.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile266.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile267.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile268.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile269.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile270.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile271.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile272.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile273.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile274.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile275.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile276.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile277.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile278.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile279.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile280.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile281.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile282.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile283.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile284.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile285.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile286.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile287.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile288.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile289.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile290.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile291.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile292.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile293.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile294.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile295.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile296.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile297.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile298.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile299.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile300.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile301.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile302.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile303.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile304.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile305.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile306.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile307.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile308.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile309.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile310.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile311.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile312.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile313.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile314.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile315.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile316.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile317.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile318.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile319.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile320.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile321.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile322.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile323.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile324.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile325.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile326.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile327.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile328.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile329.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile330.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile331.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile332.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile333.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile334.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile335.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile336.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile337.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile338.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile339.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile340.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile341.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile342.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile343.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile344.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile345.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile346.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile347.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile348.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile349.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile350.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile351.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile352.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile353.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile354.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile355.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile356.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile357.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile358.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile359.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile360.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile361.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile362.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile363.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile364.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile365.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile366.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile367.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile368.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile369.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile370.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile371.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile372.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile373.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile374.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile375.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile376.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile377.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile378.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile379.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile380.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile381.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile382.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile383.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile384.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile385.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile386.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile387.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile388.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile389.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile390.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile391.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile392.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile393.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile394.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile395.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile396.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile397.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile398.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile399.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile400.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile401.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile402.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile403.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile404.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile405.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile406.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile407.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile408.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile409.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile410.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile411.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile412.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile413.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile414.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile415.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile416.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile417.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile418.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile419.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile420.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile421.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile422.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile423.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile424.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile425.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile426.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile427.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile428.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile429.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile430.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile431.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile432.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile433.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile434.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile435.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile436.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile437.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile438.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile439.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile440.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile441.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile442.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile443.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile444.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile445.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile446.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile447.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile448.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile449.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile450.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile451.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile452.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile453.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile454.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile455.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile456.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile457.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile458.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile459.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile460.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile461.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile462.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile463.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile464.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile465.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile466.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile467.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile468.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile469.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile470.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile471.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile472.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile473.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile474.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile475.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile476.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile477.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile478.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile479.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile480.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile481.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile482.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile483.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile484.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile485.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile486.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile487.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile488.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile489.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile490.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile491.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile492.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile493.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile494.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile495.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile496.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile497.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile498.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile499.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile500.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile501.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile502.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile503.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile504.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile505.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile506.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile507.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile508.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Water/tile509.png",
+    "tag": "Water",
+    "isAnimated": true
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile510.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile511.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile512.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile513.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile514.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile515.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile516.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile517.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile518.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile519.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile520.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile521.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile522.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile523.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile524.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile525.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile526.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile527.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile528.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile529.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile530.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile531.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile532.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile533.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile534.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile535.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile536.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile537.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile538.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile539.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile540.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile541.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile542.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile543.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile544.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile545.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile546.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile547.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile548.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile549.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile550.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile551.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile552.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile553.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile554.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile555.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile556.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile557.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile558.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile559.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile560.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile561.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile562.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile563.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile564.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile565.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile566.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile567.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile568.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile569.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile570.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile571.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile572.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile573.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile574.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile575.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile576.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile577.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile578.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile579.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile580.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile581.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile582.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile583.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile584.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile585.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile586.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile587.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile588.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile589.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile590.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile591.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile592.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile593.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile594.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile595.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile596.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile597.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile598.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile599.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile600.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile601.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile602.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile603.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile604.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile605.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile606.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile607.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile608.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile609.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile610.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile611.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile612.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile613.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile614.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile615.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile616.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile617.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile618.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile619.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile620.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile621.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile622.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile623.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile624.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile625.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile626.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile627.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile628.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile629.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile630.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile631.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile632.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile633.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile634.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile635.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile636.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile637.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile638.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile639.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile640.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile641.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile642.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile643.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile644.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile645.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile646.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile647.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile648.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile649.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile650.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile651.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile652.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile653.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile654.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile655.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile656.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile657.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile658.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile659.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile660.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile661.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile662.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile663.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile664.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile665.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile666.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile667.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile668.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile669.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile670.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile671.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile672.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile673.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile674.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile675.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile676.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile677.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile678.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile679.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile680.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile681.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile682.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile683.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile684.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile685.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile686.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile687.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile688.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile689.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile690.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile691.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile692.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile693.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile694.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile695.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile696.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile697.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile698.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile699.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile700.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile701.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile702.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile703.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile704.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile705.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile706.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile707.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile708.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile709.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile710.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile711.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile712.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile713.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile714.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile715.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile716.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile717.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile718.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile719.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile720.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile721.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile722.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile723.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile724.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile725.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile726.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile727.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile728.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile729.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile730.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile731.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile732.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile733.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile734.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile735.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile736.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile737.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile738.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile739.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile740.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile741.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile742.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile743.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile744.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile745.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile746.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile747.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile748.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile749.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile750.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile751.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile752.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile753.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile754.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile755.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile756.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile757.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile758.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile759.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile760.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile761.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile762.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile763.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile764.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile765.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile766.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile767.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile768.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile769.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile770.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile771.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile772.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile773.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile774.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile775.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile776.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile777.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile778.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile779.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile780.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile781.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile782.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile783.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile784.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile785.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile786.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile787.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile788.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile789.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile790.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile791.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile792.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile793.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile794.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile795.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile796.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile797.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile798.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile799.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile800.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile801.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile802.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile803.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile804.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile805.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile806.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile807.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile808.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile809.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile810.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile811.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile812.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile813.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile814.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile815.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile816.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile817.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile818.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile819.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile820.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile821.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile822.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile823.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile824.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile825.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile826.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile827.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile828.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile829.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile830.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile831.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile832.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile833.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile834.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile835.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile836.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile837.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile838.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile839.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile840.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile841.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile842.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile843.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile844.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile845.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Buildings/tile846.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile847.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile848.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile849.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Warps/tile850.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile851.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile852.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile853.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile854.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile855.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile856.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile857.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile858.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile859.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile860.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile861.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile862.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile863.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile864.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/tile865.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/tile866.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile867.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile868.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Collision/Mountains/tile869.png",
+    "tag": "WallObject",
+    "isAnimated": false
+  },
+  {
+    "path": "Assets/Resources/interiortiles/Non-Collision/Blank/tile870.png",
+    "tag": "Untagged",
+    "isAnimated": false
+  }
+]

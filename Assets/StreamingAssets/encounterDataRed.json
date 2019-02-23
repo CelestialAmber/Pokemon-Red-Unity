@@ -1,0 +1,2522 @@
+[{
+  "encounterChance" : 20,
+
+  "slots": [
+    {
+      "Item1": "Diglett",
+      "Item2": 18
+    },
+    {
+      "Item1": "Diglett",
+      "Item2": 19
+    },
+    {
+      "Item1": "Diglett",
+      "Item2": 17
+    },
+    {
+      "Item1": "Diglett",
+      "Item2": 20
+    },
+    {
+      "Item1": "Diglett",
+      "Item2": 16
+    },
+    {
+      "Item1": "Diglett",
+      "Item2": 15
+    },
+    {
+      "Item1": "Diglett",
+      "Item2": 21
+    },
+    {
+      "Item1": "Diglett",
+      "Item2": 22
+    },
+    {
+      "Item1": "Dugtrio",
+      "Item2": 29
+    },
+    {
+      "Item1": "Dugtrio",
+      "Item2": 31
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Koffing",
+      "Item2": 30
+    },
+    {
+      "Item1": "Koffing",
+      "Item2": 30
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 34
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 30
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 34
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 32
+    },
+    {
+      "Item1": "Grimer",
+      "Item2": 30
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 28
+    },
+    {
+      "Item1": "Weezing",
+      "Item2": 37
+    },
+    {
+      "Item1": "Muk",
+      "Item2": 39
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Growlithe",
+      "Item2": 32
+    },
+    {
+      "Item1": "Koffing",
+      "Item2": 34
+    },
+    {
+      "Item1": "Koffing",
+      "Item2": 34
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 30
+    },
+    {
+      "Item1": "Koffing",
+      "Item2": 30
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 32
+    },
+    {
+      "Item1": "Grimer",
+      "Item2": 30
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 28
+    },
+    {
+      "Item1": "Weezing",
+      "Item2": 39
+    },
+    {
+      "Item1": "Muk",
+      "Item2": 37
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Koffing",
+      "Item2": 31
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 33
+    },
+    {
+      "Item1": "Koffing",
+      "Item2": 35
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 32
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 34
+    },
+    {
+      "Item1": "Weezing",
+      "Item2": 40
+    },
+    {
+      "Item1": "Grimer",
+      "Item2": 34
+    },
+    {
+      "Item1": "Weezing",
+      "Item2": 38
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 36
+    },
+    {
+      "Item1": "Muk",
+      "Item2": 42
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Koffing",
+      "Item2": 33
+    },
+    {
+      "Item1": "Koffing",
+      "Item2": 31
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 35
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 32
+    },
+    {
+      "Item1": "Koffing",
+      "Item2": 31
+    },
+    {
+      "Item1": "Weezing",
+      "Item2": 40
+    },
+    {
+      "Item1": "Ponyta",
+      "Item2": 34
+    },
+    {
+      "Item1": "Grimer",
+      "Item2": 35
+    },
+    {
+      "Item1": "Weezing",
+      "Item2": 42
+    },
+    {
+      "Item1": "Muk",
+      "Item2": 42
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Zubat",
+      "Item2": 8
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 7
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 9
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 8
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 6
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 10
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 10
+    },
+    {
+      "Item1": "Paras",
+      "Item2": 8
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 11
+    },
+    {
+      "Item1": "Clefairy",
+      "Item2": 8
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Zubat",
+      "Item2": 8
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 7
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 7
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 8
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 9
+    },
+    {
+      "Item1": "Paras",
+      "Item2": 10
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 10
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 11
+    },
+    {
+      "Item1": "Clefairy",
+      "Item2": 9
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 9
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Zubat",
+      "Item2": 9
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 9
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 10
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 10
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 11
+    },
+    {
+      "Item1": "Paras",
+      "Item2": 10
+    },
+    {
+      "Item1": "Paras",
+      "Item2": 12
+    },
+    {
+      "Item1": "Clefairy",
+      "Item2": 10
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 12
+    },
+    {
+      "Item1": "Clefairy",
+      "Item2": 12
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Gastly",
+      "Item2": 20
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 21
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 22
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 23
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 19
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 18
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 24
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 20
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 22
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 25
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Gastly",
+      "Item2": 20
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 21
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 22
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 23
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 19
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 18
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 25
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 20
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 22
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 24
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Gastly",
+      "Item2": 20
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 21
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 22
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 23
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 19
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 18
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 25
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 20
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 22
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 24
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Gastly",
+      "Item2": 21
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 22
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 23
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 24
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 20
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 19
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 26
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 22
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 24
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 28
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Gastly",
+      "Item2": 21
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 22
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 23
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 24
+    },
+    {
+      "Item1": "Gastly",
+      "Item2": 20
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 28
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 22
+    },
+    {
+      "Item1": "Cubone",
+      "Item2": 24
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 28
+    },
+    {
+      "Item1": "Haunter",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Voltorb",
+      "Item2": 21
+    },
+    {
+      "Item1": "Magnemite",
+      "Item2": 21
+    },
+    {
+      "Item1": "Pikachu",
+      "Item2": 20
+    },
+    {
+      "Item1": "Pikachu",
+      "Item2": 24
+    },
+    {
+      "Item1": "Magnemite",
+      "Item2": 23
+    },
+    {
+      "Item1": "Voltorb",
+      "Item2": 23
+    },
+    {
+      "Item1": "Magneton",
+      "Item2": 32
+    },
+    {
+      "Item1": "Magneton",
+      "Item2": 35
+    },
+    {
+      "Item1": "Electabuzz",
+      "Item2": 33
+    },
+    {
+      "Item1": "Electabuzz",
+      "Item2": 36
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Zubat",
+      "Item2": 16
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 17
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 17
+    },
+    {
+      "Item1": "Machop",
+      "Item2": 15
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 16
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 18
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 15
+    },
+    {
+      "Item1": "Machop",
+      "Item2": 17
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 13
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 15
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Zubat",
+      "Item2": 16
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 17
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 17
+    },
+    {
+      "Item1": "Machop",
+      "Item2": 15
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 16
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 18
+    },
+    {
+      "Item1": "Machop",
+      "Item2": 17
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 17
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 13
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 18
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Pidgey",
+      "Item2": 3
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 3
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 3
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 2
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 2
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 3
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 3
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 4
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 4
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 5
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Rattata",
+      "Item2": 3
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 3
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 4
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 4
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 5
+    },
+    {
+      "Item1": "Weedle",
+      "Item2": 3
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 2
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 5
+    },
+    {
+      "Item1": "Weedle",
+      "Item2": 4
+    },
+    {
+      "Item1": "Weedle",
+      "Item2": 5
+    }
+  ]
+},{
+  "encounterChance" : 20,
+
+  "slots": [
+    {
+      "Item1": "Pidgey",
+      "Item2": 6
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 5
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 7
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 6
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 7
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 8
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 8
+    },
+    {
+      "Item1": "Jigglypuff",
+      "Item2": 3
+    },
+    {
+      "Item1": "Jigglypuff",
+      "Item2": 5
+    },
+    {
+      "Item1": "Jigglypuff",
+      "Item2": 7
+    }
+  ]
+},{
+  "encounterChance" : 20,
+
+  "slots": [
+    {
+      "Item1": "Rattata",
+      "Item2": 10
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 10
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 8
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 6
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 8
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 10
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 12
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 12
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 8
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 12
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Oddish",
+      "Item2": 13
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 13
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 15
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 10
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 12
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 15
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 16
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 16
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 14
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 16
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Oddish",
+      "Item2": 13
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 13
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 15
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 10
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 12
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 15
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 16
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 16
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 14
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 16
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Pidgey",
+      "Item2": 19
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 19
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 17
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 22
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 22
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 18
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 18
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 20
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 19
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 20
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Pidgey",
+      "Item2": 18
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 18
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 17
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 16
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 20
+    },
+    {
+      "Item1": "Mankey",
+      "Item2": 20
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 19
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 17
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 15
+    },
+    {
+      "Item1": "Growlithe",
+      "Item2": 18
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Rattata",
+      "Item2": 16
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 16
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 14
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 11
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 13
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 15
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 17
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 17
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 13
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 17
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Voltorb",
+      "Item2": 16
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 16
+    },
+    {
+      "Item1": "Voltorb",
+      "Item2": 14
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 11
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 13
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 15
+    },
+    {
+      "Item1": "Voltorb",
+      "Item2": 17
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 17
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 13
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 17
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Ekans",
+      "Item2": 14
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 15
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 12
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 9
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 13
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 13
+    },
+    {
+      "Item1": "Ekans",
+      "Item2": 15
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 17
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 11
+    },
+    {
+      "Item1": "Drowzee",
+      "Item2": 15
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Oddish",
+      "Item2": 24
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 25
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 23
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 24
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 26
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 27
+    },
+    {
+      "Item1": "Gloom",
+      "Item2": 28
+    },
+    {
+      "Item1": "Gloom",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 20,
+
+  "slots": [
+    {
+      "Item1": "Oddish",
+      "Item2": 24
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 25
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 27
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 24
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 26
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 25
+    },
+    {
+      "Item1": "Gloom",
+      "Item2": 28
+    },
+    {
+      "Item1": "Gloom",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Oddish",
+      "Item2": 24
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 26
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 23
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 24
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 26
+    },
+    {
+      "Item1": "Gloom",
+      "Item2": 30
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 28
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Oddish",
+      "Item2": 24
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 26
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 23
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 22
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 28
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 26
+    },
+    {
+      "Item1": "Gloom",
+      "Item2": 30
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 28
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 30
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Spearow",
+      "Item2": 20
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 22
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 18
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 20
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 20
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 18
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 22
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 22
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 23
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 25
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Spearow",
+      "Item2": 20
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 22
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 25
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 24
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 27
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 26
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 28
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 29
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 25
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 27
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Spearow",
+      "Item2": 20
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 22
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 25
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 24
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 25
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 26
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 28
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 29
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 27
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 29
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Rattata",
+      "Item2": 21
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 23
+    },
+    {
+      "Item1": "Raticate",
+      "Item2": 30
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 23
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 21
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 30
+    },
+    {
+      "Item1": "Pidgeotto",
+      "Item2": 32
+    },
+    {
+      "Item1": "Tangela",
+      "Item2": 28
+    },
+    {
+      "Item1": "Tangela",
+      "Item2": 30
+    },
+    {
+      "Item1": "Tangela",
+      "Item2": 32
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Rattata",
+      "Item2": 3
+    },
+    {
+      "Item1": "Nidoran♂",
+      "Item2": 3 
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 4
+    },
+    {
+      "Item1": "Nidoran♂",
+      "Item2": 4
+    },
+    {
+      "Item1": "Rattata",
+      "Item2": 2
+    },
+    {
+      "Item1": "Nidoran♂",
+      "Item2": 2
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 3
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 5
+    },
+    {
+      "Item1": "Nidoran♀",
+      "Item2": 3
+    },
+    {
+      "Item1": "Nidoran♀",
+      "Item2": 4
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Ekans",
+      "Item2": 26
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 33
+    },
+    {
+      "Item1": "Spearow",
+      "Item2": 26
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 38
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 38
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 38
+    },
+    {
+      "Item1": "Arbok",
+      "Item2": 41
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 43
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 41
+    },
+    {
+      "Item1": "Fearow",
+      "Item2": 43
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Weedle",
+      "Item2": 7
+    },
+    {
+      "Item1": "Kakuna",
+      "Item2": 8
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 12
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 12
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 13
+    },
+    {
+      "Item1": "Abra",
+      "Item2": 10
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 14
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 13
+    },
+    {
+      "Item1": "Abra",
+      "Item2": 8
+    },
+    {
+      "Item1": "Abra",
+      "Item2": 12
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Weedle",
+      "Item2": 8
+    },
+    {
+      "Item1": "Kakuna",
+      "Item2": 9
+    },
+    {
+      "Item1": "Pidgey",
+      "Item2": 13
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 12
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 13
+    },
+    {
+      "Item1": "Abra",
+      "Item2": 12
+    },
+    {
+      "Item1": "Oddish",
+      "Item2": 14
+    },
+    {
+      "Item1": "Abra",
+      "Item2": 10
+    },
+    {
+      "Item1": "Metapod",
+      "Item2": 7
+    },
+    {
+      "Item1": "Caterpie",
+      "Item2": 8
+    }
+  ]
+},{
+  "encounterChance" : 30,
+
+  "slots": [
+    {
+      "Item1": "Nidoran♂",
+      "Item2": 24
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 26
+    },
+    {
+      "Item1": "Paras",
+      "Item2": 22
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 25
+    },
+    {
+      "Item1": "Nidorino",
+      "Item2": 33
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 23
+    },
+    {
+      "Item1": "Nidoran♀",
+      "Item2": 24
+    },
+    {
+      "Item1": "Parasect",
+      "Item2": 25
+    },
+    {
+      "Item1": "Kangaskhan",
+      "Item2": 25
+    },
+    {
+      "Item1": "Scyther",
+      "Item2": 28
+    }
+  ]
+},{
+  "encounterChance" : 30,
+
+  "slots": [
+    {
+      "Item1": "Nidoran♂",
+      "Item2": 22
+    },
+    {
+      "Item1": "Rhyhorn",
+      "Item2": 26
+    },
+    {
+      "Item1": "Paras",
+      "Item2": 23
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 25
+    },
+    {
+      "Item1": "Nidorino",
+      "Item2": 30
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 27
+    },
+    {
+      "Item1": "Nidorina",
+      "Item2": 30
+    },
+    {
+      "Item1": "Venomoth",
+      "Item2": 32
+    },
+    {
+      "Item1": "Chansey",
+      "Item2": 26
+    },
+    {
+      "Item1": "Tauros",
+      "Item2": 28
+    }
+  ]
+},{
+  "encounterChance" : 30,
+
+  "slots": [
+    {
+      "Item1": "Nidoran♂",
+      "Item2": 25
+    },
+    {
+      "Item1": "Doduo",
+      "Item2": 26
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 23
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 24
+    },
+    {
+      "Item1": "Nidorino",
+      "Item2": 33
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 26
+    },
+    {
+      "Item1": "Nidoran♀",
+      "Item2": 25
+    },
+    {
+      "Item1": "Venomoth",
+      "Item2": 31
+    },
+    {
+      "Item1": "Tauros",
+      "Item2": 26
+    },
+    {
+      "Item1": "Kangaskhan",
+      "Item2": 28
+    }
+  ]
+},{
+  "encounterChance" : 30,
+
+  "slots": [
+    {
+      "Item1": "Nidoran♂",
+      "Item2": 22
+    },
+    {
+      "Item1": "Rhyhorn",
+      "Item2": 25
+    },
+    {
+      "Item1": "Venonat",
+      "Item2": 22
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 24
+    },
+    {
+      "Item1": "Nidorino",
+      "Item2": 31
+    },
+    {
+      "Item1": "Exeggcute",
+      "Item2": 25
+    },
+    {
+      "Item1": "Nidorina",
+      "Item2": 31
+    },
+    {
+      "Item1": "Parasect",
+      "Item2": 30
+    },
+    {
+      "Item1": "Scyther",
+      "Item2": 23
+    },
+    {
+      "Item1": "Chansey",
+      "Item2": 23
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Seel",
+      "Item2": 30
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 30
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 30
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 30
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 28
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 21
+    },
+    {
+      "Item1": "Golbat",
+      "Item2": 29
+    },
+    {
+      "Item1": "Psyduck",
+      "Item2": 28
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 28
+    },
+    {
+      "Item1": "Golduck",
+      "Item2": 38
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Staryu",
+      "Item2": 30
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 30
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 32
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 32
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 28
+    },
+    {
+      "Item1": "Seel",
+      "Item2": 30
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 30
+    },
+    {
+      "Item1": "Seel",
+      "Item2": 28
+    },
+    {
+      "Item1": "Dewgong",
+      "Item2": 38
+    },
+    {
+      "Item1": "Seadra",
+      "Item2": 37
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Seel",
+      "Item2": 30
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 30
+    },
+    {
+      "Item1": "Seel",
+      "Item2": 32
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 32
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 28
+    },
+    {
+      "Item1": "Staryu",
+      "Item2": 30
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 30
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 28
+    },
+    {
+      "Item1": "Golbat",
+      "Item2": 30
+    },
+    {
+      "Item1": "Slowbro",
+      "Item2": 37
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Slowpoke",
+      "Item2": 31
+    },
+    {
+      "Item1": "Seel",
+      "Item2": 31
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 33
+    },
+    {
+      "Item1": "Seel",
+      "Item2": 33
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 29
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 31
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 31
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 29
+    },
+    {
+      "Item1": "Seadra",
+      "Item2": 39
+    },
+    {
+      "Item1": "Dewgong",
+      "Item2": 37
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Horsea",
+      "Item2": 31
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 31
+    },
+    {
+      "Item1": "Horsea",
+      "Item2": 33
+    },
+    {
+      "Item1": "Shellder",
+      "Item2": 33
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 29
+    },
+    {
+      "Item1": "Seel",
+      "Item2": 31
+    },
+    {
+      "Item1": "Slowpoke",
+      "Item2": 31
+    },
+    {
+      "Item1": "Seel",
+      "Item2": 29
+    },
+    {
+      "Item1": "Slowbro",
+      "Item2": 39
+    },
+    {
+      "Item1": "Golbat",
+      "Item2": 32
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Golbat",
+      "Item2": 46
+    },
+    {
+      "Item1": "Hypno",
+      "Item2": 46
+    },
+    {
+      "Item1": "Magneton",
+      "Item2": 46
+    },
+    {
+      "Item1": "Dodrio",
+      "Item2": 49
+    },
+    {
+      "Item1": "Venomoth",
+      "Item2": 49
+    },
+    {
+      "Item1": "Arbok",
+      "Item2": 52
+    },
+    {
+      "Item1": "Kadabra",
+      "Item2": 49
+    },
+    {
+      "Item1": "Parasect",
+      "Item2": 52
+    },
+    {
+      "Item1": "Raichu",
+      "Item2": 53
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 53
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Dodrio",
+      "Item2": 51
+    },
+    {
+      "Item1": "Venomoth",
+      "Item2": 51
+    },
+    {
+      "Item1": "Kadabra",
+      "Item2": 51
+    },
+    {
+      "Item1": "Rhyhorn",
+      "Item2": 52
+    },
+    {
+      "Item1": "Marowak",
+      "Item2": 52
+    },
+    {
+      "Item1": "Electrode",
+      "Item2": 52
+    },
+    {
+      "Item1": "Chansey",
+      "Item2": 56
+    },
+    {
+      "Item1": "Wigglytuff",
+      "Item2": 54
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 55
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 60
+    }
+  ]
+},{
+  "encounterChance" : 25,
+
+  "slots": [
+    {
+      "Item1": "Rhydon",
+      "Item2": 55
+    },
+    {
+      "Item1": "Marowak",
+      "Item2": 55
+    },
+    {
+      "Item1": "Electrode",
+      "Item2": 55
+    },
+    {
+      "Item1": "Chansey",
+      "Item2": 64
+    },
+    {
+      "Item1": "Parasect",
+      "Item2": 64
+    },
+    {
+      "Item1": "Raichu",
+      "Item2": 64
+    },
+    {
+      "Item1": "Arbok",
+      "Item2": 57
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 65
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 63
+    },
+    {
+      "Item1": "Ditto",
+      "Item2": 67
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Machop",
+      "Item2": 24
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 26
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 22
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 36
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 39
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 42
+    },
+    {
+      "Item1": "Graveler",
+      "Item2": 41
+    },
+    {
+      "Item1": "Golbat",
+      "Item2": 41
+    },
+    {
+      "Item1": "Machoke",
+      "Item2": 42
+    },
+    {
+      "Item1": "Marowak",
+      "Item2": 43
+    }
+  ]
+},{
+  "encounterChance" : 10,
+
+  "slots": [
+    {
+      "Item1": "Machop",
+      "Item2": 22
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 24
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 26
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 36
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 39
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 42
+    },
+    {
+      "Item1": "Machoke",
+      "Item2": 41
+    },
+    {
+      "Item1": "Golbat",
+      "Item2": 40
+    },
+    {
+      "Item1": "Marowak",
+      "Item2": 40
+    },
+    {
+      "Item1": "Graveler",
+      "Item2": 43
+    }
+  ]
+},{
+  "encounterChance" : 15,
+
+  "slots": [
+    {
+      "Item1": "Machop",
+      "Item2": 24
+    },
+    {
+      "Item1": "Geodude",
+      "Item2": 26
+    },
+    {
+      "Item1": "Zubat",
+      "Item2": 22
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 42
+    },
+    {
+      "Item1": "Venomoth",
+      "Item2": 40
+    },
+    {
+      "Item1": "Onix",
+      "Item2": 45
+    },
+    {
+      "Item1": "Graveler",
+      "Item2": 43
+    },
+    {
+      "Item1": "Golbat",
+      "Item2": 41
+    },
+    {
+      "Item1": "Machoke",
+      "Item2": 42
+    },
+    {
+      "Item1": "Machoke",
+      "Item2": 45
+    }
+  ]
+},{
+  "encounterChance" : 8,
+
+  "slots": [
+    {
+      "Item1": "Weedle",
+      "Item2": 4
+    },
+    {
+      "Item1": "Kakuna",
+      "Item2": 5
+    },
+    {
+      "Item1": "Weedle",
+      "Item2": 3
+    },
+    {
+      "Item1": "Weedle",
+      "Item2": 5
+    },
+    {
+      "Item1": "Kakuna",
+      "Item2": 4
+    },
+    {
+      "Item1": "Kakuna",
+      "Item2": 6
+    },
+    {
+      "Item1": "Metapod",
+      "Item2": 4
+    },
+    {
+      "Item1": "Caterpie",
+      "Item2": 3
+    },
+    {
+      "Item1": "Pikachu",
+      "Item2": 3
+    },
+    {
+      "Item1": "Pikachu",
+      "Item2": 5
+    }
+  ]
+},{
+  "encounterChance" : 5,
+
+  "slots": [
+    {
+      "Item1": "Tentacool",
+      "Item2": 5
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 10
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 15
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 5
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 10
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 15
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 20
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 30
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 35
+    },
+    {
+      "Item1": "Tentacool",
+      "Item2": 40
+    }
+  ]
+}
+]

@@ -1,0 +1,606 @@
+{
+  "Bulbasaur": {
+    "Item1": "Ivysaur",
+    "Item2": 16
+  },
+  "Ivysaur": {
+    "Item1": "Venusaur",
+    "Item2": 32
+  },
+  "Venusaur": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Charmander": {
+    "Item1": "Charmeleon",
+    "Item2": 16
+  },
+  "Charmeleon": {
+    "Item1": "Charizard",
+    "Item2": 36
+  },
+  "Charizard": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Squirtle": {
+    "Item1": "Wartortle",
+    "Item2": 16
+  },
+  "Wartortle": {
+    "Item1": "Blastoise",
+    "Item2": 36
+  },
+  "Blastoise": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Caterpie": {
+    "Item1": "Metapod",
+    "Item2": 7
+  },
+  "Metapod": {
+    "Item1": "Butterfree",
+    "Item2": 10
+  },
+  "Butterfree": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Weedle": {
+    "Item1": "Kakuna",
+    "Item2": 7
+  },
+  "Kakuna": {
+    "Item1": "Beedrill",
+    "Item2": 10
+  },
+  "Beedrill": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Pidgey": {
+    "Item1": "Pidgeotto",
+    "Item2": 18
+  },
+  "Pidgeotto": {
+    "Item1": "Pidgeot",
+    "Item2": 36
+  },
+  "Pidgeot": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Rattata": {
+    "Item1": "Raticate",
+    "Item2": 20
+  },
+  "Raticate": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Spearow": {
+    "Item1": "Fearow",
+    "Item2": 20
+  },
+  "Fearow": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Ekans": {
+    "Item1": "Arbok",
+    "Item2": 22
+  },
+  "Arbok": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Pikachu": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Raichu": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Sandshrew": {
+    "Item1": "Sandslash",
+    "Item2": 22
+  },
+  "Sandslash": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Nidoran♀": {
+    "Item1": "Nidorina",
+    "Item2": 16
+  },
+  "Nidorina": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Nidoqueen": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Nidoran♂": {
+    "Item1": "Nidorino",
+    "Item2": 16
+  },
+  "Nidorino": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Nidoking": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Clefairy": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Clefable": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Vulpix": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Ninetales": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Jigglypuff": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Wigglytuff": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Zubat": {
+    "Item1": "Golbat",
+    "Item2": 22
+  },
+  "Golbat": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Oddish": {
+    "Item1": "Gloom",
+    "Item2": 21
+  },
+  "Gloom": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Vileplume": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Paras": {
+    "Item1": "Parasect",
+    "Item2": 24
+  },
+  "Parasect": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Venonat": {
+    "Item1": "Venomoth",
+    "Item2": 31
+  },
+  "Venomoth": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Diglett": {
+    "Item1": "Dugtrio",
+    "Item2": 26
+  },
+  "Dugtrio": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Meowth": {
+    "Item1": "Persian",
+    "Item2": 28
+  },
+  "Persian": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Psyduck": {
+    "Item1": "Golduck",
+    "Item2": 33
+  },
+  "Golduck": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Mankey": {
+    "Item1": "Primeape",
+    "Item2": 28
+  },
+  "Primeape": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Growlithe": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Arcanine": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Poliwag": {
+    "Item1": "Poliwhirl",
+    "Item2": 25
+  },
+  "Poliwhirl": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Poliwrath": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Abra": {
+    "Item1": "Kadabra",
+    "Item2": 16
+  },
+  "Kadabra": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Alakazam": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Machop": {
+    "Item1": "Machoke",
+    "Item2": 28
+  },
+  "Machoke": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Machamp": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Bellsprout": {
+    "Item1": "Weepinbell",
+    "Item2": 21
+  },
+  "Weepinbell": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Victreebel": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Tentacool": {
+    "Item1": "Tentacruel",
+    "Item2": 30
+  },
+  "Tentacruel": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Geodude": {
+    "Item1": "Graveler",
+    "Item2": 25
+  },
+  "Graveler": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Golem": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Ponyta": {
+    "Item1": "Rapidash",
+    "Item2": 40
+  },
+  "Rapidash": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Slowpoke": {
+    "Item1": "Slowbro",
+    "Item2": 37
+  },
+  "Slowbro": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Magnemite": {
+    "Item1": "Magneton",
+    "Item2": 30
+  },
+  "Magneton": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Farfetch'd": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Doduo": {
+    "Item1": "Dodrio",
+    "Item2": 31
+  },
+  "Dodrio": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Seel": {
+    "Item1": "Dewgong",
+    "Item2": 34
+  },
+  "Dewgong": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Grimer": {
+    "Item1": "Muk",
+    "Item2": 38
+  },
+  "Muk": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Shellder": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Cloyster": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Gastly": {
+    "Item1": "Haunter",
+    "Item2": 25
+  },
+  "Haunter": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Gengar": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Onix": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Drowzee": {
+    "Item1": "Hypno",
+    "Item2": 26
+  },
+  "Hypno": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Krabby": {
+    "Item1": "Kingler",
+    "Item2": 28
+  },
+  "Kingler": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Voltorb": {
+    "Item1": "Electrode",
+    "Item2": 30
+  },
+  "Electrode": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Exeggcute": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Exeggutor": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Cubone": {
+    "Item1": "Marowak",
+    "Item2": 28
+  },
+  "Marowak": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Hitmonlee": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Hitmonchan": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Lickitung": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Koffing": {
+    "Item1": "Weezing",
+    "Item2": 35
+  },
+  "Weezing": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Rhyhorn": {
+    "Item1": "Rhydon",
+    "Item2": 42
+  },
+  "Rhydon": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Chansey": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Tangela": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Kangaskhan": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Horsea": {
+    "Item1": "Seadra",
+    "Item2": 32
+  },
+  "Seadra": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Goldeen": {
+    "Item1": "Seaking",
+    "Item2": 33
+  },
+  "Seaking": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Staryu": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Starmie": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Mr. Mime": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Scyther": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Jynx": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Electabuzz": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Magmar": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Pinsir": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Tauros": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Magikarp": {
+    "Item1": "Gyarados",
+    "Item2": 20
+  },
+  "Gyarados": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Lapras": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Ditto": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Eevee": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Vaporeon": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Jolteon": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Flareon": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Porygon": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Omanyte": {
+    "Item1": "Omastar",
+    "Item2": 40
+  },
+  "Omastar": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Kabuto": {
+    "Item1": "Kabutops",
+    "Item2": 40
+  },
+  "Kabutops": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Aerodactyl": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Snorlax": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Articuno": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Zapdos": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Moltres": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Dratini": {
+    "Item1": "Dragonair",
+    "Item2": 30
+  },
+  "Dragonair": {
+    "Item1": "Dragonite",
+    "Item2": 55
+  },
+  "Dragonite": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Mewtwo": {
+    "Item1": "",
+    "Item2": 0
+  },
+  "Mew": {
+    "Item1": "",
+    "Item2": 0
+  }
+}
