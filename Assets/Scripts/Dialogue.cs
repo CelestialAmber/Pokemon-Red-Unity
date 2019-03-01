@@ -54,7 +54,6 @@ public class Dialogue : MonoBehaviour {
         mainmenu = MainMenu.instance;
         subdialogue.SetActive(true);
 		finishedThePrompt = true;
-		Name = "RED";
 		finishedText = true;
 		box.enabled = false;
         indicator.SetActive(false);

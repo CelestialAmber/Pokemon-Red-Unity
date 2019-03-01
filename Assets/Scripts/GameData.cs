@@ -14,6 +14,12 @@ public class PokedexEntry
     public bool seen;
     public bool caught;
 }
+public enum Starter
+{
+    Bulbasaur,
+    Charmander,
+    Squirtle
+}
 public static class IntExtensions{
 
     public static string ZeroFormat(this int input, string zeroformat)
@@ -50,6 +56,7 @@ public class SaveData
 {
     //class for holding save data
     public int dummy;
+    public Starter chosenStarter;
     public static SaveData Create()
     {
         SaveData saveData = new SaveData();
@@ -60,6 +67,10 @@ public class SaveData
 public class GameData {
     public static List<string> fieldMoves = new List<string>(new string[] { "Teleport", "Fly", "Cut", "Surf", "Dig", "Strength", "Flash", "Softboiled" });
     public static List<Pokemon> party = new List<Pokemon>();
+    public static void AddPokemonToParty(string name,int level)
+    {
+        party.Add(new Pokemon(name, level, false));
+    }
     public static Sprite[] frontMonSprites, backMonSprites;
     public static bool isPaused, inGame, atTitleScreen;
     public static SaveData saveData;
@@ -85,6 +96,7 @@ public class GameData {
     public const int mapHeight = 520;
     public static int screenTileWidth, screenTileHeight;
     public static int hours, minutes, seconds;
+    public static Starter chosenStarter;
     public static bool hasMetBill; //should Bill's PC use his name?
 
     public static void Save()

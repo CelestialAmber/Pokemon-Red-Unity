@@ -89,7 +89,7 @@ public class DebugConsole : MonoBehaviour
             for (int i = 0; i < 6; i++)
             {
                 
-               GameData.party.Add(new Pokemon(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101)));
+               GameData.AddPokemonToParty(PokemonData.IndexToMon(Random.Range(1, 152)), Random.Range(1, 101));
                 PokemonMenu.instance.healthbars[i] = PokemonMenu.instance.partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
             }
             Message("Generated a new party.");

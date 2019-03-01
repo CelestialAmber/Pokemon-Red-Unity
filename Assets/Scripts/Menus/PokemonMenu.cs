@@ -36,10 +36,11 @@ public enum Status
 [System.Serializable]
 public class Pokemon
 {
-    public Pokemon(string name, int level)
+    public Pokemon(string name, int level, bool isWildPokemon)
     {
         this.name = name;
         this.level = level;
+        this.isWildPokemon = isWildPokemon;
         this.nickname = this.name.ToUpper();
         GenerateIvs();
         moves = new List<Move>();
@@ -47,18 +48,21 @@ public class Pokemon
         SetExpToLevel();
         RecalculateStats();
         //If the Pokemon hasnt been registered as caught before, register it
-        if(!GameData.pokedexlist[PokemonData.MonToID(name) - 1].caught){
-        RegisterInDex();
-        types = new string[2];
-        types[0] = PokemonData.PokemonTypes[name][0];
-         types[1] = PokemonData.PokemonTypes[name][1];
+        if (!GameData.pokedexlist[PokemonData.MonToID(name) - 1].caught)
+        {
+            RegisterInDex();
+            types = new string[2];
+            types[0] = PokemonData.PokemonTypes[name][0];
+            types[1] = PokemonData.PokemonTypes[name][1];
         }
 
     }
+
     public void RegisterInDex()
     {
+
         GameData.pokedexlist[PokemonData.MonToID(name) - 1].seen = true;
-        GameData.pokedexlist[PokemonData.MonToID(name) - 1].caught = true;
+        if(!isWildPokemon) GameData.pokedexlist[PokemonData.MonToID(name) - 1].caught = true;
 
     }
     public void RecalculateStats()
@@ -69,7 +73,7 @@ public class Pokemon
         defense = Mathf.FloorToInt(((PokemonData.baseStats[name][2] + ivs[2]) * 2 + Mathf.Sqrt(statexp[2]) / 4) * level / 100) + 5;
         speed = Mathf.FloorToInt(((PokemonData.baseStats[name][3] + ivs[3]) * 2 + Mathf.Sqrt(statexp[3]) / 4) * level / 100) + 5;
         special = Mathf.FloorToInt(((PokemonData.baseStats[name][4] + ivs[4]) * 2 + Mathf.Sqrt(statexp[4]) / 4) * level / 100) + 5;
-        currenthp = maxhp/2;
+        currenthp = maxhp;
     }
     public void GenerateIvs()
     {
@@ -166,6 +170,7 @@ public class Pokemon
     public int speed;
     public int special;
     public int currenthp;
+    public bool isWildPokemon;
     public Status status;
     public int[] ivs = new int[5];
     public int[] statexp = new int[5];

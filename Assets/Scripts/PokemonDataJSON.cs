@@ -44,7 +44,7 @@ public class Serializer
 {
     
 
-    public static T[,] Load2D<T>(string filename) where T : class
+    public static T Load<T>(string filename) where T : class
     {
 
 
@@ -55,7 +55,7 @@ public class Serializer
             using (Stream stream = File.OpenRead(filename))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                return formatter.Deserialize(stream) as T[,];
+                return formatter.Deserialize(stream) as T;
             }
 
         }
@@ -64,10 +64,10 @@ public class Serializer
             Debug.Log(e.Message);
         }
 
-        return default(T[,]);
+        return default(T);
     }
 
-    public static void Save2D<T>(string filename, T[,] data) where T : class
+    public static void Save<T>(string filename, T data) where T : class
     {
         using (Stream stream = File.OpenWrite(filename))
         {
@@ -75,29 +75,12 @@ public class Serializer
             formatter.Serialize(stream, data);
         }
     }
-    public static void objectToXML<T>(string fileName, T type)
-    {
-        var serializer = new XmlSerializer(typeof(T));
-        using (var stream = new FileStream(Application.streamingAssetsPath + "/" + fileName, FileMode.Create))
-        {
-            serializer.Serialize(stream, type);
-        }
-
-    }
-    public static T XMLToObject<T>(string fileName) where T:class
-    {
-        var serializer = new XmlSerializer(typeof(T));
-        using (var stream = new FileStream(Application.streamingAssetsPath + "/" + fileName, FileMode.Open))
-        {
-            return serializer.Deserialize(stream) as T;
-        }
-    }
-    public static void objectToJSON (string fileName,object type){
+    public static void objectToJSON (string fileName,object type){ //save a json file to the StreamingAssets folder.
         string data =  JValue.Parse(JsonConvert.SerializeObject(type)).ToString(Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Application.streamingAssetsPath + "/" + fileName, data);
     }
 
-    public static T JSONtoObject<T> (string fileName){
+    public static T JSONtoObject<T> (string fileName){ //load a json file from the StreamingAssets folder.
         FileStream file;
         StreamReader sr;
         file = new FileStream(Application.streamingAssetsPath + "/" + fileName, FileMode.Open, FileAccess.Read);

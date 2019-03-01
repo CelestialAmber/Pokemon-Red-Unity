@@ -20,7 +20,8 @@ public class MapTileEditor : Editor
         //iterate through the gameobjects in the map container, and parse their values;
         if (GUILayout.Button("Save Map to file"))
         {
-            GridTile[,] loadedTiles = Serializer.Load2D<GridTile>(Application.streamingAssetsPath + "/map.txt");
+            GridTile[,] loadedTiles = Serializer.JSONtoObject<GridTile[,]>("map.json");
+           // GridTile[,] loadedTiles = Serializer.Load<GridTile[,]>(Application.streamingAssetsPath + "/map.txt");
 
             List<GameObject> foundtiles = new List<GameObject>();
 
@@ -100,13 +101,15 @@ public class MapTileEditor : Editor
                 gridTile.posy = y;
                 index++;
             }
-            Serializer.Save2D<GridTile>(Application.streamingAssetsPath + "/map.txt", loadedTiles);
+            Serializer.objectToJSON("map.json",loadedTiles);
+            //Serializer.Save<GridTile[,]>(Application.streamingAssetsPath + "/map.txt", loadedTiles);
 
         }
         if (GUILayout.Button("Save Empty map to file"))
         {
             GridTile[,] nullMap = new GridTile[GameData.mapWidth, GameData.mapHeight];
-            Serializer.Save2D<GridTile>(Application.streamingAssetsPath + "/map.txt", nullMap);
+            Serializer.objectToJSON("map.json", nullMap);
+            //Serializer.Save<GridTile[,]>(Application.streamingAssetsPath + "/map.txt", nullMap);
         }
         if (GUILayout.Button("Load editor data"))
         {

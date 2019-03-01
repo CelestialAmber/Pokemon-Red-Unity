@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     public bool displayingEmotion;
     public Sprite[] bubbles;
     public SpriteRenderer emotionbubble;
-    public MainMenu moon;
+    public MainMenu mainMenu;
     public ViewBio viewBio;
     public bool isMoving;
     public bool ledgejumping;
@@ -81,8 +81,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-       GameData.party.Add(new Pokemon("Nidoking",50));
-       GameData.party.Add(new Pokemon("Ditto",50));
+       GameData.AddPokemonToParty("Nidoking",50);
+       GameData.AddPokemonToParty("Ditto",50);
         GameData.party[0].moves[0].name = "Cut";
         GameData.party[0].moves[1].name = "Surf";
         GameData.party[0].moves[2].name = "Softboiled";
@@ -328,7 +328,6 @@ public class Player : MonoBehaviour
                                 EncounterData table = (currentTile.hasGrass ? currentAreaTable : PokemonData.encounters[55]);
                                 if(rand < currentAreaTable.encounterChance){
                                 rand = Random.Range(0,256);
-                                        rand = 254;
                                 Debug.Log("Wild encounter triggered. Choosing the encounter slot.");
                                 int chosenIndex = (
                                 rand <= 50 ? 0 : //51/256 = 19.9% chance of slot 0
@@ -580,8 +579,8 @@ yield return new WaitForSeconds(0.25f);
             if (Inputs.pressed("start") && !isMoving) {
                 SoundManager.instance.sfx.PlayOneShot(openStartMenuClip);
 				startMenuActive = true;
-                moon.gameObject.SetActive(true);
-				moon.Initialize ();
+                mainMenu.gameObject.SetActive(true);
+				mainMenu.Initialize ();
 			}
 			top.SetActive (!disabled);
 			bottom.SetActive (!disabled);
@@ -820,7 +819,7 @@ yield return new WaitForSeconds(0.25f);
         
         }
         battleManager.battleType = BattleType.Wild;
-        battleManager.enemyMons = new List<Pokemon>(new Pokemon[]{new Pokemon(pokemon.Item1,pokemon.Item2)});
+        battleManager.enemyMons = new List<Pokemon>(new Pokemon[]{new Pokemon(pokemon.Item1,pokemon.Item2,true)});
         battlemenu.SetActive(true);
         battleManager.battleoverlay.sprite = battleManager.blank;
         battleManager.Initialize();
@@ -845,15 +844,19 @@ public Bag bag;
 	public void CloseMenus(){
 
 Inputs.Enable("start");
-            bag.currentMenu = null;
+            bag.Close();
             cursor.SetActive(false);
             startMenuActive = false;
-            moon.selectedOption = 0;
-           moon.Close();
+            mainMenu.selectedOption = 0;
+           mainMenu.Close();
            
 	}
 
-    	public IEnumerator UseItem(string whatItem){
+    public void UseItem(string whatItem)
+    {
+        StartCoroutine(UseItemFunction(whatItem));
+    }
+    	public IEnumerator UseItemFunction(string whatItem){ //function called when using an item
         
         if (whatItem == "Bicycle")
         {
@@ -861,8 +864,8 @@ Inputs.Enable("start");
             switch (walkSurfBikeState)
             {
                 case 0:
-                SoundManager.instance.PlaySong(7);
-                    yield return Dialogue.instance.text(GameData.playerName + " got on the \nBICYCLE!");
+                SoundManager.instance.PlaySong(7); //play the biking music
+                    yield return Dialogue.instance.text(GameData.playerName + " got on the\nBICYCLE!");
                     
                     walkSurfBikeState = 1;
                     break;
@@ -872,7 +875,7 @@ Inputs.Enable("start");
                     walkSurfBikeState = 0;
                     break;
             }
-		    moon.gameObject.SetActive(false);
+		    mainMenu.gameObject.SetActive(false);
              bag.gameObject.SetActive(false);
             
 

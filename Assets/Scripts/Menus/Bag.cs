@@ -260,7 +260,7 @@ public class Bag : MonoBehaviour  {
 						if (selectedOption == 0) {
                             if (id.items.Count > 0) {
 								ItemMode1 ();
-                                StartCoroutine(Player.instance.UseItem (id.items [currentBagPosition].name));
+                                Player.instance.UseItem (id.items [currentBagPosition].name);
 								
 							}
 
@@ -375,6 +375,7 @@ public class Bag : MonoBehaviour  {
 			menu.SetActive(true);
 
 		}
+                if (currentMenu == null) indicator.SetActive(false);
 
 	}
 	}
@@ -420,4 +421,10 @@ public class Bag : MonoBehaviour  {
 UpdateBagScreen();
 	currentMenu = itemwindow;
 }
+    public void Close()
+    {
+        indicator.SetActive(false);
+        currentMenu = null;
+        this.gameObject.SetActive(false);
+    }
 }

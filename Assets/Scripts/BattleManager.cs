@@ -143,7 +143,7 @@ if(battleType == BattleType.Trainer){
 battleoverlay.sprite = battleOverlaySprites[0];
 playerpokeballs.SetActive(true);
 	Dialogue.instance.fastText = true;
-		yield return Dialogue.instance.text ("Wild " + enemyMons[0].name + "\nappeared!");
+		yield return Dialogue.instance.text ("Wild " + enemyMons[0].nickname + "\nappeared!");
 		enemystatsObject.SetActive (true);
 		playerpokeballs.SetActive(false);
 		battleoverlay.sprite = battleOverlaySprites[3];
@@ -152,7 +152,7 @@ playerpokeballs.SetActive(true);
 	
 		playermon = GameData.party[0];
 		enemymon = enemyMons[0];
-			yield return Dialogue.instance.text ("Go! " + playermon.name + "!",true);
+			yield return Dialogue.instance.text ("Go! " + playermon.nickname + "!",true);
 	while(initialTimer < 0.6f){
 		initialTimer += Time.deltaTime;
 	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(38,76,0),new Vector3(-26,76,0),initialTimer/0.6f);

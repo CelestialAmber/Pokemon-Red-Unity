@@ -316,7 +316,7 @@ public class MapManager : MonoBehaviour {
         centerPos = player.transform.position;
     }
     void LoadMapData(){
-        maptiles = Serializer.Load2D<GridTile>(Application.streamingAssetsPath + "/map.txt");
+        maptiles = Serializer.JSONtoObject<GridTile[,]>("map.json");
     }
     // Use this for initialization
     void Start () {
@@ -371,8 +371,6 @@ public class GridTile
     public bool isInteractable;
     public bool hasItem;
     public bool hasPokemon;
-    public bool hasPokedex;
-    public int pokemonIconIndex; //0:bird,1:snorlax,2:fossil
     public int frames;
     public string mainSprite;
     public List<Vector2[]> mainUvs = new List<Vector2[]>();
