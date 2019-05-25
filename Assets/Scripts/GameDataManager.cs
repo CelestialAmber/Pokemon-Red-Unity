@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class GameDataManager : MonoBehaviour {
     public GameObject[] gameScenes;
     public static GameDataManager instance;
-    public RenderTexture mainRender,postRender, templateRenderTexture;
-    public RectTransform renderRect;
+    public RenderTexture mainRender,postRender;
+    [HideInInspector]
+    public RenderTexture templateRenderTexture;
     public float ms;
     public Slots slots;
     public PokemonMenu pokemonMenu;
@@ -18,6 +19,7 @@ public class GameDataManager : MonoBehaviour {
     public BeginHandler beginHandler;
     public MainMenu mainMenu;
     public Pokedex pokedex;
+    public FontAtlas fontAtlas;
     private void Awake(){
         instance = this;
 
@@ -29,10 +31,8 @@ public class GameDataManager : MonoBehaviour {
         CreditsHandler.instance = creditsHandler;
         BeginHandler.instance = beginHandler;
         Pokedex.instance = pokedex;
-        slots.Init();
-        title.InitVersion();
-        introHandler.InitVersion();
-        beginHandler.InitVersion();
+        //VersionManager executes before GameDataManager, so the version is set in GameData beforehand
+        VersionInit();
         GameData.Init();
         GameData.Save();
         GameData.money = 3000;
@@ -46,14 +46,23 @@ public class GameDataManager : MonoBehaviour {
         postRender = new RenderTexture(160, 144, 1);
         postRender.filterMode = FilterMode.Point;
         templateRenderTexture = new RenderTexture(mainRender);
-        renderRect.sizeDelta = new Vector2(1200, renderRect.sizeDelta.y);
         
 
         Camera.main.targetTexture = mainRender;
 
     }
+    public void VersionInit(){ //function to initialize everything that changes based on the version
+        slots.Init();
+        title.InitVersion();
+        introHandler.InitVersion();
+        beginHandler.InitVersion();
+        PokemonDataJSON.InitVersion();
+        FontAtlasInit();
+    }
     public void BootGame(Version version){
         VersionManager.instance.version = version;
+        GameData.version = version;
+        VersionInit();
         introHandler.gameObject.SetActive(true);
         introHandler.Init();
     }
@@ -61,9 +70,17 @@ public class GameDataManager : MonoBehaviour {
         introHandler.ResetGame();
     }
 	// Use this for initialization
-	void Start () {
-		
-	}
+	private void FontAtlasInit()
+    {
+        GameData.fontAtlas = fontAtlas;
+        if (GameData.version == Version.Blue)
+        {
+            for (int i = 0; i < 6; i++)
+            {
+               GameData.fontAtlas.fontChars[i + 92] = GameData.fontAtlas.blueSlotsChars[i];
+            }
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {

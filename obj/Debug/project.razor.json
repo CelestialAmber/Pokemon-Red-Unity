@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Users/joannekhodges/Desktop/Unity Projects/Pokemon-Red-Unity/Assembly-CSharp.csproj",
+  "TargetFramework": "v4.5",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

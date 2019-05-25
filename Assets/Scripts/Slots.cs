@@ -29,7 +29,7 @@ public class Slots : MonoBehaviour {
 	public int payout;
 	public bool stayingInModeSuper;
 	public int GuaranteedModeGood;
-    public CustomText credittext, payouttext;
+    public CustomTextTexture credittext, payouttext;
 	public int betamount;
     public GameObject[] blueRows, redRows;
     public Sprite blueBG, redBG;
@@ -37,7 +37,6 @@ public class Slots : MonoBehaviour {
     public GameObject blueRowsObject, redRowsObject;
     public static Slots instance;
     public int row1Index, row2Index, row3Index, row1Half, row2Half, row3Half;
-    public bool funMode;
 
     public AudioClip startSlotsSound, payoutSound, stopReelSound;
     public Animator slotPointsAnimator;
@@ -47,7 +46,7 @@ public class Slots : MonoBehaviour {
     public void Init()
     {
         instance = this;
-        if (VersionManager.instance.version == Version.Red)
+        if (GameData.version == Version.Red)
         {
             row1 = redRows[0];
             row2 = redRows[1];
@@ -68,11 +67,6 @@ public class Slots : MonoBehaviour {
     IEnumerator DecideBet(){
 		int RandomNumber;
 		int ModeNumber;
-        if (funMode)
-        {
-            GuaranteedModeGood = 999;
-            stayingInModeSuper = true;
-        }
 		yield return StartCoroutine(Dialogue.instance.slots ());
         if (Dialogue.instance.selectedOption == 3)
         {
@@ -346,26 +340,7 @@ public class Slots : MonoBehaviour {
                 float timeToWait;
                 if (whatwaslinedup == "7" || whatwaslinedup == "BAR") timeToWait = 0.016f * 3f;
                 else timeToWait = 0.016f * 8f;
-                switch (whatwaslinedup){
-                    case "CHERRY":
-                        whatwaslinedup = "à";
-                        break;
-                    case "FISH":
-                        whatwaslinedup = "á";
-                        break;
-                    case "BIRD":
-                        whatwaslinedup = "â";
-                        break;
-                    case "MOUSE":
-                        whatwaslinedup = "ä";
-                        break;
-                    case "BAR":
-                        whatwaslinedup = "ã";
-                        break;
-                    case "7":
-                        whatwaslinedup = "ā";
-                        break;
-                }
+                whatwaslinedup = "<" + (whatwaslinedup == "7" ? "SEVEN" : whatwaslinedup) + ">";
                
                 yield return Dialogue.instance.text (whatwaslinedup + " lined up!\nScored " + payout + "!");
                 yield return Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + "!",true);

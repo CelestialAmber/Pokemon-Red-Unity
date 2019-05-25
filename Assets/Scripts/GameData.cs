@@ -47,6 +47,13 @@ public static class IntExtensions{
        throw new UnityException("Incorrect format");
 
     }
+    public static int UnderflowUInt24(this int input){ //underflow function for the exp bug
+        if(input < 0){
+             input += (int)Mathf.Pow(2,24);
+        }
+        else if(input >= Mathf.Pow(2,24)) input %= (int)Mathf.Pow(2,24);
+        return input;
+    }
 }
 
 
@@ -98,6 +105,10 @@ public class GameData {
     public static int hours, minutes, seconds;
     public static Starter chosenStarter;
     public static bool hasMetBill; //should Bill's PC use his name?
+
+    public static Version version;
+
+    public static FontAtlas fontAtlas;
 
     public static void Save()
     {

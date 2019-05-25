@@ -4,14 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - WallObject
-  - LedgeDown
-  - LedgeLeft
-  - LedgeRight
   - TallGrass
   - Water
   - MapCollider
   - Tree
+  - Slots
+  - Pokeball
+  - Ledge
+  - MapCollision
   layers:
   - Default
   - TransparentFX
@@ -21,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - MapEditor
-  - ConsoleScene
+  - Map
+  - 
   - Player
   - MapCollider
   - Object

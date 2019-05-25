@@ -103,7 +103,7 @@ public class Inputs : MonoBehaviour
     public static bool pressed(string button)
     {
 
-        if (DebugConsole.isActive || GameData.isPaused) return false;
+        if (GameData.isPaused) return false;
 
         int index = Inputs.keyindices[button];
         if (buttonDisabled[index]) return false;
@@ -117,7 +117,7 @@ public class Inputs : MonoBehaviour
     }
     public static bool held(string button)
     {
-        if (DebugConsole.isActive || GameData.isPaused) return false;
+        if (GameData.isPaused) return false;
         int index = Inputs.keyindices[button];
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;
@@ -129,7 +129,7 @@ public class Inputs : MonoBehaviour
     }
     public static bool released(string button)
     {
-        if (DebugConsole.isActive || GameData.isPaused) return false;
+        if (GameData.isPaused) return false;
         int index = Inputs.keyindices[button];
         if (buttonDisabled[index]) return false;
         if (index == 6 && dialogueCheck) return false;

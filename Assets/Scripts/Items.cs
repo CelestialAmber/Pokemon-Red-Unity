@@ -19,7 +19,6 @@ public class Items : MonoBehaviour
     public List<Item> items = new List<Item>();
     //for PC
     public List<Item> pcItems = new List<Item>();
-    public PC lc;
 
     public List<string> ViridianItems = new List<string>(
         new string[]{
@@ -112,7 +111,7 @@ public class Items : MonoBehaviour
         "Max Repel"
     });
 
-    public string[] keyitems = {
+    public List<string> keyitems = new List<string>(new string[]{
         "Bike Voucher",
         "Bicycle",
         "Helix Fossil",
@@ -134,7 +133,7 @@ public class Items : MonoBehaviour
         "Silph Scope",
         "Super Rod",
         "Town Map" 
-    };
+    });
 	// Use this for initialization
 
     public static Items instance;
@@ -144,8 +143,6 @@ public class Items : MonoBehaviour
     }
 
 	void Start () {
-        checkKeyItemsBag();
-        checkKeyItemsPC();
 	}
 	
 	// Update is called once per frame
@@ -157,26 +154,7 @@ public class Items : MonoBehaviour
 
 
 		}
-    public void checkKeyItemsBag(){
-		for (int i = 0; i < items.Count; i++) {
-                if (System.Array.IndexOf(keyitems, items[i].name) > -1) {
-                items[i].isKeyItem = true;
-				}
-			
 
-		}
-	}
-
-
-    public void checkKeyItemsPC(){
-		for (int i = 0; i < pcItems.Count; i++) {
-                if (System.Array.IndexOf(keyitems, pcItems[i].name) > -1)
-                {
-                        pcItems[i].isKeyItem = true;
-                    
-                }
-		}
-	}
     //Checks whether the requested item exists in the bag.
     public bool hasItem(string name){
         foreach(Item item in items){
@@ -197,36 +175,77 @@ public class Items : MonoBehaviour
 
     }
     //Adds an item to the bag.
-    public void AddItem(string name, int quantity, bool isKeyItem)
+    public void AddItem(string name, int quantity)
     {
         bool alreadyInBag = false;
 
-        Item inBagItem = new Item("", 0,false);
+        Item itemToAdd = new Item(name, quantity,keyitems.Contains(name));
         foreach (Item item in items)
         {
             if (item.name == name)
             {
-                inBagItem = item;
+                itemToAdd = item;
                 alreadyInBag = true;
                 break;
             }
 
         }
-        //If the item is already in the bag, just increase the stack.
-        if (alreadyInBag) items[items.IndexOf(inBagItem)].quantity += quantity;
-        else if (items.Count < 20) items.Add(new Item(name, quantity,isKeyItem));
-
-        checkKeyItemsBag();
-
-
-
+        //If the item is already in the inventory, and the item isn't a key item, just increase the stack.
+        if (alreadyInBag){ 
+           items[items.IndexOf(itemToAdd)].quantity += quantity;
+           int newQuantity = items[items.IndexOf(itemToAdd)].quantity;
+           int newStackAmount;
+           if(newQuantity > 99){ //if the stack is bigger than 99, then try to create a new stack
+            newStackAmount = newQuantity - 99;
+            if(items.Count < 20)items.Add(new Item(itemToAdd.name,newStackAmount,itemToAdd.isKeyItem));
+            //if the given inventory is full, then revert the stack's quantity
+            else items[items.IndexOf(itemToAdd)].quantity -= quantity;
+           }
+        }
+        else if (items.Count < 20) items.Add(itemToAdd);
     }
+
+       //Adds an item to the PC.
+    public void AddItemPC(string name, int quantity)
+    {
+        bool alreadyInPC = false;
+
+        Item itemToAdd = new Item(name, quantity,keyitems.Contains(name));
+        foreach (Item item in pcItems)
+        {
+            if (item.name == name)
+            {
+                itemToAdd = item;
+                alreadyInPC = true;
+                break;
+            }
+
+        }
+        //If the item is already in the inventory, and the item isn't a key item, just increase the stack.
+        if (alreadyInPC){ 
+           pcItems[pcItems.IndexOf(itemToAdd)].quantity += quantity;
+           int newQuantity = pcItems[pcItems.IndexOf(itemToAdd)].quantity;
+           int newStackAmount;
+           if(newQuantity > 99){ //if the stack is bigger than 99, then try to create a new stack
+            newStackAmount = newQuantity - 99;
+            if(pcItems.Count < 50)pcItems.Add(new Item(itemToAdd.name,newStackAmount,itemToAdd.isKeyItem));
+            //if the given inventory is full, then revert the stack's quantity
+            else pcItems[pcItems.IndexOf(itemToAdd)].quantity -= quantity;
+           }
+        }
+        else if (items.Count < 20) pcItems.Add(itemToAdd);
+    }
+  
     public void RemoveItem(int amount, int index)
     {
-
         items[index].quantity -= amount;
         if (items[index].quantity <= 0) items.RemoveAt(index);
-    }
+        }
+    public void RemoveItemPC(int amount, int index)
+    {
+        pcItems[index].quantity -= amount;
+        if (pcItems[index].quantity <= 0) pcItems.RemoveAt(index);
+        }
 
 	}
 

@@ -23,8 +23,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -32,8 +32,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.73333335
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -42,7 +42,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: UI/PlayerUI/playerMonMask
+    path: PlayerUI/playerMonMask
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -51,8 +51,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -60,8 +60,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -69,8 +69,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.51666665
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -79,7 +79,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: UI/PlayerUI/playerMon
+    path: PlayerUI/playerMon
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
@@ -99,7 +99,7 @@ AnimationClip:
     - time: 0.6666667
       value: {fileID: 21300000, guid: ee4a4c396e29c4948b645f716871005c, type: 3}
     attribute: m_Sprite
-    path: UI/PlayerUI/playerMonMask
+    path: PlayerUI/playerMonMask
     classID: 114
     script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_SampleRate: 60
@@ -110,21 +110,21 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1479122663
+      path: 2782016470
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4248227886
+      path: 1095806952
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1479122663
+      path: 2782016470
       attribute: 2015549526
       script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
       typeID: 114
@@ -165,8 +165,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -174,8 +174,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.73333335
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -184,7 +184,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: UI/PlayerUI/playerMonMask
+    path: PlayerUI/playerMonMask
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -193,8 +193,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -202,8 +202,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.5
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -211,8 +211,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.51666665
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: Infinity
+        outSlope: Infinity
         tangentMode: 103
         weightedMode: 0
         inWeight: 0
@@ -221,7 +221,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: UI/PlayerUI/playerMon
+    path: PlayerUI/playerMon
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

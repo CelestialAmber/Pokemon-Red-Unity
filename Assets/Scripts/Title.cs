@@ -36,7 +36,7 @@ public class Title : MonoBehaviour {
     }
     public void InitVersion()
     {
-        switch (VersionManager.instance.version)
+        switch (GameData.version)
         {
             case Version.Red:
                 titleVersionImage.sprite = redVersionText;
@@ -54,7 +54,7 @@ public class Title : MonoBehaviour {
     }
     public void ChangePokemon()
     {
-        switch (VersionManager.instance.version)
+        switch (GameData.version)
         {
             case Version.Red:
                 pokemonImage.sprite = redMons[ChosenPokemon];
@@ -108,13 +108,15 @@ public class Title : MonoBehaviour {
 			}
             cursor.SetPosition(8, 120 - selectedOption * 16);
         }
-		
-			if (Inputs.pressed("a")) {
-			if (currentMenu == null && !titlePokemon.isMoving) {
+		if(Inputs.pressed("a") || Inputs.pressed("start")){
+            if (currentMenu == null && !titlePokemon.isMoving) {
                
 				StartCoroutine("GotoStart");
 
 			}
+        }
+			if (Inputs.pressed("a")) {
+			
 			if (currentMenu == nodatamenu && selectedOption == 0) {
 				tutorialmanager.SetActive (true);
                 BeginHandler.instance.Init();

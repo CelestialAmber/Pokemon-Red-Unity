@@ -23,7 +23,7 @@ public class BeginHandler : MonoBehaviour {
     // Use this for initialization
     public void InitVersion()
     {
-        switch (VersionManager.instance.version)
+        switch (GameData.version)
         {
             case Version.Red:
                 playerNameMenuImage.sprite = redPlayerMenu;
@@ -39,24 +39,22 @@ public class BeginHandler : MonoBehaviour {
     {
         GameData.atTitleScreen = true;
         tutanim.SetTrigger("reset");
+        cursor.SetActive (false);
     }
 	// Update is called once per frame
 	void Update () {
 		
-		if (currentmenu == null && currentmenu != nameselectionmenu) {
-			cursor.SetActive (false);
-		} else {
-            cursor.SetPosition(8,120 - 16 * selectedOption);
-		
-			cursor.SetActive (true);
+		if (currentmenu == null && currentmenu != nameselectionmenu)  {
 		
             if (Inputs.pressed("down")) {
 				selectedOption++;
                 MathE.Clamp(ref selectedOption, 0, 3);
+                 cursor.SetPosition(8,120 - 16 * selectedOption);
 			}
             if (Inputs.pressed("up")) {
 				selectedOption--;
                 MathE.Clamp(ref selectedOption, 0, 3);
+                 cursor.SetPosition(8,120 - 16 * selectedOption);
 			}
 	
 		}
@@ -119,6 +117,7 @@ public class BeginHandler : MonoBehaviour {
                 tutanim.SetTrigger("transition");
                 Dialogue.instance.enabled = true;
                 givingRedAName = false;
+                 cursor.SetActive(false);
             }
         }
 
@@ -130,7 +129,7 @@ public class BeginHandler : MonoBehaviour {
                 }
 			else {
                     currentmenu = null;
-                    switch (VersionManager.instance.version)
+                    switch (GameData.version)
                     {
                         case Version.Blue:
                             switch (selectedOption)
@@ -165,6 +164,7 @@ public class BeginHandler : MonoBehaviour {
                     tutanim.SetTrigger("transition");
                     Dialogue.instance.enabled = true;
                     givingRedAName = false;
+                    cursor.SetActive(false);
                 }
             }
         }
@@ -175,22 +175,22 @@ public class BeginHandler : MonoBehaviour {
 		Dialogue.instance.deactivated = true;
 		currentmenu = null;
 		yield return Dialogue.instance.text ("Hello there!\nWelcome to the");
-		yield return Dialogue.instance.cont ("world of POKeMON!");
+		yield return Dialogue.instance.cont ("world of POKéMON!");
 		yield return Dialogue.instance.text ("My name is OAK!\nPeople call me");
-		yield return Dialogue.instance.cont ("the POKeMON PROF!");
+		yield return Dialogue.instance.cont ("the POKéMON PROF!");
        tutanim.SetTrigger("transition");
 
     }
 	public IEnumerator SecondOakDialogue(){
 		yield return Dialogue.instance.text ("This world is\ninhabited by");
 		yield return Dialogue.instance.cont ("creatures called");
-		yield return Dialogue.instance.cont ("POKeMON!",true);
+		yield return Dialogue.instance.cont ("POKéMON!",true);
         yield return SoundManager.instance.PlayCryCoroutine(29);
 		yield return Dialogue.instance.text("For some people,\nPOKéMON are");
 		yield return Dialogue.instance.cont ("pets. Others use");
 		yield return Dialogue.instance.cont ("them for fights.");
 		yield return Dialogue.instance.text("Myself...");
-		yield return Dialogue.instance.text ("I study POKeMON\nas a profession.");
+		yield return Dialogue.instance.text ("I study POKéMON\nas a profession.");
         tutanim.SetTrigger("transition");
 
     }
@@ -199,7 +199,8 @@ public class BeginHandler : MonoBehaviour {
 		yield return Dialogue.instance.text ("First, what is\nyour name?");
         tutanim.SetTrigger("transition");
         Dialogue.instance.enabled = false;
-
+        while(!tutanim.GetCurrentAnimatorStateInfo(0).IsName("moveredright")) yield return new WaitForEndOfFrame();
+        cursor.SetActive(true);
 		currentmenu = rednamemenu;
 		selectedOption = 0;
 		givingRedAName = true;
@@ -218,7 +219,8 @@ public class BeginHandler : MonoBehaviour {
 		yield return Dialogue.instance.text ("...Erm, what is\nhis name again?");
         tutanim.SetTrigger("transition");
         Dialogue.instance.enabled = false;
-
+        while(!tutanim.GetCurrentAnimatorStateInfo(0).IsName("movegaryright")) yield return new WaitForEndOfFrame();
+        cursor.SetActive(true);
 		currentmenu = garynamemenu;
 		selectedOption = 0;
 		givingGaryAName = true;
@@ -235,7 +237,7 @@ public class BeginHandler : MonoBehaviour {
 		yield return Dialogue.instance.text ("Your very own\nPOKéMON legend is");
 		yield return Dialogue.instance.cont("about to unfold!");
         yield return Dialogue.instance.text("A world of dreams\nand adventures");
-		yield return Dialogue.instance.cont ("with POKeMON");
+		yield return Dialogue.instance.cont ("with POKéMON");
 		yield return Dialogue.instance.cont ("awaits! Let's go!");
         SoundManager.instance.FadeSong();
         tutanim.SetTrigger("transition");

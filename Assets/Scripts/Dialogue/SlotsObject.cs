@@ -19,7 +19,7 @@ public class SlotsObject : MonoBehaviour
                     StartCoroutine(Player.instance.DisplayEmotiveBubble(1));
                     while (Player.instance.displayingEmotion)
                     {
-                        yield return new WaitForSeconds(0.1f);
+                        yield return new WaitForSeconds(0.01f);
                         if (!Player.instance.displayingEmotion)
                         {
                             break;

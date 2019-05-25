@@ -8,13 +8,14 @@ public enum Version{
 }
 public class VersionManager : MonoBehaviour {
     public Version version;
-    public Image frame, nintendoSwitchFrame;
+    public Image frame;
     public Sprite[] frames;
     public GameObject sgbCanvas;
     public Camera renderCamera;
     public static VersionManager instance;
     public void Awake(){
         instance = this;
+        GameData.version = version;
     }
     private void Start()
     {

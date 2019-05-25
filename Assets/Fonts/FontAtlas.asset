@@ -1,0 +1,345 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdbb5fd2bc792b4faf115901fdbcde6, type: 3}
+  m_Name: FontAtlas
+  m_EditorClassIdentifier: Assembly-CSharp::FontAtlas
+  keys:
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
+  - M
+  - N
+  - O
+  - P
+  - Q
+  - R
+  - S
+  - T
+  - U
+  - V
+  - W
+  - X
+  - Y
+  - Z
+  - (
+  - )
+  - ':'
+  - ;
+  - '['
+  - ']'
+  - a
+  - b
+  - c
+  - d
+  - e
+  - f
+  - g
+  - h
+  - i
+  - j
+  - k
+  - l
+  - m
+  - n
+  - o
+  - p
+  - q
+  - r
+  - s
+  - t
+  - u
+  - v
+  - w
+  - x
+  - y
+  - z
+  - "\xE9"
+  - '''d'
+  - '''l'
+  - '''s'
+  - '''t'
+  - '''v'
+  - LEVEL
+  - ' '
+  - ''''
+  - PK
+  - MN
+  - '-'
+  - '''r'
+  - '''m'
+  - '?'
+  - '!'
+  - .
+  - "\u2642"
+  - $
+  - '*'
+  - ^
+  - /
+  - ','
+  - "\u2640"
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - CHERRY
+  - FISH
+  - BIRD
+  - MOUSE
+  - BAR
+  - SEVEN
+  - _
+  fontChars:
+  - texPos: {x: 0, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 8, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 16, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 24, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 32, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 40, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 48, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 56, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 64, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 72, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 80, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 88, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 96, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 104, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 112, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 120, y: 88}
+    size: {x: 8, y: 8}
+  - texPos: {x: 0, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 8, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 16, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 24, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 32, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 40, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 48, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 56, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 64, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 72, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 80, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 88, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 96, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 104, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 112, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 120, y: 80}
+    size: {x: 8, y: 8}
+  - texPos: {x: 0, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 8, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 16, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 24, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 32, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 40, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 48, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 56, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 64, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 72, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 80, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 88, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 96, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 104, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 112, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 120, y: 72}
+    size: {x: 8, y: 8}
+  - texPos: {x: 0, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 8, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 16, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 24, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 32, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 40, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 48, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 56, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 64, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 72, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 80, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 88, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 96, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 104, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 112, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 120, y: 64}
+    size: {x: 8, y: 8}
+  - texPos: {x: 0, y: 56}
+    size: {x: 8, y: 8}
+  - texPos: {x: 8, y: 56}
+    size: {x: 8, y: 8}
+  - texPos: {x: 0, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 8, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 16, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 24, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 32, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 40, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 48, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 56, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 64, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 120, y: 40}
+    size: {x: 8, y: 8}
+  - texPos: {x: 0, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 8, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 16, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 24, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 32, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 40, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 48, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 56, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 64, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 72, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 80, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 88, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 96, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 104, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 112, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 120, y: 32}
+    size: {x: 8, y: 8}
+  - texPos: {x: 0, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 32, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 64, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 96, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 0, y: 0}
+    size: {x: 16, y: 16}
+  - texPos: {x: 32, y: 0}
+    size: {x: 16, y: 16}
+  - texPos: {x: 16, y: 56}
+    size: {x: 8, y: 8}
+  blueSlotsChars:
+  - texPos: {x: 16, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 48, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 80, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 112, y: 16}
+    size: {x: 16, y: 16}
+  - texPos: {x: 16, y: 0}
+    size: {x: 16, y: 16}
+  - texPos: {x: 48, y: 0}
+    size: {x: 16, y: 16}
+  bracketChars:
+  - name: CHERRY
+    index: 92
+  - name: FISH
+    index: 93
+  - name: BIRD
+    index: 94
+  - name: MOUSE
+    index: 95
+  - name: BAR
+    index: 96
+  - name: SEVEN
+    index: 97
+  - name: LEVEL
+    index: 64
+  - name: PK
+    index: 67
+  - name: MN
+    index: 68

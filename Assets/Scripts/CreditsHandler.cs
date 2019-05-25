@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class CreditsHandler : MonoBehaviour {
-	public Text top, middle, low, bottom;
+	public CustomTextTexture top, middle, low, bottom;
 	public int CreditIndex, MonIndex;
 	public Image monimage;
 	public Sprite[] mons = new Sprite[16];
 	public GameObject textboxes;
     public static CreditsHandler instance;
     public Animator anim;
+	
+	public bool isPlayingCredits;
     private void Awake()
     {
         instance = this;
     }
     // Use this for initialization
-    void Start () {
-		
+    void OnEnable(){
+		Init();
 	}
    public void Init()
     {
         Player.disabled = true;
+		isPlayingCredits = true;
         SoundManager.instance.PlaySongNoLoop(8);
         CreditIndex = -2;
         MonIndex = 1;

@@ -6,7 +6,7 @@ public class Badges : MonoBehaviour {
 	public Image[] allbadges = new Image[8];
 	public Sprite[] notobtainedimages = new Sprite[8];
 	public Sprite[] obtainedimages = new Sprite[8];
-    public CustomText nameText, moneyText, timeText;
+    public CustomTextTexture nameText, moneyText, timeText;
     public GameCursor cursor;
 
 	// Use this for initialization

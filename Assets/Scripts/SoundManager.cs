@@ -55,6 +55,7 @@ public Song[] songs;
 41:Trainer Win
 42:Wild Pokemon Win
 43:Viridian Forest
+44:Unused Song(Prototype Trading Music)
 */
 public int currentSong;
 public static SoundManager instance;
@@ -167,7 +168,7 @@ isMusicPlaying = false;
 
 }
 public void PlayABSound(){
-sfx.PlayOneShot(abSound,0.16f);
+sfx.PlayOneShot(abSound,0.3f);
 }
     public void PlayGoInsideSound()
     {
@@ -204,10 +205,10 @@ public void SetMusicNormal(){
 }
 public static int[] MapSongs = 
 {
-21,
+21, //Pallet Town
 17,//Oak's Lab
 35,//Route 1
-22,//ViridianCity
+22,//ViridianCity 
 23, //Pokemon Center
 23, //Pokemart
 24, //Gym
@@ -289,7 +290,7 @@ public static int[] MapSongs =
 4, //Trade Center
 4, //Colloseum
 4, //Bill's House
-4
+4 
 };
 }
 

@@ -11,26 +11,15 @@ public class Bag : MonoBehaviour  {
     public int selectedOption;
 	public GameObject[] allMenus;
 	public int ItemMode;
-	public int selecteditem;
-	//1 is withdraw;
-	//2 is deposit;
-	//3 is toss;
-	public List<ItemSlot> Items = new List<ItemSlot>(4);
-	public Items id;
+	public List<ItemSlot> itemSlots = new List<ItemSlot>(4);
 	public int currentBagPosition;
 	public int selectBag;
 	public int amountToTask;
 	public int maximumItem;
-	public CustomText amountText;
-
-	public GameObject last;
+	public CustomTextTexture amountText;
     public RectTransform selectCursor;
-	public bool alreadyInBag;
-	public bool alreadydidtext;
-	public int keep;
     public int offscreenindexup, offscreenindexdown;
     public bool switching;
-	public bool withdrawing;
 
     public static Bag instance;
     private void Awake()
@@ -45,8 +34,8 @@ public class Bag : MonoBehaviour  {
 	}
 
 	public bool itemInInventory(string item){
-		for (int i = 0; i < id.items.Count; i++) {
-			if (id.items[i].name == item) {
+		for (int i = 0; i < Items.instance.items.Count; i++) {
+			if (Items.instance.items[i].name == item) {
 				return true;
 			}
 
@@ -68,23 +57,23 @@ public class Bag : MonoBehaviour  {
         for (int i = 0; i < 4; i++)
         {
             int currentItem = offscreenindexup + 1 + i;
-            if (currentItem > offscreenindexup && currentItem < id.items.Count)
+            if (currentItem > offscreenindexup && currentItem < Items.instance.items.Count)
             {
-                Items[i].mode = SlotMode.Item;
-                Items[i].Name = id.items[currentItem].name;
-                Items[i].intquantity = id.items[currentItem].quantity;
-                Items[i].isKeyItem = id.items[currentItem].isKeyItem;
-            }else if(currentItem == id.items.Count){
-                Items[i].mode = SlotMode.Cancel;
+                itemSlots[i].mode = SlotMode.Item;
+                itemSlots[i].Name = Items.instance.items[currentItem].name;
+                itemSlots[i].intquantity = Items.instance.items[currentItem].quantity;
+                itemSlots[i].isKeyItem = Items.instance.items[currentItem].isKeyItem;
+            }else if(currentItem == Items.instance.items.Count){
+                itemSlots[i].mode = SlotMode.Cancel;
                  
             }else
             {
-                Items[i].mode = SlotMode.Empty;
+                itemSlots[i].mode = SlotMode.Empty;
 
             }
         }
         cursor.SetPosition(40,104 - 16 * (currentBagPosition - offscreenindexup - 1));
-        if (offscreenindexdown < id.items.Count) indicator.SetActive(true);
+        if (offscreenindexdown < Items.instance.items.Count) indicator.SetActive(true);
         else indicator.SetActive(false);
         if (switching)
         {
@@ -143,12 +132,12 @@ public class Bag : MonoBehaviour  {
             {
                 currentBagPosition++;
 
-                if (currentBagPosition == offscreenindexdown && currentBagPosition <= id.items.Count && id.items.Count > 3)
+                if (currentBagPosition == offscreenindexdown && currentBagPosition <= Items.instance.items.Count && Items.instance.items.Count > 3)
                 {
                     offscreenindexup++;
                     offscreenindexdown++;
                 }
-                MathE.Clamp(ref currentBagPosition, 0, id.items.Count);
+                MathE.Clamp(ref currentBagPosition, 0, Items.instance.items.Count);
                 UpdateBagScreen();
                
             }
@@ -161,15 +150,15 @@ public class Bag : MonoBehaviour  {
                     offscreenindexup--;
                     offscreenindexdown--;
                 }
-                MathE.Clamp(ref currentBagPosition, 0, id.items.Count);
+                MathE.Clamp(ref currentBagPosition, 0, Items.instance.items.Count);
                 UpdateBagScreen();
                
 
             }
            
 
-			if (currentBagPosition != id.items.Count) {
-				maximumItem = id.items [currentBagPosition].quantity;
+			if (currentBagPosition != Items.instance.items.Count) {
+				maximumItem = Items.instance.items [currentBagPosition].quantity;
 			} else {
 				maximumItem = 0;
 
@@ -197,7 +186,7 @@ public class Bag : MonoBehaviour  {
 			}
 		
 		}
-        if (Inputs.pressed("select") && Dialogue.instance.finishedText && currentBagPosition != id.items.Count) {
+        if (Inputs.pressed("select") && Dialogue.instance.finishedText && currentBagPosition != Items.instance.items.Count) {
 			if (!switching) {
                 switching = true;
                 selectCursor.gameObject.SetActive(true);
@@ -206,9 +195,9 @@ public class Bag : MonoBehaviour  {
 			} else {
                 //our Bag
                 selectCursor.gameObject.SetActive(false);
-                Item item = id.items[selectBag];
-                id.items[selectBag] = id.items[currentBagPosition];
-                id.items[currentBagPosition] = item;
+                Item item = Items.instance.items[selectBag];
+                Items.instance.items[selectBag] = Items.instance.items[currentBagPosition];
+                Items.instance.items[currentBagPosition] = item;
                 switching = false;
                 UpdateBagScreen();
                 
@@ -228,7 +217,7 @@ public class Bag : MonoBehaviour  {
                    
 					
                         
-                        if (currentBagPosition == id.items.Count) {
+                        if (currentBagPosition == Items.instance.items.Count) {
 
 							MainMenu.instance.selectedOption = 0;
 							MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
@@ -258,16 +247,16 @@ public class Bag : MonoBehaviour  {
 				
                    
 						if (selectedOption == 0) {
-                            if (id.items.Count > 0) {
+                            if (Items.instance.items.Count > 0) {
 								ItemMode1 ();
-                                Player.instance.UseItem (id.items [currentBagPosition].name);
+                                Player.instance.UseItem (Items.instance.items [currentBagPosition].name);
 								
 							}
 
 
 						}
 						if (selectedOption == 1) {
-							if (id.items.Count > 0) {
+							if (Items.instance.items.Count > 0) {
 							
 
 								ItemMode2 ();
@@ -295,11 +284,11 @@ public class Bag : MonoBehaviour  {
 				
 						if (ItemMode == 2) {
 						
-							if (!id.items[currentBagPosition].isKeyItem) {
-                                yield return Dialogue.instance.text("Is it OK to toss \n" + id.items[currentBagPosition].name + "?");
+							if (!Items.instance.items[currentBagPosition].isKeyItem) {
+                                yield return Dialogue.instance.text("Is it OK to toss \n" + Items.instance.items[currentBagPosition].name + "?");
                                 yield return StartCoroutine(Dialogue.instance.prompt());
                                 if(Dialogue.instance.selectedOption == 0){
-                                    yield return Dialogue.instance.text("Threw away " + id.items[currentBagPosition].name + ".");
+                                    yield return Dialogue.instance.text("Threw away " + Items.instance.items[currentBagPosition].name + ".");
                                     StartCoroutine(TossItem());
 									
 
@@ -390,7 +379,7 @@ public class Bag : MonoBehaviour  {
 	
 		 
 		Dialogue.instance.Deactivate ();
-		RemoveItem (amountToTask);
+		Items.instance.RemoveItem(amountToTask, currentBagPosition);
 		cursor.SetActive (true);
         UpdateBagScreen();
 		currentMenu = itemwindow;
@@ -399,12 +388,6 @@ public class Bag : MonoBehaviour  {
 	}
 	
 
-
-	public void RemoveItem(int amount){
-		
-			id.items [currentBagPosition].quantity -= amount;
-        if (id.items[currentBagPosition].quantity <= 0) id.items.RemoveAt(currentBagPosition);
-	}
 	void ItemMode1(){
 		//code
 	}

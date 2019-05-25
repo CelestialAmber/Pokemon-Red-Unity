@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.U2D;
-using System.Linq;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.IO;
 public enum Direction{
 Up,
@@ -26,7 +22,6 @@ public class Player : MonoBehaviour
     public bool inBattle;
     public bool manuallyWalking;
     public bool walkedfromwarp;
-    public GameObject credits;
     public int walkSurfBikeState;
     public Direction direction;
     public GameObject top, bottom;
@@ -35,7 +30,6 @@ public class Player : MonoBehaviour
     public bool isDisabled;
     public GridTile itemCheck;
     public bool startMenuActive, menuActive;
-    public GameObject startmenu;
     public bool displayingEmotion;
     public Sprite[] bubbles;
     public SpriteRenderer emotionbubble;
@@ -52,7 +46,7 @@ public class Player : MonoBehaviour
     //1 up, 2down, 3 left, 4 right
     public bool cannotMoveLeft, cannotMoveRight, cannotMoveUp, cannotMoveDown;
     public bool canUseBike;
-    public float speed = 2.0f;
+    public float speed = 0.0f;
     public Vector3 pos;
     public int holdFrames;
     public Map currentArea;
@@ -63,7 +57,11 @@ public class Player : MonoBehaviour
     public bool facingTree;
     private bool[] objectExists = new bool[4];
     public GameObject movingHitbox;
-        public UnityEvent onHitWarp, onLoadMap, onEncounterTrainer;
+        public UnityEvent onHitWarp, onEncounterTrainer;
+
+        private float baseMovementSpeed = 2f;
+
+        public int moveFrame;
     // Use this for initialization
     
     
@@ -81,28 +79,16 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-       GameData.AddPokemonToParty("Nidoking",50);
-       GameData.AddPokemonToParty("Ditto",50);
-        GameData.party[0].moves[0].name = "Cut";
-        GameData.party[0].moves[1].name = "Surf";
-        GameData.party[0].moves[2].name = "Softboiled";
-        emotionbubble.enabled = false;
+       GameData.AddPokemonToParty("Mew",35);
+        GameData.party[0].SetMove("Cut",0);
+        GameData.party[0].SetMove("Surf",1);
+       // GameData.party[0].SetMove("Softboiled",2);
         GameData.trainerID = Random.Range(0, 65536);
         UpdateFacedTile();
         direction = Direction.Down;
         pos = transform.position;
-        StartCoroutine(CoreUpdate());
     }
-    IEnumerator CoreUpdate()
-    {
-        while (true)
-        {
-
-            StartCoroutine(MovementUpdate());
-            yield return new WaitForEndOfFrame();
-        }
-
-    }
+ 
 
     
 
@@ -110,21 +96,22 @@ public class Player : MonoBehaviour
     {
 
 
-
+        if(!ledgejumping)
         switch (walkSurfBikeState)
         {
             case 0: //Walk
-                speed = 3.7f;
+                speed = baseMovementSpeed;
                 break;
             case 1: //Bicycle is 2x faster than walking/surfing
-                speed = 7.4f;
+                speed = baseMovementSpeed * 2f;
                 break;
             case 2: //Surf
-                speed = 3.7f;
+                speed = baseMovementSpeed;
                 break;
 
 
         }
+        
 
         if (Dialogue.instance.finishedText && !disabled && !menuActive && !startMenuActive && !inBattle && !manuallyWalking && !GameData.atTitleScreen)
         {
@@ -298,7 +285,10 @@ public class Player : MonoBehaviour
                     isMoving = false;
                 }
                 else holdFrames = 0;
-                transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
+                moveFrame++;
+                //only update movement every 2 frames
+                if(moveFrame == 2) transform.position = Vector3.MoveTowards(transform.position, pos, 0.0625f * speed);
+                moveFrame %= 2;
                 if(facingWall()) isMoving = false;
                 if (transform.position == pos)
                 {
@@ -353,8 +343,6 @@ public class Player : MonoBehaviour
                             
     
                         }
-                 
-                        onLoadMap.Invoke();
                         
                     }
                  
@@ -391,15 +379,16 @@ public class Player : MonoBehaviour
         }
         if(manuallyWalking){
 
-             transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * speed);
+             moveFrame++;
+                //only update movement every 2 frames
+                if(moveFrame == 2) transform.position = Vector3.MoveTowards(transform.position, pos, 0.0625f * speed);
+                moveFrame %= 2;
         
         playerAnim.SetFloat("movingfloat", isMoving ? 1 : 0);
                     
 
             if (transform.position == pos)
             {
-       
-        onLoadMap.Invoke();
          isMoving = false;
         holdingDirection = false;
         manuallyWalking = false;
@@ -474,35 +463,19 @@ if(!manuallyWalking){
         }
 }
   manuallyWalking = true;
+  while(manuallyWalking) yield return new WaitForEndOfFrame();
 yield return 0;
     }
     IEnumerator LedgeJump()
     {
         holdingDirection = false;
         SoundManager.instance.sfx.PlayOneShot (ledgeJumpClip);
-        bool reachedMiddle = false;
         playerAnim.SetBool("ledgejumping", ledgejumping);
-        pos += direction == Direction.Down ? new Vector3(0, -2, 0) : direction == Direction.Left ? new Vector3(-2, 0, 0) : new Vector3(2, 0, 0);
         disabled = true;
-        Vector3 originalPos = transform.position;
-        float ledgeJumpTime = 1.85f/2.775f; //divide the animation clip time over the correct number to get the same duration as the real game
-        float  curTime = 0f;
-        while (curTime < ledgeJumpTime)
-        {
-             
-             curTime += Time.deltaTime;
-             if(curTime > ledgeJumpTime) curTime = ledgeJumpTime;
-            transform.position = Vector3.Lerp(originalPos, pos, curTime/ledgeJumpTime);
-            if (curTime >= ledgeJumpTime/2f && !reachedMiddle)
-            {
-                reachedMiddle = true;
-                onLoadMap.Invoke();
-
-            }
-            yield return new WaitForEndOfFrame();
-            
-        }
-        onLoadMap.Invoke();
+        speed = baseMovementSpeed;
+        ledgejumping = true;
+        yield return MovePlayerOneTile(direction);
+        yield return MovePlayerOneTile(direction);
 	playerAnim.SetBool("ledgejumping", false);
 	yield return new WaitForSeconds(0.1f);
         ledgejumping = false;
@@ -529,7 +502,6 @@ yield return new WaitForSeconds(0.25f);
         transform.localPosition = position;
         pos = transform.position;
         
-        onLoadMap.Invoke();
         ScreenEffects.flashLevel = 3;
         yield return wait;
         ScreenEffects.flashLevel = 0;
@@ -564,6 +536,7 @@ yield return new WaitForSeconds(0.25f);
     void Update()
     {
         if (GameData.atTitleScreen) return;
+        StartCoroutine(MovementUpdate());
         movingHitbox.transform.position = pos;
         
        
@@ -625,8 +598,7 @@ yield return new WaitForSeconds(0.25f);
                                     return;
                                 case "Pokeball":
                                     Pokeball pokeball = facedObject.GetComponent<Pokeball>();
-                                    pokeball.gameObject.SetActive(false);
-                                    textData.GetItem(pokeball.item);
+                                    pokeball.GetItem(pokeball.item);
                                     return;
 
 
@@ -665,7 +637,7 @@ yield return new WaitForSeconds(0.25f);
 		displayingEmotion = true;
 		emotionbubble.enabled = true;
 		emotionbubble.sprite = bubbles [type];
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (1);
 		emotionbubble.enabled = false;
 		displayingEmotion = false;
 
@@ -941,9 +913,9 @@ if(GameData.WaterEncounterMaps.Contains(currentArea)) areaHasWaterEncounters = t
     else areaHasWaterEncounters = false;
 if(GameData.MapGrassEncounterTableIndices[mapArea] != -1) currentAreaTable = PokemonData.encounters[GameData.MapGrassEncounterTableIndices[mapArea]];
 else currentAreaTable = null;
-            if (currentArea == Map.House) return; //if the current area is a house, don't set the music
+            if (currentArea == Map.House) return; //if the current area is a house, don't change the music
 int songIndex = SoundManager.MapSongs[mapArea];
-if(SoundManager.instance.currentSong != songIndex && walkSurfBikeState == 0 && !inBattle){
+if(SoundManager.instance.currentSong != songIndex && walkSurfBikeState == 0 && !inBattle && !CreditsHandler.instance.isPlayingCredits){
     if(SoundManager.instance.isFadingSong){
        SoundManager.instance.StopFadeSong();
     }

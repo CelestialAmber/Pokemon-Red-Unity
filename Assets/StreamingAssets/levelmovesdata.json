@@ -4652,23 +4652,5 @@
       "Item1": "Psychic",
       "Item2": 40
     }
-  ],
-  "Linq": [
-    {
-      "Item1": "Transform",
-      "Item2": 1
-    },
-    {
-      "Item1": "Substitute",
-      "Item2": 1
-    },
-    {
-      "Item1": "Psychic",
-      "Item2": 1
-    },
-    {
-      "Item1": "Metronome",
-      "Item2": 1
-    }
   ]
 }

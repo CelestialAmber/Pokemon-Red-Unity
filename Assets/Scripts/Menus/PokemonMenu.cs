@@ -85,42 +85,39 @@ public class Pokemon
     }
     public void SetExpToLevel()
     {
-        switch (PokemonData.PokemonExpGroup[name])
-        {
-            case 0: //Slow
-                experience = (int)(5 * Mathf.Pow(level, 3) / 4);
-                break;
-            case 1: //Medium Slow
-                experience = (int)((6 / 5) * Mathf.Pow(level, 3) - 15 * Mathf.Pow(level, 2) + 100 * (level) - 140);
-                break;
-            case 2: //Medium Fast
-                experience = (int)(Mathf.Pow(level, 3));
-                break;
-            case 3: //Fast
-                experience = 4 * (int)(Mathf.Pow(level, 3) / 5);
-                break;
-            default:
-                throw new UnityException("Invalid experience index was given.");
-        }
-        if (experience < 0) experience += (int)Mathf.Pow(2,24); //Underflow by 16,777,216;
-
+        experience = CalculateExp(level);
+            experience = experience.UnderflowUInt24(); //Underflow by 16,777,216;
     }
     public int ExpToNextLevel()
     {
         if (level >= 100) return experience;
+        int result = CalculateExp(level + 1);
+        result = result.UnderflowUInt24(); //Underflow by 16,777,216;
+         return (result - experience).UnderflowUInt24();
+        
+    }
+    public int CalculateExp(int levelNum){
         switch (PokemonData.PokemonExpGroup[name])
         {
             case 0: //Slow
-                return (int)(5 * Mathf.Pow(level + 1, 3) / 4);
+                return Mathf.FloorToInt(5 * Mathf.Pow(levelNum, 3) / 4f);
             case 1: //Medium Slow
-                return (int)((6 / 5) * Mathf.Pow(level + 1, 3) - 15 * Mathf.Pow(level + 1, 2) + 100 * (level + 1) - 140);
+                return Mathf.FloorToInt((6f / 5f) * Mathf.Pow(levelNum, 3) - 15 * Mathf.Pow(levelNum, 2) + 100 * (levelNum) - 140);
             case 2: //Medium Fast
-                return (int)(Mathf.Pow(level + 1, 3));
+                return Mathf.FloorToInt(Mathf.Pow(levelNum, 3));
             case 3: //Fast
-                return 4 * (int)(Mathf.Pow(level + 1, 3) / 5);
+                return Mathf.FloorToInt(4 * Mathf.Pow(levelNum, 3) / 5f);
+            default:
+                throw new UnityException("Invalid experience index was given.");
 
         }
-        throw new UnityException("Invalid experience index was given.");
+    }
+    int CalculateLevelFromExp(){
+        for(int i = 0; i <= 100; i++){ //iterate through each level to find the level from the current exp
+            int exp = CalculateExp(i);
+            if(exp > experience) return i - 1; //if the current level exp is higher, return the previous level
+        }
+        return 100; //if the current experience is higher than the level 100 experience, return 100
     }
     bool AlreadyHasMove(string movename)
     {
@@ -141,10 +138,6 @@ public class Pokemon
     }
     public void UpdateMovesToLevel()
     {
-        List<string> temp = new List<string>(PokemonData.levelmoves.Keys);
-        Debug.Log(name);
-        Debug.Log(name.Length);
-        Debug.Log(name == "Nidoran♀" || name == "Nidoran♂");
         for (int i = 0; i < PokemonData.levelmoves[name].Length; i++)
         {
             System.Tuple<string,int> movetocheck = PokemonData.levelmoves[name][i];
@@ -163,6 +156,20 @@ public class Pokemon
             }
         }
         //iterate through all moves learned by level, and adjust the move pool accordingly
+    }
+    public void AddMove(string moveName){
+        if(moves.Count == 4){
+             Debug.Log("Cannot add a new move, there are already 4 moves");
+            return;
+        }
+        moves.Add(new Move(moveName));
+    }
+    public void SetMove(string moveName,int moveIndex){
+        if(moveIndex > 3 || moveIndex < 0) throw new UnityException("Invalid move index");
+        if(moves.Count > moveIndex){ //check if the move at the given index already exists by comparing the move count
+            moves[moveIndex] = new Move(moveName);
+        }
+        else moves.Add(new Move(moveName)); //otherwise add the move
     }
     public int maxhp;
     public int attack;
@@ -206,14 +213,14 @@ public class PokemonMenu : MonoBehaviour
     public Image switchMenuImage;
     public Image[] healthbars = new Image[6];
     public GameObject[] fieldMoveObj;
-    public CustomText[] fieldMoveText;
+    public CustomTextTexture[] fieldMoveText;
     //STATS1DATA
     public Image stats1portrait;
     public Image stat1bar;
-    public CustomText pokedexNO, attacktext, speedtext, specialtext, defensetext, MonStatustext, monhptext, monnametext, montype1, montype2, owneridtext, ownernametext, monleveltext, monstatustext;
+    public CustomTextTexture pokedexNO, attacktext, speedtext, specialtext, defensetext, MonStatustext, monhptext, monnametext, montype1, montype2, owneridtext, ownernametext, monleveltext, monstatustext;
     //STATS2DATA
     public Image stats2portrait;
-    public CustomText movetext, exptext, explefttoleveltext, nextleveltext, monname2text, pokedexno2;
+    public CustomTextTexture movetext, exptext, explefttoleveltext, nextleveltext, monname2text, pokedexno2;
     public List<PartyAnim> partyanims;
     Pokemon highlightedmon;
     public float partyAnimTimer = 0;
@@ -265,9 +272,9 @@ public class PokemonMenu : MonoBehaviour
             Transform slottransform = partyslots[index].transform;
             int pixelCount = Mathf.RoundToInt((float)pokemon.currenthp * 48 / (float)pokemon.maxhp);
             slottransform.GetChild(1).GetChild(0).GetComponent<Image>().fillAmount = (float)pixelCount / 48;
-            slottransform.GetChild(2).GetComponent<CustomText>().text = pokemon.nickname;
-            slottransform.GetChild(3).GetComponent<CustomText>().text = ((pokemon.level < 100) ? "È" : "") + pokemon.level.ToString();
-            slottransform.GetChild(4).GetComponent<CustomText>().text = (pokemon.currenthp > 99 ? "" : pokemon.currenthp > 9 ? " " : "  ") + pokemon.currenthp + (pokemon.maxhp > 99 ? "/" : pokemon.maxhp > 9 ? "/ " : "/  ") + pokemon.maxhp;
+            slottransform.GetChild(2).GetComponent<CustomTextTexture>().text = pokemon.nickname;
+            slottransform.GetChild(3).GetComponent<CustomTextTexture>().text = ((pokemon.level < 100) ? "<LEVEL>" : "") + pokemon.level.ToString();
+            slottransform.GetChild(4).GetComponent<CustomTextTexture>().text = (pokemon.currenthp > 99 ? "" : pokemon.currenthp > 9 ? " " : "  ") + pokemon.currenthp + (pokemon.maxhp > 99 ? "/" : pokemon.maxhp > 9 ? "/ " : "/  ") + pokemon.maxhp;
             index++;
         }
     }
@@ -318,7 +325,7 @@ public class PokemonMenu : MonoBehaviour
         int pixelCount = Mathf.RoundToInt((float)GameData.party[selectedMon].currenthp * 48 / (float)GameData.party[selectedMon].maxhp);
         stat1bar.fillAmount = (float)pixelCount / 48;
         monhptext.text = (GameData.party[selectedMon].currenthp > 99 ? "" : GameData.party[selectedMon].currenthp > 9 ? " " : "  ") + GameData.party[selectedMon].currenthp + " " + GameData.party[selectedMon].maxhp;
-        monleveltext.text = ((GameData.party[selectedMon].level < 100) ? "È" : "") + GameData.party[selectedMon].level.ToString();
+        monleveltext.text = ((GameData.party[selectedMon].level < 100) ? "<LEVEL>" : "") + GameData.party[selectedMon].level.ToString();
         switch (GameData.party[selectedMon].status)
         {
             case Status.Ok:
@@ -362,12 +369,18 @@ public class PokemonMenu : MonoBehaviour
         movetext.text = movestr;
         stats2portrait.sprite = GameData.frontMonSprites[PokemonData.MonToID(GameData.party[selectedMon].name) - 1];
         monname2text.text = GameData.party[selectedMon].nickname;
-        exptext.text = GameData.party[selectedMon].experience.ToString();
-        explefttoleveltext.text = (GameData.party[selectedMon].ExpToNextLevel() - GameData.party[selectedMon].experience).ToString();
-        nextleveltext.text = (GameData.party[selectedMon].level < 99 ? "È" + (GameData.party[selectedMon].level + 1).ToString() : 100.ToString());
+        
+        exptext.text = TruncateExpNumber(GameData.party[selectedMon].experience.ToString());
+        explefttoleveltext.text =  TruncateExpNumber((GameData.party[selectedMon].ExpToNextLevel().ToString()));
+        nextleveltext.text = (GameData.party[selectedMon].level < 99 ? "<LEVEL>" + (GameData.party[selectedMon].level + 1).ToString() : 100.ToString());
         int id = PokemonData.MonToID(GameData.party[selectedMon].name);
         pokedexno2.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
         UpdateMenus();
+    }
+    string TruncateExpNumber(string num){
+         if(num.Length > 6){
+             return num.Substring(num.Length - 6); //truncate the number to the last 6 digits
+        } else return num;
     }
     void UpdateMenus(){
         foreach (GameObject menu in allmenus)
@@ -501,7 +514,7 @@ public class PokemonMenu : MonoBehaviour
                 if (!switching)
                 {
 
-                    int textOffsetLength = 6;
+                    int textOffsetLength = 4;
                     switchMenuOffsetX = 0;
                     switchMenuOffset = 0;
                     int numberOfFieldMoves = 0;
@@ -519,24 +532,25 @@ public class PokemonMenu : MonoBehaviour
                         numberOfFieldMoves++;
                         if(move.name.Length > 6 && selectedMenu != 8){
                          selectedMenu = 4;
-                       textOffsetLength = 8;
+                       textOffsetLength = 2;
                      } 
                    if(move.name.Length > 8){
                           selectedMenu = 8;
-                      textOffsetLength = 10;
+                      textOffsetLength = 0;
                       }
                         fieldMoveNames[switchMenuOffset] = move.name;
                         fieldMoveObj[3-switchMenuOffset].SetActive(true);
-                        
-                        for(int j = 0; j < textOffsetLength - move.name.Length; j++){
+                         for(int j = 0; j < textOffsetLength; j++){
                           fieldMoveText[3 - switchMenuOffset].text += " ";  
                         }
+                        
                            switchMenuOffset++;
                     }
                         }
                     }
                     for(int i = 0; i < numberOfFieldMoves; i++){
-                        fieldMoveText[(4 - switchMenuOffset) + i].text = fieldMoveNames[i].ToUpper();
+                        fieldMoveText[(4 - switchMenuOffset) + i].text += fieldMoveNames[i].ToUpper();
+                       
                     }
                     switchMenuOffsetX = selectedMenu/4;
                     selectedMenu += switchMenuOffset;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
 
 public enum BattleType{
     Wild,
@@ -28,12 +29,11 @@ public class BattleManager : MonoBehaviour {
 
     public List<Pokemon> enemyMons = new List<Pokemon>();
 	public GameObject  playerstats, enemystatsObject;
-	public Animator battleMainAnim;
+	public Animator battleMainAnim, battleTransitionAnim;
 	public GameObject playerpokeballs, enemyballs;
 	public Image battleoverlay, frontportrait, backportrait;
 	public GameObject playerMonObject,playerObject,trainerObject, enemyMonObject;
 	//current loaded playermon stats
-	public string playerpokemonnameinslot;
     public Pokemon playermon;
 	public CustomText playerHPtext;
 	public CustomText playermonLeveltext;
@@ -43,7 +43,6 @@ public class BattleManager : MonoBehaviour {
 	//current loaded enemymon stats
 
 	public List<Pokemon> enemyParty;
-	public string enemypokemonnameinslot;
     public Pokemon enemymon;
 	public CustomText enemymonLeveltext;
     public CustomText enemymonname;
@@ -73,9 +72,22 @@ public class BattleManager : MonoBehaviour {
 	 public AudioClip sendOutMonClip;
 	public GameObject bgTextbox;
 	public BattleState battleState;
+
+	public int transitionType;
+
+	public bool isFadingIn;
+
+	public GameObject battleTransitionShaderObj;
+
+	public Material shrinkSplitMat; //material for the shader transition effects
+
+	public TilemapRenderer grassTilemap;
+
+
 	// Use this for initialization
 
 	public void Initialize(){
+		if(GameData.party.Count == 0) throw new UnityException("The player has no Pokemon!");
 		battleState = BattleState.Intro;
 		if(battleType == BattleType.Trainer){
        // switch(battleID)
@@ -105,8 +117,8 @@ public class BattleManager : MonoBehaviour {
 
 	public IEnumerator BattleInit(){
 		Player.instance.holdingDirection = false;
-
-	battleMainAnim.SetBool("isFadingIn",true);
+		DetermineBattleTransition();
+		while(isFadingIn) yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(2.5f);
 		battleBG.SetActive(true);
 		bgTextbox.SetActive(true);
@@ -119,6 +131,61 @@ if(battleType == BattleType.Trainer){
 		if(battleType == BattleType.Wild){
        StartCoroutine(WildBattleStart());
 		}
+
+	}
+	public void DetermineBattleTransition(){
+		grassTilemap.sortingOrder = 0;
+		DoBattleTransition();
+	}
+	public void DoBattleTransition(){
+		switch(transitionType){
+			case 6:
+			StartCoroutine(BattleTransitionShrink());
+			break;
+			case 7:
+			StartCoroutine(BattleTransitionSplit());
+			break;
+			default:
+			StartCoroutine(BattleTransitionMain());
+			break;
+		}
+	}
+	
+	public IEnumerator BattleTransitionMain(){
+		battleTransitionAnim.SetFloat("fadeType",transitionType);
+	battleTransitionAnim.SetTrigger("fadeIn");
+	isFadingIn = true;
+	yield return new WaitForEndOfFrame();
+	yield return new WaitForSeconds(battleTransitionAnim.GetCurrentAnimatorStateInfo(0).length);
+	Debug.Log("Finished transition");
+	FinishedBattleTransition();
+	}
+	public IEnumerator BattleTransitionShrink(){
+		isFadingIn = true;
+		battleTransitionShaderObj.SetActive(true);
+		int offset = 0;
+		shrinkSplitMat.SetInt("uvOffset",offset);
+		for(int i = 0; i < 9; i++){
+		offset -= 8;
+		shrinkSplitMat.SetInt("uvOffset",offset);
+		yield return new WaitForSeconds(6f/60f); //wait 6 frames
+		}
+		battleTransitionShaderObj.SetActive(false);
+		FinishedBattleTransition();
+
+	}
+	public IEnumerator BattleTransitionSplit(){
+		isFadingIn = true;
+		battleTransitionShaderObj.SetActive(true);
+		int offset = 0;
+		shrinkSplitMat.SetInt("uvOffset",offset);
+		for(int i = 0; i < 9; i++){
+		offset += 8;
+		shrinkSplitMat.SetInt("uvOffset",offset);
+		yield return new WaitForSeconds(6f/60f); //wait 6 frames
+		}
+		battleTransitionShaderObj.SetActive(false);
+		FinishedBattleTransition();
 
 	}
 	
@@ -159,21 +226,24 @@ playerpokeballs.SetActive(true);
 	yield return new WaitForEndOfFrame();
 	}
 	
-	battleMainAnim.SetTrigger("sendMon");
+	battleMainAnim.SetTrigger("sendOutMon");
 yield return new WaitForSeconds(1f);
 while(SoundManager.instance.isPlayingCry){
-	yield return new WaitForSeconds(0.01f);
+	yield return new WaitForEndOfFrame();
 }
 		Dialogue.instance.Deactivate();
 		selectedOption = 0;
 battleState = BattleState.PlayerTurn;
 currentmenu = battlemenu;
+cursor.SetActive (true);
     }
 	public void FinishedBattleTransition(){
 ScreenEffects.flashLevel = -3;
-battleMainAnim.SetBool("isFadingIn",false);
+grassTilemap.sortingOrder = 3;
+isFadingIn = false;
 	}
 public void SendOutMonSound(){
+	Debug.Log("playing sendout clip");
 	SoundManager.instance.sfx.PlayOneShot(sendOutMonClip);
 }
 	public void SetBackMonImageActive(){
@@ -199,7 +269,6 @@ foreach (GameObject menu in allmenus) {
 	// Update is called once per frame
 	void Update () {
 		UpdateMenus();
-		
 		if (battleState == BattleState.PlayerTurn && Dialogue.instance.finishedText) {
 
 
@@ -207,7 +276,7 @@ foreach (GameObject menu in allmenus) {
 				
 				if (currentmenu == battlemenu) {
 
-					cursor.SetActive (true);
+					
 				cursor.SetPosition(48*(selectedOption%2) + 72,-16 * Mathf.FloorToInt((float)selectedOption/2f)+24);
 
 
@@ -294,12 +363,11 @@ foreach (GameObject menu in allmenus) {
 
 	}
 void UpdateStatsUI(){
-	enemymonLeveltext.text = (enemymon.level != 100 ? "È" : "") + enemymon.level.ToString();
-			playermonLeveltext.text = (playermon.level != 100 ? "È" : "") +  playermon.level.ToString ();
+	enemymonLeveltext.text = (enemymon.level != 100 ? "<LEVEL>" : "") + enemymon.level.ToString();
+			playermonLeveltext.text = (playermon.level != 100 ? "<LEVEL>" : "") +  playermon.level.ToString ();
 			playerHPtext.text = (playermon.currenthp > 99 ? "" : playermon.currenthp > 9 ? " " : "  ") + playermon.currenthp + " " + playermon.maxhp;
             enemymonname.text = enemymon.name.ToUpper();
 }
-	//these functions animate health.
 void UpdatePokeBallUI(){
      for(int i = 0; i < 6; i++){
 		 if(GameData.party.Count >= i + 1){
@@ -416,7 +484,7 @@ switch(moveData.effect){
 
 
 }
-
+	//these functions animate health.
     IEnumerator AnimateOurHealth(int amount)
     {
         int newHealth = playermon.currenthp + amount;

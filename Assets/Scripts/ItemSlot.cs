@@ -9,14 +9,14 @@ public enum SlotMode{
 }
 public class ItemSlot : MonoBehaviour {
 	public bool isKeyItem;
-	public CustomText slotNameText, slotQuantityText;
+	public CustomTextTexture slotNameText, slotQuantityText;
 	public string Name;
 	public int intquantity;
     public SlotMode mode;
 	// Use this for initialization
 	void Awake () {
-        slotNameText = transform.GetChild(0).GetComponent<CustomText>();
-        slotQuantityText = transform.GetChild(1).GetComponent<CustomText>();
+        slotNameText = transform.GetChild(0).GetComponent<CustomTextTexture>();
+        slotQuantityText = transform.GetChild(1).GetComponent<CustomTextTexture>();
 	}
 	
 	// Update is called once per frame

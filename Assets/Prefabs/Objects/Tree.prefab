@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 105752549268477295}
   - component: {fileID: 105752549268477280}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 6ef3759bffe494e31a8b18260527a858, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 105752549798497811}
   - component: {fileID: 105752549798497812}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: dd4fe7e6e7e674c3ebeeba4179e4b234, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

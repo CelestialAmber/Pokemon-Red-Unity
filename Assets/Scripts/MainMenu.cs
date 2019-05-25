@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour {
     private Bag bag;
     private Pokedex pokedex;
 	private PokemonMenu pokemonMenu;
-    public CustomText playername;
+    public CustomTextTexture playername;
     public int slotNumber;
 	// Use this for initialization
 	public void Initialize(){

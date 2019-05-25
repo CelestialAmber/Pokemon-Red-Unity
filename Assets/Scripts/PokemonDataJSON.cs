@@ -180,19 +180,12 @@ public class PokemonData
     53:Victory Road 3
     54:Viridian Forest
     55:Water Pokemon
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
      */
-public static List<FishingGroup> superFishingGroups = new List<FishingGroup>(new FishingGroup[]{ //groups for the super rod
+     
+     //fishing group for good rod
+     public FishingGroup goodRodFishingGroup = new FishingGroup(new Tuple<string,int>[]{new Tuple<string, int>("Goldeen",10),new Tuple<string, int>("Poliwag",10)});
+//groups for the super rod
+public static List<FishingGroup> superRodFishingGroups = new List<FishingGroup>(new FishingGroup[]{ 
 new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Tentacool",15), new Tuple<string,int>("Poliwag",15)}),
 new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Poliwag",15)}),
 new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Psyduck",15), new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Krabby",15)}),
@@ -204,6 +197,7 @@ new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Staryu",15), new
 new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Slowbro",23), new Tuple<string,int>("Seaking",23), new Tuple<string,int>("Kingler",23), new Tuple<string,int>("Seadra",23)}),
 new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Seaking",23), new Tuple<string,int>("Krabby",15), new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Magikarp",15)}),
     });
+
     /*
 List of index of the party sprite for each Pokemon.
 0:Generic Sprite
@@ -263,10 +257,6 @@ public class PokemonDataJSON : MonoBehaviour
        PokemonData.baseStats = Serializer.JSONtoObject<Dictionary<string,int[]>>("basestatsdata.json");
         PokemonData.levelmoves = Serializer.JSONtoObject<Dictionary<string, Tuple<string,int>[]>>("levelmovesdata.json");
         PokemonData.learnbytm = Serializer.JSONtoObject<Dictionary<string,string[]>>("learnbytmdata.json");
-        if(versionManager.version == Version.Red){
-        PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataRed.json");
-        }
-        else PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataBlue.json");
         PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
         PokemonData.PokemonPartySprite = Serializer.JSONtoObject<Dictionary<string, int>>("partySpriteData.json");
         PokemonData.PokemonTypes = Serializer.JSONtoObject<Dictionary<string, string[]>>("pokemonTypeData.json");
@@ -277,6 +267,12 @@ public class PokemonDataJSON : MonoBehaviour
 
         
        
+    }
+    public static void InitVersion(){
+        if(GameData.version == Version.Red){
+        PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataRed.json");
+        }
+        else PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataBlue.json");
     }
 }
 

@@ -20,7 +20,7 @@ public class IntroHandler : MonoBehaviour {
     }
     public void InitVersion()
     {
-        switch (VersionManager.instance.version)
+        switch (GameData.version)
         {
             case Version.Red:
                 anim.runtimeAnimatorController = redController;
@@ -50,7 +50,7 @@ public class IntroHandler : MonoBehaviour {
 	}
     public IEnumerator FadeInScreen()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.133f); //8 frames
+        WaitForSeconds wait = new WaitForSeconds(8f/60f); //8 frames
         for(int i = 1; i < 4; i++)
         {
             ScreenEffects.flashLevel = i;

@@ -33,6 +33,7 @@ public class ScreenEffects : MonoBehaviour {
     public Material paletteEffect, invertEffect, waveEffect, noEffect, ssAnneScrollEffect;
     public RawImage sgbScreen;
     public RenderTexture texture, outputScreen;
+    
     public bool invert, wave;
     public Palette usedPalette;
     private Palette lastPalette;
@@ -75,7 +76,6 @@ public class ScreenEffects : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.G)){
             StartCoroutine(ShakeVertical());
         }
-        if (Input.GetKeyDown(KeyCode.H)) StartCoroutine(ScrollShip());
         paletteEffect.SetColor("color1", palettes[(int)usedPalette].bg1);
         paletteEffect.SetColor("color2", palettes[(int)usedPalette].bg2);
         paletteEffect.SetColor("color3", palettes[(int)usedPalette].bg3);
@@ -92,7 +92,7 @@ public class ScreenEffects : MonoBehaviour {
 	}
     public IEnumerator ScrollShip() //function to scroll the S.S. Anne Ship off screen.
     {
-        WaitForSeconds wait = new WaitForSeconds(0.0166f * 8f); //the ship moves every 8 frames
+        WaitForSeconds wait = new WaitForSeconds(8f/160f); //the ship moves every 8 frames
         for(int i = 0; i < 144; i++) //Scroll from 0 to 144 pixels until the ship is offscreen.
         {
             shipScrollOffset = i + 1;

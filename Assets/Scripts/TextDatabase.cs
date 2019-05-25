@@ -7,7 +7,6 @@ public class TextDatabase : MonoBehaviour {
     public GameCursor cursor;
 	public Items itemDatabase;
 	public PokeMart pokeMart;
-    public Slots slots;
 	public static TextDatabase instance;
     public IEnumerator[] enumerators;
 	void Awake(){
@@ -24,9 +23,6 @@ public class TextDatabase : MonoBehaviour {
 		case 2:
 			StartCoroutine ("Text2");
 			break;
-		case 3:
-			StartCoroutine ("Text3");
-			break;
 		case 4:
 			StartCoroutine ("Text4");
 			break;
@@ -42,7 +38,7 @@ public class TextDatabase : MonoBehaviour {
     }
 
     public IEnumerator GetItemText(string item){
-        itemDatabase.AddItem(item, 1,false);
+        itemDatabase.AddItem(item, 1);
         yield return Dialogue.instance.text(GameData.playerName + " found \n"+item.ToUpper() + "!");
 
 
@@ -57,13 +53,6 @@ public class TextDatabase : MonoBehaviour {
 		itemPCMenu.SetActive (true);
         Inputs.Disable("start");
         StartCoroutine(itemPCMenu.GetComponent<PC> ().Initialize ());
-	}
-	IEnumerator Text3(){
-		Dialogue.instance.Deactivate ();
-		yield return Dialogue.instance.text ("Battle!");
-		Player.instance.StartTrainerBattle(0);
-
-
 	}
 	IEnumerator Text4(){
 		Dialogue.instance.Deactivate ();

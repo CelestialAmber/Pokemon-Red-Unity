@@ -27,7 +27,7 @@ public class Dialogue : MonoBehaviour {
 	public GameObject DialogueBox;
 	public string stringToReveal;
 	public bool fastText;
-	public CustomText dialoguetext;
+	public CustomTextTexture dialoguetext;
 	public GameObject indicator;
 	public bool deactivated;
 	public GameObject subdialogue;
@@ -35,11 +35,14 @@ public class Dialogue : MonoBehaviour {
 	public bool finishedText;
 	public Image box;
 	public bool finishedThePrompt;
+
+    public bool playSoundAfterText = false;
+    public AudioClip clipToPlay;
 	public GameCursor cursor;
 	public int selectedOption;
 	public GameObject yesnomenu, slotsmenu, buycoinsmenu;
 	public Player play;
-    public CustomText[] buycoinstext;
+    public CustomTextTexture[] buycoinstext;
     MainMenu mainmenu;
     string laststring;
     public static Dialogue instance;
@@ -71,15 +74,15 @@ public class Dialogue : MonoBehaviour {
         dialoguetext.gameObject.SetActive(true);
 		indicator.SetActive (false);
 
-	strComplete = strComplete.Replace("<player>",GameData.playerName).Replace("<rival>",GameData.rivalName).Replace("#MON","POKéMON").Replace("//","\n");
+	strComplete = strComplete.Replace("<player>",GameData.playerName).Replace("<rival>",GameData.rivalName).Replace("#MON","POKéMON").Replace("//","\n").Replace("\n","\n\n");
 		int i = 0;
 		 if(currentDialogueType != DialogueType.Done) str = "";
 else str = stringToReveal;
         if(currentDialogueType == DialogueType.Continue)
         {
-            str = laststring + "\n" + "";
+            str = laststring + "\n\n";
         }
-		if(currentDialogueType != DialogueType.Done)laststring = strComplete.Substring(strComplete.IndexOf('\n')+1);
+		if(currentDialogueType != DialogueType.Done)laststring = strComplete.Substring(strComplete.IndexOf("\n\n")+2);
        
 		
 		dialoguetext.text = str;
@@ -92,11 +95,13 @@ else str = stringToReveal;
                 i = strComplete.Length;
             }
 		while( i < strComplete.Length ){
-				
-		
-					yield return new WaitForSeconds (0.001f);
-				
-			str += strComplete[i++];
+					yield return new WaitForEndOfFrame();
+			if(i < strComplete.Length - 1 && strComplete.Substring(i,2) == "\n\n"){ //are we at a double line break?
+                str += strComplete.Substring(i,2);
+                i += 2;
+            
+            }	
+			else str += strComplete[i++]; //if not just add the current character
 			dialoguetext.text = str;
 				if (!fastText) {
 						yield return new WaitForSeconds (scrollequation);
@@ -270,7 +275,7 @@ public IEnumerator text(string text){
         yesnomenu.SetActive(true);
         while (!finishedThePrompt)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
             if (finishedThePrompt)
             {
                 break;
@@ -288,7 +293,7 @@ public IEnumerator text(string text){
         slotsmenu.SetActive(true);
         while (!finishedThePrompt)
         {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.01f);
             if (finishedThePrompt)
             {
                 break;
@@ -298,6 +303,10 @@ public IEnumerator text(string text){
         cursor.SetActive(false);
 
 	}
+    public void PlaySongAfterText(AudioClip audioClip){ //function that sets a sound to be played after the next text command.
+    playSoundAfterText = true;
+    clipToPlay = audioClip;
+    }
 	public void Deactivate(){
 		StopAllCoroutines ();
 		finishedText = true;

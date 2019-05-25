@@ -1,358 +1,297 @@
-/Users/thatrs/Desktop/PokeRedProject/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
-/Users/thatrs/Desktop/PokeRedProject/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
-/Users/thatrs/Desktop/PokeRedProject/obj/Debug/Assembly-CSharp.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Assembly-CSharp.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Assembly-CSharp.pdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Boo.Lang.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/mscorlib.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Core.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Serialization.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.Linq.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.Locator.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.PackageManagerUI.Editor.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEditor.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEditor.StandardEvents.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AccessibilityModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AIModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Analytics.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AnimationModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ARModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AssetBundleModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AudioModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.BaselibModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClothModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CloudWebServicesModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClusterInputModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClusterRendererModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CoreModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CrashReportingModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.DirectorModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.FacebookModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GameCenterModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GridModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.HoloLens.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.HotReloadModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ImageConversionModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.IMGUIModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.InputModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.JSONSerializeModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Networking.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ParticlesLegacyModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ParticleSystemModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.PerformanceReportingModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Physics2DModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.PhysicsModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ScreenCaptureModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SharedInternalsModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpatialTracking.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpriteMaskModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpriteShapeModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StandardEvents.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StyleSheetsModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SubstanceModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TerrainModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TerrainPhysicsModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TextRenderingModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TilemapModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Timeline.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TimelineModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TLSModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UI.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UIElementsModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UIModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UmbraModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UNETModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityAnalyticsModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityConnectModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestAssetBundleModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestAudioModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestTextureModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestWWWModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VehiclesModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VideoModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VRModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.WindModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.XRModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityScript.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityScript.Lang.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.Cecil.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.SerializationLogic.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.DataContract.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/ExCSS.Unity.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.Legacy.NRefactory.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Boo.Lang.Parser.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Boo.Lang.Compiler.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.UNetWeaver.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.IvyParser.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Boo.Lang.PatternMatching.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Boo.Lang.Useful.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.CecilTools.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.Cecil.Pdb.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.Cecil.Mdb.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEditor.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEditor.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AIModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AIModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ARModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ARModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AccessibilityModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AccessibilityModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AnimationModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AnimationModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AssetBundleModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AssetBundleModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AudioModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.AudioModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.BaselibModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.BaselibModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClothModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClothModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CloudWebServicesModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CloudWebServicesModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClusterInputModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClusterInputModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClusterRendererModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ClusterRendererModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CoreModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CoreModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CrashReportingModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.CrashReportingModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.DirectorModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.DirectorModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.FacebookModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.FacebookModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GameCenterModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GameCenterModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GridModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GridModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.HotReloadModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.HotReloadModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.IMGUIModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.IMGUIModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ImageConversionModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ImageConversionModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.InputModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.InputModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.JSONSerializeModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.JSONSerializeModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ParticleSystemModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ParticleSystemModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ParticlesLegacyModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ParticlesLegacyModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.PerformanceReportingModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.PerformanceReportingModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.PhysicsModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.PhysicsModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Physics2DModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Physics2DModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ScreenCaptureModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ScreenCaptureModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SharedInternalsModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SharedInternalsModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpriteMaskModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpriteMaskModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpriteShapeModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpriteShapeModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StyleSheetsModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StyleSheetsModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SubstanceModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SubstanceModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TLSModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TLSModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TerrainModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TerrainModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TerrainPhysicsModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TerrainPhysicsModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TextRenderingModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TextRenderingModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TilemapModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TilemapModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TimelineModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.TimelineModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UIModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UIModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UIElementsModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UIElementsModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UNETModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UNETModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UmbraModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UmbraModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityAnalyticsModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityAnalyticsModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityConnectModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityConnectModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestAssetBundleModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestAssetBundleModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestAudioModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestAudioModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestTextureModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestTextureModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestWWWModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UnityWebRequestWWWModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VRModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VRModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VehiclesModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VehiclesModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VideoModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.VideoModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.WindModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.WindModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.XRModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.XRModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.Locator.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UI.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.UI.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Networking.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Networking.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Timeline.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Timeline.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.HoloLens.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.HoloLens.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpatialTracking.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.SpatialTracking.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.Analytics.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StandardEvents.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.IvyParser.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/obj/Debug/Assembly-CSharp.pdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Microsoft.Win32.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/netstandard.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.AppContext.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Collections.Concurrent.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Collections.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Collections.NonGeneric.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Collections.Specialized.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ComponentModel.Annotations.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ComponentModel.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ComponentModel.EventBasedAsync.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ComponentModel.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ComponentModel.TypeConverter.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Console.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Data.Common.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.Contracts.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.Debug.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.FileVersionInfo.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.Process.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.StackTrace.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.TextWriterTraceListener.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.Tools.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Diagnostics.TraceSource.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Drawing.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Dynamic.Runtime.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Globalization.Calendars.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Globalization.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Globalization.Extensions.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.Compression.ZipFile.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.FileSystem.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.FileSystem.DriveInfo.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.FileSystem.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.FileSystem.Watcher.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.IsolatedStorage.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.MemoryMappedFiles.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.Pipes.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.IO.UnmanagedMemoryStream.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Linq.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Linq.Expressions.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Linq.Parallel.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Linq.Queryable.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.Http.Rtc.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.NameResolution.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.NetworkInformation.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.Ping.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.Requests.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.Security.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.Sockets.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.WebHeaderCollection.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.WebSockets.Client.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Net.WebSockets.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ObjectModel.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Reflection.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Reflection.Emit.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Reflection.Emit.ILGeneration.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Reflection.Emit.Lightweight.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Reflection.Extensions.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Reflection.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Resources.Reader.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Resources.ResourceManager.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Resources.Writer.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.CompilerServices.VisualC.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Extensions.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Handles.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.InteropServices.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.InteropServices.RuntimeInformation.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.InteropServices.WindowsRuntime.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Numerics.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Serialization.Formatters.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Serialization.Json.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Serialization.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Runtime.Serialization.Xml.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.Claims.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.Cryptography.Algorithms.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.Cryptography.Csp.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.Cryptography.Encoding.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.Cryptography.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.Cryptography.X509Certificates.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.Principal.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Security.SecureString.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ServiceModel.Duplex.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ServiceModel.Http.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ServiceModel.NetTcp.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ServiceModel.Primitives.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ServiceModel.Security.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Text.Encoding.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Text.Encoding.Extensions.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Text.RegularExpressions.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Threading.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Threading.Overlapped.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Threading.Tasks.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Threading.Tasks.Parallel.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Threading.Thread.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Threading.ThreadPool.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Threading.Timer.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.ValueTuple.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.ReaderWriter.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.XDocument.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.XmlDocument.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.XmlSerializer.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.XPath.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Xml.XPath.XDocument.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Configuration.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEditor.StandardEvents.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.PackageManagerUI.Editor.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Newtonsoft.Json.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Numerics.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/System.Numerics.Vectors.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.TextMeshPro.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.TextMeshPro.Editor.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.FileSystemHttpModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.LocalizationModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ProfilerModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StreamingModule.dll
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.TextMeshPro.Editor.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Unity.TextMeshPro.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.FileSystemHttpModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.FileSystemHttpModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.LocalizationModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.LocalizationModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ProfilerModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.ProfilerModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StreamingModule.dll.mdb
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/UnityEngine.StreamingModule.xml
-/Users/thatrs/Desktop/PokeRedProject/Temp/bin/Debug/Newtonsoft.Json.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Assembly-CSharp.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Assembly-CSharp.dll.CodeAnalysisLog.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Assembly-CSharp.dll.lastcodeanalysissucceeded
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Boo.Lang.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Microsoft.CSharp.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Microsoft.Win32.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\mscorlib.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\netstandard.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Newtonsoft.Json.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\nunit.framework.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.AppContext.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Collections.Concurrent.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Collections.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Collections.NonGeneric.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Collections.Specialized.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ComponentModel.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ComponentModel.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ComponentModel.TypeConverter.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Console.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Core.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Data.Common.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Data.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.Contracts.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.Debug.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.Process.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.StackTrace.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.Tools.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Diagnostics.TraceSource.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Drawing.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Dynamic.Runtime.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Globalization.Calendars.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Globalization.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Globalization.Extensions.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.Compression.ZipFile.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.FileSystem.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.FileSystem.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.FileSystem.Watcher.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.IsolatedStorage.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.MemoryMappedFiles.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.Pipes.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Linq.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Linq.Expressions.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Linq.Parallel.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Linq.Queryable.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.Http.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.Http.Rtc.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.NameResolution.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.NetworkInformation.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.Ping.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.Requests.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.Security.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.Sockets.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.WebHeaderCollection.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.WebSockets.Client.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Net.WebSockets.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Numerics.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Numerics.Vectors.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ObjectModel.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Reflection.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Reflection.Emit.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Reflection.Emit.ILGeneration.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Reflection.Emit.Lightweight.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Reflection.Extensions.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Reflection.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Resources.Reader.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Resources.ResourceManager.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Resources.Writer.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Extensions.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Handles.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.InteropServices.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.InteropServices.WindowsRuntime.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Numerics.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Serialization.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Serialization.Formatters.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Serialization.Json.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Serialization.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Runtime.Serialization.Xml.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.Claims.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.Cryptography.Algorithms.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.Cryptography.Csp.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.Cryptography.Encoding.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.Cryptography.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.Principal.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Security.SecureString.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ServiceModel.Duplex.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ServiceModel.Http.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ServiceModel.NetTcp.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ServiceModel.Primitives.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ServiceModel.Security.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Text.Encoding.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Text.Encoding.Extensions.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Text.RegularExpressions.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Threading.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Threading.Overlapped.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Threading.Tasks.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Threading.Tasks.Parallel.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Threading.Thread.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Threading.ThreadPool.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Threading.Timer.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.ValueTuple.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.Linq.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.ReaderWriter.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.XDocument.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.XmlDocument.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.XmlSerializer.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.XPath.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\System.Xml.XPath.XDocument.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Analytics.DataPrivacy.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Analytics.Editor.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Analytics.StandardEvents.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Analytics.Tracker.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.CollabProxy.Editor.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Locator.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.PackageManagerUI.Editor.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.TextMeshPro.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.TextMeshPro.Editor.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEditor.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEditor.SpatialTracking.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AccessibilityModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Advertisements.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Advertisements.Editor.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AIModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AnimationModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ARModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AssetBundleModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AudioModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.BaselibModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ClothModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ClusterInputModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ClusterRendererModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.CoreModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.CrashReportingModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.DirectorModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.GameCenterModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.GridModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.HotReloadModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ImageConversionModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.IMGUIModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.InputModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.JSONSerializeModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.LocalizationModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Networking.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ParticleSystemModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.PerformanceReportingModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Physics2DModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.PhysicsModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ProfilerModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SharedInternalsModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SpatialTracking.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SpriteMaskModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SpriteShapeModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.StreamingModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.StyleSheetsModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SubstanceModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TerrainModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TerrainPhysicsModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TestRunner.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TextCoreModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TextRenderingModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TilemapModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Timeline.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TimelineModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TLSModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UIElementsModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UIModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UmbraModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UNETModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityAnalyticsModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityConnectModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityTestProtocolModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestAudioModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestTextureModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VehiclesModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VFXModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VideoModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VRModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.WindModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.XRModule.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityScript.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityScript.Lang.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Cecil.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.DataContract.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\ExCSS.Unity.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Legacy.NRefactory.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.UNetWeaver.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.IvyParser.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Boo.Lang.Compiler.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Boo.Lang.PatternMatching.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Boo.Lang.Parser.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Boo.Lang.Useful.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.CecilTools.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Cecil.Pdb.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Cecil.Mdb.dll
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEditor.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.TextMeshPro.Editor.pdb
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.PackageManagerUI.Editor.pdb
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.CollabProxy.Editor.pdb
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEditor.SpatialTracking.pdb
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.TextMeshPro.pdb
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Unity.Analytics.DataPrivacy.pdb
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AIModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ARModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AccessibilityModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AnimationModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AssetBundleModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.AudioModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.BaselibModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ClothModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ClusterInputModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ClusterRendererModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.CoreModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.CrashReportingModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.DirectorModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.FileSystemHttpModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.GameCenterModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.GridModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.HotReloadModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.IMGUIModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ImageConversionModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.InputModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.JSONSerializeModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.LocalizationModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ParticleSystemModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.PerformanceReportingModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.PhysicsModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Physics2DModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ProfilerModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.ScreenCaptureModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SharedInternalsModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SpriteMaskModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SpriteShapeModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.StreamingModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.StyleSheetsModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.SubstanceModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TLSModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TerrainModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TerrainPhysicsModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TextCoreModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TextRenderingModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TilemapModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TimelineModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UIModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UIElementsModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UNETModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UmbraModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityAnalyticsModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityConnectModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityTestProtocolModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestAudioModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestTextureModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UnityWebRequestWWWModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VFXModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VRModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VehiclesModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.VideoModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.WindModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.XRModule.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.UI.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.TestRunner.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\nunit.framework.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Timeline.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.Networking.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\UnityEngine.GoogleAudioSpatializer.xml
+D:\Unity Projects\Pokemon-Red-Unity\Temp\bin\Debug\Newtonsoft.Json.xml
+D:\Unity Projects\Pokemon-Red-Unity\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Unity Projects\Pokemon-Red-Unity\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\Unity Projects\Pokemon-Red-Unity\obj\Debug\Assembly-CSharp.csproj.CopyComplete
+D:\Unity Projects\Pokemon-Red-Unity\obj\Debug\Assembly-CSharp.dll
+D:\Unity Projects\Pokemon-Red-Unity\obj\Debug\Assembly-CSharp.pdb

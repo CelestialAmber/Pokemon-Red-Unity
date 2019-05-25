@@ -6,6 +6,6 @@ public class CameraController : MonoBehaviour {
 	// LateUpdate is called after Update each frame
 	void LateUpdate () 
 	{
-		transform.position = player.transform.position + new Vector3(0.5f,0,0);
+		transform.position = player.transform.position + new Vector3(0.5f,0,-2);
 	}
 }

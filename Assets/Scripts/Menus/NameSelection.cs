@@ -294,7 +294,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if (currentXselection == 7 && currentYselection == 3) {
-                    futureName += "Ê"; //pk
+                    futureName += "<PK>"; //pk
 				}
 
 				if (currentXselection == 7 && currentYselection == 4) {
@@ -317,7 +317,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if (currentXselection == 8 && currentYselection == 3) {
-                    futureName += "Ë"; //mn
+                    futureName += "<MN>"; //mn
 				}
 
 			
@@ -421,7 +421,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if(currentXselection == 3 && currentYselection == 4){
-					futureName += "{"; //
+					futureName += "♂"; //
 				}
 
 
@@ -445,7 +445,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if(currentXselection == 4 && currentYselection == 4){
-					futureName += "}"; //female 
+					futureName += "♀"; //female 
 				}
 
 
@@ -511,7 +511,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if(currentXselection == 7 && currentYselection == 3){
-					futureName += "%"; //pk
+					futureName += "%"; 
 				}
 
 				if(currentXselection == 7 && currentYselection == 4){
@@ -534,7 +534,7 @@ public class NameSelection : MonoBehaviour {
 				}
 
 				if(currentXselection == 8 && currentYselection == 3){
-					futureName += "$"; //mn
+					futureName += "$"; 
 				}
 
 
