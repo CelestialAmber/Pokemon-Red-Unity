@@ -269,7 +269,7 @@ public class PokemonDataJSON : MonoBehaviour
        
     }
     public static void InitVersion(){
-        if(GameData.version == Version.Red){
+        if(GameData.instance.version == Version.Red){
         PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataRed.json");
         }
         else PokemonData.encounters = Serializer.JSONtoObject<List<EncounterData>>("encounterDataBlue.json");

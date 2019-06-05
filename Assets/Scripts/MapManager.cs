@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
 
 public enum Map
@@ -42,11 +42,11 @@ public enum Map
     SSAnne,
     Route11,
     Route9,
+    Route10,
     RockTunnel1,
     RockTunnel2,
     PowerPlant,
     LavenderTown,
-    Route7,
     PokemonTower1,
     PokemonTower2,
     PokemonTower3,
@@ -54,6 +54,8 @@ public enum Map
     PokemonTower5,
     PokemonTower6,
     PokemonTower7,
+    Route8,
+    Route7,
     CeladonCity,
     GameCorner,
     RocketHideout,
@@ -91,79 +93,91 @@ public enum Map
     TradeCenter,
     Colloseum,
     BillsHouse,
-    House //general entry for houses. 
+    House, //general entry for houses. 
+    VictoryRoadGate,
+    IndigoPlateauLobby
 }
 
 //Script to manage the world status.
 public class MapManager : MonoBehaviour{
     public Player player;
     public int currentGrassEcounterTable, currentWaterEncounterTable;
-    public static GridTile[,] maptiles = new GridTile[GameData.mapWidth, GameData.mapHeight];
+
+
+    public Tilemap overworldTilemap, grassTilemap, waterTilemap, ledgeTilemap;
+
+    
     //The map the player is currently in.
     public Map currentMap;
 
-    int mod(int a, int b)
-    {
-        return a < 0 ? b + a % b : a % b;
-    }
+    public static MapManager instance;
 
     private void Awake()
     {
-
-            maptiles = new GridTile[GameData.mapWidth, GameData.mapHeight];
-        LoadMapData();
+        instance = this;
     }
 
   
-    void LoadMapData(){
-        maptiles = Serializer.JSONtoObject<GridTile[,]>("map.json");
-    }
+   
     // Use this for initialization
     void Start () {
        
 	}
 	
+      
+
   
 
 }
 
+
+
 [System.Serializable]
-public class GridTile
-{
+  public class MapTile{
+          public MapTile(Vector3Int pos){
+              Tilemap overworldTilemap = MapManager.instance.overworldTilemap;
+              Tilemap grassTilemap = MapManager.instance.grassTilemap;
+              Tilemap waterTilemap = MapManager.instance.waterTilemap;
+              Tilemap ledgeTilemap = MapManager.instance.ledgeTilemap;
+              pos -= new Vector3Int(1,1,0);
+              this.pos = pos;
+              bool hasOverworldTile = overworldTilemap.HasTile(pos);
+              hasGrass = grassTilemap.HasTile(pos);
+              isWater = waterTilemap.HasTile(pos); 
+              isLedge =  ledgeTilemap.HasTile(pos);
+              hasTile = hasOverworldTile || isWater || isLedge;
+              if(hasOverworldTile){
+                  TileBase overworldTile = overworldTilemap.GetTile(pos);
+                  if(overworldTile is AnimatedTile){
+                      isWall = ((AnimatedTile)overworldTile).m_TileColliderType != Tile.ColliderType.None;
+                  }
+                  else if(overworldTile is Tile){
+                      isWall = ((Tile)overworldTile).colliderType != Tile.ColliderType.None;
+                  }
+              }
+              else isWall = false;
+              if(hasOverworldTile){
+                  TileBase tile = overworldTilemap.GetTile(pos);
+                  if(tile is AnimatedTile) tileName = ((AnimatedTile)overworldTilemap.GetTile(pos)).name;
+                   else if(tile is Tile) tileName = ((Tile)overworldTilemap.GetTile(pos)).name; 
+              }
+              if(isLedge) tileName = ((Tile)ledgeTilemap.GetTile(pos)).name;
+              if(isWater){
+                  TileBase tile = waterTilemap.GetTile(pos);
+                  if(tile is AnimatedTile) tileName = ((AnimatedTile)waterTilemap.GetTile(pos)).name;
+                   else if(tile is Tile) tileName = ((Tile)waterTilemap.GetTile(pos)).name; 
+              }
 
-    public TilesData tiledata;
-    public WarpInfo tileWarp;
-    public EncounterInfo encounterInfo;
-    public bool isAnimated;
-    public int posx, posy;
-    public string tag;
-    public bool isWarp;
-    public bool hasGrass;
-    public bool isWater;
-    public bool isWall;
-    public bool isInteractable;
-    public bool hasItem;
-    public bool hasPokemon;
-    public int frames;
-    public string mainSprite;
-    public List<Vector2[]> mainUvs = new List<Vector2[]>();
-    public GridTile(TilesData tiledata, WarpInfo tileWarp, EncounterInfo encounterInfo, bool isAnimated, int posx, int posy, string tag, bool isWarp, bool hasGrass, bool isWall, int frames, string mainSprite, bool isWater,bool isInteractable)
-    {
-        this.isInteractable = isInteractable;
-        this.tiledata = tiledata;
-        this.tileWarp = tileWarp;
-        this.encounterInfo = encounterInfo;
-        this.posx = posx;
-        this.posy = posy;
-        this.tag = tag;
-        this.isAnimated = isAnimated;
-        this.isWarp = isWarp;
-        this.hasGrass = hasGrass;
-        this.isWall = isWall;
-        this.frames = frames;
-        this.mainSprite = mainSprite;
-        this.isWater = isWater;
+          }
+        public bool hasTile;
+        public bool hasGrass;
+        public bool isWater;
+        public bool isWall;
+        public bool isLedge;
 
-    }
+        public Vector3Int pos;
 
+        public string tileName;
+
+    
 }

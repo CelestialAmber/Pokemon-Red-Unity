@@ -62,7 +62,7 @@ private bool dontUpdateDireciton;
     void Update()
     {
         CheckCollision();
-        if (!Dialogue.instance.finishedText || Player.instance.menuActive || Player.instance.inBattle || GameData.isPaused) return;
+        if (!Dialogue.instance.finishedText || Player.instance.menuActive || Player.instance.inBattle || GameData.instance.isPaused) return;
         if(isMoving) return;
         if (pokemonObject.isDisabled) return;
         
@@ -206,35 +206,16 @@ Direction chosenDir;
         CheckObjectCollision();
         if (!isMoving)
         {
-            GridTile tileToCheck = null;
-            if(transform.position.x > 0)
-            tileToCheck = MapManager.maptiles[(int)transform.position.x - 1, (int)transform.position.y];
-            if (tileToCheck != null)
-            {
-                cannotMove[2] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[2];
-            }
-            else cannotMove[2] = true;
-            if(transform.position.x < GameData.mapWidth - 1)
-            tileToCheck = MapManager.maptiles[(int)transform.position.x + 1, (int)transform.position.y];
-            if (tileToCheck != null)
-            {
-                cannotMove[3] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[3];
-            }
-            else cannotMove[3] = true;
-            if(transform.position.y < GameData.mapHeight - 1)
-            tileToCheck = MapManager.maptiles[(int)transform.position.x, (int)transform.position.y + 1];
-            if (tileToCheck != null)
-            {
-                cannotMove[0] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[0];
-            }
-            else cannotMove[0] = true;
-            if(transform.position.y > 0)
-            tileToCheck = MapManager.maptiles[(int)transform.position.x, (int)transform.position.y - 1];
-            if (tileToCheck != null)
-            {
-                cannotMove[1] = tileToCheck.isWall || tileToCheck.tag.Contains("Ledge") || (tileToCheck.tag.Contains("Water")) || objectExists[1];
-            }
-            else cannotMove[1] = true;
+            MapTile tileToCheck = null;
+
+            tileToCheck = new MapTile(new Vector3Int((int)transform.position.x-1,(int)transform.position.y,0));
+                cannotMove[2] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[2] || !tileToCheck.hasTile;
+            tileToCheck = new MapTile(new Vector3Int((int)transform.position.x+1,(int)transform.position.y,0));
+                cannotMove[3] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[3] || !tileToCheck.hasTile;
+            tileToCheck = new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y+1,0));
+                cannotMove[0] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[0] || !tileToCheck.hasTile;
+            tileToCheck = new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y-1,0));
+                cannotMove[1] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[1] || !tileToCheck.hasTile;
         }
         
     if(transform.position.x - homePos.x > 3) cannotMove[3] = true;

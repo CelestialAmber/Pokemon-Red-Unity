@@ -33,14 +33,14 @@ public class GameDataManager : MonoBehaviour {
         Pokedex.instance = pokedex;
         //VersionManager executes before GameDataManager, so the version is set in GameData beforehand
         VersionInit();
-        GameData.Init();
-        GameData.Save();
-        GameData.money = 3000;
-        GameData.coins = 300;
-        GameData.screenTileHeight = 9;
+        GameData.instance.Init();
+        GameData.instance.Save();
+        GameData.instance.money = 3000;
+        GameData.instance.coins = 300;
+        GameData.instance.screenTileHeight = 9;
         
         
-        GameData.screenTileWidth = 10;
+        GameData.instance.screenTileWidth = 10;
         mainRender = new RenderTexture(160, 144, 1);
         mainRender.filterMode = FilterMode.Point;
         postRender = new RenderTexture(160, 144, 1);
@@ -61,7 +61,7 @@ public class GameDataManager : MonoBehaviour {
     }
     public void BootGame(Version version){
         VersionManager.instance.version = version;
-        GameData.version = version;
+        GameData.instance.version = version;
         VersionInit();
         introHandler.gameObject.SetActive(true);
         introHandler.Init();
@@ -72,36 +72,36 @@ public class GameDataManager : MonoBehaviour {
 	// Use this for initialization
 	private void FontAtlasInit()
     {
-        GameData.fontAtlas = fontAtlas;
-        if (GameData.version == Version.Blue)
+        GameData.instance.fontAtlas = fontAtlas;
+        if (GameData.instance.version == Version.Blue)
         {
             for (int i = 0; i < 6; i++)
             {
-               GameData.fontAtlas.fontChars[i + 92] = GameData.fontAtlas.blueSlotsChars[i];
+               GameData.instance.fontAtlas.fontChars[i + 92] = GameData.instance.fontAtlas.blueSlotsChars[i];
             }
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (GameData.inGame) //are we loaded into the game?
+        if (GameData.instance.inGame) //are we loaded into the game?
         {
             ms += Time.deltaTime;
             if (ms >= 1f)
             {
-                GameData.seconds += 1;
+                GameData.instance.seconds += 1;
                 ms = 0;
             }
-            if (GameData.seconds == 60) {
-                GameData.minutes += 1;
-                GameData.seconds = 0;
+            if (GameData.instance.seconds == 60) {
+                GameData.instance.minutes += 1;
+                GameData.instance.seconds = 0;
             }
-            if(GameData.minutes == 60){
-                GameData.hours += 1;
-                GameData.minutes = 0;
+            if(GameData.instance.minutes == 60){
+                GameData.instance.hours += 1;
+                GameData.instance.minutes = 0;
             }
-            if(GameData.hours > 999){
-                GameData.hours = 999;
+            if(GameData.instance.hours > 999){
+                GameData.instance.hours = 999;
             }
         }
 	}

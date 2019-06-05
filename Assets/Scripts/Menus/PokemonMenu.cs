@@ -48,7 +48,7 @@ public class Pokemon
         SetExpToLevel();
         RecalculateStats();
         //If the Pokemon hasnt been registered as caught before, register it
-        if (!GameData.pokedexlist[PokemonData.MonToID(name) - 1].caught)
+        if (!GameData.instance.pokedexlist[PokemonData.MonToID(name) - 1].caught)
         {
             RegisterInDex();
             types = new string[2];
@@ -61,8 +61,8 @@ public class Pokemon
     public void RegisterInDex()
     {
 
-        GameData.pokedexlist[PokemonData.MonToID(name) - 1].seen = true;
-        if(!isWildPokemon) GameData.pokedexlist[PokemonData.MonToID(name) - 1].caught = true;
+        GameData.instance.pokedexlist[PokemonData.MonToID(name) - 1].seen = true;
+        if(!isWildPokemon) GameData.instance.pokedexlist[PokemonData.MonToID(name) - 1].caught = true;
 
     }
     public void RecalculateStats()
@@ -213,14 +213,14 @@ public class PokemonMenu : MonoBehaviour
     public Image switchMenuImage;
     public Image[] healthbars = new Image[6];
     public GameObject[] fieldMoveObj;
-    public CustomTextTexture[] fieldMoveText;
+    public CustomText[] fieldMoveText;
     //STATS1DATA
     public Image stats1portrait;
     public Image stat1bar;
-    public CustomTextTexture pokedexNO, attacktext, speedtext, specialtext, defensetext, MonStatustext, monhptext, monnametext, montype1, montype2, owneridtext, ownernametext, monleveltext, monstatustext;
+    public CustomText pokedexNO, attacktext, speedtext, specialtext, defensetext, MonStatustext, monhptext, monnametext, montype1, montype2, owneridtext, ownernametext, monleveltext, monstatustext;
     //STATS2DATA
     public Image stats2portrait;
-    public CustomTextTexture movetext, exptext, explefttoleveltext, nextleveltext, monname2text, pokedexno2;
+    public CustomText movetext, exptext, explefttoleveltext, nextleveltext, monname2text, pokedexno2;
     public List<PartyAnim> partyanims;
     Pokemon highlightedmon;
     public float partyAnimTimer = 0;
@@ -235,23 +235,23 @@ public class PokemonMenu : MonoBehaviour
     public void Initialize()
     {
         switchMenuOffset = 0;
-        if (GameData.party.Count == 0)
+        if (GameData.instance.party.Count == 0)
         {
             currentMenu = mainwindow;
             moon.currentmenu = moon.thismenu;
             this.gameObject.SetActive(false);
             return;
         }
-        for (int i = 0; i < GameData.party.Count; i++)
+        for (int i = 0; i < GameData.instance.party.Count; i++)
         {
             /*
-            GameData.party[i].SetExpToLevel();
-            GameData.party[i].RecalculateStats();
-            GameData.party[i].UpdateMovesToLevel();
+            GameData.instance.party[i].SetExpToLevel();
+            GameData.instance.party[i].RecalculateStats();
+            GameData.instance.party[i].UpdateMovesToLevel();
             */
-            GameData.party[i].ownerid = GameData.trainerID;
-            GameData.party[i].owner = GameData.playerName;
-            int pixelCount = Mathf.RoundToInt((float)GameData.party[i].currenthp * 48 / (float)GameData.party[i].maxhp);
+            GameData.instance.party[i].ownerid = GameData.instance.trainerID;
+            GameData.instance.party[i].owner = GameData.instance.playerName;
+            int pixelCount = Mathf.RoundToInt((float)GameData.instance.party[i].currenthp * 48 / (float)GameData.instance.party[i].maxhp);
             healthbars[i] = partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
             healthbars[i].fillAmount = (float)pixelCount / 48;
             UpdateMainMenu();
@@ -267,14 +267,14 @@ public class PokemonMenu : MonoBehaviour
     public void UpdateScreen()
     {
         int index = 0;
-        foreach (Pokemon pokemon in GameData.party)
+        foreach (Pokemon pokemon in GameData.instance.party)
         {
             Transform slottransform = partyslots[index].transform;
             int pixelCount = Mathf.RoundToInt((float)pokemon.currenthp * 48 / (float)pokemon.maxhp);
             slottransform.GetChild(1).GetChild(0).GetComponent<Image>().fillAmount = (float)pixelCount / 48;
-            slottransform.GetChild(2).GetComponent<CustomTextTexture>().text = pokemon.nickname;
-            slottransform.GetChild(3).GetComponent<CustomTextTexture>().text = ((pokemon.level < 100) ? "<LEVEL>" : "") + pokemon.level.ToString();
-            slottransform.GetChild(4).GetComponent<CustomTextTexture>().text = (pokemon.currenthp > 99 ? "" : pokemon.currenthp > 9 ? " " : "  ") + pokemon.currenthp + (pokemon.maxhp > 99 ? "/" : pokemon.maxhp > 9 ? "/ " : "/  ") + pokemon.maxhp;
+            slottransform.GetChild(2).GetComponent<CustomText>().text = pokemon.nickname;
+            slottransform.GetChild(3).GetComponent<CustomText>().text = ((pokemon.level < 100) ? "<LEVEL>" : "") + pokemon.level.ToString();
+            slottransform.GetChild(4).GetComponent<CustomText>().text = (pokemon.currenthp > 99 ? "" : pokemon.currenthp > 9 ? " " : "  ") + pokemon.currenthp + (pokemon.maxhp > 99 ? "/" : pokemon.maxhp > 9 ? "/ " : "/  ") + pokemon.maxhp;
             index++;
         }
     }
@@ -286,14 +286,14 @@ public class PokemonMenu : MonoBehaviour
         {
             partyslots[l].SetActive(false);
         }
-        for (int i = 0; i < GameData.party.Count; i++)
+        for (int i = 0; i < GameData.instance.party.Count; i++)
         {
             if (i == 0)
             {
 
                 numberofPokemon = 0;
             }
-            if (GameData.party[i].name != "")
+            if (GameData.instance.party[i].name != "")
             {
                 partyslots[i].SetActive(true);
                 numberofPokemon++;
@@ -309,24 +309,24 @@ public class PokemonMenu : MonoBehaviour
     }
     public void UpdateStats1(){
         cursor.SetActive(false);
-        stats1portrait.sprite = GameData.frontMonSprites[PokemonData.MonToID(GameData.party[selectedMon].name) - 1];
-        int id = PokemonData.MonToID(GameData.party[selectedMon].name);
+        stats1portrait.sprite = GameData.instance.frontMonSprites[PokemonData.MonToID(GameData.instance.party[selectedMon].name) - 1];
+        int id = PokemonData.MonToID(GameData.instance.party[selectedMon].name);
         pokedexNO.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
-        attacktext.text = GameData.party[selectedMon].attack.ToString();
-        speedtext.text = GameData.party[selectedMon].speed.ToString();
-        specialtext.text = GameData.party[selectedMon].special.ToString();
-        defensetext.text = GameData.party[selectedMon].defense.ToString();
-        montype1.text = GameData.party[selectedMon].types[0].ToUpper();
-        string type2 = GameData.party[selectedMon].types[1].ToUpper();
+        attacktext.text = GameData.instance.party[selectedMon].attack.ToString();
+        speedtext.text = GameData.instance.party[selectedMon].speed.ToString();
+        specialtext.text = GameData.instance.party[selectedMon].special.ToString();
+        defensetext.text = GameData.instance.party[selectedMon].defense.ToString();
+        montype1.text = GameData.instance.party[selectedMon].types[0].ToUpper();
+        string type2 = GameData.instance.party[selectedMon].types[1].ToUpper();
         montype2.text = type2 != "" ? ("TYPE2/" + "\n " + type2) : "";
-        monnametext.text = GameData.party[selectedMon].nickname;
-        owneridtext.text = GameData.party[selectedMon].ownerid.ToString();
-        ownernametext.text = GameData.party[selectedMon].owner;
-        int pixelCount = Mathf.RoundToInt((float)GameData.party[selectedMon].currenthp * 48 / (float)GameData.party[selectedMon].maxhp);
+        monnametext.text = GameData.instance.party[selectedMon].nickname;
+        owneridtext.text = GameData.instance.party[selectedMon].ownerid.ToString();
+        ownernametext.text = GameData.instance.party[selectedMon].owner;
+        int pixelCount = Mathf.RoundToInt((float)GameData.instance.party[selectedMon].currenthp * 48 / (float)GameData.instance.party[selectedMon].maxhp);
         stat1bar.fillAmount = (float)pixelCount / 48;
-        monhptext.text = (GameData.party[selectedMon].currenthp > 99 ? "" : GameData.party[selectedMon].currenthp > 9 ? " " : "  ") + GameData.party[selectedMon].currenthp + " " + GameData.party[selectedMon].maxhp;
-        monleveltext.text = ((GameData.party[selectedMon].level < 100) ? "<LEVEL>" : "") + GameData.party[selectedMon].level.ToString();
-        switch (GameData.party[selectedMon].status)
+        monhptext.text = (GameData.instance.party[selectedMon].currenthp > 99 ? "" : GameData.instance.party[selectedMon].currenthp > 9 ? " " : "  ") + GameData.instance.party[selectedMon].currenthp + " " + GameData.instance.party[selectedMon].maxhp;
+        monleveltext.text = ((GameData.instance.party[selectedMon].level < 100) ? "<LEVEL>" : "") + GameData.instance.party[selectedMon].level.ToString();
+        switch (GameData.instance.party[selectedMon].status)
         {
             case Status.Ok:
                 monstatustext.text = "OK";
@@ -358,22 +358,22 @@ public class PokemonMenu : MonoBehaviour
         string movestr = "";
         for (int i = 0; i < 4; i++)
         {
-            if (GameData.party[selectedMon].moves.Count - 1 >= i)
+            if (GameData.instance.party[selectedMon].moves.Count - 1 >= i)
             {
-                Move move = GameData.party[selectedMon].moves[i];
+                Move move = GameData.instance.party[selectedMon].moves[i];
                 movestr += (i > 0 ? "\n" : "") + move.name.ToUpper() + "\n" + "         " + "PP "  + (move.pp < 10 ? " " : "") + move.pp +  "/" + (move.maxpp < 10 ? " " : "") + move.maxpp;
             }
             else
                 movestr += (i > 0 ? "\n" : "") + "-" + "\n" + "         " + "--";
         }
         movetext.text = movestr;
-        stats2portrait.sprite = GameData.frontMonSprites[PokemonData.MonToID(GameData.party[selectedMon].name) - 1];
-        monname2text.text = GameData.party[selectedMon].nickname;
+        stats2portrait.sprite = GameData.instance.frontMonSprites[PokemonData.MonToID(GameData.instance.party[selectedMon].name) - 1];
+        monname2text.text = GameData.instance.party[selectedMon].nickname;
         
-        exptext.text = TruncateExpNumber(GameData.party[selectedMon].experience.ToString());
-        explefttoleveltext.text =  TruncateExpNumber((GameData.party[selectedMon].ExpToNextLevel().ToString()));
-        nextleveltext.text = (GameData.party[selectedMon].level < 99 ? "<LEVEL>" + (GameData.party[selectedMon].level + 1).ToString() : 100.ToString());
-        int id = PokemonData.MonToID(GameData.party[selectedMon].name);
+        exptext.text = TruncateExpNumber(GameData.instance.party[selectedMon].experience.ToString());
+        explefttoleveltext.text =  TruncateExpNumber((GameData.instance.party[selectedMon].ExpToNextLevel().ToString()));
+        nextleveltext.text = (GameData.instance.party[selectedMon].level < 99 ? "<LEVEL>" + (GameData.instance.party[selectedMon].level + 1).ToString() : 100.ToString());
+        int id = PokemonData.MonToID(GameData.instance.party[selectedMon].name);
         pokedexno2.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
         UpdateMenus();
     }
@@ -444,7 +444,7 @@ public class PokemonMenu : MonoBehaviour
         }
         if (currentMenu == mainwindow)
         {
-            highlightedmon = GameData.party[selectedOption];
+            highlightedmon = GameData.instance.party[selectedOption];
             partyAnimTimer += Time.deltaTime;
             float hpratio = (float)highlightedmon.currenthp / (float)highlightedmon.maxhp;
             float animLoopTime = hpratio > .5f ? .2f : hpratio > .21f ? .533f : 1.0666f;
@@ -453,10 +453,10 @@ public class PokemonMenu : MonoBehaviour
                 partyAnimTimer = 0;
             }
 
-            foreach (Pokemon pokemon in GameData.party)
+            foreach (Pokemon pokemon in GameData.instance.party)
             {
-                Transform slottransform = partyslots[GameData.party.IndexOf(pokemon)].transform;
-                if (GameData.party.IndexOf(pokemon) != selectedOption)
+                Transform slottransform = partyslots[GameData.instance.party.IndexOf(pokemon)].transform;
+                if (GameData.instance.party.IndexOf(pokemon) != selectedOption)
                 {
                     slottransform.GetChild(0).GetComponent<Image>().sprite = partyanims[PokemonData.PokemonPartySprite[pokemon.name]].anim[0];
                 }
@@ -520,7 +520,7 @@ public class PokemonMenu : MonoBehaviour
                     int numberOfFieldMoves = 0;
                     int selectedMenu = 0;
                     selectedMon = selectedOption;
-                    Pokemon selectedPokemon = GameData.party[selectedMon];
+                    Pokemon selectedPokemon = GameData.instance.party[selectedMon];
                     for(int i = 0; i < 4; i++){
                         fieldMoveNames[i] = "";
                         fieldMoveObj[i].SetActive(false);
@@ -581,7 +581,7 @@ public class PokemonMenu : MonoBehaviour
                     if (selectedOption == switchMenuOffset)
                     {
                         SoundManager.instance.SetMusicLow();
-                        SoundManager.instance.PlayCry(PokemonData.MonToID(GameData.party[selectedMon].name) - 1);
+                        SoundManager.instance.PlayCry(PokemonData.MonToID(GameData.instance.party[selectedMon].name) - 1);
                        Dialogue.instance.Deactivate();
                         currentMenu = stats1;
                         UpdateStats1();
@@ -643,7 +643,7 @@ public class PokemonMenu : MonoBehaviour
     }
     IEnumerator UseFieldMove(string whatFieldMove)
     {
-        string monName = GameData.party[selectedMon].nickname;
+        string monName = GameData.instance.party[selectedMon].nickname;
 
 if(whatFieldMove == "Cut"){
 if(Player.instance.facingTree){
@@ -662,11 +662,11 @@ yield return Dialogue.instance.text("There isn't\nanything to CUT!");
 }
 if(whatFieldMove == "Surf"){
     Player.instance.UpdateFacedTile();
-    if(Player.instance.facedtile != null && Player.instance.facedtile.isWater){
+    if(Player.instance.facedTile.hasTile && Player.instance.facedTile.isWater){
     SoundManager.instance.PlaySong(18);
     currentMenu = mainwindow;
     UpdateMainMenu();
-    yield return Dialogue.instance.text(GameData.playerName + " got on\n"+ monName + "!");
+    yield return Dialogue.instance.text(GameData.instance.playerName + " got on\n"+ monName + "!");
     Player.instance.Surf();
          CloseMenu();
     this.gameObject.SetActive(false);
@@ -693,10 +693,10 @@ while(selectingPokemon){
     if(Inputs.pressed("a")) break;
 }
 selectingPokemon = false;
-Pokemon pokemon = GameData.party[selectedOption];
+Pokemon pokemon = GameData.instance.party[selectedOption];
 if(selectedOption != selectedMon){
 if(pokemon.currenthp != pokemon.maxhp){
-    int amount = GameData.party[selectedMon].maxhp / 5;
+    int amount = GameData.instance.party[selectedMon].maxhp / 5;
    yield return AnimateOurHealth(-amount,selectedMon);
     yield return AnimateOurHealth(amount,selectedOption);
     yield return Dialogue.instance.text(pokemon.nickname +"\nrecovered by " + amount + "!");
@@ -720,27 +720,27 @@ UpdateMainMenu();
     IEnumerator Switch()
     {
         //Swap selected Pokemon.
-        Pokemon pokemon = GameData.party[selectedOption];
-        GameData.party[selectedOption] = GameData.party[selectedMon];
-        GameData.party[selectedMon] = pokemon;
+        Pokemon pokemon = GameData.instance.party[selectedOption];
+        GameData.instance.party[selectedOption] = GameData.instance.party[selectedMon];
+        GameData.instance.party[selectedMon] = pokemon;
         yield return null;
 
     }
 
     IEnumerator AnimateOurHealth(int amount, int i)
     {
-        if (amount + GameData.party[i].currenthp < 0) amount = GameData.party[i].currenthp;
-        if (amount + GameData.party[i].currenthp > GameData.party[i].maxhp) amount = GameData.party[i].maxhp - GameData.party[i].currenthp;
+        if (amount + GameData.instance.party[i].currenthp < 0) amount = GameData.instance.party[i].currenthp;
+        if (amount + GameData.instance.party[i].currenthp > GameData.instance.party[i].maxhp) amount = GameData.instance.party[i].maxhp - GameData.instance.party[i].currenthp;
         int result = amount;
-        WaitForSeconds wait = new WaitForSeconds(5 / GameData.party[i].maxhp);
+        WaitForSeconds wait = new WaitForSeconds(5 / GameData.instance.party[i].maxhp);
 
         for (int l = 0; l < Mathf.Abs(result); l++)
         {
             yield return wait;
 
-            GameData.party[i].currenthp += 1 * Mathf.Clamp(result, -1, 1);
+            GameData.instance.party[i].currenthp += 1 * Mathf.Clamp(result, -1, 1);
 
-            int pixelCount = Mathf.RoundToInt((float)GameData.party[i].currenthp * 48 / (float)GameData.party[i].maxhp);
+            int pixelCount = Mathf.RoundToInt((float)GameData.instance.party[i].currenthp * 48 / (float)GameData.instance.party[i].maxhp);
             healthbars[i].fillAmount = (float)pixelCount / 48;
             UpdateScreen();
         }
@@ -749,12 +749,12 @@ UpdateMainMenu();
     }
     public bool hasFieldMove(Pokemon pokemon){
         foreach(Move move in pokemon.moves){
-   if(GameData.fieldMoves.Contains(move.name)) return true;
+   if(GameData.instance.fieldMoves.Contains(move.name)) return true;
         }
         return false;
     }
     public bool isFieldMove(Move move){
-   if(GameData.fieldMoves.Contains(move.name)) return true;
+   if(GameData.instance.fieldMoves.Contains(move.name)) return true;
     else return false;
     }
     public void CloseMenu(){

@@ -123,7 +123,7 @@ public class PokeMart : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 		pricetext.text = "$" + fullPrice.ToString ();
-        moneytext.text = "$" + GameData.money.ToString ();
+        moneytext.text = "$" + GameData.instance.money.ToString ();
 
         if (currentMenu == quantitymenu) {
             if (ItemMode == 1) {
@@ -387,7 +387,7 @@ public class PokeMart : MonoBehaviour {
                     {
                         if (!Items.instance.items[currentBagPosition].isKeyItem)
                         {
-                            GameData.money += fullPrice;
+                            GameData.instance.money += fullPrice;
                            Items.instance.RemoveItem(amountToTask, currentBagPosition);
                             currentMenu = itemwindow;
                             cursor.SetActive(true);
@@ -398,9 +398,9 @@ public class PokeMart : MonoBehaviour {
 
                     if (ItemMode == 1)
                     {
-                        if (GameData.money >= fullPrice)
+                        if (GameData.instance.money >= fullPrice)
                         {
-                            GameData.money -= fullPrice;
+                            GameData.instance.money -= fullPrice;
                             Items.instance.AddItem(martlist[currentBagPosition], amountToTask);
                             currentMenu = martwindow;
                             cursor.SetActive(true);

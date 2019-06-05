@@ -75,18 +75,18 @@ public class Options : MonoBehaviour {
 		
         if (Inputs.pressed("left")) {
 			if (selectedOption == 0) {
-				GameData.textChoice--;
-                MathE.Clamp(ref GameData.textChoice, 0, 2);
+				GameData.instance.textChoice--;
+                MathE.Clamp(ref GameData.instance.textChoice, 0, 2);
                 UpdateCursorPosition();
             }
 			if (selectedOption == 1) {
-                GameData.animationChoice--;
-                MathE.Clamp(ref GameData.animationChoice, 0, 1);
+                GameData.instance.animationChoice--;
+                MathE.Clamp(ref GameData.instance.animationChoice, 0, 1);
                 UpdateCursorPosition();
             }
 			if (selectedOption == 2) {
-                GameData.battleChoice--;
-                MathE.Clamp(ref GameData.battleChoice, 0, 1);
+                GameData.instance.battleChoice--;
+                MathE.Clamp(ref GameData.instance.battleChoice, 0, 1);
                 UpdateCursorPosition();
             }
 		}
@@ -94,18 +94,18 @@ public class Options : MonoBehaviour {
         if (Inputs.pressed("right")) {
 
 			if (selectedOption == 0) {
-                GameData.textChoice++;
-                MathE.Clamp(ref GameData.textChoice, 0, 2);
+                GameData.instance.textChoice++;
+                MathE.Clamp(ref GameData.instance.textChoice, 0, 2);
                 UpdateCursorPosition();
             }
 			if (selectedOption == 1) {
-                GameData.animationChoice++;
-                MathE.Clamp(ref GameData.animationChoice, 0, 1);
+                GameData.instance.animationChoice++;
+                MathE.Clamp(ref GameData.instance.animationChoice, 0, 1);
                 UpdateCursorPosition();
             }
 			if (selectedOption == 2) {
-                GameData.battleChoice++;
-                MathE.Clamp(ref GameData.battleChoice,0, 1);
+                GameData.instance.battleChoice++;
+                MathE.Clamp(ref GameData.instance.battleChoice,0, 1);
                 UpdateCursorPosition();
             }
 
@@ -133,17 +133,17 @@ public class Options : MonoBehaviour {
         switch (selectedOption)
         {
             case 0:
-                if (GameData.textChoice == 2) cursor.SetPosition(112, 112);
-                else if (GameData.textChoice == 1) cursor.SetPosition(56, 112);
+                if (GameData.instance.textChoice == 2) cursor.SetPosition(112, 112);
+                else if (GameData.instance.textChoice == 1) cursor.SetPosition(56, 112);
                 else cursor.SetPosition(8, 112);
                 textSpeedArrow.anchoredPosition = cursor.rectTransform.anchoredPosition + new Vector2(4,4);
                 break;
             case 1:
-                cursor.SetPosition(8 + (9 * GameData.animationChoice) * 8, 72);
+                cursor.SetPosition(8 + (9 * GameData.instance.animationChoice) * 8, 72);
                 battleAnimationArrow.anchoredPosition = cursor.rectTransform.anchoredPosition + new Vector2(4, 4);
                 break;
             case 2:
-                cursor.SetPosition(8 + (9 * GameData.battleChoice) * 8, 32);
+                cursor.SetPosition(8 + (9 * GameData.instance.battleChoice) * 8, 32);
                 battleStyleArrow.anchoredPosition = cursor.rectTransform.anchoredPosition + new Vector2(4, 4);
                 break;
             case 3:

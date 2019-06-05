@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 8d7eb4afd5146471eb3affd911e2e3f5
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: menusprite14_0
-    21300002: menusprite14_1
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: menusprite14_0
+  - first:
+      213: 21300002
+    second: menusprite14_1
   externalObjects: {}
-  serializedVersion: 5
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -23,6 +27,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +39,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -62,7 +68,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -73,7 +79,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -110,6 +116,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: fc517dacda5c247119196c19688580d6
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -130,6 +137,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 24ae119d9db6f496b994d907b8d32806
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -138,11 +146,15 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: a7685869178604229bf0455ff515428b
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

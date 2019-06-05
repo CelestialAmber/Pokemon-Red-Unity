@@ -1,21 +1,4 @@
-﻿//roll to 7 code
-//CheckPositions ();
-//if (middle1 != "7") {
-// for (int i = 0; i < 4; i++) {
-//	row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, row1.transform.localPosition.y - 16);
-//	CheckIfIllegalPosition();
-//	CheckPositions ();
-//	if (middle1 == "7") {
-//		return;
-//	}
-//
-//}
-//}
-//
-
-
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,7 +12,7 @@ public class Slots : MonoBehaviour {
 	public int payout;
 	public bool stayingInModeSuper;
 	public int GuaranteedModeGood;
-    public CustomTextTexture credittext, payouttext;
+    public CustomText credittext, payouttext;
 	public int betamount;
     public GameObject[] blueRows, redRows;
     public Sprite blueBG, redBG;
@@ -41,12 +24,77 @@ public class Slots : MonoBehaviour {
     public AudioClip startSlotsSound, payoutSound, stopReelSound;
     public Animator slotPointsAnimator;
     public GameObject flashObject;
+
+	public bool handlingInput;
+
+	public bool isUpdating;
     // Use this for initialization
+
+	private string[] reel1Slots = {
+		"7",
+		"MOUSE",
+		"FISH",
+		"BAR",
+		"CHERRY",
+		"7",
+		"FISH",
+		"BIRD",
+		"BAR",
+		"CHERRY",
+		"7",
+		"MOUSE",
+		"BIRD",
+		"BAR",
+		"CHERRY",
+		"7",
+		"MOUSE",
+		"FISH"
+	};
+	private string[] reel2Slots = {
+		"7",
+		"FISH",
+		"CHERRY",
+		"BIRD",
+		"MOUSE",
+		"BAR",
+		"CHERRY",
+		"FISH",
+		"BIRD",
+		"CHERRY",
+		"BAR",
+		"FISH",
+		"BIRD",
+		"CHERRY",
+		"MOUSE",
+		"7",
+		"FISH",
+		"CHERRY"
+	};
+	private string[] reel3Slots = {
+		"7",
+		"BIRD",
+		"FISH",
+		"CHERRY",
+		"MOUSE",
+		"BIRD",
+		"FISH",
+		"CHERRY",
+		"MOUSE",
+		"BIRD",
+		"FISH",
+		"CHERRY",
+		"MOUSE",
+		"BIRD",
+		"BAR",
+		"7",
+		"BIRD",
+		"FISH"
+	};
 
     public void Init()
     {
         instance = this;
-        if (GameData.version == Version.Red)
+        if (GameData.instance.version == Version.Red)
         {
             row1 = redRows[0];
             row2 = redRows[1];
@@ -77,7 +125,7 @@ public class Slots : MonoBehaviour {
 
             int amount = 3 - Dialogue.instance.selectedOption;
 		
-				if (GameData.coins < amount) {
+				if (GameData.instance.coins < amount) {
                     yield return Dialogue.instance.text("Not enough\ncoins!");
                     StartCoroutine (DecideBet ());
 					yield break;
@@ -114,33 +162,33 @@ public class Slots : MonoBehaviour {
 				}
 				print ("Betting " + amount + " coin(s)");
 				betamount = amount;
-				GameData.coins -= amount;
+				GameData.instance.coins -= amount;
 				UpdateCredit ();
 				rolledone = false;
 				rolledtwo = false;
 				rolledthree = false;
-				canstopthereels = false;
+				canstopthereels = true;
 				canroll = true;
             SoundManager.instance.sfx.PlayOneShot(startSlotsSound);
                 slotPointsAnimator.SetBool("toggleStatus", true);
                 StartCoroutine(Dialogue.instance.text ("Start!",true));
             slotPointsAnimator.SetFloat("betAmount", (float)amount);
+			inputTimer = 20;
 			
 		}
 
 
 	}
 	void UpdateCredit(){
-		if (GameData.coins > 9999) {
-			GameData.coins = 9999;
+		if (GameData.instance.coins > 9999) {
+			GameData.instance.coins = 9999;
 		}
-        credittext.text = (GameData.coins > 999 ? "" : GameData.coins > 99 ? "0" : GameData.coins > 9 ? "00" : "000" ) + GameData.coins.ToString();
+        credittext.text = (GameData.instance.coins > 999 ? "" : GameData.instance.coins > 99 ? "0" : GameData.instance.coins > 9 ? "00" : "000" ) + GameData.instance.coins.ToString();
 	}
 	void UpdatePayout(){
         payouttext.text = (payout > 999 ? "" : payout > 99 ? "0" : payout > 9 ? "00" : "000") + payout.ToString();
 	}
 	public IEnumerator Initialize () {
-        Dialogue.instance.fastText = true;
 		GuaranteedModeGood = 0;
 		UpdateCredit ();
 		UpdatePayout ();
@@ -148,10 +196,10 @@ public class Slots : MonoBehaviour {
         row2Index = 0;
         row3Index = 0;
 		canroll = false;
-        Dialogue.instance.fastText = false;
         slotPointsAnimator.SetBool("toggleStatus",false);
+		Dialogue.instance.fastText = true;
         yield return Dialogue.instance.text ("Bet how many\ncoins?",true);
-        Dialogue.instance.fastText = true;
+		Dialogue.instance.fastText = false;
 		StartCoroutine(DecideBet ());
 
 
@@ -163,7 +211,6 @@ public class Slots : MonoBehaviour {
 		rolledtwo = false;
 		rolledthree = false;
 		canroll = false;
-		Dialogue.instance.fastText = false;
 		Dialogue.instance.Deactivate ();
 		this.gameObject.SetActive (false);
 
@@ -172,90 +219,65 @@ public class Slots : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if(inputTimer == 0 && !handlingInput) StartCoroutine(HandleInput ());
 		frames++;
-		HandleInput ();
-		if (frames % 3 == 0) {
-			
-			UpdatePositions (true);
+		if (frames % (inputTimer > 0 ? 2 : 3) == 0) {
+			if(canstopthereels)UpdatePositions (true);
+			if(inputTimer > 0) inputTimer--;
 			frames = 0;
 		}
+		
+		
+	}
+	int inputTimer; //counter disabling inputs until it reaches 0
+	IEnumerator MainUpdate(){
+		isUpdating = true;
+		yield return 0;
+		isUpdating = false;
 		
 	}
 	void UpdatePositions(bool addHalf){
 		if (canroll) {
-		
 
 			if (!rolledone) {
                if(addHalf) row1Half++;
-                if (row1Half > 1)
+                if (addHalf) row2Half++;
+                if (addHalf) row3Half++;
+			}
+			if (rolledone && !rolledtwo) {
+                if (addHalf) row2Half++;
+                if (addHalf) row3Half++;
+            }
+			if (rolledtwo && !rolledthree) {
+                if (addHalf) row3Half++;
+            }
+				if (row1Half > 1)
                 {
                     row1Half = 0;
                     row1Index--;
                     if (row1Index < 0) row1Index = 14;
                 }
-                if (addHalf) row2Half++;
-                if (row2Half > 1)
+
+				if (row2Half > 1)
                 {
                     row2Half = 0;
                     row2Index--;
                     if (row2Index < 0) row2Index = 14;
                 }
-                if (addHalf) row3Half++;
-                if (row3Half > 1)
+
+				if (row3Half > 1)
                 {
                     row3Half = 0;
                     row3Index--;
                     if (row3Index < 0) row3Index = 14;
                 }
-
-                row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, -152 + row1Index * 16 - row1Half * 8, 0);
+				row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, -152 + row1Index * 16 - row1Half * 8, 0);
 				row2.transform.localPosition = new Vector3(row2.transform.localPosition.x, -152 + row2Index * 16 - row2Half * 8, 0);
                 row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
-                canstopthereels = true;
-					
-
-
-			}
-			if (rolledone && !rolledtwo) {
-                if (addHalf) row2Half++;
-                if (row2Half > 1)
-                {
-                    row2Half = 0;
-                    row2Index--;
-                    if (row2Index < 0) row2Index = 14;
-                }
-                if (addHalf) row3Half++;
-                if (row3Half > 1)
-                {
-                    row3Half = 0;
-                    row3Index--;
-                    if (row3Index < 0) row3Index = 14;
-                }
-                row2.transform.localPosition = new Vector3(row2.transform.localPosition.x, -152 + row2Index * 16 - row2Half * 8, 0);
-                row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
-
-
-
-
-            }
-			if (rolledtwo && !rolledthree) {
-                if (addHalf) row3Half++;
-                if (row3Half > 1)
-                {
-                    row3Half = 0;
-                    row3Index--;
-                    if (row3Index < 0) row3Index = 14;
-                }
-
-                row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
-
-
-
-            }
-
-			CheckPositions ();
+			
+				CheckPositions ();
 		}
+	
 	}
     IEnumerator SlotsFlash(int times)
     {
@@ -271,36 +293,88 @@ public class Slots : MonoBehaviour {
         
 
     }
-	IEnumerator LinedUp(){
-		if (GuaranteedModeGood != 0) {
-			GuaranteedModeGood--;
-		}
-		string whatwaslinedup;
-		whatwaslinedup = "";
-		if ((above1 == above2 && above2 == above3) || (middle1 == middle2 && middle2 == middle3) || (below1 == below2 && below2 == below3) || (above1 == middle2 && middle2 == below3) || (below1 == middle2 && middle2 == above3)) {
-			
-			if (middle1 == middle2 && middle2 == middle3) {
-				whatwaslinedup = middle1;
+
+	public string FindMatch(){
+		string result = "";
+		if (middle1 == middle2 && middle2 == middle3) {
+				result = middle1;
 			}
 			if (betamount != 1) {
 				if (above1 == above2 && above2 == above3) {
-					whatwaslinedup = above1;
+					result = above1;
 				}
 
 				if (below1 == below2 && below2 == below3) { 
-					whatwaslinedup = below1;
+					result = below1;
 				}
 			}
 			if (betamount == 3) {
 				if (above1 == middle2 && middle2 == below3) { 
-					whatwaslinedup = middle2;
+					result = middle2;
 				}
 
 				if (below1 == middle2 && middle2 == above3) {
-					whatwaslinedup = middle2;
+					result = middle2;
 				}
 			}
-			if (whatwaslinedup != "") {
+			return result;
+
+	}
+	IEnumerator RollWheelDownOne(int whatWheel){
+		WaitForSeconds wait = new WaitForSeconds(1f/60f);
+		for(int i = 0; i < 2; i++){
+			switch(whatWheel){
+				case 1:
+				row1Half++;
+				break;
+				case 2:
+				row2Half++;
+				break;
+				case 3:
+				row3Half++;
+				break;
+
+			}
+			UpdatePositions(false);
+			yield return wait;
+		}
+		CheckPositions();
+	}
+	IEnumerator LinedUp(){
+		canstopthereels = false;
+
+		string whatwaslinedup;
+		whatwaslinedup = FindMatch();
+		
+		if(CurrentMode != "BAD" && whatwaslinedup == ""){
+			for(int i = 0; i < 4; i++){
+			yield return RollWheelDownOne(3);
+			whatwaslinedup = FindMatch();
+			if(whatwaslinedup != "") break;
+
+			}
+		}
+
+		if(CurrentMode != "SUPER" && (whatwaslinedup == "7" || whatwaslinedup == "BAR")){ //if the current mode isn't Super and there's a bar or 7 match, move the 3rd wheel down until there isn't a 7 or bar match
+			while((whatwaslinedup == "7" || whatwaslinedup == "BAR")){
+			yield return RollWheelDownOne(3);
+			whatwaslinedup = FindMatch();
+			}
+
+		}
+		
+		if(CurrentMode == "BAD" && whatwaslinedup != ""){ //if the current mode is Bad and there's a match, move the 3rd wheel down until there isn't a match
+			while(whatwaslinedup != ""){
+			yield return RollWheelDownOne(3);
+			whatwaslinedup = FindMatch();
+			}
+		}
+		
+		if (whatwaslinedup != "") {
+			
+			if(whatwaslinedup != "7" && whatwaslinedup != "BAR" && GuaranteedModeGood != 0)GuaranteedModeGood--;
+			
+		
 				if (whatwaslinedup == "7") {
 					payout = 300;
 					int toendornotsuper = Random.Range (0, 2);
@@ -342,8 +416,7 @@ public class Slots : MonoBehaviour {
                 else timeToWait = 0.016f * 8f;
                 whatwaslinedup = "<" + (whatwaslinedup == "7" ? "SEVEN" : whatwaslinedup) + ">";
                
-                yield return Dialogue.instance.text (whatwaslinedup + " lined up!\nScored " + payout + "!");
-                yield return Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + "!",true);
+                yield return Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + " coins!",true,true);
 
                 int payoutamount = payout;
                 
@@ -352,7 +425,7 @@ public class Slots : MonoBehaviour {
 			
 					payout--;
                     SoundManager.instance.sfx.PlayOneShot(payoutSound);
-					GameData.coins++;
+					GameData.instance.coins++;
 					UpdateCredit ();
 					UpdatePayout ();
                     yield return new WaitForSeconds(timeToWait);
@@ -361,10 +434,7 @@ public class Slots : MonoBehaviour {
 				}
                 flashObject.SetActive(false);
 			} else {
-				yield return Dialogue.instance.text ("Not this time!");
-			}
-			} else {
-				if (GameData.coins > 0) {
+				if (GameData.instance.coins > 0) {
 				yield return Dialogue.instance.text ("Not this time!");
 				} else {
 				yield return Dialogue.instance.text ("Darn! Ran out of\ncoins!");
@@ -379,10 +449,8 @@ public class Slots : MonoBehaviour {
         yield return StartCoroutine(Dialogue.instance.prompt ());
 			if (Dialogue.instance.selectedOption == 0) {
 				canroll = false;
-            Dialogue.instance.fastText = false;
             slotPointsAnimator.SetBool("toggleStatus",false);
 			yield return Dialogue.instance.text ("Bet how many\ncoins?",true);
-            Dialogue.instance.fastText = true;
 				StartCoroutine(DecideBet ());
 
 
@@ -398,235 +466,24 @@ public class Slots : MonoBehaviour {
 
 	}
 	void CheckPositions(){
-		if (row1Index == 14) { //-168
-			above1 = "FISH";
-			middle1 = "MOUSE";
-			below1 = "7";
-		}
-		if (row1Index == 13) { //56
-			above1 = "BAR";
-			middle1 = "FISH";
-			below1 = "MOUSE";
-		}
-		if (row1Index == 12) {
-			above1 = "CHERRY";
-			middle1 = "BAR";
-			below1 = "FISH";
-		}
-		if (row1Index == 11) {
-			above1 = "7";
-			middle1 = "CHERRY";
-			below1 = "BAR";
-		}
-		if (row1Index == 10) {
-			above1 = "FISH";
-			middle1 = "7";
-			below1 = "CHERRY";
-		}
-		if (row1Index == 9) {
-			above1 = "BIRD";
-			middle1 = "FISH";
-			below1 = "7";
-		}
-		if (row1Index == 8) {
-			above1 = "BAR";
-			middle1 = "BIRD";
-			below1 = "FISH";
-		}
-		if (row1Index == 7) {
-			above1 = "CHERRY";
-			middle1 = "BAR";
-			below1 = "BIRD";
-		}
-		if (row1Index == 6) {
-			above1 = "7";
-			middle1 = "CHERRY";
-			below1 = "BAR";
-		}
-		if (row1Index == 5) {
-			above1 = "MOUSE";
-			middle1 = "7";
-			below1 = "CHERRY";
-		}
-		if (row1Index == 4) {
-			above1 = "BIRD";
-			middle1 = "MOUSE";
-			below1 = "7";
-		}
-		if (row1Index == 3) {
-			above1 = "BAR";
-			middle1 = "BIRD";
-			below1 = "MOUSE";
-		}
-		if (row1Index == 2) {
-			above1 = "CHERRY";
-			middle1 = "BAR";
-			below1 = "BIRD";
-		}
-		if (row1Index == 1) {
-			above1 = "7";
-			middle1 = "CHERRY";
-			below1 = "BAR";
-		}
-		if (row1Index == 0) {
-			above1 = "MOUSE";
-			middle1 = "7";
-			below1 = "CHERRY";
-		}
+		
+		//Row 1
+		above1 = reel1Slots[16 - row1Index];
+		middle1 = reel1Slots[15 - row1Index];
+		below1 = reel1Slots[14 - row1Index];
+		
 		
 		//ROW2
-		if (row2Index == 14) {
-			above2 = "CHERRY";
-			middle2 = "FISH";
-			below2 = "7";
-		}
-		if (row2Index == 13) {
-			above2 = "BIRD";
-			middle2 = "CHERRY";
-			below2 = "FISH";
-		}
-		if (row2Index == 12) {
-			above2 = "MOUSE";
-			middle2 = "BIRD";
-			below2 = "CHERRY";
-		}
-		if (row2Index == 11) {
-			above2 = "BAR";
-			middle2 = "MOUSE";
-			below2 = "BIRD";
-		}
-		if (row2Index == 10) {
-			above2 = "CHERRY";
-			middle2 = "BAR";
-			below2 = "MOUSE";
-		}
-		if (row2Index == 9) {
-			above2 = "FISH";
-			middle2 = "CHERRY";
-			below2 = "BAR";
-		}
-		if (row2Index == 8) {
-			above2 = "BIRD";
-			middle2 = "FISH";
-			below2 = "CHERRY";
-		}
-		if (row2Index == 7) {
-			above2 = "CHERRY";
-			middle2 = "BIRD";
-			below2 = "FISH";
-		}
-		if (row2Index == 6) {
-			above2 = "BAR";
-			middle2 = "CHERRY";
-			below2 = "BIRD";
-		}
-		if (row2Index == 5) {
-			above2 = "FISH";
-			middle2 = "BAR";
-			below2 = "CHERRY";
-		}
-		if (row2Index == 4) {
-			above2 = "BIRD";
-			middle2 = "FISH";
-			below2 = "BAR";
-		}
-		if (row2Index == 3) {
-			above2 = "CHERRY";
-			middle2 = "BIRD";
-			below2 = "FISH";
-		}
-		if (row2Index == 2) {
-			above2 = "MOUSE";
-			middle2 = "CHERRY";
-			below2 = "BIRD";
-		}
-		if (row2Index == 1) {
-			above2 = "7";
-			middle2 = "MOUSE";
-			below2 = "CHERRY";
-		}
-		if (row2Index == 0) {
-			above2 = "FISH";
-			middle2 = "7";
-			below2 = "MOUSE";
-		}
+		above2 = reel2Slots[16 - row2Index];
+		middle2 = reel2Slots[15 - row2Index];
+		below2 = reel2Slots[14 - row2Index];
+		
 		
 		//ROW3
-		if (row3Index == 14) {
-			above3 = "FISH";
-			middle3 = "BIRD";
-			below3 = "7";
-		}
-		if (row3Index == 13) {
-			above3 = "CHERRY";
-			middle3 = "FISH";
-			below3 = "BIRD";
-		}
-		if (row3Index == 12) {
-			above3 = "MOUSE";
-			middle3 = "CHERRY";
-			below3 = "FISH";
-		}
-		if (row3Index == 11) {
-			above3 = "BIRD";
-			middle3 = "MOUSE";
-			below3 = "CHERRY";
-		}
-		if (row3Index == 10) {
-			above3 = "FISH";
-			middle3 = "BIRD";
-			below3 = "MOUSE";
-		}
-		if (row3Index == 9) {
-			above3 = "CHERRY";
-			middle3 = "FISH";
-			below3 = "BIRD";
-		}
-		if (row3Index == 8) {
-			above3 = "MOUSE";
-			middle3 = "CHERRY";
-			below3 = "FISH";
-		}
-		if (row3Index == 7) {
-			above3 = "BIRD";
-			middle3 = "MOUSE";
-			below3 = "CHERRY";
-		}
-		if (row3Index == 6) {
-			above3 = "FISH";
-			middle3 = "BIRD";
-			below3 = "MOUSE";
-		}
-		if (row3Index == 5) {
-			above3 = "CHERRY";
-			middle3 = "FISH";
-			below3 = "BIRD";
-		}
-		if (row3Index == 4) {
-			above3 = "MOUSE";
-			middle3 = "CHERRY";
-			below3 = "FISH";
-		}
-		if (row3Index == 3) {
-			above3 = "BIRD";
-			middle3 = "MOUSE";
-			below3 = "CHERRY";
-		}
-		if (row3Index == 2) {
-			above3 = "BAR";
-			middle3 = "BIRD";
-			below3 = "MOUSE";
-		}
-		if (row3Index == 1) {
-			above3 = "7";
-			middle3 = "BAR";
-			below3 = "BIRD";
-		}
-		if (row3Index == 0) {
-			above3 = "BIRD";
-			middle3 = "7";
-			below3 = "BAR";
-		}
+		above3 = reel3Slots[16 - row3Index];
+		middle3 = reel3Slots[15 - row3Index];
+		below3 = reel3Slots[14 - row3Index];
+		
 		
 	}
 	void CheckIfIllegalPosition(){
@@ -644,435 +501,85 @@ public class Slots : MonoBehaviour {
             row3Index = 14; //goes to 72 y
 
         }
-        UpdatePositions(false);
     }
-	void HandleInput(){
+	string checkWheel1Wheel2Matches(){
+		return above1 == above2 || above1 == middle2 ? above1:  middle1 == middle2 ? middle1 : below1 == middle2 || below1 == below2 ? below1 : "";
+	}
+	IEnumerator HandleInput(){
+		handlingInput = true;
 		if (canroll && canstopthereels) {
+			
 
 			if (rolledtwo && !rolledthree) {
 				if (Inputs.pressed("a")) {
+					rolledthree = true;
 				SoundManager.instance.sfx.PlayOneShot(stopReelSound);
+				
 					if (row3Half > 0) {
-                        row3Half++;
-                        UpdatePositions(false);
-						CheckIfIllegalPosition();
-                        CheckPositions();
+						row3Half++;
+						UpdatePositions(false);
 					}
-
+					
 						 
 		
-						if (CurrentMode == "SUPER" || CurrentMode == "GOOD") {
-							CheckPositions ();
-							if (middle1 == middle2) {
-
-								if (middle3 != middle2) {
-									for (int i = 0; i < 4; i++) {
-										row3Index--;
-                                    UpdatePositions(false);
-										CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (middle3 == middle2) {
-											break;
-										}
-
-									}
-								}
-							}
-							if (above1 == above2) {
-
-								if (above3 != above2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (above3 == above2) {
-											break;
-										}
-
-									}	
-								}
-							}
-							if (below1 == below2) { 
-
-								if (below3 != below2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (below3 == below2) {
-											break;
-										}
-
-									}
-								}
-							}
-
-							if (above1 == middle2) { 
-
-								if (below3 != middle2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (below3 == middle2) {
-											break;
-										}
-
-									}
-								}
-							}
-
-							if (below1 == middle2) {
-
-								if (above3 != middle2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (above3 == middle2) {
-											break;
-										}
-
-									}
-								}
-
-							}
-
-
-						}
-						if (CurrentMode == "GOOD") {
-							CheckPositions ();
-							if (middle1 == middle2) {
-								if (middle2 == "BAR" || middle2 == "7") {
-									if (middle3 == middle2) {
-										for (int i = 0; i < 4; i++) {
-                                        row3Index--;
-                                        UpdatePositions(false);
-                                        CheckIfIllegalPosition ();
-											CheckPositions ();
-											if (middle3 != middle2) {
-												break;
-											}
-
-										}
-									}
-								}
-							}
-							if (above1 == above2) {
-								if (above2 == "BAR" || above2 == "7") {
-									if (above3 == above2) {
-
-										for (int i = 0; i < 4; i++) {
-                                        row3Index--;
-                                        UpdatePositions(false);
-                                        CheckIfIllegalPosition ();
-											CheckPositions ();
-											if (above3 != above2) {
-												break;
-											}
-
-										}	
-									}
-								}
-							}
-							if (below1 == below2) { 
-								if (below2 == "BAR" || below2 == "7") {
-									if (below3 == below2) {
-										for (int i = 0; i < 4; i++) {
-                                        row3Index--;
-                                        UpdatePositions(false);
-                                        CheckIfIllegalPosition ();
-											CheckPositions ();
-											if (below3 != below2) {
-												break;
-											}
-
-										}
-									}
-								}
-							}
-
-							if (above1 == middle2) { 
-								if (middle2 == "BAR" || middle2 == "7") {
-									if (below3 == middle2) {
-										for (int i = 0; i < 4; i++) {
-                                        row3Index--;
-                                        UpdatePositions(false);
-                                        CheckIfIllegalPosition ();
-											CheckPositions ();
-											if (below3 != middle2) {
-												break;
-											}
-
-										}
-									}
-								}
-							}
-
-							if (below1 == middle2) {
-								if (middle2 == "BAR" || middle2 == "7") {
-									if (above3 == middle2) {
-										for (int i = 0; i < 4; i++) {
-                                        row3Index--;
-                                        UpdatePositions(false);
-                                        CheckIfIllegalPosition ();
-											CheckPositions ();
-											if (above3 != middle2) {
-												break;
-											}
-
-										}
-									}
-
-								}
-							}
-
-
-						}
-						if (CurrentMode == "BAD") {
-							CheckPositions ();
-							if (middle1 == middle2) {
-
-								if (middle3 == middle2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (middle3 != middle2) {
-											break;
-										}
-
-									}
-								}
-							}
-
-							if (above1 == middle2) { 
-
-								if (below3 == middle2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (below3 != middle2) {
-											break;
-										}
-
-									}
-								}
-							}
-
-							if (below1 == middle2) {
-
-								if (above3 == middle2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (above3 != middle2) {
-											break;
-										}
-
-									}
-								}
-
-							}
-							if (above1 == above2) {
-
-								if (above3 == above2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (above3 != above2) {
-											break;
-										}
-
-									}	
-								}
-							}
-							if (below1 == below2) { 
-
-								if (below3 == below2) {
-									for (int i = 0; i < 4; i++) {
-                                    row3Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (below3 != below2) {
-											break;
-										}
-
-									}
-								}
-							}
-
-
-
-						}
-						rolledthree = true;
+						
+						
+						
+						
 						CheckPositions ();
-						StartCoroutine (LinedUp ());
+						yield return LinedUp ();
 					
 				}
 
 			}
 			else if (rolledone && !rolledtwo) {
-				bool FoundASuperMatch = false;
-				bool FoundAMatch = false;
 				if (Inputs.pressed("a")) {
+					rolledtwo = true;
 					SoundManager.instance.sfx.PlayOneShot(stopReelSound);
+					
 						if (row2Half > 0) {
-
-                        row2Half++;
-                        UpdatePositions(false);
-                        
-                        CheckIfIllegalPosition();
-                        CheckPositions();
+						row2Half++;
+						UpdatePositions(false);
                     }
-						
-	
+						CheckPositions ();
 						if (CurrentMode == "SUPER") {
-							CheckPositions ();
-							if (middle1 == "BAR" || middle1 == "7") {
+							
+							string match = checkWheel1Wheel2Matches();
+							if(match == "" && (below2 == "7" || below2 == "BAR")){
+							handlingInput = false;
+							yield return 0;
+							}
+							if (match != "BAR" && match != "7") {
 						
-								if (middle2 != middle1) {
 									for (int i = 0; i < 4; i++) {
-                                    row2Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (middle2 == middle1) {
-											FoundASuperMatch = true;
+                                    yield return RollWheelDownOne(2);
+									match = checkWheel1Wheel2Matches();
+										if (match == "BAR" && match == "7") {
 											break;
 										}
 
 									}
-								} else {
-									FoundASuperMatch = true;
-
-								}
-
-							
-							}
-							if ((above1 == "BAR" || above1 == "7") && !FoundASuperMatch) {
-
-								if (above2 != above1 && middle2 != above1) {
-									for (int i = 0; i < 4; i++) {
-                                    row2Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (above2 == above1 || middle2 == above1) {
-											FoundASuperMatch = true;
-											break;
-										}
-
-									}	
-								} else {
-									FoundASuperMatch = true;
-
 								}
 							
-							}
-							if ((below1 == "BAR" || below1 == "7") && !FoundASuperMatch) { 
-
-								if (below2 != below1 && middle2 != below1) {
-									for (int i = 0; i < 4; i++) {
-                                    row2Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (below2 == below1 || middle2 == below1) {
-											FoundASuperMatch = true;
-											break;
-										}
-
-									}
-								} else {
-									FoundASuperMatch = true;
-
-								}
-							
-							}
-
-
 						} else {
-							CheckPositions ();
+						
 
-
-								if (middle2 != middle1) {
+							string match = checkWheel1Wheel2Matches();
+								if (match == "") {
+						
 									for (int i = 0; i < 4; i++) {
-                                row2Index--;
-                                UpdatePositions(false);
-                                CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (middle2 == middle1) {
-											FoundAMatch = true;
+                                     yield return RollWheelDownOne(2);
+									match = checkWheel1Wheel2Matches();
+										if (match != "") {
 											break;
 										}
 
 									}
-								} else {
-									FoundAMatch = true;
-
 								}
-
-
-							
-							if (!FoundAMatch) {
-
-								if (above2 != above1 && middle2 != above1) {
-									for (int i = 0; i < 4; i++) {
-                                    row2Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (above2 == above1 || middle2 == above1) {
-											FoundAMatch = true;
-											break;
-										}
-
-									}	
-								} else {
-									FoundAMatch = true;
-
-								}
-
-							}
-							if (!FoundAMatch) { 
-
-								if (below2 != below1 && middle2 != below1) {
-									for (int i = 0; i < 4; i++) {
-                                    row2Index--;
-                                    UpdatePositions(false);
-                                    CheckIfIllegalPosition ();
-										CheckPositions ();
-										if (below2 == below1 || middle2 == below1) {
-											FoundAMatch = true;
-											break;
-										}
-
-									}
-								} else {
-									FoundAMatch = true;
-
-								}
-
-							}
 
 
 						}
-
-
-						rolledtwo = true;
+						
 					
 				}
 
@@ -1080,39 +587,34 @@ public class Slots : MonoBehaviour {
 			}
 			else if (!rolledone) {
 				if (Inputs.pressed("a")) {
+					rolledone = true;
 					SoundManager.instance.sfx.PlayOneShot(stopReelSound);
+				
 						if (row1Half > 0) {
                         row1Half++;
-                        UpdatePositions(false);
-                       
-					  CheckIfIllegalPosition();
-                        CheckPositions();
+						UpdatePositions(false);
                     }
-                    
+					CheckPositions ();
 						if (CurrentMode == "SUPER") {
 
-							CheckPositions ();
+							
 							//oversight where it spins regardless in mode super.
-							if (above1 != "7" && middle1 != "7" && below1 != "7") { //DISABLE FOR OVERSIGHT
+							/*
+							if (above1 != "7" && middle1 != "7" && below1 != "7") {
 								for (int i = 0; i < 4; i++) {
-                                row1Index--;
-                                UpdatePositions(false);
-                                CheckIfIllegalPosition ();
-									CheckPositions ();
+                                 yield return RollWheelDownOne(1);
 									if (above1 == "7" || middle1 == "7" || below1 == "7") {
 										break;
 									}
 
 								}
-							} //DISABLE
+							}
+							*/
 						} else {
-							CheckPositions ();
+							
 							if (middle1 == "CHERRY") {
 								for (int i = 0; i < 4; i++) {
-                                row1Index--;
-                                UpdatePositions(false);
-                                CheckIfIllegalPosition ();
-									CheckPositions ();
+                                 yield return RollWheelDownOne(1);
 									if (middle1 != "CHERRY") {
 										break;
 									}
@@ -1120,8 +622,7 @@ public class Slots : MonoBehaviour {
 								}
 							}
 						}
-						rolledone = true;
-					
+						
 				}
 
 
@@ -1130,5 +631,6 @@ public class Slots : MonoBehaviour {
 
 
 		}
+		handlingInput = false;
 	}
 }

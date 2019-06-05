@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class CreditsHandler : MonoBehaviour {
-	public CustomTextTexture top, middle, low, bottom;
+	public CustomText top, middle, low, bottom;
 	public int CreditIndex, MonIndex;
 	public Image monimage;
 	public Sprite[] mons = new Sprite[16];

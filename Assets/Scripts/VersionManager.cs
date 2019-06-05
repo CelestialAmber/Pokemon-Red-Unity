@@ -15,7 +15,7 @@ public class VersionManager : MonoBehaviour {
     public static VersionManager instance;
     public void Awake(){
         instance = this;
-        GameData.version = version;
+        GameData.instance.version = version;
     }
     private void Start()
     {

@@ -39,7 +39,7 @@ public class TextDatabase : MonoBehaviour {
 
     public IEnumerator GetItemText(string item){
         itemDatabase.AddItem(item, 1);
-        yield return Dialogue.instance.text(GameData.playerName + " found \n"+item.ToUpper() + "!");
+        yield return Dialogue.instance.text(GameData.instance.playerName + " found \n"+item.ToUpper() + "!");
 
 
     }
@@ -48,7 +48,7 @@ public class TextDatabase : MonoBehaviour {
 
     IEnumerator Text2(){
 		Dialogue.instance.Deactivate ();
-        yield return Dialogue.instance.text (GameData.playerName + " turned on\nthe PC!");
+        yield return Dialogue.instance.text (GameData.instance.playerName + " turned on\nthe PC!");
 		Player.instance.menuActive = true;
 		itemPCMenu.SetActive (true);
         Inputs.Disable("start");

@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour {
     private Bag bag;
     private Pokedex pokedex;
 	private PokemonMenu pokemonMenu;
-    public CustomTextTexture playername;
+    public CustomText playername;
     public int slotNumber;
 	// Use this for initialization
 	public void Initialize(){
@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour {
 		if (currentmenu == null) {
 			cursor.SetActive (false);
 		} else if(currentmenu == thismenu){
-            playername.text = GameData.playerName;
+            playername.text = GameData.instance.playerName;
             cursor.SetPosition(88, 120 - 16 * selectedOption);
 
 

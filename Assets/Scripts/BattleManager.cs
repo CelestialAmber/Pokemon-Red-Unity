@@ -35,17 +35,14 @@ public class BattleManager : MonoBehaviour {
 	public GameObject playerMonObject,playerObject,trainerObject, enemyMonObject;
 	//current loaded playermon stats
     public Pokemon playermon;
-	public CustomText playerHPtext;
-	public CustomText playermonLeveltext;
-    public CustomText playerName;
+	public CustomText playerHpText, playerName, playermonLeveltext;
 	public Image playerHPBar;
 	public Image[] playerPartyBalls;
 	//current loaded enemymon stats
 
 	public List<Pokemon> enemyParty;
     public Pokemon enemymon;
-	public CustomText enemymonLeveltext;
-    public CustomText enemymonname;
+	public CustomText enemymonLeveltext, enemymonname;
 	public Image enemyHPBar;
 	public Image[] enemyPartyBalls;
 	//
@@ -69,7 +66,7 @@ public class BattleManager : MonoBehaviour {
 	4:trainer_party
 	5:player_only
 	 */
-	 public AudioClip sendOutMonClip;
+	 public AudioClip sendOutMonClip, runClip;
 	public GameObject bgTextbox;
 	public BattleState battleState;
 
@@ -87,7 +84,7 @@ public class BattleManager : MonoBehaviour {
 	// Use this for initialization
 
 	public void Initialize(){
-		if(GameData.party.Count == 0) throw new UnityException("The player has no Pokemon!");
+		if(GameData.instance.party.Count == 0) throw new UnityException("The player has no Pokemon!");
 		battleState = BattleState.Intro;
 		if(battleType == BattleType.Trainer){
        // switch(battleID)
@@ -99,7 +96,7 @@ public class BattleManager : MonoBehaviour {
             pokemon.RecalculateStats();
         }
         enemymon = enemyMons[0];
-        playermon = GameData.party[0];
+        playermon = GameData.instance.party[0];
          playermon.RecalculateStats();
         enemyHPBar.fillAmount = (Mathf.Round(enemymon.currenthp * 48 / enemymon.maxhp))/48;
         playerHPBar.fillAmount = (Mathf.Round(playermon.currenthp * 48 / playermon.maxhp))/48;
@@ -217,7 +214,7 @@ playerpokeballs.SetActive(true);
 		initialTimer = 0f;
 		yield return new WaitForSeconds(1f);
 	
-		playermon = GameData.party[0];
+		playermon = GameData.instance.party[0];
 		enemymon = enemyMons[0];
 			yield return Dialogue.instance.text ("Go! " + playermon.nickname + "!",true);
 	while(initialTimer < 0.6f){
@@ -337,6 +334,7 @@ foreach (GameObject menu in allmenus) {
 					if(selectedOption == 3){
 						currentmenu = null;
 						cursor.SetActive(false);
+						SoundManager.instance.sfx.PlayOneShot(runClip);
 						Player.instance.RunFromBattle();
 						 UpdateMenus();
 					}
@@ -354,28 +352,28 @@ foreach (GameObject menu in allmenus) {
 
 	}
 	public void DetermineFrontSprite(){
-        frontportrait.overrideSprite = GameData.frontMonSprites[PokemonData.MonToID(enemymon.name) - 1];
+        frontportrait.overrideSprite = GameData.instance.frontMonSprites[PokemonData.MonToID(enemymon.name) - 1];
 
 	}
 
 	public void DetermineBackSprite(){
-        backportrait.overrideSprite = GameData.backMonSprites[PokemonData.MonToID(playermon.name) - 1];
+        backportrait.overrideSprite = GameData.instance.backMonSprites[PokemonData.MonToID(playermon.name) - 1];
 
 	}
 void UpdateStatsUI(){
 	enemymonLeveltext.text = (enemymon.level != 100 ? "<LEVEL>" : "") + enemymon.level.ToString();
 			playermonLeveltext.text = (playermon.level != 100 ? "<LEVEL>" : "") +  playermon.level.ToString ();
-			playerHPtext.text = (playermon.currenthp > 99 ? "" : playermon.currenthp > 9 ? " " : "  ") + playermon.currenthp + " " + playermon.maxhp;
+			playerHpText.text = (playermon.currenthp > 99 ? "" : playermon.currenthp > 9 ? " " : "  ") + playermon.currenthp + " " + playermon.maxhp;
             enemymonname.text = enemymon.name.ToUpper();
 }
 void UpdatePokeBallUI(){
      for(int i = 0; i < 6; i++){
-		 if(GameData.party.Count >= i + 1){
+		 if(GameData.instance.party.Count >= i + 1){
 			
-			 if(GameData.party[i].status == Status.Ok){ 
+			 if(GameData.instance.party[i].status == Status.Ok){ 
 				 playerPartyBalls[i].sprite = partyBallSprites[0];
 			 }
-			 else if(GameData.party[i].status == Status.Fainted) {
+			 else if(GameData.instance.party[i].status == Status.Fainted) {
 			  playerPartyBalls[i].sprite = partyBallSprites[3];
 			 }
 			  else{ 

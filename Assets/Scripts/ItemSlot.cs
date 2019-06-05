@@ -7,16 +7,20 @@ public enum SlotMode{
     Empty,
     Cancel
 }
+public enum SlotType{
+    Item,
+    Shop
+}
 public class ItemSlot : MonoBehaviour {
 	public bool isKeyItem;
-	public CustomTextTexture slotNameText, slotQuantityText;
+	public CustomText slotNameText, slotQuantityText;
 	public string Name;
 	public int intquantity;
     public SlotMode mode;
 	// Use this for initialization
 	void Awake () {
-        slotNameText = transform.GetChild(0).GetComponent<CustomTextTexture>();
-        slotQuantityText = transform.GetChild(1).GetComponent<CustomTextTexture>();
+        slotNameText = transform.GetChild(0).GetComponent<CustomText>();
+        slotQuantityText = transform.GetChild(1).GetComponent<CustomText>();
 	}
 	
 	// Update is called once per frame

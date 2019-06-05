@@ -71,17 +71,25 @@ public class SaveData
     }
 }
 //Class containing all the core data of the game.
-public class GameData {
-    public static List<string> fieldMoves = new List<string>(new string[] { "Teleport", "Fly", "Cut", "Surf", "Dig", "Strength", "Flash", "Softboiled" });
-    public static List<Pokemon> party = new List<Pokemon>();
-    public static void AddPokemonToParty(string name,int level)
+public class GameData : MonoBehaviour{
+    private static GameData m_instance;
+    public static GameData instance {
+        get{
+            if(m_instance == null) m_instance = FindObjectOfType(typeof(GameData)) as GameData;
+            return m_instance;
+        }
+    }
+    public List<string> fieldMoves = new List<string>(new string[] { "Teleport", "Fly", "Cut", "Surf", "Dig", "Strength", "Flash", "Softboiled" });
+    public List<Pokemon> party = new List<Pokemon>();
+    public void AddPokemonToParty(string name,int level)
     {
         party.Add(new Pokemon(name, level, false));
     }
-    public static Sprite[] frontMonSprites, backMonSprites;
-    public static bool isPaused, inGame, atTitleScreen;
-    public static SaveData saveData;
-    public static void Init()
+    [HideInInspector]
+    public Sprite[] frontMonSprites, backMonSprites;
+    public bool isPaused, inGame, atTitleScreen;
+    public SaveData saveData;
+    public void Init()
     {
         frontMonSprites = Resources.LoadAll<Sprite>("frontmon");
         backMonSprites = Resources.LoadAll<Sprite>("backmon");
@@ -89,28 +97,26 @@ public class GameData {
             for (int i = 0; i < 151; i++) {
                 pokedexlist.Add(new PokedexEntry(false, false));
             }
-        if (playerName == null) playerName = "RED";
+        if (playerName == "") playerName = "RED";
 
     }
-    public static List<PokedexEntry> pokedexlist = new List<PokedexEntry>(151);
-    public static bool[] hasBadge = new bool[8];
-    public static int money;
-    public static int coins;
-    public static int trainerID;
-    public static int textChoice, animationChoice, battleChoice;
-    public static string playerName, rivalName;
-    public const int mapWidth = 400;
-    public const int mapHeight = 520;
-    public static int screenTileWidth, screenTileHeight;
-    public static int hours, minutes, seconds;
-    public static Starter chosenStarter;
-    public static bool hasMetBill; //should Bill's PC use his name?
+    public List<PokedexEntry> pokedexlist = new List<PokedexEntry>(151);
+    public bool[] hasBadge = new bool[8];
+    public int money;
+    public int coins;
+    public int trainerID;
+    public int textChoice, animationChoice, battleChoice;
+    public string playerName, rivalName;
+    public int screenTileWidth, screenTileHeight;
+    public int hours, minutes, seconds;
+    public Starter chosenStarter;
+    public bool hasMetBill; //should Bill's PC use his name?
 
-    public static Version version;
+    public Version version;
 
-    public static FontAtlas fontAtlas;
+    public FontAtlas fontAtlas;
 
-    public static void Save()
+    public void Save()
     {
         //update the game variables to the save data
         //2
@@ -118,7 +124,8 @@ public class GameData {
         SaveGameData(Application.persistentDataPath + "/save.sav", saveData); //save
     }
     //encounter table indices for all maps
-    public static int[] MapGrassEncounterTableIndices = {
+    [HideInInspector]
+    public int[] MapGrassEncounterTableIndices = {
         -1, //Pallet Town
         -1, //Oak's Lab
         16, //Route 1
@@ -209,7 +216,8 @@ public class GameData {
 
     };
     //List of maps that have water encounters
-    public static List<Map> WaterEncounterMaps = new List<Map>(
+    [HideInInspector]
+    public List<Map> WaterEncounterMaps = new List<Map>(
         new Map[]{
             Map.Route19,
             Map.Route20,
@@ -226,7 +234,7 @@ public class GameData {
         }
     );
 
-    public static SaveData LoadGameData<SaveData>(string filename)
+    public SaveData LoadGameData<SaveData>(string filename)
     {
             FileStream file;
             StreamReader sr;
@@ -237,7 +245,7 @@ public class GameData {
             return JsonConvert.DeserializeObject<SaveData>(data);
     }
 
-    public static void SaveGameData(string filename, SaveData saveData) //method for saving the game
+    public void SaveGameData(string filename, SaveData saveData) //method for saving the game
     {
 
         string data = JValue.Parse(JsonConvert.SerializeObject(saveData)).ToString();

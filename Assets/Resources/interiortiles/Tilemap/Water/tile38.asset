@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: tile38
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 7902997465917616572, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
-  - {fileID: 5201867873079697491, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
-  - {fileID: -8674617527772631764, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
-  - {fileID: 7102487288162987501, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
-  - {fileID: 6945246436555340760, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
-  - {fileID: 4598634203927524755, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
-  - {fileID: 5407832590493904023, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
-  - {fileID: -1840400838165927068, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300000, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300002, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300004, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300006, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300008, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300010, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300012, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
+  - {fileID: 21300014, guid: cc85f7b78c1fe47fb9cd796cde6c8efc, type: 3}
   m_MinSpeed: 2.85
   m_MaxSpeed: 2.85
   m_AnimationStartTime: 0

@@ -16,7 +16,7 @@ public class Bag : MonoBehaviour  {
 	public int selectBag;
 	public int amountToTask;
 	public int maximumItem;
-	public CustomTextTexture amountText;
+	public CustomText amountText;
     public RectTransform selectCursor;
     public int offscreenindexup, offscreenindexdown;
     public bool switching;

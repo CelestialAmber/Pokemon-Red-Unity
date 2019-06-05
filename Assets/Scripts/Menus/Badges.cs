@@ -6,18 +6,18 @@ public class Badges : MonoBehaviour {
 	public Image[] allbadges = new Image[8];
 	public Sprite[] notobtainedimages = new Sprite[8];
 	public Sprite[] obtainedimages = new Sprite[8];
-    public CustomTextTexture nameText, moneyText, timeText;
+    public CustomText nameText, moneyText, timeText;
     public GameCursor cursor;
 
 	// Use this for initialization
 	
     public void Init(){
-        nameText.text = GameData.playerName;
-        moneyText.text = GameData.money.ToString();
-        timeText.text =  GameData.hours.SpaceFormat(3) + " " + GameData.minutes.ZeroFormat("0x");
+        nameText.text = GameData.instance.playerName;
+        moneyText.text = GameData.instance.money.ToString();
+        timeText.text =  GameData.instance.hours.SpaceFormat(3) + " " + GameData.instance.minutes.ZeroFormat("0x");
         for (int i = 0; i < 8; i++)
         {
-            if (GameData.hasBadge[i])
+            if (GameData.instance.hasBadge[i])
             {
                 allbadges[i].sprite = obtainedimages[i];
 

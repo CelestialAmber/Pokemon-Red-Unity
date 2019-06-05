@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class MapCollider : MonoBehaviour
 {
-    public bool cantUseBike; //can the bike not be used in this map?
+    
+    public bool canUseBike = true; //can the player use the bike on this map?
     public Map mapArea;
 }

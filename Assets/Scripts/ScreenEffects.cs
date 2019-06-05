@@ -45,6 +45,7 @@ public class ScreenEffects : MonoBehaviour {
     public Vector2 screenPos;
     public int shipScrollOffset;
     private RenderTexture[] passTex = new RenderTexture[3]; //RenderTextures for blitting
+
     // Use this for initialization
     void Awake(){
         instance = this;

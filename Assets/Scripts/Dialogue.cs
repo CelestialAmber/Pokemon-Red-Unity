@@ -27,7 +27,7 @@ public class Dialogue : MonoBehaviour {
 	public GameObject DialogueBox;
 	public string stringToReveal;
 	public bool fastText;
-	public CustomTextTexture dialoguetext;
+	public CustomText dialoguetext;
 	public GameObject indicator;
 	public bool deactivated;
 	public GameObject subdialogue;
@@ -42,13 +42,16 @@ public class Dialogue : MonoBehaviour {
 	public int selectedOption;
 	public GameObject yesnomenu, slotsmenu, buycoinsmenu;
 	public Player play;
-    public CustomTextTexture[] buycoinstext;
+    public CustomText[] buycoinstext;
     MainMenu mainmenu;
     string laststring;
     public static Dialogue instance;
     public bool keepTextOnScreen;
     public UnityEvent onFinishText;
     public DialogueType currentDialogueType;
+
+    public FontAtlas fontAtlas;
+    
     private void Awake()
     {
         instance = this;
@@ -74,7 +77,7 @@ public class Dialogue : MonoBehaviour {
         dialoguetext.gameObject.SetActive(true);
 		indicator.SetActive (false);
 
-	strComplete = strComplete.Replace("<player>",GameData.playerName).Replace("<rival>",GameData.rivalName).Replace("#MON","POKéMON").Replace("//","\n").Replace("\n","\n\n");
+	strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("//","\n").Replace("\n","\n\n");
 		int i = 0;
 		 if(currentDialogueType != DialogueType.Done) str = "";
 else str = stringToReveal;
@@ -100,6 +103,17 @@ else str = stringToReveal;
                 str += strComplete.Substring(i,2);
                 i += 2;
             
+            }
+            else if(i < strComplete.Length - 1 && strComplete[i] == '<'){ //is the current character a left bracket?
+                foreach(BracketChar bracketChar in fontAtlas.bracketChars){
+                    string currentBracketChar = "<" + bracketChar.name + ">";
+                    if(strComplete.Substring(i).IndexOf(currentBracketChar) == 0){ //is the current bracket expression detected the current entry?
+                        str += strComplete.Substring(i,currentBracketChar.Length);
+                        i += currentBracketChar.Length;
+                        break;
+                    }
+                
+            }
             }	
 			else str += strComplete[i++]; //if not just add the current character
 			dialoguetext.text = str;
@@ -150,8 +164,8 @@ else str = stringToReveal;
 			Player.disabled = true;
 
 		}
-		buycoinstext [0].text = GameData.money.ToString ();
-		buycoinstext [1].text = GameData.coins.ToString ();
+		buycoinstext [0].text = GameData.instance.money.ToString ();
+		buycoinstext [1].text = GameData.instance.coins.ToString ();
 		if (!finishedThePrompt) {
 
                 if (Inputs.pressed("a")) {
@@ -218,13 +232,13 @@ else str = stringToReveal;
 
 			} 
 		 
-		if (GameData.textChoice == 2) {
+		if (GameData.instance.textChoice == 2) {
             scrollequation = 3 * 0.016f;
 		}
-		if (GameData.textChoice == 1) {
+		if (GameData.instance.textChoice == 1) {
             scrollequation = 2f * 0.016f;
 		}
-		if (GameData.textChoice == 0) {
+		if (GameData.instance.textChoice == 0) {
             scrollequation = 1f * 0.016f;
 		}
 	}
@@ -242,8 +256,17 @@ public IEnumerator text(string text){
         currentDialogueType = DialogueType.Text;
 		stringToReveal = "";
 		yield return StartCoroutine(AnimateText (text));
-		if(!keepText)yield return StartCoroutine(done());
+        if(!keepText) yield return StartCoroutine(done());
 	}
+    public IEnumerator text(string text,bool keepText, bool needButtonPress){
+			finishedText = false;
+        currentDialogueType = DialogueType.Text;
+		stringToReveal = "";
+		yield return StartCoroutine(AnimateText (text));
+                keepTextOnScreen = keepText;
+		if(needButtonPress)yield return StartCoroutine(done());
+	}
+    
 	public IEnumerator cont(string text){
 	finishedText = false;
         currentDialogueType = DialogueType.Continue;

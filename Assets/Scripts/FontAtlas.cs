@@ -22,23 +22,10 @@ public class FontAtlas : ScriptableObject
       public List<FontChar> blueSlotsChars;
 
       public List<BracketChar> bracketChars;
-    public Sprite this[string key]
-    {
-        get
-        {
-            return FetchValue(key);
-        }
-
-    }
 
     public FontChar FetchFontChar(string key)
     {
         return fontChars[keys.IndexOf(key)];
     }
 
-    Sprite FetchValue(string key)
-    {
-        return null;
-        //return chars[keys.IndexOf(key)];
-    }
 }

@@ -8,7 +8,7 @@ public class SlotsObject : MonoBehaviour
     {
         if (Player.instance.direction == Direction.Left || Player.instance.direction == Direction.Right)
         {
-            if (GameData.coins > 0)
+            if (GameData.instance.coins > 0)
             {
                 yield return Dialogue.instance.text("A slot machine!\nWant to play?", true);
                 yield return StartCoroutine(Dialogue.instance.prompt());

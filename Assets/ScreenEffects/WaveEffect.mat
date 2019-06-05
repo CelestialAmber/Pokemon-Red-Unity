@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: WaveEffect
   m_Shader: {fileID: 4800000, guid: 641b781cad112c75d0008dfa8d76c639, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -79,6 +79,14 @@ Material:
     - _UVSec: 0
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
+    - currentIndex: 0
+    - debugFrame: 0
+    - frame: 0
+    - lastFrame: 0
+    - lastScanline: 0
+    - lastXPos: 0
+    - randomNum: -5
+    - setFrameDebug: 0
     - speed: 24
     - xfactor: 0.0125
     - yfactor: 56

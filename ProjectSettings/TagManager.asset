@@ -4,14 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - TallGrass
-  - Water
   - MapCollider
   - Tree
   - Slots
   - Pokeball
-  - Ledge
-  - MapCollision
+  - Warp
   layers:
   - Default
   - TransparentFX

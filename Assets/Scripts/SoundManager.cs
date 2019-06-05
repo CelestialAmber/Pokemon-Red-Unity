@@ -44,9 +44,9 @@ public Song[] songs;
 30:Sylph Co.
 31:Team Rocket Hideout
 32:Victory Road
-33:Route 4
-34:Route 11
-35:Route 1
+33:Route Theme 1
+34:Route Theme 2
+35:Route Theme 3
 36:Team Rocket Encounter
 37:Boy Encounter
 38:Girl Encounter
@@ -75,8 +75,9 @@ public bool isPlayingCry;
 instance = this;
 pokemonCrySounds = Resources.LoadAll<AudioClip>("Pokemon Cries");
 }
-
+public int debugSongIndex;
 void Update(){
+    if(Input.GetKeyDown(KeyCode.R)) PlaySong(debugSongIndex);
 if(isMusicPlaying && !music.isPlaying && songs[currentSong].loopClip != null && !music.loop){
 music.Stop();
 music.clip = songs[currentSong].loopClip;
@@ -93,6 +94,7 @@ if(isFadingSong){
 } 
 
 }
+
 public void StopFadeSong(){
     StopCoroutine("SwitchSongFade");
 }
@@ -109,6 +111,7 @@ public void PlaySong(int index){
     }
     music.Play();
 }
+
 public void PlaySongNoLoop(int index){
     music.Stop();
     music.volume = maxMusicVolume;
@@ -241,11 +244,11 @@ public static int[] MapSongs =
 29, //S.S. Anne
 34, //Route 11
 33, //Route 9
+0, //Route 10
 15, //RockTunnel
 15, //-
 43, //Power Plant
 14, //Lavender Town
-33, //Route 7
 26, //Pokemon Tower
 26, //-
 26, //-
@@ -253,6 +256,8 @@ public static int[] MapSongs =
 26, //-
 26, //-
 26, //-
+33, //Route 8
+33, //Route 7
 4, //Celadon City
 3, //Game Corner
 36, //Rocket Hideout
@@ -290,7 +295,9 @@ public static int[] MapSongs =
 4, //Trade Center
 4, //Colloseum
 4, //Bill's House
-4 
+4, //Houses
+43, //Victory Road Gate
+32 //Indigo Plateau Lobby
 };
 }
 

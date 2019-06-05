@@ -23,7 +23,7 @@ public class BeginHandler : MonoBehaviour {
     // Use this for initialization
     public void InitVersion()
     {
-        switch (GameData.version)
+        switch (GameData.instance.version)
         {
             case Version.Red:
                 playerNameMenuImage.sprite = redPlayerMenu;
@@ -37,7 +37,7 @@ public class BeginHandler : MonoBehaviour {
     }
     public void Init()
     {
-        GameData.atTitleScreen = true;
+        GameData.instance.atTitleScreen = true;
         tutanim.SetTrigger("reset");
         cursor.SetActive (false);
     }
@@ -88,13 +88,13 @@ public class BeginHandler : MonoBehaviour {
                         switch (selectedOption)
                         {
                             case 1:
-                                GameData.playerName = "RED";
+                                GameData.instance.playerName = "RED";
                                 break;
                             case 2:
-                                GameData.playerName = "ASH";
+                                GameData.instance.playerName = "ASH";
                                 break;
                             case 3:
-                                GameData.playerName = "JACK";
+                                GameData.instance.playerName = "JACK";
                                 break;
                         }
                         break;
@@ -102,13 +102,13 @@ public class BeginHandler : MonoBehaviour {
                         switch (selectedOption)
                         {
                             case 1:
-                                GameData.playerName = "BLUE";
+                                GameData.instance.playerName = "BLUE";
                                 break;
                             case 2:
-                                GameData.playerName = "GARY";
+                                GameData.instance.playerName = "GARY";
                                 break;
                             case 3:
-                                GameData.playerName = "JOHN";
+                                GameData.instance.playerName = "JOHN";
                                 break;
                         }
                         break;
@@ -129,19 +129,19 @@ public class BeginHandler : MonoBehaviour {
                 }
 			else {
                     currentmenu = null;
-                    switch (GameData.version)
+                    switch (GameData.instance.version)
                     {
                         case Version.Blue:
                             switch (selectedOption)
                             {
                                 case 1:
-                                    GameData.rivalName = "RED";
+                                    GameData.instance.rivalName = "RED";
                                     break;
                                 case 2:
-                                    GameData.rivalName = "ASH";
+                                    GameData.instance.rivalName = "ASH";
                                     break;
                                 case 3:
-                                    GameData.rivalName = "JACK";
+                                    GameData.instance.rivalName = "JACK";
                                     break;
                             }
                             break;
@@ -149,13 +149,13 @@ public class BeginHandler : MonoBehaviour {
                             switch (selectedOption)
                             {
                                 case 1:
-                                    GameData.rivalName = "BLUE";
+                                    GameData.instance.rivalName = "BLUE";
                                     break;
                                 case 2:
-                                    GameData.rivalName = "GARY";
+                                    GameData.instance.rivalName = "GARY";
                                     break;
                                 case 3:
-                                    GameData.rivalName = "JOHN";
+                                    GameData.instance.rivalName = "JOHN";
                                     break;
                             }
                             break;
@@ -207,7 +207,7 @@ public class BeginHandler : MonoBehaviour {
 }
 	public IEnumerator FourthOakDialogue(){
 
-		yield return Dialogue.instance.text ("Right! So your\nname is " + GameData.playerName + "!");
+		yield return Dialogue.instance.text ("Right! So your\nname is " + GameData.instance.playerName + "!");
         tutanim.SetTrigger("transition");
 
     }
@@ -228,12 +228,12 @@ public class BeginHandler : MonoBehaviour {
 	public IEnumerator SixthOakDialogue(){
 
 		yield return Dialogue.instance.text ("That's right! I\nremember now! His");
-        yield return Dialogue.instance.cont ("name is " + GameData.rivalName + "!");
+        yield return Dialogue.instance.cont ("name is " + GameData.instance.rivalName + "!");
         tutanim.SetTrigger("transition");
     }
 	public IEnumerator SeventhOakDialogue(){
 
-        yield return Dialogue.instance.text (GameData.playerName + "!");
+        yield return Dialogue.instance.text (GameData.instance.playerName + "!");
 		yield return Dialogue.instance.text ("Your very own\nPOKéMON legend is");
 		yield return Dialogue.instance.cont("about to unfold!");
         yield return Dialogue.instance.text("A world of dreams\nand adventures");
@@ -251,7 +251,7 @@ Player.instance.GetComponent<BoxCollider2D>().enabled = true;
 		Dialogue.instance.deactivated = false;
 			Player.disabled = false;
         Inputs.Enable("start");
-        GameData.atTitleScreen = false;
+        GameData.instance.atTitleScreen = false;
         Player.instance.FadeToCurrentAreaSong();
 		this.gameObject.SetActive (false);
 

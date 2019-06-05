@@ -21,7 +21,7 @@ public class Pokedex : MonoBehaviour
         get
         {
             int seennumber = 0;
-            foreach (PokedexEntry entry in GameData.pokedexlist)
+            foreach (PokedexEntry entry in GameData.instance.pokedexlist)
             {
                 if (entry.seen) seennumber++;
             }
@@ -33,7 +33,7 @@ public class Pokedex : MonoBehaviour
         get
         {
             int caughtnumber = 0;
-            foreach (PokedexEntry entry in GameData.pokedexlist)
+            foreach (PokedexEntry entry in GameData.instance.pokedexlist)
             {
                 if (entry.caught) caughtnumber++;
             }
@@ -71,8 +71,8 @@ public class Pokedex : MonoBehaviour
         for (int i = 0; i < 7; i++)
         {
             int slotNo = topSlotIndex + i;
-            entries[i].transform.GetChild(0).GetComponent<CustomText>().text = slotNo.ZeroFormat("00x") + "\n" + (!GameData.pokedexlist[slotNo - 1].seen ? "   ----------" : "   " + PokemonData.IndexToMonUpper(slotNo));
-            entries[i].transform.GetChild(1).gameObject.SetActive(GameData.pokedexlist[slotNo - 1].caught);
+            entries[i].transform.GetChild(0).GetComponent<CustomText>().text = slotNo.ZeroFormat("00x") + "\n" + (!GameData.instance.pokedexlist[slotNo - 1].seen ? "   ----------" : "   " + PokemonData.IndexToMonUpper(slotNo));
+            entries[i].transform.GetChild(1).gameObject.SetActive(GameData.instance.pokedexlist[slotNo - 1].caught);
         }
     }
     // Update is called once per frame
@@ -106,12 +106,12 @@ public class Pokedex : MonoBehaviour
             {
                 SoundManager.instance.PlayABSound();
 
-                if (!selectingMon && GameData.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
+                if (!selectingMon && GameData.instance.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
                 {
                     selectingMon = true;
                     cursor.SetPosition(120,56);
                 }
-                else if (GameData.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
+                else if (GameData.instance.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
                 {
                     StartCoroutine(bio.DisplayABio(topSlotIndex + selectedSlot));
                 }
@@ -125,7 +125,7 @@ public class Pokedex : MonoBehaviour
                     if (selectedSlot > 6)
                     {
                         selectedSlot = 6;
-                        if (topSlotIndex < GameData.pokedexlist.Count - 6)
+                        if (topSlotIndex < GameData.instance.pokedexlist.Count - 6)
                         {
                             topSlotIndex += 1;
                         }
@@ -154,7 +154,7 @@ public class Pokedex : MonoBehaviour
                 if (!selectingMon)
                 {
                     topSlotIndex += 10;
-                    if (topSlotIndex > GameData.pokedexlist.Count - 6) topSlotIndex = GameData.pokedexlist.Count - 6;
+                    if (topSlotIndex > GameData.instance.pokedexlist.Count - 6) topSlotIndex = GameData.instance.pokedexlist.Count - 6;
                     UpdateScreen();
                 }
             }
@@ -182,11 +182,11 @@ public class PokedexDebug : Editor
         OverwriteIndex = EditorGUILayout.IntField("Selected Index", OverwriteIndex);
         if (GUILayout.Button("Set Pokedex Entry to Seen"))
         {
-            GameData.pokedexlist[OverwriteIndex - 1].seen = true;
+            GameData.instance.pokedexlist[OverwriteIndex - 1].seen = true;
         }
         if (GUILayout.Button("Set Pokedex Entry to Owned"))
         {
-            GameData.pokedexlist[OverwriteIndex - 1].caught = true;
+            GameData.instance.pokedexlist[OverwriteIndex - 1].caught = true;
         }
     }
 }
