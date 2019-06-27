@@ -21,6 +21,14 @@ public class Move
         pp = maxpp;
         type = PokemonData.GetMove(name).type;
     }
+    public Move()
+    {
+        this.name = "";
+
+        maxpp = 0;
+        pp = 0;
+        type = null;
+    }
 }
 public enum Status
 {
@@ -43,7 +51,10 @@ public class Pokemon
         this.isWildPokemon = isWildPokemon;
         this.nickname = this.name.ToUpper();
         GenerateIvs();
-        moves = new List<Move>();
+        moves = new Move[4];
+        for(int i = 0; i < 4; i++){
+            moves[i] = new Move();
+        }
         UpdateMovesToLevel();
         SetExpToLevel();
         RecalculateStats();
@@ -54,6 +65,11 @@ public class Pokemon
             types = new string[2];
             types[0] = PokemonData.PokemonTypes[name][0];
             types[1] = PokemonData.PokemonTypes[name][1];
+        }
+        if(!isWildPokemon){
+
+            ownerid = GameData.instance.trainerID;
+            owner = GameData.instance.playerName;
         }
 
     }
@@ -68,11 +84,11 @@ public class Pokemon
     public void RecalculateStats()
     {
 
-        maxhp = Mathf.FloorToInt(((PokemonData.baseStats[name][0] + ivs[0]) * 2 + Mathf.Sqrt(statexp[0]) / 4) * level / 100) + level + 10;
-        attack = Mathf.FloorToInt(((PokemonData.baseStats[name][1] + ivs[1]) * 2 + Mathf.Sqrt(statexp[1]) / 4) * level / 100) + 5;
-        defense = Mathf.FloorToInt(((PokemonData.baseStats[name][2] + ivs[2]) * 2 + Mathf.Sqrt(statexp[2]) / 4) * level / 100) + 5;
-        speed = Mathf.FloorToInt(((PokemonData.baseStats[name][3] + ivs[3]) * 2 + Mathf.Sqrt(statexp[3]) / 4) * level / 100) + 5;
-        special = Mathf.FloorToInt(((PokemonData.baseStats[name][4] + ivs[4]) * 2 + Mathf.Sqrt(statexp[4]) / 4) * level / 100) + 5;
+        maxhp = Mathf.FloorToInt(((PokemonData.baseStats[name][0] + ivs[0]) * 2 + Mathf.Sqrt(evs[0]) / 4) * level / 100) + level + 10;
+        attack = Mathf.FloorToInt(((PokemonData.baseStats[name][1] + ivs[1]) * 2 + Mathf.Sqrt(evs[1]) / 4) * level / 100) + 5;
+        defense = Mathf.FloorToInt(((PokemonData.baseStats[name][2] + ivs[2]) * 2 + Mathf.Sqrt(evs[2]) / 4) * level / 100) + 5;
+        speed = Mathf.FloorToInt(((PokemonData.baseStats[name][3] + ivs[3]) * 2 + Mathf.Sqrt(evs[3]) / 4) * level / 100) + 5;
+        special = Mathf.FloorToInt(((PokemonData.baseStats[name][4] + ivs[4]) * 2 + Mathf.Sqrt(evs[4]) / 4) * level / 100) + 5;
         currenthp = maxhp;
     }
     public void GenerateIvs()
@@ -85,14 +101,12 @@ public class Pokemon
     }
     public void SetExpToLevel()
     {
-        experience = CalculateExp(level);
-            experience = experience.UnderflowUInt24(); //Underflow by 16,777,216;
+        experience = CalculateExp(level).UnderflowUInt24(); //Underflow by 16,777,216;
     }
     public int ExpToNextLevel()
     {
         if (level >= 100) return experience;
-        int result = CalculateExp(level + 1);
-        result = result.UnderflowUInt24(); //Underflow by 16,777,216;
+        int result = CalculateExp(level + 1).UnderflowUInt24(); //Underflow by 16,777,216;
          return (result - experience).UnderflowUInt24();
         
     }
@@ -144,32 +158,41 @@ public class Pokemon
             if (level >= movetocheck.Item2)
             {
                 if (!AlreadyHasMove(movetocheck.Item1))
-                    if (moves.Count < 4)
+                    if (numberOfMoves < 4)
                     {
-                        moves.Add(new Move(movetocheck.Item1));
+                        moves[numberOfMoves] = new Move(movetocheck.Item1);
                     }
                     else
                     {
-                        moves.RemoveAt(0);
-                        moves.Add(new Move(movetocheck.Item1));
+                        moves[0] = new Move(movetocheck.Item1);
                     }
             }
         }
         //iterate through all moves learned by level, and adjust the move pool accordingly
     }
     public void AddMove(string moveName){
-        if(moves.Count == 4){
+        if(numberOfMoves == 4){
              Debug.Log("Cannot add a new move, there are already 4 moves");
-            return;
         }
-        moves.Add(new Move(moveName));
+             for(int i = 0; i < 4; i++){
+
+                 if(!slotHasMove(i)){
+
+                  moves[i] = new Move(moveName);
+                 numberOfMoves++;
+                  break;
+                 }
+                
+             }
+            return;
     }
     public void SetMove(string moveName,int moveIndex){
         if(moveIndex > 3 || moveIndex < 0) throw new UnityException("Invalid move index");
-        if(moves.Count > moveIndex){ //check if the move at the given index already exists by comparing the move count
             moves[moveIndex] = new Move(moveName);
-        }
-        else moves.Add(new Move(moveName)); //otherwise add the move
+
+    }
+    public bool slotHasMove(int index){
+        return moves[index].name != "";
     }
     public int maxhp;
     public int attack;
@@ -180,7 +203,7 @@ public class Pokemon
     public bool isWildPokemon;
     public Status status;
     public int[] ivs = new int[5];
-    public int[] statexp = new int[5];
+    public int[] evs = new int[5];
     public string name;
     public int level;
     public string nickname;
@@ -188,7 +211,8 @@ public class Pokemon
     public string owner;
     public int experience;
     public string[] types;
-    public List<Move> moves = new List<Move>();
+    public Move[] moves;
+    public int numberOfMoves;
    
 }
 [System.Serializable]
@@ -244,13 +268,6 @@ public class PokemonMenu : MonoBehaviour
         }
         for (int i = 0; i < GameData.instance.party.Count; i++)
         {
-            /*
-            GameData.instance.party[i].SetExpToLevel();
-            GameData.instance.party[i].RecalculateStats();
-            GameData.instance.party[i].UpdateMovesToLevel();
-            */
-            GameData.instance.party[i].ownerid = GameData.instance.trainerID;
-            GameData.instance.party[i].owner = GameData.instance.playerName;
             int pixelCount = Mathf.RoundToInt((float)GameData.instance.party[i].currenthp * 48 / (float)GameData.instance.party[i].maxhp);
             healthbars[i] = partyslots[i].transform.GetChild(1).GetChild(0).GetComponent<Image>();
             healthbars[i].fillAmount = (float)pixelCount / 48;
@@ -358,7 +375,7 @@ public class PokemonMenu : MonoBehaviour
         string movestr = "";
         for (int i = 0; i < 4; i++)
         {
-            if (GameData.instance.party[selectedMon].moves.Count - 1 >= i)
+            if (GameData.instance.party[selectedMon].slotHasMove(i))
             {
                 Move move = GameData.instance.party[selectedMon].moves[i];
                 movestr += (i > 0 ? "\n" : "") + move.name.ToUpper() + "\n" + "         " + "PP "  + (move.pp < 10 ? " " : "") + move.pp +  "/" + (move.maxpp < 10 ? " " : "") + move.maxpp;
@@ -447,7 +464,7 @@ public class PokemonMenu : MonoBehaviour
             highlightedmon = GameData.instance.party[selectedOption];
             partyAnimTimer += Time.deltaTime;
             float hpratio = (float)highlightedmon.currenthp / (float)highlightedmon.maxhp;
-            float animLoopTime = hpratio > .5f ? .2f : hpratio > .21f ? .533f : 1.0666f;
+            float animLoopTime = hpratio > .5f ? .084f : hpratio > .21f ? .268f : 0.536f; //the animation takes 5,16, or 32 frames
             if (partyAnimTimer > animLoopTime)
             {
                 partyAnimTimer = 0;
@@ -526,7 +543,7 @@ public class PokemonMenu : MonoBehaviour
                         fieldMoveObj[i].SetActive(false);
                     }
                     for(int i = 0; i < 4; i++){
-                        if(selectedPokemon.moves.Count > i){
+                        if(selectedPokemon.slotHasMove(i)){
                         Move move = selectedPokemon.moves[i];
                     if(isFieldMove(move)) {
                         numberOfFieldMoves++;

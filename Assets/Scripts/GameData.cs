@@ -107,7 +107,6 @@ public class GameData : MonoBehaviour{
     public int trainerID;
     public int textChoice, animationChoice, battleChoice;
     public string playerName, rivalName;
-    public int screenTileWidth, screenTileHeight;
     public int hours, minutes, seconds;
     public Starter chosenStarter;
     public bool hasMetBill; //should Bill's PC use his name?

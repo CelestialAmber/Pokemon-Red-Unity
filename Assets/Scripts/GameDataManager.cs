@@ -20,9 +20,12 @@ public class GameDataManager : MonoBehaviour {
     public MainMenu mainMenu;
     public Pokedex pokedex;
     public FontAtlas fontAtlas;
+    public Player player;
+
+    public bool startInGame;
     private void Awake(){
         instance = this;
-
+        Player.instance = player;
         PokemonMenu.instance = pokemonMenu;
         Bag.instance = bag;
         Options.instance = options;
@@ -37,18 +40,13 @@ public class GameDataManager : MonoBehaviour {
         GameData.instance.Save();
         GameData.instance.money = 3000;
         GameData.instance.coins = 300;
-        GameData.instance.screenTileHeight = 9;
-        
-        
-        GameData.instance.screenTileWidth = 10;
-        mainRender = new RenderTexture(160, 144, 1);
-        mainRender.filterMode = FilterMode.Point;
         postRender = new RenderTexture(160, 144, 1);
         postRender.filterMode = FilterMode.Point;
         templateRenderTexture = new RenderTexture(mainRender);
         
 
         Camera.main.targetTexture = mainRender;
+        if(!startInGame) BootGame(GameData.instance.version);
 
     }
     public void VersionInit(){ //function to initialize everything that changes based on the version

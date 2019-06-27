@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public class MapLocation {
+    public string locationName;
+    public Vector2 locationPos;
+}
 public class MapMenu : MonoBehaviour
 {
+
 
     public string[] locationNames = {
         "PALLET TOWN",
@@ -65,6 +69,8 @@ public class MapMenu : MonoBehaviour
 
 
     };
+
+
     // Start is called before the first frame update
     void Start()
     {

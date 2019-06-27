@@ -131,7 +131,9 @@ if(battleType == BattleType.Trainer){
 
 	}
 	public void DetermineBattleTransition(){
-		grassTilemap.sortingOrder = 0;
+		foreach(MapCollider mapCol in MapManager.instance.mapColliders){
+			mapCol.grassTilemap.GetComponent<TilemapRenderer>().sortingOrder = 0;
+		}
 		DoBattleTransition();
 	}
 	public void DoBattleTransition(){
@@ -236,7 +238,9 @@ cursor.SetActive (true);
     }
 	public void FinishedBattleTransition(){
 ScreenEffects.flashLevel = -3;
-grassTilemap.sortingOrder = 3;
+foreach(MapCollider mapCol in MapManager.instance.mapColliders){
+			mapCol.grassTilemap.GetComponent<TilemapRenderer>().sortingOrder = 3;
+		}
 isFadingIn = false;
 	}
 public void SendOutMonSound(){

@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
 public class Inputs : MonoBehaviour
 {
 
@@ -11,6 +9,7 @@ public class Inputs : MonoBehaviour
     public static bool[] isHoldingJoystickDirections = new bool[4];
     public static bool[] hasPressedJoystickDirections = new bool[4];
     public static bool[] releasedJoystickDirections = new bool[4];
+
     public static void Disable(string button)
     {
         buttonDisabled[keyindices[button]] = true;

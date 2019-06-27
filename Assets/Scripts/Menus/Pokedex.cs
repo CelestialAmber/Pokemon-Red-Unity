@@ -14,8 +14,8 @@ public class Pokedex : MonoBehaviour
     public CustomText seentext, owntext;
     public int selectedSlot, topSlotIndex;
     public bool selectingMon;
-    public ViewBio bio;
-    public MainMenu mainMenu;
+    private ViewBio bio;
+    private MainMenu mainMenu;
     int seen
     {
         get

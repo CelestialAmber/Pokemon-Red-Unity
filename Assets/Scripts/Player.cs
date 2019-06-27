@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
     public TileWarp currentWarpTile;
     void Awake()
     {
-        instance = this;
+
         disabled = false;
  
         pos = transform.position;
@@ -94,8 +94,6 @@ public class Player : MonoBehaviour
         GameData.instance.party[0].SetMove("Surf",1);
        // GameData.instance.party[0].SetMove("Softboiled",2);
         GameData.instance.trainerID = Random.Range(0, 65536);
-        UpdateFacedTile();
-        CheckCollision();
         direction = Direction.Down;
         pos = transform.position;
     }
@@ -188,6 +186,7 @@ public class Player : MonoBehaviour
                     {
                         direction = Direction.Up;
                         UpdateFacedTile();
+                        CheckCollision();
                         playerAnim.SetFloat("movedir", (int)direction + 1);
                     }
                     if (transform.position == pos && holdFrames > 2)
@@ -218,6 +217,7 @@ public class Player : MonoBehaviour
                     {
                         direction = Direction.Right;
                         UpdateFacedTile();
+                        CheckCollision();
                         playerAnim.SetFloat("movedir", (int)direction + 1);
                     }
                     if (transform.position == pos && holdFrames > 2)
@@ -251,6 +251,7 @@ public class Player : MonoBehaviour
 
                         direction = Direction.Down;
                         UpdateFacedTile();
+                        CheckCollision();
                         playerAnim.SetFloat("movedir", (int)direction + 1);
                     }
                     if (transform.position == pos && holdFrames > 2)
@@ -280,6 +281,7 @@ public class Player : MonoBehaviour
                     {
                         direction = Direction.Left;
                         UpdateFacedTile();
+                        CheckCollision();
                         playerAnim.SetFloat("movedir", (int)direction + 1);
                     }
                     if (transform.position == pos && holdFrames > 2)
@@ -668,6 +670,7 @@ yield return new WaitForSeconds(0.25f);
             
             
     }
+    public LayerMask mapMask;
     void CheckCollision()
     {
          CheckObjectCollision(); 
@@ -895,6 +898,7 @@ if(col.gameObject.tag == "MapCollider"){
             MapCollider mapCollider = col.gameObject.GetComponent<MapCollider>();
 currentArea = mapCollider.mapArea;
 int mapArea = (int)mapCollider.mapArea;
+MapManager.instance.currentMapGrassTilemap = mapCollider.grassTilemap.GetComponent<TilemapRenderer>();
             canUseBike = mapCollider.canUseBike; //set the bool for whether the player can use the bike
             if(forceBikeMaps.Contains(currentArea)) walkSurfBikeState = MovementState.Bike; //if the map forces the player to use the bike, set the movement state to the bike
             else if(!canUseBike && walkSurfBikeState == MovementState.Bike) walkSurfBikeState = MovementState.Walk;

@@ -27,7 +27,6 @@ public class Slots : MonoBehaviour {
 
 	public bool handlingInput;
 
-	public bool isUpdating;
     // Use this for initialization
 
 	private string[] reel1Slots = {
@@ -230,12 +229,7 @@ public class Slots : MonoBehaviour {
 		
 	}
 	int inputTimer; //counter disabling inputs until it reaches 0
-	IEnumerator MainUpdate(){
-		isUpdating = true;
-		yield return 0;
-		isUpdating = false;
-		
-	}
+
 	void UpdatePositions(bool addHalf){
 		if (canroll) {
 
@@ -459,11 +453,6 @@ public class Slots : MonoBehaviour {
 				Exit ();
 
 			}
-
-
-
-
-
 	}
 	void CheckPositions(){
 		
@@ -519,13 +508,6 @@ public class Slots : MonoBehaviour {
 						row3Half++;
 						UpdatePositions(false);
 					}
-					
-						 
-		
-						
-						
-						
-						
 						CheckPositions ();
 						yield return LinedUp ();
 					

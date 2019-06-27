@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.EventSystems;
-
 public enum Map
 {
     PalletTown,
@@ -104,11 +102,11 @@ public class MapManager : MonoBehaviour{
     public int currentGrassEcounterTable, currentWaterEncounterTable;
 
 
-    public Tilemap overworldTilemap, grassTilemap, waterTilemap, ledgeTilemap;
-
     
     //The map the player is currently in.
     public Map currentMap;
+
+
 
     public static MapManager instance;
 
@@ -116,7 +114,9 @@ public class MapManager : MonoBehaviour{
     {
         instance = this;
     }
+    public MapCollider[] mapColliders = new MapCollider[5];
 
+    public TilemapRenderer currentMapGrassTilemap; //grass tilemap of the current map for the wild battle grass layer effect
   
    
     // Use this for initialization
@@ -132,14 +132,19 @@ public class MapManager : MonoBehaviour{
 
 
 
+
+
+
 [System.Serializable]
   public class MapTile{
           public MapTile(Vector3Int pos){
-              Tilemap overworldTilemap = MapManager.instance.overworldTilemap;
-              Tilemap grassTilemap = MapManager.instance.grassTilemap;
-              Tilemap waterTilemap = MapManager.instance.waterTilemap;
-              Tilemap ledgeTilemap = MapManager.instance.ledgeTilemap;
               pos -= new Vector3Int(1,1,0);
+              foreach(MapCollider mapCollider in MapManager.instance.mapColliders){
+              Tilemap overworldTilemap = mapCollider.overworldTilemap;
+              Tilemap grassTilemap = mapCollider.grassTilemap;
+              Tilemap waterTilemap = mapCollider.waterTilemap;
+              Tilemap ledgeTilemap = mapCollider.ledgeTilemap;
+              
               this.pos = pos;
               bool hasOverworldTile = overworldTilemap.HasTile(pos);
               hasGrass = grassTilemap.HasTile(pos);
@@ -166,6 +171,8 @@ public class MapManager : MonoBehaviour{
                   TileBase tile = waterTilemap.GetTile(pos);
                   if(tile is AnimatedTile) tileName = ((AnimatedTile)waterTilemap.GetTile(pos)).name;
                    else if(tile is Tile) tileName = ((Tile)waterTilemap.GetTile(pos)).name; 
+              }
+              if(hasTile) break;
               }
 
           }

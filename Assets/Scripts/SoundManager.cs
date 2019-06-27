@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 public class Song{
-    public AudioClip mainClip, loopClip;
+    public string mainClipName, loopClipName;
    
 }
 public class SoundManager : MonoBehaviour
@@ -66,6 +66,7 @@ public float maxMusicVolume;
 public bool isFadingSong;
 public int switchIndex;
 public AudioClip abSound;
+public AudioClip mainClip, loopClip;
 
 public bool isPlayingCry;
     public AudioClip[] itemGetSounds;
@@ -78,9 +79,9 @@ pokemonCrySounds = Resources.LoadAll<AudioClip>("Pokemon Cries");
 public int debugSongIndex;
 void Update(){
     if(Input.GetKeyDown(KeyCode.R)) PlaySong(debugSongIndex);
-if(isMusicPlaying && !music.isPlaying && songs[currentSong].loopClip != null && !music.loop){
+if(isMusicPlaying && !music.isPlaying && loopClip != null && !music.loop){
 music.Stop();
-music.clip = songs[currentSong].loopClip;
+music.clip = loopClip;
 music.loop = true;
 music.Play();
 }
@@ -105,10 +106,13 @@ public void PlaySong(int index){
     music.loop = false;
     currentSong = index;
     isMusicPlaying = true;
-    music.clip = songs[currentSong].mainClip;
-    if(songs[currentSong].loopClip == null){
+        mainClip = Resources.Load("Music/" + songs[currentSong].mainClipName) as AudioClip;
+    music.clip = mainClip;
+    if(songs[currentSong].loopClipName == ""){
         music.loop = true;
+        loopClip = null;
     }
+    else loopClip = Resources.Load("Music/" + songs[currentSong].loopClipName) as AudioClip;
     music.Play();
 }
 
@@ -118,7 +122,8 @@ public void PlaySongNoLoop(int index){
     music.loop = false;
     currentSong = index;
     isMusicPlaying = true;
-    music.clip = songs[currentSong].mainClip;
+    mainClip = Resources.Load("Music/" + songs[currentSong].mainClipName) as AudioClip;
+    music.clip = mainClip;
     music.Play();
 }
 public void FadeToSong(int index){
