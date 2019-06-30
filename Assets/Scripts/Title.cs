@@ -32,7 +32,7 @@ public class Title : MonoBehaviour {
     public void SetAnimationFinished()
     {
         animationsFinished = true;
-        SoundManager.instance.PlaySong(20);
+        SoundManager.instance.PlaySong(19);
     }
     public void InitVersion()
     {
@@ -120,7 +120,7 @@ public class Title : MonoBehaviour {
 			if (currentMenu == nodatamenu && selectedOption == 0) {
 				tutorialmanager.SetActive (true);
                 BeginHandler.instance.Init();
-                SoundManager.instance.PlaySong(16);
+                SoundManager.instance.PlaySong(15);
 				startmenu.SetActive (false);
 				this.gameObject.SetActive (false);
 
@@ -195,12 +195,12 @@ public class Title : MonoBehaviour {
 	}
     public void PlayWhooshSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(whooshSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(whooshSound);
 
     }
     public void PlayCrashSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(crashSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(crashSound);
 
     }
 

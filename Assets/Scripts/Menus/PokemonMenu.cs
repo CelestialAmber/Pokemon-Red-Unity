@@ -462,10 +462,10 @@ public class PokemonMenu : MonoBehaviour
         if (currentMenu == mainwindow)
         {
             highlightedmon = GameData.instance.party[selectedOption];
-            partyAnimTimer += Time.deltaTime;
+            partyAnimTimer += 1;
             float hpratio = (float)highlightedmon.currenthp / (float)highlightedmon.maxhp;
-            float animLoopTime = hpratio > .5f ? .084f : hpratio > .21f ? .268f : 0.536f; //the animation takes 5,16, or 32 frames
-            if (partyAnimTimer > animLoopTime)
+            float animLoopTime = hpratio > .5f ? 10 : hpratio > .21f ? 32 : 64; //the animation takes 10,32, or 64 frames
+            if (partyAnimTimer == animLoopTime)
             {
                 partyAnimTimer = 0;
             }
@@ -479,7 +479,7 @@ public class PokemonMenu : MonoBehaviour
                 }
                 else
                 {
-                    slottransform.GetChild(0).GetComponent<Image>().sprite = partyanims[PokemonData.PokemonPartySprite[pokemon.name]].anim[Mathf.RoundToInt(partyAnimTimer / animLoopTime)];
+                    slottransform.GetChild(0).GetComponent<Image>().sprite = partyanims[PokemonData.PokemonPartySprite[pokemon.name]].anim[Mathf.FloorToInt(2f*partyAnimTimer / animLoopTime)];
                 }
             }
 
@@ -680,7 +680,7 @@ yield return Dialogue.instance.text("There isn't\nanything to CUT!");
 if(whatFieldMove == "Surf"){
     Player.instance.UpdateFacedTile();
     if(Player.instance.facedTile.hasTile && Player.instance.facedTile.isWater){
-    SoundManager.instance.PlaySong(18);
+    SoundManager.instance.PlaySong(17);
     currentMenu = mainwindow;
     UpdateMainMenu();
     yield return Dialogue.instance.text(GameData.instance.playerName + " got on\n"+ monName + "!");

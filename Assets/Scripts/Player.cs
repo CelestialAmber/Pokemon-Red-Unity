@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
     public MovementState walkSurfBikeState;
     public Direction direction;
     public GameObject top, bottom;
-    public TextDatabase textData;
     public static bool disabled = true;
     public bool isDisabled;
     public bool startMenuActive, menuActive;
@@ -79,6 +78,8 @@ public class Player : MonoBehaviour
 
     public bool onWarpTile;
     public TileWarp currentWarpTile;
+
+    public bool noCollision;
     void Awake()
     {
 
@@ -673,6 +674,7 @@ yield return new WaitForSeconds(0.25f);
     public LayerMask mapMask;
     void CheckCollision()
     {
+        
          CheckObjectCollision(); 
         if (transform.position == pos)
         {
@@ -686,7 +688,9 @@ yield return new WaitForSeconds(0.25f);
             tileToCheck = new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y-1,0));
                 cannotMoveDown = tileToCheck.isWall || tileToCheck.isLedge || (tileToCheck.isWater && walkSurfBikeState != MovementState.Surf) || objectExists[1] || !tileToCheck.hasTile;
         }
-        
+        if(noCollision){
+            cannotMoveDown = cannotMoveLeft = cannotMoveRight = cannotMoveUp = false;
+        }
     }
     public LayerMask layerMask, collisionMask;
     public void CheckObjectCollision(){
@@ -853,7 +857,7 @@ Inputs.Enable("start");
         }
        
         switch(walkSurfBikeState){
-        case  MovementState.Surf:  SoundManager.instance.FadeToSong(18); break;
+        case  MovementState.Surf:  SoundManager.instance.FadeToSong(17); break;
         case  MovementState.Bike: SoundManager.instance.FadeToSong(7); break;
         default: FadeToCurrentAreaSong(); break;
         }
@@ -867,10 +871,10 @@ Inputs.Enable("start");
     disabled = false;
 }
 public void PlayCurrentAreaSong(){
-SoundManager.instance.PlaySong(SoundManager.MapSongs[(int)currentArea]);
+SoundManager.instance.PlaySong((int)SoundManager.MapSongs[(int)currentArea]);
 }
 public void FadeToCurrentAreaSong(){
-SoundManager.instance.FadeToSong(SoundManager.MapSongs[(int)currentArea]);
+SoundManager.instance.FadeToSong((int)SoundManager.MapSongs[(int)currentArea]);
 }
 public void EncounterTrainer(){
 
@@ -909,7 +913,7 @@ if(GameData.instance.WaterEncounterMaps.Contains(currentArea)) areaHasWaterEncou
 if(GameData.instance.MapGrassEncounterTableIndices[mapArea] != -1) currentAreaTable = PokemonData.encounters[GameData.instance.MapGrassEncounterTableIndices[mapArea]];
 else currentAreaTable = null;
             if (currentArea == Map.House) return; //if the current area is a house, don't change the music
-int songIndex = SoundManager.MapSongs[mapArea];
+int songIndex = (int)SoundManager.MapSongs[mapArea];
 if(SoundManager.instance.currentSong != songIndex && walkSurfBikeState == MovementState.Walk && !inBattle && !CreditsHandler.instance.isPlayingCredits){
     if(SoundManager.instance.isFadingSong){
        SoundManager.instance.StopFadeSong();

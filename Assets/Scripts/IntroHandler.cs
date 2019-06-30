@@ -60,31 +60,31 @@ public class IntroHandler : MonoBehaviour {
     }
     public void PlayHipSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(hipSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(hipSound);
     }
     public void PlayHopSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(hopSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(hopSound);
     }
     public void PlayCrashSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(crashSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(crashSound);
     }
     public void PlayLungeSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(lungeSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(lungeSound);
     }
     public void PlayStarSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(starSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(starSound);
     }
     public void PlayRaiseSound()
     {
-        SoundManager.instance.sfx.PlayOneShot(raiseSound,0.5f);
+        SoundManager.instance.sfx.PlayOneShot(raiseSound);
     }
     public void PlayIntroSong()
     {
-        SoundManager.instance.PlaySongNoLoop(19);
+        SoundManager.instance.PlaySongNoLoop(18);
     }
 }
 
