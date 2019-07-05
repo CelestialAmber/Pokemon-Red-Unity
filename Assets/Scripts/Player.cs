@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
     public bool onWarpTile;
     public TileWarp currentWarpTile;
 
-    public bool noCollision;
+    public bool noCollision, disableEncounters;
     void Awake()
     {
 
@@ -169,135 +169,42 @@ public class Player : MonoBehaviour
             {
                 
                  
-                if(Inputs.held("up")||Inputs.held("down")||Inputs.held("left")||Inputs.held("right")){
-                if(!holdingDirection){
+                if (Inputs.held("up")||Inputs.held("down")||Inputs.held("left")||Inputs.held("right"))
+                {
+                    holdFrames++;
+                     if(!holdingDirection){
                 collisionSoundTimer += 0.3f;
                 }
-                }
-                if (Inputs.held("up"))
-                {
-                    holdFrames++;
                     if (isMoving && transform.position == pos)
                     {
                         walkedfromwarp = true;
                     }
-
-                    holdingDirection = true;
-                    if (transform.position == pos)
+                    Direction inputDir = Inputs.held("up") ? Direction.Up : Inputs.held("down") ? Direction.Down : Inputs.held("left") ? Direction.Left: Inputs.held("right") ? Direction.Right : 0;
+                     if (transform.position == pos && direction != inputDir)
                     {
-                        direction = Direction.Up;
+                        Debug.Log("Change facing direction");
+                        Debug.Log("Current pos: " + transform.position);
+                        direction = inputDir;
                         UpdateFacedTile();
                         CheckCollision();
                         playerAnim.SetFloat("movedir", (int)direction + 1);
                     }
+
+                    holdingDirection = true;
                     if (transform.position == pos && holdFrames > 2)
                     {
                         
-                        if(!cannotMoveUp){ 
-                         if(walkSurfBikeState == MovementState.Surf && facedTile.hasTile && !facedTile.isWater) {
+                        if(Inputs.held("up") ? !cannotMoveUp : Inputs.held("down") ? !cannotMoveDown : Inputs.held("left") ? !cannotMoveLeft: Inputs.held("right") ? !cannotMoveRight : false){ 
+                         if(walkSurfBikeState == MovementState.Surf && facedTile.hasTile && !facedTile.isWater && !facedTile.isWall && !facedTile.isLedge) {
                         walkSurfBikeState = MovementState.Walk;
                         PlayCurrentAreaSong();
                         
                           }
-                        pos += (Vector3.up);
+                        pos += Inputs.held("up") ? Vector3.up : Inputs.held("down") ? Vector3.down : Inputs.held("left") ? Vector3.left: Inputs.held("right") ? Vector3.right : Vector3.zero;
                         isMoving = true;
                         }
                     }
 
-                }
-                else if (Inputs.held("right"))
-                {
-                    holdFrames++;
-                    if (isMoving && transform.position == pos)
-                    {
-                        walkedfromwarp = true;
-                    }
-
-                    holdingDirection = true;
-                    if (transform.position == pos)
-                    {
-                        direction = Direction.Right;
-                        UpdateFacedTile();
-                        CheckCollision();
-                        playerAnim.SetFloat("movedir", (int)direction + 1);
-                    }
-                    if (transform.position == pos && holdFrames > 2)
-                    {
-                        
-                        if(!cannotMoveRight){
-                      if(walkSurfBikeState == MovementState.Surf && facedTile.hasTile && !facedTile.isWater) {
-                        walkSurfBikeState = MovementState.Walk;
-                        PlayCurrentAreaSong();
-                        
-                          }
-                             pos += (Vector3.right);
-                        isMoving = true;
-                    }
-                    }
-
-                }
-
-                else if (Inputs.held("down"))
-                {
-                    holdFrames++;
-                    if (isMoving && transform.position == pos)
-                    {
-                        walkedfromwarp = true;
-                    }
-
-
-                    holdingDirection = true;
-                    if (transform.position == pos)
-                    {
-
-                        direction = Direction.Down;
-                        UpdateFacedTile();
-                        CheckCollision();
-                        playerAnim.SetFloat("movedir", (int)direction + 1);
-                    }
-                    if (transform.position == pos && holdFrames > 2)
-                    {
-                        
-                        if(!cannotMoveDown){ 
-                         if(walkSurfBikeState == MovementState.Surf && facedTile.hasTile && !facedTile.isWater) {
-                        walkSurfBikeState = MovementState.Walk;
-                        PlayCurrentAreaSong();
-                        
-                          }
-                            pos += (Vector3.down);
-                        isMoving = true;
-                        } 
-                    }
-                }
-                else if (Inputs.held("left"))
-                {
-                    holdFrames++;
-                    if (isMoving && transform.position == pos)
-                    {
-                        walkedfromwarp = true;
-                    }
-                    
-                    holdingDirection = true;
-                    if (transform.position == pos)
-                    {
-                        direction = Direction.Left;
-                        UpdateFacedTile();
-                        CheckCollision();
-                        playerAnim.SetFloat("movedir", (int)direction + 1);
-                    }
-                    if (transform.position == pos && holdFrames > 2)
-                    {
-                       
-                        if(!cannotMoveLeft){ 
-                         if(walkSurfBikeState == MovementState.Surf && facedTile.hasTile && !facedTile.isWater) {
-                        walkSurfBikeState = MovementState.Walk;
-                        PlayCurrentAreaSong();
-                        
-                          }
-                            pos += (Vector3.left);
-                        isMoving = true;
-                        }
-                    }
                 }
                 else if (transform.position == pos)
                 {
@@ -316,6 +223,8 @@ public class Player : MonoBehaviour
                     {
                         //The player moved onto a tile, run any checks needed;
                         CheckCollision(); //update the tile in front of us
+                        Debug.Log("Moved onto a new tile, Updating faced tile");
+                        Debug.Log("Current pos: " + transform.position);
                         UpdateFacedTile();
                         if (!walkedfromwarp)
                             walkedfromwarp = true;
@@ -332,7 +241,7 @@ public class Player : MonoBehaviour
                             }
                             
                             if(numberOfNoRandomBattleStepsLeft > 0) numberOfNoRandomBattleStepsLeft--;
-                            if ((currentTile.hasGrass && currentAreaTable != null) || (currentTile.isWater && areaHasWaterEncounters)){ 
+                            if (((currentTile.hasGrass && currentAreaTable != null) || (currentTile.isWater && areaHasWaterEncounters)) && !disableEncounters){ 
                                
                                 if(numberOfNoRandomBattleStepsLeft == 0) {
                                 int rand = Random.Range(0,256);
@@ -430,55 +339,23 @@ public class Player : MonoBehaviour
 
 public bool facingWall() => (direction == Direction.Up && cannotMoveUp) || (direction == Direction.Down && cannotMoveDown)  || (direction == Direction.Left && cannotMoveLeft) || (direction == Direction.Right && cannotMoveRight);
 public bool holdingFacingDirection() => (direction == Direction.Up && Inputs.held("up")) || (direction == Direction.Down && Inputs.held("down")) || (direction == Direction.Left && Inputs.held("left")) || (direction == Direction.Right && Inputs.held("right"));
+
+public Vector3 directionToVector(Direction dir) => (dir == Direction.Up ? Vector3.up : dir == Direction.Down ? Vector3.down : dir == Direction.Left ? Vector3.left : dir == Direction.Right ? Vector3.right : Vector3.zero);
     public IEnumerator MovePlayerOneTile(Direction dir)
     {
 if(!manuallyWalking){
-        if (dir == Direction.Up)
-        {
-            direction = Direction.Up;
+
+            direction = dir;
             holdingDirection = true;
 
             if (transform.position == pos)
             {
                 playerAnim.SetFloat("movedir", (int)direction + 1);
-                pos += (Vector3.up);
+                pos += directionToVector(dir);
                  isMoving = true;
             }
-        }
-        else if (dir == Direction.Down)
-        {
-            direction = Direction.Down;
-            holdingDirection = true;
-            if (transform.position == pos)
-            {
-                playerAnim.SetFloat("movedir", (int)direction + 1);
-                pos += (Vector3.down);
-                isMoving = true;
-            }
+        
 
-        }
-        else if (dir == Direction.Left)
-        {
-            direction = Direction.Left;
-            holdingDirection = true;
-            if (transform.position == pos)
-            {
-                playerAnim.SetFloat("movedir", (int)direction + 1);
-                pos += (Vector3.left);
-                 isMoving = true;
-            }
-        }
-        else if (dir == Direction.Right)
-        {
-            direction = Direction.Right;
-            holdingDirection = true;
-            if (transform.position == pos)
-            { 
-                playerAnim.SetFloat("movedir", (int)direction + 1);
-                pos += (Vector3.right);
-                 isMoving = true;
-            }
-        }
 }
   manuallyWalking = true;
   while(manuallyWalking) yield return new WaitForEndOfFrame();
@@ -571,8 +448,6 @@ yield return new WaitForSeconds(0.25f);
 
             if (Inputs.released("down") || Inputs.released("right") || Inputs.released("left") || Inputs.released("up")) {
 				if (!manuallyWalking) holdingDirection = false;
-
-			UpdateFacedTile();
             }
         }
             
@@ -642,27 +517,11 @@ yield return new WaitForSeconds(0.25f);
 	}
     public void UpdateFacedTile(){
         MapTile tileToCheck = null;
-        if (direction == Direction.Up) {
-                tileToCheck =  new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y+1,0));
+        Debug.Log("Updating faced tile");
+        Vector3 offset = directionToVector(direction);
+                tileToCheck =  new MapTile(new Vector3Int((int)transform.position.x + (int)offset.x,(int)transform.position.y+(int)offset.y,0));
 
-            }
-            if (direction == Direction.Down)
-            {
-
-
-               tileToCheck =  new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y-1,0));
-
-            }
-            if (direction == Direction.Left)
-            {
-
-                tileToCheck =  new MapTile(new Vector3Int((int)transform.position.x-1,(int)transform.position.y,0));
-            }
-            if (direction == Direction.Right)
-            {
-
-                tileToCheck =  new MapTile(new Vector3Int((int)transform.position.x+1,(int)transform.position.y,0));
-            }
+           
             if (tileToCheck.hasTile)
             {
                     facedTile = tileToCheck;
@@ -676,8 +535,7 @@ yield return new WaitForSeconds(0.25f);
     {
         
          CheckObjectCollision(); 
-        if (transform.position == pos)
-        {
+
             MapTile tileToCheck = null;
             tileToCheck = new MapTile(new Vector3Int((int)transform.position.x-1,(int)transform.position.y,0));
                 cannotMoveLeft = tileToCheck.isWall || tileToCheck.isLedge || (tileToCheck.isWater && walkSurfBikeState != MovementState.Surf) || objectExists[2] || !tileToCheck.hasTile;
@@ -687,7 +545,7 @@ yield return new WaitForSeconds(0.25f);
                 cannotMoveUp = tileToCheck.isWall || tileToCheck.isLedge || (tileToCheck.isWater && walkSurfBikeState != MovementState.Surf) || objectExists[0] || !tileToCheck.hasTile;
             tileToCheck = new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y-1,0));
                 cannotMoveDown = tileToCheck.isWall || tileToCheck.isLedge || (tileToCheck.isWater && walkSurfBikeState != MovementState.Surf) || objectExists[1] || !tileToCheck.hasTile;
-        }
+        
         if(noCollision){
             cannotMoveDown = cannotMoveLeft = cannotMoveRight = cannotMoveUp = false;
         }

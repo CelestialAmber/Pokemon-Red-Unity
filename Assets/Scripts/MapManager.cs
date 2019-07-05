@@ -138,6 +138,7 @@ public class MapManager : MonoBehaviour{
 [System.Serializable]
   public class MapTile{
           public MapTile(Vector3Int pos){
+               this.pos = pos;
               pos -= new Vector3Int(1,1,0);
               foreach(MapCollider mapCollider in MapManager.instance.mapColliders){
               Tilemap overworldTilemap = mapCollider.overworldTilemap;
@@ -145,7 +146,7 @@ public class MapManager : MonoBehaviour{
               Tilemap waterTilemap = mapCollider.waterTilemap;
               Tilemap ledgeTilemap = mapCollider.ledgeTilemap;
               
-              this.pos = pos;
+             
               bool hasOverworldTile = overworldTilemap.HasTile(pos);
               hasGrass = grassTilemap.HasTile(pos);
               isWater = waterTilemap.HasTile(pos); 
@@ -154,6 +155,8 @@ public class MapManager : MonoBehaviour{
               if(hasOverworldTile){
                   TileBase overworldTile = overworldTilemap.GetTile(pos);
                   if(overworldTile is AnimatedTile){
+                      
+                    
                       isWall = ((AnimatedTile)overworldTile).m_TileColliderType != Tile.ColliderType.None;
                   }
                   else if(overworldTile is Tile){

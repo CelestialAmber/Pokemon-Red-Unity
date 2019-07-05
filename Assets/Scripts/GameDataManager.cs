@@ -43,7 +43,7 @@ public class GameDataManager : MonoBehaviour {
         postRender = new RenderTexture(160, 144, 1);
         postRender.filterMode = FilterMode.Point;
         templateRenderTexture = new RenderTexture(mainRender);
-        
+        GameData.instance.inGame = startInGame;
 
         Camera.main.targetTexture = mainRender;
         if(!startInGame) BootGame(GameData.instance.version);
