@@ -210,6 +210,7 @@ public class Slots : MonoBehaviour {
 		rolledtwo = false;
 		rolledthree = false;
 		canroll = false;
+		handlingInput = false;
 		Dialogue.instance.Deactivate ();
 		this.gameObject.SetActive (false);
 

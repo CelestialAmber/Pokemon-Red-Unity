@@ -78,6 +78,12 @@ public class GameDataManager : MonoBehaviour {
                GameData.instance.fontAtlas.fontChars[i + 92] = GameData.instance.fontAtlas.blueSlotsChars[i];
             }
         }
+        else {
+             for (int i = 0; i < 6; i++)
+            {
+               GameData.instance.fontAtlas.fontChars[i + 92] = GameData.instance.fontAtlas.redSlotsChars[i];
+            }
+        }
     }
 	
 	// Update is called once per frame

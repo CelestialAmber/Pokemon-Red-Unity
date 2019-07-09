@@ -18,8 +18,8 @@ public class FontAtlas : ScriptableObject
     public List<string> keys;
     
       public List<FontChar> fontChars;
-
-      public List<FontChar> blueSlotsChars;
+      
+      public List<FontChar> redSlotsChars,blueSlotsChars;
 
       public List<BracketChar> bracketChars;
 
