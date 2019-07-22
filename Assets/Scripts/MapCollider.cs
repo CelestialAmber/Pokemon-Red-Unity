@@ -13,37 +13,14 @@ public class MapCollider : MonoBehaviour
 
     public GameObject tilemapObject;
     
-    public Collider2D lastCol, col;
-
-    public bool[] isTouchingCollider = new bool[5];
+    public Collider2D  col;
 
 
 void Start(){
     col = GetComponent<BoxCollider2D>();
-    for(int i = 0; i < 5; i++) isTouchingCollider[i] = false;
 }
 
-void OnEnterMapCollision(string tag){
-        switch(tag){
-            case "PlayerMapColLeft":
-            MapManager.instance.mapColliders[2] = this;
-            break;
-            case "PlayerMapColRight":
-            MapManager.instance.mapColliders[3] = this;
-            break;
-            case "PlayerMapColUp":
-            MapManager.instance.mapColliders[0] = this;
-            break;
-            case "PlayerMapColDown":
-            MapManager.instance.mapColliders[1] = this;
-            break;
-            case "PlayerMapColCenter":
-            MapManager.instance.mapColliders[4] = this;
-            break;
-        }
-        lastCol = col;
-        tilemapObject.SetActive(true);
-}
+
 
  public void UpdateTilemapObjects(){
         tilemapObject = transform.parent.GetChild(0).gameObject;

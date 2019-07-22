@@ -9,11 +9,6 @@ TagManager:
   - Slots
   - Pokeball
   - Warp
-  - PlayerMapColLeft
-  - PlayerMapColRight
-  - PlayerMapColUp
-  - PlayerMapColDown
-  - PlayerMapColCenter
   layers:
   - Default
   - TransparentFX
@@ -30,7 +25,7 @@ TagManager:
   - Object
   - NPC Moving Hitbox
   - Player Moving Hitbox
-  - PlayerMapCollider
+  - 
   - 
   - 
   - 

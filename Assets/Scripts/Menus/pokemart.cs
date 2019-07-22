@@ -19,7 +19,6 @@ public class PokeMart : MonoBehaviour {
 	public List<string> martlist;
 	public int selectBag;
 	public int amountToTask;
-	public bool didFirstRunthrough;
 	public int maximumItem;
 	public CustomText amountText, moneytext, pricetext;
     public int offscreenindexup, offscreenindexdown;
@@ -432,7 +431,6 @@ public class PokeMart : MonoBehaviour {
                 }
                 else if (currentMenu == itemwindow)
                 {
-                    didFirstRunthrough = false;
                     switching = false;
                     UpdateBuySellScreen();
                     selectCursor.gameObject.SetActive(false);

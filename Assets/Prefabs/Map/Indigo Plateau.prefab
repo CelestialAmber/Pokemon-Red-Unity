@@ -42,7 +42,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1}
@@ -77,7 +77,6 @@ MonoBehaviour:
   grassTilemap: {fileID: 4719465101320222919}
   ledgeTilemap: {fileID: 4719465101023886311}
   tilemapObject: {fileID: 1128973313479846137}
-  lastCol: {fileID: 0}
   col: {fileID: 0}
   isTouchingCollider: 0000000000
 --- !u!1 &1128973313479846137
@@ -95,7 +94,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6194463335766520782
 Transform:
   m_ObjectHideFlags: 0

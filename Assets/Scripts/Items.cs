@@ -221,7 +221,7 @@ public class Items : MonoBehaviour
             }
 
         }
-        //If the item is already in the inventory, and the item isn't a key item, just increase the stack.
+        //If the item is already in the PC, and the item isn't a key item, just increase the stack.
         if (alreadyInPC){ 
            pcItems[pcItems.IndexOf(itemToAdd)].quantity += quantity;
            int newQuantity = pcItems[pcItems.IndexOf(itemToAdd)].quantity;
@@ -233,7 +233,7 @@ public class Items : MonoBehaviour
             else pcItems[pcItems.IndexOf(itemToAdd)].quantity -= quantity;
            }
         }
-        else if (items.Count < 20) pcItems.Add(itemToAdd);
+        else if (pcItems.Count < 50) pcItems.Add(itemToAdd);
     }
   
     public void RemoveItem(int amount, int index)
@@ -242,7 +242,7 @@ public class Items : MonoBehaviour
         if (items[index].quantity <= 0) items.RemoveAt(index);
         }
     public void RemoveItemPC(int amount, int index)
-    {
+    {   
         pcItems[index].quantity -= amount;
         if (pcItems[index].quantity <= 0) pcItems.RemoveAt(index);
         }

@@ -114,7 +114,7 @@ public class MapManager : MonoBehaviour{
     {
         instance = this;
     }
-    public MapCollider[] mapColliders = new MapCollider[5];
+    public List<MapCollider> mapColliders = new List<MapCollider>();
 
     public TilemapRenderer currentMapGrassTilemap; //grass tilemap of the current map for the wild battle grass layer effect
   

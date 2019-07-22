@@ -97,6 +97,7 @@ public class Player : MonoBehaviour
         GameData.instance.trainerID = Random.Range(0, 65536);
         direction = Direction.Down;
         pos = transform.position;
+         CheckMapCollision();
     }
 
  
@@ -182,8 +183,6 @@ public class Player : MonoBehaviour
                     Direction inputDir = Inputs.held("up") ? Direction.Up : Inputs.held("down") ? Direction.Down : Inputs.held("left") ? Direction.Left: Inputs.held("right") ? Direction.Right : 0;
                      if (transform.position == pos && direction != inputDir)
                     {
-                        Debug.Log("Change facing direction");
-                        Debug.Log("Current pos: " + transform.position);
                         direction = inputDir;
                         UpdateFacedTile();
                         CheckCollision();
@@ -223,8 +222,7 @@ public class Player : MonoBehaviour
                     {
                         //The player moved onto a tile, run any checks needed;
                         CheckCollision(); //update the tile in front of us
-                        Debug.Log("Moved onto a new tile, Updating faced tile");
-                        Debug.Log("Current pos: " + transform.position);
+                        CheckMapCollision();
                         UpdateFacedTile();
                         if (!walkedfromwarp)
                             walkedfromwarp = true;
@@ -517,7 +515,6 @@ yield return new WaitForSeconds(0.25f);
 	}
     public void UpdateFacedTile(){
         MapTile tileToCheck = null;
-        Debug.Log("Updating faced tile");
         Vector3 offset = directionToVector(direction);
                 tileToCheck =  new MapTile(new Vector3Int((int)transform.position.x + (int)offset.x,(int)transform.position.y+(int)offset.y,0));
 
@@ -577,6 +574,33 @@ yield return new WaitForSeconds(0.25f);
          ray =  Physics2D.Raycast(transform.position,Vector2.right,1,layerMask);
          if(ray.collider != null) objectExists[3] = true;
          else objectExists[3] = false;
+
+    }
+
+      public void CheckMapCollision(){
+
+          foreach(MapCollider mapCol in MapManager.instance.mapColliders){
+              mapCol.tilemapObject.SetActive(false);
+          }
+          MapManager.instance.mapColliders.Clear();
+        RaycastHit2D[] hitColliders;
+        for(int i= 0; i < 5; i++){
+            Vector2 dir = i == 0 ? Vector2.up : i == 1 ? Vector2.down : i == 2 ? Vector2.left : i == 3 ? Vector2.right : Vector2.zero;
+            float rayDist = dir.y != 0 ? 5 : 6;
+            
+           // Debug.DrawLine(transform.position, transform.position + (Vector3)(dir * rayDist),Color.red,6f);
+         hitColliders =  Physics2D.BoxCastAll(transform.position,new Vector2(12,10),0,Vector2.zero);
+         foreach(RaycastHit2D ray in hitColliders){
+         if(ray.collider.tag == "MapCollider"){
+            MapCollider mapCollider = ray.collider.GetComponent<MapCollider>();
+            if(!MapManager.instance.mapColliders.Contains(mapCollider)){
+            MapManager.instance.mapColliders.Add(mapCollider);
+            mapCollider.tilemapObject.SetActive(true);
+            }
+
+    }
+        }
+        }
 
     }
     public void Cut(string MonName){
