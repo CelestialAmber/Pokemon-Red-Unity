@@ -359,6 +359,7 @@ if(!manuallyWalking){
   while(manuallyWalking) yield return new WaitForEndOfFrame();
   CheckCollision();
   UpdateFacedTile();
+  CheckMapCollision();
 yield return 0;
     }
     IEnumerator LedgeJump()
@@ -589,7 +590,7 @@ yield return new WaitForSeconds(0.25f);
             float rayDist = dir.y != 0 ? 5 : 6;
             
            // Debug.DrawLine(transform.position, transform.position + (Vector3)(dir * rayDist),Color.red,6f);
-         hitColliders =  Physics2D.BoxCastAll(transform.position,new Vector2(12,10),0,Vector2.zero);
+         hitColliders =  Physics2D.BoxCastAll((Vector2)transform.position + new Vector2(0.5f,0),new Vector2(11,9),0,Vector2.zero);
          foreach(RaycastHit2D ray in hitColliders){
          if(ray.collider.tag == "MapCollider"){
             MapCollider mapCollider = ray.collider.GetComponent<MapCollider>();

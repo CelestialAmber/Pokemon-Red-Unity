@@ -118,7 +118,6 @@ public class GameData : MonoBehaviour{
     public void Save()
     {
         //update the game variables to the save data
-        //2
         saveData = SaveData.Create();
         SaveGameData(Application.persistentDataPath + "/save.sav", saveData); //save
     }
@@ -161,11 +160,11 @@ public class GameData : MonoBehaviour{
         -1, //S.S. Anne
         26, //Route 11
         24, //Route 9
+        25, //Route 10
         14, //Rock Tunnel 1
         15, //Rock Tunnel 2
         13, //Power Plant
         -1, //Lavender Town
-        22, //Route 7
         -1, //Pokemon Tower 1
         -1, //Pokemon Tower 2
         8, //Pokemon Tower 3
@@ -173,6 +172,8 @@ public class GameData : MonoBehaviour{
         10, //Pokemon Tower 5
         11, //Pokemon Tower 6
         12, //Pokemon Tower 7
+        23, //Route 8
+        22, //Route 7
         -1, //Celadon City
         -1, //Game Corner
         -1,//Rocket Hideout
@@ -211,6 +212,8 @@ public class GameData : MonoBehaviour{
         -1,//Colloseum
         -1, //Bill's House
         -1, //Houses
+        -1,
+        -1
 
 
     };

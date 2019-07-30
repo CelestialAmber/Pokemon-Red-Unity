@@ -78,7 +78,6 @@ MonoBehaviour:
   ledgeTilemap: {fileID: 6860815586872252668}
   tilemapObject: {fileID: 4039481275788186379}
   col: {fileID: 0}
-  isTouchingCollider: 0000000000
 --- !u!1 &1175724586809175334
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &580829132777636123
 Transform:
   m_ObjectHideFlags: 0

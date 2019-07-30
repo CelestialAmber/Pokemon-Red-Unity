@@ -30,7 +30,7 @@ public class PaletteSet{
 
 }
 public class ScreenEffects : MonoBehaviour {
-    public Material paletteEffect, invertEffect, waveEffect, noEffect, ssAnneScrollEffect;
+    public Material paletteEffect, invertEffect, waveEffect, ssAnneScrollEffect;
     public RawImage sgbScreen;
     public RenderTexture texture, outputScreen;
     
@@ -84,11 +84,17 @@ public class ScreenEffects : MonoBehaviour {
         paletteEffect.SetInt("flashLevel",flashLevel);
         ssAnneScrollEffect.SetFloat("shipScrollOffset", shipScrollOffset);
         Graphics.Blit(texture,passTex[0], paletteEffect,0);
-        if (invert) Graphics.Blit(passTex[0], passTex[1], invertEffect, 0);
-        else Graphics.Blit(passTex[0], passTex[1], noEffect, 0);
-        if (wave) Graphics.Blit(passTex[1], passTex[2], waveEffect, 0);
-        else Graphics.Blit(passTex[1], passTex[2], noEffect, 0);
-        Graphics.Blit(passTex[2], outputScreen, ssAnneScrollEffect, 0);
+        int passIndex = 0;
+        if (invert){
+             Graphics.Blit(passTex[passIndex], passTex[passIndex + 1], invertEffect, 0);
+            passIndex++;
+        }
+        if (wave){
+        
+        Graphics.Blit(passTex[passIndex], passTex[passIndex + 1], waveEffect, 0);
+        passIndex++;
+        }
+        Graphics.Blit(passTex[passIndex], outputScreen, ssAnneScrollEffect, 0);
         paletteEffect.SetVector("screenPos",screenPos);
 	}
     public IEnumerator ScrollShip() //function to scroll the S.S. Anne Ship off screen.
