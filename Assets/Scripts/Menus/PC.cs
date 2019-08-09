@@ -24,7 +24,7 @@ public class PC : MonoBehaviour  {
     public RectTransform selectCursor;
     public bool switching;
     public GameObject indicator;
-
+    public static PC instance;
     
     void UpdateBagScreen(){
         

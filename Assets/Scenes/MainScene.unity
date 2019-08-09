@@ -21358,6 +21358,7 @@ MonoBehaviour:
   pokedex: {fileID: 43978414}
   fontAtlas: {fileID: 11400000, guid: 6430ed7b9c95c0046a5e6a93065ae9cb, type: 2}
   player: {fileID: 1148279648}
+  pc: {fileID: 0}
   startInGame: 1
 --- !u!114 &967277706
 MonoBehaviour:
@@ -21374,7 +21375,6 @@ MonoBehaviour:
   paletteEffect: {fileID: 2100000, guid: bd2feda6f053b49028a89fcf472fb4c2, type: 2}
   invertEffect: {fileID: 2100000, guid: f999aeac11b77433ca10223e91cb34d9, type: 2}
   waveEffect: {fileID: 2100000, guid: f79b394e3c8d845e197c72622ff51354, type: 2}
-  noEffect: {fileID: 2100000, guid: 32b42a238c376a847a93e360f1e537d2, type: 2}
   ssAnneScrollEffect: {fileID: 2100000, guid: 7e5545597bef03c4b8219cdb61b4c6ce, type: 2}
   sgbScreen: {fileID: 934070876}
   texture: {fileID: 0}
@@ -27123,7 +27123,7 @@ Camera:
     m_Bits: 5943
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: bae434d9fa5653f4e82ec48d77ed3618, type: 2}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 0
@@ -29800,7 +29800,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: -1099225667
   m_SortingOrder: 0
   m_TargetDisplay: 0

@@ -49,6 +49,3 @@ TagManager:
   - name: UI
     uniqueID: 3195741629
     locked: 0
-  - name: abovebox
-    uniqueID: 2260679517
-    locked: 0

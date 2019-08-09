@@ -66,7 +66,6 @@ public class Inputs : MonoBehaviour
     }
     public void Update()
     {
-
         UpdateControllerInput();
     }
     public static bool pressedDpad()

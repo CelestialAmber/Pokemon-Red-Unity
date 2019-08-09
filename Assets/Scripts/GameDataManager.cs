@@ -21,6 +21,7 @@ public class GameDataManager : MonoBehaviour {
     public Pokedex pokedex;
     public FontAtlas fontAtlas;
     public Player player;
+    public PC pc;
 
     public bool startInGame;
     private void Awake(){
@@ -34,6 +35,7 @@ public class GameDataManager : MonoBehaviour {
         CreditsHandler.instance = creditsHandler;
         BeginHandler.instance = beginHandler;
         Pokedex.instance = pokedex;
+        PC.instance = pc;
         //VersionManager executes before GameDataManager, so the version is set in GameData beforehand
         VersionInit();
         GameData.instance.Init();
