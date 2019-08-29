@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System.Xml;
-using System.Xml.Serialization;
 using System.IO;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -39,7 +37,6 @@ public class FishingGroup{
 }
 
 
-//Save/Loader for Tile Pool
 public class Serializer
 {
     
@@ -244,7 +241,8 @@ List of index of the party sprite for each Pokemon.
     public static Dictionary<string, int> PokemonToIndex = new Dictionary<string, int>();
     public static Dictionary<string, int> TMHMtoIndex = new Dictionary<string, int>();
     public static Dictionary<string, int> itemPrices = new Dictionary<string, int>();
-public static Dictionary<string,Dictionary<string,float>> TypeEffectiveness = new Dictionary<string, Dictionary<string, float>>(){};
+public static Dictionary<string,Dictionary<string,float>> TypeEffectiveness = new Dictionary<string, Dictionary<string, float>>();
+public static Dictionary<string,string[]> shopItemsLists = new Dictionary<string, string[]>();
 }
 
 public class PokemonDataJSON : MonoBehaviour
@@ -264,6 +262,7 @@ public class PokemonDataJSON : MonoBehaviour
         PokemonData.PokemonToIndex = Serializer.JSONtoObject<Dictionary<string, int>>("pokemonIndices.json");
         PokemonData.TMHMtoIndex = Serializer.JSONtoObject<Dictionary<string, int>>("tmHmIndices.json");
         PokemonData.itemPrices = Serializer.JSONtoObject<Dictionary<string, int>>("itemPrices.json");
+        PokemonData.shopItemsLists = Serializer.JSONtoObject<Dictionary<string,string[]>>("shopItems.json");
 
         
        

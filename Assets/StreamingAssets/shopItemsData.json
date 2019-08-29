@@ -1,0 +1,85 @@
+{
+  "Viridian" : [
+    "Poke Ball",
+    "Potion",
+    "Antidote",
+    "Parlyz Heal",
+    "Burn Heal"
+   ],
+   
+ "Pewter": [   
+     "Poke Ball",
+   "Potion",
+   "Escape Rope",
+   "Antidote",
+   "Burn Heal",
+   "Awakening",
+   "Parlyz Heal"
+ ]
+,
+   "Cerulean" : [
+    "Poke Ball",
+    "Potion",
+    "Escape Rope",
+    "Repel",
+    "Antidote",
+    "Burn Heal",
+    "Awakening",
+    "Parlyz Heal"
+],
+"Vermillion" :[
+   "Poke Ball",
+   "Super Potion",
+    "Ice Heal",
+    "Awakening",
+   "Parlyz Heal",
+   "Repel"
+],
+"Lavender" :[
+  "Great Ball",
+  "Super Potion",
+  "Revive",
+  "Escape Rope",
+  "Super Repel",
+  "Antidote",
+  "Burn Heal",
+  "Ice Heal",
+  "Parlyz Heal"
+  ],
+  "Saffron" :[
+    "Great Ball",
+    "Hyper Potion",
+    "Max Repel",
+    "Escape Rope",
+    "Full Heal",
+    "Revive"
+  ],
+  "Fuschia" :[
+    "Ultra Ball",
+    "Great Ball",
+    "Super Potion",
+    "Hyper Potion",
+    "Revive",
+    "Full Heal",
+    "Super Repel"
+    ],
+    "Cinnabar" :[
+    "Ultra Ball",
+    "Great Ball",
+    "Hyper Potion",
+    "Max Repel",
+    "Escape Rope",
+    "Full Heal",
+    "Revive"
+    ],
+    "Indigo":[
+    "Ultra Ball",
+    "Great Ball",
+    "Full Restore",
+    "Max Potion",
+    "Full Heal",
+    "Revive",
+    "Max Repel"
+    ]
+}
+
