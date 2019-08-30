@@ -13,7 +13,7 @@ Dragonfly Cave(encounter tables): http://www.dragonflycave.com/
 
 Game functionality analysis videos(Crystal_): https://www.youtube.com/user/CrystaL12RG
 
-Map Images-
+# Map Images
 
 Overworld: http://vgmaps.com/Atlas/GB-GBC/Pokemon-Red,Green(J)&BlueVersions-Kanto.png
 
