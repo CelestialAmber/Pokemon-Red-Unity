@@ -22,8 +22,6 @@ Interior: https://github.com/huderlem/RBMap
 Music-
 https://www.zophar.net/music/gameboy-gbs/pokemon-red
 
-Sounds- 
-
 Thanks to https://github.com/dannye for helping me extract alot of sound effects from the game
 
 Move sounds by CELEBI: http://cutstuff.net/forum/index.php?topic=6528.0)
