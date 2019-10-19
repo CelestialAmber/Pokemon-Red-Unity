@@ -65,7 +65,7 @@ public class NameSelection : MonoBehaviour {
         MathE.Wrap(ref currentYselection, 0, 5);
 
 		if (Inputs.pressed("b")) {
-			futureName = futureName.Remove (futureName.Length - 1);
+			if(futureName.Length > 0) futureName = futureName.Remove (futureName.Length - 1);
 		}
         if (Inputs.pressed("start")) {
 
@@ -101,6 +101,7 @@ public class NameSelection : MonoBehaviour {
                         BeginHandler.instance.tutanim.SetTrigger("transition");
                         Dialogue.instance.enabled = true;
                         BeginHandler.instance.givingRedAName = false;
+						cursor.SetActive(false);
                         this.gameObject.SetActive(false);
                     }
                     if (BeginHandler.instance.givingGaryAName)
@@ -109,6 +110,7 @@ public class NameSelection : MonoBehaviour {
                         BeginHandler.instance.tutanim.SetTrigger("transition");
                         Dialogue.instance.enabled = true;
                         BeginHandler.instance.givingGaryAName = false;
+						cursor.SetActive(false);
                         this.gameObject.SetActive(false);
                     }
 
@@ -121,7 +123,7 @@ public class NameSelection : MonoBehaviour {
 				if (currentXselection == 0 && currentYselection == 5) {
 					isLowerCase = !isLowerCase;
 				}else if (futureName.Length == maxNameSize) return;
-				else futureName += currentYselection < 3 && isLowerCase ? characters[currentXselection,currentYselection].ToLower() : characters[currentXselection,currentYselection];
+				else futureName += currentYselection < 3 && isLowerCase ? characters[currentYselection,currentXselection].ToLower() : characters[currentYselection,currentXselection];
 
 			}
 				

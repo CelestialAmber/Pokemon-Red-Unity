@@ -285,7 +285,7 @@ public class Bag : MonoBehaviour  {
 						if (ItemMode == 2) {
 						
 							if (!Items.instance.items[currentBagPosition].isKeyItem) {
-                                yield return Dialogue.instance.text("Is it OK to toss \n" + Items.instance.items[currentBagPosition].name + "?");
+                                yield return Dialogue.instance.text("Is it OK to toss \\l" + Items.instance.items[currentBagPosition].name + "?");
                                 yield return StartCoroutine(Dialogue.instance.prompt());
                                 if(Dialogue.instance.selectedOption == 0){
                                     yield return Dialogue.instance.text("Threw away " + Items.instance.items[currentBagPosition].name + ".");
@@ -399,7 +399,7 @@ public class Bag : MonoBehaviour  {
 	IEnumerator TooImportantToToss(){
 
 		Dialogue.instance.Deactivate();
-		yield return Dialogue.instance.text ("That's too impor-\ntant to toss!");
+		yield return Dialogue.instance.text ("That's too impor-\\ltant to toss!");
         selectCursor.gameObject.SetActive(false);
 UpdateBagScreen();
 	currentMenu = itemwindow;

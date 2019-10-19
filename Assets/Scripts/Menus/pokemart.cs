@@ -510,7 +510,7 @@ public class PokeMart : MonoBehaviour {
         selectCursor.gameObject.SetActive(true);
         cursor.SetActive(false);
         UpdateSelectItemCursorPos();
-        yield return Dialogue.instance.text ("I can't put a\nprice on that.");
+        yield return Dialogue.instance.text ("I can't put a\\lprice on that.");
         selectCursor.gameObject.SetActive(false);
         UpdateSellScreen();
         cursor.SetActive(true);
@@ -522,7 +522,7 @@ public class PokeMart : MonoBehaviour {
         selectCursor.gameObject.SetActive(true);
         cursor.SetActive(false);
         UpdateSelectItemCursorPos();
-        yield return Dialogue.instance.text("You don't have\nenough money.");
+        yield return Dialogue.instance.text("You don't have\\lenough money.");
         selectCursor.gameObject.SetActive(false);
         UpdateBuyScreen();
         cursor.SetActive(true);

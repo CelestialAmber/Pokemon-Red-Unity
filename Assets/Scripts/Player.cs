@@ -609,7 +609,7 @@ yield return new WaitForSeconds(0.25f);
         StartCoroutine(CutFunction(MonName));
     }
     public IEnumerator CutFunction(string MonName){
-        yield return Dialogue.instance.text(MonName + " hacked\naway with CUT!");
+        yield return Dialogue.instance.text(MonName + " hacked\\laway with CUT!");
         SoundManager.instance.sfx.PlayOneShot(cutClip);
          facedObject.GetComponent<PokemonTree>().Cut();
          disabled = true;
@@ -700,13 +700,13 @@ Inputs.Enable("start");
             {
                 case  MovementState.Walk:
                 SoundManager.instance.PlaySong(7); //play the biking music
-                    yield return Dialogue.instance.text(GameData.instance.playerName + " got on the\nBICYCLE!");
+                    yield return Dialogue.instance.text(GameData.instance.playerName + " got on the\\lBICYCLE!");
                     
                     walkSurfBikeState =  MovementState.Bike;
                     break;
                 case  MovementState.Bike:
                     PlayCurrentAreaSong();
-                    yield return Dialogue.instance.text(GameData.instance.playerName + " got off\nthe BICYCLE.");
+                    yield return Dialogue.instance.text(GameData.instance.playerName + " got off\\lthe BICYCLE.");
                     walkSurfBikeState = MovementState.Walk;
                     break;
             }
@@ -728,7 +728,7 @@ Inputs.Enable("start");
     public IEnumerator Run(){
 
 	if(battleManager.battleType == BattleType.Wild){
-		yield return Dialogue.instance.text("Ran away\nsafely!");
+		yield return Dialogue.instance.text("Ran away\\lsafely!");
         battlemenu.SetActive(false);
         battleManager.Deactivate();
 		ScreenEffects.flashLevel = 3;

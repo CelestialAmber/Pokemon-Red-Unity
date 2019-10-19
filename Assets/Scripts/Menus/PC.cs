@@ -106,13 +106,12 @@ public class PC : MonoBehaviour  {
     }
     public IEnumerator Initialize(){
         
-        Dialogue.instance.fastText = true;
-        Dialogue.instance.keepTextOnScreen = true;
-        yield return Dialogue.instance.text ("What do you want\nto do?");
+        StartCoroutine(WhatDoText());
         cursor.SetActive(true);
         UpdateBagScreen();
         cursor.SetPosition(8, 120 - 16 * selectedOption);
         currentMenu = mainwindow;
+        yield return 0;
 
     }
     // Update is called once per frame
@@ -258,7 +257,7 @@ public class PC : MonoBehaviour  {
                                 switching = false;
                                 selectCursor.gameObject.SetActive(false);
                                 Dialogue.instance.keepTextOnScreen = true;
-                    yield return Dialogue.instance.text("What do you want\nto do?");
+                    yield return Dialogue.instance.text("What do you want\\lto do?");
                                 currentMenu = mainwindow;
                     UpdateMainScreen();
                 }
@@ -378,12 +377,10 @@ public class PC : MonoBehaviour  {
                 else if (currentMenu == itemwindow)
                 {
                     
-                    Dialogue.instance.Deactivate();
-                    Dialogue.instance.fastText = true;
+
                     switching = false;
                 selectCursor.gameObject.SetActive(false);
-                Dialogue.instance.keepTextOnScreen = true;
-                    yield return Dialogue.instance.text("What do you want\nto do?");
+                StartCoroutine(WhatDoText());
                     
                     currentMenu = mainwindow;
                 UpdateMainScreen();
@@ -395,10 +392,7 @@ public class PC : MonoBehaviour  {
                     {
                         currentBagPosition = 0;
                         selectBag = -1;
-                        Dialogue.instance.Deactivate();
-                        Dialogue.instance.fastText = true;
-                        Dialogue.instance.keepTextOnScreen = true;
-                        yield return Dialogue.instance.text("What do you want\nto withdraw?");
+                       StartCoroutine(WhatWithdrawText());
                         currentMenu = itemwindow;
 
                     }
@@ -406,10 +400,7 @@ public class PC : MonoBehaviour  {
                     {
                         currentBagPosition = 0;
                         selectBag = -1;
-                        Dialogue.instance.Deactivate();
-                        Dialogue.instance.fastText = true;
-                        Dialogue.instance.keepTextOnScreen = true;
-                        yield return Dialogue.instance.text("What do you want\nto deposit?");
+                       StartCoroutine(WhatDepositText());
                         currentMenu = itemwindow;
 
                     }
@@ -417,10 +408,7 @@ public class PC : MonoBehaviour  {
                     {
                         currentBagPosition = 0;
                         selectBag = -1;
-                        Dialogue.instance.Deactivate();
-                        Dialogue.instance.fastText = true;
-                        Dialogue.instance.keepTextOnScreen = true;
-                        yield return Dialogue.instance.text("What do you want\nto toss?");
+                        StartCoroutine(WhatTossText());
                         currentMenu = itemwindow;
 
                     }
@@ -459,7 +447,7 @@ public class PC : MonoBehaviour  {
         alreadyInBag = false;
         Item  withdrawnitem = Items.instance.pcItems[currentBagPosition];
         string DisplayString =  withdrawnitem.name + ".";
-        yield return Dialogue.instance.text("Withdrew\n" + DisplayString);
+        yield return Dialogue.instance.text("Withdrew\\l" + DisplayString);
         Item inBagItem = new Item("", 0,false);
         foreach (Item item in Items.instance.items)
         {
@@ -476,9 +464,7 @@ public class PC : MonoBehaviour  {
         yield return StartCoroutine(RemoveItem(amountToTask));
 
 
-        Dialogue.instance.fastText = true;
-        Dialogue.instance.keepTextOnScreen = true;
-       yield return Dialogue.instance.text("What do you want\nto do?");
+        StartCoroutine(WhatDoText());
         ItemMode = 0;
         UpdateMainScreen();
         currentMenu = mainwindow;
@@ -492,7 +478,7 @@ public class PC : MonoBehaviour  {
     IEnumerator DepositItem(){
         alreadyInBag = false;
         Item depositeditem = Items.instance.items[currentBagPosition];
-        yield return Dialogue.instance.text (depositeditem.name + " was\nstored via PC.");
+        yield return Dialogue.instance.text (depositeditem.name + " was\\lstored via PC.");
         Item inBagItem = new Item("", 0,false);
         foreach(Item item in Items.instance.pcItems){
             if (item.name == depositeditem.name)
@@ -507,9 +493,7 @@ public class PC : MonoBehaviour  {
         else if (Items.instance.pcItems.Count < 50) Items.instance.pcItems.Add(new Item(depositeditem.name, amountToTask,depositeditem.isKeyItem));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
-        Dialogue.instance.fastText = true;
-        Dialogue.instance.keepTextOnScreen = true;
-        yield return Dialogue.instance.text("What do you want\nto do?");
+        StartCoroutine(WhatDoText());
         ItemMode = 0;
         UpdateMainScreen();
         currentMenu = mainwindow;
@@ -525,9 +509,7 @@ public class PC : MonoBehaviour  {
         yield return Dialogue.instance.text("Threw away " + tosseditem.name + ".");
         yield return StartCoroutine(RemoveItem (amountToTask));
     
-        Dialogue.instance.fastText = true;
-        Dialogue.instance.keepTextOnScreen = true;
-        yield return Dialogue.instance.text("What do you want\nto do?");
+        StartCoroutine(WhatDoText());
         currentMenu = mainwindow;
         UpdateMainScreen();
         ItemMode = 0;
@@ -549,44 +531,64 @@ public class PC : MonoBehaviour  {
         currentBagPosition = 0;
         ItemMode = 1;
         selectBag = -1;
-        Dialogue.instance.Deactivate ();
-        Dialogue.instance.fastText = true;
-        Dialogue.instance.keepTextOnScreen = true;
-        yield return Dialogue.instance.text("What do you want\nto withdraw?");
+        StartCoroutine(WhatWithdrawText());
         currentMenu = itemwindow;
         UpdateBagScreen();
+        yield return null;
     }
     IEnumerator ItemMode2(){
         currentBagPosition = 0;
         ItemMode = 2;
         selectBag = -1;
-        Dialogue.instance.Deactivate ();
-        Dialogue.instance.fastText = true;
-        Dialogue.instance.keepTextOnScreen = true;
-        yield return Dialogue.instance.text("What do you want\nto deposit?");
+       StartCoroutine(WhatDepositText());
         currentMenu = itemwindow;
         UpdateBagScreen();
-
+        yield return null;
     }
     IEnumerator ItemMode3(){
         currentBagPosition = 0;
         ItemMode = 3;
         selectBag = -1;
-        Dialogue.instance.Deactivate ();
-        Dialogue.instance.fastText = true;
-        Dialogue.instance.keepTextOnScreen = true;
-        yield return Dialogue.instance.text("What do you want\nto toss?");
+        StartCoroutine(WhatTossText());
         currentMenu = itemwindow;
         UpdateBagScreen();
-
+        yield return null;
     }
         IEnumerator TooImportantToToss(){
 
             Dialogue.instance.Deactivate();
-        yield return Dialogue.instance.text ("That's too impor-\ntant to toss!");
+        yield return Dialogue.instance.text ("That's too impor-\\ltant to toss!");
         selectCursor.gameObject.SetActive(false);
         UpdateBagScreen();
         currentMenu = itemwindow;
+
+    }
+    IEnumerator WhatDoText(){
+        Dialogue.instance.Deactivate ();
+        Dialogue.instance.fastText = true;
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text ("What do you want\\lto do?");
+
+    }
+    IEnumerator WhatWithdrawText(){
+        Dialogue.instance.Deactivate ();
+        Dialogue.instance.fastText = true;
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text ("What do you want\\lto withdraw?");
+
+    }
+    IEnumerator WhatDepositText(){
+        Dialogue.instance.Deactivate ();
+        Dialogue.instance.fastText = true;
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text ("What do you want\\lto deposit");
+
+    }
+    IEnumerator WhatTossText(){
+        Dialogue.instance.Deactivate ();
+        Dialogue.instance.fastText = true;
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text ("What do you want\\lto toss?");
 
     }
     void Close()

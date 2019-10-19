@@ -40,11 +40,13 @@ public class BeginHandler : MonoBehaviour {
         GameData.instance.atTitleScreen = true;
         tutanim.SetTrigger("reset");
         cursor.SetActive (false);
+        MathE.Clamp(ref selectedOption, 0, 3);
+                 cursor.SetPosition(8,120 - 16 * selectedOption);
     }
 	// Update is called once per frame
 	void Update () {
 		
-		if (currentmenu == null && currentmenu != nameselectionmenu)  {
+		if ((currentmenu == rednamemenu || currentmenu == garynamemenu) && currentmenu != nameselectionmenu)  {
 		
             if (Inputs.pressed("down")) {
 				selectedOption++;

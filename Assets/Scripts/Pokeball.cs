@@ -12,7 +12,7 @@ public class Pokeball : MonoBehaviour
 
     public IEnumerator GetItemText(string item){
         Items.instance.AddItem(item, 1);
-        yield return Dialogue.instance.text(GameData.instance.playerName + " found \n"+item.ToUpper() + "!");
+        yield return Dialogue.instance.text(GameData.instance.playerName + " found \\l"+item.ToUpper() + "!");
         this.gameObject.SetActive(false);
 
 

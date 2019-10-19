@@ -611,7 +611,7 @@ public class PokemonMenu : MonoBehaviour
                         switching = true;
                         selectedOption = selectedMon;
                         currentMenu = mainwindow;
-                        StartCoroutine(Dialogue.instance.text("Move POKéMON\nwhere?"));
+                        StartCoroutine(Dialogue.instance.text("Move #MON\\lwhere?"));
                     Dialogue.instance.finishedText = true;
                         UpdateMainMenu();
 
@@ -675,7 +675,7 @@ if(Player.instance.facingTree){
 }else {
     currentMenu = mainwindow;
     UpdateMainMenu();
-yield return Dialogue.instance.text("There isn't\nanything to CUT!");
+yield return Dialogue.instance.text("There isn't\\lanything to CUT!");
 }
 
 }
@@ -685,7 +685,7 @@ if(whatFieldMove == "Surf"){
     SoundManager.instance.PlaySong(17);
     currentMenu = mainwindow;
     UpdateMainMenu();
-    yield return Dialogue.instance.text(GameData.instance.playerName + " got on\n"+ monName + "!");
+    yield return Dialogue.instance.text(GameData.instance.playerName + " got on\\l"+ monName + "!");
     Player.instance.Surf();
          CloseMenu();
     this.gameObject.SetActive(false);
@@ -693,7 +693,7 @@ if(whatFieldMove == "Surf"){
     }else{
         currentMenu = mainwindow;
         UpdateMainMenu();
-yield return Dialogue.instance.text("No SURFing on\n" + monName + " here!");
+yield return Dialogue.instance.text("No SURFing on\\l" + monName + " here!");
 
     }
    
@@ -705,7 +705,7 @@ currentMenu = mainwindow;
 UpdateMainMenu();
 Dialogue.instance.fastText = true;
 Dialogue.instance.keepTextOnScreen = true;
-StartCoroutine(Dialogue.instance.text("Use item on which\nPOKéMON?"));
+StartCoroutine(Dialogue.instance.text("Use item on which\\l#MON?"));
 while(selectingPokemon){
    
     yield return new WaitForSeconds(0.01f);
@@ -719,7 +719,7 @@ if(pokemon.currenthp != pokemon.maxhp){
     int amount = GameData.instance.party[selectedMon].maxhp / 5;
    yield return AnimateOurHealth(-amount,selectedMon);
     yield return AnimateOurHealth(amount,selectedOption);
-    yield return Dialogue.instance.text(pokemon.nickname +"\nrecovered by " + amount + "!");
+    yield return Dialogue.instance.text(pokemon.nickname +"\\lrecovered by " + amount + "!");
 }else {
 yield return NoEffectText();
 }
@@ -733,7 +733,7 @@ UpdateMainMenu();
     }
     IEnumerator NoEffectText(){
 
-        yield return Dialogue.instance.text("It won't have any\neffect.");
+        yield return Dialogue.instance.text("It won't have any\\leffect.");
     
     }
     

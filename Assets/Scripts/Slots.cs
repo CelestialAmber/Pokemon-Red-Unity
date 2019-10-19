@@ -125,7 +125,7 @@ public class Slots : MonoBehaviour {
             int amount = 3 - Dialogue.instance.selectedOption;
 		
 				if (GameData.instance.coins < amount) {
-                    yield return Dialogue.instance.text("Not enough\ncoins!");
+                    yield return Dialogue.instance.text("Not enough\\lcoins!");
                     StartCoroutine (DecideBet ());
 					yield break;
 
@@ -199,7 +199,7 @@ public class Slots : MonoBehaviour {
         slotPointsAnimator.SetBool("toggleStatus",false);
 		Dialogue.instance.fastText = true;
 		Dialogue.instance.keepTextOnScreen = true;
-        yield return Dialogue.instance.text ("Bet how many\ncoins?");
+        yield return Dialogue.instance.text ("Bet how many\\lcoins?");
 		Dialogue.instance.fastText = false;
 		StartCoroutine(DecideBet ());
 
@@ -415,7 +415,7 @@ public class Slots : MonoBehaviour {
                 whatwaslinedup = "<" + (whatwaslinedup == "7" ? "SEVEN" : whatwaslinedup) + ">";
 				Dialogue.instance.keepTextOnScreen = true;
 				Dialogue.instance.waitForButtonPress = true;
-                yield return Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + " coins!");
+                yield return Dialogue.instance.text(whatwaslinedup + " lined up!\\lScored " + payout + " coins!");
 
                 int payoutamount = payout;
                 
@@ -436,7 +436,7 @@ public class Slots : MonoBehaviour {
 				if (GameData.instance.coins > 0) {
 				yield return Dialogue.instance.text ("Not this time!");
 				} else {
-				yield return Dialogue.instance.text ("Darn! Ran out of\ncoins!");
+				yield return Dialogue.instance.text ("Darn! Ran out of\\lcoins!");
              
 					Exit ();
 					yield break;
@@ -450,7 +450,7 @@ public class Slots : MonoBehaviour {
 				canroll = false;
             slotPointsAnimator.SetBool("toggleStatus",false);
 			Dialogue.instance.keepTextOnScreen = true;
-			yield return Dialogue.instance.text ("Bet how many\ncoins?");
+			yield return Dialogue.instance.text ("Bet how many\\lcoins?");
 				StartCoroutine(DecideBet ());
 
 
