@@ -10,7 +10,8 @@ public class SlotsObject : MonoBehaviour
         {
             if (GameData.instance.coins > 0)
             {
-                yield return Dialogue.instance.text("A slot machine!\nWant to play?", true);
+                Dialogue.instance.keepTextOnScreen = true;
+                yield return Dialogue.instance.text("A slot machine!\nWant to play?");
                 yield return StartCoroutine(Dialogue.instance.prompt());
                 if (Dialogue.instance.selectedOption == 0)
                 {

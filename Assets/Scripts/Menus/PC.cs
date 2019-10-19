@@ -107,7 +107,8 @@ public class PC : MonoBehaviour  {
     public IEnumerator Initialize(){
         
         Dialogue.instance.fastText = true;
-        yield return Dialogue.instance.text ("What do you want\nto do?",true);
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text ("What do you want\nto do?");
         cursor.SetActive(true);
         UpdateBagScreen();
         cursor.SetPosition(8, 120 - 16 * selectedOption);
@@ -256,7 +257,8 @@ public class PC : MonoBehaviour  {
                                 Dialogue.instance.fastText = true;
                                 switching = false;
                                 selectCursor.gameObject.SetActive(false);
-                    yield return Dialogue.instance.text("What do you want\nto do?", true);
+                                Dialogue.instance.keepTextOnScreen = true;
+                    yield return Dialogue.instance.text("What do you want\nto do?");
                                 currentMenu = mainwindow;
                     UpdateMainScreen();
                 }
@@ -267,7 +269,8 @@ public class PC : MonoBehaviour  {
                                     amountToTask = 1;
                                     Dialogue.instance.Deactivate();
                                     Dialogue.instance.fastText = true;
-                                    yield return Dialogue.instance.text("How much?", true);
+                                    Dialogue.instance.keepTextOnScreen = true;
+                                    yield return Dialogue.instance.text("How much?");
                         currentMenu = quantitymenu;
                                     UpdateQuantityScreen();
                                 }else if(itemSlots[currentBagPosition - offscreenindexup - 1].isKeyItem){
@@ -284,7 +287,8 @@ public class PC : MonoBehaviour  {
                                     amountToTask = 1;
                                     Dialogue.instance.Deactivate();
                                     Dialogue.instance.fastText = true;
-                        yield return Dialogue.instance.text("How much?", true);
+                                    Dialogue.instance.keepTextOnScreen = true;
+                        yield return Dialogue.instance.text("How much?");
                                     currentMenu = quantitymenu;
                         UpdateQuantityScreen();
                                 }
@@ -378,7 +382,8 @@ public class PC : MonoBehaviour  {
                     Dialogue.instance.fastText = true;
                     switching = false;
                 selectCursor.gameObject.SetActive(false);
-                    yield return Dialogue.instance.text("What do you want\nto do?", true);
+                Dialogue.instance.keepTextOnScreen = true;
+                    yield return Dialogue.instance.text("What do you want\nto do?");
                     
                     currentMenu = mainwindow;
                 UpdateMainScreen();
@@ -392,7 +397,8 @@ public class PC : MonoBehaviour  {
                         selectBag = -1;
                         Dialogue.instance.Deactivate();
                         Dialogue.instance.fastText = true;
-                        yield return Dialogue.instance.text("What do you want\nto withdraw?", true);
+                        Dialogue.instance.keepTextOnScreen = true;
+                        yield return Dialogue.instance.text("What do you want\nto withdraw?");
                         currentMenu = itemwindow;
 
                     }
@@ -402,7 +408,8 @@ public class PC : MonoBehaviour  {
                         selectBag = -1;
                         Dialogue.instance.Deactivate();
                         Dialogue.instance.fastText = true;
-                        yield return Dialogue.instance.text("What do you want\nto deposit?", true);
+                        Dialogue.instance.keepTextOnScreen = true;
+                        yield return Dialogue.instance.text("What do you want\nto deposit?");
                         currentMenu = itemwindow;
 
                     }
@@ -412,7 +419,8 @@ public class PC : MonoBehaviour  {
                         selectBag = -1;
                         Dialogue.instance.Deactivate();
                         Dialogue.instance.fastText = true;
-                        yield return Dialogue.instance.text("What do you want\nto toss?", true);
+                        Dialogue.instance.keepTextOnScreen = true;
+                        yield return Dialogue.instance.text("What do you want\nto toss?");
                         currentMenu = itemwindow;
 
                     }
@@ -469,7 +477,8 @@ public class PC : MonoBehaviour  {
 
 
         Dialogue.instance.fastText = true;
-       yield return Dialogue.instance.text("What do you want\nto do?", true);
+        Dialogue.instance.keepTextOnScreen = true;
+       yield return Dialogue.instance.text("What do you want\nto do?");
         ItemMode = 0;
         UpdateMainScreen();
         currentMenu = mainwindow;
@@ -499,7 +508,8 @@ public class PC : MonoBehaviour  {
         yield return StartCoroutine(RemoveItem(amountToTask));
 
         Dialogue.instance.fastText = true;
-        yield return Dialogue.instance.text("What do you want\nto do?", true);
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text("What do you want\nto do?");
         ItemMode = 0;
         UpdateMainScreen();
         currentMenu = mainwindow;
@@ -516,7 +526,8 @@ public class PC : MonoBehaviour  {
         yield return StartCoroutine(RemoveItem (amountToTask));
     
         Dialogue.instance.fastText = true;
-        yield return Dialogue.instance.text("What do you want\nto do?", true);
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text("What do you want\nto do?");
         currentMenu = mainwindow;
         UpdateMainScreen();
         ItemMode = 0;
@@ -540,7 +551,8 @@ public class PC : MonoBehaviour  {
         selectBag = -1;
         Dialogue.instance.Deactivate ();
         Dialogue.instance.fastText = true;
-        yield return Dialogue.instance.text("What do you want\nto withdraw?", true);
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text("What do you want\nto withdraw?");
         currentMenu = itemwindow;
         UpdateBagScreen();
     }
@@ -550,7 +562,8 @@ public class PC : MonoBehaviour  {
         selectBag = -1;
         Dialogue.instance.Deactivate ();
         Dialogue.instance.fastText = true;
-        yield return Dialogue.instance.text("What do you want\nto deposit?", true);
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text("What do you want\nto deposit?");
         currentMenu = itemwindow;
         UpdateBagScreen();
 
@@ -561,7 +574,8 @@ public class PC : MonoBehaviour  {
         selectBag = -1;
         Dialogue.instance.Deactivate ();
         Dialogue.instance.fastText = true;
-        yield return Dialogue.instance.text("What do you want\nto toss?", true);
+        Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text("What do you want\nto toss?");
         currentMenu = itemwindow;
         UpdateBagScreen();
 

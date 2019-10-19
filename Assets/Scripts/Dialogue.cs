@@ -3,17 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-[System.Serializable]
-public class DialogueMessage {
-    public enum Type
-    {
-        Text,
-        Continue
-    }
-    public Type type;
-    public string message;
-    
-}
+
 public enum DialogueType
 {
 Text,
@@ -50,6 +40,8 @@ public class Dialogue : MonoBehaviour {
     public UnityEvent onFinishText;
     public DialogueType currentDialogueType;
 
+    public bool waitForButtonPress; //wait for button press before closing the textbox
+
     public FontAtlas fontAtlas;
     
     private void Awake()
@@ -77,7 +69,7 @@ public class Dialogue : MonoBehaviour {
         dialoguetext.gameObject.SetActive(true);
 		indicator.SetActive (false);
 
-	strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("//","\n").Replace("\n","\n\n");
+	strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("\\l","\n\n");
 		int i = 0;
 		 if(currentDialogueType != DialogueType.Done) str = "";
 else str = stringToReveal;
@@ -124,31 +116,6 @@ else str = stringToReveal;
 			}
 		}
 
-		if(currentDialogueType == DialogueType.Done){
-            indicator.SetActive(true);
-            while (!Inputs.pressed("a")) {
-				
-				yield return new WaitForSeconds (0.001f);
-                if (Inputs.pressed("a")) {
-                    SoundManager.instance.PlayABSound();
-					break;
-				}
-
-			}
-            Inputs.dialogueCheck = false;
-			
-            if (!keepTextOnScreen)
-            {
-                box.enabled = false;
-                dialoguetext.text = "";
-                dialoguetext.enabled = false;
-                dialoguetext.gameObject.SetActive(false);
-            }
-            keepTextOnScreen = false;
-            indicator.SetActive(false);
-			finishedText = true;
-			stringToReveal = "";
-		}
 
 		stringToReveal = str;
 		
@@ -248,44 +215,59 @@ public IEnumerator text(string text){
 			finishedText = false;
         currentDialogueType = DialogueType.Text;
 		stringToReveal = "";
-		yield return StartCoroutine(AnimateText (text));
-		yield return StartCoroutine(done());
-	}
-	public IEnumerator text(string text,bool keepText){
-			finishedText = false;
-        currentDialogueType = DialogueType.Text;
-		stringToReveal = "";
-		yield return StartCoroutine(AnimateText (text));
-        if(!keepText) yield return StartCoroutine(done());
-	}
-    public IEnumerator text(string text,bool keepText, bool needButtonPress){
-			finishedText = false;
-        currentDialogueType = DialogueType.Text;
-		stringToReveal = "";
-		yield return StartCoroutine(AnimateText (text));
-                keepTextOnScreen = keepText;
-		if(needButtonPress)yield return StartCoroutine(done());
-	}
-    
-	public IEnumerator cont(string text){
-	finishedText = false;
-        currentDialogueType = DialogueType.Continue;
-	stringToReveal = text;
-	yield return StartCoroutine(AnimateText(text));
-		yield return StartCoroutine(done());
-	}
-    public IEnumerator cont(string text, bool keepText)
-    {
-        finishedText = false;
-        currentDialogueType = DialogueType.Continue;
-        stringToReveal = text;
-        keepTextOnScreen = true;
-        yield return StartCoroutine(AnimateText(text));
+        string[] lines = text.Split('\n');
+        for(int i = 0; i < lines.Length; i++){
+            if(i == 0) currentDialogueType = DialogueType.Text;
+            else if(lines[i-1].Contains("\\c")){
+                stringToReveal = lines[i-1].Replace("\\c","").Replace("\\p","");
+                currentDialogueType = DialogueType.Continue;
+            }
+            else if(lines[i-1].Contains("\\p")) currentDialogueType = DialogueType.Text; //eventually change to para?
+		yield return StartCoroutine(AnimateText (lines[i].Replace("\\c","").Replace("\\p","")));
+            indicator.SetActive(true);
+        while (!Inputs.pressed("a")) {
+				
+				yield return new WaitForSeconds (0.001f);
+                if (Inputs.pressed("a")) {
+                    SoundManager.instance.PlayABSound();
+					break;
+				}
+
+			}
+        
+        }
         yield return StartCoroutine(done());
-    }
+       
+		
+	}
     public IEnumerator done(){
-        currentDialogueType = DialogueType.Done;
-		yield return StartCoroutine(AnimateText (stringToReveal));
+            indicator.SetActive(true);
+            if(waitForButtonPress){
+            while (!Inputs.pressed("a")) {
+				
+				yield return new WaitForSeconds (0.001f);
+                if (Inputs.pressed("a")) {
+                    SoundManager.instance.PlayABSound();
+					break;
+				}
+
+			}
+            }
+            Inputs.dialogueCheck = false;
+			
+            if (!keepTextOnScreen)
+            {
+                box.enabled = false;
+                dialoguetext.text = "";
+                dialoguetext.enabled = false;
+                dialoguetext.gameObject.SetActive(false);
+            }
+            keepTextOnScreen = false;
+            waitForButtonPress = false;
+            indicator.SetActive(false);
+			finishedText = true;
+			stringToReveal = "";
+		
 
 	}
 	public IEnumerator prompt(){

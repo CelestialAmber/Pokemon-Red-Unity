@@ -125,7 +125,7 @@ public class CustomText : MaskableGraphic
             }
             else if(text[i] == '<'){ //is the current character a left bracket?
                 foreach(BracketChar bracketChar in fontAtlas.bracketChars){
-                    if(text.Substring(i).IndexOf("<" + bracketChar.name + ">") == 0){ //is the current bracket expression detected the current entry?
+                    if(text.Substring(i).IndexOf("<" + bracketChar.name + ">") == 0){ //did we find a bracket expression?
                         currentline.characters.Add(fontAtlas.fontChars[bracketChar.index]);
                         i += bracketChar.name.Length + 1;
                         break;

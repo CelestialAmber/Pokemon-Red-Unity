@@ -174,29 +174,24 @@ public class BeginHandler : MonoBehaviour {
 		play.menuActive = true;
 		Dialogue.instance.deactivated = true;
 		currentmenu = null;
-		yield return Dialogue.instance.text ("Hello there!\nWelcome to the");
-		yield return Dialogue.instance.cont ("world of POKéMON!");
-		yield return Dialogue.instance.text ("My name is OAK!\nPeople call me");
-		yield return Dialogue.instance.cont ("the POKéMON PROF!");
+		yield return Dialogue.instance.text ("Hello there!\\lWelcome to the\\c\nworld of #MON!");
+		yield return Dialogue.instance.text ("My name is OAK!\\lPeople call me\\c\nthe #MON PROF!");
        tutanim.SetTrigger("transition");
 
     }
 	public IEnumerator SecondOakDialogue(){
-		yield return Dialogue.instance.text ("This world is\ninhabited by");
-		yield return Dialogue.instance.cont ("creatures called");
-		yield return Dialogue.instance.cont ("POKéMON!",true);
+        Dialogue.instance.keepTextOnScreen = true;
+		yield return Dialogue.instance.text ("This world is\\linhabited by\\c\ncreatures called\\c\n#MON!");
         yield return SoundManager.instance.PlayCryCoroutine(29);
-		yield return Dialogue.instance.text("For some people,\nPOKéMON are");
-		yield return Dialogue.instance.cont ("pets. Others use");
-		yield return Dialogue.instance.cont ("them for fights.");
+		yield return Dialogue.instance.text("For some people,\\l#MON are\\c\npets. Others use\\c\nthem for fights.");
 		yield return Dialogue.instance.text("Myself...");
-		yield return Dialogue.instance.text ("I study POKéMON\nas a profession.");
+		yield return Dialogue.instance.text ("I study #MON\\las a profession.");
         tutanim.SetTrigger("transition");
 
     }
 	public IEnumerator ThirdOakDialogue(){
 		
-		yield return Dialogue.instance.text ("First, what is\nyour name?");
+		yield return Dialogue.instance.text ("First, what is\\lyour name?");
         tutanim.SetTrigger("transition");
         Dialogue.instance.enabled = false;
         while(!tutanim.GetCurrentAnimatorStateInfo(0).IsName("moveredright")) yield return new WaitForEndOfFrame();
@@ -207,16 +202,14 @@ public class BeginHandler : MonoBehaviour {
 }
 	public IEnumerator FourthOakDialogue(){
 
-		yield return Dialogue.instance.text ("Right! So your\nname is " + GameData.instance.playerName + "!");
+		yield return Dialogue.instance.text ("Right! So your\\lname is " + GameData.instance.playerName + "!");
         tutanim.SetTrigger("transition");
 
     }
 	public IEnumerator FifthOakDialogue(){
 
-		yield return Dialogue.instance.text ("This is my grand-\nson. He's been");
-		yield return Dialogue.instance.cont ("your rival since");
-		yield return Dialogue.instance.cont ("you were a baby.");
-		yield return Dialogue.instance.text ("...Erm, what is\nhis name again?");
+		yield return Dialogue.instance.text ("This is my grand-\\lson. He's been\\c\nyour rival since\\c\nyou were a baby.");
+		yield return Dialogue.instance.text ("...Erm, what is\\lhis name again?");
         tutanim.SetTrigger("transition");
         Dialogue.instance.enabled = false;
         while(!tutanim.GetCurrentAnimatorStateInfo(0).IsName("movegaryright")) yield return new WaitForEndOfFrame();
@@ -227,18 +220,14 @@ public class BeginHandler : MonoBehaviour {
 	}
 	public IEnumerator SixthOakDialogue(){
 
-		yield return Dialogue.instance.text ("That's right! I\nremember now! His");
-        yield return Dialogue.instance.cont ("name is " + GameData.instance.rivalName + "!");
+		yield return Dialogue.instance.text ("That's right! I\\lremember now! His\\c\nname is " + GameData.instance.rivalName + "!");
         tutanim.SetTrigger("transition");
     }
 	public IEnumerator SeventhOakDialogue(){
 
         yield return Dialogue.instance.text (GameData.instance.playerName + "!");
-		yield return Dialogue.instance.text ("Your very own\nPOKéMON legend is");
-		yield return Dialogue.instance.cont("about to unfold!");
-        yield return Dialogue.instance.text("A world of dreams\nand adventures");
-		yield return Dialogue.instance.cont ("with POKéMON");
-		yield return Dialogue.instance.cont ("awaits! Let's go!");
+		yield return Dialogue.instance.text ("Your very own\\l#MON legend is\\c\nabout to unfold!");
+        yield return Dialogue.instance.text("A world of dreams\\land adventures\\c\nwith #MON\\c\nawaits! Let's go!");
         SoundManager.instance.FadeSong();
         tutanim.SetTrigger("transition");
     }

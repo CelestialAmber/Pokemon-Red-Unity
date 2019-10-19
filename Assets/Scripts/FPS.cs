@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
+using TMPro;
 public class FPS : MonoBehaviour
 {
-    public Text fpstext;
+    public TextMeshProUGUI fpsText;
     float deltaTime = 0.0f;
     void Update()
     {
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
  int fps = Mathf.RoundToInt(1.0f / deltaTime);
-        fpstext.text =  fps  + " FPS";
+        fpsText.text =  fps  + " FPS";
 
     }
 }

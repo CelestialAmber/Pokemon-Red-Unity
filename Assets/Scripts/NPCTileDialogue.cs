@@ -7,18 +7,21 @@ public class NPCTileDialogue : MonoBehaviour
     public DialogueMessage[] dialogueArray;
     public IEnumerator PlayDialogue(DialogueMessage[] dialogueArray) 
     {
-        foreach (DialogueMessage dialogueMessage in dialogueArray)
-        {
-
-                if (dialogueMessage.type == DialogueMessage.Type.Continue)
-                {
-                    yield return Dialogue.instance.cont(dialogueMessage.message);
-                }
-                else
-                {
-                    yield return Dialogue.instance.text(dialogueMessage.message);
-                }
+        for(int i = 0; i < dialogueArray.Length; i++){
             
+            if(dialogueArray[i].type == DialogueMessage.Type.Text){
+                if(dialogueArray[i].keepTextOnScreen)Dialogue.instance.keepTextOnScreen = true;
+                yield return Dialogue.instance.text(dialogueArray[i].message);
+        
+            }
+            else{
+                yield return Dialogue.instance.prompt();
+                i = dialogueArray[i].responseIndices[Dialogue.instance.selectedOption] - 1;
+                continue; 
+            }
+            if(dialogueArray[i].endDialogue){
+                break;
+            }
         }
     }
 }

@@ -170,7 +170,8 @@ public class Slots : MonoBehaviour {
 				canroll = true;
             SoundManager.instance.sfx.PlayOneShot(startSlotsSound);
                 slotPointsAnimator.SetBool("toggleStatus", true);
-                StartCoroutine(Dialogue.instance.text ("Start!",true));
+				Dialogue.instance.keepTextOnScreen = true;
+                StartCoroutine(Dialogue.instance.text ("Start!"));
             slotPointsAnimator.SetFloat("betAmount", (float)amount);
 			inputTimer = 20;
 			
@@ -197,7 +198,8 @@ public class Slots : MonoBehaviour {
 		canroll = false;
         slotPointsAnimator.SetBool("toggleStatus",false);
 		Dialogue.instance.fastText = true;
-        yield return Dialogue.instance.text ("Bet how many\ncoins?",true);
+		Dialogue.instance.keepTextOnScreen = true;
+        yield return Dialogue.instance.text ("Bet how many\ncoins?");
 		Dialogue.instance.fastText = false;
 		StartCoroutine(DecideBet ());
 
@@ -401,7 +403,8 @@ public class Slots : MonoBehaviour {
 				}
                 if (whatwaslinedup == "7")
                 {
-                    yield return Dialogue.instance.text("Yeah!", true);
+					Dialogue.instance.keepTextOnScreen = true;
+                    yield return Dialogue.instance.text("Yeah!");
                     StartCoroutine(SlotsFlash(8));
                     yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(1));
                 }else StartCoroutine(SlotsFlash(1));
@@ -410,8 +413,9 @@ public class Slots : MonoBehaviour {
                 if (whatwaslinedup == "7" || whatwaslinedup == "BAR") timeToWait = 0.016f * 3f;
                 else timeToWait = 0.016f * 8f;
                 whatwaslinedup = "<" + (whatwaslinedup == "7" ? "SEVEN" : whatwaslinedup) + ">";
-               
-                yield return Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + " coins!",true,true);
+				Dialogue.instance.keepTextOnScreen = true;
+				Dialogue.instance.waitForButtonPress = true;
+                yield return Dialogue.instance.text(whatwaslinedup + " lined up!\nScored " + payout + " coins!");
 
                 int payoutamount = payout;
                 
@@ -439,13 +443,14 @@ public class Slots : MonoBehaviour {
 				}
 
 			}
-			
-		yield return Dialogue.instance.text ("One more go?",true);
+			Dialogue.instance.keepTextOnScreen = true;
+		yield return Dialogue.instance.text ("One more go?");
         yield return StartCoroutine(Dialogue.instance.prompt ());
 			if (Dialogue.instance.selectedOption == 0) {
 				canroll = false;
             slotPointsAnimator.SetBool("toggleStatus",false);
-			yield return Dialogue.instance.text ("Bet how many\ncoins?",true);
+			Dialogue.instance.keepTextOnScreen = true;
+			yield return Dialogue.instance.text ("Bet how many\ncoins?");
 				StartCoroutine(DecideBet ());
 
 
