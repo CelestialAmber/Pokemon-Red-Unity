@@ -171,6 +171,7 @@ public class Slots : MonoBehaviour {
             SoundManager.instance.sfx.PlayOneShot(startSlotsSound);
                 slotPointsAnimator.SetBool("toggleStatus", true);
 				Dialogue.instance.keepTextOnScreen = true;
+				Dialogue.instance.needButtonPress = false;
                 StartCoroutine(Dialogue.instance.text ("Start!"));
             slotPointsAnimator.SetFloat("betAmount", (float)amount);
 			inputTimer = 20;
@@ -268,7 +269,7 @@ public class Slots : MonoBehaviour {
                     row3Index--;
                     if (row3Index < 0) row3Index = 14;
                 }
-				row1.transform.localPosition = new Vector3 (row1.transform.localPosition.x, -152 + row1Index * 16 - row1Half * 8, 0);
+				row1.transform.localPosition = new Vector3(row1.transform.localPosition.x, -152 + row1Index * 16 - row1Half * 8, 0);
 				row2.transform.localPosition = new Vector3(row2.transform.localPosition.x, -152 + row2Index * 16 - row2Half * 8, 0);
                 row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
 			

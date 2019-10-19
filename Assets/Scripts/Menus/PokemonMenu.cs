@@ -278,6 +278,7 @@ public class PokemonMenu : MonoBehaviour
        Dialogue.instance.Deactivate();
        Dialogue.instance.fastText = true;
        Dialogue.instance.keepTextOnScreen = true;
+       Dialogue.instance.needButtonPress = false;
         StartCoroutine(Dialogue.instance.text("Choose a POKéMON."));
         Dialogue.instance.finishedText = true;
     }
@@ -647,6 +648,7 @@ public class PokemonMenu : MonoBehaviour
                    Dialogue.instance.Deactivate();
                    Dialogue.instance.fastText = true;
                    Dialogue.instance.keepTextOnScreen = true;
+                   Dialogue.instance.needButtonPress = false;
                     StartCoroutine(Dialogue.instance.text("Choose a POKéMON."));
                     Dialogue.instance.finishedText = true;
                     selectedOption = selectedMon;
@@ -705,6 +707,7 @@ currentMenu = mainwindow;
 UpdateMainMenu();
 Dialogue.instance.fastText = true;
 Dialogue.instance.keepTextOnScreen = true;
+Dialogue.instance.needButtonPress = false;
 StartCoroutine(Dialogue.instance.text("Use item on which\\l#MON?"));
 while(selectingPokemon){
    

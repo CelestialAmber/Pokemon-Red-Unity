@@ -28765,6 +28765,7 @@ MonoBehaviour:
       m_Calls: []
   currentDialogueType: 0
   waitForButtonPress: 0
+  needButtonPress: 1
   fontAtlas: {fileID: 11400000, guid: 6430ed7b9c95c0046a5e6a93065ae9cb, type: 2}
 --- !u!1 &1415548249
 GameObject:

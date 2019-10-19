@@ -219,7 +219,8 @@ playerpokeballs.SetActive(true);
 		playermon = GameData.instance.party[0];
 		enemymon = enemyMons[0];
 		Dialogue.instance.keepTextOnScreen = true;
-			yield return Dialogue.instance.text ("Go! " + playermon.nickname + "!");
+		Dialogue.instance.needButtonPress = false;
+		yield return Dialogue.instance.text ("Go! " + playermon.nickname + "!");
 	while(initialTimer < 0.6f){
 		initialTimer += Time.deltaTime;
 	playerObject.transform.localPosition = Vector3.Lerp(new Vector3(38,76,0),new Vector3(-26,76,0),initialTimer/0.6f);

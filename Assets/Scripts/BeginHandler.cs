@@ -184,7 +184,7 @@ public class BeginHandler : MonoBehaviour {
 	public IEnumerator SecondOakDialogue(){
         Dialogue.instance.keepTextOnScreen = true;
 		yield return Dialogue.instance.text ("This world is\\linhabited by\\c\ncreatures called\\c\n#MON!");
-        yield return SoundManager.instance.PlayCryCoroutine(29);
+        yield return SoundManager.instance.PlayCryCoroutine(29); //This was meant to play Nidorino's cry, but it instead plays Nidorina's cry
 		yield return Dialogue.instance.text("For some people,\\l#MON are\\c\npets. Others use\\c\nthem for fights.");
 		yield return Dialogue.instance.text("Myself...");
 		yield return Dialogue.instance.text ("I study #MON\\las a profession.");

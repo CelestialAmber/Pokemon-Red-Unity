@@ -42,6 +42,8 @@ public class Dialogue : MonoBehaviour {
 
     public bool waitForButtonPress; //wait for button press before closing the textbox
 
+    public bool needButtonPress = true;
+
     public FontAtlas fontAtlas;
     
     private void Awake()
@@ -192,11 +194,6 @@ else str = stringToReveal;
                 }
                
 				}
-				
-			
-
-			
-
 			} 
 		 
 		if (GameData.instance.textChoice == 2) {
@@ -212,7 +209,7 @@ else str = stringToReveal;
 
 
 public IEnumerator text(string text){
-			finishedText = false;
+		finishedText = false;
         currentDialogueType = DialogueType.Text;
 		stringToReveal = "";
         string[] lines = text.Split('\n');
@@ -225,6 +222,7 @@ public IEnumerator text(string text){
             else if(lines[i-1].Contains("\\p")) currentDialogueType = DialogueType.Text; //eventually change to para?
 		yield return StartCoroutine(AnimateText (lines[i].Replace("\\c","").Replace("\\p","")));
             indicator.SetActive(true);
+        if(needButtonPress) {
         while (!Inputs.pressed("a")) {
 				
 				yield return new WaitForSeconds (0.001f);
@@ -235,6 +233,7 @@ public IEnumerator text(string text){
 
 			}
         
+        }
         }
         yield return StartCoroutine(done());
        
@@ -264,6 +263,7 @@ public IEnumerator text(string text){
             }
             keepTextOnScreen = false;
             waitForButtonPress = false;
+            needButtonPress = true;
             indicator.SetActive(false);
 			finishedText = true;
 			stringToReveal = "";

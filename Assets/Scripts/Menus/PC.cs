@@ -257,6 +257,7 @@ public class PC : MonoBehaviour  {
                                 switching = false;
                                 selectCursor.gameObject.SetActive(false);
                                 Dialogue.instance.keepTextOnScreen = true;
+                                Dialogue.instance.needButtonPress = false;
                     yield return Dialogue.instance.text("What do you want\\lto do?");
                                 currentMenu = mainwindow;
                     UpdateMainScreen();
@@ -269,6 +270,7 @@ public class PC : MonoBehaviour  {
                                     Dialogue.instance.Deactivate();
                                     Dialogue.instance.fastText = true;
                                     Dialogue.instance.keepTextOnScreen = true;
+                                    Dialogue.instance.needButtonPress = false;
                                     yield return Dialogue.instance.text("How much?");
                         currentMenu = quantitymenu;
                                     UpdateQuantityScreen();
@@ -287,6 +289,7 @@ public class PC : MonoBehaviour  {
                                     Dialogue.instance.Deactivate();
                                     Dialogue.instance.fastText = true;
                                     Dialogue.instance.keepTextOnScreen = true;
+                                    Dialogue.instance.needButtonPress = false;
                         yield return Dialogue.instance.text("How much?");
                                     currentMenu = quantitymenu;
                         UpdateQuantityScreen();
@@ -567,6 +570,7 @@ public class PC : MonoBehaviour  {
         Dialogue.instance.Deactivate ();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
+        Dialogue.instance.needButtonPress = false;
         yield return Dialogue.instance.text ("What do you want\\lto do?");
 
     }
@@ -574,6 +578,7 @@ public class PC : MonoBehaviour  {
         Dialogue.instance.Deactivate ();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
+        Dialogue.instance.needButtonPress = false;
         yield return Dialogue.instance.text ("What do you want\\lto withdraw?");
 
     }
@@ -581,6 +586,7 @@ public class PC : MonoBehaviour  {
         Dialogue.instance.Deactivate ();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
+        Dialogue.instance.needButtonPress = false;
         yield return Dialogue.instance.text ("What do you want\\lto deposit");
 
     }
@@ -588,6 +594,7 @@ public class PC : MonoBehaviour  {
         Dialogue.instance.Deactivate ();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
+        Dialogue.instance.needButtonPress = false;
         yield return Dialogue.instance.text ("What do you want\\lto toss?");
 
     }
