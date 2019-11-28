@@ -17,7 +17,10 @@ Map Images-
 
 Overworld: http://vgmaps.com/Atlas/GB-GBC/Pokemon-Red,Green(J)&BlueVersions-Kanto.png
 
-Interior: https://github.com/huderlem/RBMap
+Interior: 
+
+https://github.com/huderlem/RBMap
+https://github.com/Rangi42/polished-map
 
 Music-
 https://www.zophar.net/music/gameboy-gbs/pokemon-red
