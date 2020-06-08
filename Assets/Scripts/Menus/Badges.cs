@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Badges : MonoBehaviour {
 	public Image[] allbadges = new Image[8];
 	public Sprite[] notobtainedimages = new Sprite[8];

@@ -22,7 +22,6 @@ public class NameSelection : MonoBehaviour {
 	{"*","(",")",":",";","[","]","<PK>","<MN>"},
 	{"-","?","!","♂","♀","/",".",",",""}
 	};
-	// Use this for initialization
 
 	// Update is called once per frame
 	void Update () {
@@ -32,14 +31,13 @@ public class NameSelection : MonoBehaviour {
 			nameselectscreen.sprite = uppercase;
 		}
 		displaytext.text = futureName;
-		if (BeginHandler.instance.givingRedAName || BeginHandler.instance.givingGaryAName) {
+		if (OakIntroCutsceneHandler.instance.givingRedAName || OakIntroCutsceneHandler.instance.givingGaryAName) {
 			maxNameSize = 7;
 		} else {
 			maxNameSize = 10;
 		}
 		if (currentYselection == 5) {
 			currentXselection = 0;
-
 		}
 
 		cursor.SetPosition(8 + 16 * currentXselection, 96 - 16 * currentYselection);
@@ -70,22 +68,22 @@ public class NameSelection : MonoBehaviour {
         if (Inputs.pressed("start")) {
 
 			if (futureName.Length != 0) {
-				if (BeginHandler.instance.givingRedAName) {
+				if (OakIntroCutsceneHandler.instance.givingRedAName) {
 					GameData.instance.playerName = futureName;
-                    BeginHandler.instance.tutanim.SetTrigger("transition");
+                    OakIntroCutsceneHandler.instance.tutanim.SetTrigger("transition");
                     Dialogue.instance.enabled = true;
-                    BeginHandler.instance.givingRedAName = false;
+                    OakIntroCutsceneHandler.instance.givingRedAName = false;
 					this.gameObject.SetActive (false);
 				}
-				if (BeginHandler.instance.givingGaryAName) {
+				if (OakIntroCutsceneHandler.instance.givingGaryAName) {
                     GameData.instance.rivalName = futureName;
-                    BeginHandler.instance.tutanim.SetTrigger("transition");
+                    OakIntroCutsceneHandler.instance.tutanim.SetTrigger("transition");
                     Dialogue.instance.enabled = true;
-                    BeginHandler.instance.givingGaryAName = false;
+                    OakIntroCutsceneHandler.instance.givingGaryAName = false;
 					this.gameObject.SetActive (false);
 				}
 
-                BeginHandler.instance.currentmenu = null;
+                OakIntroCutsceneHandler.instance.currentmenu = null;
 			}
 
 
@@ -95,42 +93,34 @@ public class NameSelection : MonoBehaviour {
             {
                 if (futureName.Length != 0)
                 {
-                    if (BeginHandler.instance.givingRedAName)
+                    if (OakIntroCutsceneHandler.instance.givingRedAName)
                     {
                         GameData.instance.playerName = futureName;
-                        BeginHandler.instance.tutanim.SetTrigger("transition");
+                        OakIntroCutsceneHandler.instance.tutanim.SetTrigger("transition");
                         Dialogue.instance.enabled = true;
-                        BeginHandler.instance.givingRedAName = false;
+                        OakIntroCutsceneHandler.instance.givingRedAName = false;
 						cursor.SetActive(false);
                         this.gameObject.SetActive(false);
                     }
-                    if (BeginHandler.instance.givingGaryAName)
+                    if (OakIntroCutsceneHandler.instance.givingGaryAName)
                     {
                         GameData.instance.rivalName = futureName;
-                        BeginHandler.instance.tutanim.SetTrigger("transition");
+                        OakIntroCutsceneHandler.instance.tutanim.SetTrigger("transition");
                         Dialogue.instance.enabled = true;
-                        BeginHandler.instance.givingGaryAName = false;
+                        OakIntroCutsceneHandler.instance.givingGaryAName = false;
 						cursor.SetActive(false);
                         this.gameObject.SetActive(false);
                     }
 
-                    BeginHandler.instance.currentmenu = null;
+                    OakIntroCutsceneHandler.instance.currentmenu = null;
                 }
             }
-			else{
-            
-				
-				if (currentXselection == 0 && currentYselection == 5) {
-					isLowerCase = !isLowerCase;
-				}else if (futureName.Length == maxNameSize) return;
+			else{			
+				if (currentXselection == 0 && currentYselection == 5){
+					isLowerCase = !isLowerCase; //Toggle lower/upper case if the player selects the case toggle option
+				} else if (futureName.Length == maxNameSize) return;
 				else futureName += currentYselection < 3 && isLowerCase ? characters[currentYselection,currentXselection].ToLower() : characters[currentYselection,currentXselection];
-
 			}
-				
-				
-
-			
-
 		}
 	}
 }

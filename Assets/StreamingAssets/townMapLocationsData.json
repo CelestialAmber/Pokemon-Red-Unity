@@ -1,0 +1,237 @@
+[
+    {
+        "name":"PALLET TOWN",
+        "xPos":2,
+        "yPos":11
+    },
+    {
+        "name":"ROUTE 1",
+        "xPos":2,
+        "yPos":10
+    },
+    {
+        "name":"VIRIDIAN CITY",
+        "xPos":2,
+        "yPos":8
+    },
+    {
+        "name":"ROUTE 2",
+        "xPos":2,
+        "yPos":6
+    },
+    {
+        "name":"VIRIDIAN FOREST",
+        "xPos":2,
+        "yPos":4
+    },
+    {
+        "name":"DIGLETT's CAVE",
+        "xPos":3,
+        "yPos":4
+    },
+    {
+        "name":"PEWTER CITY",
+        "xPos":2,
+        "yPos":3
+    },
+    {
+        "name":"ROUTE 3",
+        "xPos":4,
+        "yPos":3
+    },
+    {
+        "name":"MT.MOON",
+        "xPos":6,
+        "yPos":2
+    },
+    {
+        "name":"ROUTE 4",
+        "xPos":8,
+        "yPos":2
+    },
+    {
+        "name":"CERULEAN CITY",
+        "xPos":10,
+        "yPos":2
+    },
+    {
+        "name":"ROUTE 24",
+        "xPos":10,
+        "yPos":1
+    },
+    {
+        "name":"ROUTE 25",
+        "xPos":11,
+        "yPos":0
+    },
+    {
+        "name":"SEA COTTAGE",
+        "xPos":12,
+        "yPos":0
+    },
+    {
+        "name":"ROUTE 5",
+        "xPos":10,
+        "yPos":3
+    },
+    {
+        "name":"ROUTE 6",
+        "xPos":10,
+        "yPos":8
+    },
+    {
+        "name":"VERMILLION CITY",
+        "xPos":10,
+        "yPos":9
+    },
+    {
+        "name":"S.S.ANNE",
+        "xPos":9,
+        "yPos":10
+    },
+    {
+        "name":"ROUTE 9",
+        "xPos":13,
+        "yPos":2
+    },
+    {
+        "name":"ROCK TUNNEL",
+        "xPos":14,
+        "yPos":3
+    },
+    {
+        "name":"ROUTE 10",
+        "xPos":14,
+        "yPos":4
+    },
+    {
+        "name":"LAVENDER TOWN",
+        "xPos":14,
+        "yPos":5
+    },
+    {
+        "name":"#MON TOWER",
+        "xPos":15,
+        "yPos":5
+    },
+    {
+        "name":"ROUTE 8",
+        "xPos":13,
+        "yPos":5
+    },
+    {
+        "name":"ROUTE 7",
+        "xPos":8,
+        "yPos":5
+    },
+    {
+        "name":"CELADON CITY",
+        "xPos":7,
+        "yPos":5
+    },
+    {
+        "name":"SAFFRON CITY",
+        "xPos":10,
+        "yPos":5
+    },
+    {
+        "name":"ROUTE 11",
+        "xPos":12,
+        "yPos":9
+    },
+    {
+        "name":"ROUTE 12",
+        "xPos":14,
+        "yPos":9
+    },
+    {
+        "name":"ROUTE 13",
+        "xPos":13,
+        "yPos":11
+    },
+    {
+        "name":"ROUTE 14",
+        "xPos":11,
+        "yPos":12
+    },
+    {
+        "name":"ROUTE 15",
+        "xPos":10,
+        "yPos":13
+    },
+    {
+        "name":"ROUTE 16",
+        "xPos":5,
+        "yPos":5
+    },
+    {
+        "name":"ROUTE 17",
+        "xPos":4,
+        "yPos":8
+    },
+    {
+        "name":"ROUTE 18",
+        "xPos":6,
+        "yPos":13
+    },
+    {
+        "name":"FUCHSIA CITY",
+        "xPos":8,
+        "yPos":13
+    },
+    {
+        "name":"SAFARI ZONE",
+        "xPos":8,
+        "yPos":12
+    },
+    {
+        "name":"SEA ROUTE 19",
+        "xPos":6,
+        "yPos":15
+    },
+    {
+        "name":"SEAFOAM ISLANDS",
+        "xPos":5,
+        "yPos":15
+    },
+    {
+        "name":"SEA ROUTE 20",
+        "xPos":4,
+        "yPos":15
+    },
+    {
+        "name":"CINNABAR ISLAND",
+        "xPos":2,
+        "yPos":15
+    },
+    {
+        "name":"SEA ROUTE 21",
+        "xPos":2,
+        "yPos":13
+    },
+    {
+        "name":"ROUTE 22",
+        "xPos":0,
+        "yPos":8
+    },
+    {
+        "name":"ROUTE 23",
+        "xPos":0,
+        "yPos":6
+    },
+    {
+        "name":"VICTORY ROAD",
+        "xPos":0,
+        "yPos":4
+    },
+    {
+        "name":"INDIGO PLATEAU",
+        "xPos":0,
+        "yPos":2
+    },
+    {
+        "name":"POWER PLANT",
+        "xPos":15,
+        "yPos":4
+    }
+    ]

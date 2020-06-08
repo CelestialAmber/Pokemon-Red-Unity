@@ -115,29 +115,30 @@ public class Title : MonoBehaviour {
 
 			}
         }
-			if (Inputs.pressed("a")) {
-			
-			if (currentMenu == nodatamenu && selectedOption == 0) {
-				tutorialmanager.SetActive (true);
-                BeginHandler.instance.Init();
-                SoundManager.instance.PlaySong(15);
-				startmenu.SetActive (false);
-				this.gameObject.SetActive (false);
-
+		
+        if (Inputs.pressed("a")) {
+			if (currentMenu == nodatamenu) {
+                if(selectedOption == 0){
+			        tutorialmanager.SetActive (true);
+                    OakIntroCutsceneHandler.instance.Init();
+                    SoundManager.instance.PlaySong(15);
+			        startmenu.SetActive (false);
+			        this.gameObject.SetActive (false);
+                }
+                else if(selectedOption == 1){
+                    Options.instance.Init();
+			        options.SetActive (true);
+			        currentMenu = options;
+                }
 			}
-			if (currentMenu == nodatamenu && selectedOption == 	1) {
-                Options.instance.Init();
-				options.SetActive (true);
-				currentMenu = options;
 
-			}
-			if (currentMenu == datamenu && selectedOption == 	2) {
+			if (currentMenu == datamenu && selectedOption == 2) {
                 Options.instance.Init();
                 options.SetActive (true);
 				currentMenu = options;
+			}
+		}
 
-			}
-			}
 		if (Inputs.pressed("b") && startmenu.activeInHierarchy) {
 			if ((currentMenu == nodatamenu || currentMenu == datamenu)) {
 				startmenu.SetActive (false);
@@ -165,18 +166,14 @@ public class Title : MonoBehaviour {
 
 					menu.SetActive (true);
 				}
-
-
 			}
+
             if (!switchingPokemon && !inStartMenu) titleAnimTimer += Time.deltaTime;
             if (titleAnimTimer >= 3.33f)
             {
                 TitleAnim();
                 titleAnimTimer = 0;
             }
-        
-
-
     }
 	public IEnumerator GotoStart(){
         inStartMenu = true;

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Slots : MonoBehaviour {
 	public string CurrentMode;
-	public bool canstopthereels;
+	public bool canStopTheReels;
 	private GameObject row1, row2, row3;
 	public bool rolledone, rolledtwo, rolledthree, canroll;
 	private string above1, middle1, below1, above2, middle2, below2, above3, middle3, below3;
@@ -114,7 +114,7 @@ public class Slots : MonoBehaviour {
     IEnumerator DecideBet(){
 		int RandomNumber;
 		int ModeNumber;
-		yield return StartCoroutine(Dialogue.instance.slots ());
+		yield return StartCoroutine(Dialogue.instance.slots());
         if (Dialogue.instance.selectedOption == 3)
         {
             Exit();
@@ -126,31 +126,25 @@ public class Slots : MonoBehaviour {
 		
 				if (GameData.instance.coins < amount) {
                     yield return Dialogue.instance.text("Not enough\\lcoins!");
-                    StartCoroutine (DecideBet ());
+                    StartCoroutine (DecideBet());
 					yield break;
 
 				}
 				RandomNumber = Random.Range (0, 256);
 				if (RandomNumber <= 1) {
-
 					CurrentMode = "SUPER";
 				}
 				if (RandomNumber <= 54 && RandomNumber > 1) {
-
 					CurrentMode = "GOOD";
 				}
 				if (RandomNumber > 54) {
-
 					CurrentMode = "BAD";
-
 				}
 				ModeNumber = Random.Range (0, 256);
 				if (ModeNumber < 1) {
-
 					GuaranteedModeGood = 60;
 				}
 				if (GuaranteedModeGood != 0) {
-
 					CurrentMode = "GOOD";
 				}
 				if (stayingInModeSuper) {
@@ -159,14 +153,14 @@ public class Slots : MonoBehaviour {
 				if (CurrentMode == "SUPER") {
 					stayingInModeSuper = true;
 				}
-				print ("Betting " + amount + " coin(s)");
+				Debug.Log("Betting " + amount + " coin(s)");
 				betamount = amount;
 				GameData.instance.coins -= amount;
-				UpdateCredit ();
+				UpdateCredit();
 				rolledone = false;
 				rolledtwo = false;
 				rolledthree = false;
-				canstopthereels = true;
+				canStopTheReels = true;
 				canroll = true;
             SoundManager.instance.sfx.PlayOneShot(startSlotsSound);
                 slotPointsAnimator.SetBool("toggleStatus", true);
@@ -174,25 +168,25 @@ public class Slots : MonoBehaviour {
 				Dialogue.instance.needButtonPress = false;
                 StartCoroutine(Dialogue.instance.text ("Start!"));
             slotPointsAnimator.SetFloat("betAmount", (float)amount);
-			inputTimer = 20;
-			
+			inputTimer = 20;	
 		}
-
-
 	}
+
 	void UpdateCredit(){
-		if (GameData.instance.coins > 9999) {
+		if (GameData.instance.coins > 9999){
 			GameData.instance.coins = 9999;
 		}
         credittext.text = (GameData.instance.coins > 999 ? "" : GameData.instance.coins > 99 ? "0" : GameData.instance.coins > 9 ? "00" : "000" ) + GameData.instance.coins.ToString();
 	}
+
 	void UpdatePayout(){
         payouttext.text = (payout > 999 ? "" : payout > 99 ? "0" : payout > 9 ? "00" : "000") + payout.ToString();
 	}
-	public IEnumerator Initialize () {
+
+	public IEnumerator Initialize(){
 		GuaranteedModeGood = 0;
-		UpdateCredit ();
-		UpdatePayout ();
+		UpdateCredit();
+		UpdatePayout();
         row1Index = 0;
         row2Index = 0;
         row3Index = 0;
@@ -202,7 +196,7 @@ public class Slots : MonoBehaviour {
 		Dialogue.instance.keepTextOnScreen = true;
         yield return Dialogue.instance.text ("Bet how many\\lcoins?");
 		Dialogue.instance.fastText = false;
-		StartCoroutine(DecideBet ());
+		StartCoroutine(DecideBet());
 
 
 	}
@@ -214,24 +208,25 @@ public class Slots : MonoBehaviour {
 		rolledthree = false;
 		canroll = false;
 		handlingInput = false;
-		Dialogue.instance.Deactivate ();
-		this.gameObject.SetActive (false);
+		Dialogue.instance.Deactivate();
+		this.gameObject.SetActive(false);
 
 
 			}
 	
 	// Update is called once per frame
-	void Update () {
-		if(inputTimer == 0 && !handlingInput) StartCoroutine(HandleInput ());
+	void Update() {
+		if(inputTimer == 0 && !handlingInput) StartCoroutine(HandleInput());
 		frames++;
 		if (frames % (inputTimer > 0 ? 2 : 3) == 0) {
-			if(canstopthereels)UpdatePositions (true);
+			if(canStopTheReels) UpdatePositions(true);
 			if(inputTimer > 0) inputTimer--;
 			frames = 0;
 		}
 		
 		
 	}
+
 	int inputTimer; //counter disabling inputs until it reaches 0
 
 	void UpdatePositions(bool addHalf){
@@ -273,10 +268,11 @@ public class Slots : MonoBehaviour {
 				row2.transform.localPosition = new Vector3(row2.transform.localPosition.x, -152 + row2Index * 16 - row2Half * 8, 0);
                 row3.transform.localPosition = new Vector3(row3.transform.localPosition.x, -152 + row3Index * 16 - row3Half * 8, 0);
 			
-				CheckPositions ();
+				CheckPositions();
 		}
 	
 	}
+
     IEnumerator SlotsFlash(int times)
     {
         WaitForSeconds wait = new WaitForSeconds(0.016f * 5f);
@@ -316,8 +312,8 @@ public class Slots : MonoBehaviour {
 				}
 			}
 			return result;
-
 	}
+
 	IEnumerator RollWheelDownOne(int whatWheel){
 		WaitForSeconds wait = new WaitForSeconds(1f/60f);
 		for(int i = 0; i < 2; i++){
@@ -338,8 +334,9 @@ public class Slots : MonoBehaviour {
 		}
 		CheckPositions();
 	}
+
 	IEnumerator LinedUp(){
-		canstopthereels = false;
+		canStopTheReels = false;
 
 		string whatwaslinedup;
 		whatwaslinedup = FindMatch();
@@ -349,7 +346,6 @@ public class Slots : MonoBehaviour {
 			yield return RollWheelDownOne(3);
 			whatwaslinedup = FindMatch();
 			if(whatwaslinedup != "") break;
-
 			}
 		}
 
@@ -426,8 +422,8 @@ public class Slots : MonoBehaviour {
 					payout--;
                     SoundManager.instance.sfx.PlayOneShot(payoutSound);
 					GameData.instance.coins++;
-					UpdateCredit ();
-					UpdatePayout ();
+					UpdateCredit();
+					UpdatePayout();
                     yield return new WaitForSeconds(timeToWait);
 
 
@@ -439,28 +435,25 @@ public class Slots : MonoBehaviour {
 				} else {
 				yield return Dialogue.instance.text ("Darn! Ran out of\\lcoins!");
              
-					Exit ();
+					Exit();
 					yield break;
 				}
 
 			}
 			Dialogue.instance.keepTextOnScreen = true;
 		yield return Dialogue.instance.text ("One more go?");
-        yield return StartCoroutine(Dialogue.instance.prompt ());
+        yield return StartCoroutine(Dialogue.instance.prompt());
 			if (Dialogue.instance.selectedOption == 0) {
 				canroll = false;
             slotPointsAnimator.SetBool("toggleStatus",false);
 			Dialogue.instance.keepTextOnScreen = true;
 			yield return Dialogue.instance.text ("Bet how many\\lcoins?");
-				StartCoroutine(DecideBet ());
-
-
+				StartCoroutine(DecideBet());
 			} else {
-
-				Exit ();
-
+				Exit();
 			}
 	}
+
 	void CheckPositions(){
 		
 		//Row 1
@@ -498,14 +491,14 @@ public class Slots : MonoBehaviour {
 
         }
     }
+
 	string checkWheel1Wheel2Matches(){
 		return above1 == above2 || above1 == middle2 ? above1:  middle1 == middle2 ? middle1 : below1 == middle2 || below1 == below2 ? below1 : "";
 	}
+
 	IEnumerator HandleInput(){
 		handlingInput = true;
-		if (canroll && canstopthereels) {
-			
-
+		if (canroll && canStopTheReels) {			
 			if (rolledtwo && !rolledthree) {
 				if (Inputs.pressed("a")) {
 					rolledthree = true;
@@ -515,11 +508,9 @@ public class Slots : MonoBehaviour {
 						row3Half++;
 						UpdatePositions(false);
 					}
-						CheckPositions ();
-						yield return LinedUp ();
-					
+						CheckPositions();
+						yield return LinedUp();		
 				}
-
 			}
 			else if (rolledone && !rolledtwo) {
 				if (Inputs.pressed("a")) {
@@ -527,16 +518,15 @@ public class Slots : MonoBehaviour {
 					SoundManager.instance.sfx.PlayOneShot(stopReelSound);
 					
 						if (row2Half > 0) {
-						row2Half++;
-						UpdatePositions(false);
-                    }
-						CheckPositions ();
-						if (CurrentMode == "SUPER") {
-							
+							row2Half++;
+							UpdatePositions(false);
+                    	}
+						CheckPositions();
+						if (CurrentMode == "SUPER") {				
 							string match = checkWheel1Wheel2Matches();
 							if(match == "" && (below2 == "7" || below2 == "BAR")){
-							handlingInput = false;
-							yield return 0;
+								handlingInput = false;
+								yield return 0;
 							}
 							if (match != "BAR" && match != "7") {
 						
@@ -548,11 +538,8 @@ public class Slots : MonoBehaviour {
 										}
 
 									}
-								}
-							
+							}							
 						} else {
-						
-
 							string match = checkWheel1Wheel2Matches();
 								if (match == "") {
 						
@@ -562,17 +549,10 @@ public class Slots : MonoBehaviour {
 										if (match != "") {
 											break;
 										}
-
 									}
 								}
-
-
-						}
-						
-					
+						}				
 				}
-
-
 			}
 			else if (!rolledone) {
 				if (Inputs.pressed("a")) {
@@ -583,7 +563,7 @@ public class Slots : MonoBehaviour {
                         row1Half++;
 						UpdatePositions(false);
                     }
-					CheckPositions ();
+					CheckPositions();
 						if (CurrentMode == "SUPER") {
 
 							
@@ -610,15 +590,9 @@ public class Slots : MonoBehaviour {
 
 								}
 							}
-						}
-						
+						}				
 				}
-
-
-
 			}
-
-
 		}
 		handlingInput = false;
 	}

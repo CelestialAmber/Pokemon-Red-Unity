@@ -1,0 +1,26 @@
+void HandleMidJump(){
+	a = wPlayerJumpingYScreenCoordsIndex;
+	c = a;
+	a++;
+	if (a < 16){
+	    wPlayerJumpingYScreenCoordsIndex = a;
+	    a = PlayerJumpingYScreenCoords[c];
+	    Player.spritePos.y = a; // player's sprite y coordinate
+	    return;
+    }
+	if (wWalkCounter != 0) return;
+	UpdateSprites();
+	Delay3();     //wait 3 frames
+	hJoyHeld = false; //reset input state variables
+	hJoyPressed = false;
+	hJoyReleased = false;
+	wPlayerJumpingYScreenCoordsIndex = 0;
+	ledgeJumping = false; // not jumping down a ledge any more
+	simulateJoypad = false; // not simulating joypad states any more
+	wJoyIgnore = 0;
+}
+
+PlayerJumpingYScreenCoords:
+// Sequence of y screen coordinates for player's sprite when jumping over a ledge.
+// Default sprite y position is 0x3C/0
+	db 4, 6, 8, 10, 11, 12, 12, 12, 11, 10, 9, 8, 6, 4, 0, 0

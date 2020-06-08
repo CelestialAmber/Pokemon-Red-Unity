@@ -98,8 +98,8 @@ public class BattleManager : MonoBehaviour {
         enemymon = enemyMons[0];
         playermon = GameData.instance.party[0];
          playermon.RecalculateStats();
-        enemyHPBar.fillAmount = (Mathf.Round(enemymon.currenthp * 48 / enemymon.maxhp))/48;
-        playerHPBar.fillAmount = (Mathf.Round(playermon.currenthp * 48 / playermon.maxhp))/48;
+        enemyHPBar.fillAmount = (Mathf.Round(enemymon.currentHP * 48 / enemymon.maxHP))/48;
+        playerHPBar.fillAmount = (Mathf.Round(playermon.currentHP * 48 / playermon.maxHP))/48;
         playerName.text = playermon.nickname;
 		battleoverlay.gameObject.SetActive(true);
 		playerstats.SetActive (false);
@@ -209,7 +209,7 @@ if(battleType == BattleType.Trainer){
 battleoverlay.sprite = battleOverlaySprites[0];
 playerpokeballs.SetActive(true);
 	Dialogue.instance.fastText = true;
-		yield return Dialogue.instance.text ("Wild " + enemyMons[0].nickname + "\nappeared!");
+		yield return Dialogue.instance.text ("Wild " + enemyMons[0].nickname + "\\lappeared!");
 		enemystatsObject.SetActive (true);
 		playerpokeballs.SetActive(false);
 		battleoverlay.sprite = battleOverlaySprites[3];
@@ -369,7 +369,7 @@ foreach (GameObject menu in allmenus) {
 void UpdateStatsUI(){
 	enemymonLeveltext.text = (enemymon.level != 100 ? "<LEVEL>" : "") + enemymon.level.ToString();
 			playermonLeveltext.text = (playermon.level != 100 ? "<LEVEL>" : "") +  playermon.level.ToString ();
-			playerHpText.text = (playermon.currenthp > 99 ? "" : playermon.currenthp > 9 ? " " : "  ") + playermon.currenthp + " " + playermon.maxhp;
+			playerHpText.text = (playermon.currentHP > 99 ? "" : playermon.currentHP > 9 ? " " : "  ") + playermon.currentHP + " " + playermon.maxHP;
             enemymonname.text = enemymon.name.ToUpper();
 }
 void UpdatePokeBallUI(){
@@ -491,19 +491,19 @@ switch(moveData.effect){
 	//these functions animate health.
     IEnumerator AnimateOurHealth(int amount)
     {
-        int newHealth = playermon.currenthp + amount;
+        int newHealth = playermon.currentHP + amount;
         if (newHealth < 0) newHealth = 0;
-        if (newHealth > playermon.maxhp) newHealth = playermon.maxhp;
-        int result = Mathf.RoundToInt(newHealth - playermon.currenthp);
+        if (newHealth > playermon.maxHP) newHealth = playermon.maxHP;
+        int result = Mathf.RoundToInt(newHealth - playermon.currentHP);
 
-        WaitForSeconds wait = new WaitForSeconds(5 / playermon.maxhp);
+        WaitForSeconds wait = new WaitForSeconds(5 / playermon.maxHP);
 
         for (int l = 0; l < Mathf.Abs(result); l++)
         {
             yield return wait;
 
-            playermon.currenthp += 1 * Mathf.Clamp(result, -1, 1);
-            int pixelCount = Mathf.RoundToInt((float)playermon.currenthp * 48 / (float)playermon.maxhp);
+            playermon.currentHP += 1 * Mathf.Clamp(result, -1, 1);
+            int pixelCount = Mathf.RoundToInt((float)playermon.currentHP * 48 / (float)playermon.maxHP);
             playerHPBar.fillAmount = (float)pixelCount / 48;
 
         }
@@ -512,19 +512,19 @@ switch(moveData.effect){
     }
     IEnumerator AnimateEnemyHealth(int amount)
     {
-        int newHealth = enemymon.currenthp + amount;
+        int newHealth = enemymon.currentHP + amount;
         if (newHealth < 0) newHealth = 0;
-        if (newHealth > enemymon.maxhp) newHealth = enemymon.maxhp;
-        int result = Mathf.RoundToInt(newHealth - enemymon.currenthp);
-        WaitForSeconds wait = new WaitForSeconds(5 / enemymon.maxhp);
+        if (newHealth > enemymon.maxHP) newHealth = enemymon.maxHP;
+        int result = Mathf.RoundToInt(newHealth - enemymon.currentHP);
+        WaitForSeconds wait = new WaitForSeconds(5 / enemymon.maxHP);
 
         for (int l = 0; l < Mathf.Abs(result); l++)
         {
             yield return wait;
 
-            enemymon.currenthp += 1 * Mathf.Clamp(result, -1, 1);
+            enemymon.currentHP += 1 * Mathf.Clamp(result, -1, 1);
 
-            int pixelCount = Mathf.RoundToInt((float)enemymon.currenthp * 48 / (float)enemymon.maxhp);
+            int pixelCount = Mathf.RoundToInt((float)enemymon.currentHP * 48 / (float)enemymon.maxHP);
    enemyHPBar.fillAmount = (float)pixelCount / 48;
 
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class IntroHandler : MonoBehaviour {
 	public Animator anim;
 	public GameObject middle;
@@ -28,7 +29,6 @@ public class IntroHandler : MonoBehaviour {
             case Version.Blue:
                 anim.runtimeAnimatorController = blueController;
                 break;
-
         }
 
     }

@@ -6,7 +6,6 @@ public class Song{
     public AudioClip mainClip, loopClip;
 }
 
-
 public class SoundManager : MonoBehaviour
 {
     public enum Music{
@@ -54,11 +53,13 @@ public class SoundManager : MonoBehaviour
     VictoryTrainer,
     VictoryWildPokemon,
     ViridianForest
-
-
 }
-    public AudioSource sfx,music,musicLoop;
+
+
+public AudioSource sfx,music,musicLoop;
 public Song[] songs;
+
+//public Song loadedSong;
 
 public int currentSong;
 public static SoundManager instance;
@@ -71,33 +72,28 @@ public int switchIndex;
 public AudioClip abSound;
 public bool isPlayingCry;
 
-    public AudioClip[] itemGetSounds;
-    public AudioClip goInsideSound, goOutsideSound;
-
-    void Awake(){
-instance = this;
-pokemonCrySounds = Resources.LoadAll<AudioClip>("Pokemon Cries");
+public AudioClip[] itemGetSounds;
+public AudioClip goInsideSound, goOutsideSound;
+void Awake(){
+    instance = this;
+    pokemonCrySounds = Resources.LoadAll<AudioClip>("Pokemon Cries");
 }
 public int debugSongIndex;
 void Update(){
     if(Input.GetKeyDown(KeyCode.R)) PlaySong(debugSongIndex);
-// if(isMusicPlaying && !music.isPlaying && songs[currentSong].loopClip != null && !music.loop){
-// music.clip = songs[currentSong].loopClip;
-// music.loop = true;
-// music.Play();
-// }
-if(isMusicPlaying && !music.isPlaying && !musicLoop.isPlaying && !music.loop) isMusicPlaying = false;
-if(Player.instance.inBattle){
-if(isFadingSong){
-    StopCoroutine("FadeToSongFunction");
-    isFadingSong = false;
+    // if(isMusicPlaying && !music.isPlaying && songs[currentSong].loopClip != null && !music.loop){
+    // music.clip = songs[currentSong].loopClip;
+    // music.loop = true;
+    // music.Play();
+    // }
+    if(isMusicPlaying && !music.isPlaying && !musicLoop.isPlaying && !music.loop) isMusicPlaying = false;
+    if(Player.instance.inBattle){
+        if(isFadingSong){
+            StopCoroutine("FadeToSongFunction");
+            isFadingSong = false;
+        }
+    } 
 }
-
-} 
-
-}
-
-
 public void StopFadeSong(){
     StopCoroutine("SwitchSongFade");
 }
@@ -110,15 +106,18 @@ public void PlaySong(int index){
     currentSong = index;
     isMusicPlaying = true;
     music.loop = false;
-
+ 
+    music.clip = songs[currentSong].mainClip;
+    //music.clip = loadedSong.mainClip;
+    music.Play();
     
-        music.clip = songs[currentSong].mainClip;
-        music.Play();
-    
+    //if(loadedSong.loopClip == null) music.loop = true;
     if(songs[currentSong].loopClip == null) music.loop = true;
     else{
-         musicLoop.clip = songs[currentSong].loopClip;
-         float clipLength = (float)songs[currentSong].mainClip.samples/songs[currentSong].mainClip.frequency;
+        musicLoop.clip = songs[currentSong].loopClip;
+        float clipLength = (float)songs[currentSong].mainClip.samples/songs[currentSong].mainClip.frequency;
+        //musicLoop.clip = loadedSong.loopClip;
+        //float clipLength = (float)loadedSong.mainClip.samples/loadedSong.mainClip.frequency; //this might be overkill
          musicLoop.PlayDelayed(clipLength);
     }
     
@@ -132,6 +131,7 @@ public void PlaySongNoLoop(int index){
     music.loop = false;
     isMusicPlaying = true;
     music.clip = songs[currentSong].mainClip;
+    //music.clip = loadedSong.mainClip;
     music.Play();
 }
 public void FadeToSong(int index){

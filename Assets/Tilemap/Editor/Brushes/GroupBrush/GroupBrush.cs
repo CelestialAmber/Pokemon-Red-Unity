@@ -5,40 +5,43 @@ using UnityEngine.Tilemaps;
 
 namespace UnityEditor.Tilemaps
 {
+    /// <summary>
+    /// This Brush helps to pick Tiles which are grouped together by position. Gaps can be set to identify if Tiles belong to a Group. Limits can be set to ensure that an over-sized Group will not be picked. Use this as an example to create brushes that have the ability to choose and pick whichever Tiles it is interested in.
+    /// </summary>
     [CustomGridBrush(true, false, false, "Group Brush")]
     public class GroupBrush : GridBrush
     {
+        /// <summary>
+        /// The gap in cell count before stopping to consider a Tile in a Group
+        /// </summary>
         public Vector3Int gap
         {
             get { return m_Gap; }
             set
             {
                 m_Gap = value;
-                if (m_Gap.x < 0)
-                    m_Gap.x = 0;
-                if (m_Gap.y < 0)
-                    m_Gap.y = 0;
-                if (m_Gap.z < 0)
-                    m_Gap.z = 0;
+                OnValidate();
             }
         }
 
+        /// <summary>
+        /// The count in cells beyond the initial position before stopping to consider a Tile in a Group
+        /// </summary>
         public Vector3Int limit
         {
             get { return m_Limit; }
             set
             {
                 m_Limit = value;
-                if (m_Limit.x < 0)
-                    m_Limit.x = 0;
-                if (m_Limit.y < 0)
-                    m_Limit.y = 0;
-                if (m_Limit.z < 0)
-                    m_Limit.z = 0;
-                m_VisitedLocations = new BitArray((m_Limit.x * 2 + 1) * (m_Limit.y * 2 + 1) * (m_Limit.z * 2 + 1));
+                OnValidate();
             }
         }
 
+        private int visitedLocationsSize
+        {
+            get { return (m_Limit.x * 2 + 1) * (m_Limit.y * 2 + 1) * (m_Limit.z * 2 + 1); }
+        }
+        
         [SerializeField]
         private Vector3Int m_Gap = Vector3Int.one;
         [SerializeField]
@@ -48,6 +51,32 @@ namespace UnityEditor.Tilemaps
         [SerializeField]
         private Stack<Vector3Int> m_NextPosition = new Stack<Vector3Int>();
 
+        private void OnValidate()
+        {
+            if (m_Gap.x < 0)
+                m_Gap.x = 0;
+            if (m_Gap.y < 0)
+                m_Gap.y = 0;
+            if (m_Gap.z < 0)
+                m_Gap.z = 0;
+            if (m_Limit.x < 0)
+                m_Limit.x = 0;
+            if (m_Limit.y < 0)
+                m_Limit.y = 0;
+            if (m_Limit.z < 0)
+                m_Limit.z = 0;
+            if (m_VisitedLocations.Length != visitedLocationsSize)
+                m_VisitedLocations = new BitArray(visitedLocationsSize);
+        }
+
+        /// <summary>
+        /// Picks tiles from selected Tilemaps and child GameObjects, given the coordinates of the cells.
+        /// The GroupBrush overrides this to locate groups of Tiles from the picking position.
+        /// </summary>
+        /// <param name="gridLayout">Grid to pick data from.</param>
+        /// <param name="brushTarget">Target of the picking operation. By default the currently selected GameObject.</param>
+        /// <param name="position">The coordinates of the cells to paint data from.</param>
+        /// <param name="pickStart">Pivot of the picking brush.</param>
         public override void Pick(GridLayout gridLayout, GameObject brushTarget, BoundsInt position, Vector3Int pickStart)
         {
             // Do standard pick if user has selected a custom bounds
@@ -163,19 +192,11 @@ namespace UnityEditor.Tilemaps
                 SetColor(brushPosition, tilemap.GetColor(position));
             }
         }
-
-        [MenuItem("Assets/Create/Group Brush")]
-        public static void CreateBrush()
-        {
-            string path = EditorUtility.SaveFilePanelInProject("Save Group Brush", "New Group Brush", "asset", "Save Group Brush", "Assets");
-
-            if (path == "")
-                return;
-
-            AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<GroupBrush>(), path);
-        }
     }
 
+    /// <summary>
+    /// The Brush Editor for a Group Brush.
+    /// </summary>
     [CustomEditor(typeof(GroupBrush))]
     public class GroupBrushEditor : GridBrushEditor
     {

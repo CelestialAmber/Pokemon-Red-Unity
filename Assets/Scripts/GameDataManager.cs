@@ -16,7 +16,7 @@ public class GameDataManager : MonoBehaviour {
     public CreditsHandler creditsHandler;
     public Title title;
     public IntroHandler introHandler;
-    public BeginHandler beginHandler;
+    public OakIntroCutsceneHandler oakIntroCutsceneHandler;
     public MainMenu mainMenu;
     public Pokedex pokedex;
     public FontAtlas fontAtlas;
@@ -33,7 +33,7 @@ public class GameDataManager : MonoBehaviour {
         Title.instance = title;
         MainMenu.instance = mainMenu;
         CreditsHandler.instance = creditsHandler;
-        BeginHandler.instance = beginHandler;
+        OakIntroCutsceneHandler.instance = oakIntroCutsceneHandler;
         Pokedex.instance = pokedex;
         PC.instance = pc;
         //VersionManager executes before GameDataManager, so the version is set in GameData beforehand
@@ -55,7 +55,7 @@ public class GameDataManager : MonoBehaviour {
         slots.Init();
         title.InitVersion();
         introHandler.InitVersion();
-        beginHandler.InitVersion();
+        oakIntroCutsceneHandler.InitVersion();
         PokemonDataJSON.InitVersion();
         FontAtlasInit();
     }

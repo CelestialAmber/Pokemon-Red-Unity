@@ -3,8 +3,9 @@
 --- !u!74 &7400000
 AnimationClip:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: playerIdleRightBicycle
   serializedVersion: 6
   m_Legacy: 0
@@ -19,14 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: e9b0c6550a1274d9bb103a9e03936fdc, type: 3}
+      value: {fileID: 3671303311450830706, guid: 0ca5c38008c048f498d78d05619d3bc1,
+        type: 3}
     attribute: m_Sprite
     path: bottom
     classID: 212
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 22da3b68864044373ad83186dfbaba6a, type: 3}
+      value: {fileID: 2264926074658577275, guid: 0ca5c38008c048f498d78d05619d3bc1,
+        type: 3}
     attribute: m_Sprite
     path: top
     classID: 212
@@ -53,8 +56,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: e9b0c6550a1274d9bb103a9e03936fdc, type: 3}
-    - {fileID: 21300000, guid: 22da3b68864044373ad83186dfbaba6a, type: 3}
+    - {fileID: 3671303311450830706, guid: 0ca5c38008c048f498d78d05619d3bc1, type: 3}
+    - {fileID: 2264926074658577275, guid: 0ca5c38008c048f498d78d05619d3bc1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -79,5 +82,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_GenerateMotionCurves: 0
   m_Events: []
