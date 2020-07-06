@@ -5,7 +5,6 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Pokemon
 {
-
     public int maxHP;
     public int attack;
     public int defense;
@@ -173,4 +172,11 @@ public class Pokemon
     public bool slotHasMove(int index){
         return moves[index].name != "";
     }
+}
+
+public class PokemonNameLevel {
+    public string name;
+    public int level;
+
+    public PokemonNameLevel(){}
 }

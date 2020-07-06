@@ -13,7 +13,7 @@ public enum NPCType{
     Moving
 }
 
-//for Single direction NPCS
+//for single direction NPCS
 public enum NPCDirection{
 Vertical,
 Horizontal
@@ -53,14 +53,16 @@ public class NPC : MonoBehaviour
         pokemonObject = GetComponent<PokemonObject>();
         pokemonObject.onDisabled.AddListener(OnDisableNPC);
     }
-private bool dontUpdateDireciton;
+	
+	private bool dontUpdateDireciton;
+	
     // Update is called once per frame
     void UpdateDirectionBool(){
          if(movementDelay == 1) dontUpdateDireciton = true; //moonwalking bug if exiting npc dialogue the frame before moving
              Dialogue.instance.onFinishText.RemoveListener(UpdateDirectionBool);
     }
-    void Update()
-    {
+	
+    void Update(){
         CheckCollision();
         if (!Dialogue.instance.finishedText || Player.instance.menuActive || Player.instance.inBattle || GameData.instance.isPaused) return;
         if(isMoving) return;
@@ -68,18 +70,17 @@ private bool dontUpdateDireciton;
         
         frameTimer--;
         if(frameTimer == 0){
-             movementDelay--;
-             frameTimer = 2;
-             if(movementDelay <= 0){
-             DoMovement();
-            movementDelay = Random.Range(0,128);
-             }
+            movementDelay--;
+            frameTimer = 2;
+            if(movementDelay <= 0){
+				DoMovement();
+				movementDelay = Random.Range(0,128);
+			}
         }
-        
-
     }
+	
     void DoMovement(){
-Direction chosenDir;
+		Direction chosenDir;
         switch(npcType){
             case NPCType.Static:
             direction = staticDirection;
@@ -92,7 +93,6 @@ Direction chosenDir;
             break;
             case NPCType.MovingOneDirection:
             switch(npcDirection){
-
                 case NPCDirection.Horizontal:
                 int random = Random.Range(0,2);
                 if(random == 0){
@@ -108,7 +108,7 @@ Direction chosenDir;
                 if(random == 0){
                     chosenDir = Direction.Up;
                     StartCoroutine(MoveNPC(chosenDir));
-                }else {
+                }else{
                     chosenDir = Direction.Down;
                     StartCoroutine(MoveNPC(chosenDir));
                 }
@@ -120,38 +120,35 @@ Direction chosenDir;
             chosenDir = (Direction)newDir;
             StartCoroutine(MoveNPC(chosenDir));
             break;
-
-
-
         }
     }
+	
     public IEnumerator MoveNPC(Direction direction){
         movingTimer = 0;
         if(!dontUpdateDireciton) this.direction = direction;
         dontUpdateDireciton = false;
-     UpdateSprite();
-     if(cannotMove[(int)direction]){ 
-         yield break;
-
-     }
-     isMoving = true;
-     Vector2 initialPos = transform.position;
-     Vector3 delta = (direction == Direction.Up ? Vector3.up : direction == Direction.Down ? Vector3.down : direction == Direction.Left ? Vector3.left : Vector3.right);
-     Vector2 targetPos = transform.position + delta;
-     movingHitbox.transform.position = targetPos;
-     while(movingTimer < 0.55f){
-        movingTimer += Time.deltaTime;
-        UpdateSprite();
-         transform.position = Vector2.Lerp(initialPos,targetPos,movingTimer/0.55f);
-         movingHitbox.transform.position = targetPos;
-         yield return new WaitForEndOfFrame();
-
-     }
-     isMoving = false;
-     framesSinceMoving = 0;
-     UpdateSprite();
-     movingHitbox.transform.position = transform.position;
+		UpdateSprite();
+		if(cannotMove[(int)direction]){ 
+			yield break;
+		}
+		isMoving = true;
+		Vector2 initialPos = transform.position;
+		Vector3 delta = (direction == Direction.Up ? Vector3.up : direction == Direction.Down ? Vector3.down : direction == Direction.Left ? Vector3.left : Vector3.right);
+		Vector2 targetPos = transform.position + delta;
+		movingHitbox.transform.position = targetPos;
+		while(movingTimer < 0.55f){
+			movingTimer += Time.deltaTime;
+			UpdateSprite();
+			transform.position = Vector2.Lerp(initialPos,targetPos,movingTimer/0.55f);
+			movingHitbox.transform.position = targetPos;
+			yield return new WaitForEndOfFrame();
+		}
+		isMoving = false;
+		framesSinceMoving = 0;
+		UpdateSprite();
+		movingHitbox.transform.position = transform.position;
     }
+	
     void UpdateSprite(){
         if(!isMoving){
             switch(direction){
@@ -171,14 +168,13 @@ Direction chosenDir;
                 topRenderer.sprite = idleRightSprites[0];
                 bottomRenderer.sprite = idleRightSprites[1];
                 break;
-
             }
         }else{
             int frame;
             if(direction == Direction.Up || direction == Direction.Down)
-             frame = Mathf.FloorToInt(movingTimer/0.55f * 4f) + 1;
-             else frame = Mathf.FloorToInt(movingTimer/0.55f * 4f) % 2 + 1;
-        switch(direction){
+            frame = Mathf.FloorToInt(movingTimer/0.55f * 4f) + 1;
+            else frame = Mathf.FloorToInt(movingTimer/0.55f * 4f) % 2 + 1;
+			switch(direction){
                 case Direction.Up:
                 topRenderer.sprite = Sprite.Create(moveUpSprites[0],new Rect(0f,64f - (float)frame/4f*64,16,16),new Vector2(0.5f,0.5f),16);
                 bottomRenderer.sprite = Sprite.Create(moveUpSprites[1],new Rect(0f,64f - (float)frame/4f*64,16,16),new Vector2(0.5f,0.5f),16);
@@ -195,36 +191,33 @@ Direction chosenDir;
                 topRenderer.sprite = Sprite.Create(moveRightSprites[0],new Rect(0f,32f - (float)frame/2f*32,16,16),new Vector2(0.5f,0.5f),16);
                 bottomRenderer.sprite = Sprite.Create(moveRightSprites[1],new Rect(0f,32f - (float)frame/2f*32,16,16),new Vector2(0.5f,0.5f),16);
                 break;
-
             }
-
         }
-
-
     }
+	
     void CheckCollision(){
         CheckObjectCollision();
-        if (!isMoving)
-        {
+        if (!isMoving){
             MapTile tileToCheck = null;
 
             tileToCheck = new MapTile(new Vector3Int((int)transform.position.x-1,(int)transform.position.y,0));
-                cannotMove[2] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[2] || !tileToCheck.hasTile;
+            cannotMove[2] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[2] || !tileToCheck.hasTile;
             tileToCheck = new MapTile(new Vector3Int((int)transform.position.x+1,(int)transform.position.y,0));
-                cannotMove[3] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[3] || !tileToCheck.hasTile;
+            cannotMove[3] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[3] || !tileToCheck.hasTile;
             tileToCheck = new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y+1,0));
-                cannotMove[0] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[0] || !tileToCheck.hasTile;
+            cannotMove[0] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[0] || !tileToCheck.hasTile;
             tileToCheck = new MapTile(new Vector3Int((int)transform.position.x,(int)transform.position.y-1,0));
-                cannotMove[1] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[1] || !tileToCheck.hasTile;
+            cannotMove[1] = tileToCheck.isWall || tileToCheck.isLedge || tileToCheck.isWater || objectExists[1] || !tileToCheck.hasTile;
         }
         
-    if(transform.position.x - homePos.x > 3) cannotMove[3] = true;
-    if(transform.position.x - homePos.x < -3) cannotMove[2] = true;
-    if(transform.position.y - homePos.y > 3) cannotMove[0] = true;
-    if(transform.position.y - homePos.y < -3) cannotMove[1] = true;
-
+		if(transform.position.x - homePos.x > 3) cannotMove[3] = true;
+		if(transform.position.x - homePos.x < -3) cannotMove[2] = true;
+		if(transform.position.y - homePos.y > 3) cannotMove[0] = true;
+		if(transform.position.y - homePos.y < -3) cannotMove[1] = true;
     }
+	
     public LayerMask layerMask, playerMask;
+	
     public void CheckObjectCollision(){
         //Use a raycast to check for objects such as trees, etc...
         RaycastHit2D ray; 
@@ -245,11 +238,12 @@ Direction chosenDir;
          ray =  Physics2D.Raycast(transform.position + Vector3.right,Vector2.right,1,layerMask);
          if(ray.collider != null) objectExists[3] = true;
          else objectExists[3] = false;
-
     }
+	
     public void StartEncounter(){
     Debug.Log("triggered an encounter");
     }
+	
     public void FacePlayer(){
         if(Player.instance.direction == Direction.Up){
             direction = Direction.Down;
@@ -268,12 +262,13 @@ Direction chosenDir;
             UpdateSprite();
         }
     }
-   public IEnumerator NPCText(){
+	
+	public IEnumerator NPCText(){
      Dialogue.instance.onFinishText.AddListener(UpdateDirectionBool);
         yield return npcDialogue.PlayDialogue(npcDialogue.dialogueArray);
     }
-    public void OnDisableNPC()
-    {
+	
+    public void OnDisableNPC(){
         movementDelay = Random.Range(0, 128);
     }
 }

@@ -569,7 +569,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 5242c684af3204076859e7c67f1cc786, type: 2}
     m_Threshold: 2
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 2.775
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -577,7 +577,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 92dc498ef920941fbb71d14cf565d4f3, type: 2}
     m_Threshold: 3
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 2.775
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -585,7 +585,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: a0b01ea536fea400cb12a948814dcf00, type: 2}
     m_Threshold: 4
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 2.775
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -763,7 +763,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: d8527622f934e49f98e44b9ba184d98a, type: 2}
     m_Threshold: 2
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 2.775
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -771,7 +771,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: e95416b9de6fc4fd28eb8298e35766ff, type: 2}
     m_Threshold: 3
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 2.775
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -779,7 +779,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 8f9f3b7e981724d839992fa6e009e40d, type: 2}
     m_Threshold: 4
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 2.775
+    m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
@@ -1019,7 +1019,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ledge Jump
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 1101890591335226176}
@@ -1076,10 +1076,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102526282634442328}
-    m_Position: {x: 156, y: 96, z: 0}
+    m_Position: {x: 160, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102283692309217772}
-    m_Position: {x: 396, y: 84, z: 0}
+    m_Position: {x: 430, y: 100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

@@ -1,18 +1,18 @@
 {
-        "oakIntroDialogue": [
-            "Hello there!\nWelcome to the&cworld of #MON!",
-            "My name is OAK!\nPeople call me&cthe #MON PROF!",
-            "This world is\ninhabited by&ccreatures called&c#MON!",
-            "For some people,\n#MON are&cpets. Others use&cthem for fights.",
-            "Myself...",
-            "I study #MON\nas a profession.",
-            "First, what is\nyour name?",
-            "Right! So your\nname is <playername>!",
-            "This is my grand-\nson. He's been&cyour rival since&cyou were a baby.",
-            "...Erm, what is\nhis name again?",
-            "That's right! I\nremember now! His&cname is <rivalname>!",
-            "<playername>!",
-            "Your very own\n#MON legend is&cabout to unfold!",
-            "A world of dreams\nand adventures&cwith #MON&cawaits! Let's go!"
-        ]
+    "oakIntroDialogue": [
+        "Hello there!\nWelcome to the&cworld of #MON!",
+        "My name is OAK!\nPeople call me&cthe #MON PROF!",
+        "This world is\ninhabited by&ccreatures called&c#MON!",
+        "For some people,\n#MON are&cpets. Others use&cthem for fights.",
+        "Myself...",
+        "I study #MON\nas a profession.",
+        "First, what is\nyour name?",
+        "Right! So your\nname is <playername>!",
+        "This is my grand-\nson. He's been&cyour rival since&cyou were a baby.",
+        "...Erm, what is\nhis name again?",
+        "That's right! I\nremember now! His&cname is <rivalname>!",
+        "<playername>!",
+        "Your very own\n#MON legend is&cabout to unfold!",
+        "A world of dreams\nand adventures&cwith #MON&cawaits! Let's go!"
+    ]
 }

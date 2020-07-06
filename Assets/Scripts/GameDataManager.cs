@@ -22,8 +22,8 @@ public class GameDataManager : MonoBehaviour {
     public FontAtlas fontAtlas;
     public Player player;
     public PC pc;
-
     public bool startInGame;
+    
     private void Awake(){
         instance = this;
         Player.instance = player;
