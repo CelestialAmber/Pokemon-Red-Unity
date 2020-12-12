@@ -107,6 +107,7 @@ public class Pokemon
 
         }
     }
+
     int CalculateLevelFromExp(){
         for(int i = 0; i <= 100; i++){ //iterate through each level to find the level from the current exp
             int exp = CalculateExp(i);
@@ -114,25 +115,30 @@ public class Pokemon
         }
         return 100; //if the current experience is higher than the level 100 experience, return 100
     }
-    bool AlreadyHasMove(string movename)
+
+    bool AlreadyHasMove(Moves moveIndex)
     {
         foreach (Move move in moves)
         {
-            if (move.name == movename)
+            if (move.moveIndex == (int)moveIndex)
                 return true;
 
         }
         return false;
-
     }
+
     Move MoveAtCurrentLevel(){
+        /*
         foreach(System.Tuple<string,int> move in PokemonData.levelmoves[name]){
             if(move.Item2 == level) return new Move(move.Item1);
         }
+        */
         return null;
     }
+    
     public void UpdateMovesToLevel()
     {
+        /*
         for (int i = 0; i < PokemonData.levelmoves[name].Length; i++)
         {
             System.Tuple<string,int> movetocheck = PokemonData.levelmoves[name][i];
@@ -149,28 +155,30 @@ public class Pokemon
                     }
             }
         }
+        */
         //iterate through all moves learned by level, and adjust the move pool accordingly
     }
-    public void AddMove(string moveName){
+    public void AddMove(int moveIndex){
         if(numberOfMoves == 4){
              Debug.Log("Cannot add a new move, there are already 4 moves");
         }
         for(int i = 0; i < 4; i++){
-            if(!slotHasMove(i)){
-             moves[i] = new Move(moveName);
+            if(!SlotHasMove(i)){
+             moves[i] = new Move(moveIndex);
             numberOfMoves++;
              break;
             }       
         }
         return;
     }
-    public void SetMove(string moveName,int moveIndex){
+    public void SetMove(Moves move,int moveIndex){
         if(moveIndex > 3 || moveIndex < 0) throw new UnityException("Invalid move index");
-            moves[moveIndex] = new Move(moveName);
+            moves[moveIndex] = (new Move((int)move));
 
     }
-    public bool slotHasMove(int index){
-        return moves[index].name != "";
+
+    public bool SlotHasMove(int index){
+        return moves[index].moveIndex != (int)Moves.None;
     }
 }
 

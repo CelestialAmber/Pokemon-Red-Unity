@@ -10,7 +10,8 @@ Text,
 Continue,
 Done
 }
-public class Dialogue : MonoBehaviour {
+
+public class Dialogue : Singleton<Dialogue> {
 	private string str;
 	public float scrollequation;
 	public static string Name, opponentName;
@@ -25,33 +26,23 @@ public class Dialogue : MonoBehaviour {
 	public bool finishedText;
 	public Image box;
 	public bool finishedThePrompt;
-
     public bool playSoundAfterText = false;
     public AudioClip clipToPlay;
 	public GameCursor cursor;
 	public int selectedOption;
 	public GameObject yesnomenu, slotsmenu, buycoinsmenu;
-	public Player play;
     public CustomText[] buycoinstext;
-    MainMenu mainmenu;
     string laststring;
-    public static Dialogue instance;
     public bool keepTextOnScreen;
     public UnityEvent onFinishText;
     public DialogueType currentDialogueType;
-
     public bool waitForButtonPress; //wait for button press before closing the textbox
-
     public bool needButtonPress = true;
-
     public FontAtlas fontAtlas;
+
     
-    private void Awake()
-    {
-        instance = this;
-    }
+    
 	void Start(){
-        mainmenu = MainMenu.instance;
         subdialogue.SetActive(true);
 		finishedThePrompt = true;
 		finishedText = true;
@@ -71,7 +62,7 @@ public class Dialogue : MonoBehaviour {
         dialoguetext.gameObject.SetActive(true);
 		indicator.SetActive (false);
 
-	strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("\\l","\n\n");
+	strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("&l","\n\n");
 		int i = 0;
 		 if(currentDialogueType != DialogueType.Done) str = "";
 else str = stringToReveal;
@@ -215,12 +206,12 @@ public IEnumerator text(string text){
         string[] lines = text.Split('\n');
         for(int i = 0; i < lines.Length; i++){
             if(i == 0) currentDialogueType = DialogueType.Text;
-            else if(lines[i-1].Contains("\\c")){
-                stringToReveal = lines[i-1].Replace("\\c","").Replace("\\p","");
+            else if(lines[i-1].Contains("&c")){
+                stringToReveal = lines[i-1].Replace("&c","").Replace("&p","");
                 currentDialogueType = DialogueType.Continue;
             }
-            else if(lines[i-1].Contains("\\p")) currentDialogueType = DialogueType.Text; //eventually change to para?
-		yield return StartCoroutine(AnimateText (lines[i].Replace("\\c","").Replace("\\p","")));
+            else if(lines[i-1].Contains("&p")) currentDialogueType = DialogueType.Text; //eventually change to para?
+		yield return StartCoroutine(AnimateText (lines[i].Replace("&c","").Replace("&p","")));
             indicator.SetActive(true);
         if(needButtonPress) {
         while (!Inputs.pressed("a")) {

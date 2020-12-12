@@ -54,13 +54,13 @@ public class CustomText : MaskableGraphic
 
     public FontAtlas fontAtlas;
 
-    [SerializeField]
+    //[SerializeField]
     Texture m_Texture;
     public Texture texture
     {
         get
         {
-            return m_Texture;
+            return fontAtlas.tex;
         }
         set
         {
@@ -76,7 +76,7 @@ public class CustomText : MaskableGraphic
     {
         get
         {
-            return m_Texture == null ? s_WhiteTexture : m_Texture;
+            return fontAtlas.tex == null ? s_WhiteTexture : fontAtlas.tex;
         }
     }
     void UpdateText()

@@ -2,40 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class GameDataManager : MonoBehaviour {
+public class GameDataManager : Singleton<GameDataManager> {
     public GameObject[] gameScenes;
-    public static GameDataManager instance;
     public RenderTexture mainRender,postRender;
     [HideInInspector]
     public RenderTexture templateRenderTexture;
     public float ms;
     public Slots slots;
     public PokemonMenu pokemonMenu;
-    public Bag bag;
     public Options options;
-    public CreditsHandler creditsHandler;
     public Title title;
     public IntroHandler introHandler;
     public OakIntroCutsceneHandler oakIntroCutsceneHandler;
-    public MainMenu mainMenu;
     public Pokedex pokedex;
     public FontAtlas fontAtlas;
-    public Player player;
     public PC pc;
     public bool startInGame;
     
     private void Awake(){
-        instance = this;
-        Player.instance = player;
+        /*
+        For some reason, starting with Unity 2019.4 this is needed to make the game
+        run in the editor at the right speed, even though it's still 60fps in a build -_-
+        */
+        Application.targetFrameRate = 60;
         PokemonMenu.instance = pokemonMenu;
-        Bag.instance = bag;
         Options.instance = options;
         Title.instance = title;
-        MainMenu.instance = mainMenu;
-        CreditsHandler.instance = creditsHandler;
         OakIntroCutsceneHandler.instance = oakIntroCutsceneHandler;
         Pokedex.instance = pokedex;
-        PC.instance = pc;
         //VersionManager executes before GameDataManager, so the version is set in GameData beforehand
         VersionInit();
         GameData.instance.Init();

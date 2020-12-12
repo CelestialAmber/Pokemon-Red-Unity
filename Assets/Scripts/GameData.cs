@@ -5,6 +5,8 @@ using System.IO;
 using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+
+
 public class PokedexEntry
 {
     public PokedexEntry(bool seen, bool caught){
@@ -14,12 +16,14 @@ public class PokedexEntry
     public bool seen;
     public bool caught;
 }
+
 public enum Starter
 {
     Bulbasaur,
     Charmander,
     Squirtle
 }
+
 public static class IntExtensions{
 
     public static string ZeroFormat(this int input, string zeroformat)
@@ -57,11 +61,10 @@ public static class IntExtensions{
 }
 
 
-
+//Class for holding save data
 [System.Serializable]
 public class SaveData
 {
-    //class for holding save data
     public int dummy;
     public Starter chosenStarter;
     public static SaveData Create()
@@ -70,36 +73,16 @@ public class SaveData
         return saveData;
     }
 }
+
+
 //Class containing all the core data of the game.
-public class GameData : MonoBehaviour{
-    private static GameData m_instance;
-    public static GameData instance {
-        get{
-            if(m_instance == null) m_instance = FindObjectOfType(typeof(GameData)) as GameData;
-            return m_instance;
-        }
-    }
+public class GameData : Singleton<GameData> {
     public List<string> fieldMoves = new List<string>(new string[] { "Teleport", "Fly", "Cut", "Surf", "Dig", "Strength", "Flash", "Softboiled" });
     public List<Pokemon> party = new List<Pokemon>();
-    public void AddPokemonToParty(string name,int level)
-    {
-        party.Add(new Pokemon(name, level, false));
-    }
     [HideInInspector]
     public Sprite[] frontMonSprites, backMonSprites;
     public bool isPaused, inGame, atTitleScreen;
     public SaveData saveData;
-    public void Init()
-    {
-        frontMonSprites = Resources.LoadAll<Sprite>("frontmon");
-        backMonSprites = Resources.LoadAll<Sprite>("backmon");
-        pokedexlist = new List<PokedexEntry>();
-            for (int i = 0; i < 151; i++) {
-                pokedexlist.Add(new PokedexEntry(false, false));
-            }
-        if (playerName == "") playerName = "RED";
-
-    }
     public List<PokedexEntry> pokedexlist = new List<PokedexEntry>(151);
     public bool[] hasBadge = new bool[8];
     public int money;
@@ -110,10 +93,30 @@ public class GameData : MonoBehaviour{
     public int hours, minutes, seconds;
     public Starter chosenStarter;
     public bool hasMetBill; //should Bill's PC use his name?
-
+    public bool isPlayingCredits;
     public Version version;
-
     public FontAtlas fontAtlas;
+
+
+    public void AddPokemonToParty(string name,int level)
+    {
+        party.Add(new Pokemon(name, level, false));
+    }
+
+    public void Init()
+    {
+        frontMonSprites = Resources.LoadAll<Sprite>("frontmon");
+        backMonSprites = Resources.LoadAll<Sprite>("backmon");
+        pokedexlist = new List<PokedexEntry>();
+
+        for (int i = 0; i < 151; i++) {
+            pokedexlist.Add(new PokedexEntry(false, false));
+        }
+
+        //The default name in the original if no name was given is NINTEN, and SONY for the rival
+        if(playerName == "") playerName = "RED";
+        if(rivalName == "") rivalName = "GARY";
+    }
 
     public void Save()
     {
@@ -121,6 +124,7 @@ public class GameData : MonoBehaviour{
         saveData = SaveData.Create();
         SaveGameData(Application.persistentDataPath + "/save.sav", saveData); //save
     }
+
     //encounter table indices for all maps
     [HideInInspector]
     public int[] MapGrassEncounterTableIndices = {

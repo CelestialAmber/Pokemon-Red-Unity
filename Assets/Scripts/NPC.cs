@@ -62,7 +62,7 @@ public class NPC : MonoBehaviour
              Dialogue.instance.onFinishText.RemoveListener(UpdateDirectionBool);
     }
 	
-    void Update(){
+    void FixedUpdate(){
         CheckCollision();
         if (!Dialogue.instance.finishedText || Player.instance.menuActive || Player.instance.inBattle || GameData.instance.isPaused) return;
         if(isMoving) return;
@@ -241,7 +241,8 @@ public class NPC : MonoBehaviour
     }
 	
     public void StartEncounter(){
-    Debug.Log("triggered an encounter");
+        Debug.Log("triggered an encounter");
+        //WalkStraightToPlayer();, everything else...
     }
 	
     public void FacePlayer(){
@@ -262,9 +263,14 @@ public class NPC : MonoBehaviour
             UpdateSprite();
         }
     }
+
+    //Used for trainers when encountering them by having them see you
+    public void WalkStraightToPlayer(){
+        FacePlayer();
+    }
 	
 	public IEnumerator NPCText(){
-     Dialogue.instance.onFinishText.AddListener(UpdateDirectionBool);
+        Dialogue.instance.onFinishText.AddListener(UpdateDirectionBool);
         yield return npcDialogue.PlayDialogue(npcDialogue.dialogueArray);
     }
 	

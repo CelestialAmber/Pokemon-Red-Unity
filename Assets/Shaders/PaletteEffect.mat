@@ -106,3 +106,4 @@ Material:
     - color3: {r: 0.3882353, g: 0.3882353, b: 0.3882353, a: 1}
     - color4: {r: 0, g: 0, b: 0, a: 1}
     - screenPos: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []

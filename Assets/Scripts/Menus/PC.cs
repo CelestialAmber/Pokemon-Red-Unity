@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class PC : MonoBehaviour  {
+public class PC : MonoBehaviour {
     public GameObject currentMenu;
     public GameCursor cursor;
     public GameObject mainwindow, itemwindow,   quantitymenu;
@@ -24,7 +24,6 @@ public class PC : MonoBehaviour  {
     public RectTransform selectCursor;
     public bool switching;
     public GameObject indicator;
-    public static PC instance;
     
     void UpdateBagScreen(){
         
@@ -258,7 +257,7 @@ public class PC : MonoBehaviour  {
                                 selectCursor.gameObject.SetActive(false);
                                 Dialogue.instance.keepTextOnScreen = true;
                                 Dialogue.instance.needButtonPress = false;
-                    yield return Dialogue.instance.text("What do you want\\lto do?");
+                    yield return Dialogue.instance.text("What do you want&lto do?");
                                 currentMenu = mainwindow;
                     UpdateMainScreen();
                 }
@@ -450,7 +449,7 @@ public class PC : MonoBehaviour  {
         alreadyInBag = false;
         Item  withdrawnitem = Items.instance.pcItems[currentBagPosition];
         string DisplayString =  withdrawnitem.name + ".";
-        yield return Dialogue.instance.text("Withdrew\\l" + DisplayString);
+        yield return Dialogue.instance.text("Withdrew&l" + DisplayString);
         Item inBagItem = new Item("", 0,false);
         foreach (Item item in Items.instance.items)
         {
@@ -481,7 +480,7 @@ public class PC : MonoBehaviour  {
     IEnumerator DepositItem(){
         alreadyInBag = false;
         Item depositeditem = Items.instance.items[currentBagPosition];
-        yield return Dialogue.instance.text (depositeditem.name + " was\\lstored via PC.");
+        yield return Dialogue.instance.text (depositeditem.name + " was&lstored via PC.");
         Item inBagItem = new Item("", 0,false);
         foreach(Item item in Items.instance.pcItems){
             if (item.name == depositeditem.name)
@@ -560,42 +559,42 @@ public class PC : MonoBehaviour  {
         IEnumerator TooImportantToToss(){
 
             Dialogue.instance.Deactivate();
-        yield return Dialogue.instance.text ("That's too impor-\\ltant to toss!");
+        yield return Dialogue.instance.text ("That's too impor-&ltant to toss!");
         selectCursor.gameObject.SetActive(false);
         UpdateBagScreen();
         currentMenu = itemwindow;
 
     }
     IEnumerator WhatDoText(){
-        Dialogue.instance.Deactivate ();
+        Dialogue.instance.Deactivate();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
         Dialogue.instance.needButtonPress = false;
-        yield return Dialogue.instance.text ("What do you want\\lto do?");
+        yield return Dialogue.instance.text ("What do you want&lto do?");
 
     }
     IEnumerator WhatWithdrawText(){
-        Dialogue.instance.Deactivate ();
+        Dialogue.instance.Deactivate();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
         Dialogue.instance.needButtonPress = false;
-        yield return Dialogue.instance.text ("What do you want\\lto withdraw?");
+        yield return Dialogue.instance.text ("What do you want&lto withdraw?");
 
     }
     IEnumerator WhatDepositText(){
-        Dialogue.instance.Deactivate ();
+        Dialogue.instance.Deactivate();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
         Dialogue.instance.needButtonPress = false;
-        yield return Dialogue.instance.text ("What do you want\\lto deposit");
+        yield return Dialogue.instance.text ("What do you want&lto deposit");
 
     }
     IEnumerator WhatTossText(){
-        Dialogue.instance.Deactivate ();
+        Dialogue.instance.Deactivate();
         Dialogue.instance.fastText = true;
         Dialogue.instance.keepTextOnScreen = true;
         Dialogue.instance.needButtonPress = false;
-        yield return Dialogue.instance.text ("What do you want\\lto toss?");
+        yield return Dialogue.instance.text ("What do you want&lto toss?");
 
     }
     void Close()

@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
+
+
 public class Serializer
 {
     public static T Load<T>(string filename) where T : class
@@ -24,6 +26,7 @@ public class Serializer
         }
         return default(T);
     }
+
     public static void Save<T>(string filename, T data) where T : class
     {
         using (Stream stream = File.OpenWrite(filename))
@@ -32,10 +35,12 @@ public class Serializer
             formatter.Serialize(stream, data);
         }
     }
+
     public static void objectToJSON (string fileName,object type){ //save a json file to the StreamingAssets folder.
         string data =  JValue.Parse(JsonConvert.SerializeObject(type,new Newtonsoft.Json.Converters.StringEnumConverter())).ToString(Newtonsoft.Json.Formatting.Indented);
         File.WriteAllText(Application.streamingAssetsPath + "/" + fileName, data);
     }
+
     public static T JSONtoObject<T> (string fileName){ //load a json file from the StreamingAssets folder.
         FileStream file;
         StreamReader sr;

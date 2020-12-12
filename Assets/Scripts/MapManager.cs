@@ -98,41 +98,30 @@ public enum Map
 
 //Script to manage the world status.
 public class MapManager : MonoBehaviour{
-    public Player player;
     public int currentGrassEcounterTable, currentWaterEncounterTable;
-
-
     
     //The map the player is currently in.
     public Map currentMap;
 
-
-
     public static MapManager instance;
+
+    public List<MapCollider> mapColliders = new List<MapCollider>();
+
+    public TilemapRenderer currentMapGrassTilemap; //grass tilemap of the current map for the wild battle grass layer effect
+  
+
+
 
     private void Awake()
     {
         instance = this;
     }
-    public List<MapCollider> mapColliders = new List<MapCollider>();
-
-    public TilemapRenderer currentMapGrassTilemap; //grass tilemap of the current map for the wild battle grass layer effect
-  
    
     // Use this for initialization
     void Start () {
        
 	}
-	
-      
-
-  
-
 }
-
-
-
-
 
 
 [System.Serializable]
@@ -189,5 +178,4 @@ public class MapManager : MonoBehaviour{
 
         public string tileName;
 
-    
 }

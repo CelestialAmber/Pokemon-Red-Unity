@@ -19,7 +19,6 @@ public class PokemonMenu : MonoBehaviour
     public int selectedMon;
     public int numberofPokemon;
     public int MoveID;
-    public MainMenu moon;
     public bool switching, selectingPokemon;
     public Sprite[] switchMenuSprites;
     public Image switchMenuImage;
@@ -50,7 +49,7 @@ public class PokemonMenu : MonoBehaviour
         if (GameData.instance.party.Count == 0)
         {
             currentMenu = mainwindow;
-            moon.currentmenu = moon.thismenu;
+            MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
             this.gameObject.SetActive(false);
             return;
         }
@@ -165,7 +164,7 @@ public class PokemonMenu : MonoBehaviour
         string movestr = "";
         for (int i = 0; i < 4; i++)
         {
-            if (GameData.instance.party[selectedMon].slotHasMove(i))
+            if (GameData.instance.party[selectedMon].SlotHasMove(i))
             {
                 Move move = GameData.instance.party[selectedMon].moves[i];
                 movestr += (i > 0 ? "\n" : "") + move.name.ToUpper() + "\n" + "         " + "PP "  + (move.pp < 10 ? " " : "") + move.pp +  "/" + (move.maxpp < 10 ? " " : "") + move.maxpp;
@@ -302,7 +301,7 @@ public class PokemonMenu : MonoBehaviour
                 Dialogue.instance.fastText = false;
                Dialogue.instance.Deactivate();
                 Inputs.Enable("start");
-                moon.currentmenu = moon.thismenu;
+                MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
                 this.gameObject.SetActive(false);
             
             }
@@ -333,7 +332,7 @@ public class PokemonMenu : MonoBehaviour
                         fieldMoveObj[i].SetActive(false);
                     }
                     for(int i = 0; i < 4; i++){
-                        if(selectedPokemon.slotHasMove(i)){
+                        if(selectedPokemon.SlotHasMove(i)){
                         Move move = selectedPokemon.moves[i];
                     if(isFieldMove(move)) {
                         numberOfFieldMoves++;
@@ -400,147 +399,121 @@ public class PokemonMenu : MonoBehaviour
                         switching = true;
                         selectedOption = selectedMon;
                         currentMenu = mainwindow;
-                        StartCoroutine(Dialogue.instance.text("Move #MON\\lwhere?"));
+                        StartCoroutine(Dialogue.instance.text("Move #MON&lwhere?"));
                     Dialogue.instance.finishedText = true;
                         UpdateMainMenu();
-
-
                     }
                     else if (selectedOption == switchMenuOffset + 2)
                     {
                         selectedOption = selectedMon;
                         currentMenu = mainwindow;
                         UpdateMainMenu();
-
-
                     }
-            
-                
-
             }
-             else if (currentMenu == stats1)
-            {
-         
+            else if (currentMenu == stats1){
                     currentMenu = stats2;
                     UpdateStats2();
-
-
-                
-      
             }
-            else if (currentMenu == stats2)
-            {
-
-                
-                    SoundManager.instance.SetMusicNormal();
-                   Dialogue.instance.Deactivate();
-                   Dialogue.instance.fastText = true;
-                   Dialogue.instance.keepTextOnScreen = true;
-                   Dialogue.instance.needButtonPress = false;
-                    StartCoroutine(Dialogue.instance.text("Choose a POKéMON."));
-                    Dialogue.instance.finishedText = true;
-                    selectedOption = selectedMon;
-                    currentMenu = mainwindow;
-                    UpdateMainMenu();
-
+            else if (currentMenu == stats2){
+                SoundManager.instance.SetMusicNormal();
+                Dialogue.instance.Deactivate();
+                Dialogue.instance.fastText = true;
+                Dialogue.instance.keepTextOnScreen = true;
+                Dialogue.instance.needButtonPress = false;
+                StartCoroutine(Dialogue.instance.text("Choose a POKéMON."));
+                Dialogue.instance.finishedText = true;
+                selectedOption = selectedMon;
+                currentMenu = mainwindow;
+                UpdateMainMenu();
             }
-
-
-
         }
-
     }
-    IEnumerator UseFieldMove(string whatFieldMove)
-    {
+
+    IEnumerator UseFieldMove(string whatFieldMove){
         string monName = GameData.instance.party[selectedMon].nickname;
 
-if(whatFieldMove == "Cut"){
-if(Player.instance.facingTree){
-    currentMenu = mainwindow;
-    UpdateMenus();
-    CloseMenu();
-    Player.instance.Cut(monName);
-    this.gameObject.SetActive(false);
-     yield return 0;
-}else {
-    currentMenu = mainwindow;
-    UpdateMainMenu();
-yield return Dialogue.instance.text("There isn't\\lanything to CUT!");
-//TODO: implement cutting grass
-}
+        if(whatFieldMove == "Cut"){
+            if(Player.instance.facingTree){
+                currentMenu = mainwindow;
+                UpdateMenus();
+                CloseMenu();
+                Player.instance.Cut(monName);
+                this.gameObject.SetActive(false);
+                yield return 0;
+            }else{
+                currentMenu = mainwindow;
+                UpdateMainMenu();
+                yield return Dialogue.instance.text("There isn't&lanything to CUT!");
+                //TODO: implement cutting grass
+            }
+        }
+        if(whatFieldMove == "Surf"){
+            Player.instance.UpdateFacedTile();
+            if(Player.instance.facedTile.hasTile && Player.instance.facedTile.isWater){
+                SoundManager.instance.PlaySong(17);
+                currentMenu = mainwindow;
+                UpdateMainMenu();
+                yield return Dialogue.instance.text(GameData.instance.playerName + " got on&l"+ monName + "!");
+                Player.instance.Surf();
+                CloseMenu();
+                this.gameObject.SetActive(false);
+                yield return 0;
+            }else{
+                currentMenu = mainwindow;
+                UpdateMainMenu();
+                yield return Dialogue.instance.text("No SURFing on&l" + monName + " here!");
+            }
+        }
+        if(whatFieldMove == "Softboiled"){
+            while(selectedOption == selectedMon){
+                selectingPokemon = true;
+                currentMenu = mainwindow;
+                UpdateMainMenu();
+                Dialogue.instance.fastText = true;
+                Dialogue.instance.keepTextOnScreen = true;
+                Dialogue.instance.needButtonPress = false;
+                StartCoroutine(Dialogue.instance.text("Use item on which&l#MON?"));
 
-}
-if(whatFieldMove == "Surf"){
-    Player.instance.UpdateFacedTile();
-    if(Player.instance.facedTile.hasTile && Player.instance.facedTile.isWater){
-    SoundManager.instance.PlaySong(17);
-    currentMenu = mainwindow;
-    UpdateMainMenu();
-    yield return Dialogue.instance.text(GameData.instance.playerName + " got on\\l"+ monName + "!");
-    Player.instance.Surf();
-         CloseMenu();
-    this.gameObject.SetActive(false);
-    yield return 0;
-    }else{
+                while(selectingPokemon){
+                    yield return new WaitForSeconds(0.01f);
+                    if(Inputs.pressed("b")) yield return 0;
+                    if(Inputs.pressed("a")) break;
+                }
+
+                selectingPokemon = false;
+                Pokemon pokemon = GameData.instance.party[selectedOption];
+
+                if(selectedOption != selectedMon){
+                    if(pokemon.currentHP != pokemon.maxHP){
+                        int amount = GameData.instance.party[selectedMon].maxHP / 5;
+                        yield return AnimateOurHealth(-amount,selectedMon);
+                        yield return AnimateOurHealth(amount,selectedOption);
+                        yield return Dialogue.instance.text(pokemon.nickname + "&lrecovered by " + amount + "!");
+                    }else{
+                        yield return NoEffectText();
+                    }
+                }
+            }
+        }
+
         currentMenu = mainwindow;
         UpdateMainMenu();
-yield return Dialogue.instance.text("No SURFing on\\l" + monName + " here!");
-
     }
-   
-}
-if(whatFieldMove == "Softboiled"){
-     SoftboiledLoop:
-selectingPokemon = true;
-currentMenu = mainwindow;
-UpdateMainMenu();
-Dialogue.instance.fastText = true;
-Dialogue.instance.keepTextOnScreen = true;
-Dialogue.instance.needButtonPress = false;
-StartCoroutine(Dialogue.instance.text("Use item on which\\l#MON?"));
-while(selectingPokemon){
-   
-    yield return new WaitForSeconds(0.01f);
-    if(Inputs.pressed("b")) yield return 0;
-    if(Inputs.pressed("a")) break;
-}
-selectingPokemon = false;
-Pokemon pokemon = GameData.instance.party[selectedOption];
-if(selectedOption != selectedMon){
-if(pokemon.currentHP != pokemon.maxHP){
-    int amount = GameData.instance.party[selectedMon].maxHP / 5;
-   yield return AnimateOurHealth(-amount,selectedMon);
-    yield return AnimateOurHealth(amount,selectedOption);
-    yield return Dialogue.instance.text(pokemon.nickname +"\\lrecovered by " + amount + "!");
-}else {
-yield return NoEffectText();
-}
-}else goto SoftboiledLoop;
-
-}
-currentMenu = mainwindow;
-UpdateMainMenu();
 
 
-    }
     IEnumerator NoEffectText(){
-
-        yield return Dialogue.instance.text("It won't have any\\leffect.");
-    
+        yield return Dialogue.instance.text("It won't have any&leffect.");
     }
     
-    IEnumerator Switch()
-    {
+    IEnumerator Switch(){
         //Swap selected Pokemon.
         Pokemon pokemon = GameData.instance.party[selectedOption];
         GameData.instance.party[selectedOption] = GameData.instance.party[selectedMon];
         GameData.instance.party[selectedMon] = pokemon;
         yield return null;
-
     }
 
-    IEnumerator AnimateOurHealth(int amount, int i)
-    {
+    IEnumerator AnimateOurHealth(int amount, int i){
         if (amount + GameData.instance.party[i].currentHP < 0) amount = GameData.instance.party[i].currentHP;
         if (amount + GameData.instance.party[i].currentHP > GameData.instance.party[i].maxHP) amount = GameData.instance.party[i].maxHP - GameData.instance.party[i].currentHP;
         int result = amount;
@@ -559,21 +532,24 @@ UpdateMainMenu();
         yield return null;
 
     }
+
     public bool hasFieldMove(Pokemon pokemon){
         foreach(Move move in pokemon.moves){
             if(GameData.instance.fieldMoves.Contains(move.name)) return true;
         }
         return false;
     }
+
     public bool isFieldMove(Move move){
         if(GameData.instance.fieldMoves.Contains(move.name)) return true;
         else return false;
     }
+
     public void CloseMenu(){
         Inputs.instance.DisableForSeconds("b", 0.2f);
         Dialogue.instance.fastText = false;
         Dialogue.instance.Deactivate();
         Inputs.Enable("start");
-        moon.currentmenu = moon.thismenu;
+        MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
     }
 }

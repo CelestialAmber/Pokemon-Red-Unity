@@ -13,8 +13,7 @@ Right,
 Null
 }
 
-public class Player : MonoBehaviour
-{
+public class Player : Singleton<Player> {
 
     public enum MovementState{
         Walk,
@@ -30,7 +29,6 @@ public class Player : MonoBehaviour
     public GameObject top, bottom;
     public Sprite[] bubbles;
     public SpriteRenderer emotionbubble;
-    public MainMenu mainMenu;
     public ViewBio viewBio;
     //public TileBase facedtile;
     public int numberOfNoRandomBattleStepsLeft;
@@ -45,7 +43,7 @@ public class Player : MonoBehaviour
     private bool[] objectExists = new bool[4];
     public GameObject movingHitbox;
     public UnityEvent onEncounterTrainer;
-    private float baseMovementSpeed = 2f;
+    private float baseMovementSpeed = 8f; //2 with regular Update
     public int moveFrame;
     public bool holdingDirection;
     public bool inBattle;
@@ -62,39 +60,32 @@ public class Player : MonoBehaviour
     public bool isWarping;
     public bool cannotMoveLeft, cannotMoveRight, cannotMoveUp, cannotMoveDown;
     public bool canUseBike;
-
-        
-    // Use this for initialization
-
     public MapTile facedTile;
-
-    public static Player instance;
-    public List<string> doorSprites = new List<string>(new string[]{ "tile137", "tile149", "tile249", "tile480", "tile760" });
-
+    List<string> doorSprites = new List<string>(new string[]{ "tile137", "tile149", "tile249", "tile480", "tile760" });
     public bool forcePlayerBikeDownwards; //used when on Cycling Road
-
     public bool onWarpTile;
     public TileWarp currentWarpTile;
-
     public bool noCollision, disableEncounters;
+    public GameCursor cursor;
+    public Bag bag;
+
+
     void Awake()
     {
-
         disabled = false;
- 
         targetPos = transform.position;
     }
 
     void Start()
     {
-       GameData.instance.AddPokemonToParty("Mew",35);
-        GameData.instance.party[0].SetMove("Cut",0);
-        GameData.instance.party[0].SetMove("Surf",1);
-       // GameData.instance.party[0].SetMove("Softboiled",2);
+        GameData.instance.AddPokemonToParty("Mew",35);
+        GameData.instance.party[0].SetMove(Moves.Cut,0);
+        GameData.instance.party[0].SetMove(Moves.Surf,1);
+        GameData.instance.party[0].SetMove(Moves.Softboiled,2);
         GameData.instance.trainerID = Random.Range(0, 65536);
         direction = Direction.Down;
         targetPos = transform.position;
-         CheckMapCollision();
+        CheckMapCollision();
     }
 
  
@@ -102,32 +93,30 @@ public class Player : MonoBehaviour
     List<string> downLedgeSprites = new List<string>(new string[]{"Tileset_73","Tileset_74","Tileset_75","Tileset_76","Tileset_77","Tileset_78","Tileset_117","Tileset_120","Tileset_123"});
     List<string> leftLedgeSprites = new List<string>(new string[]{"Tileset_93","Tileset_96","Tileset_99"});
     List<string> rightLedgeSprites = new List<string>(new string[]{"Tileset_95","Tileset_98","Tileset_101"});
-    IEnumerator MovementUpdate()
-    {
-        if(!ledgejumping)
-        switch (walkSurfBikeState)
-        {
-            case MovementState.Walk: //Walk
-                speed = baseMovementSpeed;
-                break;
-            case MovementState.Bike: //Bicycle is 2x faster than walking/surfing
-                speed = baseMovementSpeed * 2f;
-                break;
-            case MovementState.Surf: //Surf
-                speed = baseMovementSpeed;
-                break;
-            //if on cycling road, add extra speed boost
+
+
+    IEnumerator MovementUpdate(){
+        if(!ledgejumping){
+            switch (walkSurfBikeState){
+                case MovementState.Walk: //Walk
+                    speed = baseMovementSpeed;
+                    break;
+                case MovementState.Bike: //Bicycle is 2x faster than walking/surfing
+                    speed = baseMovementSpeed * 2f;
+                    break;
+                case MovementState.Surf: //Surf
+                    speed = baseMovementSpeed;
+                    break;
+                //if on cycling road, add extra speed boost
+            }
         }
         
 
-        if (Dialogue.instance.finishedText && !isDisabled && !menuActive && !startMenuActive && !inBattle && !manuallyWalking && !GameData.instance.atTitleScreen)
-        {
-             
-              if(Inputs.released("left") || Inputs.released("right") || Inputs.released("up") || Inputs.released("down")){
-            if(holdFrames <= 2) holdFrames = 0;
-        }
-
-
+        if (Dialogue.instance.finishedText && !isDisabled && !menuActive && !startMenuActive && !inBattle && !manuallyWalking && !GameData.instance.atTitleScreen){
+         
+            if(Inputs.released("left") || Inputs.released("right") || Inputs.released("up") || Inputs.released("down")){
+                if(holdFrames <= 2) holdFrames = 0;
+            }
 
             //If we're not ledge jumping already, the adjacent tile is a ledge, and we're exactly on a tile, ledge jump
             if (Inputs.held("down") && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && downLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Down && holdFrames > 2)
@@ -333,7 +322,7 @@ void UpdateMovement(){
     moveFrame++;
     //only update movement every 2 frames
     if(moveFrame == 2){
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, 0.0625f * speed);
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * speed);
         moveFrame = 0;
     }
 }
@@ -394,31 +383,34 @@ void UpdateMovement(){
         StartCoroutine(MovePlayerOneTile(direction));
         }
     }
- 
+
+
+    void FixedUpdate(){
+        if (GameData.instance.atTitleScreen) return;
+        StartCoroutine(MovementUpdate());
+        movingHitbox.transform.position = targetPos;
+    }
 
 
     // Update is called once per frame
     void Update()
     {
         if (GameData.instance.atTitleScreen) return;
-        StartCoroutine(MovementUpdate());
-        movingHitbox.transform.position = targetPos;
+        //StartCoroutine(MovementUpdate());
+        //movingHitbox.transform.position = targetPos;
         
-       
         disabled = isDisabled;
 		playerAnim.SetFloat("walkbikesurfstate", (int)walkSurfBikeState);
 		if (viewBio.bioscreen.enabled) {
-
 			isDisabled = true;
 		}
-
        
 		if (!isDisabled && !menuActive && !startMenuActive) {
             if (Inputs.pressed("start") && !isMoving) {
                 SoundManager.instance.sfx.PlayOneShot(openStartMenuClip);
 				startMenuActive = true;
-                mainMenu.gameObject.SetActive(true);
-				mainMenu.Initialize ();
+                MainMenu.instance.enabled = true;
+				MainMenu.instance.Initialize();
 			}
 			top.SetActive (!isDisabled);
 			bottom.SetActive (!isDisabled);
@@ -431,46 +423,37 @@ void UpdateMovement(){
         }
             
 
-			if (facedObject != null) {
-                NPC npc = null;
-                if(facedObject != null){
-                     npc = facedObject.GetComponent<NPC>();
-                     
-                }
-				if (!holdingDirection && transform.position == targetPos) {
+		if (facedObject != null) {
+            NPC npc = facedObject.GetComponent<NPC>();
 
-					if (!holdingDirection && !isMoving && !isDisabled && Dialogue.instance.finishedText && !startMenuActive && !menuActive && !inBattle && !ledgejumping) {
+			if (!holdingDirection && transform.position == targetPos) {
+                if (!holdingDirection && !isMoving && !isDisabled && Dialogue.instance.finishedText && !startMenuActive && !menuActive && !inBattle && !ledgejumping) {
+                    if (Inputs.pressed("a")){
 
-                    if (Inputs.pressed("a"))
-                    {
-                        if (npc != null && !npc.isMoving)
-                        {
+                        if (npc != null && !npc.isMoving){
                             npc.FacePlayer();
                             if (npc.isTrainer) npc.StartEncounter();
                             else StartCoroutine(npc.NPCText());
                             return;
+                        }
 
+                        switch(facedObject.tag){ //what tag does the interactable object have?
+                            case "Slots":
+                                SlotsObject dialogueSlots = facedObject.GetComponent<SlotsObject>();
+                                StartCoroutine(dialogueSlots.PlayDialogue());
+                                return;
+                            case "Pokeball":
+                                Pokeball pokeball = facedObject.GetComponent<Pokeball>();
+                                pokeball.GetItem(pokeball.item);
+                                return;
                         }
-                        if(facedObject != null)
-                        {
-                            switch (facedObject.tag) //what tag does the interactable object have?
-                            {
-                                case "Slots":
-                                    SlotsObject dialogueSlots = facedObject.GetComponent<SlotsObject>();
-                                    StartCoroutine(dialogueSlots.PlayDialogue());
-                                    return;
-                                case "Pokeball":
-                                    Pokeball pokeball = facedObject.GetComponent<Pokeball>();
-                                    pokeball.GetItem(pokeball.item);
-                                    return;
-                            }
-                        }
-                       
-                    }						
-						}
-					}
-				}              
-    CheckObjectCollision();      
+
+                    }
+				}
+			}
+		}
+
+        CheckObjectCollision();      
 	}
 
 	
@@ -578,7 +561,7 @@ void UpdateMovement(){
     }
 
     public IEnumerator CutFunction(string MonName){
-        yield return Dialogue.instance.text(MonName + " hacked\\laway with CUT!");
+        yield return Dialogue.instance.text(MonName + " hacked&laway with CUT!");
         SoundManager.instance.sfx.PlayOneShot(cutClip);
         facedObject.GetComponent<PokemonTree>().Cut();
         //Implement cutting wild grass
@@ -644,43 +627,47 @@ void UpdateMovement(){
          yield return 0;
     }
 
-    public GameCursor cursor;
-    public Bag bag;
 
 	public void CloseMenus(){
         Inputs.Enable("start");
+        //Bag.instance.Close();
         bag.Close();
         cursor.SetActive(false);
         startMenuActive = false;
-        mainMenu.selectedOption = 0;
-        mainMenu.Close();      
+        MainMenu.instance.selectedOption = 0;
+        MainMenu.instance.Close();      
 	}
 
     public void UseItem(string whatItem)
     {
         StartCoroutine(UseItemFunction(whatItem));
     }
-    	public IEnumerator UseItemFunction(string whatItem){ //function called when using an item
-        
-        if (whatItem == "Bicycle")
-        {
-			CloseMenus ();
-            switch (walkSurfBikeState)
-            {
-                case  MovementState.Walk:
-                SoundManager.instance.PlaySong(7); //play the biking music
-                    yield return Dialogue.instance.text(GameData.instance.playerName + " got on the\\lBICYCLE!");
-                    
-                    walkSurfBikeState =  MovementState.Bike;
-                    break;
-                case  MovementState.Bike:
-                    PlayCurrentAreaSong();
-                    yield return Dialogue.instance.text(GameData.instance.playerName + " got off\\lthe BICYCLE.");
-                    walkSurfBikeState = MovementState.Walk;
-                    break;
-            }
-		    mainMenu.gameObject.SetActive(false);
-             bag.gameObject.SetActive(false);
+    
+    public IEnumerator UseItemFunction(string whatItem){ //function called when using an item
+
+        switch(whatItem){ 
+            case "Bicycle":
+		    	CloseMenus ();
+
+                switch (walkSurfBikeState)
+                {
+                    case  MovementState.Walk:
+                    SoundManager.instance.PlaySong(7); //play the biking music
+                        yield return Dialogue.instance.text(GameData.instance.playerName + " got on the&lBICYCLE!");
+                        
+                        walkSurfBikeState =  MovementState.Bike;
+                        break;
+                    case  MovementState.Bike:
+                        PlayCurrentAreaSong();
+                        yield return Dialogue.instance.text(GameData.instance.playerName + " got off&lthe BICYCLE.");
+                        walkSurfBikeState = MovementState.Walk;
+                        break;
+                }
+
+                //Bag.instance.gameObject.SetActive(false);
+                bag.gameObject.SetActive(false);
+                MainMenu.instance.Close();
+                break;
         }
 	}
 
@@ -690,7 +677,7 @@ void UpdateMovement(){
 
     public IEnumerator Run(){
 	    if(battleManager.battleType == BattleType.Wild){
-		    yield return Dialogue.instance.text("Ran away\\lsafely!");
+		    yield return Dialogue.instance.text("Ran away&lsafely!");
             battlemenu.SetActive(false);
             battleManager.Deactivate();
 		    ScreenEffects.flashLevel = 3;
@@ -763,7 +750,7 @@ void UpdateMovement(){
             else currentAreaTable = null;
             if (currentArea == Map.House) return; //if the current area is a house, don't change the music
             int songIndex = (int)SoundManager.MapSongs[mapArea];
-            if(SoundManager.instance.currentSong != songIndex && walkSurfBikeState == MovementState.Walk && !inBattle && !CreditsHandler.instance.isPlayingCredits){
+            if(SoundManager.instance.currentSong != songIndex && walkSurfBikeState == MovementState.Walk && !inBattle && !GameData.instance.isPlayingCredits){
                 if(SoundManager.instance.isFadingSong){
                    SoundManager.instance.StopFadeSong();
                 }

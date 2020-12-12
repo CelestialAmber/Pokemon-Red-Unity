@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Bulbasaur",
+    "baseStats": [45,49,49,45,65],
+    "baseExp": 64,
+    "evolution": {
+      "name": "Ivysaur",
+      "level": 16
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      "SwordsDance",
+      "Toxic",
+      "BodySlam",
+      "TakeDown",
+      "DoubleEdge",
+      "HyperBeam",
+      "Rage",
+      "MegaDrain",
+      "Solarbeam",
+      "Mimic",
+      "DoubleTeam",
+      "Reflect",
+      "Bide",
+      "Rest",
+      "Substitute",
+      "Cut"
+    ],
+    "levelupLearnset": [
+      {
+        "Item1": "Tackle",
+        "Item2": 1
+      },
+      {
+        "Item1": "Growl",
+        "Item2": 1
+      },
+      {
+        "Item1": "LeechSeed",
+        "Item2": 7
+      },
+      {
+        "Item1": "VineWhip",
+        "Item2": 13
+      },
+      {
+        "Item1": "Poisonpowder",
+        "Item2": 20
+      },
+      {
+        "Item1": "RazorLeaf",
+        "Item2": 27
+      },
+      {
+        "Item1": "Growth",
+        "Item2": 34
+      },
+      {
+        "Item1": "SleepPowder",
+        "Item2": 41
+      },
+      {
+        "Item1": "Solarbeam",
+        "Item2": 48
+      }
+    ]
+  },
+  {
+    "name": "",
+    "baseStats": [],
+    "baseExp": 0,
+    "evolution": {"name": "", "level": 0},
+    "types": ["", ""],
+    "tmhmLearnset": [],
+    "levelupLearnset": []
+  }
+]

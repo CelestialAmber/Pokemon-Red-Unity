@@ -7,19 +7,16 @@ public class ViewBio : MonoBehaviour {
 	public int currentBioNumber;
     public bool displayingbio;
 
+	public Sprite[] bios = new Sprite[453];
 
-    public static ViewBio instance;
-    private void Awake()
-    {
-        instance = this;
-		bios = Resources.LoadAll<Sprite> ("Bios");
+
+	private void Awake(){
+		bios = Resources.LoadAll<Sprite>("Bios");
     }
 
-	public Sprite[] bios = new Sprite[453];
+
 	// Use this for initialization
 	void Start(){
-		
-
 	}
 
 	public IEnumerator DisplayABio(int whatBio){
