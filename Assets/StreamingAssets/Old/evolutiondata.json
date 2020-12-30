@@ -8,7 +8,7 @@
     "Item2": 32
   },
   "Venusaur": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Charmander": {
@@ -20,7 +20,7 @@
     "Item2": 36
   },
   "Charizard": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Squirtle": {
@@ -32,7 +32,7 @@
     "Item2": 36
   },
   "Blastoise": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Caterpie": {
@@ -44,7 +44,7 @@
     "Item2": 10
   },
   "Butterfree": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Weedle": {
@@ -56,7 +56,7 @@
     "Item2": 10
   },
   "Beedrill": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Pidgey": {
@@ -68,7 +68,7 @@
     "Item2": 36
   },
   "Pidgeot": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Rattata": {
@@ -76,7 +76,7 @@
     "Item2": 20
   },
   "Raticate": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Spearow": {
@@ -84,7 +84,7 @@
     "Item2": 20
   },
   "Fearow": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Ekans": {
@@ -92,15 +92,15 @@
     "Item2": 22
   },
   "Arbok": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Pikachu": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Raichu": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Sandshrew": {
@@ -108,55 +108,55 @@
     "Item2": 22
   },
   "Sandslash": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
-  "Nidoran♀": {
+  "NidoranF": {
     "Item1": "Nidorina",
     "Item2": 16
   },
   "Nidorina": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Nidoqueen": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
-  "Nidoran♂": {
+  "NidoranM": {
     "Item1": "Nidorino",
     "Item2": 16
   },
   "Nidorino": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Nidoking": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Clefairy": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Clefable": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Vulpix": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Ninetales": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Jigglypuff": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Wigglytuff": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Zubat": {
@@ -164,7 +164,7 @@
     "Item2": 22
   },
   "Golbat": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Oddish": {
@@ -172,11 +172,11 @@
     "Item2": 21
   },
   "Gloom": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Vileplume": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Paras": {
@@ -184,7 +184,7 @@
     "Item2": 24
   },
   "Parasect": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Venonat": {
@@ -192,7 +192,7 @@
     "Item2": 31
   },
   "Venomoth": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Diglett": {
@@ -200,7 +200,7 @@
     "Item2": 26
   },
   "Dugtrio": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Meowth": {
@@ -208,7 +208,7 @@
     "Item2": 28
   },
   "Persian": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Psyduck": {
@@ -216,7 +216,7 @@
     "Item2": 33
   },
   "Golduck": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Mankey": {
@@ -224,15 +224,15 @@
     "Item2": 28
   },
   "Primeape": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Growlithe": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Arcanine": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Poliwag": {
@@ -240,11 +240,11 @@
     "Item2": 25
   },
   "Poliwhirl": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Poliwrath": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Abra": {
@@ -252,11 +252,11 @@
     "Item2": 16
   },
   "Kadabra": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Alakazam": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Machop": {
@@ -264,11 +264,11 @@
     "Item2": 28
   },
   "Machoke": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Machamp": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Bellsprout": {
@@ -276,11 +276,11 @@
     "Item2": 21
   },
   "Weepinbell": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Victreebel": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Tentacool": {
@@ -288,7 +288,7 @@
     "Item2": 30
   },
   "Tentacruel": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Geodude": {
@@ -296,11 +296,11 @@
     "Item2": 25
   },
   "Graveler": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Golem": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Ponyta": {
@@ -308,7 +308,7 @@
     "Item2": 40
   },
   "Rapidash": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Slowpoke": {
@@ -316,7 +316,7 @@
     "Item2": 37
   },
   "Slowbro": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Magnemite": {
@@ -324,11 +324,11 @@
     "Item2": 30
   },
   "Magneton": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
-  "Farfetch'd": {
-    "Item1": "",
+  "Farfetchd": {
+    "Item1": "None",
     "Item2": 0
   },
   "Doduo": {
@@ -336,7 +336,7 @@
     "Item2": 31
   },
   "Dodrio": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Seel": {
@@ -344,7 +344,7 @@
     "Item2": 34
   },
   "Dewgong": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Grimer": {
@@ -352,15 +352,15 @@
     "Item2": 38
   },
   "Muk": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Shellder": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Cloyster": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Gastly": {
@@ -368,15 +368,15 @@
     "Item2": 25
   },
   "Haunter": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Gengar": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Onix": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Drowzee": {
@@ -384,7 +384,7 @@
     "Item2": 26
   },
   "Hypno": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Krabby": {
@@ -392,7 +392,7 @@
     "Item2": 28
   },
   "Kingler": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Voltorb": {
@@ -400,15 +400,15 @@
     "Item2": 30
   },
   "Electrode": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Exeggcute": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Exeggutor": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Cubone": {
@@ -416,19 +416,19 @@
     "Item2": 28
   },
   "Marowak": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Hitmonlee": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Hitmonchan": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Lickitung": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Koffing": {
@@ -436,7 +436,7 @@
     "Item2": 35
   },
   "Weezing": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Rhyhorn": {
@@ -444,19 +444,19 @@
     "Item2": 42
   },
   "Rhydon": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Chansey": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Tangela": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Kangaskhan": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Horsea": {
@@ -464,7 +464,7 @@
     "Item2": 32
   },
   "Seadra": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Goldeen": {
@@ -472,43 +472,43 @@
     "Item2": 33
   },
   "Seaking": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Staryu": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Starmie": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
-  "Mr. Mime": {
-    "Item1": "",
+  "MrMime": {
+    "Item1": "None",
     "Item2": 0
   },
   "Scyther": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Jynx": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Electabuzz": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Magmar": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Pinsir": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Tauros": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Magikarp": {
@@ -516,35 +516,35 @@
     "Item2": 20
   },
   "Gyarados": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Lapras": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Ditto": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Eevee": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Vaporeon": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Jolteon": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Flareon": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Porygon": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Omanyte": {
@@ -552,7 +552,7 @@
     "Item2": 40
   },
   "Omastar": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Kabuto": {
@@ -560,27 +560,27 @@
     "Item2": 40
   },
   "Kabutops": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Aerodactyl": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Snorlax": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Articuno": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Zapdos": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Moltres": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Dratini": {
@@ -592,15 +592,19 @@
     "Item2": 55
   },
   "Dragonite": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Mewtwo": {
-    "Item1": "",
+    "Item1": "None",
     "Item2": 0
   },
   "Mew": {
-    "Item1": "",
+    "Item1": "None",
+    "Item2": 0
+  },
+  "Missingno": {
+    "Item1": "None",
     "Item2": 0
   }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class Pokemon
 {
+    public int id;
     public int maxHP;
     public int attack;
     public int defense;
@@ -21,16 +22,18 @@ public class Pokemon
     public int ownerID;
     public string owner;
     public int experience;
-    public string[] types;
+    public Types[] types;
     public Move[] moves;
     public int numberOfMoves;
 
-    public Pokemon(string name, int level, bool isWildPokemon)
+    public Pokemon(PokemonEnum pokemonId, int level, bool isWildPokemon)
     {
-        this.name = name;
+        PokemonDataEntry pokemonDataEntry = PokemonData.pokemonData[(int)pokemonId - 1];
+        this.id = pokemonDataEntry.id;
+        this.name = pokemonDataEntry.name;
         this.level = level;
         this.isWildPokemon = isWildPokemon;
-        this.nickname = this.name.ToUpper();
+        this.nickname = this.name;
         GenerateIvs();
         moves = new Move[4];
         for(int i = 0; i < 4; i++){
@@ -40,12 +43,10 @@ public class Pokemon
         SetExpToLevel();
         RecalculateStats();
         //If the Pokemon hasn't been registered as caught before, register it
-        if (!GameData.instance.pokedexlist[PokemonData.MonToID(name) - 1].caught)
+        if (!GameData.instance.pokedexlist[id - 1].caught)
         {
             RegisterInDex();
-            types = new string[2];
-            types[0] = PokemonData.PokemonTypes[name][0];
-            types[1] = PokemonData.PokemonTypes[name][1];
+            types = pokemonDataEntry.types;
         }
         if(!isWildPokemon){
 
@@ -58,18 +59,19 @@ public class Pokemon
     public void RegisterInDex()
     {
 
-        GameData.instance.pokedexlist[PokemonData.MonToID(name) - 1].seen = true;
-        if(!isWildPokemon) GameData.instance.pokedexlist[PokemonData.MonToID(name) - 1].caught = true;
+        GameData.instance.pokedexlist[id - 1].seen = true;
+        if(!isWildPokemon) GameData.instance.pokedexlist[id - 1].caught = true;
 
     }
     public void RecalculateStats()
     {
+        PokemonDataEntry pokemonDataEntry = PokemonData.pokemonData[id - 1];
 
-        maxHP = Mathf.FloorToInt(((PokemonData.baseStats[name][0] + ivs[0]) * 2 + Mathf.Sqrt(evs[0]) / 4) * level / 100) + level + 10;
-        attack = Mathf.FloorToInt(((PokemonData.baseStats[name][1] + ivs[1]) * 2 + Mathf.Sqrt(evs[1]) / 4) * level / 100) + 5;
-        defense = Mathf.FloorToInt(((PokemonData.baseStats[name][2] + ivs[2]) * 2 + Mathf.Sqrt(evs[2]) / 4) * level / 100) + 5;
-        speed = Mathf.FloorToInt(((PokemonData.baseStats[name][3] + ivs[3]) * 2 + Mathf.Sqrt(evs[3]) / 4) * level / 100) + 5;
-        special = Mathf.FloorToInt(((PokemonData.baseStats[name][4] + ivs[4]) * 2 + Mathf.Sqrt(evs[4]) / 4) * level / 100) + 5;
+        maxHP = Mathf.FloorToInt(((pokemonDataEntry.baseStats[0] + ivs[0]) * 2 + Mathf.Sqrt(evs[0]) / 4) * level / 100) + level + 10;
+        attack = Mathf.FloorToInt(((pokemonDataEntry.baseStats[1] + ivs[1]) * 2 + Mathf.Sqrt(evs[1]) / 4) * level / 100) + 5;
+        defense = Mathf.FloorToInt(((pokemonDataEntry.baseStats[2] + ivs[2]) * 2 + Mathf.Sqrt(evs[2]) / 4) * level / 100) + 5;
+        speed = Mathf.FloorToInt(((pokemonDataEntry.baseStats[3] + ivs[3]) * 2 + Mathf.Sqrt(evs[3]) / 4) * level / 100) + 5;
+        special = Mathf.FloorToInt(((pokemonDataEntry.baseStats[4] + ivs[4]) * 2 + Mathf.Sqrt(evs[4]) / 4) * level / 100) + 5;
         currentHP = maxHP;
     }
     public void GenerateIvs()
@@ -92,7 +94,7 @@ public class Pokemon
         
     }
     public int CalculateExp(int level){
-        switch (PokemonData.PokemonExpGroup[name])
+        switch (PokemonData.pokemonData[id - 1].expGroup)
         {
             case 0: //Slow
                 return Mathf.FloorToInt(5 * Mathf.Pow(level, 3) / 4f);
@@ -129,7 +131,7 @@ public class Pokemon
 
     Move MoveAtCurrentLevel(){
         /*
-        foreach(System.Tuple<string,int> move in PokemonData.levelmoves[name]){
+        foreach(LevelUpMove move in PokemonData.pokemonData[id - 1].levelupLearnset){
             if(move.Item2 == level) return new Move(move.Item1);
         }
         */
@@ -139,19 +141,19 @@ public class Pokemon
     public void UpdateMovesToLevel()
     {
         /*
-        for (int i = 0; i < PokemonData.levelmoves[name].Length; i++)
+        for (int i = 0; i < PokemonData.pokemonData[id - 1].levelupLearnset.Length; i++)
         {
-            System.Tuple<string,int> movetocheck = PokemonData.levelmoves[name][i];
-            if (level >= movetocheck.Item2)
+            LevelUpMove movetocheck = PokemonData.pokemonData[id - 1].levelupLearnset[i];
+            if (level >= movetocheck.level)
             {
-                if (!AlreadyHasMove(movetocheck.Item1))
+                if (!AlreadyHasMove(movetocheck.move))
                     if (numberOfMoves < 4)
                     {
-                        moves[numberOfMoves] = new Move(movetocheck.Item1);
+                        moves[numberOfMoves] = new Move(movetocheck.move);
                     }
                     else
                     {
-                        moves[0] = new Move(movetocheck.Item1);
+                        moves[0] = new Move(movetocheck.move);
                     }
             }
         }

@@ -1582,7 +1582,7 @@
       "Item2": 3
     },
     {
-      "Item1": "Nidoran♂",
+      "Item1": "NidoranM",
       "Item2": 3 
     },
     {
@@ -1590,7 +1590,7 @@
       "Item2": 4
     },
     {
-      "Item1": "Nidoran♂",
+      "Item1": "NidoranM",
       "Item2": 4
     },
     {
@@ -1598,7 +1598,7 @@
       "Item2": 2
     },
     {
-      "Item1": "Nidoran♂",
+      "Item1": "NidoranM",
       "Item2": 2
     },
     {
@@ -1610,11 +1610,11 @@
       "Item2": 5
     },
     {
-      "Item1": "Nidoran♀",
+      "Item1": "NidoranF",
       "Item2": 3
     },
     {
-      "Item1": "Nidoran♀",
+      "Item1": "NidoranF",
       "Item2": 4
     }
   ]
@@ -1758,7 +1758,7 @@
 
   "slots": [
     {
-      "Item1": "Nidoran♂",
+      "Item1": "NidoranM",
       "Item2": 24
     },
     {
@@ -1782,7 +1782,7 @@
       "Item2": 23
     },
     {
-      "Item1": "Nidoran♀",
+      "Item1": "NidoranF",
       "Item2": 24
     },
     {
@@ -1803,7 +1803,7 @@
 
   "slots": [
     {
-      "Item1": "Nidoran♂",
+      "Item1": "NidoranM",
       "Item2": 22
     },
     {
@@ -1848,7 +1848,7 @@
 
   "slots": [
     {
-      "Item1": "Nidoran♂",
+      "Item1": "NidoranM",
       "Item2": 25
     },
     {
@@ -1872,7 +1872,7 @@
       "Item2": 26
     },
     {
-      "Item1": "Nidoran♀",
+      "Item1": "NidoranF",
       "Item2": 25
     },
     {
@@ -1893,7 +1893,7 @@
 
   "slots": [
     {
-      "Item1": "Nidoran♂",
+      "Item1": "NidoranM",
       "Item2": 22
     },
     {

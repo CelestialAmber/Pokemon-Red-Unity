@@ -13,11 +13,11 @@
   ],
   "Charmander": [
     "Fire",
-    ""
+    "None"
   ],
   "Charmeleon": [
     "Fire",
-    ""
+    "None"
   ],
   "Charizard": [
     "Fire",
@@ -25,23 +25,23 @@
   ],
   "Squirtle": [
     "Water",
-    ""
+    "None"
   ],
   "Wartortle": [
     "Water",
-    ""
+    "None"
   ],
   "Blastoise": [
     "Water",
-    ""
+    "None"
   ],
   "Caterpie": [
     "Bug",
-    ""
+    "None"
   ],
   "Metapod": [
     "Bug",
-    ""
+    "None"
   ],
   "Butterfree": [
     "Bug",
@@ -73,11 +73,11 @@
   ],
   "Rattata": [
     "Normal",
-    ""
+    "None"
   ],
   "Raticate": [
     "Normal",
-    ""
+    "None"
   ],
   "Spearow": [
     "Normal",
@@ -89,47 +89,47 @@
   ],
   "Ekans": [
     "Poison",
-    ""
+    "None"
   ],
   "Arbok": [
     "Poison",
-    ""
+    "None"
   ],
   "Pikachu": [
     "Electric",
-    ""
+    "None"
   ],
   "Raichu": [
     "Electric",
-    ""
+    "None"
   ],
   "Sandshrew": [
     "Ground",
-    ""
+    "None"
   ],
   "Sandslash": [
     "Ground",
-    ""
+    "None"
   ],
-  "Nidoran♀": [
+  "NidoranF": [
     "Poison",
-    ""
+    "None"
   ],
   "Nidorina": [
     "Poison",
-    ""
+    "None"
   ],
   "Nidoqueen": [
     "Poison",
     "Ground"
   ],
-  "Nidoran♂": [
+  "NidoranM": [
     "Poison",
-    ""
+    "None"
   ],
   "Nidorino": [
     "Poison",
-    ""
+    "None"
   ],
   "Nidoking": [
     "Poison",
@@ -137,27 +137,27 @@
   ],
   "Clefairy": [
     "Normal",
-    ""
+    "None"
   ],
   "Clefable": [
     "Normal",
-    ""
+    "None"
   ],
   "Vulpix": [
     "Fire",
-    ""
+    "None"
   ],
   "Ninetales": [
     "Fire",
-    ""
+    "None"
   ],
   "Jigglypuff": [
     "Normal",
-    ""
+    "None"
   ],
   "Wigglytuff": [
     "Normal",
-    ""
+    "None"
   ],
   "Zubat": [
     "Poison",
@@ -197,51 +197,51 @@
   ],
   "Diglett": [
     "Ground",
-    ""
+    "None"
   ],
   "Dugtrio": [
     "Ground",
-    ""
+    "None"
   ],
   "Meowth": [
     "Normal",
-    ""
+    "None"
   ],
   "Persian": [
     "Normal",
-    ""
+    "None"
   ],
   "Psyduck": [
     "Water",
-    ""
+    "None"
   ],
   "Golduck": [
     "Water",
-    ""
+    "None"
   ],
   "Mankey": [
     "Fighting",
-    ""
+    "None"
   ],
   "Primeape": [
     "Fighting",
-    ""
+    "None"
   ],
   "Growlithe": [
     "Fire",
-    ""
+    "None"
   ],
   "Arcanine": [
     "Fire",
-    ""
+    "None"
   ],
   "Poliwag": [
     "Water",
-    ""
+    "None"
   ],
   "Poliwhirl": [
     "Water",
-    ""
+    "None"
   ],
   "Poliwrath": [
     "Water",
@@ -249,27 +249,27 @@
   ],
   "Abra": [
     "Psychic",
-    ""
+    "None"
   ],
   "Kadabra": [
     "Psychic",
-    ""
+    "None"
   ],
   "Alakazam": [
     "Psychic",
-    ""
+    "None"
   ],
   "Machop": [
     "Fighting",
-    ""
+    "None"
   ],
   "Machoke": [
     "Fighting",
-    ""
+    "None"
   ],
   "Machamp": [
     "Fighting",
-    ""
+    "None"
   ],
   "Bellsprout": [
     "Grass",
@@ -305,7 +305,7 @@
   ],
   "Ponyta": [
     "Fire",
-    ""
+    "None"
   ],
   "Rapidash": [
     "Fire",
@@ -321,13 +321,13 @@
   ],
   "Magnemite": [
     "Electric",
-    ""
+    "None"
   ],
   "Magneton": [
     "Electric",
-    ""
+    "None"
   ],
-  "Farfetch'd": [
+  "Farfetchd": [
     "Normal",
     "Flying"
   ],
@@ -341,7 +341,7 @@
   ],
   "Seel": [
     "Water",
-    ""
+    "None"
   ],
   "Dewgong": [
     "Water",
@@ -349,15 +349,15 @@
   ],
   "Grimer": [
     "Poison",
-    ""
+    "None"
   ],
   "Muk": [
     "Poison",
-    ""
+    "None"
   ],
   "Shellder": [
     "Water",
-    ""
+    "None"
   ],
   "Cloyster": [
     "Water",
@@ -381,27 +381,27 @@
   ],
   "Drowzee": [
     "Psychic",
-    ""
+    "None"
   ],
   "Hypno": [
     "Psychic",
-    ""
+    "None"
   ],
   "Krabby": [
     "Water",
-    ""
+    "None"
   ],
   "Kingler": [
     "Water",
-    ""
+    "None"
   ],
   "Voltorb": [
     "Electric",
-    ""
+    "None"
   ],
   "Electrode": [
     "Electric",
-    ""
+    "None"
   ],
   "Exeggcute": [
     "Grass",
@@ -413,31 +413,31 @@
   ],
   "Cubone": [
     "Ground",
-    ""
+    "None"
   ],
   "Marowak": [
     "Ground",
-    ""
+    "None"
   ],
   "Hitmonlee": [
     "Fighting",
-    ""
+    "None"
   ],
   "Hitmonchan": [
     "Fighting",
-    ""
+    "None"
   ],
   "Lickitung": [
     "Normal",
-    ""
+    "None"
   ],
   "Koffing": [
     "Poison",
-    ""
+    "None"
   ],
   "Weezing": [
     "Poison",
-    ""
+    "None"
   ],
   "Rhyhorn": [
     "Ground",
@@ -449,43 +449,43 @@
   ],
   "Chansey": [
     "Normal",
-    ""
+    "None"
   ],
   "Tangela": [
     "Grass",
-    ""
+    "None"
   ],
   "Kangaskhan": [
     "Normal",
-    ""
+    "None"
   ],
   "Horsea": [
     "Water",
-    ""
+    "None"
   ],
   "Seadra": [
     "Water",
-    ""
+    "None"
   ],
   "Goldeen": [
     "Water",
-    ""
+    "None"
   ],
   "Seaking": [
     "Water",
-    ""
+    "None"
   ],
   "Staryu": [
     "Water",
-    ""
+    "None"
   ],
   "Starmie": [
     "Water",
     "Psychic"
   ],
-  "Mr. Mime": [
+  "MrMime": [
     "Psychic",
-    ""
+    "None"
   ],
   "Scyther": [
     "Bug",
@@ -497,23 +497,23 @@
   ],
   "Electabuzz": [
     "Electric",
-    ""
+    "None"
   ],
   "Magmar": [
     "Fire",
-    ""
+    "None"
   ],
   "Pinsir": [
     "Bug",
-    ""
+    "None"
   ],
   "Tauros": [
     "Normal",
-    ""
+    "None"
   ],
   "Magikarp": [
     "Water",
-    ""
+    "None"
   ],
   "Gyarados": [
     "Water",
@@ -525,27 +525,27 @@
   ],
   "Ditto": [
     "Normal",
-    ""
+    "None"
   ],
   "Eevee": [
     "Normal",
-    ""
+    "None"
   ],
   "Vaporeon": [
     "Water",
-    ""
+    "None"
   ],
   "Jolteon": [
     "Electric",
-    ""
+    "None"
   ],
   "Flareon": [
     "Fire",
-    ""
+    "None"
   ],
   "Porygon": [
     "Normal",
-    ""
+    "None"
   ],
   "Omanyte": [
     "Rock",
@@ -569,7 +569,7 @@
   ],
   "Snorlax": [
     "Normal",
-    ""
+    "None"
   ],
   "Articuno": [
     "Ice",
@@ -585,11 +585,11 @@
   ],
   "Dratini": [
     "Dragon",
-    ""
+    "None"
   ],
   "Dragonair": [
     "Dragon",
-    ""
+    "None"
   ],
   "Dragonite": [
     "Dragon",
@@ -597,10 +597,14 @@
   ],
   "Mewtwo": [
     "Psychic",
-    ""
+    "None"
   ],
   "Mew": [
     "Psychic",
-    ""
+    "None"
+  ],
+  "Missingno": [
+    "Bird",
+    "Normal"
   ]
 }

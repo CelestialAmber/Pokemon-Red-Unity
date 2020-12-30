@@ -78,7 +78,7 @@ public class Player : Singleton<Player> {
 
     void Start()
     {
-        GameData.instance.AddPokemonToParty("Mew",35);
+        GameData.instance.AddPokemonToParty(PokemonEnum.Mew,35);
         GameData.instance.party[0].SetMove(Moves.Cut,0);
         GameData.instance.party[0].SetMove(Moves.Surf,1);
         GameData.instance.party[0].SetMove(Moves.Softboiled,2);
@@ -239,7 +239,7 @@ public class Player : Singleton<Player> {
                                 rand <= 252 ? 8 : 9);//11/256 =  4.3% chance of slot 8
                                                      //3/256 =  1.2% chance of slot 9
                                 Debug.Log("Chosen Pokemon: " + table.slots[chosenIndex].ToString());
-                                        Debug.Log(table.slots[chosenIndex].Item1.Length);
+                                        //Debug.Log(table.slots[chosenIndex].Item1.Length);
                                 isMoving = false;
                                 holdingDirection = false;
                                 StartCoroutine(StartWildBattle(table.slots[chosenIndex]));
@@ -585,7 +585,7 @@ void UpdateMovement(){
     public BattleManager battleManager;
     public GameObject battlemenu;
 
-    public IEnumerator StartWildBattle(System.Tuple<string,int> pokemon)
+    public IEnumerator StartWildBattle(System.Tuple<PokemonEnum,int> pokemon)
     {
         inBattle = true;
         disabled = true;

@@ -26,6 +26,11 @@ public enum Starter
 
 public static class IntExtensions{
 
+    /*
+    The first two should either be improved or just removed and have number formatting 
+    for different things be done directly (just use string.Format or ToString instead directly
+    rather than use these functions)
+    */
     public static string ZeroFormat(this int input, string zeroformat)
     {
         switch(zeroformat){
@@ -39,7 +44,9 @@ public static class IntExtensions{
        throw new UnityException("Incorrect format");
 
     }
-     public static string SpaceFormat(this int input, int format)
+    
+    
+    public static string SpaceFormat(this int input, int format)
     {
         switch(format){
 
@@ -51,6 +58,7 @@ public static class IntExtensions{
        throw new UnityException("Incorrect format");
 
     }
+
     public static int UnderflowUInt24(this int input){ //underflow function for the exp bug
         if(input < 0){
              input += (int)Mathf.Pow(2,24);
@@ -98,9 +106,9 @@ public class GameData : Singleton<GameData> {
     public FontAtlas fontAtlas;
 
 
-    public void AddPokemonToParty(string name,int level)
+    public void AddPokemonToParty(PokemonEnum pokemon ,int level)
     {
-        party.Add(new Pokemon(name, level, false));
+        party.Add(new Pokemon(pokemon, level, false));
     }
 
     public void Init()

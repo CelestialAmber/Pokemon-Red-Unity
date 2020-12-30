@@ -7,17 +7,9 @@ using System;
 public class PokemonDataJSON : MonoBehaviour {
     public VersionManager versionManager;
     void Awake(){
-        PokemonData.TypeEffectiveness = Serializer.JSONtoObject<Dictionary<string,Dictionary<string,float>>>("typeEffectiveness.json");
-        PokemonData.evolution = Serializer.JSONtoObject<Dictionary<string,Tuple<string,int>>>("evolutiondata.json");
-        PokemonData.baseStats = Serializer.JSONtoObject<Dictionary<string,int[]>>("basestatsdata.json");
-        PokemonData.levelmoves = Serializer.JSONtoObject<Dictionary<string, Tuple<string,int>[]>>("levelmovesdata.json");
-        PokemonData.learnbytm = Serializer.JSONtoObject<Dictionary<string,string[]>>("learnbytmdata.json");
+        PokemonData.TypeEffectiveness = Serializer.JSONtoObject<Dictionary<Types,Dictionary<Types,float>>>("typeEffectiveness.json");
+        PokemonData.pokemonData = Serializer.JSONtoObject<List<PokemonDataEntry>>("pokemonData.json");
         PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
-        PokemonData.PokemonPartySprite = Serializer.JSONtoObject<Dictionary<string, int>>("partySpriteData.json");
-        PokemonData.PokemonTypes = Serializer.JSONtoObject<Dictionary<string, string[]>>("pokemonTypeData.json");
-        PokemonData.PokemonExpGroup = Serializer.JSONtoObject<Dictionary<string, int>>("expGroupData.json");
-        PokemonData.PokemonToIndex = Serializer.JSONtoObject<Dictionary<string, int>>("pokemonIndices.json");
-        PokemonData.TMHMtoIndex = Serializer.JSONtoObject<Dictionary<string, int>>("tmHmIndices.json");
         PokemonData.itemPrices = Serializer.JSONtoObject<Dictionary<string, int>>("itemPrices.json");
         PokemonData.shopItemsLists = Serializer.JSONtoObject<Dictionary<string,string[]>>("shopItemsData.json");
     }

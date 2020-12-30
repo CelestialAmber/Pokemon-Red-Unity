@@ -6,7 +6,7 @@ using System;
 
 [System.Serializable]
 public class MoveData{
-    public MoveData(string name, int power, string type, int accuracy, int maxpp,string effect){
+    public MoveData(string name, int power, Types type, int accuracy, int maxpp,string effect){
         this.name = name;
         this.power = power;
         this.type = type;
@@ -16,17 +16,40 @@ public class MoveData{
     }
     public string name;
     public int power;
-    public string type;
+    public Types type;
     public int accuracy;
     public int maxpp;
     public string effect;
 
 }
+
+[System.Serializable]
+public class LevelUpMove{
+    public Moves move;
+    public int level;
+
+    public LevelUpMove(Moves move, int level){
+        this.move = move;
+        this.level = level;
+    }
+}
+
+[System.Serializable]
+public class PokemonEvolution{
+    public PokemonEnum pokemon;
+    public int level;
+
+    public PokemonEvolution(PokemonEnum pokemon, int level){
+        this.pokemon = pokemon;
+        this.level = level;
+    }
+}
+
 //Class for encounter tables.
 [System.Serializable]
 public class EncounterData{
     public int encounterChance;
-    public Tuple<string,int>[] slots;
+    public Tuple<PokemonEnum,int>[] slots;
 }
 
 public class FishingGroup{
@@ -35,6 +58,38 @@ public class FishingGroup{
         this.slots = slots;
     } 
 }
+
+
+[System.Serializable]
+public class PokemonDataEntry {
+    public string name;
+    public int id;
+    /*
+    Sprite for party menu
+
+    Sprite types:
+    0:Generic Sprite
+    1:Bird Sprite
+    2:Water Sprite
+    3:Clefairy Sprite
+    4:Grass Sprite
+    5:Bug Sprite
+    6:Dragon Sprite
+    7:Dog Sprite
+    8:Pokeball Sprite
+    9:Fossil Sprite
+    10:Missingno Sprite
+    */
+    public int partySprite;
+    public int[] baseStats = new int[5];
+    public int baseExp;
+    public int expGroup;
+    public PokemonEvolution evolution;
+    public Types[] types = new Types[2];
+    public int[] tmhmLearnset;
+    public LevelUpMove[] levelupLearnset;
+}
+
 
 public class PokemonData
 {
@@ -46,20 +101,25 @@ public class PokemonData
         throw new IndexOutOfRangeException("The move index is out of range.");
     }
 
+    public static string GetTypeName(Types type){
+        if(type == Types.None) return "";
+        else return typeNames[(int)type - 1];
+    }
+
+    public static Moves TMHMToMove(int tmhmIndex){
+        return TMHMMoves[tmhmIndex];
+    }
+
     //Format: name, power, type, accuracy, max pp, effect
     public static List<MoveData> moves = new List<MoveData>();
 
-    public static int MonToID(string name){
-        return PokemonToIndex[name];
+
+     public static string IndexToMon(int index){
+        return pokemonData[index - 1].name;
     }
 
-    //format: move name, pokemon name
-    public static Dictionary<string, string[]> learnbytm = new Dictionary<string, string[]>();
-    //format(HP,Attack,Defense,Speed,Special)
-    public static Dictionary<string, int[]> baseStats = new Dictionary<string, int[]>();
-    public static Dictionary<string, Tuple<string,int>[]> levelmoves = new Dictionary<string, Tuple<string,int>[]>();
-    //format: pokemon name as key, outputs pokemon and evolved level
-    public static Dictionary<string, Tuple<string,int>> evolution = new Dictionary<string, Tuple<string,int>>();
+    public static List<PokemonDataEntry> pokemonData = new List<PokemonDataEntry>();
+    
     public static List<EncounterData> encounters = new List<EncounterData>();
     /* Encounter Table Indices:
     0:Diglett Cave
@@ -136,53 +196,10 @@ new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Slowbro",23), ne
 new FishingGroup(new Tuple<string,int>[]{new Tuple<string,int>("Seaking",23), new Tuple<string,int>("Krabby",15), new Tuple<string,int>("Goldeen",15), new Tuple<string,int>("Magikarp",15)}),
     });
 
-    /*
-List of index of the party sprite for each Pokemon.
-0:Generic Sprite
-1:Bird Sprite
-2:Water Sprite
-3:Clefairy Sprite
-4:Grass Sprite
-5:Bug Sprite
-6:Dragon Sprite
-7:Dog Sprite
-8:Pokeball Sprite
-9:Fossil Sprite
-10:Missingno Sprite
-*/
-    public static Dictionary<string, int> PokemonPartySprite = new Dictionary<string, int>();
-    public static Dictionary<string, string[]> PokemonTypes = new Dictionary<string, string[]>();
-    public static Dictionary<string, int> PokemonExpGroup = new Dictionary<string, int>();
-    public static string IndexToMon(int index)
-    {
-        int i = 1;
-        foreach (var key in PokemonToIndex.Keys)
-        {
-            if (i == index)
-            {
-                return key;
-            }
-            i++;
-        }
-        return "";
-    }
-    public static string IndexToMonUpper(int index)
-    {
-        int i = 1;
-        foreach (var key in PokemonToIndex.Keys)
-        {
-            if (i == index)
-            {
-                return key.ToUpper();
-            }
-            i++;
-        }
-        return "";
-    }
-    public static Dictionary<string, int> PokemonToIndex = new Dictionary<string, int>();
-    public static Dictionary<string, int> TMHMtoIndex = new Dictionary<string, int>();
+
+
     public static Dictionary<string, int> itemPrices = new Dictionary<string, int>();
-public static Dictionary<string,Dictionary<string,float>> TypeEffectiveness = new Dictionary<string, Dictionary<string, float>>();
+public static Dictionary<Types,Dictionary<Types,float>> TypeEffectiveness = new Dictionary<Types, Dictionary<Types, float>>();
 public static Dictionary<string,string[]> shopItemsLists = new Dictionary<string, string[]>();
 
 public static string[] typeNames = {
@@ -202,6 +219,64 @@ public static string[] typeNames = {
     "BUG",
     "GHOST",
     "DRAGON"
+};
+
+public static Moves[] TMHMMoves = {
+    Moves.MegaPunch,
+    Moves.RazorWind,
+    Moves.SwordsDance,
+    Moves.Whirlwind,
+    Moves.MegaKick,
+    Moves.Toxic,
+    Moves.HornDrill,
+    Moves.BodySlam,
+    Moves.TakeDown,
+    Moves.DoubleEdge,
+    Moves.Bubblebeam,
+    Moves.WaterGun,
+    Moves.IceBeam,
+    Moves.Blizzard,
+    Moves.HyperBeam,
+    Moves.PayDay,
+    Moves.Submission,
+    Moves.Counter,
+    Moves.SeismicToss,
+    Moves.Rage,
+    Moves.MegaDrain,
+    Moves.Solarbeam,
+    Moves.DragonRage,
+    Moves.Thunderbolt,
+    Moves.Thunder,
+    Moves.Earthquake,
+    Moves.Fissure,
+    Moves.Dig,
+    Moves.Psychic,
+    Moves.Teleport,
+    Moves.Mimic,
+    Moves.DoubleTeam,
+    Moves.Reflect,
+    Moves.Bide,
+    Moves.Metronome,
+    Moves.Selfdestruct,
+    Moves.EggBomb,
+    Moves.FireBlast,
+    Moves.Swift,
+    Moves.SkullBash,
+    Moves.Softboiled,
+    Moves.DreamEater,
+    Moves.SkyAttack,
+    Moves.Rest,
+    Moves.ThunderWave,
+    Moves.Psywave,
+    Moves.Explosion,
+    Moves.RockSlide,
+    Moves.TriAttack,
+    Moves.Substitute,
+    Moves.Cut,
+    Moves.Fly,
+    Moves.Surf,
+    Moves.Strength,
+    Moves.Flash
 };
 
 }

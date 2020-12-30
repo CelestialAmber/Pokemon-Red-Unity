@@ -65,7 +65,7 @@ public class Pokedex : MonoBehaviour
         for (int i = 0; i < 7; i++)
         {
             int slotNo = topSlotIndex + i;
-            entries[i].transform.GetChild(0).GetComponent<CustomText>().text = slotNo.ZeroFormat("00x") + "\n" + (!GameData.instance.pokedexlist[slotNo - 1].seen ? "   ----------" : "   " + PokemonData.IndexToMonUpper(slotNo));
+            entries[i].transform.GetChild(0).GetComponent<CustomText>().text = slotNo.ZeroFormat("00x") + "\n" + (!GameData.instance.pokedexlist[slotNo - 1].seen ? "   ----------" : "   " + PokemonData.IndexToMon(slotNo));
             entries[i].transform.GetChild(1).gameObject.SetActive(GameData.instance.pokedexlist[slotNo - 1].caught);
         }
     }

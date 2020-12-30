@@ -27,10 +27,10 @@
   "Raichu": 2,
   "Sandshrew": 2,
   "Sandslash": 2,
-  "Nidoran♀": 1,
+  "NidoranF": 1,
   "Nidorina": 1,
   "Nidoqueen": 1,
-  "Nidoran♂": 1,
+  "NidoranM": 1,
   "Nidorino": 1,
   "Nidoking": 1,
   "Clefairy": 3,
@@ -81,7 +81,7 @@
   "Slowbro": 2,
   "Magnemite": 2,
   "Magneton": 2,
-  "Farfetch'd": 2,
+  "Farfetchd": 2,
   "Doduo": 2,
   "Dodrio": 2,
   "Seel": 2,
@@ -120,7 +120,7 @@
   "Seaking": 2,
   "Staryu": 0,
   "Starmie": 0,
-  "Mr. Mime": 2,
+  "MrMime": 2,
   "Scyther": 2,
   "Jynx": 2,
   "Electabuzz": 2,
@@ -149,5 +149,6 @@
   "Dragonair": 0,
   "Dragonite": 0,
   "Mewtwo": 0,
-  "Mew": 1
+  "Mew": 1,
+  "Missingno": 4
 }

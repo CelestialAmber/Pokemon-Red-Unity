@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
+
 public static class MathE{
     public static void Clamp (ref int var, int min, int max){
        var = (int)Mathf.Clamp((float)var, (float)min, (float)max);
@@ -11,16 +14,22 @@ public static class MathE{
         var = var < min ? max : var > max ? min : var;
     }
 }
+
+
 public class Options : MonoBehaviour {
 	public GameCursor cursor;
 	public RectTransform textSpeedArrow, battleAnimationArrow, battleStyleArrow;
 	public int selectedOption;
     public static Options instance;
+
+
     // Use this for initialization
     private void Awake()
     {
         instance = this;
     }
+
+
     public void Init()
     {
         selectedOption = 0;
@@ -56,6 +65,7 @@ public class Options : MonoBehaviour {
 
             }
         }
+        
         if (Inputs.pressed("b"))
         {
             if (Title.instance.gameObject.activeSelf)
@@ -121,17 +131,11 @@ public class Options : MonoBehaviour {
             MathE.Clamp(ref selectedOption, 0, 3);
             UpdateCursorPosition();
         }
-	
-	
-
-
-	
-	
 	}
-    void UpdateCursorPosition()
-    {
-        switch (selectedOption)
-        {
+
+
+    void UpdateCursorPosition(){
+        switch (selectedOption){
             case 0:
                 if (GameData.instance.textChoice == 2) cursor.SetPosition(112, 112);
                 else if (GameData.instance.textChoice == 1) cursor.SetPosition(56, 112);
@@ -151,4 +155,6 @@ public class Options : MonoBehaviour {
                 break;
         }
     }
+
+
 }

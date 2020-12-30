@@ -4,7 +4,7 @@ public class Move {
     public string name;
     public int pp;
     public int maxpp;
-    public string type;
+    public Types type;
 
 
     public Move(int index)
@@ -23,7 +23,7 @@ public class Move {
 
         maxpp = 0;
         pp = 0;
-        type = null;
+        type = Types.None; //Look at ths later
     }
 }
 

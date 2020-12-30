@@ -1284,7 +1284,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleID: 0
   enemyMons:
-  - maxHP: 0
+  - id: 0
+    maxHP: 0
     attack: 0
     defense: 0
     speed: 0
@@ -1300,10 +1301,11 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
-  - maxHP: 0
+  - id: 0
+    maxHP: 0
     attack: 0
     defense: 0
     speed: 0
@@ -1319,10 +1321,11 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
-  - maxHP: 0
+  - id: 0
+    maxHP: 0
     attack: 0
     defense: 0
     speed: 0
@@ -1338,10 +1341,11 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
-  - maxHP: 0
+  - id: 0
+    maxHP: 0
     attack: 0
     defense: 0
     speed: 0
@@ -1357,10 +1361,11 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
-  - maxHP: 0
+  - id: 0
+    maxHP: 0
     attack: 0
     defense: 0
     speed: 0
@@ -1376,10 +1381,11 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
-  - maxHP: 0
+  - id: 0
+    maxHP: 0
     attack: 0
     defense: 0
     speed: 0
@@ -1395,7 +1401,7 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
   playerstats: {fileID: 1142399518}
@@ -1412,6 +1418,7 @@ MonoBehaviour:
   trainerObject: {fileID: 1835076345}
   enemyMonObject: {fileID: 2098982416}
   playermon:
+    id: 0
     maxHP: 0
     attack: 0
     defense: 0
@@ -1428,7 +1435,7 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
   playerHpText: {fileID: 1075580880}
@@ -1444,6 +1451,7 @@ MonoBehaviour:
   - {fileID: 721880207}
   enemyParty: []
   enemymon:
+    id: 0
     maxHP: 0
     attack: 0
     defense: 0
@@ -1460,7 +1468,7 @@ MonoBehaviour:
     ownerID: 0
     owner: 
     experience: 0
-    types: []
+    types: 
     moves: []
     numberOfMoves: 0
   enemymonLeveltext: {fileID: 872392765}
@@ -25280,6 +25288,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
         type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[11].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
+        type: 3}
       propertyPath: m_AnimatedTiles.Array.data[13].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
@@ -25310,6 +25323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
         type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[23].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
+        type: 3}
       propertyPath: m_AnimatedTiles.Array.data[24].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
@@ -25325,6 +25343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
         type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[28].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
+        type: 3}
       propertyPath: m_AnimatedTiles.Array.data[29].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
@@ -25336,6 +25359,11 @@ PrefabInstance:
     - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[31].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[33].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
     - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
@@ -25376,6 +25404,11 @@ PrefabInstance:
     - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[43].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[44].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
     - target: {fileID: 1684661850642815156, guid: 5b18194ddceb50445b715af24b48f052,
@@ -31222,36 +31255,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732929270}
   m_CullTransparentMesh: 0
---- !u!1 &1736160961
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1736160962}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1736160962
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736160961}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.42314, y: -0.121077895, z: -17.544212}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1741422299
 GameObject:
   m_ObjectHideFlags: 0
@@ -32409,6 +32412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2436992635845147195, guid: 6a4a4af90262eb944890f9d034c81d79,
         type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436992635845147195, guid: 6a4a4af90262eb944890f9d034c81d79,
+        type: 3}
       propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
@@ -32435,6 +32443,16 @@ PrefabInstance:
     - target: {fileID: 2436992635845147195, guid: 6a4a4af90262eb944890f9d034c81d79,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[8].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436992635845147195, guid: 6a4a4af90262eb944890f9d034c81d79,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[9].second.m_AnimationSpeed
+      value: 2.3809001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2436992635845147195, guid: 6a4a4af90262eb944890f9d034c81d79,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[12].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
     - target: {fileID: 2436992635845147195, guid: 6a4a4af90262eb944890f9d034c81d79,
@@ -38558,12 +38576,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
         type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[17].second.m_AnimationSpeed
+      value: 2.3809001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
+        type: 3}
       propertyPath: m_AnimatedTiles.Array.data[18].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
     - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[19].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[21].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
     - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
@@ -38618,7 +38646,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
         type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[36].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
+        type: 3}
       propertyPath: m_AnimatedTiles.Array.data[38].second.m_AnimationSpeed
+      value: 2.3809
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
+        type: 3}
+      propertyPath: m_AnimatedTiles.Array.data[39].second.m_AnimationSpeed
       value: 2.3809
       objectReference: {fileID: 0}
     - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
@@ -38629,7 +38667,7 @@ PrefabInstance:
     - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
         type: 3}
       propertyPath: m_AnimatedTiles.Array.data[41].second.m_AnimationSpeed
-      value: 2.3809001
+      value: 2.3809
       objectReference: {fileID: 0}
     - target: {fileID: 5599873086172882299, guid: dc0c3f652d4dcf24ba1f503ba39a026d,
         type: 3}

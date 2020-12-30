@@ -115,16 +115,17 @@ public class PokemonMenu : MonoBehaviour
     }
     public void UpdateStats1(){
         cursor.SetActive(false);
-        stats1portrait.sprite = GameData.instance.frontMonSprites[PokemonData.MonToID(GameData.instance.party[selectedMon].name) - 1];
-        int id = PokemonData.MonToID(GameData.instance.party[selectedMon].name);
+        stats1portrait.sprite = GameData.instance.frontMonSprites[GameData.instance.party[selectedMon].id - 1];
+        int id = GameData.instance.party[selectedMon].id;
         pokedexNO.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
         attacktext.text = GameData.instance.party[selectedMon].attack.ToString();
         speedtext.text = GameData.instance.party[selectedMon].speed.ToString();
         specialtext.text = GameData.instance.party[selectedMon].special.ToString();
         defensetext.text = GameData.instance.party[selectedMon].defense.ToString();
-        montype1.text = GameData.instance.party[selectedMon].types[0].ToUpper();
-        string type2 = GameData.instance.party[selectedMon].types[1].ToUpper();
-        montype2.text = type2 != "" ? ("TYPE2/" + "\n " + type2) : "";
+        Types type1 = GameData.instance.party[selectedMon].types[0], type2 = GameData.instance.party[selectedMon].types[1];
+        montype1.text = PokemonData.GetTypeName(type1);
+        string type2String = PokemonData.GetTypeName(type2);
+        montype2.text = type2String != "" ? ("TYPE2/" + "\n " + type2String) : "";
         monnametext.text = GameData.instance.party[selectedMon].nickname;
         owneridtext.text = GameData.instance.party[selectedMon].ownerID.ToString();
         ownernametext.text = GameData.instance.party[selectedMon].owner;
@@ -173,13 +174,13 @@ public class PokemonMenu : MonoBehaviour
                 movestr += (i > 0 ? "\n" : "") + "-" + "\n" + "         " + "--";
         }
         movetext.text = movestr;
-        stats2portrait.sprite = GameData.instance.frontMonSprites[PokemonData.MonToID(GameData.instance.party[selectedMon].name) - 1];
+        stats2portrait.sprite = GameData.instance.frontMonSprites[GameData.instance.party[selectedMon].id - 1];
         monname2text.text = GameData.instance.party[selectedMon].nickname;
         
         exptext.text = TruncateExpNumber(GameData.instance.party[selectedMon].experience.ToString());
         explefttoleveltext.text =  TruncateExpNumber((GameData.instance.party[selectedMon].ExpToNextLevel().ToString()));
         nextleveltext.text = (GameData.instance.party[selectedMon].level < 99 ? "<LEVEL>" + (GameData.instance.party[selectedMon].level + 1).ToString() : 100.ToString());
-        int id = PokemonData.MonToID(GameData.instance.party[selectedMon].name);
+        int id = GameData.instance.party[selectedMon].id;
         pokedexno2.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
         UpdateMenus();
     }
@@ -262,13 +263,10 @@ public class PokemonMenu : MonoBehaviour
             foreach (Pokemon pokemon in GameData.instance.party)
             {
                 Transform slottransform = partyslots[GameData.instance.party.IndexOf(pokemon)].transform;
-                if (GameData.instance.party.IndexOf(pokemon) != selectedOption)
-                {
-                    slottransform.GetChild(0).GetComponent<Image>().sprite = partyanims[PokemonData.PokemonPartySprite[pokemon.name]].anim[0];
-                }
-                else
-                {
-                    slottransform.GetChild(0).GetComponent<Image>().sprite = partyanims[PokemonData.PokemonPartySprite[pokemon.name]].anim[Mathf.FloorToInt(2f*partyAnimTimer / animLoopTime)];
+                if (GameData.instance.party.IndexOf(pokemon) != selectedOption){
+                    slottransform.GetChild(0).GetComponent<Image>().sprite = partyanims[PokemonData.pokemonData[pokemon.id - 1].partySprite].anim[0];
+                }else{
+                    slottransform.GetChild(0).GetComponent<Image>().sprite = partyanims[PokemonData.pokemonData[pokemon.id - 1].partySprite].anim[Mathf.FloorToInt(2f*partyAnimTimer / animLoopTime)];
                 }
             }
 
@@ -387,7 +385,7 @@ public class PokemonMenu : MonoBehaviour
                     if (selectedOption == switchMenuOffset)
                     {
                         SoundManager.instance.SetMusicLow();
-                        SoundManager.instance.PlayCry(PokemonData.MonToID(GameData.instance.party[selectedMon].name) - 1);
+                        SoundManager.instance.PlayCry(GameData.instance.party[selectedMon].id - 1);
                        Dialogue.instance.Deactivate();
                         currentMenu = stats1;
                         UpdateStats1();

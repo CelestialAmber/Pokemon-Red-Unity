@@ -1,0 +1,11385 @@
+[
+  {
+    "name": "BULBASAUR",
+    "id": 1,
+    "partySprite": 4,
+    "baseStats": [
+      45,
+      49,
+      49,
+      45,
+      65
+    ],
+    "baseExp": 64,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Ivysaur",
+      "level": 16
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "LeechSeed",
+        "level": 7
+      },
+      {
+        "move": "VineWhip",
+        "level": 13
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 20
+      },
+      {
+        "move": "RazorLeaf",
+        "level": 27
+      },
+      {
+        "move": "Growth",
+        "level": 34
+      },
+      {
+        "move": "SleepPowder",
+        "level": 41
+      },
+      {
+        "move": "Solarbeam",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "IVYSAUR",
+    "id": 2,
+    "partySprite": 4,
+    "baseStats": [
+      60,
+      62,
+      63,
+      60,
+      80
+    ],
+    "baseExp": 141,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Venusaur",
+      "level": 32
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "LeechSeed",
+        "level": 1
+      },
+      {
+        "move": "LeechSeed",
+        "level": 7
+      },
+      {
+        "move": "VineWhip",
+        "level": 13
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 22
+      },
+      {
+        "move": "RazorLeaf",
+        "level": 30
+      },
+      {
+        "move": "Growth",
+        "level": 38
+      },
+      {
+        "move": "SleepPowder",
+        "level": 46
+      },
+      {
+        "move": "Solarbeam",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "VENUSAUR",
+    "id": 3,
+    "partySprite": 4,
+    "baseStats": [
+      80,
+      82,
+      83,
+      80,
+      100
+    ],
+    "baseExp": 208,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "LeechSeed",
+        "level": 1
+      },
+      {
+        "move": "VineWhip",
+        "level": 1
+      },
+      {
+        "move": "LeechSeed",
+        "level": 7
+      },
+      {
+        "move": "VineWhip",
+        "level": 13
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 22
+      },
+      {
+        "move": "RazorLeaf",
+        "level": 30
+      },
+      {
+        "move": "Growth",
+        "level": 43
+      },
+      {
+        "move": "SleepPowder",
+        "level": 55
+      },
+      {
+        "move": "Solarbeam",
+        "level": 65
+      }
+    ]
+  },
+  {
+    "name": "CHARMANDER",
+    "id": 4,
+    "partySprite": 0,
+    "baseStats": [
+      39,
+      52,
+      43,
+      65,
+      50
+    ],
+    "baseExp": 65,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Charmeleon",
+      "level": 16
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      3,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      23,
+      28,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50,
+      51,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Ember",
+        "level": 7
+      },
+      {
+        "move": "Leer",
+        "level": 15
+      },
+      {
+        "move": "Rage",
+        "level": 22
+      },
+      {
+        "move": "Slash",
+        "level": 30
+      },
+      {
+        "move": "Flamethrower",
+        "level": 38
+      },
+      {
+        "move": "FireSpin",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "CHARMELEON",
+    "id": 5,
+    "partySprite": 0,
+    "baseStats": [
+      58,
+      64,
+      58,
+      80,
+      65
+    ],
+    "baseExp": 142,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Charizard",
+      "level": 36
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      3,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      23,
+      28,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50,
+      51,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "Ember",
+        "level": 9
+      },
+      {
+        "move": "Leer",
+        "level": 15
+      },
+      {
+        "move": "Rage",
+        "level": 24
+      },
+      {
+        "move": "Slash",
+        "level": 33
+      },
+      {
+        "move": "Flamethrower",
+        "level": 42
+      },
+      {
+        "move": "FireSpin",
+        "level": 56
+      }
+    ]
+  },
+  {
+    "name": "CHARIZARD",
+    "id": 6,
+    "partySprite": 0,
+    "baseStats": [
+      78,
+      64,
+      58,
+      80,
+      85
+    ],
+    "baseExp": 209,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      1,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      23,
+      26,
+      27,
+      28,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      48,
+      50,
+      51,
+      52,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Ember",
+        "level": 9
+      },
+      {
+        "move": "Leer",
+        "level": 15
+      },
+      {
+        "move": "Rage",
+        "level": 24
+      },
+      {
+        "move": "Slash",
+        "level": 36
+      },
+      {
+        "move": "Flamethrower",
+        "level": 46
+      },
+      {
+        "move": "FireSpin",
+        "level": 55
+      }
+    ]
+  },
+  {
+    "name": "SQUIRTLE",
+    "id": 7,
+    "partySprite": 2,
+    "baseStats": [
+      44,
+      48,
+      65,
+      43,
+      50
+    ],
+    "baseExp": 66,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Wartortle",
+      "level": 16
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      28,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "Bubble",
+        "level": 8
+      },
+      {
+        "move": "WaterGun",
+        "level": 15
+      },
+      {
+        "move": "Bite",
+        "level": 22
+      },
+      {
+        "move": "Withdraw",
+        "level": 28
+      },
+      {
+        "move": "SkullBash",
+        "level": 39
+      },
+      {
+        "move": "HydroPump",
+        "level": 42
+      }
+    ]
+  },
+  {
+    "name": "WARTORTLE",
+    "id": 8,
+    "partySprite": 2,
+    "baseStats": [
+      59,
+      63,
+      80,
+      58,
+      65
+    ],
+    "baseExp": 143,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Blastoise",
+      "level": 36
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      28,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Bubble",
+        "level": 8
+      },
+      {
+        "move": "WaterGun",
+        "level": 15
+      },
+      {
+        "move": "Bite",
+        "level": 24
+      },
+      {
+        "move": "Withdraw",
+        "level": 31
+      },
+      {
+        "move": "SkullBash",
+        "level": 39
+      },
+      {
+        "move": "HydroPump",
+        "level": 47
+      }
+    ]
+  },
+  {
+    "name": "BLASTOISE",
+    "id": 9,
+    "partySprite": 2,
+    "baseStats": [
+      79,
+      83,
+      100,
+      78,
+      85
+    ],
+    "baseExp": 210,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Bubble",
+        "level": 8
+      },
+      {
+        "move": "WaterGun",
+        "level": 15
+      },
+      {
+        "move": "Bite",
+        "level": 22
+      },
+      {
+        "move": "Withdraw",
+        "level": 28
+      },
+      {
+        "move": "SkullBash",
+        "level": 39
+      },
+      {
+        "move": "HydroPump",
+        "level": 47
+      }
+    ]
+  },
+  {
+    "name": "CATERPIE",
+    "id": 10,
+    "partySprite": 5,
+    "baseStats": [
+      45,
+      30,
+      35,
+      45,
+      20
+    ],
+    "baseExp": 53,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Metapod",
+      "level": 7
+    },
+    "types": [
+      "Bug",
+      "None"
+    ],
+    "tmhmLearnset": [],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "StringShot",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "METAPOD",
+    "id": 11,
+    "partySprite": 5,
+    "baseStats": [
+      50,
+      20,
+      55,
+      30,
+      25
+    ],
+    "baseExp": 72,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Butterfree",
+      "level": 10
+    },
+    "types": [
+      "Bug",
+      "None"
+    ],
+    "tmhmLearnset": [],
+    "levelupLearnset": [
+      {
+        "move": "Harden",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "BUTTERFREE",
+    "id": 12,
+    "partySprite": 5,
+    "baseStats": [
+      60,
+      45,
+      50,
+      70,
+      80
+    ],
+    "baseExp": 160,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      39,
+      44,
+      46,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Confusion",
+        "level": 12
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 15
+      },
+      {
+        "move": "StunSpore",
+        "level": 16
+      },
+      {
+        "move": "SleepPowder",
+        "level": 17
+      },
+      {
+        "move": "Supersonic",
+        "level": 21
+      },
+      {
+        "move": "Whirlwind",
+        "level": 26
+      },
+      {
+        "move": "Psybeam",
+        "level": 32
+      }
+    ]
+  },
+  {
+    "name": "WEEDLE",
+    "id": 13,
+    "partySprite": 5,
+    "baseStats": [
+      40,
+      35,
+      30,
+      50,
+      20
+    ],
+    "baseExp": 52,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Kakuna",
+      "level": 7
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "tmhmLearnset": [],
+    "levelupLearnset": [
+      {
+        "move": "PoisonSting",
+        "level": 1
+      },
+      {
+        "move": "StringShot",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "KAKUNA",
+    "id": 14,
+    "partySprite": 5,
+    "baseStats": [
+      45,
+      25,
+      50,
+      35,
+      25
+    ],
+    "baseExp": 71,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Beedrill",
+      "level": 10
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "tmhmLearnset": [],
+    "levelupLearnset": [
+      {
+        "move": "Harden",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "BEEDRILL",
+    "id": 15,
+    "partySprite": 5,
+    "baseStats": [
+      65,
+      80,
+      40,
+      75,
+      45
+    ],
+    "baseExp": 159,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      15,
+      20,
+      21,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "FuryAttack",
+        "level": 1
+      },
+      {
+        "move": "FuryAttack",
+        "level": 12
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 16
+      },
+      {
+        "move": "Twineedle",
+        "level": 20
+      },
+      {
+        "move": "Rage",
+        "level": 25
+      },
+      {
+        "move": "PinMissle",
+        "level": 30
+      },
+      {
+        "move": "Agility",
+        "level": 35
+      }
+    ]
+  },
+  {
+    "name": "PIDGEY",
+    "id": 16,
+    "partySprite": 1,
+    "baseStats": [
+      40,
+      45,
+      40,
+      56,
+      35
+    ],
+    "baseExp": 55,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Pidgeotto",
+      "level": 18
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      20,
+      31,
+      32,
+      33,
+      34,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Gust",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 5
+      },
+      {
+        "move": "QuickAttack",
+        "level": 12
+      },
+      {
+        "move": "Whirlwind",
+        "level": 19
+      },
+      {
+        "move": "WingAttack",
+        "level": 28
+      },
+      {
+        "move": "Agility",
+        "level": 36
+      },
+      {
+        "move": "MirrorMove",
+        "level": 44
+      }
+    ]
+  },
+  {
+    "name": "PIDGEOTTO",
+    "id": 17,
+    "partySprite": 1,
+    "baseStats": [
+      63,
+      60,
+      55,
+      71,
+      50
+    ],
+    "baseExp": 113,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Pidgeot",
+      "level": 36
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      20,
+      31,
+      32,
+      33,
+      34,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Gust",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 5
+      },
+      {
+        "move": "QuickAttack",
+        "level": 12
+      },
+      {
+        "move": "Whirlwind",
+        "level": 21
+      },
+      {
+        "move": "WingAttack",
+        "level": 31
+      },
+      {
+        "move": "Agility",
+        "level": 40
+      },
+      {
+        "move": "MirrorMove",
+        "level": 49
+      }
+    ]
+  },
+  {
+    "name": "PIDGEOT",
+    "id": 18,
+    "partySprite": 1,
+    "baseStats": [
+      83,
+      80,
+      75,
+      91,
+      70
+    ],
+    "baseExp": 172,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      31,
+      32,
+      33,
+      34,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Gust",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 5
+      },
+      {
+        "move": "QuickAttack",
+        "level": 12
+      },
+      {
+        "move": "Whirlwind",
+        "level": 21
+      },
+      {
+        "move": "WingAttack",
+        "level": 31
+      },
+      {
+        "move": "Agility",
+        "level": 44
+      },
+      {
+        "move": "MirrorMove",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "RATTATA",
+    "id": 19,
+    "partySprite": 7,
+    "baseStats": [
+      30,
+      56,
+      35,
+      72,
+      25
+    ],
+    "baseExp": 57,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Raticate",
+      "level": 20
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14,
+      20,
+      24,
+      25,
+      28,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 7
+      },
+      {
+        "move": "HyperFang",
+        "level": 14
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 23
+      },
+      {
+        "move": "SuperFang",
+        "level": 34
+      }
+    ]
+  },
+  {
+    "name": "RATICATE",
+    "id": 20,
+    "partySprite": 7,
+    "baseStats": [
+      55,
+      81,
+      60,
+      97,
+      50
+    ],
+    "baseExp": 116,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      24,
+      25,
+      28,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 7
+      },
+      {
+        "move": "HyperFang",
+        "level": 14
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 27
+      },
+      {
+        "move": "SuperFang",
+        "level": 41
+      }
+    ]
+  },
+  {
+    "name": "SPEAROW",
+    "id": 21,
+    "partySprite": 1,
+    "baseStats": [
+      40,
+      60,
+      30,
+      70,
+      31
+    ],
+    "baseExp": 58,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Fearow",
+      "level": 20
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      20,
+      31,
+      32,
+      34,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 9
+      },
+      {
+        "move": "FuryAttack",
+        "level": 15
+      },
+      {
+        "move": "MirrorMove",
+        "level": 22
+      },
+      {
+        "move": "DrillPeck",
+        "level": 29
+      },
+      {
+        "move": "Agility",
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "FEAROW",
+    "id": 22,
+    "partySprite": 1,
+    "baseStats": [
+      65,
+      90,
+      65,
+      100,
+      61
+    ],
+    "baseExp": 162,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      31,
+      32,
+      34,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 9
+      },
+      {
+        "move": "FuryAttack",
+        "level": 15
+      },
+      {
+        "move": "MirrorMove",
+        "level": 25
+      },
+      {
+        "move": "DrillPeck",
+        "level": 34
+      },
+      {
+        "move": "Agility",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "EKANS",
+    "id": 23,
+    "partySprite": 6,
+    "baseStats": [
+      35,
+      60,
+      44,
+      55,
+      40
+    ],
+    "baseExp": 62,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Arbok",
+      "level": 22
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      20,
+      21,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "PoisonSting",
+        "level": 10
+      },
+      {
+        "move": "Bite",
+        "level": 17
+      },
+      {
+        "move": "Glare",
+        "level": 24
+      },
+      {
+        "move": "Screech",
+        "level": 31
+      },
+      {
+        "move": "Acid",
+        "level": 38
+      }
+    ]
+  },
+  {
+    "name": "ARBOK",
+    "id": 24,
+    "partySprite": 6,
+    "baseStats": [
+      60,
+      85,
+      69,
+      80,
+      65
+    ],
+    "baseExp": 147,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      21,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "PoisonSting",
+        "level": 1
+      },
+      {
+        "move": "PoisonSting",
+        "level": 10
+      },
+      {
+        "move": "Bite",
+        "level": 17
+      },
+      {
+        "move": "Glare",
+        "level": 24
+      },
+      {
+        "move": "Screech",
+        "level": 31
+      },
+      {
+        "move": "Acid",
+        "level": 38
+      }
+    ]
+  },
+  {
+    "name": "PIKACHU",
+    "id": 25,
+    "partySprite": 3,
+    "baseStats": [
+      35,
+      55,
+      30,
+      90,
+      50
+    ],
+    "baseExp": 82,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      16,
+      17,
+      19,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      45,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Thundershock",
+        "level": 1
+      },
+      {
+        "move": "ThunderWave",
+        "level": 9
+      },
+      {
+        "move": "QuickAttack",
+        "level": 16
+      },
+      {
+        "move": "Swift",
+        "level": 26
+      },
+      {
+        "move": "Agility",
+        "level": 33
+      },
+      {
+        "move": "Thunder",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "RAICHU",
+    "id": 26,
+    "partySprite": 3,
+    "baseStats": [
+      60,
+      90,
+      55,
+      100,
+      90
+    ],
+    "baseExp": 122,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17,
+      19,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      45,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Thundershock",
+        "level": 1
+      },
+      {
+        "move": "ThunderWave",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "SANDSHREW",
+    "id": 27,
+    "partySprite": 0,
+    "baseStats": [
+      50,
+      75,
+      85,
+      40,
+      30
+    ],
+    "baseExp": 93,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Sandslash",
+      "level": 22
+    },
+    "types": [
+      "Ground",
+      "None"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      17,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      48,
+      50,
+      51,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 10
+      },
+      {
+        "move": "Slash",
+        "level": 17
+      },
+      {
+        "move": "PoisonSting",
+        "level": 24
+      },
+      {
+        "move": "Swift",
+        "level": 31
+      },
+      {
+        "move": "FurySwipes",
+        "level": 38
+      }
+    ]
+  },
+  {
+    "name": "SANDSLASH",
+    "id": 28,
+    "partySprite": 0,
+    "baseStats": [
+      75,
+      100,
+      110,
+      65,
+      55
+    ],
+    "baseExp": 163,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ground",
+      "None"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      48,
+      50,
+      51,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 10
+      },
+      {
+        "move": "Slash",
+        "level": 17
+      },
+      {
+        "move": "PoisonSting",
+        "level": 27
+      },
+      {
+        "move": "Swift",
+        "level": 36
+      },
+      {
+        "move": "FurySwipes",
+        "level": 47
+      }
+    ]
+  },
+  {
+    "name": "NIDORAN♀",
+    "id": 29,
+    "partySprite": 0,
+    "baseStats": [
+      55,
+      47,
+      52,
+      41,
+      40
+    ],
+    "baseExp": 59,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Nidorina",
+      "level": 16
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      14,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 8
+      },
+      {
+        "move": "PoisonSting",
+        "level": 14
+      },
+      {
+        "move": "TailWhip",
+        "level": 21
+      },
+      {
+        "move": "Bite",
+        "level": 29
+      },
+      {
+        "move": "FurySwipes",
+        "level": 36
+      },
+      {
+        "move": "DoubleKick",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "NIDORINA",
+    "id": 30,
+    "partySprite": 0,
+    "baseStats": [
+      70,
+      62,
+      67,
+      56,
+      55
+    ],
+    "baseExp": 117,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 8
+      },
+      {
+        "move": "PoisonSting",
+        "level": 14
+      },
+      {
+        "move": "TailWhip",
+        "level": 23
+      },
+      {
+        "move": "Bite",
+        "level": 32
+      },
+      {
+        "move": "FurySwipes",
+        "level": 41
+      },
+      {
+        "move": "DoubleKick",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "NIDOQUEEN",
+    "id": 31,
+    "partySprite": 0,
+    "baseStats": [
+      90,
+      82,
+      87,
+      76,
+      75
+    ],
+    "baseExp": 194,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "Ground"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      26,
+      27,
+      31,
+      32,
+      33,
+      34,
+      38,
+      40,
+      44,
+      48,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "BodySlam",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 8
+      },
+      {
+        "move": "PoisonSting",
+        "level": 14
+      },
+      {
+        "move": "BodySlam",
+        "level": 23
+      }
+    ]
+  },
+  {
+    "name": "NIDORAN♂",
+    "id": 32,
+    "partySprite": 0,
+    "baseStats": [
+      46,
+      57,
+      40,
+      50,
+      40
+    ],
+    "baseExp": 60,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Nidorino",
+      "level": 16
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      14,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "HornAttack",
+        "level": 8
+      },
+      {
+        "move": "PoisonSting",
+        "level": 14
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 21
+      },
+      {
+        "move": "FuryAttack",
+        "level": 29
+      },
+      {
+        "move": "HornDrill",
+        "level": 36
+      },
+      {
+        "move": "DoubleKick",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "NIDORINO",
+    "id": 33,
+    "partySprite": 0,
+    "baseStats": [
+      61,
+      72,
+      57,
+      65,
+      55
+    ],
+    "baseExp": 118,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "HornAttack",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "HornAttack",
+        "level": 8
+      },
+      {
+        "move": "PoisonSting",
+        "level": 14
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 23
+      },
+      {
+        "move": "FuryAttack",
+        "level": 32
+      },
+      {
+        "move": "HornDrill",
+        "level": 41
+      },
+      {
+        "move": "DoubleKick",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "NIDOKING",
+    "id": 34,
+    "partySprite": 0,
+    "baseStats": [
+      81,
+      92,
+      77,
+      85,
+      75
+    ],
+    "baseExp": 195,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "Ground"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      26,
+      27,
+      31,
+      32,
+      33,
+      34,
+      38,
+      40,
+      44,
+      48,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "HornAttack",
+        "level": 1
+      },
+      {
+        "move": "PoisonSting",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Thrash",
+        "level": 1
+      },
+      {
+        "move": "HornAttack",
+        "level": 8
+      },
+      {
+        "move": "PoisonSting",
+        "level": 14
+      },
+      {
+        "move": "Thrash",
+        "level": 23
+      }
+    ]
+  },
+  {
+    "name": "CLEFAIRY",
+    "id": 35,
+    "partySprite": 3,
+    "baseStats": [
+      70,
+      45,
+      48,
+      35,
+      60
+    ],
+    "baseExp": 68,
+    "expGroup": 3,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      38,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "Sing",
+        "level": 13
+      },
+      {
+        "move": "Doubleslap",
+        "level": 18
+      },
+      {
+        "move": "Minimize",
+        "level": 24
+      },
+      {
+        "move": "Metronome",
+        "level": 31
+      },
+      {
+        "move": "DefenseCurl",
+        "level": 39
+      },
+      {
+        "move": "LightScreen",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "CLEFABLE",
+    "id": 36,
+    "partySprite": 3,
+    "baseStats": [
+      95,
+      70,
+      73,
+      60,
+      85
+    ],
+    "baseExp": 129,
+    "expGroup": 3,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      38,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Doubleslap",
+        "level": 1
+      },
+      {
+        "move": "Metronome",
+        "level": 1
+      },
+      {
+        "move": "Minimize",
+        "level": 1
+      },
+      {
+        "move": "Sing",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "VULPIX",
+    "id": 37,
+    "partySprite": 7,
+    "baseStats": [
+      38,
+      41,
+      40,
+      65,
+      65
+    ],
+    "baseExp": 63,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      20,
+      28,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 16
+      },
+      {
+        "move": "Roar",
+        "level": 21
+      },
+      {
+        "move": "ConfuseRay",
+        "level": 28
+      },
+      {
+        "move": "Flamethrower",
+        "level": 35
+      },
+      {
+        "move": "FireSpin",
+        "level": 42
+      }
+    ]
+  },
+  {
+    "name": "NINETALES",
+    "id": 38,
+    "partySprite": 7,
+    "baseStats": [
+      73,
+      76,
+      75,
+      100,
+      100
+    ],
+    "baseExp": 178,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      28,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "Roar",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "JIGGLYPUFF",
+    "id": 39,
+    "partySprite": 3,
+    "baseStats": [
+      115,
+      45,
+      20,
+      20,
+      25
+    ],
+    "baseExp": 76,
+    "expGroup": 3,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      38,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Sing",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 9
+      },
+      {
+        "move": "Disable",
+        "level": 14
+      },
+      {
+        "move": "DefenseCurl",
+        "level": 19
+      },
+      {
+        "move": "Doubleslap",
+        "level": 24
+      },
+      {
+        "move": "Rest",
+        "level": 29
+      },
+      {
+        "move": "BodySlam",
+        "level": 34
+      },
+      {
+        "move": "DoubleEdge",
+        "level": 39
+      }
+    ]
+  },
+  {
+    "name": "WIGGLYTUFF",
+    "id": 40,
+    "partySprite": 3,
+    "baseStats": [
+      140,
+      70,
+      45,
+      45,
+      50
+    ],
+    "baseExp": 109,
+    "expGroup": 3,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      38,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "DefenseCurl",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Doubleslap",
+        "level": 1
+      },
+      {
+        "move": "Sing",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "ZUBAT",
+    "id": 41,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      45,
+      35,
+      55,
+      40
+    ],
+    "baseExp": 54,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Golbat",
+      "level": 22
+    },
+    "types": [
+      "Poison",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      20,
+      21,
+      31,
+      32,
+      34,
+      39,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "LeechLife",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 10
+      },
+      {
+        "move": "Bite",
+        "level": 15
+      },
+      {
+        "move": "ConfuseRay",
+        "level": 21
+      },
+      {
+        "move": "WingAttack",
+        "level": 28
+      },
+      {
+        "move": "Haze",
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "GOLBAT",
+    "id": 42,
+    "partySprite": 0,
+    "baseStats": [
+      75,
+      80,
+      70,
+      90,
+      75
+    ],
+    "baseExp": 171,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      21,
+      31,
+      32,
+      34,
+      39,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "LeechLife",
+        "level": 1
+      },
+      {
+        "move": "Bite",
+        "level": 1
+      },
+      {
+        "move": "Screech",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 10
+      },
+      {
+        "move": "Bite",
+        "level": 15
+      },
+      {
+        "move": "ConfuseRay",
+        "level": 21
+      },
+      {
+        "move": "WingAttack",
+        "level": 32
+      },
+      {
+        "move": "Haze",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "ODDISH",
+    "id": 43,
+    "partySprite": 4,
+    "baseStats": [
+      45,
+      50,
+      55,
+      30,
+      75
+    ],
+    "baseExp": 78,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Gloom",
+      "level": 21
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Absorb",
+        "level": 1
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 15
+      },
+      {
+        "move": "StunSpore",
+        "level": 17
+      },
+      {
+        "move": "SleepPowder",
+        "level": 19
+      },
+      {
+        "move": "Acid",
+        "level": 24
+      },
+      {
+        "move": "PetalDance",
+        "level": 33
+      },
+      {
+        "move": "Solarbeam",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "GLOOM",
+    "id": 44,
+    "partySprite": 4,
+    "baseStats": [
+      60,
+      65,
+      70,
+      40,
+      85
+    ],
+    "baseExp": 132,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Absorb",
+        "level": 1
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 1
+      },
+      {
+        "move": "StunSpore",
+        "level": 1
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 15
+      },
+      {
+        "move": "StunSpore",
+        "level": 17
+      },
+      {
+        "move": "SleepPowder",
+        "level": 19
+      },
+      {
+        "move": "Acid",
+        "level": 28
+      },
+      {
+        "move": "PetalDance",
+        "level": 38
+      },
+      {
+        "move": "Solarbeam",
+        "level": 52
+      }
+    ]
+  },
+  {
+    "name": "VILEPLUME",
+    "id": 45,
+    "partySprite": 4,
+    "baseStats": [
+      75,
+      80,
+      85,
+      50,
+      100
+    ],
+    "baseExp": 184,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Acid",
+        "level": 1
+      },
+      {
+        "move": "PetalDance",
+        "level": 1
+      },
+      {
+        "move": "SleepPowder",
+        "level": 1
+      },
+      {
+        "move": "StunSpore",
+        "level": 1
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 15
+      },
+      {
+        "move": "StunSpore",
+        "level": 17
+      },
+      {
+        "move": "SleepPowder",
+        "level": 19
+      }
+    ]
+  },
+  {
+    "name": "PARAS",
+    "id": 46,
+    "partySprite": 5,
+    "baseStats": [
+      35,
+      70,
+      55,
+      25,
+      55
+    ],
+    "baseExp": 70,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Parasect",
+      "level": 24
+    },
+    "types": [
+      "Bug",
+      "Grass"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      20,
+      21,
+      22,
+      28,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "StunSpore",
+        "level": 13
+      },
+      {
+        "move": "LeechLife",
+        "level": 20
+      },
+      {
+        "move": "Spore",
+        "level": 27
+      },
+      {
+        "move": "Slash",
+        "level": 34
+      },
+      {
+        "move": "Growth",
+        "level": 41
+      }
+    ]
+  },
+  {
+    "name": "PARASECT",
+    "id": 47,
+    "partySprite": 5,
+    "baseStats": [
+      60,
+      95,
+      80,
+      30,
+      80
+    ],
+    "baseExp": 128,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Bug",
+      "Grass"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      28,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "LeechLife",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "StunSpore",
+        "level": 1
+      },
+      {
+        "move": "StunSpore",
+        "level": 13
+      },
+      {
+        "move": "LeechLife",
+        "level": 20
+      },
+      {
+        "move": "Spore",
+        "level": 30
+      },
+      {
+        "move": "Slash",
+        "level": 39
+      },
+      {
+        "move": "Growth",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "VENONAT",
+    "id": 48,
+    "partySprite": 5,
+    "baseStats": [
+      60,
+      55,
+      50,
+      45,
+      40
+    ],
+    "baseExp": 75,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Venomoth",
+      "level": 31
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      20,
+      21,
+      22,
+      29,
+      31,
+      32,
+      33,
+      34,
+      44,
+      46,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 24
+      },
+      {
+        "move": "LeechLife",
+        "level": 27
+      },
+      {
+        "move": "StunSpore",
+        "level": 30
+      },
+      {
+        "move": "Psybeam",
+        "level": 35
+      },
+      {
+        "move": "SleepPowder",
+        "level": 38
+      },
+      {
+        "move": "Psychic",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "VENOMOTH",
+    "id": 49,
+    "partySprite": 5,
+    "baseStats": [
+      70,
+      65,
+      60,
+      90,
+      90
+    ],
+    "baseExp": 138,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      39,
+      44,
+      46,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "LeechLife",
+        "level": 1
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 24
+      },
+      {
+        "move": "LeechLife",
+        "level": 27
+      },
+      {
+        "move": "StunSpore",
+        "level": 30
+      },
+      {
+        "move": "Psybeam",
+        "level": 38
+      },
+      {
+        "move": "SleepPowder",
+        "level": 43
+      },
+      {
+        "move": "Psychic",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "DIGLETT",
+    "id": 50,
+    "partySprite": 0,
+    "baseStats": [
+      10,
+      55,
+      25,
+      95,
+      45
+    ],
+    "baseExp": 81,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Dugtrio",
+      "level": 26
+    },
+    "types": [
+      "Ground",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      44,
+      48,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 15
+      },
+      {
+        "move": "Dig",
+        "level": 19
+      },
+      {
+        "move": "SandAttack",
+        "level": 24
+      },
+      {
+        "move": "Slash",
+        "level": 31
+      },
+      {
+        "move": "Earthquake",
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "DUGTRIO",
+    "id": 51,
+    "partySprite": 0,
+    "baseStats": [
+      35,
+      80,
+      50,
+      120,
+      70
+    ],
+    "baseExp": 153,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ground",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      44,
+      48,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Dig",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 15
+      },
+      {
+        "move": "Dig",
+        "level": 19
+      },
+      {
+        "move": "SandAttack",
+        "level": 24
+      },
+      {
+        "move": "Slash",
+        "level": 35
+      },
+      {
+        "move": "Earthquake",
+        "level": 47
+      }
+    ]
+  },
+  {
+    "name": "MEOWTH",
+    "id": 52,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      45,
+      35,
+      90,
+      40
+    ],
+    "baseExp": 69,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Persian",
+      "level": 28
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      16,
+      20,
+      24,
+      25,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Bite",
+        "level": 12
+      },
+      {
+        "move": "PayDay",
+        "level": 17
+      },
+      {
+        "move": "Screech",
+        "level": 24
+      },
+      {
+        "move": "FurySwipes",
+        "level": 33
+      },
+      {
+        "move": "Slash",
+        "level": 44
+      }
+    ]
+  },
+  {
+    "name": "PERSIAN",
+    "id": 53,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      70,
+      60,
+      115,
+      65
+    ],
+    "baseExp": 148,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      15,
+      16,
+      20,
+      24,
+      25,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bite",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Screech",
+        "level": 1
+      },
+      {
+        "move": "Bite",
+        "level": 12
+      },
+      {
+        "move": "PayDay",
+        "level": 17
+      },
+      {
+        "move": "Screech",
+        "level": 24
+      },
+      {
+        "move": "FurySwipes",
+        "level": 37
+      },
+      {
+        "move": "Slash",
+        "level": 51
+      }
+    ]
+  },
+  {
+    "name": "PSYDUCK",
+    "id": 54,
+    "partySprite": 0,
+    "baseStats": [
+      50,
+      52,
+      48,
+      55,
+      50
+    ],
+    "baseExp": 80,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Golduck",
+      "level": 33
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      28,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 28
+      },
+      {
+        "move": "Disable",
+        "level": 31
+      },
+      {
+        "move": "Confusion",
+        "level": 36
+      },
+      {
+        "move": "FurySwipes",
+        "level": 43
+      },
+      {
+        "move": "HydroPump",
+        "level": 52
+      }
+    ]
+  },
+  {
+    "name": "GOLDUCK",
+    "id": 55,
+    "partySprite": 0,
+    "baseStats": [
+      80,
+      82,
+      78,
+      85,
+      80
+    ],
+    "baseExp": 174,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      28,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 28
+      },
+      {
+        "move": "Disable",
+        "level": 31
+      },
+      {
+        "move": "Confusion",
+        "level": 39
+      },
+      {
+        "move": "FurySwipes",
+        "level": 48
+      },
+      {
+        "move": "HydroPump",
+        "level": 59
+      }
+    ]
+  },
+  {
+    "name": "MANKEY",
+    "id": 56,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      80,
+      35,
+      70,
+      35
+    ],
+    "baseExp": 74,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Primeape",
+      "level": 28
+    },
+    "types": [
+      "Fighting",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      28,
+      31,
+      32,
+      34,
+      35,
+      39,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "KarateChop",
+        "level": 15
+      },
+      {
+        "move": "FurySwipes",
+        "level": 21
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 27
+      },
+      {
+        "move": "SeismicToss",
+        "level": 33
+      },
+      {
+        "move": "Thrash",
+        "level": 39
+      }
+    ]
+  },
+  {
+    "name": "PRIMEAPE",
+    "id": 57,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      105,
+      60,
+      95,
+      60
+    ],
+    "baseExp": 149,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fighting",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      28,
+      31,
+      32,
+      34,
+      35,
+      39,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "FurySwipes",
+        "level": 1
+      },
+      {
+        "move": "KarateChop",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "KarateChop",
+        "level": 15
+      },
+      {
+        "move": "FurySwipes",
+        "level": 21
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 27
+      },
+      {
+        "move": "SeismicToss",
+        "level": 37
+      },
+      {
+        "move": "Thrash",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "GROWLITHE",
+    "id": 58,
+    "partySprite": 7,
+    "baseStats": [
+      55,
+      70,
+      45,
+      60,
+      50
+    ],
+    "baseExp": 91,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      20,
+      23,
+      28,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bite",
+        "level": 1
+      },
+      {
+        "move": "Roar",
+        "level": 1
+      },
+      {
+        "move": "Ember",
+        "level": 18
+      },
+      {
+        "move": "Leer",
+        "level": 23
+      },
+      {
+        "move": "TakeDown",
+        "level": 30
+      },
+      {
+        "move": "Agility",
+        "level": 39
+      },
+      {
+        "move": "Flamethrower",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "ARCANINE",
+    "id": 59,
+    "partySprite": 7,
+    "baseStats": [
+      90,
+      110,
+      80,
+      95,
+      80
+    ],
+    "baseExp": 213,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      23,
+      26,
+      28,
+      30,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Roar",
+        "level": 1
+      },
+      {
+        "move": "TakeDown",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "POLIWAG",
+    "id": 60,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      50,
+      40,
+      90,
+      40
+    ],
+    "baseExp": 77,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Poliwhirl",
+      "level": 25
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      29,
+      31,
+      32,
+      34,
+      40,
+      44,
+      46,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 16
+      },
+      {
+        "move": "WaterGun",
+        "level": 19
+      },
+      {
+        "move": "Doubleslap",
+        "level": 25
+      },
+      {
+        "move": "BodySlam",
+        "level": 31
+      },
+      {
+        "move": "Amnesia",
+        "level": 38
+      },
+      {
+        "move": "HydroPump",
+        "level": 45
+      }
+    ]
+  },
+  {
+    "name": "POLIWHIRL",
+    "id": 61,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      65,
+      65,
+      90,
+      50
+    ],
+    "baseExp": 131,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      29,
+      31,
+      32,
+      34,
+      35,
+      40,
+      44,
+      46,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 16
+      },
+      {
+        "move": "WaterGun",
+        "level": 19
+      },
+      {
+        "move": "Doubleslap",
+        "level": 26
+      },
+      {
+        "move": "BodySlam",
+        "level": 33
+      },
+      {
+        "move": "Amnesia",
+        "level": 41
+      },
+      {
+        "move": "HydroPump",
+        "level": 49
+      }
+    ]
+  },
+  {
+    "name": "POLIWRATH",
+    "id": 62,
+    "partySprite": 0,
+    "baseStats": [
+      90,
+      85,
+      95,
+      70,
+      70
+    ],
+    "baseExp": 185,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Fighting"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      29,
+      31,
+      32,
+      34,
+      35,
+      40,
+      44,
+      46,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "BodySlam",
+        "level": 1
+      },
+      {
+        "move": "Doubleslap",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 16
+      },
+      {
+        "move": "WaterGun",
+        "level": 19
+      }
+    ]
+  },
+  {
+    "name": "ABRA",
+    "id": 63,
+    "partySprite": 0,
+    "baseStats": [
+      25,
+      20,
+      15,
+      90,
+      105
+    ],
+    "baseExp": 73,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Kadabra",
+      "level": 16
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Teleport",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "KADABRA",
+    "id": 64,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      35,
+      30,
+      105,
+      120
+    ],
+    "baseExp": 145,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Teleport",
+        "level": 1
+      },
+      {
+        "move": "Confusion",
+        "level": 16
+      },
+      {
+        "move": "Disable",
+        "level": 20
+      },
+      {
+        "move": "Psybeam",
+        "level": 27
+      },
+      {
+        "move": "Recover",
+        "level": 31
+      },
+      {
+        "move": "Psychic",
+        "level": 38
+      },
+      {
+        "move": "Reflect",
+        "level": 42
+      }
+    ]
+  },
+  {
+    "name": "ALAKAZAM",
+    "id": 65,
+    "partySprite": 0,
+    "baseStats": [
+      55,
+      50,
+      45,
+      120,
+      135
+    ],
+    "baseExp": 186,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Teleport",
+        "level": 1
+      },
+      {
+        "move": "Confusion",
+        "level": 16
+      },
+      {
+        "move": "Disable",
+        "level": 20
+      },
+      {
+        "move": "Psybeam",
+        "level": 27
+      },
+      {
+        "move": "Recover",
+        "level": 31
+      },
+      {
+        "move": "Psychic",
+        "level": 38
+      },
+      {
+        "move": "Reflect",
+        "level": 42
+      }
+    ]
+  },
+  {
+    "name": "MACHOP",
+    "id": 66,
+    "partySprite": 0,
+    "baseStats": [
+      70,
+      80,
+      50,
+      35,
+      35
+    ],
+    "baseExp": 88,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Machoke",
+      "level": 28
+    },
+    "types": [
+      "Fighting",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      35,
+      38,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "KarateChop",
+        "level": 1
+      },
+      {
+        "move": "LowKick",
+        "level": 20
+      },
+      {
+        "move": "Leer",
+        "level": 25
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 32
+      },
+      {
+        "move": "SeismicToss",
+        "level": 39
+      },
+      {
+        "move": "Submission",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "MACHOKE",
+    "id": 67,
+    "partySprite": 0,
+    "baseStats": [
+      80,
+      100,
+      70,
+      45,
+      50
+    ],
+    "baseExp": 146,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fighting",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      35,
+      38,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "KarateChop",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "LowKick",
+        "level": 1
+      },
+      {
+        "move": "LowKick",
+        "level": 20
+      },
+      {
+        "move": "Leer",
+        "level": 25
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 36
+      },
+      {
+        "move": "SeismicToss",
+        "level": 44
+      },
+      {
+        "move": "Submission",
+        "level": 52
+      }
+    ]
+  },
+  {
+    "name": "MACHAMP",
+    "id": 68,
+    "partySprite": 0,
+    "baseStats": [
+      90,
+      130,
+      80,
+      55,
+      65
+    ],
+    "baseExp": 193,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fighting",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      35,
+      38,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "KarateChop",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "LowKick",
+        "level": 1
+      },
+      {
+        "move": "LowKick",
+        "level": 20
+      },
+      {
+        "move": "Leer",
+        "level": 25
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 36
+      },
+      {
+        "move": "SeismicToss",
+        "level": 44
+      },
+      {
+        "move": "Submission",
+        "level": 52
+      }
+    ]
+  },
+  {
+    "name": "BELLSPROUT",
+    "id": 69,
+    "partySprite": 4,
+    "baseStats": [
+      50,
+      75,
+      35,
+      40,
+      70
+    ],
+    "baseExp": 84,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Weepinbell",
+      "level": 21
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      48,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growth",
+        "level": 1
+      },
+      {
+        "move": "VineWhip",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 13
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 15
+      },
+      {
+        "move": "SleepPowder",
+        "level": 18
+      },
+      {
+        "move": "StunSpore",
+        "level": 21
+      },
+      {
+        "move": "Acid",
+        "level": 26
+      },
+      {
+        "move": "RazorLeaf",
+        "level": 33
+      },
+      {
+        "move": "Slam",
+        "level": 42
+      }
+    ]
+  },
+  {
+    "name": "WEEPINBELL",
+    "id": 70,
+    "partySprite": 4,
+    "baseStats": [
+      65,
+      90,
+      50,
+      55,
+      85
+    ],
+    "baseExp": 151,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growth",
+        "level": 1
+      },
+      {
+        "move": "VineWhip",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 13
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 15
+      },
+      {
+        "move": "SleepPowder",
+        "level": 18
+      },
+      {
+        "move": "StunSpore",
+        "level": 23
+      },
+      {
+        "move": "Acid",
+        "level": 29
+      },
+      {
+        "move": "RazorLeaf",
+        "level": 38
+      },
+      {
+        "move": "Slam",
+        "level": 49
+      }
+    ]
+  },
+  {
+    "name": "VICTREEBEL",
+    "id": 71,
+    "partySprite": 4,
+    "baseStats": [
+      80,
+      105,
+      65,
+      70,
+      100
+    ],
+    "baseExp": 191,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Acid",
+        "level": 1
+      },
+      {
+        "move": "RazorLeaf",
+        "level": 1
+      },
+      {
+        "move": "SleepPowder",
+        "level": 1
+      },
+      {
+        "move": "StunSpore",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 13
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 15
+      },
+      {
+        "move": "SleepPowder",
+        "level": 18
+      }
+    ]
+  },
+  {
+    "name": "TENTACOOL",
+    "id": 72,
+    "partySprite": 2,
+    "baseStats": [
+      40,
+      40,
+      35,
+      70,
+      100
+    ],
+    "baseExp": 105,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "Tentacruel",
+      "level": 30
+    },
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      21,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      51,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Acid",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 7
+      },
+      {
+        "move": "Wrap",
+        "level": 13
+      },
+      {
+        "move": "PoisonSting",
+        "level": 18
+      },
+      {
+        "move": "WaterGun",
+        "level": 22
+      },
+      {
+        "move": "Constrict",
+        "level": 27
+      },
+      {
+        "move": "Barrier",
+        "level": 33
+      },
+      {
+        "move": "Screech",
+        "level": 40
+      },
+      {
+        "move": "HydroPump",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "TENTACRUEL",
+    "id": 73,
+    "partySprite": 2,
+    "baseStats": [
+      80,
+      70,
+      65,
+      100,
+      120
+    ],
+    "baseExp": 205,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      21,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      51,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Acid",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 7
+      },
+      {
+        "move": "Wrap",
+        "level": 13
+      },
+      {
+        "move": "PoisonSting",
+        "level": 18
+      },
+      {
+        "move": "WaterGun",
+        "level": 22
+      },
+      {
+        "move": "Constrict",
+        "level": 27
+      },
+      {
+        "move": "Barrier",
+        "level": 35
+      },
+      {
+        "move": "Screech",
+        "level": 43
+      },
+      {
+        "move": "HydroPump",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "GEODUDE",
+    "id": 74,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      80,
+      100,
+      20,
+      30
+    ],
+    "baseExp": 86,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Graveler",
+      "level": 25
+    },
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "tmhmLearnset": [
+      1,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      35,
+      36,
+      38,
+      44,
+      47,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "DefenseCurl",
+        "level": 11
+      },
+      {
+        "move": "RockThrow",
+        "level": 16
+      },
+      {
+        "move": "Selfdestruct",
+        "level": 21
+      },
+      {
+        "move": "Harden",
+        "level": 26
+      },
+      {
+        "move": "Earthquake",
+        "level": 31
+      },
+      {
+        "move": "Explosion",
+        "level": 36
+      }
+    ]
+  },
+  {
+    "name": "GRAVELER",
+    "id": 75,
+    "partySprite": 0,
+    "baseStats": [
+      55,
+      95,
+      115,
+      35,
+      45
+    ],
+    "baseExp": 134,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "tmhmLearnset": [
+      1,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      35,
+      36,
+      38,
+      44,
+      47,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "DefenseCurl",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "DefenseCurl",
+        "level": 11
+      },
+      {
+        "move": "RockThrow",
+        "level": 16
+      },
+      {
+        "move": "Selfdestruct",
+        "level": 21
+      },
+      {
+        "move": "Harden",
+        "level": 29
+      },
+      {
+        "move": "Earthquake",
+        "level": 36
+      },
+      {
+        "move": "Explosion",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "GOLEM",
+    "id": 76,
+    "partySprite": 0,
+    "baseStats": [
+      80,
+      110,
+      130,
+      45,
+      55
+    ],
+    "baseExp": 177,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      35,
+      36,
+      38,
+      44,
+      47,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "DefenseCurl",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "DefenseCurl",
+        "level": 11
+      },
+      {
+        "move": "RockThrow",
+        "level": 16
+      },
+      {
+        "move": "Selfdestruct",
+        "level": 21
+      },
+      {
+        "move": "Harden",
+        "level": 29
+      },
+      {
+        "move": "Earthquake",
+        "level": 36
+      },
+      {
+        "move": "Explosion",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "PONYTA",
+    "id": 77,
+    "partySprite": 7,
+    "baseStats": [
+      50,
+      85,
+      55,
+      90,
+      65
+    ],
+    "baseExp": 152,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Rapidash",
+      "level": 40
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 30
+      },
+      {
+        "move": "Stomp",
+        "level": 32
+      },
+      {
+        "move": "Growl",
+        "level": 35
+      },
+      {
+        "move": "FireSpin",
+        "level": 39
+      },
+      {
+        "move": "TakeDown",
+        "level": 43
+      },
+      {
+        "move": "Agility",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "RAPIDASH",
+    "id": 78,
+    "partySprite": 7,
+    "baseStats": [
+      65,
+      100,
+      70,
+      105,
+      80
+    ],
+    "baseExp": 192,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "Fire"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      15,
+      20,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Stomp",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 30
+      },
+      {
+        "move": "Stomp",
+        "level": 32
+      },
+      {
+        "move": "Growl",
+        "level": 35
+      },
+      {
+        "move": "FireSpin",
+        "level": 39
+      },
+      {
+        "move": "TakeDown",
+        "level": 47
+      },
+      {
+        "move": "Agility",
+        "level": 55
+      }
+    ]
+  },
+  {
+    "name": "SLOWPOKE",
+    "id": 79,
+    "partySprite": 7,
+    "baseStats": [
+      90,
+      65,
+      65,
+      15,
+      40
+    ],
+    "baseExp": 99,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Slowbro",
+      "level": 37
+    },
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      20,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      53,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 18
+      },
+      {
+        "move": "Headbutt",
+        "level": 22
+      },
+      {
+        "move": "Growl",
+        "level": 27
+      },
+      {
+        "move": "WaterGun",
+        "level": 33
+      },
+      {
+        "move": "Amnesia",
+        "level": 40
+      },
+      {
+        "move": "Psychic",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "SLOWBRO",
+    "id": 80,
+    "partySprite": 0,
+    "baseStats": [
+      95,
+      75,
+      110,
+      30,
+      80
+    ],
+    "baseExp": 164,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      53,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Headbutt",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 18
+      },
+      {
+        "move": "Headbutt",
+        "level": 22
+      },
+      {
+        "move": "Growl",
+        "level": 27
+      },
+      {
+        "move": "WaterGun",
+        "level": 33
+      },
+      {
+        "move": "Withdraw",
+        "level": 37
+      },
+      {
+        "move": "Amnesia",
+        "level": 44
+      },
+      {
+        "move": "Psychic",
+        "level": 55
+      }
+    ]
+  },
+  {
+    "name": "MAGNEMITE",
+    "id": 81,
+    "partySprite": 8,
+    "baseStats": [
+      25,
+      35,
+      70,
+      45,
+      95
+    ],
+    "baseExp": 89,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Magneton",
+      "level": 30
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      20,
+      24,
+      25,
+      30,
+      31,
+      32,
+      33,
+      34,
+      39,
+      44,
+      45,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Sonicboom",
+        "level": 21
+      },
+      {
+        "move": "Thundershock",
+        "level": 25
+      },
+      {
+        "move": "Supersonic",
+        "level": 29
+      },
+      {
+        "move": "ThunderWave",
+        "level": 35
+      },
+      {
+        "move": "Swift",
+        "level": 41
+      },
+      {
+        "move": "Screech",
+        "level": 47
+      }
+    ]
+  },
+  {
+    "name": "MAGNETON",
+    "id": 82,
+    "partySprite": 8,
+    "baseStats": [
+      50,
+      60,
+      95,
+      70,
+      120
+    ],
+    "baseExp": 161,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      15,
+      20,
+      24,
+      25,
+      30,
+      31,
+      32,
+      33,
+      34,
+      39,
+      44,
+      45,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Sonicboom",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Thundershock",
+        "level": 1
+      },
+      {
+        "move": "Sonicboom",
+        "level": 21
+      },
+      {
+        "move": "Thundershock",
+        "level": 25
+      },
+      {
+        "move": "Supersonic",
+        "level": 29
+      },
+      {
+        "move": "ThunderWave",
+        "level": 38
+      },
+      {
+        "move": "Swift",
+        "level": 46
+      },
+      {
+        "move": "Screech",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "FARFETCH'D",
+    "id": 83,
+    "partySprite": 1,
+    "baseStats": [
+      52,
+      65,
+      55,
+      60,
+      58
+    ],
+    "baseExp": 94,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      10,
+      20,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      50,
+      51,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 7
+      },
+      {
+        "move": "FuryAttack",
+        "level": 15
+      },
+      {
+        "move": "SwordsDance",
+        "level": 23
+      },
+      {
+        "move": "Agility",
+        "level": 31
+      },
+      {
+        "move": "Slash",
+        "level": 39
+      }
+    ]
+  },
+  {
+    "name": "DODUO",
+    "id": 84,
+    "partySprite": 1,
+    "baseStats": [
+      35,
+      85,
+      45,
+      75,
+      35
+    ],
+    "baseExp": 96,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Dodrio",
+      "level": 31
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      4,
+      6,
+      8,
+      9,
+      10,
+      20,
+      31,
+      32,
+      33,
+      34,
+      40,
+      43,
+      44,
+      49,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 20
+      },
+      {
+        "move": "FuryAttack",
+        "level": 24
+      },
+      {
+        "move": "DrillPeck",
+        "level": 30
+      },
+      {
+        "move": "Rage",
+        "level": 36
+      },
+      {
+        "move": "TriAttack",
+        "level": 40
+      },
+      {
+        "move": "Agility",
+        "level": 44
+      }
+    ]
+  },
+  {
+    "name": "DODRIO",
+    "id": 85,
+    "partySprite": 1,
+    "baseStats": [
+      60,
+      110,
+      70,
+      100,
+      60
+    ],
+    "baseExp": 158,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      4,
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      31,
+      32,
+      33,
+      34,
+      40,
+      43,
+      44,
+      49,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "FuryAttack",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 20
+      },
+      {
+        "move": "FuryAttack",
+        "level": 24
+      },
+      {
+        "move": "DrillPeck",
+        "level": 30
+      },
+      {
+        "move": "Rage",
+        "level": 39
+      },
+      {
+        "move": "TriAttack",
+        "level": 45
+      },
+      {
+        "move": "Agility",
+        "level": 51
+      }
+    ]
+  },
+  {
+    "name": "SEEL",
+    "id": 86,
+    "partySprite": 2,
+    "baseStats": [
+      65,
+      45,
+      55,
+      45,
+      70
+    ],
+    "baseExp": 100,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Dewgong",
+      "level": 34
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      20,
+      31,
+      32,
+      34,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Headbutt",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 30
+      },
+      {
+        "move": "AuroraBeam",
+        "level": 35
+      },
+      {
+        "move": "Rest",
+        "level": 40
+      },
+      {
+        "move": "TakeDown",
+        "level": 45
+      },
+      {
+        "move": "IceBeam",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "DEWGONG",
+    "id": 87,
+    "partySprite": 2,
+    "baseStats": [
+      90,
+      70,
+      80,
+      70,
+      95
+    ],
+    "baseExp": 176,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Ice"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      20,
+      31,
+      32,
+      34,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "AuroraBeam",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Headbutt",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 30
+      },
+      {
+        "move": "AuroraBeam",
+        "level": 35
+      },
+      {
+        "move": "Rest",
+        "level": 44
+      },
+      {
+        "move": "TakeDown",
+        "level": 50
+      },
+      {
+        "move": "IceBeam",
+        "level": 56
+      }
+    ]
+  },
+  {
+    "name": "GRIMER",
+    "id": 88,
+    "partySprite": 0,
+    "baseStats": [
+      80,
+      80,
+      50,
+      25,
+      40
+    ],
+    "baseExp": 90,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Muk",
+      "level": 38
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      20,
+      21,
+      24,
+      25,
+      31,
+      32,
+      34,
+      36,
+      38,
+      44,
+      47,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "PoisonGas",
+        "level": 30
+      },
+      {
+        "move": "Minimize",
+        "level": 33
+      },
+      {
+        "move": "Sludge",
+        "level": 37
+      },
+      {
+        "move": "Harden",
+        "level": 42
+      },
+      {
+        "move": "Screech",
+        "level": 48
+      },
+      {
+        "move": "AcidArmor",
+        "level": 55
+      }
+    ]
+  },
+  {
+    "name": "MUK",
+    "id": 89,
+    "partySprite": 0,
+    "baseStats": [
+      105,
+      105,
+      75,
+      50,
+      65
+    ],
+    "baseExp": 157,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      15,
+      20,
+      21,
+      24,
+      25,
+      31,
+      32,
+      34,
+      36,
+      38,
+      44,
+      47,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "PoisonGas",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "PoisonGas",
+        "level": 30
+      },
+      {
+        "move": "Minimize",
+        "level": 33
+      },
+      {
+        "move": "Sludge",
+        "level": 37
+      },
+      {
+        "move": "Harden",
+        "level": 45
+      },
+      {
+        "move": "Screech",
+        "level": 53
+      },
+      {
+        "move": "AcidArmor",
+        "level": 60
+      }
+    ]
+  },
+  {
+    "name": "SHELLDER",
+    "id": 90,
+    "partySprite": 9,
+    "baseStats": [
+      30,
+      65,
+      100,
+      40,
+      45
+    ],
+    "baseExp": 97,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      39,
+      44,
+      47,
+      49,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Withdraw",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 18
+      },
+      {
+        "move": "Clamp",
+        "level": 23
+      },
+      {
+        "move": "AuroraBeam",
+        "level": 30
+      },
+      {
+        "move": "Leer",
+        "level": 39
+      },
+      {
+        "move": "IceBeam",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "CLOYSTER",
+    "id": 91,
+    "partySprite": 9,
+    "baseStats": [
+      50,
+      95,
+      180,
+      75,
+      85
+    ],
+    "baseExp": 203,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Ice"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      39,
+      44,
+      47,
+      49,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "AuroraBeam",
+        "level": 1
+      },
+      {
+        "move": "Clamp",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 1
+      },
+      {
+        "move": "Withdraw",
+        "level": 1
+      },
+      {
+        "move": "SpikeCannon",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "GASTLY",
+    "id": 92,
+    "partySprite": 0,
+    "baseStats": [
+      30,
+      35,
+      30,
+      80,
+      100
+    ],
+    "baseExp": 95,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "Haunter",
+      "level": 25
+    },
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      6,
+      20,
+      21,
+      24,
+      25,
+      29,
+      31,
+      32,
+      34,
+      36,
+      42,
+      44,
+      46,
+      47,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "ConfuseRay",
+        "level": 1
+      },
+      {
+        "move": "Lick",
+        "level": 1
+      },
+      {
+        "move": "NightShade",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 27
+      },
+      {
+        "move": "DreamEater",
+        "level": 35
+      }
+    ]
+  },
+  {
+    "name": "HAUNTER",
+    "id": 93,
+    "partySprite": 0,
+    "baseStats": [
+      45,
+      50,
+      45,
+      95,
+      115
+    ],
+    "baseExp": 126,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      6,
+      20,
+      21,
+      24,
+      25,
+      29,
+      31,
+      32,
+      34,
+      36,
+      42,
+      44,
+      46,
+      47,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "ConfuseRay",
+        "level": 1
+      },
+      {
+        "move": "Lick",
+        "level": 1
+      },
+      {
+        "move": "NightShade",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 29
+      },
+      {
+        "move": "DreamEater",
+        "level": 38
+      }
+    ]
+  },
+  {
+    "name": "GENGAR",
+    "id": 94,
+    "partySprite": 0,
+    "baseStats": [
+      60,
+      65,
+      60,
+      110,
+      130
+    ],
+    "baseExp": 190,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ghost",
+      "Poison"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      36,
+      40,
+      42,
+      44,
+      45,
+      46,
+      47,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "ConfuseRay",
+        "level": 1
+      },
+      {
+        "move": "Lick",
+        "level": 1
+      },
+      {
+        "move": "NightShade",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 29
+      },
+      {
+        "move": "DreamEater",
+        "level": 38
+      }
+    ]
+  },
+  {
+    "name": "ONIX",
+    "id": 95,
+    "partySprite": 6,
+    "baseStats": [
+      35,
+      45,
+      160,
+      70,
+      30
+    ],
+    "baseExp": 108,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Rock",
+      "Ground"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      36,
+      44,
+      47,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Screech",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Bind",
+        "level": 15
+      },
+      {
+        "move": "RockThrow",
+        "level": 19
+      },
+      {
+        "move": "Rage",
+        "level": 25
+      },
+      {
+        "move": "Slam",
+        "level": 33
+      },
+      {
+        "move": "Harden",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "DROWZEE",
+    "id": 96,
+    "partySprite": 0,
+    "baseStats": [
+      60,
+      48,
+      45,
+      42,
+      90
+    ],
+    "baseExp": 102,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Hypno",
+      "level": 26
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      40,
+      42,
+      44,
+      45,
+      46,
+      49,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Hypnosis",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 12
+      },
+      {
+        "move": "Confusion",
+        "level": 17
+      },
+      {
+        "move": "Headbutt",
+        "level": 24
+      },
+      {
+        "move": "PoisonGas",
+        "level": 29
+      },
+      {
+        "move": "Psychic",
+        "level": 32
+      },
+      {
+        "move": "Meditate",
+        "level": 37
+      }
+    ]
+  },
+  {
+    "name": "HYPNO",
+    "id": 97,
+    "partySprite": 0,
+    "baseStats": [
+      85,
+      73,
+      70,
+      67,
+      115
+    ],
+    "baseExp": 165,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      40,
+      42,
+      44,
+      45,
+      46,
+      49,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 12
+      },
+      {
+        "move": "Confusion",
+        "level": 17
+      },
+      {
+        "move": "Headbutt",
+        "level": 24
+      },
+      {
+        "move": "PoisonGas",
+        "level": 29
+      },
+      {
+        "move": "Psychic",
+        "level": 32
+      },
+      {
+        "move": "Meditate",
+        "level": 37
+      }
+    ]
+  },
+  {
+    "name": "KRABBY",
+    "id": 98,
+    "partySprite": 2,
+    "baseStats": [
+      30,
+      105,
+      90,
+      50,
+      25
+    ],
+    "baseExp": 115,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Kingler",
+      "level": 28
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      31,
+      32,
+      34,
+      40,
+      44,
+      50,
+      51,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Vicegrip",
+        "level": 20
+      },
+      {
+        "move": "Guillotine",
+        "level": 25
+      },
+      {
+        "move": "Stomp",
+        "level": 30
+      },
+      {
+        "move": "Crabhammer",
+        "level": 35
+      },
+      {
+        "move": "Harden",
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "KINGLER",
+    "id": 99,
+    "partySprite": 2,
+    "baseStats": [
+      55,
+      130,
+      115,
+      75,
+      50
+    ],
+    "baseExp": 206,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      31,
+      32,
+      34,
+      40,
+      44,
+      50,
+      51,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Vicegrip",
+        "level": 1
+      },
+      {
+        "move": "Vicegrip",
+        "level": 20
+      },
+      {
+        "move": "Guillotine",
+        "level": 25
+      },
+      {
+        "move": "Stomp",
+        "level": 34
+      },
+      {
+        "move": "Crabhammer",
+        "level": 42
+      },
+      {
+        "move": "Harden",
+        "level": 49
+      }
+    ]
+  },
+  {
+    "name": "VOLTORB",
+    "id": 100,
+    "partySprite": 8,
+    "baseStats": [
+      40,
+      30,
+      50,
+      100,
+      55
+    ],
+    "baseExp": 103,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Electrode",
+      "level": 30
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      24,
+      25,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      39,
+      44,
+      45,
+      47,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Screech",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Sonicboom",
+        "level": 17
+      },
+      {
+        "move": "Selfdestruct",
+        "level": 22
+      },
+      {
+        "move": "LightScreen",
+        "level": 29
+      },
+      {
+        "move": "Swift",
+        "level": 36
+      },
+      {
+        "move": "Explosion",
+        "level": 43
+      }
+    ]
+  },
+  {
+    "name": "ELECTRODE",
+    "id": 101,
+    "partySprite": 8,
+    "baseStats": [
+      60,
+      50,
+      70,
+      140,
+      80
+    ],
+    "baseExp": 150,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      39,
+      40,
+      44,
+      45,
+      46,
+      50,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Screech",
+        "level": 1
+      },
+      {
+        "move": "Sonicboom",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Sonicboom",
+        "level": 17
+      },
+      {
+        "move": "Selfdestruct",
+        "level": 22
+      },
+      {
+        "move": "LightScreen",
+        "level": 29
+      },
+      {
+        "move": "Swift",
+        "level": 40
+      },
+      {
+        "move": "Explosion",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "EXEGGCUTE",
+    "id": 102,
+    "partySprite": 4,
+    "baseStats": [
+      60,
+      40,
+      80,
+      40,
+      60
+    ],
+    "baseExp": 98,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      20,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      44,
+      46,
+      47,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Barrage",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 1
+      },
+      {
+        "move": "Reflect",
+        "level": 25
+      },
+      {
+        "move": "LeechSeed",
+        "level": 28
+      },
+      {
+        "move": "StunSpore",
+        "level": 32
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 37
+      },
+      {
+        "move": "Solarbeam",
+        "level": 42
+      },
+      {
+        "move": "SleepPowder",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "EXEGGUTOR",
+    "id": 103,
+    "partySprite": 4,
+    "baseStats": [
+      95,
+      95,
+      85,
+      55,
+      125
+    ],
+    "baseExp": 212,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      36,
+      37,
+      44,
+      46,
+      47,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Barrage",
+        "level": 1
+      },
+      {
+        "move": "Hypnosis",
+        "level": 1
+      },
+      {
+        "move": "Stomp",
+        "level": 28
+      }
+    ]
+  },
+  {
+    "name": "CUBONE",
+    "id": 104,
+    "partySprite": 0,
+    "baseStats": [
+      50,
+      50,
+      95,
+      35,
+      40
+    ],
+    "baseExp": 87,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Marowak",
+      "level": 28
+    },
+    "types": [
+      "Ground",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      38,
+      40,
+      44,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "BoneClub",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 25
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 31
+      },
+      {
+        "move": "Thrash",
+        "level": 38
+      },
+      {
+        "move": "Bonemerang",
+        "level": 43
+      },
+      {
+        "move": "Rage",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "MAROWAK",
+    "id": 105,
+    "partySprite": 0,
+    "baseStats": [
+      60,
+      80,
+      110,
+      45,
+      50
+    ],
+    "baseExp": 124,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ground",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      38,
+      40,
+      44,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "BoneClub",
+        "level": 1
+      },
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 25
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 31
+      },
+      {
+        "move": "Thrash",
+        "level": 38
+      },
+      {
+        "move": "Bonemerang",
+        "level": 43
+      },
+      {
+        "move": "Rage",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "HITMONLEE",
+    "id": 106,
+    "partySprite": 0,
+    "baseStats": [
+      50,
+      120,
+      53,
+      87,
+      35
+    ],
+    "baseExp": 139,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fighting",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      31,
+      32,
+      34,
+      35,
+      39,
+      40,
+      44,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "DoubleKick",
+        "level": 1
+      },
+      {
+        "move": "Meditate",
+        "level": 1
+      },
+      {
+        "move": "RollingKick",
+        "level": 33
+      },
+      {
+        "move": "JumpKick",
+        "level": 38
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 43
+      },
+      {
+        "move": "HiJumpKick",
+        "level": 48
+      },
+      {
+        "move": "MegaKick",
+        "level": 53
+      }
+    ]
+  },
+  {
+    "name": "HITMONCHAN",
+    "id": 107,
+    "partySprite": 0,
+    "baseStats": [
+      50,
+      105,
+      79,
+      76,
+      35
+    ],
+    "baseExp": 140,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fighting",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      17,
+      18,
+      19,
+      20,
+      31,
+      32,
+      34,
+      35,
+      39,
+      40,
+      44,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Agility",
+        "level": 1
+      },
+      {
+        "move": "CometPunch",
+        "level": 1
+      },
+      {
+        "move": "FirePunch",
+        "level": 33
+      },
+      {
+        "move": "IcePunch",
+        "level": 38
+      },
+      {
+        "move": "Thunderpunch",
+        "level": 43
+      },
+      {
+        "move": "MegaPunch",
+        "level": 48
+      },
+      {
+        "move": "Counter",
+        "level": 53
+      }
+    ]
+  },
+  {
+    "name": "LICKITUNG",
+    "id": 108,
+    "partySprite": 0,
+    "baseStats": [
+      90,
+      55,
+      75,
+      30,
+      60
+    ],
+    "baseExp": 127,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      26,
+      27,
+      31,
+      32,
+      34,
+      38,
+      40,
+      44,
+      50,
+      51,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Supersonic",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "Stomp",
+        "level": 7
+      },
+      {
+        "move": "Disable",
+        "level": 15
+      },
+      {
+        "move": "DefenseCurl",
+        "level": 23
+      },
+      {
+        "move": "Slam",
+        "level": 31
+      },
+      {
+        "move": "Screech",
+        "level": 39
+      }
+    ]
+  },
+  {
+    "name": "KOFFING",
+    "id": 109,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      65,
+      95,
+      35,
+      60
+    ],
+    "baseExp": 114,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Weezing",
+      "level": 35
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      20,
+      24,
+      25,
+      31,
+      32,
+      34,
+      36,
+      38,
+      44,
+      47,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Smog",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Sludge",
+        "level": 32
+      },
+      {
+        "move": "Smokescreen",
+        "level": 37
+      },
+      {
+        "move": "Selfdestruct",
+        "level": 40
+      },
+      {
+        "move": "Haze",
+        "level": 45
+      },
+      {
+        "move": "Explosion",
+        "level": 48
+      }
+    ]
+  },
+  {
+    "name": "WEEZING",
+    "id": 110,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      90,
+      120,
+      60,
+      85
+    ],
+    "baseExp": 173,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Poison",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      15,
+      20,
+      24,
+      25,
+      31,
+      32,
+      34,
+      36,
+      38,
+      44,
+      47,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Sludge",
+        "level": 1
+      },
+      {
+        "move": "Smog",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Sludge",
+        "level": 32
+      },
+      {
+        "move": "Smokescreen",
+        "level": 39
+      },
+      {
+        "move": "Selfdestruct",
+        "level": 43
+      },
+      {
+        "move": "Haze",
+        "level": 49
+      },
+      {
+        "move": "Explosion",
+        "level": 53
+      }
+    ]
+  },
+  {
+    "name": "RHYHORN",
+    "id": 111,
+    "partySprite": 7,
+    "baseStats": [
+      80,
+      85,
+      95,
+      25,
+      30
+    ],
+    "baseExp": 135,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "Rhydon",
+      "level": 42
+    },
+    "types": [
+      "Ground",
+      "Rock"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      20,
+      24,
+      25,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      38,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "HornAttack",
+        "level": 1
+      },
+      {
+        "move": "Stomp",
+        "level": 30
+      },
+      {
+        "move": "TailWhip",
+        "level": 35
+      },
+      {
+        "move": "FuryAttack",
+        "level": 40
+      },
+      {
+        "move": "HornDrill",
+        "level": 45
+      },
+      {
+        "move": "Leer",
+        "level": 50
+      },
+      {
+        "move": "TakeDown",
+        "level": 55
+      }
+    ]
+  },
+  {
+    "name": "RHYDON",
+    "id": 112,
+    "partySprite": 0,
+    "baseStats": [
+      105,
+      130,
+      120,
+      40,
+      45
+    ],
+    "baseExp": 204,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ground",
+      "Rock"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      38,
+      40,
+      44,
+      48,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "FuryAttack",
+        "level": 1
+      },
+      {
+        "move": "HornAttack",
+        "level": 1
+      },
+      {
+        "move": "Stomp",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "Stomp",
+        "level": 30
+      },
+      {
+        "move": "TailWhip",
+        "level": 35
+      },
+      {
+        "move": "FuryAttack",
+        "level": 40
+      },
+      {
+        "move": "HornDrill",
+        "level": 48
+      },
+      {
+        "move": "Leer",
+        "level": 55
+      },
+      {
+        "move": "TakeDown",
+        "level": 64
+      }
+    ]
+  },
+  {
+    "name": "CHANSEY",
+    "id": 113,
+    "partySprite": 3,
+    "baseStats": [
+      250,
+      5,
+      5,
+      50,
+      105
+    ],
+    "baseExp": 255,
+    "expGroup": 3,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37,
+      38,
+      40,
+      41,
+      44,
+      45,
+      46,
+      49,
+      50,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Doubleslap",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "Sing",
+        "level": 24
+      },
+      {
+        "move": "Growl",
+        "level": 30
+      },
+      {
+        "move": "Minimize",
+        "level": 38
+      },
+      {
+        "move": "DefenseCurl",
+        "level": 44
+      },
+      {
+        "move": "LightScreen",
+        "level": 48
+      },
+      {
+        "move": "DoubleEdge",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "TANGELA",
+    "id": 114,
+    "partySprite": 4,
+    "baseStats": [
+      65,
+      55,
+      115,
+      60,
+      100
+    ],
+    "baseExp": 166,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Grass",
+      "None"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      21,
+      22,
+      31,
+      32,
+      34,
+      40,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bind",
+        "level": 1
+      },
+      {
+        "move": "Constrict",
+        "level": 1
+      },
+      {
+        "move": "Absorb",
+        "level": 29
+      },
+      {
+        "move": "Poisonpowder",
+        "level": 32
+      },
+      {
+        "move": "StunSpore",
+        "level": 36
+      },
+      {
+        "move": "SleepPowder",
+        "level": 39
+      },
+      {
+        "move": "Slam",
+        "level": 45
+      },
+      {
+        "move": "Growth",
+        "level": 49
+      }
+    ]
+  },
+  {
+    "name": "KANGASKHAN",
+    "id": 115,
+    "partySprite": 0,
+    "baseStats": [
+      105,
+      95,
+      80,
+      90,
+      40
+    ],
+    "baseExp": 175,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      24,
+      25,
+      26,
+      27,
+      31,
+      32,
+      34,
+      38,
+      40,
+      44,
+      48,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "CometPunch",
+        "level": 1
+      },
+      {
+        "move": "Rage",
+        "level": 1
+      },
+      {
+        "move": "Bite",
+        "level": 26
+      },
+      {
+        "move": "TailWhip",
+        "level": 31
+      },
+      {
+        "move": "MegaPunch",
+        "level": 36
+      },
+      {
+        "move": "Leer",
+        "level": 41
+      },
+      {
+        "move": "DizzyPunch",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "HORSEA",
+    "id": 116,
+    "partySprite": 2,
+    "baseStats": [
+      30,
+      40,
+      70,
+      60,
+      70
+    ],
+    "baseExp": 83,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Seadra",
+      "level": 32
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Smokescreen",
+        "level": 19
+      },
+      {
+        "move": "Leer",
+        "level": 24
+      },
+      {
+        "move": "WaterGun",
+        "level": 30
+      },
+      {
+        "move": "Agility",
+        "level": 37
+      },
+      {
+        "move": "HydroPump",
+        "level": 45
+      }
+    ]
+  },
+  {
+    "name": "SEADRA",
+    "id": 117,
+    "partySprite": 2,
+    "baseStats": [
+      55,
+      65,
+      95,
+      85,
+      95
+    ],
+    "baseExp": 155,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bubble",
+        "level": 1
+      },
+      {
+        "move": "Smokescreen",
+        "level": 1
+      },
+      {
+        "move": "Smokescreen",
+        "level": 19
+      },
+      {
+        "move": "Leer",
+        "level": 24
+      },
+      {
+        "move": "WaterGun",
+        "level": 30
+      },
+      {
+        "move": "Agility",
+        "level": 41
+      },
+      {
+        "move": "HydroPump",
+        "level": 52
+      }
+    ]
+  },
+  {
+    "name": "GOLDEEN",
+    "id": 118,
+    "partySprite": 2,
+    "baseStats": [
+      45,
+      67,
+      60,
+      63,
+      50
+    ],
+    "baseExp": 111,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Seaking",
+      "level": 33
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 19
+      },
+      {
+        "move": "HornAttack",
+        "level": 24
+      },
+      {
+        "move": "FuryAttack",
+        "level": 30
+      },
+      {
+        "move": "Waterfall",
+        "level": 37
+      },
+      {
+        "move": "HornDrill",
+        "level": 45
+      },
+      {
+        "move": "Agility",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "SEAKING",
+    "id": 119,
+    "partySprite": 2,
+    "baseStats": [
+      80,
+      92,
+      65,
+      68,
+      80
+    ],
+    "baseExp": 170,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 1
+      },
+      {
+        "move": "TailWhip",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 19
+      },
+      {
+        "move": "HornAttack",
+        "level": 24
+      },
+      {
+        "move": "FuryAttack",
+        "level": 30
+      },
+      {
+        "move": "Waterfall",
+        "level": 39
+      },
+      {
+        "move": "HornDrill",
+        "level": 48
+      },
+      {
+        "move": "Agility",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "STARYU",
+    "id": 120,
+    "partySprite": 9,
+    "baseStats": [
+      30,
+      45,
+      55,
+      85,
+      70
+    ],
+    "baseExp": 106,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      53,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 17
+      },
+      {
+        "move": "Harden",
+        "level": 22
+      },
+      {
+        "move": "Recover",
+        "level": 27
+      },
+      {
+        "move": "Swift",
+        "level": 32
+      },
+      {
+        "move": "Minimize",
+        "level": 37
+      },
+      {
+        "move": "LightScreen",
+        "level": 42
+      },
+      {
+        "move": "HydroPump",
+        "level": 47
+      }
+    ]
+  },
+  {
+    "name": "STARMIE",
+    "id": 121,
+    "partySprite": 9,
+    "baseStats": [
+      60,
+      75,
+      85,
+      115,
+      100
+    ],
+    "baseExp": 207,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      53,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Harden",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "MR. MIME",
+    "id": 122,
+    "partySprite": 0,
+    "baseStats": [
+      40,
+      45,
+      65,
+      90,
+      100
+    ],
+    "baseExp": 136,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      40,
+      44,
+      45,
+      46,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Barrier",
+        "level": 1
+      },
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Confusion",
+        "level": 15
+      },
+      {
+        "move": "LightScreen",
+        "level": 23
+      },
+      {
+        "move": "Doubleslap",
+        "level": 31
+      },
+      {
+        "move": "Meditate",
+        "level": 39
+      },
+      {
+        "move": "Substitute",
+        "level": 47
+      }
+    ]
+  },
+  {
+    "name": "SCYTHER",
+    "id": 123,
+    "partySprite": 5,
+    "baseStats": [
+      70,
+      110,
+      80,
+      105,
+      55
+    ],
+    "baseExp": 187,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      9,
+      10,
+      15,
+      20,
+      31,
+      32,
+      34,
+      39,
+      40,
+      44,
+      50,
+      51
+    ],
+    "levelupLearnset": [
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 17
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 20
+      },
+      {
+        "move": "DoubleTeam",
+        "level": 24
+      },
+      {
+        "move": "Slash",
+        "level": 29
+      },
+      {
+        "move": "SwordsDance",
+        "level": 35
+      },
+      {
+        "move": "Agility",
+        "level": 42
+      }
+    ]
+  },
+  {
+    "name": "JYNX",
+    "id": 124,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      50,
+      35,
+      95,
+      95
+    ],
+    "baseExp": 137,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ice",
+      "Psychic"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      40,
+      44,
+      46,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "LovelyKiss",
+        "level": 1
+      },
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "Lick",
+        "level": 18
+      },
+      {
+        "move": "Doubleslap",
+        "level": 23
+      },
+      {
+        "move": "IcePunch",
+        "level": 31
+      },
+      {
+        "move": "BodySlam",
+        "level": 39
+      },
+      {
+        "move": "Thrash",
+        "level": 47
+      },
+      {
+        "move": "Blizzard",
+        "level": 58
+      }
+    ]
+  },
+  {
+    "name": "ELECTABUZZ",
+    "id": 125,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      83,
+      57,
+      105,
+      85
+    ],
+    "baseExp": 156,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      20,
+      21,
+      26,
+      27,
+      28,
+      31,
+      32,
+      34,
+      40,
+      44,
+      48,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "Thundershock",
+        "level": 34
+      },
+      {
+        "move": "Screech",
+        "level": 37
+      },
+      {
+        "move": "Thunderpunch",
+        "level": 42
+      },
+      {
+        "move": "LightScreen",
+        "level": 49
+      },
+      {
+        "move": "Thunder",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "MAGMAR",
+    "id": 126,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      95,
+      57,
+      93,
+      85
+    ],
+    "baseExp": 167,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      18,
+      19,
+      20,
+      29,
+      30,
+      31,
+      32,
+      34,
+      35,
+      38,
+      40,
+      44,
+      46,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 36
+      },
+      {
+        "move": "ConfuseRay",
+        "level": 39
+      },
+      {
+        "move": "FirePunch",
+        "level": 43
+      },
+      {
+        "move": "Smokescreen",
+        "level": 48
+      },
+      {
+        "move": "Smog",
+        "level": 52
+      },
+      {
+        "move": "Flamethrower",
+        "level": 55
+      }
+    ]
+  },
+  {
+    "name": "PINSIR",
+    "id": 127,
+    "partySprite": 5,
+    "baseStats": [
+      65,
+      125,
+      100,
+      85,
+      55
+    ],
+    "baseExp": 200,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Bug",
+      "None"
+    ],
+    "tmhmLearnset": [
+      3,
+      6,
+      8,
+      9,
+      10,
+      15,
+      17,
+      19,
+      20,
+      31,
+      32,
+      34,
+      44,
+      50,
+      51,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Vicegrip",
+        "level": 1
+      },
+      {
+        "move": "SeismicToss",
+        "level": 25
+      },
+      {
+        "move": "Guillotine",
+        "level": 30
+      },
+      {
+        "move": "FocusEnergy",
+        "level": 36
+      },
+      {
+        "move": "Harden",
+        "level": 43
+      },
+      {
+        "move": "Slash",
+        "level": 49
+      },
+      {
+        "move": "SwordsDance",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "TAUROS",
+    "id": 128,
+    "partySprite": 7,
+    "baseStats": [
+      75,
+      100,
+      95,
+      110,
+      70
+    ],
+    "baseExp": 211,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      13,
+      14,
+      15,
+      20,
+      24,
+      25,
+      26,
+      27,
+      31,
+      32,
+      34,
+      38,
+      40,
+      44,
+      50,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Stomp",
+        "level": 21
+      },
+      {
+        "move": "TailWhip",
+        "level": 28
+      },
+      {
+        "move": "Leer",
+        "level": 35
+      },
+      {
+        "move": "Rage",
+        "level": 44
+      },
+      {
+        "move": "TakeDown",
+        "level": 51
+      }
+    ]
+  },
+  {
+    "name": "MAGIKARP",
+    "id": 129,
+    "partySprite": 2,
+    "baseStats": [
+      20,
+      10,
+      55,
+      80,
+      20
+    ],
+    "baseExp": 20,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "Gyarados",
+      "level": 20
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [],
+    "levelupLearnset": [
+      {
+        "move": "Splash",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 15
+      }
+    ]
+  },
+  {
+    "name": "GYARADOS",
+    "id": 130,
+    "partySprite": 6,
+    "baseStats": [
+      95,
+      125,
+      79,
+      81,
+      100
+    ],
+    "baseExp": 214,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      23,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      38,
+      40,
+      44,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Bite",
+        "level": 1
+      },
+      {
+        "move": "DragonRage",
+        "level": 1
+      },
+      {
+        "move": "HydroPump",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Bite",
+        "level": 20
+      },
+      {
+        "move": "DragonRage",
+        "level": 25
+      },
+      {
+        "move": "Leer",
+        "level": 32
+      },
+      {
+        "move": "HydroPump",
+        "level": 41
+      },
+      {
+        "move": "HyperBeam",
+        "level": 52
+      }
+    ]
+  },
+  {
+    "name": "LAPRAS",
+    "id": 131,
+    "partySprite": 2,
+    "baseStats": [
+      130,
+      85,
+      80,
+      60,
+      95
+    ],
+    "baseExp": 219,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "Ice"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      22,
+      23,
+      24,
+      25,
+      29,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      46,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Growl",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "Sing",
+        "level": 16
+      },
+      {
+        "move": "Mist",
+        "level": 20
+      },
+      {
+        "move": "BodySlam",
+        "level": 25
+      },
+      {
+        "move": "ConfuseRay",
+        "level": 31
+      },
+      {
+        "move": "IceBeam",
+        "level": 38
+      },
+      {
+        "move": "HydroPump",
+        "level": 46
+      }
+    ]
+  },
+  {
+    "name": "DITTO",
+    "id": 132,
+    "partySprite": 0,
+    "baseStats": [
+      48,
+      48,
+      48,
+      48,
+      48
+    ],
+    "baseExp": 61,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [],
+    "levelupLearnset": [
+      {
+        "move": "Transform",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "EEVEE",
+    "id": 133,
+    "partySprite": 7,
+    "baseStats": [
+      55,
+      55,
+      50,
+      55,
+      65
+    ],
+    "baseExp": 92,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      20,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 27
+      },
+      {
+        "move": "TailWhip",
+        "level": 31
+      },
+      {
+        "move": "Bite",
+        "level": 37
+      },
+      {
+        "move": "TakeDown",
+        "level": 45
+      }
+    ]
+  },
+  {
+    "name": "VAPOREON",
+    "id": 134,
+    "partySprite": 7,
+    "baseStats": [
+      130,
+      65,
+      60,
+      65,
+      110
+    ],
+    "baseExp": 196,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Water",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 27
+      },
+      {
+        "move": "WaterGun",
+        "level": 31
+      },
+      {
+        "move": "TailWhip",
+        "level": 37
+      },
+      {
+        "move": "Bite",
+        "level": 40
+      },
+      {
+        "move": "AcidArmor",
+        "level": 42
+      },
+      {
+        "move": "Haze",
+        "level": 44
+      },
+      {
+        "move": "Mist",
+        "level": 48
+      },
+      {
+        "move": "HydroPump",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "JOLTEON",
+    "id": 135,
+    "partySprite": 7,
+    "baseStats": [
+      65,
+      65,
+      60,
+      130,
+      110
+    ],
+    "baseExp": 197,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Electric",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      45,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Thundershock",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 27
+      },
+      {
+        "move": "Thundershock",
+        "level": 31
+      },
+      {
+        "move": "TailWhip",
+        "level": 37
+      },
+      {
+        "move": "ThunderWave",
+        "level": 40
+      },
+      {
+        "move": "DoubleKick",
+        "level": 42
+      },
+      {
+        "move": "Agility",
+        "level": 44
+      },
+      {
+        "move": "PinMissle",
+        "level": 48
+      },
+      {
+        "move": "Thunder",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "FLAREON",
+    "id": 136,
+    "partySprite": 7,
+    "baseStats": [
+      65,
+      130,
+      60,
+      65,
+      110
+    ],
+    "baseExp": 198,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      15,
+      20,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      50
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Ember",
+        "level": 1
+      },
+      {
+        "move": "SandAttack",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 1
+      },
+      {
+        "move": "QuickAttack",
+        "level": 27
+      },
+      {
+        "move": "Ember",
+        "level": 31
+      },
+      {
+        "move": "TailWhip",
+        "level": 37
+      },
+      {
+        "move": "Bite",
+        "level": 40
+      },
+      {
+        "move": "Leer",
+        "level": 42
+      },
+      {
+        "move": "FireSpin",
+        "level": 44
+      },
+      {
+        "move": "Rage",
+        "level": 48
+      },
+      {
+        "move": "Flamethrower",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "PORYGON",
+    "id": 137,
+    "partySprite": 0,
+    "baseStats": [
+      65,
+      60,
+      70,
+      40,
+      75
+    ],
+    "baseExp": 130,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      9,
+      10,
+      13,
+      14,
+      15,
+      20,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      39,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Conversion",
+        "level": 1
+      },
+      {
+        "move": "Sharpen",
+        "level": 1
+      },
+      {
+        "move": "Tackle",
+        "level": 1
+      },
+      {
+        "move": "Psybeam",
+        "level": 23
+      },
+      {
+        "move": "Recover",
+        "level": 28
+      },
+      {
+        "move": "Agility",
+        "level": 35
+      },
+      {
+        "move": "TriAttack",
+        "level": 42
+      }
+    ]
+  },
+  {
+    "name": "OMANYTE",
+    "id": 138,
+    "partySprite": 9,
+    "baseStats": [
+      35,
+      40,
+      100,
+      35,
+      90
+    ],
+    "baseExp": 120,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Omastar",
+      "level": 40
+    },
+    "types": [
+      "Rock",
+      "Water"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "Withdraw",
+        "level": 1
+      },
+      {
+        "move": "HornAttack",
+        "level": 34
+      },
+      {
+        "move": "Leer",
+        "level": 39
+      },
+      {
+        "move": "SpikeCannon",
+        "level": 46
+      },
+      {
+        "move": "HydroPump",
+        "level": 53
+      }
+    ]
+  },
+  {
+    "name": "OMASTAR",
+    "id": 139,
+    "partySprite": 9,
+    "baseStats": [
+      70,
+      60,
+      125,
+      55,
+      115
+    ],
+    "baseExp": 199,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Rock",
+      "Water"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      19,
+      20,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "HornAttack",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "Withdraw",
+        "level": 1
+      },
+      {
+        "move": "HornAttack",
+        "level": 34
+      },
+      {
+        "move": "Leer",
+        "level": 39
+      },
+      {
+        "move": "SpikeCannon",
+        "level": 44
+      },
+      {
+        "move": "HydroPump",
+        "level": 49
+      }
+    ]
+  },
+  {
+    "name": "KABUTO",
+    "id": 140,
+    "partySprite": 9,
+    "baseStats": [
+      30,
+      80,
+      90,
+      55,
+      45
+    ],
+    "baseExp": 119,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "Kabutops",
+      "level": 40
+    },
+    "types": [
+      "Rock",
+      "Water"
+    ],
+    "tmhmLearnset": [
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      31,
+      32,
+      33,
+      34,
+      44,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Harden",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Absorb",
+        "level": 34
+      },
+      {
+        "move": "Slash",
+        "level": 39
+      },
+      {
+        "move": "Leer",
+        "level": 44
+      },
+      {
+        "move": "HydroPump",
+        "level": 49
+      }
+    ]
+  },
+  {
+    "name": "KABUTOPS",
+    "id": 141,
+    "partySprite": 9,
+    "baseStats": [
+      60,
+      115,
+      105,
+      80,
+      70
+    ],
+    "baseExp": 201,
+    "expGroup": 2,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Rock",
+      "Water"
+    ],
+    "tmhmLearnset": [
+      2,
+      3,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      19,
+      20,
+      31,
+      32,
+      33,
+      34,
+      40,
+      44,
+      50,
+      51,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Absorb",
+        "level": 1
+      },
+      {
+        "move": "Harden",
+        "level": 1
+      },
+      {
+        "move": "Scratch",
+        "level": 1
+      },
+      {
+        "move": "Absorb",
+        "level": 34
+      },
+      {
+        "move": "Slash",
+        "level": 39
+      },
+      {
+        "move": "Leer",
+        "level": 46
+      },
+      {
+        "move": "HydroPump",
+        "level": 53
+      }
+    ]
+  },
+  {
+    "name": "AERODACTYL",
+    "id": 142,
+    "partySprite": 1,
+    "baseStats": [
+      80,
+      105,
+      65,
+      130,
+      60
+    ],
+    "baseExp": 202,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Rock",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      23,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Agility",
+        "level": 1
+      },
+      {
+        "move": "WingAttack",
+        "level": 1
+      },
+      {
+        "move": "Supersonic",
+        "level": 33
+      },
+      {
+        "move": "Bite",
+        "level": 38
+      },
+      {
+        "move": "TakeDown",
+        "level": 45
+      },
+      {
+        "move": "HyperBeam",
+        "level": 54
+      }
+    ]
+  },
+  {
+    "name": "SNORLAX",
+    "id": 143,
+    "partySprite": 0,
+    "baseStats": [
+      160,
+      110,
+      65,
+      30,
+      65
+    ],
+    "baseExp": 154,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Normal",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      26,
+      27,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      40,
+      44,
+      46,
+      48,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Amnesia",
+        "level": 1
+      },
+      {
+        "move": "Headbutt",
+        "level": 1
+      },
+      {
+        "move": "Rest",
+        "level": 1
+      },
+      {
+        "move": "BodySlam",
+        "level": 35
+      },
+      {
+        "move": "Harden",
+        "level": 41
+      },
+      {
+        "move": "DoubleEdge",
+        "level": 48
+      },
+      {
+        "move": "HyperBeam",
+        "level": 56
+      }
+    ]
+  },
+  {
+    "name": "ARTICUNO",
+    "id": 144,
+    "partySprite": 1,
+    "baseStats": [
+      90,
+      85,
+      100,
+      85,
+      125
+    ],
+    "baseExp": 215,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Ice",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      31,
+      32,
+      33,
+      34,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "IceBeam",
+        "level": 1
+      },
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "Blizzard",
+        "level": 51
+      },
+      {
+        "move": "Agility",
+        "level": 55
+      },
+      {
+        "move": "Mist",
+        "level": 60
+      }
+    ]
+  },
+  {
+    "name": "ZAPDOS",
+    "id": 145,
+    "partySprite": 1,
+    "baseStats": [
+      90,
+      90,
+      85,
+      100,
+      125
+    ],
+    "baseExp": 216,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Electric",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      39,
+      43,
+      44,
+      45,
+      50,
+      52,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "DrillPeck",
+        "level": 1
+      },
+      {
+        "move": "Thundershock",
+        "level": 1
+      },
+      {
+        "move": "Thunder",
+        "level": 51
+      },
+      {
+        "move": "Agility",
+        "level": 55
+      },
+      {
+        "move": "LightScreen",
+        "level": 60
+      }
+    ]
+  },
+  {
+    "name": "MOLTRES",
+    "id": 146,
+    "partySprite": 1,
+    "baseStats": [
+      90,
+      100,
+      90,
+      90,
+      125
+    ],
+    "baseExp": 217,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      4,
+      6,
+      9,
+      10,
+      15,
+      20,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      43,
+      44,
+      50,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "FireSpin",
+        "level": 1
+      },
+      {
+        "move": "Peck",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 51
+      },
+      {
+        "move": "Agility",
+        "level": 55
+      },
+      {
+        "move": "SkyAttack",
+        "level": 60
+      }
+    ]
+  },
+  {
+    "name": "DRATINI",
+    "id": 147,
+    "partySprite": 6,
+    "baseStats": [
+      41,
+      64,
+      45,
+      50,
+      50
+    ],
+    "baseExp": 67,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "Dragonair",
+      "level": 30
+    },
+    "types": [
+      "Dragon",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      23,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      45,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "ThunderWave",
+        "level": 10
+      },
+      {
+        "move": "Agility",
+        "level": 20
+      },
+      {
+        "move": "Slam",
+        "level": 30
+      },
+      {
+        "move": "DragonRage",
+        "level": 40
+      },
+      {
+        "move": "HyperBeam",
+        "level": 50
+      }
+    ]
+  },
+  {
+    "name": "DRAGONAIR",
+    "id": 148,
+    "partySprite": 6,
+    "baseStats": [
+      61,
+      84,
+      65,
+      70,
+      70
+    ],
+    "baseExp": 144,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "Dragonite",
+      "level": 55
+    },
+    "types": [
+      "Dragon",
+      "None"
+    ],
+    "tmhmLearnset": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      20,
+      23,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      45,
+      50,
+      53
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "ThunderWave",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "ThunderWave",
+        "level": 10
+      },
+      {
+        "move": "Agility",
+        "level": 20
+      },
+      {
+        "move": "Slam",
+        "level": 35
+      },
+      {
+        "move": "DragonRage",
+        "level": 45
+      },
+      {
+        "move": "HyperBeam",
+        "level": 55
+      }
+    ]
+  },
+  {
+    "name": "DRAGONITE",
+    "id": 149,
+    "partySprite": 6,
+    "baseStats": [
+      91,
+      134,
+      95,
+      80,
+      100
+    ],
+    "baseExp": 218,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Dragon",
+      "Flying"
+    ],
+    "tmhmLearnset": [
+      2,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      20,
+      23,
+      24,
+      25,
+      31,
+      32,
+      33,
+      34,
+      38,
+      39,
+      40,
+      44,
+      45,
+      50,
+      53,
+      54
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Agility",
+        "level": 1
+      },
+      {
+        "move": "Leer",
+        "level": 1
+      },
+      {
+        "move": "ThunderWave",
+        "level": 1
+      },
+      {
+        "move": "Wrap",
+        "level": 1
+      },
+      {
+        "move": "ThunderWave",
+        "level": 10
+      },
+      {
+        "move": "Agility",
+        "level": 20
+      },
+      {
+        "move": "Slam",
+        "level": 35
+      },
+      {
+        "move": "DragonRage",
+        "level": 45
+      },
+      {
+        "move": "HyperBeam",
+        "level": 60
+      }
+    ]
+  },
+  {
+    "name": "MEWTWO",
+    "id": 150,
+    "partySprite": 0,
+    "baseStats": [
+      106,
+      110,
+      90,
+      130,
+      154
+    ],
+    "baseExp": 220,
+    "expGroup": 0,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      38,
+      40,
+      44,
+      45,
+      46,
+      49,
+      50,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Confusion",
+        "level": 1
+      },
+      {
+        "move": "Disable",
+        "level": 1
+      },
+      {
+        "move": "Psychic",
+        "level": 1
+      },
+      {
+        "move": "Swift",
+        "level": 1
+      },
+      {
+        "move": "Barrier",
+        "level": 63
+      },
+      {
+        "move": "Psychic",
+        "level": 66
+      },
+      {
+        "move": "Recover",
+        "level": 70
+      },
+      {
+        "move": "Mist",
+        "level": 75
+      },
+      {
+        "move": "Amnesia",
+        "level": 81
+      }
+    ]
+  },
+  {
+    "name": "MEW",
+    "id": 151,
+    "partySprite": 0,
+    "baseStats": [
+      100,
+      100,
+      100,
+      100,
+      100
+    ],
+    "baseExp": 64,
+    "expGroup": 1,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Psychic",
+      "None"
+    ],
+    "tmhmLearnset": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "levelupLearnset": [
+      {
+        "move": "Pound",
+        "level": 1
+      },
+      {
+        "move": "Transform",
+        "level": 10
+      },
+      {
+        "move": "MegaPunch",
+        "level": 20
+      },
+      {
+        "move": "Metronome",
+        "level": 30
+      },
+      {
+        "move": "Psychic",
+        "level": 40
+      }
+    ]
+  },
+  {
+    "name": "MISSINGNO.",
+    "id": 152,
+    "partySprite": 10,
+    "baseStats": [
+      33,
+      136,
+      0,
+      6,
+      29
+    ],
+    "baseExp": 143,
+    "expGroup": 4,
+    "evolution": {
+      "pokemon": "None",
+      "level": 0
+    },
+    "types": [
+      "Bird",
+      "Normal"
+    ],
+    "tmhmLearnset": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      9,
+      10,
+      11,
+      13,
+      14,
+      17,
+      19,
+      20,
+      25,
+      26,
+      27,
+      29,
+      30,
+      43,
+      44,
+      45,
+      49,
+      50,
+      51,
+      52
+    ],
+    "levelupLearnset": [
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "WaterGun",
+        "level": 1
+      },
+      {
+        "move": "SkyAttack",
+        "level": 1
+      }
+    ]
+  }
+]

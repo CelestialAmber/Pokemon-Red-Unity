@@ -205,7 +205,7 @@ if(battleType == BattleType.Trainer){
 	enemyMonObject.transform.localPosition = Vector3.Lerp(new Vector3(-28,116,0),new Vector3(124,116,0),initialTimer/1.2f);
 	yield return new WaitForEndOfFrame();
 	}
-	yield return StartCoroutine(SoundManager.instance.PlayCryCoroutine(PokemonData.MonToID(enemymon.name) - 1));
+	yield return StartCoroutine(SoundManager.instance.PlayCryCoroutine(enemymon.id - 1));
 battleoverlay.sprite = battleOverlaySprites[0];
 playerpokeballs.SetActive(true);
 	Dialogue.instance.fastText = true;
@@ -252,7 +252,7 @@ public void SendOutMonSound(){
 	public void SetBackMonImageActive(){
     playerMonObject.SetActive(true);
 	playerstats.SetActive(true);
-	SoundManager.instance.PlayCry(PokemonData.MonToID(playermon.name) - 1);
+	SoundManager.instance.PlayCry(playermon.id - 1);
 	battleoverlay.sprite = battleOverlaySprites[2];
 	}
 	void UpdateMenus(){
@@ -358,12 +358,12 @@ foreach (GameObject menu in allmenus) {
 
 	}
 	public void DetermineFrontSprite(){
-        frontportrait.overrideSprite = GameData.instance.frontMonSprites[PokemonData.MonToID(enemymon.name) - 1];
+        frontportrait.overrideSprite = GameData.instance.frontMonSprites[enemymon.id - 1];
 
 	}
 
 	public void DetermineBackSprite(){
-        backportrait.overrideSprite = GameData.instance.backMonSprites[PokemonData.MonToID(playermon.name) - 1];
+        backportrait.overrideSprite = GameData.instance.backMonSprites[playermon.id - 1];
 
 	}
 void UpdateStatsUI(){
@@ -489,7 +489,7 @@ switch(moveData.effect){
 
 float moveEffectiveness(Move move,Pokemon target){
 	float result = PokemonData.TypeEffectiveness[move.type][target.types[0]];
-	if(target.types[1] != "") result *= PokemonData.TypeEffectiveness[move.type][target.types[1]];
+	if(target.types[1] != Types.None) result *= PokemonData.TypeEffectiveness[move.type][target.types[1]];
 	return result;
 }
 

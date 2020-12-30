@@ -9,11 +9,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Leech Seed",
+      "Item1": "LeechSeed",
       "Item2": 7
     },
     {
-      "Item1": "Vine Whip",
+      "Item1": "VineWhip",
       "Item2": 13
     },
     {
@@ -21,7 +21,7 @@
       "Item2": 20
     },
     {
-      "Item1": "Razor Leaf",
+      "Item1": "RazorLeaf",
       "Item2": 27
     },
     {
@@ -29,7 +29,7 @@
       "Item2": 34
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 41
     },
     {
@@ -47,15 +47,15 @@
       "Item2": 1
     },
     {
-      "Item1": "Leech Seed",
+      "Item1": "LeechSeed",
       "Item2": 1
     },
     {
-      "Item1": "Leech Seed",
+      "Item1": "LeechSeed",
       "Item2": 7
     },
     {
-      "Item1": "Vine Whip",
+      "Item1": "VineWhip",
       "Item2": 13
     },
     {
@@ -63,7 +63,7 @@
       "Item2": 22
     },
     {
-      "Item1": "Razor Leaf",
+      "Item1": "RazorLeaf",
       "Item2": 30
     },
     {
@@ -71,7 +71,7 @@
       "Item2": 38
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 46
     },
     {
@@ -89,19 +89,19 @@
       "Item2": 1
     },
     {
-      "Item1": "Leech Seed",
+      "Item1": "LeechSeed",
       "Item2": 1
     },
     {
-      "Item1": "Vine Whip",
+      "Item1": "VineWhip",
       "Item2": 1
     },
     {
-      "Item1": "Leech Seed",
+      "Item1": "LeechSeed",
       "Item2": 7
     },
     {
-      "Item1": "Vine Whip",
+      "Item1": "VineWhip",
       "Item2": 13
     },
     {
@@ -109,7 +109,7 @@
       "Item2": 22
     },
     {
-      "Item1": "Razor Leaf",
+      "Item1": "RazorLeaf",
       "Item2": 30
     },
     {
@@ -117,7 +117,7 @@
       "Item2": 43
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 55
     },
     {
@@ -155,7 +155,7 @@
       "Item2": 38
     },
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 46
     }
   ],
@@ -193,7 +193,7 @@
       "Item2": 42
     },
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 56
     }
   ],
@@ -235,7 +235,7 @@
       "Item2": 46
     },
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 55
     }
   ],
@@ -245,7 +245,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
@@ -253,7 +253,7 @@
       "Item2": 8
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 15
     },
     {
@@ -265,11 +265,11 @@
       "Item2": 28
     },
     {
-      "Item1": "Skull Bash",
+      "Item1": "SkullBash",
       "Item2": 39
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 42
     }
   ],
@@ -279,7 +279,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
@@ -291,7 +291,7 @@
       "Item2": 8
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 15
     },
     {
@@ -303,11 +303,11 @@
       "Item2": 31
     },
     {
-      "Item1": "Skull Bash",
+      "Item1": "SkullBash",
       "Item2": 39
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 47
     }
   ],
@@ -317,11 +317,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     },
     {
@@ -333,7 +333,7 @@
       "Item2": 8
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 15
     },
     {
@@ -345,11 +345,11 @@
       "Item2": 28
     },
     {
-      "Item1": "Skull Bash",
+      "Item1": "SkullBash",
       "Item2": 39
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 47
     }
   ],
@@ -359,7 +359,7 @@
       "Item2": 1
     },
     {
-      "Item1": "String Shot",
+      "Item1": "StringShot",
       "Item2": 1
     }
   ],
@@ -383,11 +383,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 16
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 17
     },
     {
@@ -405,11 +405,11 @@
   ],
   "Weedle": [
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 1
     },
     {
-      "Item1": "String Shot",
+      "Item1": "StringShot",
       "Item2": 1
     }
   ],
@@ -421,15 +421,15 @@
   ],
   "Beedrill": [
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 1
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 12
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 16
     },
     {
@@ -441,7 +441,7 @@
       "Item2": 25
     },
     {
-      "Item1": "Pin Missle",
+      "Item1": "PinMissle",
       "Item2": 30
     },
     {
@@ -455,11 +455,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 5
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 12
     },
     {
@@ -467,7 +467,7 @@
       "Item2": 19
     },
     {
-      "Item1": "Wing Attack",
+      "Item1": "WingAttack",
       "Item2": 28
     },
     {
@@ -475,7 +475,7 @@
       "Item2": 36
     },
     {
-      "Item1": "Mirror Move",
+      "Item1": "MirrorMove",
       "Item2": 44
     }
   ],
@@ -485,15 +485,15 @@
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 5
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 12
     },
     {
@@ -501,7 +501,7 @@
       "Item2": 21
     },
     {
-      "Item1": "Wing Attack",
+      "Item1": "WingAttack",
       "Item2": 31
     },
     {
@@ -509,7 +509,7 @@
       "Item2": 40
     },
     {
-      "Item1": "Mirror Move",
+      "Item1": "MirrorMove",
       "Item2": 49
     }
   ],
@@ -519,19 +519,19 @@
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 5
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 12
     },
     {
@@ -539,7 +539,7 @@
       "Item2": 21
     },
     {
-      "Item1": "Wing Attack",
+      "Item1": "WingAttack",
       "Item2": 31
     },
     {
@@ -547,7 +547,7 @@
       "Item2": 44
     },
     {
-      "Item1": "Mirror Move",
+      "Item1": "MirrorMove",
       "Item2": 54
     }
   ],
@@ -557,23 +557,23 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 7
     },
     {
-      "Item1": "Hyper Fang",
+      "Item1": "HyperFang",
       "Item2": 14
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 23
     },
     {
-      "Item1": "Super Fang",
+      "Item1": "SuperFang",
       "Item2": 34
     }
   ],
@@ -583,27 +583,27 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 7
     },
     {
-      "Item1": "Hyper Fang",
+      "Item1": "HyperFang",
       "Item2": 14
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 27
     },
     {
-      "Item1": "Super Fang",
+      "Item1": "SuperFang",
       "Item2": 41
     }
   ],
@@ -621,15 +621,15 @@
       "Item2": 9
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 15
     },
     {
-      "Item1": "Mirror Move",
+      "Item1": "MirrorMove",
       "Item2": 22
     },
     {
-      "Item1": "Drill Peck",
+      "Item1": "DrillPeck",
       "Item2": 29
     },
     {
@@ -655,15 +655,15 @@
       "Item2": 9
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 15
     },
     {
-      "Item1": "Mirror Move",
+      "Item1": "MirrorMove",
       "Item2": 25
     },
     {
-      "Item1": "Drill Peck",
+      "Item1": "DrillPeck",
       "Item2": 34
     },
     {
@@ -681,7 +681,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 10
     },
     {
@@ -711,11 +711,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 1
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 10
     },
     {
@@ -745,11 +745,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 9
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 16
     },
     {
@@ -775,7 +775,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 1
     }
   ],
@@ -785,7 +785,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 10
     },
     {
@@ -793,7 +793,7 @@
       "Item2": 17
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 24
     },
     {
@@ -801,7 +801,7 @@
       "Item2": 31
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 38
     }
   ],
@@ -811,11 +811,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 10
     },
     {
@@ -823,7 +823,7 @@
       "Item2": 17
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 27
     },
     {
@@ -831,11 +831,11 @@
       "Item2": 36
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 47
     }
   ],
-  "Nidoran♀": [
+  "NidoranF": [
     {
       "Item1": "Growl",
       "Item2": 1
@@ -849,11 +849,11 @@
       "Item2": 8
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 14
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 21
     },
     {
@@ -861,11 +861,11 @@
       "Item2": 29
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 36
     },
     {
-      "Item1": "Double Kick",
+      "Item1": "DoubleKick",
       "Item2": 43
     }
   ],
@@ -887,11 +887,11 @@
       "Item2": 8
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 14
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 23
     },
     {
@@ -899,17 +899,17 @@
       "Item2": 32
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 41
     },
     {
-      "Item1": "Double Kick",
+      "Item1": "DoubleKick",
       "Item2": 50
     }
   ],
   "Nidoqueen": [
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 1
     },
     {
@@ -921,7 +921,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
@@ -929,15 +929,15 @@
       "Item2": 8
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 14
     },
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 23
     }
   ], 
-  "Nidoran♂": [
+  "NidoranM": [
     {
       "Item1": "Leer",
       "Item2": 1
@@ -947,27 +947,27 @@
       "Item2": 1
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 8
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 14
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 21
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 29
     },
     {
-      "Item1": "Horn Drill",
+      "Item1": "HornDrill",
       "Item2": 36
     },
     {
-      "Item1": "Double Kick",
+      "Item1": "DoubleKick",
       "Item2": 43
     }
   ],
@@ -977,7 +977,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 1
     },
     {
@@ -985,37 +985,37 @@
       "Item2": 1
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 8
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 14
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 23
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 32
     },
     {
-      "Item1": "Horn Drill",
+      "Item1": "HornDrill",
       "Item2": 41
     },
     {
-      "Item1": "Double Kick",
+      "Item1": "DoubleKick",
       "Item2": 50
     }
   ],
   "Nidoking": [
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 1
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 1
     },
     {
@@ -1027,11 +1027,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 8
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 14
     },
     {
@@ -1065,11 +1065,11 @@
       "Item2": 31
     },
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 39
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 48
     }
   ],
@@ -1097,11 +1097,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 16
     },
     {
@@ -1109,7 +1109,7 @@
       "Item2": 21
     },
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 28
     },
     {
@@ -1117,7 +1117,7 @@
       "Item2": 35
     },
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 42
     }
   ],
@@ -1127,7 +1127,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
@@ -1135,7 +1135,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     }
   ],
@@ -1153,7 +1153,7 @@
       "Item2": 14
     },
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 19
     },
     {
@@ -1165,17 +1165,17 @@
       "Item2": 29
     },
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 34
     },
     {
-      "Item1": "Double-Edge",
+      "Item1": "DoubleEdge",
       "Item2": 39
     }
   ],
   "Wigglytuff": [
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 1
     },
     {
@@ -1193,7 +1193,7 @@
   ],
   "Zubat": [
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 1
     },
     {
@@ -1205,11 +1205,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 21
     },
     {
-      "Item1": "Wing Attack",
+      "Item1": "WingAttack",
       "Item2": 28
     },
     {
@@ -1219,7 +1219,7 @@
   ],
   "Golbat": [
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 1
     },
     {
@@ -1239,11 +1239,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 21
     },
     {
-      "Item1": "Wing Attack",
+      "Item1": "WingAttack",
       "Item2": 32
     },
     {
@@ -1261,11 +1261,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 17
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 19
     },
     {
@@ -1273,7 +1273,7 @@
       "Item2": 24
     },
     {
-      "Item1": "Petal Dance",
+      "Item1": "PetalDance",
       "Item2": 33
     },
     {
@@ -1291,7 +1291,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 1
     },
     {
@@ -1299,11 +1299,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 17
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 19
     },
     {
@@ -1311,7 +1311,7 @@
       "Item2": 28
     },
     {
-      "Item1": "Petal Dance",
+      "Item1": "PetalDance",
       "Item2": 38
     },
     {
@@ -1325,15 +1325,15 @@
       "Item2": 1
     },
     {
-      "Item1": "Petal Dance",
+      "Item1": "PetalDance",
       "Item2": 1
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 1
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 1
     },
     {
@@ -1341,11 +1341,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 17
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 19
     }
   ],
@@ -1355,11 +1355,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 13
     },
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 20
     },
     {
@@ -1377,7 +1377,7 @@
   ],
   "Parasect": [
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 1
     },
     {
@@ -1385,15 +1385,15 @@
       "Item2": 1
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 1
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 13
     },
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 20
     },
     {
@@ -1423,11 +1423,11 @@
       "Item2": 24
     },
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 27
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 30
     },
     {
@@ -1435,7 +1435,7 @@
       "Item2": 35
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 38
     },
     {
@@ -1449,7 +1449,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 1
     },
     {
@@ -1465,11 +1465,11 @@
       "Item2": 24
     },
     {
-      "Item1": "Leech Life",
+      "Item1": "LeechLife",
       "Item2": 27
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 30
     },
     {
@@ -1477,7 +1477,7 @@
       "Item2": 38
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 43
     },
     {
@@ -1499,7 +1499,7 @@
       "Item2": 19
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 24
     },
     {
@@ -1533,7 +1533,7 @@
       "Item2": 19
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 24
     },
     {
@@ -1559,7 +1559,7 @@
       "Item2": 12
     },
     {
-      "Item1": "Pay Day",
+      "Item1": "PayDay",
       "Item2": 17
     },
     {
@@ -1567,7 +1567,7 @@
       "Item2": 24
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 33
     },
     {
@@ -1597,7 +1597,7 @@
       "Item2": 12
     },
     {
-      "Item1": "Pay Day",
+      "Item1": "PayDay",
       "Item2": 17
     },
     {
@@ -1605,7 +1605,7 @@
       "Item2": 24
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 37
     },
     {
@@ -1619,7 +1619,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 28
     },
     {
@@ -1631,11 +1631,11 @@
       "Item2": 36
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 43
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 52
     }
   ],
@@ -1649,11 +1649,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 28
     },
     {
@@ -1665,11 +1665,11 @@
       "Item2": 39
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 48
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 59
     }
   ],
@@ -1683,19 +1683,19 @@
       "Item2": 1
     },
     {
-      "Item1": "Karate Chop",
+      "Item1": "KarateChop",
       "Item2": 15
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 21
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 27
     },
     {
-      "Item1": "Seismic Toss",
+      "Item1": "SeismicToss",
       "Item2": 33
     },
     {
@@ -1705,11 +1705,11 @@
   ],
   "Primeape": [
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 1
     },
     {
-      "Item1": "Karate Chop",
+      "Item1": "KarateChop",
       "Item2": 1
     },
     {
@@ -1721,19 +1721,19 @@
       "Item2": 1
     },
     {
-      "Item1": "Karate Chop",
+      "Item1": "KarateChop",
       "Item2": 15
     },
     {
-      "Item1": "Fury Swipes",
+      "Item1": "FurySwipes",
       "Item2": 21
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 27
     },
     {
-      "Item1": "Seismic Toss",
+      "Item1": "SeismicToss",
       "Item2": 37
     },
     {
@@ -1759,7 +1759,7 @@
       "Item2": 23
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 30
     },
     {
@@ -1785,7 +1785,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 1
     }
   ],
@@ -1799,7 +1799,7 @@
       "Item2": 16
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 19
     },
     {
@@ -1807,7 +1807,7 @@
       "Item2": 25
     },
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 31
     },
     {
@@ -1815,7 +1815,7 @@
       "Item2": 38
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 45
     }
   ],
@@ -1829,7 +1829,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     },
     {
@@ -1837,7 +1837,7 @@
       "Item2": 16
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 19
     },
     {
@@ -1845,7 +1845,7 @@
       "Item2": 26
     },
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 33
     },
     {
@@ -1853,13 +1853,13 @@
       "Item2": 41
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 49
     }
   ],
   "Poliwrath": [
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 1
     },
     {
@@ -1871,7 +1871,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     },
     {
@@ -1879,7 +1879,7 @@
       "Item2": 16
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 19
     }
   ],
@@ -1967,11 +1967,11 @@
   ],
   "Machop": [
     {
-      "Item1": "Karate Chop",
+      "Item1": "KarateChop",
       "Item2": 1
     },
     {
-      "Item1": "Low Kick",
+      "Item1": "LowKick",
       "Item2": 20
     },
     {
@@ -1979,11 +1979,11 @@
       "Item2": 25
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 32
     },
     {
-      "Item1": "Seismic Toss",
+      "Item1": "SeismicToss",
       "Item2": 39
     },
     {
@@ -1993,7 +1993,7 @@
   ],
   "Machoke": [
     {
-      "Item1": "Karate Chop",
+      "Item1": "KarateChop",
       "Item2": 1
     },
     {
@@ -2001,11 +2001,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Low Kick",
+      "Item1": "LowKick",
       "Item2": 1
     },
     {
-      "Item1": "Low Kick",
+      "Item1": "LowKick",
       "Item2": 20
     },
     {
@@ -2013,11 +2013,11 @@
       "Item2": 25
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 36
     },
     {
-      "Item1": "Seismic Toss",
+      "Item1": "SeismicToss",
       "Item2": 44
     },
     {
@@ -2027,7 +2027,7 @@
   ],
   "Machamp": [
     {
-      "Item1": "Karate Chop",
+      "Item1": "KarateChop",
       "Item2": 1
     },
     {
@@ -2035,11 +2035,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Low Kick",
+      "Item1": "LowKick",
       "Item2": 1
     },
     {
-      "Item1": "Low Kick",
+      "Item1": "LowKick",
       "Item2": 20
     },
     {
@@ -2047,11 +2047,11 @@
       "Item2": 25
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 36
     },
     {
-      "Item1": "Seismic Toss",
+      "Item1": "SeismicToss",
       "Item2": 44
     },
     {
@@ -2065,7 +2065,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Vine Whip",
+      "Item1": "VineWhip",
       "Item2": 1
     },
     {
@@ -2077,11 +2077,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 18
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 21
     },
     {
@@ -2089,7 +2089,7 @@
       "Item2": 26
     },
     {
-      "Item1": "Razor Leaf",
+      "Item1": "RazorLeaf",
       "Item2": 33
     },
     {
@@ -2103,7 +2103,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Vine Whip",
+      "Item1": "VineWhip",
       "Item2": 1
     },
     {
@@ -2119,11 +2119,11 @@
       "Item2": 15
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 18
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 23
     },
     {
@@ -2131,7 +2131,7 @@
       "Item2": 29
     },
     {
-      "Item1": "Razor Leaf",
+      "Item1": "RazorLeaf",
       "Item2": 38
     },
     {
@@ -2145,15 +2145,15 @@
       "Item2": 1
     },
     {
-      "Item1": "Razor Leaf",
+      "Item1": "RazorLeaf",
       "Item2": 1
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 1
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 1
     },
     {
@@ -2165,7 +2165,7 @@
       "Item2": 15
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 18
     }
   ],
@@ -2183,11 +2183,11 @@
       "Item2": 13
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 18
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 22
     },
     {
@@ -2203,7 +2203,7 @@
       "Item2": 40
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 48
     }
   ],
@@ -2229,11 +2229,11 @@
       "Item2": 13
     },
     {
-      "Item1": "Poison Sting",
+      "Item1": "PoisonSting",
       "Item2": 18
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 22
     },
     {
@@ -2249,7 +2249,7 @@
       "Item2": 43
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 50
     }
   ],
@@ -2259,11 +2259,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 11
     },
     {
-      "Item1": "Rock Throw",
+      "Item1": "RockThrow",
       "Item2": 16
     },
     {
@@ -2285,7 +2285,7 @@
   ],
   "Graveler": [
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 1
     },
     {
@@ -2293,11 +2293,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 11
     },
     {
-      "Item1": "Rock Throw",
+      "Item1": "RockThrow",
       "Item2": 16
     },
     {
@@ -2319,7 +2319,7 @@
   ],
   "Golem": [
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 1
     },
     {
@@ -2327,11 +2327,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 11
     },
     {
-      "Item1": "Rock Throw",
+      "Item1": "RockThrow",
       "Item2": 16
     },
     {
@@ -2357,7 +2357,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 30
     },
     {
@@ -2369,11 +2369,11 @@
       "Item2": 35
     },
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 39
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 43
     },
     {
@@ -2395,11 +2395,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 30
     },
     {
@@ -2411,11 +2411,11 @@
       "Item2": 35
     },
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 39
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 47
     },
     {
@@ -2441,7 +2441,7 @@
       "Item2": 27
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 33
     },
     {
@@ -2479,7 +2479,7 @@
       "Item2": 27
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 33
     },
     {
@@ -2513,7 +2513,7 @@
       "Item2": 29
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 35
     },
     {
@@ -2551,7 +2551,7 @@
       "Item2": 29
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 38
     },
     {
@@ -2563,13 +2563,13 @@
       "Item2": 54
     }
   ],
-  "Farfetch'd": [
+  "Farfetchd": [
     {
       "Item1": "Peck",
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
@@ -2577,11 +2577,11 @@
       "Item2": 7
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 15
     },
     {
-      "Item1": "Swords Dance",
+      "Item1": "SwordsDance",
       "Item2": 23
     },
     {
@@ -2603,11 +2603,11 @@
       "Item2": 20
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 24
     },
     {
-      "Item1": "Drill Peck",
+      "Item1": "DrillPeck",
       "Item2": 30
     },
     {
@@ -2615,7 +2615,7 @@
       "Item2": 36
     },
     {
-      "Item1": "Tri Attack",
+      "Item1": "TriAttack",
       "Item2": 40
     },
     {
@@ -2625,7 +2625,7 @@
   ],
   "Dodrio": [
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 1
     },
     {
@@ -2641,11 +2641,11 @@
       "Item2": 20
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 24
     },
     {
-      "Item1": "Drill Peck",
+      "Item1": "DrillPeck",
       "Item2": 30
     },
     {
@@ -2653,7 +2653,7 @@
       "Item2": 39
     },
     {
-      "Item1": "Tri Attack",
+      "Item1": "TriAttack",
       "Item2": 45
     },
     {
@@ -2671,7 +2671,7 @@
       "Item2": 30
     },
     {
-      "Item1": "Aurora Beam",
+      "Item1": "AuroraBeam",
       "Item2": 35
     },
     {
@@ -2679,17 +2679,17 @@
       "Item2": 40
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 45
     },
     {
-      "Item1": "Ice Beam",
+      "Item1": "IceBeam",
       "Item2": 50
     }
   ],
   "Dewgong": [
     {
-      "Item1": "Aurora Beam",
+      "Item1": "AuroraBeam",
       "Item2": 1
     },
     {
@@ -2705,7 +2705,7 @@
       "Item2": 30
     },
     {
-      "Item1": "Aurora Beam",
+      "Item1": "AuroraBeam",
       "Item2": 35
     },
     {
@@ -2713,11 +2713,11 @@
       "Item2": 44
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 50
     },
     {
-      "Item1": "Ice Beam",
+      "Item1": "IceBeam",
       "Item2": 56
     }
   ],
@@ -2731,7 +2731,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Poison Gas",
+      "Item1": "PoisonGas",
       "Item2": 30
     },
     {
@@ -2751,7 +2751,7 @@
       "Item2": 48
     },
     {
-      "Item1": "Acid Armor",
+      "Item1": "AcidArmor",
       "Item2": 55
     }
   ],
@@ -2761,7 +2761,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Poison Gas",
+      "Item1": "PoisonGas",
       "Item2": 1
     },
     {
@@ -2769,7 +2769,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Poison Gas",
+      "Item1": "PoisonGas",
       "Item2": 30
     },
     {
@@ -2789,7 +2789,7 @@
       "Item2": 53
     },
     {
-      "Item1": "Acid Armor",
+      "Item1": "AcidArmor",
       "Item2": 60
     }
   ],
@@ -2811,7 +2811,7 @@
       "Item2": 23
     },
     {
-      "Item1": "Aurora Beam",
+      "Item1": "AuroraBeam",
       "Item2": 30
     },
     {
@@ -2819,13 +2819,13 @@
       "Item2": 39
     },
     {
-      "Item1": "Ice Beam",
+      "Item1": "IceBeam",
       "Item2": 50
     }
   ],
   "Cloyster": [
     {
-      "Item1": "Aurora Beam",
+      "Item1": "AuroraBeam",
       "Item2": 1
     },
     {
@@ -2841,13 +2841,13 @@
       "Item2": 1
     },
     {
-      "Item1": "Spike Cannon",
+      "Item1": "SpikeCannon",
       "Item2": 50
     }
   ],
   "Gastly": [
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 1
     },
     {
@@ -2855,7 +2855,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Night Shade",
+      "Item1": "NightShade",
       "Item2": 1
     },
     {
@@ -2863,13 +2863,13 @@
       "Item2": 27
     },
     {
-      "Item1": "Dream Eater",
+      "Item1": "DreamEater",
       "Item2": 35
     }
   ],
   "Haunter": [
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 1
     },
     {
@@ -2877,7 +2877,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Night Shade",
+      "Item1": "NightShade",
       "Item2": 1
     },
     {
@@ -2885,13 +2885,13 @@
       "Item2": 29
     },
     {
-      "Item1": "Dream Eater",
+      "Item1": "DreamEater",
       "Item2": 38
     }
   ],
   "Gengar": [
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 1
     },
     {
@@ -2899,7 +2899,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Night Shade",
+      "Item1": "NightShade",
       "Item2": 1
     },
     {
@@ -2907,7 +2907,7 @@
       "Item2": 29
     },
     {
-      "Item1": "Dream Eater",
+      "Item1": "DreamEater",
       "Item2": 38
     }
   ],
@@ -2925,7 +2925,7 @@
       "Item2": 15
     },
     {
-      "Item1": "Rock Throw",
+      "Item1": "RockThrow",
       "Item2": 19
     },
     {
@@ -2963,7 +2963,7 @@
       "Item2": 24
     },
     {
-      "Item1": "Poison Gas",
+      "Item1": "PoisonGas",
       "Item2": 29
     },
     {
@@ -3005,7 +3005,7 @@
       "Item2": 24
     },
     {
-      "Item1": "Poison Gas",
+      "Item1": "PoisonGas",
       "Item2": 29
     },
     {
@@ -3099,7 +3099,7 @@
       "Item2": 22
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 29
     },
     {
@@ -3133,7 +3133,7 @@
       "Item2": 22
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 29
     },
     {
@@ -3159,11 +3159,11 @@
       "Item2": 25
     },
     {
-      "Item1": "Leech Seed",
+      "Item1": "LeechSeed",
       "Item2": 28
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 32
     },
     {
@@ -3175,7 +3175,7 @@
       "Item2": 42
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 48
     }
   ],
@@ -3195,7 +3195,7 @@
   ],
   "Cubone": [
     {
-      "Item1": "Bone Club",
+      "Item1": "BoneClub",
       "Item2": 1
     },
     {
@@ -3207,7 +3207,7 @@
       "Item2": 25
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 31
     },
     {
@@ -3225,7 +3225,7 @@
   ],
   "Marowak": [
     {
-      "Item1": "Bone Club",
+      "Item1": "BoneClub",
       "Item2": 1
     },
     {
@@ -3237,7 +3237,7 @@
       "Item2": 25
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 31
     },
     {
@@ -3255,7 +3255,7 @@
   ],
   "Hitmonlee": [
     {
-      "Item1": "Double Kick",
+      "Item1": "DoubleKick",
       "Item2": 1
     },
     {
@@ -3263,23 +3263,23 @@
       "Item2": 1
     },
     {
-      "Item1": "Rolling Kick",
+      "Item1": "RollingKick",
       "Item2": 33
     },
     {
-      "Item1": "Jump Kick",
+      "Item1": "JumpKick",
       "Item2": 38
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 43
     },
     {
-      "Item1": "Hi Jump Kick",
+      "Item1": "HiJumpKick",
       "Item2": 48
     },
     {
-      "Item1": "Mega Kick",
+      "Item1": "MegaKick",
       "Item2": 53
     }
   ],
@@ -3289,15 +3289,15 @@
       "Item2": 1
     },
     {
-      "Item1": "Comet Punch",
+      "Item1": "CometPunch",
       "Item2": 1
     },
     {
-      "Item1": "Fire Punch",
+      "Item1": "FirePunch",
       "Item2": 33
     },
     {
-      "Item1": "Ice Punch",
+      "Item1": "IcePunch",
       "Item2": 38
     },
     {
@@ -3305,7 +3305,7 @@
       "Item2": 43
     },
     {
-      "Item1": "Mega Punch",
+      "Item1": "MegaPunch",
       "Item2": 48
     },
     {
@@ -3331,7 +3331,7 @@
       "Item2": 15
     },
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 23
     },
     {
@@ -3409,7 +3409,7 @@
   ],
   "Rhyhorn": [
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 1
     },
     {
@@ -3417,15 +3417,15 @@
       "Item2": 30
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 35
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 40
     },
     {
-      "Item1": "Horn Drill",
+      "Item1": "HornDrill",
       "Item2": 45
     },
     {
@@ -3433,17 +3433,17 @@
       "Item2": 50
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 55
     }
   ],
   "Rhydon": [
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 1
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 1
     },
     {
@@ -3451,7 +3451,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
@@ -3459,15 +3459,15 @@
       "Item2": 30
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 35
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 40
     },
     {
-      "Item1": "Horn Drill",
+      "Item1": "HornDrill",
       "Item2": 48
     },
     {
@@ -3475,7 +3475,7 @@
       "Item2": 55
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 64
     }
   ],
@@ -3501,15 +3501,15 @@
       "Item2": 38
     },
     {
-      "Item1": "Defense Curl",
+      "Item1": "DefenseCurl",
       "Item2": 44
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 48
     },
     {
-      "Item1": "Double-Edge",
+      "Item1": "DoubleEdge",
       "Item2": 54
     }
   ],
@@ -3531,11 +3531,11 @@
       "Item2": 32
     },
     {
-      "Item1": "Stun Spore",
+      "Item1": "StunSpore",
       "Item2": 36
     },
     {
-      "Item1": "Sleep Powder",
+      "Item1": "SleepPowder",
       "Item2": 39
     },
     {
@@ -3549,7 +3549,7 @@
   ],
   "Kangaskhan": [
     {
-      "Item1": "Comet Punch",
+      "Item1": "CometPunch",
       "Item2": 1
     },
     {
@@ -3561,11 +3561,11 @@
       "Item2": 26
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 31
     },
     {
-      "Item1": "Mega Punch",
+      "Item1": "MegaPunch",
       "Item2": 36
     },
     {
@@ -3573,7 +3573,7 @@
       "Item2": 41
     },
     {
-      "Item1": "Dizzy Punch",
+      "Item1": "DizzyPunch",
       "Item2": 46
     }
   ],
@@ -3591,7 +3591,7 @@
       "Item2": 24
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 30
     },
     {
@@ -3599,7 +3599,7 @@
       "Item2": 37
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 45
     }
   ],
@@ -3621,7 +3621,7 @@
       "Item2": 24
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 30
     },
     {
@@ -3629,7 +3629,7 @@
       "Item2": 41
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 52
     }
   ],
@@ -3639,7 +3639,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
@@ -3647,11 +3647,11 @@
       "Item2": 19
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 24
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 30
     },
     {
@@ -3659,7 +3659,7 @@
       "Item2": 37
     },
     {
-      "Item1": "Horn Drill",
+      "Item1": "HornDrill",
       "Item2": 45
     },
     {
@@ -3677,7 +3677,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 1
     },
     {
@@ -3685,11 +3685,11 @@
       "Item2": 19
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 24
     },
     {
-      "Item1": "Fury Attack",
+      "Item1": "FuryAttack",
       "Item2": 30
     },
     {
@@ -3697,7 +3697,7 @@
       "Item2": 39
     },
     {
-      "Item1": "Horn Drill",
+      "Item1": "HornDrill",
       "Item2": 48
     },
     {
@@ -3711,7 +3711,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 17
     },
     {
@@ -3731,11 +3731,11 @@
       "Item2": 37
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 42
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 47
     }
   ],
@@ -3749,11 +3749,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     }
   ],
-  "Mr. Mime": [
+  "MrMime": [
     {
       "Item1": "Barrier",
       "Item2": 1
@@ -3767,7 +3767,7 @@
       "Item2": 15
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 23
     },
     {
@@ -3785,7 +3785,7 @@
   ],
   "Scyther": [
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
@@ -3793,11 +3793,11 @@
       "Item2": 17
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 20
     },
     {
-      "Item1": "Double Team",
+      "Item1": "DoubleTeam",
       "Item2": 24
     },
     {
@@ -3805,7 +3805,7 @@
       "Item2": 29
     },
     {
-      "Item1": "Swords Dance",
+      "Item1": "SwordsDance",
       "Item2": 35
     },
     {
@@ -3815,7 +3815,7 @@
   ],
   "Jynx": [
     {
-      "Item1": "Lovely Kiss",
+      "Item1": "LovelyKiss",
       "Item2": 1
     },
     {
@@ -3831,11 +3831,11 @@
       "Item2": 23
     },
     {
-      "Item1": "Ice Punch",
+      "Item1": "IcePunch",
       "Item2": 31
     },
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 39
     },
     {
@@ -3853,7 +3853,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
@@ -3869,7 +3869,7 @@
       "Item2": 42
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 49
     },
     {
@@ -3887,11 +3887,11 @@
       "Item2": 36
     },
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 39
     },
     {
-      "Item1": "Fire Punch",
+      "Item1": "FirePunch",
       "Item2": 43
     },
     {
@@ -3913,7 +3913,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Seismic Toss",
+      "Item1": "SeismicToss",
       "Item2": 25
     },
     {
@@ -3921,7 +3921,7 @@
       "Item2": 30
     },
     {
-      "Item1": "Focus Energy",
+      "Item1": "FocusEnergy",
       "Item2": 36
     },
     {
@@ -3933,7 +3933,7 @@
       "Item2": 49
     },
     {
-      "Item1": "Swords Dance",
+      "Item1": "SwordsDance",
       "Item2": 54
     }
   ],
@@ -3947,7 +3947,7 @@
       "Item2": 21
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 28
     },
     {
@@ -3959,7 +3959,7 @@
       "Item2": 44
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 51
     }
   ],
@@ -3979,11 +3979,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Dragon Rage",
+      "Item1": "DragonRage",
       "Item2": 1
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 1
     },
     {
@@ -3995,7 +3995,7 @@
       "Item2": 20
     },
     {
-      "Item1": "Dragon Rage",
+      "Item1": "DragonRage",
       "Item2": 25
     },
     {
@@ -4003,11 +4003,11 @@
       "Item2": 32
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 41
     },
     {
-      "Item1": "Hyper Beam",
+      "Item1": "HyperBeam",
       "Item2": 52
     }
   ],
@@ -4017,7 +4017,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     },
     {
@@ -4029,19 +4029,19 @@
       "Item2": 20
     },
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 25
     },
     {
-      "Item1": "Confuse Ray",
+      "Item1": "ConfuseRay",
       "Item2": 31
     },
     {
-      "Item1": "Ice Beam",
+      "Item1": "IceBeam",
       "Item2": 38
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 46
     }
   ],
@@ -4053,7 +4053,7 @@
   ],
   "Eevee": [
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
@@ -4061,11 +4061,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 27
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 31
     },
     {
@@ -4073,13 +4073,13 @@
       "Item2": 37
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 45
     }
   ],
   "Vaporeon": [
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
@@ -4087,23 +4087,23 @@
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 27
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 31
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 37
     },
     {
@@ -4111,7 +4111,7 @@
       "Item2": 40
     },
     {
-      "Item1": "Acid Armor",
+      "Item1": "AcidArmor",
       "Item2": 42
     },
     {
@@ -4123,13 +4123,13 @@
       "Item2": 48
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 54
     }
   ],
   "Jolteon": [
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
@@ -4141,11 +4141,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 27
     },
     {
@@ -4153,15 +4153,15 @@
       "Item2": 31
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 37
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 40
     },
     {
-      "Item1": "Double Kick",
+      "Item1": "DoubleKick",
       "Item2": 42
     },
     {
@@ -4169,7 +4169,7 @@
       "Item2": 44
     },
     {
-      "Item1": "Pin Missle",
+      "Item1": "PinMissle",
       "Item2": 48
     },
     {
@@ -4183,7 +4183,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Sand-Attack",
+      "Item1": "SandAttack",
       "Item2": 1
     },
     {
@@ -4191,11 +4191,11 @@
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 1
     },
     {
-      "Item1": "Quick Attack",
+      "Item1": "QuickAttack",
       "Item2": 27
     },
     {
@@ -4203,7 +4203,7 @@
       "Item2": 31
     },
     {
-      "Item1": "Tail Whip",
+      "Item1": "TailWhip",
       "Item2": 37
     },
     {
@@ -4215,7 +4215,7 @@
       "Item2": 42
     },
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 44
     },
     {
@@ -4253,13 +4253,13 @@
       "Item2": 35
     },
     {
-      "Item1": "Tri Attack",
+      "Item1": "TriAttack",
       "Item2": 42
     }
   ],
   "Omanyte": [
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     },
     {
@@ -4267,7 +4267,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 34
     },
     {
@@ -4275,21 +4275,21 @@
       "Item2": 39
     },
     {
-      "Item1": "Spike Cannon",
+      "Item1": "SpikeCannon",
       "Item2": 46
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 53
     }
   ],
   "Omastar": [
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 1
     },
     {
-      "Item1": "Water Gun",
+      "Item1": "WaterGun",
       "Item2": 1
     },
     {
@@ -4297,7 +4297,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Horn Attack",
+      "Item1": "HornAttack",
       "Item2": 34
     },
     {
@@ -4305,11 +4305,11 @@
       "Item2": 39
     },
     {
-      "Item1": "Spike Cannon",
+      "Item1": "SpikeCannon",
       "Item2": 44
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 49
     }
   ],
@@ -4335,7 +4335,7 @@
       "Item2": 44
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 49
     }
   ],
@@ -4365,7 +4365,7 @@
       "Item2": 46
     },
     {
-      "Item1": "Hydro Pump",
+      "Item1": "HydroPump",
       "Item2": 53
     }
   ],
@@ -4375,7 +4375,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Wing Attack",
+      "Item1": "WingAttack",
       "Item2": 1
     },
     {
@@ -4387,11 +4387,11 @@
       "Item2": 38
     },
     {
-      "Item1": "Take Down",
+      "Item1": "TakeDown",
       "Item2": 45
     },
     {
-      "Item1": "Hyper Beam",
+      "Item1": "HyperBeam",
       "Item2": 54
     }
   ],
@@ -4409,7 +4409,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Body Slam",
+      "Item1": "BodySlam",
       "Item2": 35
     },
     {
@@ -4417,17 +4417,17 @@
       "Item2": 41
     },
     {
-      "Item1": "Double-Edge",
+      "Item1": "DoubleEdge",
       "Item2": 48
     },
     {
-      "Item1": "Hyper Beam",
+      "Item1": "HyperBeam",
       "Item2": 56
     }
   ],
   "Articuno": [
     {
-      "Item1": "Ice Beam",
+      "Item1": "IceBeam",
       "Item2": 1
     },
     {
@@ -4449,7 +4449,7 @@
   ],
   "Zapdos": [
     {
-      "Item1": "Drill Peck",
+      "Item1": "DrillPeck",
       "Item2": 1
     },
     {
@@ -4465,13 +4465,13 @@
       "Item2": 55
     },
     {
-      "Item1": "Light Screen",
+      "Item1": "LightScreen",
       "Item2": 60
     }
   ],
   "Moltres": [
     {
-      "Item1": "Fire Spin",
+      "Item1": "FireSpin",
       "Item2": 1
     },
     {
@@ -4487,7 +4487,7 @@
       "Item2": 55
     },
     {
-      "Item1": "Sky Attack",
+      "Item1": "SkyAttack",
       "Item2": 60
     }
   ],
@@ -4501,7 +4501,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 10
     },
     {
@@ -4513,11 +4513,11 @@
       "Item2": 30
     },
     {
-      "Item1": "Dragon Rage",
+      "Item1": "DragonRage",
       "Item2": 40
     },
     {
-      "Item1": "Hyper Beam",
+      "Item1": "HyperBeam",
       "Item2": 50
     }
   ],
@@ -4527,7 +4527,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 1
     },
     {
@@ -4535,7 +4535,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 10
     },
     {
@@ -4547,11 +4547,11 @@
       "Item2": 35
     },
     {
-      "Item1": "Dragon Rage",
+      "Item1": "DragonRage",
       "Item2": 45
     },
     {
-      "Item1": "Hyper Beam",
+      "Item1": "HyperBeam",
       "Item2": 55
     }
   ],
@@ -4565,7 +4565,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 1
     },
     {
@@ -4573,7 +4573,7 @@
       "Item2": 1
     },
     {
-      "Item1": "Thunder Wave",
+      "Item1": "ThunderWave",
       "Item2": 10
     },
     {
@@ -4585,11 +4585,11 @@
       "Item2": 35
     },
     {
-      "Item1": "Dragon Rage",
+      "Item1": "DragonRage",
       "Item2": 45
     },
     {
-      "Item1": "Hyper Beam",
+      "Item1": "HyperBeam",
       "Item2": 60
     }
   ],
@@ -4641,7 +4641,7 @@
       "Item2": 10
     },
     {
-      "Item1": "Mega Punch",
+      "Item1": "MegaPunch",
       "Item2": 20
     },
     {
@@ -4651,6 +4651,20 @@
     {
       "Item1": "Psychic",
       "Item2": 40
+    }
+  ],
+  "Missingno": [
+    {
+      "Item1": "WaterGun",
+      "Item2": 1
+    },
+    {
+      "Item1": "WaterGun",
+      "Item2": 1
+    },
+    {
+      "Item1": "SkyAttack",
+      "Item2": 1
     }
   ]
 }
