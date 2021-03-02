@@ -5,8 +5,6 @@ Main resources/references used:
 
 Dissassembly: https://github.com/pret/pokered
 
-Gameboy Instruction Set: https://rgbds.gbdev.io/docs/v0.4.2/gbz80.7
-
 Assets from MrSquishy's Minecraft version: https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/maps/2803888-pokemon-red-fully-recreated-without-mods
 
 Dragonfly Cave(encounter tables): http://www.dragonflycave.com/
