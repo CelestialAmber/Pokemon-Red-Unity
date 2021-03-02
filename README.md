@@ -5,7 +5,7 @@ Main resources/references used:
 
 Dissassembly: https://github.com/pret/pokered
 
-Gameboy Architecture Manual(for the assembly code): http://marc.rawer.de/Gameboy/Docs/GBCPUman.pdf
+Gameboy Instruction Set: https://rgbds.gbdev.io/docs/v0.4.2/gbz80.7
 
 Assets from MrSquishy's Minecraft version: https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/maps/2803888-pokemon-red-fully-recreated-without-mods
 
