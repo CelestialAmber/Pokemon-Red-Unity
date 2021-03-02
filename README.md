@@ -1,4 +1,4 @@
-# Pokemon-Red-Unity
+# Pokemon Red Unity
 Recreation of Pokémon Red/Blue in Unity
 
 ## Main resources/references used:
