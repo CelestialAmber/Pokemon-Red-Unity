@@ -75,6 +75,8 @@ public class SaveData
 {
     public int dummy;
     public Starter chosenStarter;
+    public bool[] eventsArray;
+    
     public static SaveData Create()
     {
         SaveData saveData = new SaveData();
@@ -85,7 +87,7 @@ public class SaveData
 
 //Class containing all the core data of the game.
 public class GameData : Singleton<GameData> {
-    public List<string> fieldMoves = new List<string>(new string[] { "Teleport", "Fly", "Cut", "Surf", "Dig", "Strength", "Flash", "Softboiled" });
+    public List<string> fieldMoves = new List<string>(new string[] {"Teleport", "Fly", "Cut", "Surf", "Dig", "Strength", "Flash", "Softboiled"});
     public List<Pokemon> party = new List<Pokemon>();
     [HideInInspector]
     public Sprite[] frontMonSprites, backMonSprites;
@@ -104,20 +106,31 @@ public class GameData : Singleton<GameData> {
     public bool isPlayingCredits;
     public Version version;
     public FontAtlas fontAtlas;
+    public bool[] eventsArray;
 
 
-    public void AddPokemonToParty(PokemonEnum pokemon ,int level)
-    {
+    public void AddPokemonToParty(PokemonEnum pokemon, int level){
         party.Add(new Pokemon(pokemon, level, false));
     }
 
-    public void Init()
-    {
+
+    public void SetEvent(Events eventToSet, bool state){
+        eventsArray[(int)eventToSet] = state;
+    }
+
+    public bool CheckEvent(Events eventToCheck){
+        return eventsArray[(int)eventToCheck];
+    }
+
+
+    public void Init(){
         frontMonSprites = Resources.LoadAll<Sprite>("frontmon");
         backMonSprites = Resources.LoadAll<Sprite>("backmon");
         pokedexlist = new List<PokedexEntry>();
+        //Set the events bool array to have an entry for each event according to the enum
+        eventsArray = new bool[Enum.GetNames(typeof(Events)).Length];
 
-        for (int i = 0; i < 151; i++) {
+        for(int i = 0; i < 151; i++){
             pokedexlist.Add(new PokedexEntry(false, false));
         }
 

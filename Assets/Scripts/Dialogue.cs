@@ -62,12 +62,12 @@ public class Dialogue : Singleton<Dialogue> {
         dialoguetext.gameObject.SetActive(true);
 		indicator.SetActive (false);
 
-	strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("&l","\n\n");
+	    strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("&l","\n\n");
 		int i = 0;
-		 if(currentDialogueType != DialogueType.Done) str = "";
-else str = stringToReveal;
-        if(currentDialogueType == DialogueType.Continue)
-        {
+		if(currentDialogueType != DialogueType.Done) str = "";
+        else str = stringToReveal;
+
+        if(currentDialogueType == DialogueType.Continue){
             str = laststring + "\n\n";
         }
 		if(currentDialogueType != DialogueType.Done)laststring = strComplete.Substring(strComplete.IndexOf("\n\n")+2);
@@ -75,55 +75,48 @@ else str = stringToReveal;
 		
 		dialoguetext.text = str;
 
-		if(currentDialogueType != DialogueType.Done)
-        {
+		if(currentDialogueType != DialogueType.Done){
             if(fastText){
                 str += strComplete;
                 dialoguetext.text = str;
                 i = strComplete.Length;
             }
-		while( i < strComplete.Length ){
-					yield return new WaitForEndOfFrame();
-			if(i < strComplete.Length - 1 && strComplete.Substring(i,2) == "\n\n"){ //are we at a double line break?
-                str += strComplete.Substring(i,2);
-                i += 2;
-            
-            }
-            else if(i < strComplete.Length - 1 && strComplete[i] == '<'){ //is the current character a left bracket?
-                foreach(BracketChar bracketChar in fontAtlas.bracketChars){
-                    string currentBracketChar = "<" + bracketChar.name + ">";
-                    if(strComplete.Substring(i).IndexOf(currentBracketChar) == 0){ //is the current bracket expression detected the current entry?
-                        str += strComplete.Substring(i,currentBracketChar.Length);
-                        i += currentBracketChar.Length;
-                        break;
+		    
+            while( i < strComplete.Length ){
+				yield return new WaitForEndOfFrame();
+			    if(i < strComplete.Length - 1 && strComplete.Substring(i,2) == "\n\n"){ //are we at a double line break?
+                    str += strComplete.Substring(i,2);
+                    i += 2;
+                }
+                else if(i < strComplete.Length - 1 && strComplete[i] == '<'){ //is the current character a left bracket?
+                    foreach(BracketChar bracketChar in fontAtlas.bracketChars){
+                        string currentBracketChar = "<" + bracketChar.name + ">";
+                        if(strComplete.Substring(i).IndexOf(currentBracketChar) == 0){ //is the current bracket expression detected the current entry?
+                            str += strComplete.Substring(i,currentBracketChar.Length);
+                            i += currentBracketChar.Length;
+                            break;
+                        }
                     }
-                
-            }
-            }	
-			else str += strComplete[i++]; //if not just add the current character
-			dialoguetext.text = str;
-				if (!fastText) {
-						yield return new WaitForSeconds (scrollequation);
-				}
+                }	
+			    else str += strComplete[i++]; //if not just add the current character
+			    dialoguetext.text = str;
 
-			}
-		}
-
+			    if (!fastText) {
+				    yield return new WaitForSeconds (scrollequation);
+			    }
+		    }
+	    }
 
 		stringToReveal = str;
-		
-	
-
 	}
-	// Use this for initialization
+
 	
 	// Update is called once per frame
-	void Update () {
-        
-		if (deactivated && !Player.disabled) {
-			Player.disabled = true;
-
+	void Update(){  
+		if (deactivated && !Player.instance.isDisabled) {
+			Player.instance.isDisabled = true;
 		}
+
 		buycoinstext [0].text = GameData.instance.money.ToString ();
 		buycoinstext [1].text = GameData.instance.coins.ToString ();
 		if (!finishedThePrompt) {
@@ -299,12 +292,13 @@ public IEnumerator text(string text){
         cursor.SetActive(false);
 
 	}
-    public void PlaySongAfterText(AudioClip audioClip){ //function that sets a sound to be played after the next text command.
-    playSoundAfterText = true;
-    clipToPlay = audioClip;
+    public void PlaySoundAfterText(AudioClip audioClip){ //function that sets a sound to be played after the next text command.
+        playSoundAfterText = true;
+        clipToPlay = audioClip;
     }
+
 	public void Deactivate(){
-		StopAllCoroutines ();
+		StopAllCoroutines();
 		finishedText = true;
         Inputs.dialogueCheck = false;
 		stringToReveal = "";

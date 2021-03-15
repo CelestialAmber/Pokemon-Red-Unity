@@ -34,9 +34,16 @@ public class LevelUpMove{
     }
 }
 
+public enum EvolutionType {
+  LevelUp,
+  Item
+}
+
 [System.Serializable]
 public class PokemonEvolution{
     public PokemonEnum pokemon;
+    //public EvolutionType evolutonType;
+    //public string evolutionItem;
     public int level;
 
     public PokemonEvolution(PokemonEnum pokemon, int level){

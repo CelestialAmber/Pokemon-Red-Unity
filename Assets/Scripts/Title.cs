@@ -37,7 +37,7 @@ public class Title : MonoBehaviour {
     public void SetAnimationFinished()
     {
         animationsFinished = true;
-        SoundManager.instance.PlaySong(19);
+        SoundManager.instance.PlaySong(Music.Opening2);
     }
 
 
@@ -133,7 +133,7 @@ public class Title : MonoBehaviour {
                 if(selectedOption == 0){
 			        tutorialmanager.SetActive (true);
                     OakIntroCutsceneHandler.instance.Init();
-                    SoundManager.instance.PlaySong((int)SoundManager.Music.NuggetBridge);
+                    SoundManager.instance.PlaySong(Music.NuggetBridge);
 			        startmenu.SetActive (false);
 			        this.gameObject.SetActive (false);
                 }

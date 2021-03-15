@@ -1,0 +1,145 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class PalletTownScript : MapScript {
+
+int textToUse;
+
+void ScriptStart(){
+	if(GameData.instance.CheckEvent(Events.EVENT_GOT_POKEBALLS_FROM_OAK)){
+        GameData.instance.SetEvent(Events.EVENT_PALLET_AFTER_GETTING_POKEBALLS, true);
+    }
+
+	switch(currentScript){
+        case 0:
+        PalletTownScript0();
+        break;
+        case 1:
+        PalletTownScript1();
+        break;
+        case 2:
+        PalletTownScript2();
+        break;
+        case 3:
+        PalletTownScript3();
+        break;
+        case 4:
+        PalletTownScript4();
+        break;
+        case 5:
+        PalletTownScript5();
+        break;
+        case 6:
+        PalletTownScript6();
+        break;
+    }
+}
+
+
+void PalletTownScript0(){
+	if(GameData.instance.CheckEvent(Events.EVENT_FOLLOWED_OAK_INTO_LAB)) return;
+	//This needs to be changed in some way to work (colliders, using specific position, something else?)
+	if(Player.instance.transform.position.y != 1) return; //is player near north exit?
+	
+	hJoyHeld = false;
+	Player.instance.direction = Direction.Down;
+
+	SoundManager.instance.PlaySong(Music.Oak);
+
+	wJoyIgnore = 0xFC;
+	GameData.instance.SetEvent(Events.EVENT_OAK_APPEARED_IN_PALLET, true);
+
+	//trigger the next script
+	currentScript = 1;
+}
+
+void PalletTownScript1(){
+	textToUse = 0;
+	PalletTownText1();
+	wJoyIgnore = 0xFF;
+	wMissableObjectIndex = HS_PALLET_TOWN_OAK;
+	ShowObject();
+
+	//trigger the next script
+	currentScript = 2;
+}
+
+void PalletTownScript2(){
+	//Make Oak face up
+	oak.direction = Direction.Up;
+	Delay3();
+	wYCoord = 1;
+	hNPCPlayerRelativePosPerspective = 1;
+	hNPCSpriteOffset = 16;
+	CalcPositionOfPlayerRelativeToNPC();
+	hNPCPlayerYDistance--;
+	FindPathToPlayer(); //load Oak's movement into wNPCMovementDirections2
+	de = wNPCMovementDirections2;
+	oak.MoveNPC();
+	wJoyIgnore = 0xFF;
+
+	//trigger the next script
+	currentScript = 3;
+}
+
+void PalletTownScript3(){
+	if(!npcBeingMovedByScript){
+	wSpritePlayerStateData1FacingDirection = SPRITE_FACING_DOWN;
+	textToUse = 1;
+	wJoyIgnore = 0xFC;
+	PalletTownText1();
+
+	//set up movement script that causes the player to follow Oak to his lab
+	wJoyIgnore = 0xFF;
+	wSpriteIndex = 1;
+	wNPCMovementScriptFunctionNum = 0;
+	wNPCMovementScriptPointerTableNum = 0;
+
+	//trigger the next script
+	currentScript = 4;
+	}
+}
+
+void PalletTownScript4(){
+	//is the movement script over?
+	if(wNPCMovementScriptPointerTableNum == 1) return;
+
+	//trigger the next script
+	currentScript = 5;
+}
+
+void PalletTownScript5(){
+	if(!GameData.instance.CheckEvent(Events.EVENT_DAISY_WALKING) && !(GameData.instance.CheckEvent(Events.EVENT_GOT_TOWN_MAP) && GameData.instance.CheckEvent(Events.EVENT_ENTERED_BLUES_HOUSE))){
+		GameData.instance.SetEvent(EVENT_DAISY_WALKING,true);
+		wMissableObjectIndex = HS_DAISY_SITTING;
+		HideObject();
+		wMissableObjectIndex = HS_DAISY_WALKING;
+		ShowObject();
+	}
+
+	if(GameData.instance.CheckEvent(Events.EVENT_GOT_POKEBALLS_FROM_OAK)){
+		GameData.instance.SetEvent(Events.EVENT_PALLET_AFTER_GETTING_POKEBALLS_2,true);
+	}
+}
+
+void PalletTownScript6(){
+}
+
+void PalletTownText1(){
+	if(textToUse == 0){
+		Dialogue.instance.waitForButtonPress = false;
+		OakAppearsText();
+	}else{
+		OakWalksUpText();
+	}
+}
+
+public void OakAppearsText(){
+	PrintText(_OakAppearsText);
+	yield return new WaitForSeconds(10f/60f);
+	Player.instance.DisplayEmotiveBubble(0); //Display exclamation bubble
+	Player.instance.direction = Direction.Down;
+}
+
+}

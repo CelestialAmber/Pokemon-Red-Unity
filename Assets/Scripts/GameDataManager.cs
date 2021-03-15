@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class GameDataManager : Singleton<GameDataManager> {
     public GameObject[] gameScenes;
     public RenderTexture mainRender,postRender;
@@ -43,8 +44,8 @@ public class GameDataManager : Singleton<GameDataManager> {
 
         Camera.main.targetTexture = mainRender;
         if(!startInGame) BootGame(GameData.instance.version);
-
     }
+
     public void VersionInit(){ //function to initialize everything that changes based on the version
         slots.Init();
         title.InitVersion();
@@ -53,6 +54,7 @@ public class GameDataManager : Singleton<GameDataManager> {
         PokemonDataJSON.InitVersion();
         FontAtlasInit();
     }
+
     public void BootGame(Version version){
         VersionManager.instance.version = version;
         GameData.instance.version = version;
@@ -60,30 +62,27 @@ public class GameDataManager : Singleton<GameDataManager> {
         introHandler.gameObject.SetActive(true);
         introHandler.Init();
     }
+
     public void ResetGame(){
         introHandler.ResetGame();
     }
-	// Use this for initialization
-	private void FontAtlasInit()
-    {
+
+	private void FontAtlasInit(){
         GameData.instance.fontAtlas = fontAtlas;
-        if (GameData.instance.version == Version.Blue)
-        {
-            for (int i = 0; i < 6; i++)
-            {
+        if(GameData.instance.version == Version.Blue){
+            for(int i = 0; i < 6; i++){
                GameData.instance.fontAtlas.fontChars[i + 92] = GameData.instance.fontAtlas.blueSlotsChars[i];
             }
         }
-        else {
-             for (int i = 0; i < 6; i++)
-            {
+        else{
+            for(int i = 0; i < 6; i++){
                GameData.instance.fontAtlas.fontChars[i + 92] = GameData.instance.fontAtlas.redSlotsChars[i];
             }
         }
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update(){
         if (GameData.instance.inGame) //are we loaded into the game?
         {
             ms += Time.deltaTime;

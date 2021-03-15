@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 [System.Serializable]
 public class Song{
     public AudioClip mainClip, loopClip;
 }
 
-public class SoundManager : MonoBehaviour
-{
-    public enum Music{
+public enum Music {
     GymLeaderBattle,
     TrainerBattle,
     WildPokemonBattle,
@@ -55,6 +55,7 @@ public class SoundManager : MonoBehaviour
     ViridianForest
 }
 
+public class SoundManager : MonoBehaviour {
 
 public AudioSource sfx,music,musicLoop;
 public Song[] songs;
@@ -71,14 +72,15 @@ public bool isFadingSong;
 public int switchIndex;
 public AudioClip abSound;
 public bool isPlayingCry;
-
 public AudioClip[] itemGetSounds;
 public AudioClip goInsideSound, goOutsideSound;
+public Music debugSongIndex;
+
 void Awake(){
     instance = this;
     pokemonCrySounds = Resources.LoadAll<AudioClip>("Pokemon Cries");
 }
-public int debugSongIndex;
+
 void Update(){
     if(Input.GetKeyDown(KeyCode.R)) PlaySong(debugSongIndex);
     // if(isMusicPlaying && !music.isPlaying && songs[currentSong].loopClip != null && !music.loop){
@@ -94,16 +96,18 @@ void Update(){
         }
     } 
 }
+
 public void StopFadeSong(){
     StopCoroutine("SwitchSongFade");
 }
-public void PlaySong(int index){
+
+public void PlaySong(Music song){
     StopAllCoroutines();
     music.Stop();
     musicLoop.Stop();
     music.volume = maxMusicVolume;
     musicLoop.volume = maxMusicVolume;
-    currentSong = index;
+    currentSong = (int)song;
     isMusicPlaying = true;
     music.loop = false;
  
@@ -120,114 +124,117 @@ public void PlaySong(int index){
         //float clipLength = (float)loadedSong.mainClip.samples/loadedSong.mainClip.frequency; //this might be overkill
          musicLoop.PlayDelayed(clipLength);
     }
-    
 }
 
-public void PlaySongNoLoop(int index){
+public void PlaySongNoLoop(Music song){
     music.Stop();
     music.volume = maxMusicVolume;
     musicLoop.volume = music.volume;
-    currentSong = index;
+    currentSong = (int)song;
     music.loop = false;
     isMusicPlaying = true;
     music.clip = songs[currentSong].mainClip;
     //music.clip = loadedSong.mainClip;
     music.Play();
 }
-public void FadeToSong(int index){
-switchIndex = index;
-StartCoroutine("FadeToSongFunction");
-}
-    public void FadeSong()
-    {
-        StartCoroutine("FadeSongFunction");
-    }
 
-    public IEnumerator FadeToSongFunction(){
+public void FadeToSong(Music song){
+    switchIndex = (int)song;
+    StartCoroutine(FadeToSongFunction()); //used to have name as string
+}
+
+public void FadeSong(){
+    StartCoroutine(FadeSongFunction()); //same as above
+}
+
+public IEnumerator FadeToSongFunction(){
     currentSong = switchIndex;
     if(isFadingSong) yield return 0;
     isFadingSong = true;
-float fadeTimer = maxMusicVolume - music.volume;
-WaitForSeconds wait = new WaitForSeconds(0.02f);
-while(fadeTimer <= 1){ 
-fadeTimer += Time.deltaTime;
-music.volume = Mathf.Lerp(maxMusicVolume,0,fadeTimer);
-musicLoop.volume = music.volume;
-yield return wait;
-}
-music.Stop();
-music.volume = maxMusicVolume;
-musicLoop.volume = maxMusicVolume;
-if(Player.instance.inBattle) yield return 0;
-PlaySong(switchIndex);
-isFadingSong = false;
-}
-    public IEnumerator FadeSongFunction()
-    {
-        if (isFadingSong) yield return 0;
-        isFadingSong = true;
-        float fadeTimer = maxMusicVolume - music.volume;
-        WaitForSeconds wait = new WaitForSeconds(0.02f);
-        while (fadeTimer <= 1)
-        {
-            fadeTimer += Time.deltaTime;
-            music.volume = Mathf.Lerp(maxMusicVolume, 0, fadeTimer);
-            musicLoop.volume = music.volume;
-            yield return wait;
-        }
-        music.Stop();
-        music.volume = maxMusicVolume;
-        musicLoop.volume = maxMusicVolume;
-        isFadingSong = false;
+
+    float fadeTimer = maxMusicVolume - music.volume;
+    WaitForSeconds wait = new WaitForSeconds(0.02f);
+
+    while(fadeTimer <= 1){ 
+        fadeTimer += Time.deltaTime;
+        music.volume = Mathf.Lerp(maxMusicVolume,0,fadeTimer);
+        musicLoop.volume = music.volume;
+        yield return wait;
     }
-
-    public void StopMusic(){
-music.Stop();
-musicLoop.Stop();
-isMusicPlaying = false;
-
-
+    
+    music.Stop();
+    music.volume = maxMusicVolume;
+    musicLoop.volume = maxMusicVolume;
+    if(Player.instance.inBattle) yield return 0;
+    PlaySong((Music)switchIndex);
+    isFadingSong = false;
 }
+
+public IEnumerator FadeSongFunction(){
+    if (isFadingSong) yield return 0;
+    isFadingSong = true;
+    float fadeTimer = maxMusicVolume - music.volume;
+    WaitForSeconds wait = new WaitForSeconds(0.02f);
+    while (fadeTimer <= 1){
+        fadeTimer += Time.deltaTime;
+        music.volume = Mathf.Lerp(maxMusicVolume, 0, fadeTimer);
+        musicLoop.volume = music.volume;
+        yield return wait;
+    }
+    music.Stop();
+    music.volume = maxMusicVolume;
+    musicLoop.volume = maxMusicVolume;
+    isFadingSong = false;
+}
+
+public void StopMusic(){
+    music.Stop();
+    musicLoop.Stop();
+    isMusicPlaying = false;
+}
+
 public void PlayABSound(){
-sfx.PlayOneShot(abSound);
+    sfx.PlayOneShot(abSound);
 }
-    public void PlayGoInsideSound()
-    {
-        sfx.PlayOneShot(goInsideSound);
-    }
-    public void PlayGoOutsideSound()
-    {
-        sfx.PlayOneShot(goOutsideSound);
-    }
+    
+public void PlayGoInsideSound(){
+    sfx.PlayOneShot(goInsideSound);
+}
+
+public void PlayGoOutsideSound(){
+    sfx.PlayOneShot(goOutsideSound);
+}
 
 public void PlayCry(int index){
-StartCoroutine(PlayCryCoroutine(index));
+    StartCoroutine(PlayCryCoroutine(index));
 }
 
-public IEnumerator PlayItemGetSound(int index)
-    {
-        music.Pause();
-        musicLoop.Pause();
-        sfx.PlayOneShot(itemGetSounds[index]);
-        yield return new WaitForSeconds(itemGetSounds[index].length);
-        music.UnPause();
-        musicLoop.UnPause();
-    }
+public IEnumerator PlayItemGetSound(int index){
+    music.Pause();
+    musicLoop.Pause();
+    sfx.PlayOneShot(itemGetSounds[index]);
+    yield return new WaitForSeconds(itemGetSounds[index].length);
+    music.UnPause();
+    musicLoop.UnPause();
+}
+
 public IEnumerator PlayCryCoroutine(int index){
-sfx.PlayOneShot(pokemonCrySounds[index]);
-isPlayingCry = true; //Check for when cry is playing for functions that wait for the cry to end
-yield return new WaitForSeconds(pokemonCrySounds[index].length);
-isPlayingCry = false;
+    sfx.PlayOneShot(pokemonCrySounds[index]);
+    isPlayingCry = true; //Check for when cry is playing for functions that wait for the cry to end
+    yield return new WaitForSeconds(pokemonCrySounds[index].length);
+    isPlayingCry = false;
 }
 
 public void SetMusicLow(){
     music.volume = maxMusicVolume / 3f;
     musicLoop.volume = music.volume;
 }
+
 public void SetMusicNormal(){
     music.volume = maxMusicVolume;
     musicLoop.volume = music.volume;
 }
+
 public static Music[] MapSongs = 
 {
 Music.PalletTown, //Pallet Town
@@ -321,5 +328,5 @@ Music.CeladonCity, //Houses
 Music.ViridianForest, //Victory Road Gate
 Music.VictoryRoad //Indigo Plateau Lobby
 };
-}
 
+}

@@ -17,7 +17,7 @@ public class SlotsObject : MonoBehaviour
                 {
                     Dialogue.instance.Deactivate();
                    yield return StartCoroutine(Player.instance.DisplayEmotiveBubble(1));
-                    Player.disabled = true;
+                    Player.instance.isDisabled = true;
                     GameDataManager.instance.slots.gameObject.SetActive(true);
                     Inputs.Disable("start");
                     StartCoroutine(Slots.instance.Initialize());

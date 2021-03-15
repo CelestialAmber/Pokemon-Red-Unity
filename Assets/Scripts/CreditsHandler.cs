@@ -20,9 +20,9 @@ public class CreditsHandler : MonoBehaviour {
 	public void Init(){
 		TextAsset creditsTextAsset = (TextAsset)Resources.Load("Text/creditsText");
 		creditsText = JsonConvert.DeserializeObject<string[,]>(creditsTextAsset.text);
-        Player.disabled = true;
+        Player.instance.isDisabled = true;
 		GameData.instance.isPlayingCredits = true;
-        SoundManager.instance.PlaySongNoLoop(8);
+        SoundManager.instance.PlaySongNoLoop(Music.Ending);
         CreditIndex = -1;
         MonIndex = 1;
         anim.SetTrigger("startCredits");

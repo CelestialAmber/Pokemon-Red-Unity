@@ -8,19 +8,21 @@ public class IntroHandler : MonoBehaviour {
 	public GameObject middle;
     public RuntimeAnimatorController redController, blueController;
     public AudioClip hipSound, hopSound, crashSound, lungeSound, starSound, raiseSound, whooshSound;
-	// Use this for initialization
-
-	void Start () {
+	
+    
+    // Use this for initialization
+	void Start(){
 		Init();
 	}
+
     public void ActivateTitle()
     {
         middle.SetActive(true);
         Title.instance.Init();
         this.gameObject.SetActive(false);
     }
-    public void InitVersion()
-    {
+
+    public void InitVersion(){
         switch (GameData.instance.version)
         {
             case Version.Red:
@@ -30,24 +32,25 @@ public class IntroHandler : MonoBehaviour {
                 anim.runtimeAnimatorController = blueController;
                 break;
         }
-
     }
+
 	public void Init(){
         GameData.instance.atTitleScreen = true;
         Inputs.Disable("start");
-        Player.disabled = true;
+        Player.instance.isDisabled = true;
         Title.instance.animationsFinished = false;
 		Player.instance.GetComponent<BoxCollider2D>().enabled = false;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update(){
 	}
+
 	public void ResetGame(){
-	anim.SetTrigger("resetGame");
+	    anim.SetTrigger("resetGame");
         Init();
 	}
+
     public IEnumerator FadeInScreen()
     {
         WaitForSeconds wait = new WaitForSeconds(8f/60f); //8 frames
@@ -58,6 +61,7 @@ public class IntroHandler : MonoBehaviour {
         }
         ScreenEffects.flashLevel = 0;
     }
+
     public void PlayHipSound()
     {
         SoundManager.instance.sfx.PlayOneShot(hipSound);
@@ -82,9 +86,10 @@ public class IntroHandler : MonoBehaviour {
     {
         SoundManager.instance.sfx.PlayOneShot(raiseSound);
     }
+
     public void PlayIntroSong()
     {
-        SoundManager.instance.PlaySongNoLoop(18);
+        SoundManager.instance.PlaySongNoLoop(Music.Opening1);
     }
 }
 

@@ -78,18 +78,15 @@ public class Pokedex : MonoBehaviour
         if(!cursor.isActive) cursor.SetActive(true);
         if(viewBio.displayingbio) cursor.SetActive(false);
 
-        if (MainMenu.instance.currentmenu == MainMenu.instance.pokedexmenu)
+        if(MainMenu.instance.currentmenu == MainMenu.instance.pokedexmenu)
         {
-            if (Inputs.pressed("b") && !viewBio.displayingbio)
+            if(Inputs.pressed("b") && !viewBio.displayingbio)
             {
                 SoundManager.instance.PlayABSound();
-                if (Player.disabled) Player.disabled = false;
-                if (selectingMon)
-                {
-                    selectingMon = false;
-                }
-                else
-                {
+                if(Player.instance.isDisabled) Player.instance.isDisabled = false;
+                Debug.Log(Player.instance.isDisabled);
+                if(selectingMon) selectingMon = false;
+                else{
                     Inputs.Enable("start");
                     
                     MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
@@ -97,16 +94,16 @@ public class Pokedex : MonoBehaviour
                     gameObject.SetActive(false);
                 }
             }
-            if (Inputs.pressed("a") && !viewBio.displayingbio)
+            if(Inputs.pressed("a") && !viewBio.displayingbio)
             {
                 SoundManager.instance.PlayABSound();
 
-                if (!selectingMon && GameData.instance.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
+                if(!selectingMon && GameData.instance.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
                 {
                     selectingMon = true;
                     cursor.SetPosition(120,56);
                 }
-                else if (GameData.instance.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
+                else if(GameData.instance.pokedexlist[topSlotIndex + selectedSlot - 1].seen)
                 {
                     StartCoroutine(viewBio.DisplayABio(topSlotIndex + selectedSlot));
                 }

@@ -49,8 +49,7 @@ public class Player : Singleton<Player> {
     public bool inBattle;
     public bool manuallyWalking;
     public bool walkedfromwarp;
-    public static bool disabled = true;
-    public bool isDisabled;
+    public bool isDisabled = true;
     public bool startMenuActive, menuActive;
     public bool displayingEmotion;
     public bool isMoving;
@@ -72,7 +71,7 @@ public class Player : Singleton<Player> {
 
     void Awake()
     {
-        disabled = false;
+        isDisabled = false;
         targetPos = transform.position;
     }
 
@@ -136,7 +135,7 @@ public class Player : Singleton<Player> {
 
 
             }
-            if (Inputs.held("right") && !disabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && rightLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Right && holdFrames > 2)
+            if (Inputs.held("right") && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && rightLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Right && holdFrames > 2)
             {
                 ledgejumping = true;
                 direction = Direction.Right;
@@ -334,7 +333,7 @@ void UpdateMovement(){
         holdingDirection = false;
         SoundManager.instance.sfx.PlayOneShot (ledgeJumpClip);
         playerAnim.SetBool("ledgejumping", ledgejumping);
-        disabled = true;
+        isDisabled = true;
         speed = baseMovementSpeed;
         ledgejumping = true;
         targetPos += 2 * DirectionToVector(direction);
@@ -351,7 +350,7 @@ void UpdateMovement(){
 	    playerAnim.SetBool("ledgejumping", false);
 	    yield return new WaitForSeconds(0.1f);
         ledgejumping = false;
-        disabled = false;
+        isDisabled = false;
         //add the move up/down part of ledge jump animation later
     }
 
@@ -399,7 +398,6 @@ void UpdateMovement(){
         //StartCoroutine(MovementUpdate());
         //movingHitbox.transform.position = targetPos;
         
-        disabled = isDisabled;
 		playerAnim.SetFloat("walkbikesurfstate", (int)walkSurfBikeState);
 		if (viewBio.bioscreen.enabled) {
 			isDisabled = true;
@@ -461,8 +459,8 @@ void UpdateMovement(){
 		isDisabled = true;
 		displayingEmotion = true;
 		emotionbubble.enabled = true;
-		emotionbubble.sprite = bubbles [type];
-		yield return new WaitForSeconds (1);
+		emotionbubble.sprite = bubbles[type];
+		yield return new WaitForSeconds(1);
 		emotionbubble.enabled = false;
 		displayingEmotion = false;
         isDisabled = false;
@@ -565,9 +563,9 @@ void UpdateMovement(){
         SoundManager.instance.sfx.PlayOneShot(cutClip);
         facedObject.GetComponent<PokemonTree>().Cut();
         //Implement cutting wild grass
-        disabled = true;
+        isDisabled = true;
         yield return new WaitForSeconds(1);
-        disabled = false;
+        isDisabled = false;
     }
 
     public void Surf(){
@@ -576,10 +574,10 @@ void UpdateMovement(){
     }
 
     public IEnumerator SurfFunction(){
-        disabled = true;
+        isDisabled = true;
         walkSurfBikeState = MovementState.Surf;
         yield return MovePlayerOneTile(direction);
-        disabled = false;
+        isDisabled = false;
     }
 
     public BattleManager battleManager;
@@ -588,25 +586,27 @@ void UpdateMovement(){
     public IEnumerator StartWildBattle(System.Tuple<PokemonEnum,int> pokemon)
     {
         inBattle = true;
-        disabled = true;
-        SoundManager.instance.PlaySong(2);
+        isDisabled = true;
+        SoundManager.instance.PlaySong(Music.WildPokemonBattle);
+
         WaitForSeconds wait = new WaitForSeconds(1.8f/60f);
+
         for(int i = 0; i < 3; i++){
             ScreenEffects.flashLevel = 0;
             for(int j = 0; j < 3; j++){
-            ScreenEffects.flashLevel--;
-            yield return wait;
+                ScreenEffects.flashLevel--;
+                yield return wait;
             }
             for(int j = 0; j < 6; j++){
-            ScreenEffects.flashLevel++;
-            yield return wait;
+                ScreenEffects.flashLevel++;
+                yield return wait;
             }
             for(int j = 0; j < 3; j++){
-            ScreenEffects.flashLevel--;
-            yield return wait;
+                ScreenEffects.flashLevel--;
+                yield return wait;
             }
-        
         }
+
         battleManager.battleType = BattleType.Wild;
         battleManager.enemyMons = new List<Pokemon>(new Pokemon[]{new Pokemon(pokemon.Item1,pokemon.Item2,true)});
         battlemenu.SetActive(true);
@@ -616,10 +616,9 @@ void UpdateMovement(){
     }
     public IEnumerator StartTrainerBattle(int battleID)
     {
-        disabled = true;
+        isDisabled = true;
         battleManager.battleType = BattleType.Trainer;
         inBattle = true;
-        disabled = true;
         battlemenu.SetActive(true);
         battleManager.battleoverlay.sprite = battleManager.blank;
         battleManager.battleID = battleID;
@@ -652,7 +651,7 @@ void UpdateMovement(){
                 switch (walkSurfBikeState)
                 {
                     case  MovementState.Walk:
-                    SoundManager.instance.PlaySong(7); //play the biking music
+                    SoundManager.instance.PlaySong(Music.Cycling); //play the biking music
                         yield return Dialogue.instance.text(GameData.instance.playerName + " got on the&lBICYCLE!");
                         
                         walkSurfBikeState =  MovementState.Bike;
@@ -690,8 +689,8 @@ void UpdateMovement(){
             }
        
             switch(walkSurfBikeState){
-            case  MovementState.Surf: SoundManager.instance.FadeToSong(17); break;
-            case  MovementState.Bike: SoundManager.instance.FadeToSong(7); break;
+            case  MovementState.Surf: SoundManager.instance.FadeToSong(Music.Ocean); break;
+            case  MovementState.Bike: SoundManager.instance.FadeToSong(Music.Cycling); break;
             default: FadeToCurrentAreaSong(); break;
             }
             numberOfNoRandomBattleStepsLeft = 3;		
@@ -699,15 +698,15 @@ void UpdateMovement(){
         Dialogue.instance.fastText = false;
         isMoving = false;
         inBattle = false;
-        disabled = false;
+        isDisabled = false;
     }
 
     public void PlayCurrentAreaSong(){
-    SoundManager.instance.PlaySong((int)SoundManager.MapSongs[(int)currentArea]);
+    SoundManager.instance.PlaySong(SoundManager.MapSongs[(int)currentArea]);
     }
 
     public void FadeToCurrentAreaSong(){
-    SoundManager.instance.FadeToSong((int)SoundManager.MapSongs[(int)currentArea]);
+    SoundManager.instance.FadeToSong(SoundManager.MapSongs[(int)currentArea]);
     }
 
     public void EncounterTrainer(){
@@ -749,12 +748,12 @@ void UpdateMovement(){
             if(GameData.instance.MapGrassEncounterTableIndices[mapArea] != -1) currentAreaTable = PokemonData.encounters[GameData.instance.MapGrassEncounterTableIndices[mapArea]];
             else currentAreaTable = null;
             if (currentArea == Map.House) return; //if the current area is a house, don't change the music
-            int songIndex = (int)SoundManager.MapSongs[mapArea];
-            if(SoundManager.instance.currentSong != songIndex && walkSurfBikeState == MovementState.Walk && !inBattle && !GameData.instance.isPlayingCredits){
+            Music song = SoundManager.MapSongs[mapArea];
+            if(SoundManager.instance.currentSong != (int)song && walkSurfBikeState == MovementState.Walk && !inBattle && !GameData.instance.isPlayingCredits){
                 if(SoundManager.instance.isFadingSong){
                    SoundManager.instance.StopFadeSong();
                 }
-                SoundManager.instance.FadeToSong(songIndex);
+                SoundManager.instance.FadeToSong(song);
             }
         }
         if(col.tag == "Warp"){

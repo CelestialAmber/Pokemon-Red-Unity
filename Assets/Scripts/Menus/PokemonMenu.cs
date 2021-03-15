@@ -35,10 +35,12 @@ public class PokemonMenu : MonoBehaviour
     public List<PartyAnim> partyanims;
     Pokemon highlightedmon;
     public float partyAnimTimer = 0;
-   public int switchMenuOffset,switchMenuOffsetX;
-   public string[] fieldMoveNames = new string[4];
-   public static PokemonMenu instance;
-    // Use this for initialization
+    public int switchMenuOffset,switchMenuOffsetX;
+    public string[] fieldMoveNames = new string[4];
+    public static PokemonMenu instance;
+
+
+
     void Awake(){
         instance = this;
     }
@@ -84,6 +86,7 @@ public class PokemonMenu : MonoBehaviour
             index++;
         }
     }
+
     public void UpdateMainMenu()
     {
         selectedOption = selectedMon;
@@ -108,11 +111,13 @@ public class PokemonMenu : MonoBehaviour
         }
         UpdateMenus();
     }
+
     public void UpdateSwitch(){
 
         cursor.SetPosition(96 - 16 * switchMenuOffsetX, 40 - 16 * selectedOption + switchMenuOffset * 16);
         UpdateMenus();
     }
+
     public void UpdateStats1(){
         cursor.SetActive(false);
         stats1portrait.sprite = GameData.instance.frontMonSprites[GameData.instance.party[selectedMon].id - 1];
@@ -133,6 +138,7 @@ public class PokemonMenu : MonoBehaviour
         stat1bar.fillAmount = (float)pixelCount / 48;
         monhptext.text = (GameData.instance.party[selectedMon].currentHP > 99 ? "" : GameData.instance.party[selectedMon].currentHP > 9 ? " " : "  ") + GameData.instance.party[selectedMon].currentHP + " " + GameData.instance.party[selectedMon].maxHP;
         monleveltext.text = ((GameData.instance.party[selectedMon].level < 100) ? "<LEVEL>" : "") + GameData.instance.party[selectedMon].level.ToString();
+
         switch (GameData.instance.party[selectedMon].status)
         {
             case Status.Ok:
@@ -157,8 +163,10 @@ public class PokemonMenu : MonoBehaviour
                 monstatustext.text = "SLP";
                 break;
         }
+
         UpdateMenus();
     }
+
     public void UpdateStats2()
     {
         cursor.SetActive(false);
@@ -184,77 +192,60 @@ public class PokemonMenu : MonoBehaviour
         pokedexno2.text = (id > 99 ? "" : id > 9 ? "0" : "00") + id.ToString();
         UpdateMenus();
     }
+
     string TruncateExpNumber(string num){
         if(num.Length > 6){
             return num.Substring(num.Length - 6); //truncate the number to the last 6 digits
         } else return num;
     }
+
     void UpdateMenus(){
-        foreach (GameObject menu in allmenus)
-        {
-            if (menu != currentMenu)
-            {
+        foreach (GameObject menu in allmenus){
+            if (menu != currentMenu){
                 menu.SetActive(false);
-            }
-            else
-            {
-
+            }else{
                 menu.SetActive(true);
             }
 
-
-            if (menu == switchstats && (currentMenu == mainwindow))
-            {
+            if (menu == switchstats && (currentMenu == mainwindow)){
                 menu.SetActive(false);
-
             }
-            if (menu == mainwindow && (currentMenu == switchstats))
-            {
+            if (menu == mainwindow && (currentMenu == switchstats)){
                 menu.SetActive(true);
-
             }
-
         }
+
         if(currentMenu != switchstats) DisableFieldText();
     }
-    void DisableFieldText(){
-        
+
+    void DisableFieldText(){  
         switchMenuOffsetX = 0;
         for(int i = 0; i < 4; i++){
             fieldMoveObj[i].SetActive(false);
         }
     }
+
     void Update()
     {
-
-       
-        if (currentMenu == switchstats)
-        {
-
-
-
-
-            if (Inputs.pressed("down"))
-            {
+        if (currentMenu == switchstats){
+            if (Inputs.pressed("down")){
                 selectedOption++;
                 MathE.Clamp(ref selectedOption, 0, 2 + switchMenuOffset);
                 UpdateSwitch();
             }
-            if (Inputs.pressed("up"))
-            {
+            if (Inputs.pressed("up")){
                 selectedOption--;
                 MathE.Clamp(ref selectedOption, 0, 2 + switchMenuOffset);
                 UpdateSwitch();
             }
-
-
         }
-        if (currentMenu == mainwindow)
-        {
+
+        if (currentMenu == mainwindow){
             highlightedmon = GameData.instance.party[selectedOption];
             partyAnimTimer += 1;
             float hpratio = (float)highlightedmon.currentHP / (float)highlightedmon.maxHP;
             float animLoopTime = hpratio > .5f ? 10 : hpratio > .21f ? 32 : 64; //the animation takes 10,32, or 64 frames
+
             if (partyAnimTimer == animLoopTime)
             {
                 partyAnimTimer = 0;
@@ -286,12 +277,9 @@ public class PokemonMenu : MonoBehaviour
                 MathE.Clamp(ref selectedOption, 0, numberofPokemon - 1);
             }
             }
-
-
         }
 
-        if (Inputs.pressed("b") && Dialogue.instance.finishedText)
-        {
+        if (Inputs.pressed("b") && Dialogue.instance.finishedText){
             SoundManager.instance.PlayABSound();
             if (currentMenu == mainwindow)
             {
@@ -307,16 +295,14 @@ public class PokemonMenu : MonoBehaviour
                 selectedOption = selectedMon;
                 currentMenu = mainwindow;
                 UpdateMainMenu();
-
             }
         }
-        if (Inputs.pressed("a")&& Dialogue.instance.finishedText)
-        {
+
+        if (Inputs.pressed("a") && Dialogue.instance.finishedText){
             SoundManager.instance.PlayABSound();
-            if (currentMenu == mainwindow)
-            {
-                if (!switching)
-                {
+
+            if (currentMenu == mainwindow){
+                if (!switching){
 
                     int textOffsetLength = 4;
                     switchMenuOffsetX = 0;
@@ -325,37 +311,45 @@ public class PokemonMenu : MonoBehaviour
                     int selectedMenu = 0;
                     selectedMon = selectedOption;
                     Pokemon selectedPokemon = GameData.instance.party[selectedMon];
+
                     for(int i = 0; i < 4; i++){
                         fieldMoveNames[i] = "";
                         fieldMoveObj[i].SetActive(false);
                     }
+
                     for(int i = 0; i < 4; i++){
                         if(selectedPokemon.SlotHasMove(i)){
-                        Move move = selectedPokemon.moves[i];
-                    if(isFieldMove(move)) {
-                        numberOfFieldMoves++;
-                        if(move.name.Length > 6 && selectedMenu != 8){
-                         selectedMenu = 4;
-                       textOffsetLength = 2;
-                     } 
-                   if(move.name.Length > 8){
-                          selectedMenu = 8;
-                      textOffsetLength = 0;
-                      }
-                        fieldMoveNames[switchMenuOffset] = move.name;
-                        fieldMoveObj[3-switchMenuOffset].SetActive(true);
-                         for(int j = 0; j < textOffsetLength; j++){
-                          fieldMoveText[3 - switchMenuOffset].text += " ";  
-                        }
+                            Move move = selectedPokemon.moves[i];
+
+                            if(isFieldMove(move)){
+                                numberOfFieldMoves++;
+
+                                if(move.name.Length > 6 && selectedMenu != 8){
+                                    selectedMenu = 4;
+                                    textOffsetLength = 2;
+                                } 
+
+                                if(move.name.Length > 8){
+                                    selectedMenu = 8;
+                                    textOffsetLength = 0;
+                                }
+
+                                fieldMoveNames[switchMenuOffset] = move.name;
+                                fieldMoveObj[3 - switchMenuOffset].SetActive(true);
+
+                                for(int j = 0; j < textOffsetLength; j++){
+                                    fieldMoveText[3 - switchMenuOffset].text += " ";  
+                                }
                         
-                           switchMenuOffset++;
-                    }
+                                switchMenuOffset++;
+                            }
                         }
                     }
+
                     for(int i = 0; i < numberOfFieldMoves; i++){
-                        fieldMoveText[(4 - switchMenuOffset) + i].text += fieldMoveNames[i].ToUpper();
-                       
+                        fieldMoveText[(4 - switchMenuOffset) + i].text += fieldMoveNames[i].ToUpper();    
                     }
+
                     switchMenuOffsetX = selectedMenu/4;
                     selectedMenu += switchMenuOffset;
                     switchMenuImage.sprite = switchMenuSprites[selectedMenu];
@@ -363,9 +357,7 @@ public class PokemonMenu : MonoBehaviour
                     selectedOption = 0;
                     currentMenu = switchstats;
                     UpdateSwitch();
-                }
-                else
-                {
+                }else{
                     Dialogue.instance.Deactivate();
                     StartCoroutine(Switch());
                     UpdateScreen();
@@ -373,46 +365,33 @@ public class PokemonMenu : MonoBehaviour
                     Dialogue.instance.finishedText = true;
                     switching = false;
                 }
-         
-            }
-           else if (currentMenu == switchstats)
-            {
-
+            }else if (currentMenu == switchstats){
                 if(selectedOption < switchMenuOffset){
-                StartCoroutine(UseFieldMove(fieldMoveNames[selectedOption]));
-
+                    StartCoroutine(UseFieldMove(fieldMoveNames[selectedOption]));
                 }
-                    if (selectedOption == switchMenuOffset)
-                    {
-                        SoundManager.instance.SetMusicLow();
-                        SoundManager.instance.PlayCry(GameData.instance.party[selectedMon].id - 1);
-                       Dialogue.instance.Deactivate();
-                        currentMenu = stats1;
-                        UpdateStats1();
-
-
-                    }
-                    else if (selectedOption == switchMenuOffset + 1)
-                    {
-                        switching = true;
-                        selectedOption = selectedMon;
-                        currentMenu = mainwindow;
-                        StartCoroutine(Dialogue.instance.text("Move #MON&lwhere?"));
+                
+                if (selectedOption == switchMenuOffset){
+                    SoundManager.instance.SetMusicLow();
+                    SoundManager.instance.PlayCry(GameData.instance.party[selectedMon].id - 1);
+                    Dialogue.instance.Deactivate();
+                    currentMenu = stats1;
+                    UpdateStats1();
+                }else if(selectedOption == switchMenuOffset + 1){
+                    switching = true;
+                    selectedOption = selectedMon;
+                    currentMenu = mainwindow;
+                    StartCoroutine(Dialogue.instance.text("Move #MON&lwhere?"));
                     Dialogue.instance.finishedText = true;
-                        UpdateMainMenu();
-                    }
-                    else if (selectedOption == switchMenuOffset + 2)
-                    {
-                        selectedOption = selectedMon;
-                        currentMenu = mainwindow;
-                        UpdateMainMenu();
-                    }
-            }
-            else if (currentMenu == stats1){
+                    UpdateMainMenu();
+                }else if(selectedOption == switchMenuOffset + 2){
+                    selectedOption = selectedMon;
+                    currentMenu = mainwindow;
+                    UpdateMainMenu();
+                }
+            }else if (currentMenu == stats1){
                     currentMenu = stats2;
                     UpdateStats2();
-            }
-            else if (currentMenu == stats2){
+            }else if (currentMenu == stats2){
                 SoundManager.instance.SetMusicNormal();
                 Dialogue.instance.Deactivate();
                 Dialogue.instance.fastText = true;
@@ -429,7 +408,7 @@ public class PokemonMenu : MonoBehaviour
 
     IEnumerator UseFieldMove(string whatFieldMove){
         string monName = GameData.instance.party[selectedMon].nickname;
-
+        
         if(whatFieldMove == "Cut"){
             if(Player.instance.facingTree){
                 currentMenu = mainwindow;
@@ -448,7 +427,7 @@ public class PokemonMenu : MonoBehaviour
         if(whatFieldMove == "Surf"){
             Player.instance.UpdateFacedTile();
             if(Player.instance.facedTile.hasTile && Player.instance.facedTile.isWater){
-                SoundManager.instance.PlaySong(17);
+                SoundManager.instance.PlaySong(Music.Ocean);
                 currentMenu = mainwindow;
                 UpdateMainMenu();
                 yield return Dialogue.instance.text(GameData.instance.playerName + " got on&l"+ monName + "!");

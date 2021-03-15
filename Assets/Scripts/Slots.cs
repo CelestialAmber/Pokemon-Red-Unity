@@ -120,7 +120,7 @@ public class Slots : MonoBehaviour {
             Exit();
             yield break;
         }
-        if (Player.disabled) {
+        if (Player.instance.isDisabled) {
 
             int amount = 3 - Dialogue.instance.selectedOption;
 		
@@ -197,12 +197,11 @@ public class Slots : MonoBehaviour {
         yield return Dialogue.instance.text ("Bet how many&lcoins?");
 		Dialogue.instance.fastText = false;
 		StartCoroutine(DecideBet());
-
-
 	}
-			public void Exit(){
+	
+	public void Exit(){
         Inputs.Enable("start");
-		Player.disabled = false;
+		Player.instance.isDisabled = false;
 		rolledone = false;
 		rolledtwo = false;
 		rolledthree = false;
@@ -210,9 +209,7 @@ public class Slots : MonoBehaviour {
 		handlingInput = false;
 		Dialogue.instance.Deactivate();
 		this.gameObject.SetActive(false);
-
-
-			}
+	}
 	
 	// Update is called once per frame
 	void Update() {
@@ -231,7 +228,6 @@ public class Slots : MonoBehaviour {
 
 	void UpdatePositions(bool addHalf){
 		if (canroll) {
-
 			if (!rolledone) {
                if(addHalf) row1Half++;
                 if (addHalf) row2Half++;
@@ -276,16 +272,12 @@ public class Slots : MonoBehaviour {
     IEnumerator SlotsFlash(int times)
     {
         WaitForSeconds wait = new WaitForSeconds(0.016f * 5f);
-        for (int i = 0; i < times; i++)
-        {
-       
+        for (int i = 0; i < times; i++){
             ScreenEffects.flashLevel = 1;
             yield return wait;
             ScreenEffects.flashLevel = 0;
             yield return wait;
         }
-        
-
     }
 
 	public string FindMatch(){
@@ -327,7 +319,6 @@ public class Slots : MonoBehaviour {
 				case 3:
 				row3Half++;
 				break;
-
 			}
 			UpdatePositions(false);
 			yield return wait;
@@ -343,115 +334,106 @@ public class Slots : MonoBehaviour {
 		
 		if(CurrentMode != "BAD" && whatwaslinedup == ""){
 			for(int i = 0; i < 4; i++){
-			yield return RollWheelDownOne(3);
-			whatwaslinedup = FindMatch();
-			if(whatwaslinedup != "") break;
+				yield return RollWheelDownOne(3);
+				whatwaslinedup = FindMatch();
+				if(whatwaslinedup != "") break;
 			}
 		}
 
 		if(CurrentMode != "SUPER" && (whatwaslinedup == "7" || whatwaslinedup == "BAR")){ //if the current mode isn't Super and there's a bar or 7 match, move the 3rd wheel down until there isn't a 7 or bar match
 			while((whatwaslinedup == "7" || whatwaslinedup == "BAR")){
-			yield return RollWheelDownOne(3);
-			whatwaslinedup = FindMatch();
+				yield return RollWheelDownOne(3);
+				whatwaslinedup = FindMatch();
 			}
-
 		}
 		
 		if(CurrentMode == "BAD" && whatwaslinedup != ""){ //if the current mode is Bad and there's a match, move the 3rd wheel down until there isn't a match
 			while(whatwaslinedup != ""){
-			yield return RollWheelDownOne(3);
-			whatwaslinedup = FindMatch();
+				yield return RollWheelDownOne(3);
+				whatwaslinedup = FindMatch();
 			}
 		}
 		
-		if (whatwaslinedup != "") {
-			
+		if (whatwaslinedup != "") {	
 			if(whatwaslinedup != "7" && whatwaslinedup != "BAR" && GuaranteedModeGood != 0)GuaranteedModeGood--;
 			
-		
-				if (whatwaslinedup == "7") {
-					payout = 300;
-					int toendornotsuper = Random.Range (0, 2);
-					if (toendornotsuper == 0) {
-						stayingInModeSuper = false;
-
-					}
-
-				}
-				if (whatwaslinedup == "BIRD") {
-					payout = 15;
-
-				}
-				if (whatwaslinedup == "FISH") {
-					payout = 15;
-
-				}
-				if (whatwaslinedup == "MOUSE") {
-					payout = 15;
-
-				}
-				if (whatwaslinedup == "BAR") {
-					payout = 100;
+			if (whatwaslinedup == "7") {
+				payout = 300;
+				int toendornotsuper = Random.Range (0, 2);
+				if (toendornotsuper == 0) {
 					stayingInModeSuper = false;
 				}
-				if (whatwaslinedup == "CHERRY") {
-					payout = 8;
-
-				}
-                if (whatwaslinedup == "7")
-                {
-					Dialogue.instance.keepTextOnScreen = true;
-                    yield return Dialogue.instance.text("Yeah!");
-                    StartCoroutine(SlotsFlash(8));
-                    yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(1));
-                }else StartCoroutine(SlotsFlash(1));
-                if (whatwaslinedup == "BAR") yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(2));
-                float timeToWait;
-                if (whatwaslinedup == "7" || whatwaslinedup == "BAR") timeToWait = 0.016f * 3f;
-                else timeToWait = 0.016f * 8f;
-                whatwaslinedup = "<" + (whatwaslinedup == "7" ? "SEVEN" : whatwaslinedup) + ">";
-				Dialogue.instance.keepTextOnScreen = true;
-				Dialogue.instance.waitForButtonPress = true;
-                yield return Dialogue.instance.text(whatwaslinedup + " lined up!&lScored " + payout + " coins!");
-
-                int payoutamount = payout;
-                
-                flashObject.SetActive(true);
-                for (int i = 0; i < payoutamount; i++) {
-			
-					payout--;
-                    SoundManager.instance.sfx.PlayOneShot(payoutSound);
-					GameData.instance.coins++;
-					UpdateCredit();
-					UpdatePayout();
-                    yield return new WaitForSeconds(timeToWait);
-
-
-				}
-                flashObject.SetActive(false);
-			} else {
-				if (GameData.instance.coins > 0) {
-				yield return Dialogue.instance.text ("Not this time!");
-				} else {
-				yield return Dialogue.instance.text ("Darn! Ran out of&lcoins!");
-             
-					Exit();
-					yield break;
-				}
-
 			}
+				
+			if (whatwaslinedup == "BIRD" || whatwaslinedup == "FISH" || whatwaslinedup == "MOUSE"){
+				payout = 15;
+			}
+
+			if (whatwaslinedup == "BAR"){
+				payout = 100;
+				stayingInModeSuper = false;
+			}
+
+			if (whatwaslinedup == "CHERRY"){
+				payout = 8;
+			}
+
+            if (whatwaslinedup == "7"){
+				Dialogue.instance.keepTextOnScreen = true;
+                yield return Dialogue.instance.text("Yeah!");
+                StartCoroutine(SlotsFlash(8));
+                yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(1));
+            }else StartCoroutine(SlotsFlash(1));
+
+            if (whatwaslinedup == "BAR") yield return StartCoroutine(SoundManager.instance.PlayItemGetSound(2));
+
+            float timeToWait;
+
+            if (whatwaslinedup == "7" || whatwaslinedup == "BAR") timeToWait = 0.016f * 3f;
+            else timeToWait = 0.016f * 8f;
+
+            whatwaslinedup = "<" + (whatwaslinedup == "7" ? "SEVEN" : whatwaslinedup) + ">";
 			Dialogue.instance.keepTextOnScreen = true;
+			Dialogue.instance.waitForButtonPress = true;
+            yield return Dialogue.instance.text(whatwaslinedup + " lined up!&lScored " + payout + " coins!");
+
+            int payoutamount = payout;
+                
+            flashObject.SetActive(true);
+
+            for (int i = 0; i < payoutamount; i++) {
+				payout--;
+                SoundManager.instance.sfx.PlayOneShot(payoutSound);
+				GameData.instance.coins++;
+				UpdateCredit();
+				UpdatePayout();
+                yield return new WaitForSeconds(timeToWait);
+			}
+
+            flashObject.SetActive(false);
+		}else{
+			if(GameData.instance.coins > 0){
+				yield return Dialogue.instance.text ("Not this time!");
+			}else{
+				yield return Dialogue.instance.text ("Darn! Ran out of&lcoins!");
+				Exit();
+				yield break;
+			}
+		}
+
+		Dialogue.instance.keepTextOnScreen = true;
 		yield return Dialogue.instance.text ("One more go?");
         yield return StartCoroutine(Dialogue.instance.prompt());
-			if (Dialogue.instance.selectedOption == 0) {
-				canroll = false;
+
+		if (Dialogue.instance.selectedOption == 0) {
+			canroll = false;
             slotPointsAnimator.SetBool("toggleStatus",false);
 			Dialogue.instance.keepTextOnScreen = true;
 			yield return Dialogue.instance.text ("Bet how many&lcoins?");
-				StartCoroutine(DecideBet());
-			} else {
-				Exit();
-			}
+			StartCoroutine(DecideBet());
+		} else {
+			Exit();
+		}
 	}
 
 	void CheckPositions(){
