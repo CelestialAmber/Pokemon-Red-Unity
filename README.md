@@ -1,6 +1,8 @@
 # Pokemon Red Unity
 Recreation of Pokémon Red/Blue in Unity
 
+NOTE: This project is on indefinite hold, partially from lack of motivation to work on this project and wanting to work on other things. I may eventually work on it again at some point in the future.
+
 ## Main resources/references used:
 
 Dissassembly: https://github.com/pret/pokered
