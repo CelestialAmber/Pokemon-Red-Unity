@@ -12,6 +12,7 @@ public class PokemonDataJSON : MonoBehaviour {
         PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
         PokemonData.itemPrices = Serializer.JSONtoObject<Dictionary<string, int>>("itemPrices.json");
         PokemonData.shopItemsLists = Serializer.JSONtoObject<Dictionary<string,string[]>>("shopItemsData.json");
+        PokemonData.pokedexData = Serializer.JSONtoObject<List<PokedexDataEntry>>("pokedexData.json");
     }
     public static void InitVersion(){
         if(GameData.instance.version == Version.Red){

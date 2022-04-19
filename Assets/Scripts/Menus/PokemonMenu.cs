@@ -18,7 +18,6 @@ public class PokemonMenu : MonoBehaviour
     public GameCursor cursor;
     public int selectedMon;
     public int numberofPokemon;
-    public int MoveID;
     public bool switching, selectingPokemon;
     public Sprite[] switchMenuSprites;
     public Image switchMenuImage;

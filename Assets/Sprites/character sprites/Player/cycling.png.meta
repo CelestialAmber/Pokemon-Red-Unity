@@ -63,7 +63,7 @@ TextureImporter:
       213: 8901072277144380393
     second: cycling_19
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -83,6 +83,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -92,8 +94,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -114,9 +116,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -575,6 +581,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      cycling_5: 6166216014874936170
+      cycling_18: -2672305894645775696
+      cycling_14: -675673818179372696
+      cycling_4: -7507536294077119366
+      cycling_15: -516527857267286519
+      cycling_2: -870844413278876537
+      cycling_7: -2003833194315938929
+      cycling_12: 2264926074658577275
+      cycling_19: 8901072277144380393
+      cycling_17: -4720265988239395992
+      cycling_16: 2020726841627568166
+      cycling_1: -1837417835915349856
+      cycling_6: -3685637293808981527
+      cycling_3: -2101495817135878820
+      cycling_11: -2834601818329042409
+      cycling_10: 1168846496742086776
+      cycling_9: -4988847647005743309
+      cycling_0: -6177991502354789850
+      cycling_8: -6088884523582452129
+      cycling_13: 3671303311450830706
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
