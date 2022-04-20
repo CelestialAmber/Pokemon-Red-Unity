@@ -76,11 +76,11 @@ public class Pokedex : MonoBehaviour
     {
         if(!selectingMon) cursor.SetPosition(0,112 - 16 * selectedSlot);
         if(!cursor.isActive) cursor.SetActive(true);
-        if(viewBio.displayingbio) cursor.SetActive(false);
+        if(viewBio.displayingBio) cursor.SetActive(false);
 
         if(MainMenu.instance.currentmenu == MainMenu.instance.pokedexmenu)
         {
-            if(Inputs.pressed("b") && !viewBio.displayingbio)
+            if(Inputs.pressed("b") && !viewBio.displayingBio)
             {
                 SoundManager.instance.PlayABSound();
                 if(Player.instance.isDisabled) Player.instance.isDisabled = false;
@@ -94,7 +94,7 @@ public class Pokedex : MonoBehaviour
                     gameObject.SetActive(false);
                 }
             }
-            if(Inputs.pressed("a") && !viewBio.displayingbio)
+            if(Inputs.pressed("a") && !viewBio.displayingBio)
             {
                 SoundManager.instance.PlayABSound();
 

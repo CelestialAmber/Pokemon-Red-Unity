@@ -399,9 +399,6 @@ void UpdateMovement(){
         //movingHitbox.transform.position = targetPos;
         
 		playerAnim.SetFloat("walkbikesurfstate", (int)walkSurfBikeState);
-		if (viewBio.bioscreen.enabled) {
-			isDisabled = true;
-		}
        
 		if (!isDisabled && !menuActive && !startMenuActive) {
             if (Inputs.pressed("start") && !isMoving) {
