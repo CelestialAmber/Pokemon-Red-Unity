@@ -34,22 +34,31 @@ public class LevelUpMove{
     }
 }
 
-public enum EvolutionType {
-  LevelUp,
-  Item
+//Enum for the different evolution methods
+public enum EvolutionMethod {
+  Level,
+  Item,
+  Trade
 }
 
 [System.Serializable]
 public class PokemonEvolution{
     public PokemonEnum pokemon;
-    //public EvolutionType evolutonType;
-    //public string evolutionItem;
-    public int level;
-
-    public PokemonEvolution(PokemonEnum pokemon, int level){
-        this.pokemon = pokemon;
-        this.level = level;
-    }
+    public EvolutionMethod method;
+	/*
+	Contains different values depending on the evolution method
+	(level up: level, item: evo item id, trade: n/a)
+	*/
+	/*
+	evolution item ids:
+	0: Fire Stone
+	1: Thunder Stone
+	2: Water Stone
+	3: Leaf Stone
+	4: Moon Stone
+	
+	*/
+    public int param;
 }
 
 //Class for encounter tables.
@@ -71,6 +80,11 @@ public class FishingGroup{
 public class PokemonDataEntry {
     public string name;
     public int id;
+	public string category;
+    public int heightFeet, heightInches;
+    //weight in pounds
+    public float weight;
+    public string[] descriptionText;
     /*
     Sprite for party menu
 
@@ -91,27 +105,21 @@ public class PokemonDataEntry {
     public int[] baseStats = new int[5];
     public int baseExp;
     public int expGroup;
-    public PokemonEvolution evolution;
+    public List<PokemonEvolution> evolutions;
     public Types[] types = new Types[2];
     public int[] tmhmLearnset;
     public LevelUpMove[] levelupLearnset;
 }
 
-
-public class PokedexDataEntry {
-    public string name;
-    public string category;
-    public int heightFeet, heightInches;
-    //weight in pounds
-    public float weight;
-    public string[] descriptionText;
-
+[System.Serializable]
+public class ItemDataEntry {
+	public string name;
+	public int price; //item's buy price (the sell price is just half the buy price)
 }
 
 
 public class PokemonData
 {
-
     public static MoveData GetMove(int moveToGet){
         //Debug.Log("Requesting move " + "\"" + moveToGet + "\"");
         if(moveToGet < moves.Count && moveToGet != (int)Moves.None) return moves[moveToGet - 1];
@@ -124,6 +132,14 @@ public class PokemonData
         else return typeNames[(int)type - 1];
     }
 
+    public static string GetItemName(ItemsEnum item){
+        return itemData[(int)item].name;
+    }
+
+    public static int GetItemPrice(ItemsEnum item){
+        return itemData[(int)item].price;
+    }
+
     public static Moves TMHMToMove(int tmhmIndex){
         return TMHMMoves[tmhmIndex];
     }
@@ -132,11 +148,9 @@ public class PokemonData
     public static List<MoveData> moves = new List<MoveData>();
 
 
-     public static string IndexToMon(int index){
+    public static string IndexToMon(int index){
         return pokemonData[index - 1].name;
     }
-
-    public static List<PokedexDataEntry> pokedexData = new List<PokedexDataEntry>();
 
     public static List<PokemonDataEntry> pokemonData = new List<PokemonDataEntry>();
     
@@ -221,7 +235,7 @@ public class PokemonData
 
 
 
-    public static Dictionary<string, int> itemPrices = new Dictionary<string, int>();
+    public static List<ItemDataEntry> itemData = new List<ItemDataEntry>();
 public static Dictionary<Types,Dictionary<Types,float>> TypeEffectiveness = new Dictionary<Types, Dictionary<Types, float>>();
 public static Dictionary<string,string[]> shopItemsLists = new Dictionary<string, string[]>();
 

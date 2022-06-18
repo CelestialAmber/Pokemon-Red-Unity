@@ -11,7 +11,7 @@ public class ViewBio : MonoBehaviour {
 	public Image pokemonSprite;
 	public CustomText descriptionText, nameText, categoryText, heightText, weightText, dexNoText;
 	string pokemonName = "";
-	PokedexDataEntry entryData;
+	PokemonDataEntry entryData;
 
 
 	public IEnumerator DisplayABio(int whatBio){
@@ -22,7 +22,7 @@ public class ViewBio : MonoBehaviour {
         Debug.Log("Display " + pokemonName +  "'s bio. This Pokemon " + (entry.seen && entry.caught ? "has been seen and caught." : entry.seen ? "has been seen." : "has not been seen or caught."));
 		
 		pokemonID = whatBio;
-		entryData = PokemonData.pokedexData[pokemonID - 1];
+		entryData = PokemonData.pokemonData[pokemonID - 1];
 
 		InitText();
 		menu.SetActive(true);

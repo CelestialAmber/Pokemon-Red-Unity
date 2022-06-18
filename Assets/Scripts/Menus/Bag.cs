@@ -28,13 +28,8 @@ public class Bag : MonoBehaviour {
 		  
 	}
 
-	public bool itemInInventory(string item){
-		for (int i = 0; i < Items.instance.items.Count; i++) {
-			if (Items.instance.items[i].name == item) {
-				return true;
-			}
-		}
-		return false;
+	public bool itemInInventory(ItemsEnum item){
+		return Items.instance.hasItem(item);
 	}
 
 
@@ -49,7 +44,7 @@ public class Bag : MonoBehaviour {
 
             if (currentItem > offscreenindexup && currentItem < Items.instance.items.Count){
                 itemSlots[i].mode = SlotMode.Item;
-                itemSlots[i].Name = Items.instance.items[currentItem].name;
+                itemSlots[i].item = Items.instance.items[currentItem].item;
                 itemSlots[i].intquantity = Items.instance.items[currentItem].quantity;
                 itemSlots[i].isKeyItem = Items.instance.items[currentItem].isKeyItem;
             }
@@ -197,7 +192,7 @@ public class Bag : MonoBehaviour {
 					if (selectedOption == 0) {
                         if (Items.instance.items.Count > 0) {
 							ItemMode1();
-                            Player.instance.UseItem(Items.instance.items [currentBagPosition].name);
+                            Player.instance.UseItem(Items.instance.items[currentBagPosition].item);
 						}
 					}
 					if (selectedOption == 1) {
@@ -214,10 +209,10 @@ public class Bag : MonoBehaviour {
 					}
 					if (ItemMode == 2) {
 						if (!Items.instance.items[currentBagPosition].isKeyItem) {
-                            yield return Dialogue.instance.text("Is it OK to toss &l" + Items.instance.items[currentBagPosition].name + "?");
+                            yield return Dialogue.instance.text("Is it OK to toss &l" + PokemonData.GetItemName(Items.instance.items[currentBagPosition].item) + "?");
                             yield return StartCoroutine(Dialogue.instance.prompt());
                             if(Dialogue.instance.selectedOption == 0){
-                                yield return Dialogue.instance.text("Threw away " + Items.instance.items[currentBagPosition].name + ".");
+                                yield return Dialogue.instance.text("Threw away " + PokemonData.GetItemName(Items.instance.items[currentBagPosition].item) + ".");
                                 StartCoroutine(TossItem());
                             }else{
                                 Dialogue.instance.Deactivate();

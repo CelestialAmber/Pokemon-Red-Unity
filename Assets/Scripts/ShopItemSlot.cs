@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ShopItemSlot : MonoBehaviour {
 	public CustomText slotNameText, slotPriceText;
-	public new string name;
-	public int intPrice;
+    public ItemsEnum item;
+    //public ItemDataEntry itemData;
     public SlotMode mode;
+    public int price;
+
 	// Use this for initialization
 	void Start () {
 
@@ -18,9 +20,11 @@ public class ShopItemSlot : MonoBehaviour {
     }
     public void UpdatePrice()
     {
-        if (PokemonData.itemPrices.ContainsKey(name))
+        ItemDataEntry itemDataEntry = PokemonData.itemData[(int)item];
+
+        if (itemDataEntry.price != 0)
         {
-            intPrice = PokemonData.itemPrices[name];
+            price = itemDataEntry.price;
         }
         else throw new UnityException("A price entry doesn't exist for " + "\"" + name + "\"");
     }
@@ -30,7 +34,7 @@ public class ShopItemSlot : MonoBehaviour {
         switch (mode)
         {
             case SlotMode.Item:
-                slotNameText.text = name.ToUpper();
+                slotNameText.text = PokemonData.GetItemName(item);
                 break;
             case SlotMode.Empty:
                 slotNameText.text = "";
@@ -40,7 +44,7 @@ public class ShopItemSlot : MonoBehaviour {
                 break;
         }
         if (mode == SlotMode.Item)
-            slotPriceText.text = "$" + intPrice;
+            slotPriceText.text = "$" + price;
         else slotPriceText.text = "";
 
 	}

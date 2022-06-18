@@ -41,7 +41,7 @@ public class PC : MonoBehaviour {
                 if (currentItem > offscreenindexup && currentItem < numberOfItems)
                 {
                     itemSlots[i].mode = SlotMode.Item;
-                    itemSlots[i].Name = Items.instance.items[currentItem].name;
+                    itemSlots[i].item = Items.instance.items[currentItem].item;
                     itemSlots[i].intquantity = Items.instance.items[currentItem].quantity;
                     itemSlots[i].isKeyItem = Items.instance.items[currentItem].isKeyItem;
                 }
@@ -65,7 +65,7 @@ public class PC : MonoBehaviour {
                 if (currentItem > offscreenindexup && currentItem < numberOfItems)
                 {
                     itemSlots[i].mode = SlotMode.Item;
-                    itemSlots[i].Name = Items.instance.pcItems[currentItem].name;
+                    itemSlots[i].item = Items.instance.pcItems[currentItem].item;
                     itemSlots[i].intquantity = Items.instance.pcItems[currentItem].quantity;
                     itemSlots[i].isKeyItem = Items.instance.pcItems[currentItem].isKeyItem;
                 }
@@ -447,13 +447,13 @@ public class PC : MonoBehaviour {
     {
 
         alreadyInBag = false;
-        Item  withdrawnitem = Items.instance.pcItems[currentBagPosition];
-        string DisplayString =  withdrawnitem.name + ".";
+        Item withdrawnItem = Items.instance.pcItems[currentBagPosition];
+        string DisplayString = PokemonData.GetItemName(withdrawnItem.item) + ".";
         yield return Dialogue.instance.text("Withdrew&l" + DisplayString);
-        Item inBagItem = new Item("", 0,false);
+        Item inBagItem = new Item(ItemsEnum.None, 0, false);
         foreach (Item item in Items.instance.items)
         {
-            if (item.name == withdrawnitem.name)
+            if (item.item == withdrawnItem.item)
             {
                 inBagItem = item;
                 alreadyInBag = true;
@@ -462,7 +462,7 @@ public class PC : MonoBehaviour {
 
         }
         if (alreadyInBag) Items.instance.items[Items.instance.items.IndexOf(inBagItem)].quantity += amountToTask;
-        else if (Items.instance.items.Count < 20) Items.instance.items.Add(new Item(withdrawnitem.name, amountToTask,withdrawnitem.isKeyItem));
+        else if (Items.instance.items.Count < 20) Items.instance.items.Add(new Item(withdrawnItem.item, amountToTask, withdrawnItem.isKeyItem));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
 
@@ -479,20 +479,22 @@ public class PC : MonoBehaviour {
     //deposit
     IEnumerator DepositItem(){
         alreadyInBag = false;
-        Item depositeditem = Items.instance.items[currentBagPosition];
-        yield return Dialogue.instance.text (depositeditem.name + " was&lstored via PC.");
-        Item inBagItem = new Item("", 0,false);
+        Item depositedItem = Items.instance.items[currentBagPosition];
+        yield return Dialogue.instance.text(PokemonData.GetItemName(depositedItem.item) + " was&lstored via PC.");
+
+        Item inBagItem = new Item(ItemsEnum.None, 0,false);
+
         foreach(Item item in Items.instance.pcItems){
-            if (item.name == depositeditem.name)
+            if (item.item == depositedItem.item)
             {
                 inBagItem = item;
                 alreadyInBag = true;
                 break;
             }
-
         }
+
         if (alreadyInBag) Items.instance.pcItems[Items.instance.pcItems.IndexOf(inBagItem)].quantity += amountToTask;
-        else if (Items.instance.pcItems.Count < 50) Items.instance.pcItems.Add(new Item(depositeditem.name, amountToTask,depositeditem.isKeyItem));
+        else if (Items.instance.pcItems.Count < 50) Items.instance.pcItems.Add(new Item(depositedItem.item, amountToTask, depositedItem.isKeyItem));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
         StartCoroutine(WhatDoText());
@@ -505,19 +507,15 @@ public class PC : MonoBehaviour {
 
     }
     IEnumerator TossItem(){
-
-         
-        Item tosseditem = Items.instance.pcItems[currentBagPosition];
-        yield return Dialogue.instance.text("Threw away " + tosseditem.name + ".");
-        yield return StartCoroutine(RemoveItem (amountToTask));
+        Item tossedItem = Items.instance.pcItems[currentBagPosition];
+        yield return Dialogue.instance.text("Threw away " + PokemonData.GetItemName(tossedItem.item) + ".");
+        yield return StartCoroutine(RemoveItem(amountToTask));
     
         StartCoroutine(WhatDoText());
         currentMenu = mainwindow;
         UpdateMainScreen();
         ItemMode = 0;
     }
-    
-
 
     public IEnumerator RemoveItem(int amount){
         if (ItemMode == 1 || ItemMode == 3) {

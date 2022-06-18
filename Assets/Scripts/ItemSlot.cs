@@ -14,9 +14,11 @@ public enum SlotType{
 public class ItemSlot : MonoBehaviour {
 	public bool isKeyItem;
 	public CustomText slotNameText, slotQuantityText;
-	public string Name;
+	public ItemsEnum item;
+    //public ItemDataEntry itemData;
 	public int intquantity;
     public SlotMode mode;
+
 	// Use this for initialization
 	void Awake () {
         slotNameText = transform.GetChild(0).GetComponent<CustomText>();
@@ -27,7 +29,7 @@ public class ItemSlot : MonoBehaviour {
 	void Update () {
         switch(mode){
             case SlotMode.Item:
-                slotNameText.text = Name.ToUpper();
+                slotNameText.text = PokemonData.GetItemName(item);
                 break;
             case SlotMode.Empty:
                 slotNameText.text = "";
@@ -38,7 +40,7 @@ public class ItemSlot : MonoBehaviour {
         }
 		
 		if (!isKeyItem && mode == SlotMode.Item) {
-			slotQuantityText.text = "*" +(intquantity <= 9 ? " ": "") + intquantity.ToString ();
+			slotQuantityText.text = "*" + (intquantity <= 9 ? " ": "") + intquantity.ToString();
 		} else {
 
 			slotQuantityText.text = "";

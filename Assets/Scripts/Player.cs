@@ -439,7 +439,7 @@ void UpdateMovement(){
                                 return;
                             case "Pokeball":
                                 Pokeball pokeball = facedObject.GetComponent<Pokeball>();
-                                pokeball.GetItem(pokeball.item);
+                                pokeball.GetItem();
                                 return;
                         }
 
@@ -634,26 +634,25 @@ void UpdateMovement(){
         MainMenu.instance.Close();      
 	}
 
-    public void UseItem(string whatItem)
+    public void UseItem(ItemsEnum whatItem)
     {
         StartCoroutine(UseItemFunction(whatItem));
     }
     
-    public IEnumerator UseItemFunction(string whatItem){ //function called when using an item
+    public IEnumerator UseItemFunction(ItemsEnum whatItem){ //function called when using an item
 
         switch(whatItem){ 
-            case "Bicycle":
-		    	CloseMenus ();
+            case ItemsEnum.Bicycle:
+		    	CloseMenus();
 
                 switch (walkSurfBikeState)
                 {
-                    case  MovementState.Walk:
+                    case MovementState.Walk:
                     SoundManager.instance.PlaySong(Music.Cycling); //play the biking music
                         yield return Dialogue.instance.text(GameData.instance.playerName + " got on the&lBICYCLE!");
-                        
                         walkSurfBikeState =  MovementState.Bike;
                         break;
-                    case  MovementState.Bike:
+                    case MovementState.Bike:
                         PlayCurrentAreaSong();
                         yield return Dialogue.instance.text(GameData.instance.playerName + " got off&lthe BICYCLE.");
                         walkSurfBikeState = MovementState.Walk;
