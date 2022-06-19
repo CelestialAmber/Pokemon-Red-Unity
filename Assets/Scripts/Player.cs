@@ -340,8 +340,8 @@ void UpdateMovement(){
 
         while(targetPos != transform.position){
             UpdateMovement();
-            yield return new WaitForEndOfFrame();
-            //yield return new WaitForSeconds(3f/60f);
+            //yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(1f/60f);
         }
         
         CheckCollision();

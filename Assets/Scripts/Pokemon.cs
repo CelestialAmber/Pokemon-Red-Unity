@@ -34,6 +34,7 @@ public class Pokemon
         this.level = level;
         this.isWildPokemon = isWildPokemon;
         this.nickname = this.name;
+        types = pokemonDataEntry.types;
         GenerateIvs();
         moves = new Move[4];
         for(int i = 0; i < 4; i++){
@@ -46,7 +47,6 @@ public class Pokemon
         if (!GameData.instance.pokedexlist[id - 1].caught)
         {
             RegisterInDex();
-            types = pokemonDataEntry.types;
         }
         if(!isWildPokemon){
 
