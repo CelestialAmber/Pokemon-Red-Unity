@@ -11,6 +11,8 @@ Continue,
 Done
 }
 
+
+//All of this code needs to be overhauled
 public class Dialogue : Singleton<Dialogue> {
 	private string str;
 	public float scrollequation;
@@ -62,7 +64,7 @@ public class Dialogue : Singleton<Dialogue> {
         dialoguetext.gameObject.SetActive(true);
 		indicator.SetActive (false);
 
-	    strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("&l","\n\n");
+	    strComplete = strComplete.Replace("<player>",GameData.instance.playerName).Replace("<rival>",GameData.instance.rivalName).Replace("#MON","POKéMON").Replace("&l","\n\n").Replace("&c","").Replace("&p","");
 		int i = 0;
 		if(currentDialogueType != DialogueType.Done) str = "";
         else str = stringToReveal;
@@ -70,8 +72,6 @@ public class Dialogue : Singleton<Dialogue> {
         if(currentDialogueType == DialogueType.Continue){
             str = laststring + "\n\n";
         }
-		if(currentDialogueType != DialogueType.Done)laststring = strComplete.Substring(strComplete.IndexOf("\n\n")+2);
-       
 		
 		dialoguetext.text = str;
 
@@ -197,63 +197,69 @@ public IEnumerator text(string text){
         currentDialogueType = DialogueType.Text;
 		stringToReveal = "";
         string[] lines = text.Split('\n');
+
         for(int i = 0; i < lines.Length; i++){
             if(i == 0) currentDialogueType = DialogueType.Text;
+
+			//If the last line was a continue line, keep it in the text
             else if(lines[i-1].Contains("&c")){
-                stringToReveal = lines[i-1].Replace("&c","").Replace("&p","");
+                stringToReveal = lines[i-1];
                 currentDialogueType = DialogueType.Continue;
             }
             else if(lines[i-1].Contains("&p")) currentDialogueType = DialogueType.Text; //eventually change to para?
-		yield return StartCoroutine(AnimateText (lines[i].Replace("&c","").Replace("&p","")));
-            indicator.SetActive(true);
-        if(needButtonPress) {
-        while (!Inputs.pressed("a")) {
-				
-				yield return new WaitForSeconds (0.001f);
-                if (Inputs.pressed("a")) {
-                    SoundManager.instance.PlayABSound();
-					break;
-				}
+			
+			yield return StartCoroutine(AnimateText(lines[i]));
+        	indicator.SetActive(true);
 
+			laststring = lines[i].Replace("&c","").Replace("&p","");
+			if(laststring.Contains("&l")){
+				laststring = laststring.Substring(laststring.IndexOf("&l") + 2);
 			}
-        
+
+        	if(needButtonPress){
+        		while(!Inputs.pressed("a")){
+					yield return new WaitForSeconds(0.001f);
+        		    if(Inputs.pressed("a")){
+        		        SoundManager.instance.PlayABSound();
+						break;
+					}
+				}
+        	}
         }
-        }
+
         yield return StartCoroutine(done());
-       
-		
 	}
+
     public IEnumerator done(){
             indicator.SetActive(true);
-            if(waitForButtonPress){
-            while (!Inputs.pressed("a")) {
-				
-				yield return new WaitForSeconds (0.001f);
-                if (Inputs.pressed("a")) {
-                    SoundManager.instance.PlayABSound();
-					break;
-				}
 
-			}
+            if(waitForButtonPress){
+            	while (!Inputs.pressed("a")) {
+					yield return new WaitForSeconds (0.001f);
+            	    if (Inputs.pressed("a")) {
+            	        SoundManager.instance.PlayABSound();
+						break;
+					}
+				}
             }
+
             Inputs.dialogueCheck = false;
 			
-            if (!keepTextOnScreen)
-            {
+            if (!keepTextOnScreen){
                 box.enabled = false;
                 dialoguetext.text = "";
                 dialoguetext.enabled = false;
                 dialoguetext.gameObject.SetActive(false);
             }
+
             keepTextOnScreen = false;
             waitForButtonPress = false;
             needButtonPress = true;
             indicator.SetActive(false);
 			finishedText = true;
 			stringToReveal = "";
-		
-
 	}
+
 	public IEnumerator prompt(){
 		selectedOption = 0;
 		taskType = 0;
@@ -272,6 +278,7 @@ public IEnumerator text(string text){
         }
         yesnomenu.SetActive(false);
     }
+
 	public IEnumerator slots(){
 		selectedOption = 0;
 		taskType = 1;

@@ -1,85 +1,82 @@
 {
-  "Viridian" : [
-    "Poke Ball",
+  "Viridian": [
+    "PokeBall",
     "Potion",
     "Antidote",
-    "Parlyz Heal",
-    "Burn Heal"
-   ],
-   
- "Pewter": [   
-     "Poke Ball",
-   "Potion",
-   "Escape Rope",
-   "Antidote",
-   "Burn Heal",
-   "Awakening",
-   "Parlyz Heal"
- ]
-,
-   "Cerulean" : [
-    "Poke Ball",
+    "ParlyzHeal",
+    "BurnHeal"
+  ],
+  "Pewter": [
+    "PokeBall",
     "Potion",
-    "Escape Rope",
+    "EscapeRope",
+    "Antidote",
+    "BurnHeal",
+    "Awakening",
+    "ParlyzHeal"
+  ],
+  "Cerulean": [
+    "PokeBall",
+    "Potion",
+    "EscapeRope",
     "Repel",
     "Antidote",
-    "Burn Heal",
+    "BurnHeal",
     "Awakening",
-    "Parlyz Heal"
-],
-"Vermillion" :[
-   "Poke Ball",
-   "Super Potion",
-    "Ice Heal",
-    "Awakening",
-   "Parlyz Heal",
-   "Repel"
-],
-"Lavender" :[
-  "Great Ball",
-  "Super Potion",
-  "Revive",
-  "Escape Rope",
-  "Super Repel",
-  "Antidote",
-  "Burn Heal",
-  "Ice Heal",
-  "Parlyz Heal"
+    "ParlyzHeal"
   ],
-  "Saffron" :[
-    "Great Ball",
-    "Hyper Potion",
-    "Max Repel",
-    "Escape Rope",
-    "Full Heal",
+  "Vermillion": [
+    "PokeBall",
+    "SuperPotion",
+    "IceHeal",
+    "Awakening",
+    "ParlyzHeal",
+    "Repel"
+  ],
+  "Lavender": [
+    "GreatBall",
+    "SuperPotion",
+    "Revive",
+    "EscapeRope",
+    "SuperRepel",
+    "Antidote",
+    "BurnHeal",
+    "IceHeal",
+    "ParlyzHeal"
+  ],
+  "Saffron": [
+    "GreatBall",
+    "HyperPotion",
+    "MaxRepel",
+    "EscapeRope",
+    "FullHeal",
     "Revive"
   ],
-  "Fuschia" :[
-    "Ultra Ball",
-    "Great Ball",
-    "Super Potion",
-    "Hyper Potion",
+  "Fuschia": [
+    "UltraBall",
+    "GreatBall",
+    "SuperPotion",
+    "HyperPotion",
     "Revive",
-    "Full Heal",
-    "Super Repel"
-    ],
-    "Cinnabar" :[
-    "Ultra Ball",
-    "Great Ball",
-    "Hyper Potion",
-    "Max Repel",
-    "Escape Rope",
-    "Full Heal",
+    "FullHeal",
+    "SuperRepel"
+  ],
+  "Cinnabar": [
+    "UltraBall",
+    "GreatBall",
+    "HyperPotion",
+    "MaxRepel",
+    "EscapeRope",
+    "FullHeal",
     "Revive"
-    ],
-    "Indigo":[
-    "Ultra Ball",
-    "Great Ball",
-    "Full Restore",
-    "Max Potion",
-    "Full Heal",
+  ],
+  "Indigo": [
+    "UltraBall",
+    "GreatBall",
+    "FullRestore",
+    "MaxPotion",
+    "FullHeal",
     "Revive",
-    "Max Repel"
-    ]
+    "MaxRepel"
+  ]
 }
-

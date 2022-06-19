@@ -287,7 +287,7 @@ public class PokemonPicImporter : MonoBehaviour
         //convert the gameboy sprite into a texture, then save it as png
         int imageWidth = 56, imageHeight = 56;
         Texture2D image = new Texture2D(imageWidth,imageHeight);
-        int xPos = 0,yPos = 0;
+        int xPos = 0, yPos = 0;
         int tileIndex = 0;
         for (int i = 0; i < imageWidth * imageHeight; i += 16)
         {                  

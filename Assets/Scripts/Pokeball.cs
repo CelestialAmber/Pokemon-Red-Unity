@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Pokeball : MonoBehaviour
 {
-    public string item;
+    public ItemsEnum item;
 
-    public void GetItem(string item){
-        StartCoroutine(GetItemText(item));
+    public void GetItem(){
+        StartCoroutine(GetItemText());
     }
 
-    public IEnumerator GetItemText(string item){
+    public IEnumerator GetItemText(){
         Items.instance.AddItem(item, 1);
-        yield return Dialogue.instance.text(GameData.instance.playerName + " found &l" + item.ToUpper() + "!");
-        this.gameObject.SetActive(false);
+        yield return Dialogue.instance.text(GameData.instance.playerName + " found &l" + PokemonData.GetItemName(item) + "!");
+        this.gameObject.SetActive(false); //maybe replace with Destroy
     }
 }

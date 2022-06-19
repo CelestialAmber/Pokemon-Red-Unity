@@ -10,8 +10,8 @@ using Newtonsoft.Json.Linq;
 public class PokedexEntry
 {
     public PokedexEntry(bool seen, bool caught){
-        this.seen = seen;
-        this.caught = caught;
+        this.seen = true;
+        this.caught = true;
     }
     public bool seen;
     public bool caught;

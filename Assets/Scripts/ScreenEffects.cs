@@ -2,42 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public enum Palette{
-    Grayscale,
-    PokemonRedMinecraft,
-    gbcUp,
-    gbcUpA,
-    gbcUpB,
-    gbcLeft,
-    gbcLeftA,
-    gbcLeftB,
-    gbcDown,
-    gbcDownA,
-    gbcDownB,
-    gbcRight,
-    gbcRightA,
-    gbcRightB,
-    GameboyColors
 
-}
 
-[System.Serializable]
-public class PaletteSet{
-    public Color bg1 = new Color(1,1,1,1);
-    public Color bg2 = new Color(.564f,.564f,.564f,1);
-    public Color bg3 = new Color(.25f, .25f, .25f, 1);
-    public Color bg4 = new Color(0, 0, 0, 1);
-
-}
 public class ScreenEffects : MonoBehaviour {
     public Material paletteEffect, invertEffect, waveEffect, ssAnneScrollEffect;
     public RawImage sgbScreen;
     public RenderTexture texture, outputScreen;
     public bool invert, wave;
     public bool screenEffectDebug = false;
-    public Palette usedPalette;
-    private Palette lastPalette;
-    //public List<PaletteSet> palettes = new List<PaletteSet>();
     public VersionManager versionManager;
     public static ScreenEffects instance;
     [Range(-3,3)]
@@ -82,24 +54,23 @@ public class ScreenEffects : MonoBehaviour {
             StartCoroutine(ScrollShip());
         }
         }
-        
-        //paletteEffect.SetColor("color1", palettes[(int)usedPalette].bg1);
-        //paletteEffect.SetColor("color2", palettes[(int)usedPalette].bg2);
-        //paletteEffect.SetColor("color3", palettes[(int)usedPalette].bg3);
-        //paletteEffect.SetColor("color4", palettes[(int)usedPalette].bg4);
+
         paletteEffect.SetInt("flashLevel",flashLevel);
         ssAnneScrollEffect.SetFloat("shipScrollOffset", shipScrollOffset);
         Graphics.Blit(texture,passTex[0], paletteEffect,0);
+
         int passIndex = 0;
+
         if (invert){
              Graphics.Blit(passTex[passIndex], passTex[passIndex + 1], invertEffect, 0);
             passIndex++;
         }
+
         if (wave){
-        
-        Graphics.Blit(passTex[passIndex], passTex[passIndex + 1], waveEffect, 0);
-        passIndex++;
+        	Graphics.Blit(passTex[passIndex], passTex[passIndex + 1], waveEffect, 0);
+        	passIndex++;
         }
+
         Graphics.Blit(passTex[passIndex], outputScreen, ssAnneScrollEffect, 0);
         paletteEffect.SetVector("screenPos",screenPos);
 	}

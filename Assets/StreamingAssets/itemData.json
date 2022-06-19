@@ -1,0 +1,382 @@
+[
+  {
+    "name": "",
+    "price": 0
+  },
+  {
+    "name": "MASTER BALL",
+    "price": 0
+  },
+  {
+    "name": "ULTRA BALL",
+	"price": 1200
+  },
+  {
+	"name": "GREAT BALL",
+	"price": 600
+  },
+  {
+	"name": "POKé BALL",
+	"price": 200
+  },
+  {
+	"name": "TOWN MAP",
+	"price": 0
+  },
+  {
+	"name": "BICYCLE",
+	"price": 0
+  },
+  {
+	"name": "SAFARI BALL",
+	"price": 1000
+  },
+  {
+	"name": "POKéDEX",
+	"price": 0
+  },
+  {
+	"name": "MOON STONE",
+	"price": 0
+  },
+  {
+	"name": "ANTIDOTE",
+	"price": 100
+  },
+  {
+	"name": "BURN HEAL",
+	"price": 250
+  },
+  {
+	"name": "ICE HEAL",
+	"price": 250
+  },
+  {
+	"name": "AWAKENING",
+	"price": 200
+  },
+  {
+	"name": "PARLYZ HEAL",
+	"price": 200
+  },
+  {
+	"name": "FULL RESTORE",
+	"price": 3000
+  },
+  {
+	"name": "MAX POTION",
+	"price": 2500
+  },
+  {
+	"name": "HYPER POTION",
+	"price": 1500
+  },
+  {
+	"name": "SUPER POTION",
+	"price": 700
+  },
+  {
+	"name": "POTION",
+	"price": 300
+  },
+  {
+	"name": "BOULDERBADGE",
+	"price": 0
+  },
+  {
+	"name": "CASCADEBADGE",
+	"price": 0
+  },
+  {
+	"name": "THUNDERBADGE",
+	"price": 0
+  },
+  {
+	"name": "RAINBOWBADGE",
+	"price": 0
+  },
+  {
+	"name": "SOULBADGE",
+	"price": 0
+  },
+  {
+	"name": "MARSHBADGE",
+	"price": 0
+  },
+  {
+	"name": "VOLCANOBADGE",
+	"price": 0
+  },
+  {
+	"name": "EARTHBADGE",
+	"price": 0
+  },
+  {
+	"name": "ESCAPE ROPE",
+	"price": 550
+  },
+  {
+	"name": "REPEL",
+	"price": 350
+  },
+  {
+	"name": "OLD AMBER",
+	"price": 0
+  },
+  {
+	"name": "FIRE STONE",
+	"price": 2100
+  },
+  {
+	"name": "THUNDERSTONE",
+	"price": 2100
+  },
+  {
+	"name": "WATER STONE",
+	"price": 2100
+  },
+  {
+	"name": "HP UP",
+	"price": 9800
+  },
+  {
+	"name": "PROTEIN",
+	"price": 9800
+  },
+  {
+	"name": "IRON",
+	"price": 9800
+  },
+  {
+	"name": "CARBOS",
+	"price": 9800
+  },
+  {
+	"name": "CALCIUM",
+	"price": 9800
+  },
+  {
+	"name": "RARE CANDY",
+	"price": 4800
+  },
+  {
+	"name": "DOME FOSSIL",
+	"price": 0
+  },
+  {
+	"name": "HELIX FOSSIL",
+	"price": 0
+  },
+  {
+	"name": "SECRET KEY",
+	"price": 0
+  },
+  {
+	"name": "BIKE VOUCHER",
+	"price": 0
+  },
+  {
+	"name": "X ACCURACY",
+	"price": 950
+  },
+  {
+	"name": "LEAF STONE",
+	"price": 2100
+  },
+  {
+	"name": "CARD KEY",
+	"price": 0
+  },
+  {
+	"name": "NUGGET",
+	"price": 10000
+  },
+  {
+	"name": "POKé DOLL",
+	"price": 1000
+  },
+  {
+	"name": "FULL HEAL",
+	"price": 600
+  },
+  {
+	"name": "REVIVE",
+	"price": 1500
+  },
+  {
+	"name": "MAX REVIVE",
+	"price": 4000
+  },
+  {
+	"name": "GUARD SPEC.",
+	"price": 700
+  },
+  {
+	"name": "SUPER REPEL",
+	"price": 500
+  },
+  {
+	"name": "MAX REPEL",
+	"price": 700
+  },
+  {
+	"name": "DIRE HIT",
+	"price": 650
+  },
+  {
+	"name": "COIN",
+	"price": 10
+  },
+  {
+	"name": "FRESH WATER",
+	"price": 200
+  },
+  {
+	"name": "SODA POP",
+	"price": 300
+  },
+  {
+	"name": "LEMONADE",
+	"price": 350
+  },
+  {
+	"name": "S.S.TICKET",
+	"price": 0
+  },
+  {
+	"name": "GOLD TEETH",
+	"price": 0
+  },
+  {
+	"name": "X ATTACK",
+	"price": 500
+  },
+  {
+	"name": "X DEFEND",
+	"price": 500
+  },
+  {
+	"name": "X SPEED",
+	"price": 350
+  },
+  {
+	"name": "X SPECIAL",
+	"price": 350
+  },
+  {
+	"name": "COIN CASE",
+	"price": 0
+  },
+  {
+	"name": "OAK's PARCEL",
+	"price": 0
+  },
+  {
+	"name": "ITEMFINDER",
+	"price": 0
+  },
+  {
+	"name": "SILPH SCOPE",
+	"price": 0
+  },
+  {
+	"name": "POKé FLUTE",
+	"price": 0
+  },
+  {
+	"name": "LIFT KEY",
+	"price": 0
+  },
+  {
+	"name": "EXP.ALL",
+	"price": 0
+  },
+  {
+	"name": "OLD ROD",
+	"price": 0
+  },
+  {
+	"name": "GOOD ROD",
+	"price": 0
+  },
+  {
+	"name": "SUPER ROD",
+	"price": 0
+  },
+  {
+	"name": "PP UP",
+	"price": 9800
+  },
+  {
+	"name": "ETHER",
+	"price": 0
+  },
+  {
+	"name": "MAX ETHER",
+	"price": 0
+  },
+  {
+	"name": "ELIXER",
+	"price": 0
+  },
+  {
+	"name": "MAX ELIXER",
+	"price": 0
+  },
+  {
+	"name": "B2F",
+	"price": 0
+  },
+  {
+	"name": "B1F",
+	"price": 0
+  },
+  {
+	"name": "1F",
+	"price": 0
+  },
+  {
+	"name": "2F",
+	"price": 0
+  },
+  {
+	"name": "3F",
+	"price": 0
+  },
+  {
+	"name": "4F",
+	"price": 0
+  },
+  {
+	"name": "5F",
+	"price": 0
+  },
+  {
+	"name": "6F",
+	"price": 0
+  },
+  {
+	"name": "7F",
+	"price": 0
+  },
+  {
+	"name": "8F",
+	"price": 0
+  },
+  {
+	"name": "9F",
+	"price": 0
+  },
+  {
+	"name": "10F",
+	"price": 0
+  },
+  {
+	"name": "11F",
+	"price": 0
+  },
+  {
+	"name": "B4F",
+	"price": 0
+  }
+]

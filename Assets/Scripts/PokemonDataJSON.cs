@@ -7,12 +7,13 @@ using System;
 public class PokemonDataJSON : MonoBehaviour {
     public VersionManager versionManager;
     void Awake(){
+        //this should also be a class list
         PokemonData.TypeEffectiveness = Serializer.JSONtoObject<Dictionary<Types,Dictionary<Types,float>>>("typeEffectiveness.json");
         PokemonData.pokemonData = Serializer.JSONtoObject<List<PokemonDataEntry>>("pokemonData.json");
         PokemonData.moves = Serializer.JSONtoObject<List<MoveData>>("moveData.json");
-        PokemonData.itemPrices = Serializer.JSONtoObject<Dictionary<string, int>>("itemPrices.json");
+        PokemonData.itemData = Serializer.JSONtoObject<List<ItemDataEntry>>("itemData.json");
+        //also should be changed
         PokemonData.shopItemsLists = Serializer.JSONtoObject<Dictionary<string,string[]>>("shopItemsData.json");
-        PokemonData.pokedexData = Serializer.JSONtoObject<List<PokedexDataEntry>>("pokedexData.json");
     }
     public static void InitVersion(){
         if(GameData.instance.version == Version.Red){

@@ -8,13 +8,13 @@ public class TextDatabase : MonoBehaviour {
 		instance = this;
 	}
 
-    public void GetItem(string item){
-            StartCoroutine(GetItemText(item));
+    public void GetItem(ItemsEnum item){
+        StartCoroutine(GetItemText(item));
     }
 
-    public IEnumerator GetItemText(string item){
+    public IEnumerator GetItemText(ItemsEnum item){
        	Items.instance.AddItem(item, 1);
-        yield return Dialogue.instance.text(GameData.instance.playerName + " found &l"+item.ToUpper() + "!");
+        yield return Dialogue.instance.text(GameData.instance.playerName + " found &l" + PokemonData.GetItemName(item) + "!");
 
 
     }
