@@ -38,14 +38,14 @@ public class Options : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Inputs.pressed("a"))
+        if (InputManager.Pressed(Button.A))
         {
             if (Title.instance.gameObject.activeSelf)
             {
                 if (selectedOption == 3)
                 {
                     SoundManager.instance.PlayABSound();
-                    Inputs.instance.DisableForSeconds("a", 0.2f);
+                    InputManager.instance.DisableForSeconds(Button.A, 0.2f);
                     Title.instance.currentMenu = Title.instance.HasData ? Title.instance.datamenu : Title.instance.nodatamenu;
                     this.gameObject.SetActive(false);
                 }
@@ -55,7 +55,7 @@ public class Options : MonoBehaviour {
                 if (selectedOption == 3)
                 {
                     SoundManager.instance.PlayABSound();
-                    Inputs.Enable("start");
+                    InputManager.Enable(Button.Start);
                     MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
                     this.gameObject.SetActive(false);
                     
@@ -66,7 +66,7 @@ public class Options : MonoBehaviour {
             }
         }
         
-        if (Inputs.pressed("b"))
+        if (InputManager.Pressed(Button.B))
         {
             if (Title.instance.gameObject.activeSelf)
             {
@@ -76,14 +76,14 @@ public class Options : MonoBehaviour {
             else if (MainMenu.instance.currentmenu == MainMenu.instance.optionsmenu)
             {
                 SoundManager.instance.PlayABSound();
-                Inputs.Enable("start");
+                InputManager.Enable(Button.Start);
                 MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
                 this.gameObject.SetActive(false);
 
             }
         }
 		
-        if (Inputs.pressed("left")) {
+        if (InputManager.Pressed(Button.Left)) {
 			if (selectedOption == 0) {
 				GameData.instance.textChoice--;
                 MathE.Clamp(ref GameData.instance.textChoice, 0, 2);
@@ -101,7 +101,7 @@ public class Options : MonoBehaviour {
             }
 		}
 
-        if (Inputs.pressed("right")) {
+        if (InputManager.Pressed(Button.Right)) {
 
 			if (selectedOption == 0) {
                 GameData.instance.textChoice++;
@@ -121,12 +121,12 @@ public class Options : MonoBehaviour {
 
 		}
 
-        if (Inputs.pressed("down")) {
+        if (InputManager.Pressed(Button.Down)) {
 			selectedOption++;
             MathE.Clamp(ref selectedOption, 0, 3);
             UpdateCursorPosition();
         }
-        if (Inputs.pressed("up")) {
+        if (InputManager.Pressed(Button.Up)) {
 			selectedOption--;
             MathE.Clamp(ref selectedOption, 0, 3);
             UpdateCursorPosition();

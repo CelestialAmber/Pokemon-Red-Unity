@@ -51,12 +51,12 @@ public class OakIntroCutsceneHandler : MonoBehaviour {
 	void Update(){
 		
 		if ((currentmenu == rednamemenu || currentmenu == garynamemenu) && currentmenu != nameselectionmenu)  {
-            if (Inputs.pressed("down")) {
+            if (InputManager.Pressed(Button.Down)) {
 				selectedOption++;
                 MathE.Clamp(ref selectedOption, 0, 3);
                  cursor.SetPosition(8,120 - 16 * selectedOption);
 			}
-            if (Inputs.pressed("up")) {
+            if (InputManager.Pressed(Button.Up)) {
 				selectedOption--;
                 MathE.Clamp(ref selectedOption, 0, 3);
                  cursor.SetPosition(8,120 - 16 * selectedOption);
@@ -71,7 +71,7 @@ public class OakIntroCutsceneHandler : MonoBehaviour {
 			}
 		}
 
-        if(Inputs.pressed("a")){
+        if(InputManager.Pressed(Button.A)){
             if (currentmenu == rednamemenu){
                 if(selectedOption == 0){
                     currentmenu = nameselectionmenu;
@@ -227,7 +227,7 @@ public class OakIntroCutsceneHandler : MonoBehaviour {
         Player.instance.GetComponent<BoxCollider2D>().enabled = true;
 		Dialogue.instance.deactivated = false;
 		Player.instance.isDisabled = false;
-        Inputs.Enable("start");
+        InputManager.Enable(Button.Start);
         GameData.instance.atTitleScreen = false;
         Player.instance.FadeToCurrentAreaSong();
 		this.gameObject.SetActive (false);

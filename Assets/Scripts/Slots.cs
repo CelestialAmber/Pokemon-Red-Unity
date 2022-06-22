@@ -111,6 +111,7 @@ public class Slots : MonoBehaviour {
             redRowsObject.SetActive(false);
         }
     }
+	
     IEnumerator DecideBet(){
 		int RandomNumber;
 		int ModeNumber;
@@ -200,7 +201,7 @@ public class Slots : MonoBehaviour {
 	}
 	
 	public void Exit(){
-        Inputs.Enable("start");
+        InputManager.Enable(Button.Start);
 		Player.instance.isDisabled = false;
 		rolledone = false;
 		rolledtwo = false;
@@ -482,7 +483,7 @@ public class Slots : MonoBehaviour {
 		handlingInput = true;
 		if (canroll && canStopTheReels) {			
 			if (rolledtwo && !rolledthree) {
-				if (Inputs.pressed("a")) {
+				if (InputManager.Pressed(Button.A)) {
 					rolledthree = true;
 				SoundManager.instance.sfx.PlayOneShot(stopReelSound);
 				
@@ -495,7 +496,7 @@ public class Slots : MonoBehaviour {
 				}
 			}
 			else if (rolledone && !rolledtwo) {
-				if (Inputs.pressed("a")) {
+				if (InputManager.Pressed(Button.A)) {
 					rolledtwo = true;
 					SoundManager.instance.sfx.PlayOneShot(stopReelSound);
 					
@@ -537,7 +538,7 @@ public class Slots : MonoBehaviour {
 				}
 			}
 			else if (!rolledone) {
-				if (Inputs.pressed("a")) {
+				if (InputManager.Pressed(Button.A)) {
 					rolledone = true;
 					SoundManager.instance.sfx.PlayOneShot(stopReelSound);
 				

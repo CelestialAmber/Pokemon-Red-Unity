@@ -36,7 +36,7 @@ public class IntroHandler : MonoBehaviour {
 
 	public void Init(){
         GameData.instance.atTitleScreen = true;
-        Inputs.Disable("start");
+        InputManager.Disable(Button.Start);
         Player.instance.isDisabled = true;
         Title.instance.animationsFinished = false;
 		Player.instance.GetComponent<BoxCollider2D>().enabled = false;

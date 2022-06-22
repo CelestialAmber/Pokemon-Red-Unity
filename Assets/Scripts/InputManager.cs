@@ -1,25 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Inputs : MonoBehaviour
+
+public enum Button {
+    Up,
+    Down,
+    Left,
+    Right,
+    B,
+    A,
+    Start,
+    Select
+}
+
+
+public class InputManager : MonoBehaviour
 {
 
     public static bool dialogueCheck;
-    public static Inputs instance;
+    public static InputManager instance;
     public static bool[] isHoldingJoystickDirections = new bool[4];
     public static bool[] hasPressedJoystickDirections = new bool[4];
     public static bool[] releasedJoystickDirections = new bool[4];
 
-    public static void Disable(string button)
-    {
-        buttonDisabled[keyindices[button]] = true;
-    }
-
-    public static void Enable(string button)
-    {
-        buttonDisabled[keyindices[button]] = false;
-    }
     public static bool[] buttonDisabled = new bool[8];
+
+    //Keyboard button mappings
     public static List<KeyCode> inputs = new List<KeyCode>(new KeyCode[]{
         KeyCode.UpArrow, 
             KeyCode.DownArrow,
@@ -31,6 +37,8 @@ public class Inputs : MonoBehaviour
             KeyCode.RightShift
     }
     );
+
+    //Controller button mappings (Xbox 360 specific)
     public static List<KeyCode> controllerInputs = new List<KeyCode>(new KeyCode[]{
         KeyCode.Joystick1Button13,
             KeyCode.Joystick1Button14,
@@ -42,20 +50,13 @@ public class Inputs : MonoBehaviour
             KeyCode.Joystick1Button6
     }
     );
-    public static Dictionary<string, int> keyindices = new Dictionary<string, int>(){
-    {"up", 0},
-    {"down",1},
-    {"left",2},
-    {"right",3},
-    {"b",4},
-    {"a",5},
-    {"start",6},
-    {"select",7}
-    };
+
+
     public void Awake()
     {
         instance = this;
     }
+
     void Start()
     {
         for (int i = 0; i < 4; i++) {
@@ -64,81 +65,94 @@ public class Inputs : MonoBehaviour
             releasedJoystickDirections[i] = false;
         }
     }
+
     public void Update()
     {
         UpdateControllerInput();
     }
-    public static bool pressedDpad()
+
+    public static bool PressedDPad()
     {
-        return pressed("up") || pressed("down") || pressed("left") || pressed("right");
+        return Pressed(Button.Up) || Pressed(Button.Down) || Pressed(Button.Left) || Pressed(Button.Right);
     }
-    public static void disableDpad()
+
+    public static void DisableDPad()
     {
-        Disable("up");
-        Disable("down");
-        Disable("left");
-        Disable("right");
+        Disable(Button.Up);
+        Disable(Button.Down);
+        Disable(Button.Left);
+        Disable(Button.Right);
 
     }
-    public static void enableDpad()
-    {
-        Enable("up");
-        Enable("down");
-        Enable("left");
-        Enable("right");
 
-    }
-    public void DisableForSeconds(string key, float time)
+    public static void EnableDPad()
     {
-        StartCoroutine(DisableForSecondsFunction(key,time));
+        Enable(Button.Up);
+        Enable(Button.Down);
+        Enable(Button.Left);
+        Enable(Button.Right);
     }
-    public static IEnumerator DisableForSecondsFunction(string key, float time)
+
+    public void DisableForSeconds(Button button, float time)
     {
-        Disable(key);
+        StartCoroutine(DisableForSecondsFunction(button,time));
+    }
+
+    public static IEnumerator DisableForSecondsFunction(Button button, float time)
+    {
+        Disable(button);
         yield return new WaitForSeconds(time);
-        Enable(key);
+        Enable(button);
     }
-    public static bool pressed(string button)
-    {
 
+    public static bool Pressed(Button button){
         if (GameData.instance.isPaused) return false;
 
-        int index = Inputs.keyindices[button];
+        int index = (int)button;
         if (buttonDisabled[index]) return false;
-        if (index == 6 && dialogueCheck) return false;
-        if ((Input.GetKeyDown(Inputs.inputs[index]) || Input.GetKeyDown(Inputs.controllerInputs[index])) || (index < 4 && hasPressedJoystickDirections[index]))
-        {
+        if (button == Button.Start && dialogueCheck) return false;
+        if ((Input.GetKeyDown(InputManager.inputs[index]) || Input.GetKeyDown(InputManager.controllerInputs[index])) || (index < 4 && hasPressedJoystickDirections[index])){
             return true;
         }
-        return false;
 
+        return false;
     }
-    public static bool held(string button)
-    {
+
+    public static bool Held(Button button){
         if (GameData.instance.isPaused) return false;
-        int index = Inputs.keyindices[button];
+
+         int index = (int)button;
         if (buttonDisabled[index]) return false;
-        if (index == 6 && dialogueCheck) return false;
+        if (button == Button.Start && dialogueCheck) return false;
         if (index < 4 && isHoldingJoystickDirections[index]) return true;
-        if (Input.GetKey(Inputs.inputs[index]) || Input.GetKey(Inputs.controllerInputs[index])) return true;
-
-        return false;
-
-    }
-    public static bool released(string button)
-    {
-        if (GameData.instance.isPaused) return false;
-        int index = Inputs.keyindices[button];
-        if (buttonDisabled[index]) return false;
-        if (index == 6 && dialogueCheck) return false;
-        if ((Input.GetKeyUp(Inputs.inputs[index]) || Input.GetKeyUp(Inputs.controllerInputs[index])) || (index < 4 && releasedJoystickDirections[index]))
-        {
+        if (Input.GetKey(InputManager.inputs[index]) || Input.GetKey(InputManager.controllerInputs[index])){
             return true;
         }
 
         return false;
-
     }
+
+    public static bool Released(Button button){
+        if (GameData.instance.isPaused) return false;
+        
+         int index = (int)button;
+        if (buttonDisabled[index]) return false;
+        if (button == Button.Start && dialogueCheck) return false;
+        if ((Input.GetKeyUp(InputManager.inputs[index]) || Input.GetKeyUp(InputManager.controllerInputs[index])) || (index < 4 && releasedJoystickDirections[index])){
+            return true;
+        }
+
+        return false;
+    }
+
+    public static void Disable(Button button){
+        buttonDisabled[(int)button] = true;
+    }
+
+    public static void Enable(Button button){
+        buttonDisabled[(int)button] = false;
+    }
+    
     public void UpdateControllerInput()
     {
         if (Input.GetAxisRaw("JoystickY") > 0.5f || Input.GetAxisRaw("DpadY") > 0.5f)

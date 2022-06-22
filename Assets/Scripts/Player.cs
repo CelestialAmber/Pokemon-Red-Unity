@@ -113,12 +113,12 @@ public class Player : Singleton<Player> {
 
         if (Dialogue.instance.finishedText && !isDisabled && !menuActive && !startMenuActive && !inBattle && !manuallyWalking && !GameData.instance.atTitleScreen){
          
-            if(Inputs.released("left") || Inputs.released("right") || Inputs.released("up") || Inputs.released("down")){
+            if(InputManager.Released(Button.Left) || InputManager.Released(Button.Right) || InputManager.Released(Button.Up) || InputManager.Released(Button.Down)){
                 if(holdFrames <= 2) holdFrames = 0;
             }
 
             //If we're not ledge jumping already, the adjacent tile is a ledge, and we're exactly on a tile, ledge jump
-            if (Inputs.held("down") && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && downLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Down && holdFrames > 2)
+            if (InputManager.Held(Button.Down) && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && downLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Down && holdFrames > 2)
             {
                 ledgejumping = true;
                 direction = Direction.Down;
@@ -126,7 +126,7 @@ public class Player : Singleton<Player> {
                 StartCoroutine(LedgeJump());
 
             }
-            if (Inputs.held("left") && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && leftLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Left && holdFrames > 2)
+            if (InputManager.Held(Button.Left) && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && leftLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Left && holdFrames > 2)
             {
                 ledgejumping = true;
                 direction = Direction.Left;
@@ -135,7 +135,7 @@ public class Player : Singleton<Player> {
 
 
             }
-            if (Inputs.held("right") && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && rightLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Right && holdFrames > 2)
+            if (InputManager.Held(Button.Right) && !isDisabled && !ledgejumping && facedTile.hasTile && facedTile.isLedge && rightLedgeSprites.Contains(facedTile.tileName) && transform.position == targetPos && direction == Direction.Right && holdFrames > 2)
             {
                 ledgejumping = true;
                 direction = Direction.Right;
@@ -152,7 +152,7 @@ public class Player : Singleton<Player> {
           
             if (!ledgejumping)
             {                
-                if (Inputs.held("up")||Inputs.held("down")||Inputs.held("left")||Inputs.held("right"))
+                if (InputManager.Held(Button.Up)||InputManager.Held(Button.Down)||InputManager.Held(Button.Left)||InputManager.Held(Button.Right))
                 {
                     holdFrames++;
                      if(!holdingDirection){
@@ -162,7 +162,7 @@ public class Player : Singleton<Player> {
                     {
                         walkedfromwarp = true;
                     }
-                    Direction inputDir = Inputs.held("up") ? Direction.Up : Inputs.held("down") ? Direction.Down : Inputs.held("left") ? Direction.Left: Inputs.held("right") ? Direction.Right : 0;
+                    Direction inputDir = InputManager.Held(Button.Up) ? Direction.Up : InputManager.Held(Button.Down) ? Direction.Down : InputManager.Held(Button.Left) ? Direction.Left: InputManager.Held(Button.Right) ? Direction.Right : 0;
                      if (transform.position == targetPos && direction != inputDir)
                     {
                         direction = inputDir;
@@ -175,13 +175,13 @@ public class Player : Singleton<Player> {
                     if (transform.position == targetPos && holdFrames > 2)
                     {
                         
-                        if(Inputs.held("up") ? !cannotMoveUp : Inputs.held("down") ? !cannotMoveDown : Inputs.held("left") ? !cannotMoveLeft: Inputs.held("right") ? !cannotMoveRight : false){ 
+                        if(InputManager.Held(Button.Up) ? !cannotMoveUp : InputManager.Held(Button.Down) ? !cannotMoveDown : InputManager.Held(Button.Left) ? !cannotMoveLeft: InputManager.Held(Button.Right) ? !cannotMoveRight : false){ 
                          if(walkSurfBikeState == MovementState.Surf && facedTile.hasTile && !facedTile.isWater && !facedTile.isWall && !facedTile.isLedge) {
                         walkSurfBikeState = MovementState.Walk;
                         PlayCurrentAreaSong();
                         
                           }
-                        targetPos += Inputs.held("up") ? Vector3.up : Inputs.held("down") ? Vector3.down : Inputs.held("left") ? Vector3.left: Inputs.held("right") ? Vector3.right : Vector3.zero;
+                        targetPos += InputManager.Held(Button.Up) ? Vector3.up : InputManager.Held(Button.Down) ? Vector3.down : InputManager.Held(Button.Left) ? Vector3.left: InputManager.Held(Button.Right) ? Vector3.right : Vector3.zero;
                         isMoving = true;
                         }
                     }
@@ -249,7 +249,7 @@ public class Player : Singleton<Player> {
                     }
                 }
                  playerAnim.SetFloat("movingfloat",holdingDirection||isMoving ? 1f : 0);
-                if (Inputs.held("up") || Inputs.held("left") ||Inputs.held("right") || Inputs.held("down")) holdingDirection = true;
+                if (InputManager.Held(Button.Up) || InputManager.Held(Button.Left) ||InputManager.Held(Button.Right) || InputManager.Held(Button.Down)) holdingDirection = true;
 
                
                 if (transform.position == targetPos) playerAnim.SetFloat("movedir", (int)direction + 1);
@@ -284,7 +284,7 @@ public bool facingWall() {
 
 
 public bool holdingFacingDirection() {
-    return  (direction == Direction.Up && Inputs.held("up")) || (direction == Direction.Down && Inputs.held("down")) || (direction == Direction.Left && Inputs.held("left")) || (direction == Direction.Right && Inputs.held("right"));
+    return  (direction == Direction.Up && InputManager.Held(Button.Up)) || (direction == Direction.Down && InputManager.Held(Button.Down)) || (direction == Direction.Left && InputManager.Held(Button.Left)) || (direction == Direction.Right && InputManager.Held(Button.Right));
 }
 
 
@@ -356,8 +356,8 @@ void UpdateMovement(){
 
     public IEnumerator Warp(Vector2 position)
     {
-        Inputs.Disable("start");
-        Inputs.disableDpad();
+        InputManager.Disable(Button.Start);
+        InputManager.DisableDPad();
         isMoving = false;
         WaitForSeconds wait = new WaitForSeconds(0.1f);
         for(int i = 0; i < 3; i++){
@@ -372,8 +372,8 @@ void UpdateMovement(){
         yield return wait;
         ScreenEffects.flashLevel = 0;
         
-        Inputs.Enable("start");
-        Inputs.enableDpad();
+        InputManager.Enable(Button.Start);
+        InputManager.EnableDPad();
         isWarping = false;
         CheckCollision();
         
@@ -401,7 +401,7 @@ void UpdateMovement(){
 		playerAnim.SetFloat("walkbikesurfstate", (int)walkSurfBikeState);
        
 		if (!isDisabled && !menuActive && !startMenuActive) {
-            if (Inputs.pressed("start") && !isMoving) {
+            if (InputManager.Pressed(Button.Start) && !isMoving) {
                 SoundManager.instance.sfx.PlayOneShot(openStartMenuClip);
 				startMenuActive = true;
                 MainMenu.instance.enabled = true;
@@ -412,7 +412,7 @@ void UpdateMovement(){
 
 			playerAnim.SetInteger ("movedirection", (int)direction + 1);
 
-            if (Inputs.released("down") || Inputs.released("right") || Inputs.released("left") || Inputs.released("up")) {
+            if (InputManager.Released(Button.Down) || InputManager.Released(Button.Right) || InputManager.Released(Button.Left) || InputManager.Released(Button.Up)) {
 				if (!manuallyWalking) holdingDirection = false;
             }
         }
@@ -423,7 +423,7 @@ void UpdateMovement(){
 
 			if (!holdingDirection && transform.position == targetPos) {
                 if (!holdingDirection && !isMoving && !isDisabled && Dialogue.instance.finishedText && !startMenuActive && !menuActive && !inBattle && !ledgejumping) {
-                    if (Inputs.pressed("a")){
+                    if (InputManager.Pressed(Button.A)){
 
                         if (npc != null && !npc.isMoving){
                             npc.FacePlayer();
@@ -432,15 +432,10 @@ void UpdateMovement(){
                             return;
                         }
 
-                        switch(facedObject.tag){ //what tag does the interactable object have?
-                            case "Slots":
-                                SlotsObject dialogueSlots = facedObject.GetComponent<SlotsObject>();
-                                StartCoroutine(dialogueSlots.PlayDialogue());
-                                return;
-                            case "Pokeball":
-                                Pokeball pokeball = facedObject.GetComponent<Pokeball>();
-                                pokeball.GetItem();
-                                return;
+                        if(facedObject.tag == "Interactable"){
+                            InteractableObject obj = facedObject.GetComponent<InteractableObject>();
+                            StartCoroutine(obj.Interact());
+                            return;
                         }
 
                     }
@@ -625,7 +620,7 @@ void UpdateMovement(){
 
 
 	public void CloseMenus(){
-        Inputs.Enable("start");
+        InputManager.Enable(Button.Start);
         //Bag.instance.Close();
         bag.Close();
         cursor.SetActive(false);

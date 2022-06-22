@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlotsObject : MonoBehaviour
+public class SlotsObject : MonoBehaviour, InteractableObject
 {
-    public IEnumerator PlayDialogue()
+    public IEnumerator Interact()
     {
         if (Player.instance.direction == Direction.Left || Player.instance.direction == Direction.Right)
         {
@@ -19,21 +19,17 @@ public class SlotsObject : MonoBehaviour
                    yield return StartCoroutine(Player.instance.DisplayEmotiveBubble(1));
                     Player.instance.isDisabled = true;
                     GameDataManager.instance.slots.gameObject.SetActive(true);
-                    Inputs.Disable("start");
+                    InputManager.Disable(Button.Start);
                     StartCoroutine(Slots.instance.Initialize());
-
                 }
                 else
                 {
                     Dialogue.instance.Deactivate();
                 }
-
             }
             else
             {
                 yield return Dialogue.instance.text("You don't have any&lcoins!");
-
-
             }
         }
     }

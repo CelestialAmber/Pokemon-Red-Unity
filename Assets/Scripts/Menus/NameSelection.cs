@@ -41,31 +41,31 @@ public class NameSelection : MonoBehaviour {
 		}
 
 		cursor.SetPosition(8 + 16 * currentXselection, 96 - 16 * currentYselection);
-        if (Inputs.pressed("right")) {
+        if (InputManager.Pressed(Button.Right)) {
 			if (currentYselection != 5) {
 				currentXselection++;
 			}
 		}
-        if (Inputs.pressed("left")) {
+        if (InputManager.Pressed(Button.Left)) {
 			if (currentYselection != 5) {
 				currentXselection--;
 			}
 		}
-        if (Inputs.pressed("up")) {
+        if (InputManager.Pressed(Button.Up)) {
 
 			currentYselection--;
 		}
-        if (Inputs.pressed("down")) {
+        if (InputManager.Pressed(Button.Down)) {
 
 			currentYselection++;
 		}
         MathE.Wrap(ref currentXselection, 0, 8);
         MathE.Wrap(ref currentYselection, 0, 5);
 
-		if (Inputs.pressed("b")) {
+		if (InputManager.Pressed(Button.B)) {
 			if(futureName.Length > 0) futureName = futureName.Remove (futureName.Length - 1);
 		}
-        if (Inputs.pressed("start")) {
+        if (InputManager.Pressed(Button.Start)) {
 
 			if (futureName.Length != 0) {
 				if (OakIntroCutsceneHandler.instance.givingRedAName) {
@@ -88,7 +88,7 @@ public class NameSelection : MonoBehaviour {
 
 
 		}
-		if (Inputs.pressed("a")) {
+		if (InputManager.Pressed(Button.A)) {
             if (currentXselection == 8 && currentYselection == 4)
             {
                 if (futureName.Length != 0)

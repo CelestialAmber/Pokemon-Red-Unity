@@ -227,12 +227,12 @@ public class PokemonMenu : MonoBehaviour
     void Update()
     {
         if (currentMenu == switchstats){
-            if (Inputs.pressed("down")){
+            if (InputManager.Pressed(Button.Down)){
                 selectedOption++;
                 MathE.Clamp(ref selectedOption, 0, 2 + switchMenuOffset);
                 UpdateSwitch();
             }
-            if (Inputs.pressed("up")){
+            if (InputManager.Pressed(Button.Up)){
                 selectedOption--;
                 MathE.Clamp(ref selectedOption, 0, 2 + switchMenuOffset);
                 UpdateSwitch();
@@ -265,12 +265,12 @@ public class PokemonMenu : MonoBehaviour
 
 
             if(Dialogue.instance.finishedText || selectingPokemon){
-            if (Inputs.pressed("down"))
+            if (InputManager.Pressed(Button.Down))
             {
                 selectedOption++;
                 MathE.Clamp(ref selectedOption, 0, numberofPokemon - 1);
             }
-            if (Inputs.pressed("up"))
+            if (InputManager.Pressed(Button.Up))
             {
                 selectedOption--;
                 MathE.Clamp(ref selectedOption, 0, numberofPokemon - 1);
@@ -278,14 +278,14 @@ public class PokemonMenu : MonoBehaviour
             }
         }
 
-        if (Inputs.pressed("b") && Dialogue.instance.finishedText){
+        if (InputManager.Pressed(Button.B) && Dialogue.instance.finishedText){
             SoundManager.instance.PlayABSound();
             if (currentMenu == mainwindow)
             {
-                Inputs.instance.DisableForSeconds("b", 0.2f);
+                InputManager.instance.DisableForSeconds(Button.B, 0.2f);
                 Dialogue.instance.fastText = false;
                Dialogue.instance.Deactivate();
-                Inputs.Enable("start");
+                InputManager.Enable(Button.Start);
                 MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
                 this.gameObject.SetActive(false);
             
@@ -297,7 +297,7 @@ public class PokemonMenu : MonoBehaviour
             }
         }
 
-        if (Inputs.pressed("a") && Dialogue.instance.finishedText){
+        if (InputManager.Pressed(Button.A) && Dialogue.instance.finishedText){
             SoundManager.instance.PlayABSound();
 
             if (currentMenu == mainwindow){
@@ -452,8 +452,8 @@ public class PokemonMenu : MonoBehaviour
 
                 while(selectingPokemon){
                     yield return new WaitForSeconds(0.01f);
-                    if(Inputs.pressed("b")) yield return 0;
-                    if(Inputs.pressed("a")) break;
+                    if(InputManager.Pressed(Button.B)) yield return 0;
+                    if(InputManager.Pressed(Button.A)) break;
                 }
 
                 selectingPokemon = false;
@@ -522,10 +522,10 @@ public class PokemonMenu : MonoBehaviour
     }
 
     public void CloseMenu(){
-        Inputs.instance.DisableForSeconds("b", 0.2f);
+        InputManager.instance.DisableForSeconds(Button.B, 0.2f);
         Dialogue.instance.fastText = false;
         Dialogue.instance.Deactivate();
-        Inputs.Enable("start");
+        InputManager.Enable(Button.Start);
         MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
     }
 }

@@ -108,10 +108,10 @@ public class Title : MonoBehaviour {
 
             int limit = (currentMenu == nodatamenu ? 1 : 2);
 		
-            if (Inputs.pressed("down")) {
+            if (InputManager.Pressed(Button.Down)) {
 				selectedOption++;        
 			}
-            if (Inputs.pressed("up")) {
+            if (InputManager.Pressed(Button.Up)) {
 				selectedOption--;        
             }
 			if (selectedOption < 0) {
@@ -122,13 +122,13 @@ public class Title : MonoBehaviour {
 			}
             cursor.SetPosition(8, 120 - selectedOption * 16);
         }
-		if(Inputs.pressed("a") || Inputs.pressed("start")){
+		if(InputManager.Pressed(Button.A) || InputManager.Pressed(Button.Start)){
             if (currentMenu == null && !titlePokemon.isMoving) {       
 				StartCoroutine("GotoStart");
 			}
         }
 		
-        if (Inputs.pressed("a")) {
+        if (InputManager.Pressed(Button.A)) {
 			if (currentMenu == nodatamenu) {
                 if(selectedOption == 0){
 			        tutorialmanager.SetActive (true);
@@ -151,7 +151,7 @@ public class Title : MonoBehaviour {
 			}
 		}
 
-		if (Inputs.pressed("b") && startmenu.activeInHierarchy) {
+		if (InputManager.Pressed(Button.B) && startmenu.activeInHierarchy) {
 			if ((currentMenu == nodatamenu || currentMenu == datamenu)) {
 				startmenu.SetActive (false);
 				currentMenu = null;

@@ -36,7 +36,7 @@ public class ViewBio : MonoBehaviour {
 
 		while (true) {
 			yield return new WaitForSeconds(0.01f);
-			if(Inputs.pressed("a")) break;
+			if(InputManager.Pressed(Button.A)) break;
 		}
 
 		//If there's more than one page for the description, go to the next page
@@ -45,7 +45,7 @@ public class ViewBio : MonoBehaviour {
 
 			while (true) {
 				yield return new WaitForSeconds (0.01f);
-				if(Inputs.pressed("a")) break;
+				if(InputManager.Pressed(Button.A)) break;
 			}
 		}
 

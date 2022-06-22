@@ -80,21 +80,21 @@ public class Pokedex : MonoBehaviour
 
         if(MainMenu.instance.currentmenu == MainMenu.instance.pokedexmenu)
         {
-            if(Inputs.pressed("b") && !viewBio.displayingBio)
+            if(InputManager.Pressed(Button.B) && !viewBio.displayingBio)
             {
                 SoundManager.instance.PlayABSound();
                 if(Player.instance.isDisabled) Player.instance.isDisabled = false;
                 Debug.Log(Player.instance.isDisabled);
                 if(selectingMon) selectingMon = false;
                 else{
-                    Inputs.Enable("start");
+                    InputManager.Enable(Button.Start);
                     
                     MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
 
                     gameObject.SetActive(false);
                 }
             }
-            if(Inputs.pressed("a") && !viewBio.displayingBio)
+            if(InputManager.Pressed(Button.A) && !viewBio.displayingBio)
             {
                 SoundManager.instance.PlayABSound();
 
@@ -109,7 +109,7 @@ public class Pokedex : MonoBehaviour
                 }
 
             }
-            if (Inputs.pressed("down"))
+            if (InputManager.Pressed(Button.Down))
             {
                 if (!selectingMon)
                 {
@@ -126,7 +126,7 @@ public class Pokedex : MonoBehaviour
                     }
                 }
             }
-            if (Inputs.pressed("up"))
+            if (InputManager.Pressed(Button.Up))
             {
                 if (!selectingMon)
                 {
@@ -143,7 +143,7 @@ public class Pokedex : MonoBehaviour
                     }
                 }
             }
-            if (Inputs.pressed("right"))
+            if (InputManager.Pressed(Button.Right))
             {
                 if (!selectingMon)
                 {
@@ -152,7 +152,7 @@ public class Pokedex : MonoBehaviour
                     UpdateScreen();
                 }
             }
-            if (Inputs.pressed("left"))
+            if (InputManager.Pressed(Button.Left))
             {
                 if (!selectingMon)
                 {

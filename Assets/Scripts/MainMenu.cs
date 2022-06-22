@@ -40,10 +40,10 @@ public class MainMenu : Singleton<MainMenu> {
             playername.text = GameData.instance.playerName;
             cursor.SetPosition(88, 120 - 16 * selectedOption);
 
-            if (Inputs.pressed("down")) {
+            if (InputManager.Pressed(Button.Down)) {
 				selectedOption++;
 			}
-            if (Inputs.pressed("up")) {
+            if (InputManager.Pressed(Button.Up)) {
 				selectedOption--;
 			}
 			if (selectedOption < 0) {
@@ -57,13 +57,13 @@ public class MainMenu : Singleton<MainMenu> {
 		}
 		
 
-        if (Inputs.pressed("start")) {
+        if (InputManager.Pressed(Button.Start)) {
 			if (currentmenu == thismenu) {
 				Close();
 			}
 		}
 		
-		if(Inputs.pressed("a")){
+		if(InputManager.Pressed(Button.A)){
             if(currentmenu == thismenu){
 
                 SoundManager.instance.PlayABSound();
@@ -71,13 +71,13 @@ public class MainMenu : Singleton<MainMenu> {
                 if (selectedOption == 0){
                     currentmenu = pokedexmenu;
                     pokedexmenu.SetActive(true);
-                    Inputs.Disable("start");
+                    InputManager.Disable(Button.Start);
                     pokedex.Init();  
                 }
                 if (selectedOption == 1){
                     currentmenu = pokemonmenu;
                     pokemonMenu.currentMenu = pokemonMenu.mainwindow;
-                    Inputs.Disable("start");
+                    InputManager.Disable(Button.Start);
                     pokemonMenu.selectedOption = 0;
                     pokemonmenu.SetActive(true);
                     pokemonMenu.Initialize();  
@@ -90,13 +90,13 @@ public class MainMenu : Singleton<MainMenu> {
                     currentmenu = Bagmenu;
                     cursor.SetActive(true);
                     Bagmenu.SetActive(true);
-                    Inputs.Disable("start");
+                    InputManager.Disable(Button.Start);
                 }
 
                 if (selectedOption == 3){
                     currentmenu = badgesmenu;
                     cursor.SetActive(false);
-                    Inputs.Disable("start");
+                    InputManager.Disable(Button.Start);
                     badgesmenu.GetComponent<Badges>().Init();
                     badgesmenu.SetActive(true);
 
@@ -107,7 +107,7 @@ public class MainMenu : Singleton<MainMenu> {
                 if (selectedOption == 5){
                     options.Init();
                     optionsmenu.SetActive(true);
-                    Inputs.Disable("start");
+                    InputManager.Disable(Button.Start);
                     currentmenu = optionsmenu;
                 }
                 if (selectedOption == 6){
@@ -116,7 +116,7 @@ public class MainMenu : Singleton<MainMenu> {
             }	
 		}
 
-		if (Inputs.pressed("b")) {
+		if (InputManager.Pressed(Button.B)) {
 			if (currentmenu == thismenu) {
 				SoundManager.instance.PlayABSound();
 				Close();

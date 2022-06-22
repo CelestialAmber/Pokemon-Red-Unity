@@ -8,8 +8,7 @@ public class Bag : MonoBehaviour
 	public enum Menu {
         ItemWindow,
 		UseTossMenu,
-        QuantityMenu,
-		None
+        QuantityMenu
     }
 
     public Menu currentMenu;
@@ -18,7 +17,6 @@ public class Bag : MonoBehaviour
     public GameObject indicator;
     public int selectedOption;
     public GameObject[] allMenus;
-    public int ItemMode;
     public List<ItemSlot> itemSlots = new List<ItemSlot>(4);
     public int currentBagPosition;
     public int selectBag;
@@ -28,17 +26,17 @@ public class Bag : MonoBehaviour
     public RectTransform selectCursor;
     //the index of the top item on screen
     public int topItemIndex;
-    public bool switching;
+    public bool switchingItems;
+
+
 
     public void Initialize()
     {
         UpdateBagScreen();
         currentMenu = Menu.ItemWindow;
-
     }
 
-    public void UpdateBagScreen()
-    {
+    void UpdateBagScreen(){
         if (currentBagPosition == 0)
         {
             topItemIndex = 0;
@@ -48,11 +46,11 @@ public class Bag : MonoBehaviour
         {
             int currentItem = topItemIndex + i;
 
-            if (currentItem >= topItemIndex && currentItem < Items.instance.items.Count)
+            if (currentItem < Items.instance.items.Count)
             {
                 itemSlots[i].mode = SlotMode.Item;
                 itemSlots[i].item = Items.instance.items[currentItem].item;
-                itemSlots[i].intquantity = Items.instance.items[currentItem].quantity;
+                itemSlots[i].quantity = Items.instance.items[currentItem].quantity;
                 itemSlots[i].isKeyItem = Items.instance.items[currentItem].isKeyItem;
             }
             else if (currentItem == Items.instance.items.Count)
@@ -70,7 +68,7 @@ public class Bag : MonoBehaviour
         if (topItemIndex + 3 < Items.instance.items.Count) indicator.SetActive(true);
         else indicator.SetActive(false);
 
-        if (switching)
+        if (switchingItems)
         {
             selectCursor.anchoredPosition = new Vector2(40, 104 - 16 * (selectBag - topItemIndex)) + new Vector2(4, 4);
             if (selectCursor.anchoredPosition.y > 112 || selectCursor.anchoredPosition.y < 50) selectCursor.gameObject.SetActive(false);
@@ -89,18 +87,17 @@ public class Bag : MonoBehaviour
     {
         StartCoroutine(MainUpdate());
     }
+
     IEnumerator MainUpdate()
     {
-        amountText.text = amountToTask.ToString();
-
         if (currentMenu == Menu.QuantityMenu && Dialogue.instance.finishedText)
         {
 
-            if (Inputs.pressed("down"))
+            if (InputManager.Pressed(Button.Down))
             {
                 amountToTask--;
             }
-            if (Inputs.pressed("up"))
+            if (InputManager.Pressed(Button.Up))
             {
                 amountToTask++;
             }
@@ -112,32 +109,36 @@ public class Bag : MonoBehaviour
             {
                 amountToTask = 1;
             }
+
+            amountText.text = amountToTask.ToString();
         }
         if (currentMenu == Menu.ItemWindow && Dialogue.instance.finishedText)
         {
-            if (Inputs.pressed("down"))
+
+            if (InputManager.Pressed(Button.Down))
             {
                 currentBagPosition++;
+                MathE.Clamp(ref currentBagPosition, 0, Items.instance.items.Count);
 
-                if (currentBagPosition == topItemIndex + 3 && currentBagPosition <= Items.instance.items.Count && Items.instance.items.Count > 3)
+                if (currentBagPosition == topItemIndex + 3 && Items.instance.items.Count > 3)
                 {
                     topItemIndex++;
                 }
 
-                MathE.Clamp(ref currentBagPosition, 0, Items.instance.items.Count);
                 UpdateBagScreen();
             }
 
-            if (Inputs.pressed("up"))
+            if (InputManager.Pressed(Button.Up))
             {
-                if (currentBagPosition == topItemIndex && topItemIndex > 0)
+                currentBagPosition--;
+                 MathE.Clamp(ref currentBagPosition, 0, Items.instance.items.Count);
+                
+
+                if (currentBagPosition >= 0 && currentBagPosition < topItemIndex)
                 {
                     topItemIndex--;
                 }
 
-                currentBagPosition--;
-                MathE.Clamp(ref currentBagPosition, 0, Items.instance.items.Count);
-                
                 UpdateBagScreen();
             }
 
@@ -151,52 +152,46 @@ public class Bag : MonoBehaviour
             }
         }
 
-        if (currentMenu == Menu.None && (currentMenu != Menu.QuantityMenu || currentMenu != Menu.ItemWindow))
+        if (currentMenu == Menu.UseTossMenu && Dialogue.instance.finishedText)
         {
-        }
-        else
-        {
-            if (currentMenu == Menu.UseTossMenu && Dialogue.instance.finishedText)
+            if (InputManager.Pressed(Button.Down))
             {
-                if (Inputs.pressed("down"))
-                {
-                    selectedOption++;
-                    MathE.Clamp(ref selectedOption, 0, 1);
-                    UpdateUseTossScreen();
-                }
-                if (Inputs.pressed("up"))
-                {
-                    selectedOption--;
-                    MathE.Clamp(ref selectedOption, 0, 1);
-                    UpdateUseTossScreen();
-                }
+                selectedOption++;
+                MathE.Clamp(ref selectedOption, 0, 1);
+                UpdateUseTossScreen();
+            }
+            if (InputManager.Pressed(Button.Up))
+            {
+                selectedOption--;
+                MathE.Clamp(ref selectedOption, 0, 1);
+                UpdateUseTossScreen();
             }
         }
 
-        if (Inputs.pressed("select") && Dialogue.instance.finishedText && currentBagPosition != Items.instance.items.Count)
+        if (InputManager.Pressed(Button.Select) && Dialogue.instance.finishedText && currentBagPosition != Items.instance.items.Count)
         {
-            if (!switching)
+            if (!switchingItems)
             {
-                switching = true;
+                switchingItems = true;
                 selectCursor.gameObject.SetActive(true);
                 selectBag = currentBagPosition;
                 UpdateBagScreen();
             }
             else
             {
-                //our Bag
+                //our bag
                 selectCursor.gameObject.SetActive(false);
                 Item item = Items.instance.items[selectBag];
                 Items.instance.items[selectBag] = Items.instance.items[currentBagPosition];
                 Items.instance.items[currentBagPosition] = item;
-                switching = false;
+                switchingItems = false;
                 UpdateBagScreen();
             }
         }
 
         if (Dialogue.instance.finishedText)
         {
-            if (Inputs.pressed("a"))
+            if (InputManager.Pressed(Button.A))
             {
 
                 SoundManager.instance.PlayABSound();
@@ -212,9 +207,9 @@ public class Bag : MonoBehaviour
                     else
                     {
                         amountToTask = 1;
-                        usetossmenu.SetActive(true);
+                        //usetossmenu.SetActive(true);
                         UpdateUseTossScreen();
-                        switching = false;
+                        switchingItems = false;
                         selectCursor.gameObject.SetActive(true);
                         cursor.SetActive(true);
                         currentMenu = Menu.UseTossMenu;
@@ -226,7 +221,6 @@ public class Bag : MonoBehaviour
                     {
                         if (Items.instance.items.Count > 0)
                         {
-                            ItemMode1();
                             Player.instance.UseItem(Items.instance.items[currentBagPosition].item);
                         }
                     }
@@ -234,54 +228,47 @@ public class Bag : MonoBehaviour
                     {
                         if (Items.instance.items.Count > 0)
                         {
-                            ItemMode2();
-                            quantitymenu.SetActive(true);
+                            selectBag = -1;
+                            //quantitymenu.SetActive(true);
                             currentMenu = Menu.QuantityMenu;
                         }
                     }
                 }
                 else if (currentMenu == Menu.QuantityMenu)
                 {
-                    if (ItemMode == 1)
+                    if (!Items.instance.items[currentBagPosition].isKeyItem)
                     {
-                        //use item
-                    }
-                    if (ItemMode == 2)
-                    {
-                        if (!Items.instance.items[currentBagPosition].isKeyItem)
+                        yield return Dialogue.instance.text("Is it OK to toss&l" + PokemonData.GetItemName(Items.instance.items[currentBagPosition].item) + "?");
+                        yield return StartCoroutine(Dialogue.instance.prompt());
+                        if (Dialogue.instance.selectedOption == 0)
                         {
-                            yield return Dialogue.instance.text("Is it OK to toss &l" + PokemonData.GetItemName(Items.instance.items[currentBagPosition].item) + "?");
-                            yield return StartCoroutine(Dialogue.instance.prompt());
-                            if (Dialogue.instance.selectedOption == 0)
-                            {
-                                yield return Dialogue.instance.text("Threw away " + PokemonData.GetItemName(Items.instance.items[currentBagPosition].item) + ".");
-                                StartCoroutine(TossItem());
-                            }
-                            else
-                            {
-                                Dialogue.instance.Deactivate();
-                                UpdateBagScreen();
-                                cursor.SetActive(true);
-                                currentMenu = Menu.ItemWindow;
-                            }
+                            yield return Dialogue.instance.text("Threw away&l" + PokemonData.GetItemName(Items.instance.items[currentBagPosition].item) + ".");
+                            StartCoroutine(TossItem());
                         }
                         else
                         {
-                            StartCoroutine(TooImportantToToss());
+                            Dialogue.instance.Deactivate();
+                            UpdateBagScreen();
+                            cursor.SetActive(true);
+                            currentMenu = Menu.ItemWindow;
                         }
+                    }
+                    else
+                    {
+                        StartCoroutine(TooImportantToToss());
                     }
                 }
             }
-            if (Inputs.pressed("b"))
+            if (InputManager.Pressed(Button.B))
             {
                 SoundManager.instance.PlayABSound();
                 if (currentMenu == Menu.ItemWindow)
                 {
 
-                    switching = false;
+                    switchingItems = false;
                     selectCursor.gameObject.SetActive(false);
                     MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
-                    Inputs.Enable("start");
+                    InputManager.Enable(Button.Start);
                     this.gameObject.SetActive(false);
                 }
                 else if (currentMenu == Menu.UseTossMenu)
@@ -292,18 +279,15 @@ public class Bag : MonoBehaviour
                 }
                 else if (currentMenu == Menu.QuantityMenu)
                 {
-                    if (ItemMode == 2)
-                    {
-                        selectCursor.gameObject.SetActive(false);
-                        UpdateBagScreen();
-                        currentMenu = Menu.ItemWindow;
-                    }
+                    selectCursor.gameObject.SetActive(false);
+                    UpdateBagScreen();
+                    currentMenu = Menu.ItemWindow;
                 }
             }
 
             foreach (GameObject menu in allMenus)
             {
-                if (currentMenu != Menu.None && menu != allMenus[(int)currentMenu])
+                if (menu != allMenus[(int)currentMenu])
                 {
                     menu.SetActive(false);
                 }
@@ -324,14 +308,10 @@ public class Bag : MonoBehaviour
                 {
                     menu.SetActive(true);
                 }
-
-                if (currentMenu == Menu.None) indicator.SetActive(false);
-
             }
         }
     }
 
-    //deposit
     public IEnumerator TossItem()
     {
         Dialogue.instance.Deactivate();
@@ -339,21 +319,9 @@ public class Bag : MonoBehaviour
         cursor.SetActive(true);
         UpdateBagScreen();
         currentMenu = Menu.ItemWindow;
-        ItemMode = 0;
         yield return 0;
     }
 
-    void ItemMode1()
-    {
-        //code
-    }
-
-    void ItemMode2()
-    {
-        ItemMode = 2;
-        selectBag = -1;
-
-    }
 
     IEnumerator TooImportantToToss()
     {
@@ -368,7 +336,6 @@ public class Bag : MonoBehaviour
     public void Close()
     {
         indicator.SetActive(false);
-        currentMenu = Menu.None;
         this.gameObject.SetActive(false);
     }
 

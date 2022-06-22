@@ -9,16 +9,7 @@
     {
         // No culling or depth
         Cull Off ZWrite Off ZTest Off
-
-        Tags
-        {
-            "Queue"="Transparent"
-            "IgnoreProjector"="True"
-            "RenderType"="Transparent"
-            "PreviewType"="Plane"
-            "CanUseSpriteAtlas"="True"
-        }
-
+        
         Pass
         {
             CGPROGRAM

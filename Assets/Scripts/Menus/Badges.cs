@@ -28,11 +28,11 @@ public class Badges : MonoBehaviour {
 
     // Update is called once per frame
     void Update(){
-        if (Inputs.pressed("a")){
+        if (InputManager.Pressed(Button.A)){
             if (MainMenu.instance.currentmenu == MainMenu.instance.badgesmenu){
                 SoundManager.instance.PlayABSound();
                 MainMenu.instance.currentmenu = MainMenu.instance.thismenu;
-                Inputs.Enable("start");
+                InputManager.Enable(Button.Start);
                 cursor.SetActive(true);
                 this.gameObject.SetActive(false);
             }

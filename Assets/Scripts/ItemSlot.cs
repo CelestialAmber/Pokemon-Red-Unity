@@ -5,13 +5,9 @@ using UnityEngine.UI;
 
 public enum SlotMode{
     Item,
+    MartItem,
     Empty,
     Cancel
-}
-
-public enum SlotType{
-    Item,
-    Shop
 }
 
 public class ItemSlot : MonoBehaviour {
@@ -19,10 +15,9 @@ public class ItemSlot : MonoBehaviour {
 	public CustomText slotNameText, slotQuantityText;
 	public ItemsEnum item;
     //public ItemDataEntry itemData;
-	public int intquantity;
+	public int quantity;
     public int price;
     public SlotMode mode;
-    public SlotType type;
 
 	// Use this for initialization
 	void Awake () {
@@ -44,9 +39,9 @@ public class ItemSlot : MonoBehaviour {
                 break;
         }
 		
-		if (!isKeyItem && mode == SlotMode.Item) {
-            if(type == SlotType.Item){
-			    slotQuantityText.text = "*" + (intquantity <= 9 ? " ": "") + intquantity.ToString();
+		if (!isKeyItem && (mode == SlotMode.Item || mode == SlotMode.MartItem)) {
+            if(mode == SlotMode.Item){
+			    slotQuantityText.text = "*" + (quantity <= 9 ? " ": "") + quantity.ToString();
             }else{
                 slotQuantityText.text = "$" + price;
             }

@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PCObject : MonoBehaviour
+public class PCObject : MonoBehaviour, InteractableObject
 {
-    public PC pc;
-    
-    public IEnumerator PlayDialogue(){
+    public IEnumerator Interact(){
 		Dialogue.instance.Deactivate();
         yield return Dialogue.instance.text (GameData.instance.playerName + " turned on&lthe PC!");
 		Player.instance.menuActive = true;
-        //PC.instance.gameObject.SetActive(true);
-        //StartCoroutine(PC.instance.Initialize());
-		pc.gameObject.SetActive(true);
-        Inputs.Disable("start");
+        PC pc = GameDataManager.instance.pc;
+        pc.gameObject.SetActive(true);
         StartCoroutine(pc.Initialize());
+        InputManager.Disable(Button.Start);
     }
 }
