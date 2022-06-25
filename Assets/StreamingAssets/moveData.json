@@ -5,7 +5,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 35,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "KARATE CHOP",
@@ -13,7 +13,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 25,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "DOUBLESLAP",
@@ -21,7 +21,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 10,
-    "effect": "twoFiveEffect"
+    "effect": "TwoFiveEffect"
   },
   {
     "name": "COMET PUNCH",
@@ -29,7 +29,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 15,
-    "effect": "twoFiveEffect"
+    "effect": "TwoFiveEffect"
   },
   {
     "name": "MEGA PUNCH",
@@ -37,7 +37,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "PAY DAY",
@@ -45,7 +45,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "payDayEffect"
+    "effect": "PayDayEffect"
   },
   {
     "name": "FIRE PUNCH",
@@ -53,7 +53,7 @@
     "type": "Fire",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "burnSideEffect1"
+    "effect": "BurnSideEffect1"
   },
   {
     "name": "ICE PUNCH",
@@ -61,7 +61,7 @@
     "type": "Ice",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "freezeSideEffect"
+    "effect": "FreezeSideEffect"
   },
   {
     "name": "THUNDERPUNCH",
@@ -69,7 +69,7 @@
     "type": "Electric",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "paralyzeSideEffect1"
+    "effect": "ParalyzeSideEffect1"
   },
   {
     "name": "SCRATCH",
@@ -77,7 +77,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 35,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "VICEGRIP",
@@ -85,7 +85,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "GUILLOTINE",
@@ -93,7 +93,7 @@
     "type": "Normal",
     "accuracy": 30,
     "maxpp": 5,
-    "effect": "ohkoEffect"
+    "effect": "OhkoEffect"
   },
   {
     "name": "RAZOR WIND",
@@ -101,7 +101,7 @@
     "type": "Normal",
     "accuracy": 75,
     "maxpp": 10,
-    "effect": "chargeEffect"
+    "effect": "ChargeEffect"
   },
   {
     "name": "SWORDS DANCE",
@@ -109,7 +109,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "attackUp2Effect"
+    "effect": "AttackUp2Effect"
   },
   {
     "name": "CUT",
@@ -117,7 +117,7 @@
     "type": "Normal",
     "accuracy": 95,
     "maxpp": 30,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "GUST",
@@ -125,7 +125,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 35,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "WING ATTACK",
@@ -133,7 +133,7 @@
     "type": "Flying",
     "accuracy": 100,
     "maxpp": 35,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "WHIRLWIND",
@@ -141,7 +141,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "switchTeleportEffect"
+    "effect": "SwitchTeleportEffect"
   },
   {
     "name": "FLY",
@@ -149,7 +149,7 @@
     "type": "Flying",
     "accuracy": 95,
     "maxpp": 15,
-    "effect": "flyEffect"
+    "effect": "FlyEffect"
   },
   {
     "name": "BIND",
@@ -157,7 +157,7 @@
     "type": "Normal",
     "accuracy": 75,
     "maxpp": 20,
-    "effect": "trappingEffect"
+    "effect": "TrappingEffect"
   },
   {
     "name": "SLAM",
@@ -165,7 +165,7 @@
     "type": "Normal",
     "accuracy": 75,
     "maxpp": 20,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "VINE WHIP",
@@ -173,7 +173,7 @@
     "type": "Grass",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "STOMP",
@@ -181,7 +181,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "flinchSideEffect2"
+    "effect": "FlinchSideEffect2"
   },
   {
     "name": "DOUBLE KICK",
@@ -189,7 +189,7 @@
     "type": "Fighting",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "doubleAttackEffect"
+    "effect": "DoubleAttackEffect"
   },
   {
     "name": "MEGA KICK",
@@ -197,7 +197,7 @@
     "type": "Normal",
     "accuracy": 75,
     "maxpp": 5,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "JUMP KICK",
@@ -205,7 +205,7 @@
     "type": "Fighting",
     "accuracy": 95,
     "maxpp": 25,
-    "effect": "jumpKickEffect"
+    "effect": "JumpKickEffect"
   },
   {
     "name": "ROLLING KICK",
@@ -213,7 +213,7 @@
     "type": "Fighting",
     "accuracy": 85,
     "maxpp": 15,
-    "effect": "flinchSideEffect2"
+    "effect": "FlinchSideEffect2"
   },
   {
     "name": "SAND-ATTACK",
@@ -221,7 +221,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "accuracyDown1Effect"
+    "effect": "AccuracyDown1Effect"
   },
   {
     "name": "HEADBUTT",
@@ -229,7 +229,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "flinchSideEffect2"
+    "effect": "FlinchSideEffect2"
   },
   {
     "name": "HORN ATTACK",
@@ -237,7 +237,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 25,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "FURY ATTACK",
@@ -245,7 +245,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "twoFiveEffect"
+    "effect": "TwoFiveEffect"
   },
   {
     "name": "HORN DRILL",
@@ -253,7 +253,7 @@
     "type": "Normal",
     "accuracy": 30,
     "maxpp": 5,
-    "effect": "ohkoEffect"
+    "effect": "OhkoEffect"
   },
   {
     "name": "TACKLE",
@@ -261,7 +261,7 @@
     "type": "Normal",
     "accuracy": 95,
     "maxpp": 35,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "BODY SLAM",
@@ -269,7 +269,7 @@
     "type": "Normal",
     "accuracy": 95,
     "maxpp": 35,
-    "effect": "paralyzeSideEffect2"
+    "effect": "ParalyzeSideEffect2"
   },
   {
     "name": "WRAP",
@@ -277,7 +277,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "trappingEffect"
+    "effect": "TrappingEffect"
   },
   {
     "name": "TAKE DOWN",
@@ -285,7 +285,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "recoilEffect"
+    "effect": "RecoilEffect"
   },
   {
     "name": "THRASH",
@@ -293,7 +293,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "thrashEffect"
+    "effect": "ThrashEffect"
   },
   {
     "name": "DOUBLE-EDGE",
@@ -301,7 +301,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "recoilEffect"
+    "effect": "RecoilEffect"
   },
   {
     "name": "TAIL WHIP",
@@ -309,7 +309,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "defenseDown1Effect"
+    "effect": "DefenseDown1Effect"
   },
   {
     "name": "POISON STING",
@@ -317,7 +317,7 @@
     "type": "Poison",
     "accuracy": 100,
     "maxpp": 35,
-    "effect": "poisonSideEffect1"
+    "effect": "PoisonSideEffect1"
   },
   {
     "name": "TWINEEDLE",
@@ -325,7 +325,7 @@
     "type": "Bug",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "twinNeedleEffect"
+    "effect": "TwinNeedleEffect"
   },
   {
     "name": "PIN MISSLE",
@@ -333,7 +333,7 @@
     "type": "Bug",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "twoFiveEffect"
+    "effect": "TwoFiveEffect"
   },
   {
     "name": "LEER",
@@ -341,7 +341,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "defenseDown1Effect"
+    "effect": "DefenseDown1Effect"
   },
   {
     "name": "BITE",
@@ -349,7 +349,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 25,
-    "effect": "flinchSideEffect1"
+    "effect": "FlinchSideEffect1"
   },
   {
     "name": "GROWL",
@@ -357,7 +357,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 40,
-    "effect": "attackDown1Effect"
+    "effect": "AttackDown1Effect"
   },
   {
     "name": "ROAR",
@@ -365,7 +365,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "switchTeleportEffect"
+    "effect": "SwitchTeleportEffect"
   },
   {
     "name": "SING",
@@ -373,7 +373,7 @@
     "type": "Normal",
     "accuracy": 55,
     "maxpp": 15,
-    "effect": "sleepEffect"
+    "effect": "SleepEffect"
   },
   {
     "name": "SUPERSONIC",
@@ -381,7 +381,7 @@
     "type": "Normal",
     "accuracy": 55,
     "maxpp": 20,
-    "effect": "confusionEffect"
+    "effect": "ConfusionEffect"
   },
   {
     "name": "SONICBOOM",
@@ -389,7 +389,7 @@
     "type": "Normal",
     "accuracy": 90,
     "maxpp": 20,
-    "effect": "specialDamageEffect"
+    "effect": "SpecialDamageEffect"
   },
   {
     "name": "DISABLE",
@@ -397,7 +397,7 @@
     "type": "Normal",
     "accuracy": 55,
     "maxpp": 20,
-    "effect": "disableEffect"
+    "effect": "DisableEffect"
   },
   {
     "name": "ACID",
@@ -405,7 +405,7 @@
     "type": "Poison",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "defenseDownSideEffect"
+    "effect": "DefenseDownSideEffect"
   },
   {
     "name": "EMBER",
@@ -413,7 +413,7 @@
     "type": "Fire",
     "accuracy": 100,
     "maxpp": 25,
-    "effect": "burnSideEffect1"
+    "effect": "BurnSideEffect1"
   },
   {
     "name": "FLAMETHROWER",
@@ -421,7 +421,7 @@
     "type": "Fire",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "burnSideEffect1"
+    "effect": "BurnSideEffect1"
   },
   {
     "name": "MIST",
@@ -429,7 +429,7 @@
     "type": "Ice",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "mistEffect"
+    "effect": "MistEffect"
   },
   {
     "name": "WATER GUN",
@@ -437,7 +437,7 @@
     "type": "Water",
     "accuracy": 100,
     "maxpp": 25,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "HYDRO PUMP",
@@ -445,7 +445,7 @@
     "type": "Water",
     "accuracy": 80,
     "maxpp": 5,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "SURF",
@@ -453,7 +453,7 @@
     "type": "Water",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "ICE BEAM",
@@ -461,7 +461,7 @@
     "type": "Ice",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "freezeSideEffect"
+    "effect": "FreezeSideEffect"
   },
   {
     "name": "BLIZZARD",
@@ -469,7 +469,7 @@
     "type": "Ice",
     "accuracy": 90,
     "maxpp": 5,
-    "effect": "freezeSideEffect"
+    "effect": "FreezeSideEffect"
   },
   {
     "name": "PSYBEAM",
@@ -477,7 +477,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "confusionSideEffect"
+    "effect": "ConfusionSideEffect"
   },
   {
     "name": "BUBBLEBEAM",
@@ -485,7 +485,7 @@
     "type": "Water",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "speedDownSideEffect"
+    "effect": "SpeedDownSideEffect"
   },
   {
     "name": "AURORA BEAM",
@@ -493,7 +493,7 @@
     "type": "Ice",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "attackDownSideEffect"
+    "effect": "AttackDownSideEffect"
   },
   {
     "name": "HYPER BEAM",
@@ -501,7 +501,7 @@
     "type": "Normal",
     "accuracy": 90,
     "maxpp": 5,
-    "effect": "hyperBeamEffect"
+    "effect": "HyperBeamEffect"
   },
   {
     "name": "PECK",
@@ -509,7 +509,7 @@
     "type": "Flying",
     "accuracy": 100,
     "maxpp": 35,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "DRILL PECK",
@@ -517,7 +517,7 @@
     "type": "Flying",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "SUBMISSION",
@@ -525,7 +525,7 @@
     "type": "Fighting",
     "accuracy": 80,
     "maxpp": 25,
-    "effect": "recoilEffect"
+    "effect": "RecoilEffect"
   },
   {
     "name": "LOW KICK",
@@ -533,7 +533,7 @@
     "type": "Fighting",
     "accuracy": 90,
     "maxpp": 20,
-    "effect": "flinchSideEffect2"
+    "effect": "FlinchSideEffect2"
   },
   {
     "name": "COUNTER",
@@ -541,7 +541,7 @@
     "type": "Fighting",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "SEISMIC TOSS",
@@ -549,7 +549,7 @@
     "type": "Fighting",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "specialDamageEffect"
+    "effect": "SpecialDamageEffect"
   },
   {
     "name": "STRENGTH",
@@ -557,7 +557,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "ABSORB",
@@ -565,7 +565,7 @@
     "type": "Grass",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "drainHpEffect"
+    "effect": "DrainHpEffect"
   },
   {
     "name": "MEGA DRAIN",
@@ -573,7 +573,7 @@
     "type": "Grass",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "drainHpEffect"
+    "effect": "DrainHpEffect"
   },
   {
     "name": "LEECH SEED",
@@ -581,7 +581,7 @@
     "type": "Grass",
     "accuracy": 90,
     "maxpp": 10,
-    "effect": "leechSeedEffect"
+    "effect": "LeechSeedEffect"
   },
   {
     "name": "GROWTH",
@@ -589,7 +589,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 40,
-    "effect": "specialUp1Effect"
+    "effect": "SpecialUp1Effect"
   },
   {
     "name": "RAZOR LEAF",
@@ -597,7 +597,7 @@
     "type": "Grass",
     "accuracy": 95,
     "maxpp": 25,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "SOLARBEAM",
@@ -605,7 +605,7 @@
     "type": "Grass",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "chargeEffect"
+    "effect": "ChargeEffect"
   },
   {
     "name": "POISONPOWDER",
@@ -613,7 +613,7 @@
     "type": "Poison",
     "accuracy": 75,
     "maxpp": 35,
-    "effect": "poisonEffect"
+    "effect": "PoisonEffect"
   },
   {
     "name": "STUN SPORE",
@@ -621,7 +621,7 @@
     "type": "Grass",
     "accuracy": 75,
     "maxpp": 30,
-    "effect": "paralyzeEffect"
+    "effect": "ParalyzeEffect"
   },
   {
     "name": "SLEEP POWDER",
@@ -629,7 +629,7 @@
     "type": "Grass",
     "accuracy": 75,
     "maxpp": 15,
-    "effect": "sleepEffect"
+    "effect": "SleepEffect"
   },
   {
     "name": "PETAL DANCE",
@@ -637,7 +637,7 @@
     "type": "Grass",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "thrashEffect"
+    "effect": "ThrashEffect"
   },
   {
     "name": "STRING SHOT",
@@ -645,7 +645,7 @@
     "type": "Bug",
     "accuracy": 95,
     "maxpp": 40,
-    "effect": "speedDown1Effect"
+    "effect": "SpeedDown1Effect"
   },
   {
     "name": "DRAGON RAGE",
@@ -653,7 +653,7 @@
     "type": "Dragon",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "specialDamageEffect"
+    "effect": "SpecialDamageEffect"
   },
   {
     "name": "FIRE SPIN",
@@ -661,7 +661,7 @@
     "type": "Fire",
     "accuracy": 70,
     "maxpp": 15,
-    "effect": "trappingEffect"
+    "effect": "TrappingEffect"
   },
   {
     "name": "THUNDERSHOCK",
@@ -669,7 +669,7 @@
     "type": "Electric",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "paralyzeSideEffect1"
+    "effect": "ParalyzeSideEffect1"
   },
   {
     "name": "THUNDERBOLT",
@@ -677,7 +677,7 @@
     "type": "Electric",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "paralyzeSideEffect1"
+    "effect": "ParalyzeSideEffect1"
   },
   {
     "name": "THUNDER WAVE",
@@ -685,7 +685,7 @@
     "type": "Electric",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "paralyzeEffect"
+    "effect": "ParalyzeEffect"
   },
   {
     "name": "THUNDER",
@@ -693,7 +693,7 @@
     "type": "Electric",
     "accuracy": 70,
     "maxpp": 10,
-    "effect": "paralyzeSideEffect1"
+    "effect": "ParalyzeSideEffect1"
   },
   {
     "name": "ROCK THROW",
@@ -701,7 +701,7 @@
     "type": "Rock",
     "accuracy": 65,
     "maxpp": 15,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "EARTHQUAKE",
@@ -709,7 +709,7 @@
     "type": "Ground",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "FISSURE",
@@ -717,7 +717,7 @@
     "type": "Ground",
     "accuracy": 30,
     "maxpp": 5,
-    "effect": "ohkoEffect"
+    "effect": "OhkoEffect"
   },
   {
     "name": "DIG",
@@ -725,7 +725,7 @@
     "type": "Ground",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "chargeEffect"
+    "effect": "ChargeEffect"
   },
   {
     "name": "TOXIC",
@@ -741,7 +741,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 25,
-    "effect": "confusionSideEffect"
+    "effect": "ConfusionSideEffect"
   },
   {
     "name": "PSYCHIC",
@@ -749,7 +749,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "specialDownSideEffect"
+    "effect": "SpecialDownSideEffect"
   },
   {
     "name": "HYPNOSIS",
@@ -757,7 +757,7 @@
     "type": "Psychic",
     "accuracy": 60,
     "maxpp": 20,
-    "effect": "sleepEffect"
+    "effect": "SleepEffect"
   },
   {
     "name": "MEDITATE",
@@ -765,7 +765,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 40,
-    "effect": "attackUp1Effect"
+    "effect": "AttackUp1Effect"
   },
   {
     "name": "AGILITY",
@@ -773,7 +773,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "speedUp2Effect"
+    "effect": "SpeedUp2Effect"
   },
   {
     "name": "QUICK ATTACK",
@@ -781,7 +781,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "RAGE",
@@ -789,7 +789,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "rageEffect"
+    "effect": "RageEffect"
   },
   {
     "name": "TELEPORT",
@@ -797,7 +797,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "switchTeleportEffect"
+    "effect": "SwitchTeleportEffect"
   },
   {
     "name": "NIGHT SHADE",
@@ -805,7 +805,7 @@
     "type": "Ghost",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "specialDamageEffect"
+    "effect": "SpecialDamageEffect"
   },
   {
     "name": "MIMIC",
@@ -813,7 +813,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "mimicEffect"
+    "effect": "MimicEffect"
   },
   {
     "name": "SCREECH",
@@ -821,7 +821,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 40,
-    "effect": "defenseDown2Effect"
+    "effect": "DefenseDown2Effect"
   },
   {
     "name": "DOUBLE TEAM",
@@ -829,7 +829,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 45,
-    "effect": "evasionUp1Effect"
+    "effect": "EvasionUp1Effect"
   },
   {
     "name": "RECOVER",
@@ -837,7 +837,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "healEffect"
+    "effect": "HealEffect"
   },
   {
     "name": "HARDEN",
@@ -845,7 +845,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "defenseUp1Effect"
+    "effect": "DefenseUp1Effect"
   },
   {
     "name": "MINIMIZE",
@@ -853,7 +853,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "evasionUp1Effect"
+    "effect": "EvasionUp1Effect"
   },
   {
     "name": "SMOKESCREEN",
@@ -861,7 +861,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "accuracyDown1Effect"
+    "effect": "AccuracyDown1Effect"
   },
   {
     "name": "CONFUSE RAY",
@@ -869,7 +869,7 @@
     "type": "Ghost",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "confusionEffect"
+    "effect": "ConfusionEffect"
   },
   {
     "name": "WITHDRAW",
@@ -877,7 +877,7 @@
     "type": "Water",
     "accuracy": 100,
     "maxpp": 40,
-    "effect": "defenseUp1Effect"
+    "effect": "DefenseUp1Effect"
   },
   {
     "name": "DEFENSE CURL",
@@ -885,7 +885,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 40,
-    "effect": "defenseUp1Effect"
+    "effect": "DefenseUp1Effect"
   },
   {
     "name": "BARRIER",
@@ -893,7 +893,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "defenseUp2Effect"
+    "effect": "DefenseUp2Effect"
   },
   {
     "name": "LIGHT SCREEN",
@@ -901,7 +901,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "lightScreenEffect"
+    "effect": "LightScreenEffect"
   },
   {
     "name": "HAZE",
@@ -909,7 +909,7 @@
     "type": "Ice",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "hazeEffect"
+    "effect": "HazeEffect"
   },
   {
     "name": "REFLECT",
@@ -917,7 +917,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "reflectEffect"
+    "effect": "ReflectEffect"
   },
   {
     "name": "FOCUS ENERGY",
@@ -925,7 +925,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "focusEffect"
+    "effect": "FocusEffect"
   },
   {
     "name": "BIDE",
@@ -933,7 +933,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "bideEffect"
+    "effect": "BideEffect"
   },
   {
     "name": "METRONOME",
@@ -941,7 +941,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "metronomeEffect"
+    "effect": "MetronomeEffect"
   },
   {
     "name": "MIRROR MOVE",
@@ -949,7 +949,7 @@
     "type": "Flying",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "mirrorMoveEffect"
+    "effect": "MirrorMoveEffect"
   },
   {
     "name": "SELFDESTRUCT",
@@ -957,7 +957,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 5,
-    "effect": "explodeEffect"
+    "effect": "ExplodeEffect"
   },
   {
     "name": "EGG BOMB",
@@ -965,7 +965,7 @@
     "type": "Normal",
     "accuracy": 75,
     "maxpp": 10,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "LICK",
@@ -973,7 +973,7 @@
     "type": "Ghost",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "paralyzeSideEffect2"
+    "effect": "ParalyzeSideEffect2"
   },
   {
     "name": "SMOG",
@@ -981,7 +981,7 @@
     "type": "Poison",
     "accuracy": 70,
     "maxpp": 20,
-    "effect": "poisonSideEffect2"
+    "effect": "PoisonSideEffect2"
   },
   {
     "name": "SLUDGE",
@@ -989,7 +989,7 @@
     "type": "Poison",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "poisonSideEffect2"
+    "effect": "PoisonSideEffect2"
   },
   {
     "name": "BONE CLUB",
@@ -997,7 +997,7 @@
     "type": "Ground",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "flinchSideEffect1"
+    "effect": "FlinchSideEffect1"
   },
   {
     "name": "FIRE BLAST",
@@ -1005,7 +1005,7 @@
     "type": "Fire",
     "accuracy": 85,
     "maxpp": 5,
-    "effect": "burnSideEffect2"
+    "effect": "BurnSideEffect2"
   },
   {
     "name": "WATERFALL",
@@ -1013,7 +1013,7 @@
     "type": "Water",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "CLAMP",
@@ -1021,7 +1021,7 @@
     "type": "Water",
     "accuracy": 75,
     "maxpp": 10,
-    "effect": "trappingEffect"
+    "effect": "TrappingEffect"
   },
   {
     "name": "SWIFT",
@@ -1029,7 +1029,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "swiftEffect"
+    "effect": "SwiftEffect"
   },
   {
     "name": "SKULL BASH",
@@ -1037,7 +1037,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "chargeEffect"
+    "effect": "ChargeEffect"
   },
   {
     "name": "SPIKE CANNON",
@@ -1045,7 +1045,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "twoFiveEffect"
+    "effect": "TwoFiveEffect"
   },
   {
     "name": "CONSTRICT",
@@ -1053,7 +1053,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 35,
-    "effect": "trappingEffect"
+    "effect": "TrappingEffect"
   },
   {
     "name": "AMNESIA",
@@ -1061,7 +1061,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "specialUp2Effect"
+    "effect": "SpecialUp2Effect"
   },
   {
     "name": "KINESIS",
@@ -1069,7 +1069,7 @@
     "type": "Psychic",
     "accuracy": 80,
     "maxpp": 15,
-    "effect": "accuracyDown1Effect"
+    "effect": "AccuracyDown1Effect"
   },
   {
     "name": "SOFTBOILED",
@@ -1077,7 +1077,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "healEffect"
+    "effect": "HealEffect"
   },
   {
     "name": "HI JUMP KICK",
@@ -1085,7 +1085,7 @@
     "type": "Fighting",
     "accuracy": 90,
     "maxpp": 20,
-    "effect": "jumpKickEffect"
+    "effect": "JumpKickEffect"
   },
   {
     "name": "GLARE",
@@ -1093,7 +1093,7 @@
     "type": "Normal",
     "accuracy": 75,
     "maxpp": 30,
-    "effect": "paralyzeEffect"
+    "effect": "ParalyzeEffect"
   },
   {
     "name": "DREAM EATER",
@@ -1101,7 +1101,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "dreamEaterEffect"
+    "effect": "DreamEaterEffect"
   },
   {
     "name": "POISON GAS",
@@ -1109,7 +1109,7 @@
     "type": "Poison",
     "accuracy": 55,
     "maxpp": 40,
-    "effect": "poisonEffect"
+    "effect": "PoisonEffect"
   },
   {
     "name": "BARRAGE",
@@ -1117,7 +1117,7 @@
     "type": "Normal",
     "accuracy": 85,
     "maxpp": 20,
-    "effect": "twoFiveEffect"
+    "effect": "TwoFiveEffect"
   },
   {
     "name": "LEECH LIFE",
@@ -1125,7 +1125,7 @@
     "type": "Bug",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "drainHpEffect"
+    "effect": "DrainHpEffect"
   },
   {
     "name": "LOVELY KISS",
@@ -1133,7 +1133,7 @@
     "type": "Normal",
     "accuracy": 75,
     "maxpp": 10,
-    "effect": "sleepEffect"
+    "effect": "SleepEffect"
   },
   {
     "name": "SKY ATTACK",
@@ -1141,7 +1141,7 @@
     "type": "Flying",
     "accuracy": 90,
     "maxpp": 5,
-    "effect": "chargeEffect"
+    "effect": "ChargeEffect"
   },
   {
     "name": "TRANSFORM",
@@ -1149,7 +1149,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "transformEffect"
+    "effect": "TransformEffect"
   },
   {
     "name": "BUBBLE",
@@ -1157,7 +1157,7 @@
     "type": "Water",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "speedDownSideEffect"
+    "effect": "SpeedDownSideEffect"
   },
   {
     "name": "DIZZY PUNCH",
@@ -1165,7 +1165,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "SPORE",
@@ -1173,7 +1173,7 @@
     "type": "Grass",
     "accuracy": 100,
     "maxpp": 15,
-    "effect": "sleepEffect"
+    "effect": "SleepEffect"
   },
   {
     "name": "FLASH",
@@ -1181,7 +1181,7 @@
     "type": "Normal",
     "accuracy": 70,
     "maxpp": 20,
-    "effect": "accuracyDown1Effect"
+    "effect": "AccuracyDown1Effect"
   },
   {
     "name": "PSYWAVE",
@@ -1189,7 +1189,7 @@
     "type": "Psychic",
     "accuracy": 80,
     "maxpp": 15,
-    "effect": "specialDamageEffect"
+    "effect": "SpecialDamageEffect"
   },
   {
     "name": "SPLASH",
@@ -1197,7 +1197,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 40,
-    "effect": "splashEffect"
+    "effect": "SplashEffect"
   },
   {
     "name": "ACID ARMOR",
@@ -1205,7 +1205,7 @@
     "type": "Poison",
     "accuracy": 100,
     "maxpp": 40,
-    "effect": "defenseUp2Effect"
+    "effect": "DefenseUp2Effect"
   },
   {
     "name": "CRABHAMMER",
@@ -1213,7 +1213,7 @@
     "type": "Water",
     "accuracy": 85,
     "maxpp": 10,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "EXPLOSION",
@@ -1221,7 +1221,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 5,
-    "effect": "explodeEffect"
+    "effect": "ExplodeEffect"
   },
   {
     "name": "FURY SWIPES",
@@ -1229,7 +1229,7 @@
     "type": "Normal",
     "accuracy": 80,
     "maxpp": 15,
-    "effect": "twoFiveEffect"
+    "effect": "TwoFiveEffect"
   },
   {
     "name": "BONEMERANG",
@@ -1237,7 +1237,7 @@
     "type": "Ground",
     "accuracy": 90,
     "maxpp": 10,
-    "effect": "doubleAttackEffect"
+    "effect": "DoubleAttackEffect"
   },
   {
     "name": "REST",
@@ -1245,7 +1245,7 @@
     "type": "Psychic",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "healEffect"
+    "effect": "HealEffect"
   },
   {
     "name": "ROCK SLIDE",
@@ -1253,7 +1253,7 @@
     "type": "Rock",
     "accuracy": 90,
     "maxpp": 10,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "HYPER FANG",
@@ -1261,7 +1261,7 @@
     "type": "Normal",
     "accuracy": 90,
     "maxpp": 15,
-    "effect": "flinchSideEffect1"
+    "effect": "FlinchSideEffect1"
   },
   {
     "name": "SHARPEN",
@@ -1269,7 +1269,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "attackUp1Effect"
+    "effect": "AttackUp1Effect"
   },
   {
     "name": "CONVERSION",
@@ -1277,7 +1277,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 30,
-    "effect": "conversionEffect"
+    "effect": "ConversionEffect"
   },
   {
     "name": "TRI ATTACK",
@@ -1285,7 +1285,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "SUPER FANG",
@@ -1293,7 +1293,7 @@
     "type": "Normal",
     "accuracy": 90,
     "maxpp": 10,
-    "effect": "superFangEffect"
+    "effect": "SuperFangEffect"
   },
   {
     "name": "SLASH",
@@ -1301,7 +1301,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 20,
-    "effect": "noEffect"
+    "effect": "NoEffect"
   },
   {
     "name": "SUBSTITUTE",
@@ -1309,7 +1309,7 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "substituteEffect"
+    "effect": "SubstituteEffect"
   },
   {
     "name": "STRUGGLE",
@@ -1317,6 +1317,6 @@
     "type": "Normal",
     "accuracy": 100,
     "maxpp": 10,
-    "effect": "recoilEffect"
+    "effect": "RecoilEffect"
   }
 ]

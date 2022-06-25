@@ -62,9 +62,9 @@ public class PokeMart : MonoBehaviour
                     itemSlots[i].UpdatePrice();
                 }else{
                     itemSlots[i].mode = SlotMode.Item;
-                    itemSlots[i].item = Items.instance.items[currentItem].item;
-                    itemSlots[i].quantity = Items.instance.items[currentItem].quantity;
-                    itemSlots[i].isKeyItem = Items.instance.items[currentItem].isKeyItem;
+                    itemSlots[i].item = Inventory.instance.items[currentItem].item;
+                    itemSlots[i].quantity = Inventory.instance.items[currentItem].quantity;
+                    itemSlots[i].isKeyItem = Inventory.instance.items[currentItem].isKeyItem;
                 }
             }
             else if (currentItem == numberOfItems)
@@ -140,8 +140,8 @@ public class PokeMart : MonoBehaviour
                 }
                 if (itemMode == Mode.Sell){
                     //Set the selling price of the selected item.
-                    itemPrice = PokemonData.itemData[(int)Items.instance.items[currentBagPosition].item].price / 2;
-                    maximumItem = Items.instance.items[currentBagPosition].quantity;
+                    itemPrice = PokemonData.itemData[(int)Inventory.instance.items[currentBagPosition].item].price / 2;
+                    maximumItem = Inventory.instance.items[currentBagPosition].quantity;
                 }
 
                 amountText.text = amountToTask.ToString();
@@ -176,7 +176,7 @@ public class PokeMart : MonoBehaviour
                 
                 if(itemMode == Mode.Sell){
                     if (currentBagPosition != numberOfItems){
-                        maximumItem = Items.instance.items[currentBagPosition].quantity;
+                        maximumItem = Inventory.instance.items[currentBagPosition].quantity;
                     }
                     else maximumItem = 0;
                 }
@@ -221,9 +221,9 @@ public class PokeMart : MonoBehaviour
                     else if (currentBagPosition != numberOfItems)
                     {
                         //our Bag
-                        Item item = Items.instance.items[selectBag];
-                        Items.instance.items[selectBag] = Items.instance.items[currentBagPosition];
-                        Items.instance.items[currentBagPosition] = item;
+                        Item item = Inventory.instance.items[selectBag];
+                        Inventory.instance.items[selectBag] = Inventory.instance.items[currentBagPosition];
+                        Inventory.instance.items[currentBagPosition] = item;
                         switchingItems = false;
                         selectCursor.gameObject.SetActive(false);
 
@@ -252,7 +252,7 @@ public class PokeMart : MonoBehaviour
                         currentBagPosition = 0;
                         currentMenu = Menu.ItemsWindow;
                         SetItemMode(Mode.Sell);
-                        numberOfItems = Items.instance.items.Count;
+                        numberOfItems = Inventory.instance.items.Count;
                         UpdateItemScreen();
 
                     }
@@ -287,7 +287,7 @@ public class PokeMart : MonoBehaviour
                             cursor.SetActive(false);
                             currentMenu = Menu.QuantityMenu;
                         }else{
-                            if (!Items.instance.items[currentBagPosition].isKeyItem && PokemonData.itemData[(int)Items.instance.items[currentBagPosition].item].price > 0){
+                            if (!Inventory.instance.items[currentBagPosition].isKeyItem && PokemonData.itemData[(int)Inventory.instance.items[currentBagPosition].item].price > 0){
                                 amountToTask = 1;
                                 //UpdateQuantityScreen();
                                 amountText.text = amountToTask.ToString();
@@ -304,11 +304,11 @@ public class PokeMart : MonoBehaviour
                 {
                     if (itemMode == Mode.Sell)
                     {
-                        if (!Items.instance.items[currentBagPosition].isKeyItem)
+                        if (!Inventory.instance.items[currentBagPosition].isKeyItem)
                         {
                             //Give the player half of the item's price back
                             GameData.instance.money += fullPrice;
-                            Items.instance.RemoveItem(amountToTask, currentBagPosition);
+                            Inventory.instance.RemoveItem(amountToTask, currentBagPosition);
                             currentMenu = Menu.ItemsWindow;
                             cursor.SetActive(true);
                             selectCursor.gameObject.SetActive(false);
@@ -321,7 +321,7 @@ public class PokeMart : MonoBehaviour
                         if (GameData.instance.money >= fullPrice)
                         {
                             GameData.instance.money -= fullPrice;
-                            Items.instance.AddItem(martItemsList[currentBagPosition], amountToTask);
+                            Inventory.instance.AddItem(martItemsList[currentBagPosition], amountToTask);
                             currentMenu = Menu.ItemsWindow;
                             cursor.SetActive(true);
                             selectCursor.gameObject.SetActive(false);

@@ -16,7 +16,7 @@ public class Item{
     }
 }
 
-public class Items : MonoBehaviour
+public class Inventory : Singleton<Inventory>
 {
     //both share the same index;
     //for items
@@ -47,14 +47,6 @@ public class Items : MonoBehaviour
         ItemsEnum.SuperRod,
         ItemsEnum.TownMap
     });
-
-    public static Items instance;
-
-
-    private void Awake()
-    {
-        instance = this;
-    }
 
     // Use this for initialization
 	void Start(){

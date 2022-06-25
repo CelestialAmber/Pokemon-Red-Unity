@@ -19,17 +19,16 @@ public enum BattleState
     Attacking,
     End
 }
-public class BattleStatus
-{
-    public BattleStatus()
-    {
 
+public class BattleManager : MonoBehaviour
+{
+    public class BattleStatus{
+    public BattleStatus(){
     }
     public int attackLevel, defenseLevel, speedLevel, specialLevel;
     public bool[] isDisabled = new bool[4];
-}
-public class BattleManager : MonoBehaviour
-{
+    }
+
     public int battleID;
 
     public List<Pokemon> enemyMons = new List<Pokemon>();
@@ -472,74 +471,74 @@ public class BattleManager : MonoBehaviour
 
         switch (moveData.effect)
         {
-            case "noEffect": break;
-            case "twoFiveEffect": break;
-            case "payDayEffect": break;
-            case "burnSideEffect1": break;
-            case "freezeSideEffect": break;
-            case "paralyzeSideEffect1": break;
-            case "ohkoEffect": break;
-            case "chargeEffect": break;
-            case "attackUp2Effect": break;
-            case "switchTeleportEffect": break;
-            case "flyEffect": break;
-            case "trappingEffect": break;
-            case "flinchSideEffect2": break;
-            case "doubleAttackEffect": break;
-            case "jumpKickEffect": break;
-            case "accuracyDown1Effect": break;
-            case "paralyzeSideEffect2": break;
-            case "recoilEffect": break;
-            case "thrashEffect": break;
-            case "defenseDown1Effect": break;
-            case "poisonSideEffect1": break;
-            case "twinNeedleEffect": break;
-            case "flinchSideEffect1": break;
-            case "attackDown1Effect": break;
-            case "sleepEffect": break;
-            case "confusionEffect": break;
-            case "specialDamageEffect": break;
-            case "disableEffect": break;
-            case "defenseDownSideEffect": break;
-            case "mistEffect": break;
-            case "confusionSideEffect": break;
-            case "speedDownSideEffect": break;
-            case "attackDownSideEffect": break;
-            case "hyperBeamEffect": break;
-            case "drainHpEffect": break;
-            case "leechSeedEffect": break;
-            case "specialUp1Effect": break;
-            case "poisonEffect": break;
-            case "paralyzeEffect": break;
-            case "speedDown1Effect": break;
-            case "specialDownSideEffect": break;
-            case "attackUp1Effect": break;
-            case "speedUp2Effect": break;
-            case "rageEffect": break;
-            case "mimicEffect": break;
-            case "defenseDown2Effect": break;
-            case "evasionUp1Effect": break;
-            case "healEffect": break;
-            case "defenseUp1Effect": break;
-            case "defenseUp2Effect": break;
-            case "lightScreenEffect": break;
-            case "hazeEffect": break;
-            case "reflectEffect": break;
-            case "focusEffect": break;
-            case "bideEffect": break;
-            case "metronomeEffect": break;
-            case "mirrorMoveEffect": break;
-            case "explodeEffect": break;
-            case "poisonSideEffect2": break;
-            case "burnSideEffect2": break;
-            case "swiftEffect": break;
-            case "specialUp2Effect": break;
-            case "dreamEaterEffect": break;
-            case "transformEffect": break;
-            case "splashEffect": break;
-            case "conversionEffect": break;
-            case "superFangEffect": break;
-            case "substituteEffect": break;
+            case MoveEffect.NoEffect: break;
+            case MoveEffect.TwoFiveEffect: break;
+            case MoveEffect.PayDayEffect: break;
+            case MoveEffect.BurnSideEffect1: break;
+            case MoveEffect.FreezeSideEffect: break;
+            case MoveEffect.ParalyzeSideEffect1: break;
+            case MoveEffect.OhkoEffect: break;
+            case MoveEffect.ChargeEffect: break;
+            case MoveEffect.AttackUp2Effect: break;
+            case MoveEffect.SwitchTeleportEffect: break;
+            case MoveEffect.FlyEffect: break;
+            case MoveEffect.TrappingEffect: break;
+            case MoveEffect.FlinchSideEffect2: break;
+            case MoveEffect.DoubleAttackEffect: break;
+            case MoveEffect.JumpKickEffect: break;
+            case MoveEffect.AccuracyDown1Effect: break;
+            case MoveEffect.ParalyzeSideEffect2: break;
+            case MoveEffect.RecoilEffect: break;
+            case MoveEffect.ThrashEffect: break;
+            case MoveEffect.DefenseDown1Effect: break;
+            case MoveEffect.PoisonSideEffect1: break;
+            case MoveEffect.TwinNeedleEffect: break;
+            case MoveEffect.FlinchSideEffect1: break;
+            case MoveEffect.AttackDown1Effect: break;
+            case MoveEffect.SleepEffect: break;
+            case MoveEffect.ConfusionEffect: break;
+            case MoveEffect.SpecialDamageEffect: break;
+            case MoveEffect.DisableEffect: break;
+            case MoveEffect.DefenseDownSideEffect: break;
+            case MoveEffect.MistEffect: break;
+            case MoveEffect.ConfusionSideEffect: break;
+            case MoveEffect.SpeedDownSideEffect: break;
+            case MoveEffect.AttackDownSideEffect: break;
+            case MoveEffect.HyperBeamEffect: break;
+            case MoveEffect.DrainHpEffect: break;
+            case MoveEffect.LeechSeedEffect: break;
+            case MoveEffect.SpecialUp1Effect: break;
+            case MoveEffect.PoisonEffect: break;
+            case MoveEffect.ParalyzeEffect: break;
+            case MoveEffect.SpeedDown1Effect: break;
+            case MoveEffect.SpecialDownSideEffect: break;
+            case MoveEffect.AttackUp1Effect: break;
+            case MoveEffect.SpeedUp2Effect: break;
+            case MoveEffect.RageEffect: break;
+            case MoveEffect.MimicEffect: break;
+            case MoveEffect.DefenseDown2Effect: break;
+            case MoveEffect.EvasionUp1Effect: break;
+            case MoveEffect.HealEffect: break;
+            case MoveEffect.DefenseUp1Effect: break;
+            case MoveEffect.DefenseUp2Effect: break;
+            case MoveEffect.LightScreenEffect: break;
+            case MoveEffect.HazeEffect: break;
+            case MoveEffect.ReflectEffect: break;
+            case MoveEffect.FocusEffect: break;
+            case MoveEffect.BideEffect: break;
+            case MoveEffect.MetronomeEffect: break;
+            case MoveEffect.MirrorMoveEffect: break;
+            case MoveEffect.ExplodeEffect: break;
+            case MoveEffect.PoisonSideEffect2: break;
+            case MoveEffect.BurnSideEffect2: break;
+            case MoveEffect.SwiftEffect: break;
+            case MoveEffect.SpecialUp2Effect: break;
+            case MoveEffect.DreamEaterEffect: break;
+            case MoveEffect.TransformEffect: break;
+            case MoveEffect.SplashEffect: break;
+            case MoveEffect.ConversionEffect: break;
+            case MoveEffect.SuperFangEffect: break;
+            case MoveEffect.SubstituteEffect: break;
         }
     }
 

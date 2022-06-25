@@ -18,6 +18,7 @@
       45,
       65
     ],
+    "catchRate": 45,
     "baseExp": 64,
     "expGroup": 1,
     "evolutions": [
@@ -106,6 +107,7 @@
       60,
       80
     ],
+    "catchRate": 45,
     "baseExp": 141,
     "expGroup": 1,
     "evolutions": [
@@ -198,6 +200,7 @@
       80,
       100
     ],
+    "catchRate": 45,
     "baseExp": 208,
     "expGroup": 1,
     "evolutions": [],
@@ -289,6 +292,7 @@
       65,
       50
     ],
+    "catchRate": 45,
     "baseExp": 65,
     "expGroup": 1,
     "evolutions": [
@@ -382,6 +386,7 @@
       80,
       65
     ],
+    "catchRate": 45,
     "baseExp": 142,
     "expGroup": 1,
     "evolutions": [
@@ -479,6 +484,7 @@
       80,
       85
     ],
+    "catchRate": 45,
     "baseExp": 209,
     "expGroup": 1,
     "evolutions": [],
@@ -579,6 +585,7 @@
       43,
       50
     ],
+    "catchRate": 45,
     "baseExp": 66,
     "expGroup": 1,
     "evolutions": [
@@ -672,6 +679,7 @@
       58,
       65
     ],
+    "catchRate": 45,
     "baseExp": 143,
     "expGroup": 1,
     "evolutions": [
@@ -769,6 +777,7 @@
       78,
       85
     ],
+    "catchRate": 45,
     "baseExp": 210,
     "expGroup": 1,
     "evolutions": [],
@@ -867,6 +876,7 @@
       45,
       20
     ],
+    "catchRate": 255,
     "baseExp": 53,
     "expGroup": 2,
     "evolutions": [
@@ -911,6 +921,7 @@
       30,
       25
     ],
+    "catchRate": 120,
     "baseExp": 72,
     "expGroup": 2,
     "evolutions": [
@@ -951,6 +962,7 @@
       "In battle, it\n\nflaps its wings\n\nat high speed to",
       "release highly\n\ntoxic dust into\n\nthe air."
     ],
+    "catchRate": 45,
     "baseExp": 160,
     "expGroup": 2,
     "evolutions": [],
@@ -1034,6 +1046,7 @@
       50,
       20
     ],
+    "catchRate": 255,
     "baseExp": 52,
     "expGroup": 2,
     "evolutions": [
@@ -1078,6 +1091,7 @@
       35,
       25
     ],
+    "catchRate": 120,
     "baseExp": 71,
     "expGroup": 2,
     "evolutions": [
@@ -1118,6 +1132,7 @@
       75,
       45
     ],
+    "catchRate": 45,
     "baseExp": 159,
     "expGroup": 2,
     "evolutions": [],
@@ -1194,6 +1209,7 @@
       56,
       35
     ],
+    "catchRate": 255,
     "baseExp": 55,
     "expGroup": 1,
     "evolutions": [
@@ -1274,6 +1290,7 @@
       71,
       50
     ],
+    "catchRate": 120,
     "baseExp": 113,
     "expGroup": 1,
     "evolutions": [
@@ -1358,6 +1375,7 @@
       91,
       70
     ],
+    "catchRate": 45,
     "baseExp": 172,
     "expGroup": 1,
     "evolutions": [],
@@ -1441,6 +1459,7 @@
       72,
       25
     ],
+    "catchRate": 255,
     "baseExp": 57,
     "expGroup": 2,
     "evolutions": [
@@ -1520,6 +1539,7 @@
       97,
       50
     ],
+    "catchRate": 90,
     "baseExp": 116,
     "expGroup": 2,
     "evolutions": [],
@@ -1599,6 +1619,7 @@
       70,
       31
     ],
+    "catchRate": 255,
     "baseExp": 58,
     "expGroup": 2,
     "evolutions": [
@@ -1678,6 +1699,7 @@
       100,
       61
     ],
+    "catchRate": 90,
     "baseExp": 162,
     "expGroup": 2,
     "evolutions": [],
@@ -1756,6 +1778,7 @@
       55,
       40
     ],
+    "catchRate": 255,
     "baseExp": 62,
     "expGroup": 2,
     "evolutions": [
@@ -1838,6 +1861,7 @@
       80,
       65
     ],
+    "catchRate": 90,
     "baseExp": 147,
     "expGroup": 2,
     "evolutions": [],
@@ -1919,6 +1943,7 @@
       90,
       50
     ],
+    "catchRate": 190,
     "baseExp": 82,
     "expGroup": 2,
     "evolutions": [
@@ -2006,6 +2031,7 @@
       100,
       90
     ],
+    "catchRate": 75,
     "baseExp": 122,
     "expGroup": 2,
     "evolutions": [],
@@ -2072,6 +2098,7 @@
       40,
       30
     ],
+    "catchRate": 255,
     "baseExp": 93,
     "expGroup": 2,
     "evolutions": [
@@ -2154,6 +2181,7 @@
       65,
       55
     ],
+    "catchRate": 90,
     "baseExp": 163,
     "expGroup": 2,
     "evolutions": [],
@@ -2235,6 +2263,7 @@
       41,
       40
     ],
+    "catchRate": 235,
     "baseExp": 59,
     "expGroup": 1,
     "evolutions": [
@@ -2319,6 +2348,7 @@
       56,
       55
     ],
+    "catchRate": 120,
     "baseExp": 117,
     "expGroup": 1,
     "evolutions": [
@@ -2411,6 +2441,7 @@
       76,
       75
     ],
+    "catchRate": 45,
     "baseExp": 194,
     "expGroup": 1,
     "evolutions": [],
@@ -2502,6 +2533,7 @@
       50,
       40
     ],
+    "catchRate": 235,
     "baseExp": 60,
     "expGroup": 1,
     "evolutions": [
@@ -2586,6 +2618,7 @@
       65,
       55
     ],
+    "catchRate": 120,
     "baseExp": 118,
     "expGroup": 1,
     "evolutions": [
@@ -2678,6 +2711,7 @@
       85,
       75
     ],
+    "catchRate": 45,
     "baseExp": 195,
     "expGroup": 1,
     "evolutions": [],
@@ -2769,6 +2803,7 @@
       35,
       60
     ],
+    "catchRate": 150,
     "baseExp": 68,
     "expGroup": 3,
     "evolutions": [
@@ -2872,6 +2907,7 @@
       60,
       85
     ],
+    "catchRate": 25,
     "baseExp": 129,
     "expGroup": 3,
     "evolutions": [],
@@ -2953,6 +2989,7 @@
       65,
       65
     ],
+    "catchRate": 190,
     "baseExp": 63,
     "expGroup": 2,
     "evolutions": [
@@ -3033,6 +3070,7 @@
       100,
       100
     ],
+    "catchRate": 75,
     "baseExp": 178,
     "expGroup": 2,
     "evolutions": [],
@@ -3096,6 +3134,7 @@
       20,
       25
     ],
+    "catchRate": 170,
     "baseExp": 76,
     "expGroup": 3,
     "evolutions": [
@@ -3197,6 +3236,7 @@
       45,
       50
     ],
+    "catchRate": 50,
     "baseExp": 109,
     "expGroup": 3,
     "evolutions": [],
@@ -3277,6 +3317,7 @@
       55,
       40
     ],
+    "catchRate": 255,
     "baseExp": 54,
     "expGroup": 2,
     "evolutions": [
@@ -3351,6 +3392,7 @@
       90,
       75
     ],
+    "catchRate": 90,
     "baseExp": 171,
     "expGroup": 2,
     "evolutions": [],
@@ -3428,6 +3470,7 @@
       30,
       75
     ],
+    "catchRate": 255,
     "baseExp": 78,
     "expGroup": 1,
     "evolutions": [
@@ -3507,6 +3550,7 @@
       40,
       85
     ],
+    "catchRate": 120,
     "baseExp": 132,
     "expGroup": 1,
     "evolutions": [
@@ -3594,6 +3638,7 @@
       50,
       100
     ],
+    "catchRate": 45,
     "baseExp": 184,
     "expGroup": 1,
     "evolutions": [],
@@ -3669,6 +3714,7 @@
       25,
       55
     ],
+    "catchRate": 190,
     "baseExp": 70,
     "expGroup": 2,
     "evolutions": [
@@ -3747,6 +3793,7 @@
       30,
       80
     ],
+    "catchRate": 75,
     "baseExp": 128,
     "expGroup": 2,
     "evolutions": [],
@@ -3828,6 +3875,7 @@
       45,
       40
     ],
+    "catchRate": 190,
     "baseExp": 75,
     "expGroup": 2,
     "evolutions": [
@@ -3911,6 +3959,7 @@
       90,
       90
     ],
+    "catchRate": 75,
     "baseExp": 138,
     "expGroup": 2,
     "evolutions": [],
@@ -4001,6 +4050,7 @@
       95,
       45
     ],
+    "catchRate": 255,
     "baseExp": 81,
     "expGroup": 2,
     "evolutions": [
@@ -4078,6 +4128,7 @@
       120,
       70
     ],
+    "catchRate": 50,
     "baseExp": 153,
     "expGroup": 2,
     "evolutions": [],
@@ -4156,6 +4207,7 @@
       90,
       40
     ],
+    "catchRate": 255,
     "baseExp": 69,
     "expGroup": 2,
     "evolutions": [
@@ -4238,6 +4290,7 @@
       115,
       65
     ],
+    "catchRate": 90,
     "baseExp": 148,
     "expGroup": 2,
     "evolutions": [],
@@ -4323,6 +4376,7 @@
       55,
       50
     ],
+    "catchRate": 190,
     "baseExp": 80,
     "expGroup": 2,
     "evolutions": [
@@ -4409,6 +4463,7 @@
       85,
       80
     ],
+    "catchRate": 75,
     "baseExp": 174,
     "expGroup": 2,
     "evolutions": [],
@@ -4498,6 +4553,7 @@
       70,
       35
     ],
+    "catchRate": 190,
     "baseExp": 74,
     "expGroup": 2,
     "evolutions": [
@@ -4587,6 +4643,7 @@
       95,
       60
     ],
+    "catchRate": 75,
     "baseExp": 149,
     "expGroup": 2,
     "evolutions": [],
@@ -4679,6 +4736,7 @@
       60,
       50
     ],
+    "catchRate": 190,
     "baseExp": 91,
     "expGroup": 0,
     "evolutions": [
@@ -4760,6 +4818,7 @@
       95,
       80
     ],
+    "catchRate": 75,
     "baseExp": 213,
     "expGroup": 0,
     "evolutions": [],
@@ -4826,6 +4885,7 @@
       90,
       40
     ],
+    "catchRate": 255,
     "baseExp": 77,
     "expGroup": 1,
     "evolutions": [
@@ -4909,6 +4969,7 @@
       90,
       50
     ],
+    "catchRate": 120,
     "baseExp": 131,
     "expGroup": 1,
     "evolutions": [
@@ -5009,6 +5070,7 @@
       70,
       70
     ],
+    "catchRate": 45,
     "baseExp": 185,
     "expGroup": 1,
     "evolutions": [],
@@ -5092,6 +5154,7 @@
       90,
       105
     ],
+    "catchRate": 200,
     "baseExp": 73,
     "expGroup": 1,
     "evolutions": [
@@ -5157,6 +5220,7 @@
       105,
       120
     ],
+    "catchRate": 100,
     "baseExp": 145,
     "expGroup": 1,
     "evolutions": [
@@ -5254,6 +5318,7 @@
       120,
       135
     ],
+    "catchRate": 50,
     "baseExp": 186,
     "expGroup": 1,
     "evolutions": [],
@@ -5347,6 +5412,7 @@
       35,
       35
     ],
+    "catchRate": 180,
     "baseExp": 88,
     "expGroup": 1,
     "evolutions": [
@@ -5431,6 +5497,7 @@
       45,
       50
     ],
+    "catchRate": 90,
     "baseExp": 146,
     "expGroup": 1,
     "evolutions": [
@@ -5524,6 +5591,7 @@
       55,
       65
     ],
+    "catchRate": 45,
     "baseExp": 193,
     "expGroup": 1,
     "evolutions": [],
@@ -5611,6 +5679,7 @@
       40,
       70
     ],
+    "catchRate": 255,
     "baseExp": 84,
     "expGroup": 1,
     "evolutions": [
@@ -5699,6 +5768,7 @@
       55,
       85
     ],
+    "catchRate": 120,
     "baseExp": 151,
     "expGroup": 1,
     "evolutions": [
@@ -5790,6 +5860,7 @@
       70,
       100
     ],
+    "catchRate": 45,
     "baseExp": 191,
     "expGroup": 1,
     "evolutions": [],
@@ -5865,6 +5936,7 @@
       70,
       100
     ],
+    "catchRate": 190,
     "baseExp": 105,
     "expGroup": 0,
     "evolutions": [
@@ -5957,6 +6029,7 @@
       100,
       120
     ],
+    "catchRate": 60,
     "baseExp": 205,
     "expGroup": 0,
     "evolutions": [],
@@ -6052,6 +6125,7 @@
       20,
       30
     ],
+    "catchRate": 255,
     "baseExp": 86,
     "expGroup": 1,
     "evolutions": [
@@ -6140,6 +6214,7 @@
       35,
       45
     ],
+    "catchRate": 120,
     "baseExp": 134,
     "expGroup": 1,
     "evolutions": [
@@ -6232,6 +6307,7 @@
       45,
       55
     ],
+    "catchRate": 45,
     "baseExp": 177,
     "expGroup": 1,
     "evolutions": [],
@@ -6320,6 +6396,7 @@
       90,
       65
     ],
+    "catchRate": 190,
     "baseExp": 152,
     "expGroup": 2,
     "evolutions": [
@@ -6400,6 +6477,7 @@
       105,
       80
     ],
+    "catchRate": 60,
     "baseExp": 192,
     "expGroup": 2,
     "evolutions": [],
@@ -6487,6 +6565,7 @@
       15,
       40
     ],
+    "catchRate": 190,
     "baseExp": 99,
     "expGroup": 2,
     "evolutions": [
@@ -6582,6 +6661,7 @@
       30,
       80
     ],
+    "catchRate": 75,
     "baseExp": 164,
     "expGroup": 2,
     "evolutions": [],
@@ -6689,6 +6769,7 @@
       45,
       95
     ],
+    "catchRate": 190,
     "baseExp": 89,
     "expGroup": 2,
     "evolutions": [
@@ -6770,6 +6851,7 @@
       70,
       120
     ],
+    "catchRate": 60,
     "baseExp": 161,
     "expGroup": 2,
     "evolutions": [],
@@ -6854,6 +6936,7 @@
       60,
       58
     ],
+    "catchRate": 45,
     "baseExp": 94,
     "expGroup": 2,
     "evolutions": [],
@@ -6931,6 +7014,7 @@
       75,
       35
     ],
+    "catchRate": 190,
     "baseExp": 96,
     "expGroup": 2,
     "evolutions": [
@@ -7012,6 +7096,7 @@
       100,
       60
     ],
+    "catchRate": 45,
     "baseExp": 158,
     "expGroup": 2,
     "evolutions": [],
@@ -7096,6 +7181,7 @@
       45,
       70
     ],
+    "catchRate": 190,
     "baseExp": 100,
     "expGroup": 2,
     "evolutions": [
@@ -7176,6 +7262,7 @@
       70,
       95
     ],
+    "catchRate": 75,
     "baseExp": 176,
     "expGroup": 2,
     "evolutions": [],
@@ -7259,6 +7346,7 @@
       25,
       40
     ],
+    "catchRate": 190,
     "baseExp": 90,
     "expGroup": 2,
     "evolutions": [
@@ -7342,6 +7430,7 @@
       50,
       65
     ],
+    "catchRate": 75,
     "baseExp": 157,
     "expGroup": 2,
     "evolutions": [],
@@ -7424,6 +7513,7 @@
       40,
       45
     ],
+    "catchRate": 190,
     "baseExp": 97,
     "expGroup": 0,
     "evolutions": [
@@ -7509,6 +7599,7 @@
       75,
       85
     ],
+    "catchRate": 60,
     "baseExp": 203,
     "expGroup": 0,
     "evolutions": [],
@@ -7582,6 +7673,7 @@
       80,
       100
     ],
+    "catchRate": 190,
     "baseExp": 95,
     "expGroup": 1,
     "evolutions": [
@@ -7654,6 +7746,7 @@
       95,
       115
     ],
+    "catchRate": 90,
     "baseExp": 126,
     "expGroup": 1,
     "evolutions": [
@@ -7726,6 +7819,7 @@
       110,
       130
     ],
+    "catchRate": 45,
     "baseExp": 190,
     "expGroup": 1,
     "evolutions": [],
@@ -7806,6 +7900,7 @@
       70,
       30
     ],
+    "catchRate": 45,
     "baseExp": 108,
     "expGroup": 2,
     "evolutions": [],
@@ -7882,6 +7977,7 @@
       42,
       90
     ],
+    "catchRate": 190,
     "baseExp": 102,
     "expGroup": 2,
     "evolutions": [
@@ -7976,6 +8072,7 @@
       67,
       115
     ],
+    "catchRate": 75,
     "baseExp": 165,
     "expGroup": 2,
     "evolutions": [],
@@ -8073,6 +8170,7 @@
       50,
       25
     ],
+    "catchRate": 225,
     "baseExp": 115,
     "expGroup": 2,
     "evolutions": [
@@ -8157,6 +8255,7 @@
       75,
       50
     ],
+    "catchRate": 60,
     "baseExp": 206,
     "expGroup": 2,
     "evolutions": [],
@@ -8240,6 +8339,7 @@
       100,
       55
     ],
+    "catchRate": 190,
     "baseExp": 103,
     "expGroup": 2,
     "evolutions": [
@@ -8321,6 +8421,7 @@
       140,
       80
     ],
+    "catchRate": 60,
     "baseExp": 150,
     "expGroup": 2,
     "evolutions": [],
@@ -8412,6 +8513,7 @@
       40,
       60
     ],
+    "catchRate": 90,
     "baseExp": 98,
     "expGroup": 0,
     "evolutions": [
@@ -8497,6 +8599,7 @@
       55,
       125
     ],
+    "catchRate": 45,
     "baseExp": 212,
     "expGroup": 0,
     "evolutions": [],
@@ -8560,6 +8663,7 @@
       35,
       40
     ],
+    "catchRate": 190,
     "baseExp": 87,
     "expGroup": 2,
     "evolutions": [
@@ -8650,6 +8754,7 @@
       45,
       50
     ],
+    "catchRate": 75,
     "baseExp": 124,
     "expGroup": 2,
     "evolutions": [],
@@ -8735,6 +8840,7 @@
       87,
       35
     ],
+    "catchRate": 45,
     "baseExp": 139,
     "expGroup": 2,
     "evolutions": [],
@@ -8813,6 +8919,7 @@
       76,
       35
     ],
+    "catchRate": 45,
     "baseExp": 140,
     "expGroup": 2,
     "evolutions": [],
@@ -8891,6 +8998,7 @@
       30,
       60
     ],
+    "catchRate": 45,
     "baseExp": 127,
     "expGroup": 2,
     "evolutions": [],
@@ -8980,6 +9088,7 @@
       35,
       60
     ],
+    "catchRate": 190,
     "baseExp": 114,
     "expGroup": 2,
     "evolutions": [
@@ -9057,6 +9166,7 @@
       60,
       85
     ],
+    "catchRate": 60,
     "baseExp": 173,
     "expGroup": 2,
     "evolutions": [],
@@ -9133,6 +9243,7 @@
       25,
       30
     ],
+    "catchRate": 120,
     "baseExp": 135,
     "expGroup": 0,
     "evolutions": [
@@ -9218,6 +9329,7 @@
       40,
       45
     ],
+    "catchRate": 60,
     "baseExp": 204,
     "expGroup": 0,
     "evolutions": [],
@@ -9321,6 +9433,7 @@
       50,
       105
     ],
+    "catchRate": 30,
     "baseExp": 255,
     "expGroup": 3,
     "evolutions": [],
@@ -9420,6 +9533,7 @@
       60,
       100
     ],
+    "catchRate": 45,
     "baseExp": 166,
     "expGroup": 2,
     "evolutions": [],
@@ -9499,6 +9613,7 @@
       90,
       40
     ],
+    "catchRate": 45,
     "baseExp": 175,
     "expGroup": 2,
     "evolutions": [],
@@ -9587,6 +9702,7 @@
       60,
       70
     ],
+    "catchRate": 225,
     "baseExp": 83,
     "expGroup": 2,
     "evolutions": [
@@ -9664,6 +9780,7 @@
       85,
       95
     ],
+    "catchRate": 75,
     "baseExp": 155,
     "expGroup": 2,
     "evolutions": [],
@@ -9740,6 +9857,7 @@
       63,
       50
     ],
+    "catchRate": 225,
     "baseExp": 111,
     "expGroup": 2,
     "evolutions": [
@@ -9826,6 +9944,7 @@
       68,
       80
     ],
+    "catchRate": 60,
     "baseExp": 170,
     "expGroup": 2,
     "evolutions": [],
@@ -9911,6 +10030,7 @@
       85,
       70
     ],
+    "catchRate": 225,
     "baseExp": 106,
     "expGroup": 0,
     "evolutions": [
@@ -10005,6 +10125,7 @@
       115,
       100
     ],
+    "catchRate": 60,
     "baseExp": 207,
     "expGroup": 0,
     "evolutions": [],
@@ -10074,6 +10195,7 @@
       90,
       100
     ],
+    "catchRate": 45,
     "baseExp": 136,
     "expGroup": 2,
     "evolutions": [],
@@ -10160,6 +10282,7 @@
       105,
       55
     ],
+    "catchRate": 45,
     "baseExp": 187,
     "expGroup": 2,
     "evolutions": [],
@@ -10233,6 +10356,7 @@
       95,
       95
     ],
+    "catchRate": 45,
     "baseExp": 137,
     "expGroup": 2,
     "evolutions": [],
@@ -10322,6 +10446,7 @@
       105,
       85
     ],
+    "catchRate": 45,
     "baseExp": 156,
     "expGroup": 2,
     "evolutions": [],
@@ -10398,6 +10523,7 @@
       93,
       85
     ],
+    "catchRate": 45,
     "baseExp": 167,
     "expGroup": 2,
     "evolutions": [],
@@ -10480,6 +10606,7 @@
       85,
       55
     ],
+    "catchRate": 45,
     "baseExp": 200,
     "expGroup": 0,
     "evolutions": [],
@@ -10555,6 +10682,7 @@
       110,
       70
     ],
+    "catchRate": 45,
     "baseExp": 211,
     "expGroup": 0,
     "evolutions": [],
@@ -10631,6 +10759,7 @@
       80,
       20
     ],
+    "catchRate": 255,
     "baseExp": 20,
     "expGroup": 0,
     "evolutions": [
@@ -10675,6 +10804,7 @@
       81,
       100
     ],
+    "catchRate": 45,
     "baseExp": 214,
     "expGroup": 0,
     "evolutions": [],
@@ -10765,6 +10895,7 @@
       60,
       95
     ],
+    "catchRate": 45,
     "baseExp": 219,
     "expGroup": 0,
     "evolutions": [],
@@ -10854,6 +10985,7 @@
       48,
       48
     ],
+    "catchRate": 35,
     "baseExp": 61,
     "expGroup": 2,
     "evolutions": [],
@@ -10888,6 +11020,7 @@
       55,
       65
     ],
+    "catchRate": 45,
     "baseExp": 92,
     "expGroup": 2,
     "evolutions": [
@@ -10972,6 +11105,7 @@
       65,
       110
     ],
+    "catchRate": 45,
     "baseExp": 196,
     "expGroup": 2,
     "evolutions": [],
@@ -11070,6 +11204,7 @@
       130,
       110
     ],
+    "catchRate": 45,
     "baseExp": 197,
     "expGroup": 2,
     "evolutions": [],
@@ -11167,6 +11302,7 @@
       65,
       110
     ],
+    "catchRate": 45,
     "baseExp": 198,
     "expGroup": 2,
     "evolutions": [],
@@ -11261,6 +11397,7 @@
       40,
       75
     ],
+    "catchRate": 45,
     "baseExp": 130,
     "expGroup": 2,
     "evolutions": [],
@@ -11343,6 +11480,7 @@
       35,
       90
     ],
+    "catchRate": 45,
     "baseExp": 120,
     "expGroup": 2,
     "evolutions": [
@@ -11420,6 +11558,7 @@
       55,
       115
     ],
+    "catchRate": 45,
     "baseExp": 199,
     "expGroup": 2,
     "evolutions": [],
@@ -11499,6 +11638,7 @@
       55,
       45
     ],
+    "catchRate": 45,
     "baseExp": 119,
     "expGroup": 2,
     "evolutions": [
@@ -11576,6 +11716,7 @@
       80,
       70
     ],
+    "catchRate": 45,
     "baseExp": 201,
     "expGroup": 2,
     "evolutions": [],
@@ -11659,6 +11800,7 @@
       130,
       60
     ],
+    "catchRate": 45,
     "baseExp": 202,
     "expGroup": 0,
     "evolutions": [],
@@ -11732,6 +11874,7 @@
       30,
       65
     ],
+    "catchRate": 25,
     "baseExp": 154,
     "expGroup": 0,
     "evolutions": [],
@@ -11827,6 +11970,7 @@
       85,
       125
     ],
+    "catchRate": 3,
     "baseExp": 215,
     "expGroup": 0,
     "evolutions": [],
@@ -11899,6 +12043,7 @@
       100,
       125
     ],
+    "catchRate": 3,
     "baseExp": 216,
     "expGroup": 0,
     "evolutions": [],
@@ -11970,6 +12115,7 @@
       90,
       125
     ],
+    "catchRate": 3,
     "baseExp": 217,
     "expGroup": 0,
     "evolutions": [],
@@ -12038,6 +12184,7 @@
       50,
       50
     ],
+    "catchRate": 45,
     "baseExp": 67,
     "expGroup": 0,
     "evolutions": [
@@ -12127,6 +12274,7 @@
       70,
       70
     ],
+    "catchRate": 45,
     "baseExp": 144,
     "expGroup": 0,
     "evolutions": [
@@ -12220,6 +12368,7 @@
       80,
       100
     ],
+    "catchRate": 45,
     "baseExp": 218,
     "expGroup": 0,
     "evolutions": [],
@@ -12314,6 +12463,7 @@
       130,
       154
     ],
+    "catchRate": 3,
     "baseExp": 220,
     "expGroup": 0,
     "evolutions": [],
@@ -12417,6 +12567,7 @@
       100,
       100
     ],
+    "catchRate": 45,
     "baseExp": 64,
     "expGroup": 1,
     "evolutions": [],
@@ -12522,6 +12673,7 @@
       6,
       29
     ],
+    "catchRate": 29,
     "baseExp": 143,
     "expGroup": 4,
     "evolutions": [],

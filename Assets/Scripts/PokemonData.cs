@@ -6,7 +6,7 @@ using System;
 
 [System.Serializable]
 public class MoveData{
-    public MoveData(string name, int power, Types type, int accuracy, int maxpp,string effect){
+    public MoveData(string name, int power, Types type, int accuracy, int maxpp, MoveEffect effect){
         this.name = name;
         this.power = power;
         this.type = type;
@@ -14,12 +14,13 @@ public class MoveData{
         this.maxpp = maxpp;
         this.effect = effect;
     }
+    
     public string name;
     public int power;
     public Types type;
     public int accuracy;
     public int maxpp;
-    public string effect;
+    public MoveEffect effect;
 
 }
 
@@ -103,6 +104,7 @@ public class PokemonDataEntry {
     */
     public int partySprite;
     public int[] baseStats = new int[5];
+    public int catchRate;
     public int baseExp;
     public int expGroup;
     public List<PokemonEvolution> evolutions;

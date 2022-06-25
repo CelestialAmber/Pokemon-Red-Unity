@@ -6,9 +6,7 @@ TagManager:
   tags:
   - MapCollider
   - Tree
-  - Slots
-  - Pokeball
-  - Warp
+  - Interactable
   layers:
   - Default
   - TransparentFX

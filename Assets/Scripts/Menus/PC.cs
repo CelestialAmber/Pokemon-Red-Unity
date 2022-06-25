@@ -49,7 +49,7 @@ public class PC : MonoBehaviour
     }
 
     void UpdateBagScreen(){
-        numberOfItems = itemMode == Mode.Deposit ? Items.instance.items.Count : Items.instance.pcItems.Count;
+        numberOfItems = itemMode == Mode.Deposit ? Inventory.instance.items.Count : Inventory.instance.pcItems.Count;
        
         if (currentBagPosition == 0)
         {
@@ -61,9 +61,9 @@ public class PC : MonoBehaviour
             if (currentItem < numberOfItems)
             {
                 itemSlots[i].mode = SlotMode.Item;
-                itemSlots[i].item = itemMode == Mode.Deposit ? Items.instance.items[currentItem].item : Items.instance.pcItems[currentItem].item;
-                itemSlots[i].quantity = itemMode == Mode.Deposit ? Items.instance.items[currentItem].quantity : Items.instance.pcItems[currentItem].quantity;
-                itemSlots[i].isKeyItem = itemMode == Mode.Deposit ? Items.instance.items[currentItem].isKeyItem : Items.instance.pcItems[currentItem].isKeyItem;
+                itemSlots[i].item = itemMode == Mode.Deposit ? Inventory.instance.items[currentItem].item : Inventory.instance.pcItems[currentItem].item;
+                itemSlots[i].quantity = itemMode == Mode.Deposit ? Inventory.instance.items[currentItem].quantity : Inventory.instance.pcItems[currentItem].quantity;
+                itemSlots[i].isKeyItem = itemMode == Mode.Deposit ? Inventory.instance.items[currentItem].isKeyItem : Inventory.instance.pcItems[currentItem].isKeyItem;
             }
             else if (currentItem == numberOfItems)
             {
@@ -77,7 +77,7 @@ public class PC : MonoBehaviour
 
         cursor.SetPosition(40, 104 - 16 * (currentBagPosition - topItemIndex));
         //If there are still more items off screen at the bottom, keep the cursor active
-        if (topItemIndex + 3 < Items.instance.items.Count) indicator.SetActive(true);
+        if (topItemIndex + 3 < Inventory.instance.items.Count) indicator.SetActive(true);
         else indicator.SetActive(false);
        
         if (switchingItems)
@@ -141,7 +141,7 @@ public class PC : MonoBehaviour
             {
                 currentBagPosition--;
 
-                 MathE.Clamp(ref currentBagPosition, 0, Items.instance.items.Count);
+                 MathE.Clamp(ref currentBagPosition, 0, Inventory.instance.items.Count);
                 
 
                 if (currentBagPosition >= 0 && currentBagPosition < topItemIndex)
@@ -152,9 +152,9 @@ public class PC : MonoBehaviour
                 UpdateBagScreen();
             }
 
-            if (currentBagPosition != Items.instance.items.Count)
+            if (currentBagPosition != Inventory.instance.items.Count)
             {
-                maximumItem = Items.instance.items[currentBagPosition].quantity;
+                maximumItem = Inventory.instance.items[currentBagPosition].quantity;
             }
             else
             {
@@ -195,17 +195,17 @@ public class PC : MonoBehaviour
                     if (itemMode == Mode.Deposit)
                     {
                         selectCursor.gameObject.SetActive(false);
-                        Item item = Items.instance.items[selectBag];
-                        Items.instance.items[selectBag] = Items.instance.items[currentBagPosition];
-                        Items.instance.items[currentBagPosition] = item;
+                        Item item = Inventory.instance.items[selectBag];
+                        Inventory.instance.items[selectBag] = Inventory.instance.items[currentBagPosition];
+                        Inventory.instance.items[currentBagPosition] = item;
                         switchingItems = false;
                     }
 
                     if (itemMode == Mode.Withdraw || itemMode == Mode.Toss)
                     {
-                        Item item = Items.instance.pcItems[selectBag];
-                        Items.instance.pcItems[selectBag] = Items.instance.pcItems[currentBagPosition];
-                        Items.instance.pcItems[currentBagPosition] = item;
+                        Item item = Inventory.instance.pcItems[selectBag];
+                        Inventory.instance.pcItems[selectBag] = Inventory.instance.pcItems[currentBagPosition];
+                        Inventory.instance.pcItems[currentBagPosition] = item;
                         switchingItems = false;
                     }
 
@@ -395,12 +395,12 @@ public class PC : MonoBehaviour
 
     IEnumerator WithdrawItem(){
         alreadyInBag = false;
-        Item withdrawnItem = Items.instance.pcItems[currentBagPosition];
+        Item withdrawnItem = Inventory.instance.pcItems[currentBagPosition];
         string DisplayString = PokemonData.GetItemName(withdrawnItem.item) + ".";
         yield return Dialogue.instance.text("Withdrew&l" + DisplayString);
         Item inBagItem = new Item(ItemsEnum.None, 0, false);
 
-        foreach (Item item in Items.instance.items)
+        foreach (Item item in Inventory.instance.items)
         {
             if (item.item == withdrawnItem.item)
             {
@@ -410,8 +410,8 @@ public class PC : MonoBehaviour
             }
         }
 
-        if (alreadyInBag) Items.instance.items[Items.instance.items.IndexOf(inBagItem)].quantity += amountToTask;
-        else if (Items.instance.items.Count < 20) Items.instance.items.Add(new Item(withdrawnItem.item, amountToTask, withdrawnItem.isKeyItem));
+        if (alreadyInBag) Inventory.instance.items[Inventory.instance.items.IndexOf(inBagItem)].quantity += amountToTask;
+        else if (Inventory.instance.items.Count < 20) Inventory.instance.items.Add(new Item(withdrawnItem.item, amountToTask, withdrawnItem.isKeyItem));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
 
@@ -424,12 +424,12 @@ public class PC : MonoBehaviour
     IEnumerator DepositItem()
     {
         alreadyInBag = false;
-        Item depositedItem = Items.instance.items[currentBagPosition];
+        Item depositedItem = Inventory.instance.items[currentBagPosition];
         yield return Dialogue.instance.text(PokemonData.GetItemName(depositedItem.item) + " was&lstored via PC.");
 
         Item inBagItem = new Item(ItemsEnum.None, 0, false);
 
-        foreach (Item item in Items.instance.pcItems)
+        foreach (Item item in Inventory.instance.pcItems)
         {
             if (item.item == depositedItem.item)
             {
@@ -439,8 +439,8 @@ public class PC : MonoBehaviour
             }
         }
 
-        if (alreadyInBag) Items.instance.pcItems[Items.instance.pcItems.IndexOf(inBagItem)].quantity += amountToTask;
-        else if (Items.instance.pcItems.Count < 50) Items.instance.pcItems.Add(new Item(depositedItem.item, amountToTask, depositedItem.isKeyItem));
+        if (alreadyInBag) Inventory.instance.pcItems[Inventory.instance.pcItems.IndexOf(inBagItem)].quantity += amountToTask;
+        else if (Inventory.instance.pcItems.Count < 50) Inventory.instance.pcItems.Add(new Item(depositedItem.item, amountToTask, depositedItem.isKeyItem));
         yield return StartCoroutine(RemoveItem(amountToTask));
 
         StartCoroutine(WhatDoText());
@@ -451,7 +451,7 @@ public class PC : MonoBehaviour
 
     IEnumerator TossItem()
     {
-        Item tossedItem = Items.instance.pcItems[currentBagPosition];
+        Item tossedItem = Inventory.instance.pcItems[currentBagPosition];
         yield return Dialogue.instance.text("Threw away " + PokemonData.GetItemName(tossedItem.item) + ".");
         yield return StartCoroutine(RemoveItem(amountToTask));
 
@@ -465,11 +465,11 @@ public class PC : MonoBehaviour
     {
         if (itemMode == Mode.Withdraw || itemMode == Mode.Toss)
         {
-            Items.instance.RemoveItemPC(amount, currentBagPosition);
+            Inventory.instance.RemoveItemPC(amount, currentBagPosition);
         }
         if (itemMode == Mode.Deposit)
         {
-            Items.instance.RemoveItem(amount, currentBagPosition);
+            Inventory.instance.RemoveItem(amount, currentBagPosition);
 
         }
         yield return null;
